@@ -71,6 +71,7 @@ export default defineConfig({
   title: '考公知识库',
   description: '个人公务员备考知识库 - 学习 × 记录 × 成长 × 分享',
   lang: 'zh-CN',
+  base: '/xuexi-notes/',
   cleanUrls: true,
 
   // 导航栏

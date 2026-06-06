@@ -89,7 +89,7 @@ export default defineConfig({
 
     // 社交链接（可选，以后添加）
     socialLinks: [
-      { icon: 'github', link: 'https://github.com' }
+      { icon: 'github', link: 'https://github.com/Ai-hang1226/xuexi-notes' }
     ],
 
     // 页脚

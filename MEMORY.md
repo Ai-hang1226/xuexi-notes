@@ -1,0 +1,3 @@
+- [项目概述](memory/project-overview.md) — 公务员备考知识库，VitePress + GitHub Pages
+- [用户画像](memory/user-profile.md) — 公务员备考知识博主，无编程基础，偏好表格对比
+- [工作流程](memory/workflow.md) — 每日速记、笔记写作、Git 推送、VS Code 操作

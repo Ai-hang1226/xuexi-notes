@@ -36,7 +36,7 @@ jobs:
         run: npm install
 
       - name: 构建站点
-        run: npm run docs:build
+        run: npx vitepress build
 
       - name: 配置 GitHub Pages
         uses: actions/configure-pages@v4

@@ -78,6 +78,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
+      { text: '📝 每日速记', link: '/每日速记' },
       { text: '行测', link: '/xingce/' },
       { text: '申论', link: '/shenlun/' },
       { text: '面试', link: '/mianshi/' },

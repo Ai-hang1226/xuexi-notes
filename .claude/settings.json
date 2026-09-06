@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($qqProcess = Get-Process -Name QQ -ErrorAction SilentlyContinue | Select-Object -First 1; if \\($qqProcess\\) { $qqProcess.Path } else { \"QQ not found\" })",
+      "PowerShell(Get-ChildItem \"D:\\\\QQ\" -Recurse -Directory -Depth 2 -ErrorAction SilentlyContinue | Where-Object { $_.Name -match 'miniapp|mini_app|MiniApp|switch|QQMini' } | Select-Object FullName)",
+      "PowerShell(Start-Process \"tencent://miniapp/?appid=1109561335\")",
+      "PowerShell(& \"D:\\\\QQ\\\\��װ\\\\QQEX.exe\" --help 2>&1)"
+    ]
+  }
+}

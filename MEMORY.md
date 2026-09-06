@@ -1,3 +1,4 @@
 - [项目概述](memory/project-overview.md) — 公务员备考知识库，VitePress + GitHub Pages
 - [用户画像](memory/user-profile.md) — 公务员备考知识博主，无编程基础，偏好表格对比
+- [Karpathy Skills 强制遵循](memory/karpathy-skills-enforcement.md) — 所有任务必须遵循四个原则，不确定就搜索别猜
 - [工作流程](memory/workflow.md) — 每日速记、笔记写作、Git 推送、VS Code 操作

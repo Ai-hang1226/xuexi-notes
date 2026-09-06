@@ -1,4 +1,4 @@
-# CLAUDE.md — 公务员备考知识库
+# AGENTS.md — 公务员备考知识库
 
 <!--
   ↓↓↓ Karpathy 行为规范（对 AI 有效，不需要你手动执行）
@@ -86,7 +86,7 @@
 - **域名**：`https://Ai-hang1226.github.io/xuexi-notes/`
 - **base 路径**：`/xuexi-notes/`
 - **Node.js**：v22.22.2
-- **编辑器**：VS Code + Claude Code 扩展（底层 DeepSeek V4 Pro）
+- **编辑器**：VS Code + Codex 扩展（底层 DeepSeek V4 Pro）
 - **数学公式**：markdown-it-mathjax3
 
 ## 项目结构

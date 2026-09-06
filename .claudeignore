@@ -1,0 +1,22 @@
+# 依赖目录（最大的token浪费源）
+node_modules/
+
+# 构建产物
+.vitepress/dist/
+.vitepress/cache/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.exe
+*.dll
+*.so
+*.dylib
+
+# 图片/二进制文件（除非需要AI分析）
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.pdf

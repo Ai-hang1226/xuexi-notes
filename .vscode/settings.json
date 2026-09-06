@@ -1,0 +1,20 @@
+{
+  // ===== AutoCorrect：保存时自动修正中英文排版 =====
+  "autocorrect.enable": true,
+  "autocorrect.formatOnSave": true,
+
+  // ===== Markdown 增强 =====
+  "markdown.preview.breaks": true,
+  "markdown.preview.typographer": true,
+
+  // ===== 编辑器通用 =====
+  "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "huacnlee.autocorrect"
+  },
+
+  // ===== GitLens =====
+  "gitlens.currentLine.enabled": true,
+  "gitlens.blame.highlight.enabled": true
+}

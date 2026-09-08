@@ -8,6 +8,7 @@ const sidebar = {
       items: [
         { text: '行测总览', link: '/xingce/' },
         { text: '言语理解与表达', link: '/xingce/yanyu-lijie' },
+        { text: '言语·真题归位(2023江苏7题)', link: '/fenxiang/言语体系总览与真题归位' },
         { text: '数量关系', link: '/xingce/shuliang-guanxi' },
         { text: '判断推理', link: '/xingce/panduan-tuili' },
         { text: '资料分析', link: '/xingce/ziliao-fenxi' },
@@ -86,6 +87,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '📝 每日速记', link: '/每日速记' },
+      { text: '🧠 言语理解', link: '/fenxiang/言语体系总览与真题归位' },
       { text: '行测', link: '/xingce/' },
       { text: '申论', link: '/shenlun/' },
       { text: '面试', link: '/mianshi/' },

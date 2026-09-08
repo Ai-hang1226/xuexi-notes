@@ -63,6 +63,13 @@ const sidebar = {
         { text: '精选文章', link: '/fenxiang/' },
         { text: '文章模板', link: '/fenxiang/template' },
       ]
+    },
+    {
+      text: '🧠 言语理解专题',
+      items: [
+        { text: '言语·体系总览与真题归位', link: '/fenxiang/言语体系总览与真题归位' },
+        { text: '言语·每日一页（打印版）', link: '/fenxiang/言语每日一页' },
+      ]
     }
   ],
 }

@@ -20,7 +20,11 @@ const sidebar = {
     {
       text: '🧩 判断推理',
       items: [
-        { text: '判断推理方法库', link: '/xingce/panduan-tuili' },
+        { text: '判断推理总览', link: '/xingce/panduan-tuili' },
+        { text: '🔺 图形推理', link: '/xingce/panduan-tuxing' },
+        { text: '📋 定义判断', link: '/xingce/panduan-dingyi' },
+        { text: '🔗 类比推理', link: '/xingce/panduan-leibi' },
+        { text: '🎯 逻辑判断', link: '/xingce/panduan-luoji' },
       ]
     },
     {

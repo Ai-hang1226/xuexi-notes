@@ -59,6 +59,15 @@ export default defineConfig({
   base: '/xuexi-notes/',
   cleanUrls: true,
 
+  // 不进入站点：项目指令/记忆/演示文件，避免污染搜索结果
+  srcExclude: [
+    'AGENTS.md',
+    'CLAUDE.md',
+    'MEMORY.md',
+    '扩展演示-AutoCorrect.md',
+    'memory/**',
+  ],
+
   // 导航栏
   themeConfig: {
     nav: [

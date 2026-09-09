@@ -1,76 +1,48 @@
 import { defineConfig } from 'vitepress'
 
-// 侧边栏配置 - 公务员考试知识结构
+// 侧边栏配置 - 行测五大模块（按模块分，不再有"行测"总览伞）
 const sidebar = {
   '/xingce/': [
     {
-      text: '📗 行测',
+      text: '🗣️ 言语理解',
       items: [
-        { text: '行测总览', link: '/xingce/' },
-        { text: '言语理解与表达', link: '/xingce/yanyu-lijie' },
-        { text: '言语·真题归位(2023江苏7题)', link: '/fenxiang/言语体系总览与真题归位' },
-        { text: '数量关系', link: '/xingce/shuliang-guanxi' },
-        { text: '判断推理', link: '/xingce/panduan-tuili' },
-        { text: '资料分析', link: '/xingce/ziliao-fenxi' },
-        { text: '常识判断', link: '/xingce/changshi-panduan' },
+        { text: '言语理解方法库', link: '/xingce/yanyu-lijie' },
+        { text: '✅ 言语·真题归位(7题全错)', link: '/xingce/言语体系总览与真题归位' },
+        { text: '🖨️ 言语·每日一页(打印)', link: '/xingce/言语每日一页' },
       ]
-    }
-  ],
-  '/shenlun/': [
+    },
     {
-      text: '📘 申论',
+      text: '🔢 数量关系',
       items: [
-        { text: '申论总览', link: '/shenlun/' },
-        { text: '概括归纳', link: '/shenlun/gaikuo-guina' },
-        { text: '综合分析', link: '/shenlun/zonghe-fenxi' },
-        { text: '对策建议', link: '/shenlun/duice-jianyi' },
-        { text: '公文写作', link: '/shenlun/gongwen-xiezuo' },
-        { text: '大作文', link: '/shenlun/dazuowen' },
+        { text: '数量关系方法库', link: '/xingce/shuliang-guanxi' },
       ]
-    }
-  ],
-  '/mianshi/': [
+    },
     {
-      text: '📙 面试',
+      text: '🧩 判断推理',
       items: [
-        { text: '面试总览', link: '/mianshi/' },
-        { text: '结构化面试', link: '/mianshi/jiegouhua-mianshi' },
-        { text: '无领导小组', link: '/mianshi/wulingdao-xiaozu' },
+        { text: '判断推理方法库', link: '/xingce/panduan-tuili' },
       ]
-    }
+    },
+    {
+      text: '📊 资料分析',
+      items: [
+        { text: '资料分析方法库', link: '/xingce/ziliao-fenxi' },
+      ]
+    },
+    {
+      text: '🌍 常识判断',
+      items: [
+        { text: '常识判断积累', link: '/xingce/changshi-panduan' },
+      ]
+    },
   ],
   '/cuotiben/': [
     {
       text: '🧠 错题本',
       items: [
         { text: '错题统计', link: '/cuotiben/' },
-        { text: '学习闭环(通用模板)', link: '/cuotiben/学习闭环' },
-        { text: '行测错题集', link: '/cuotiben/xingce-cuoti' },
-      ]
-    }
-  ],
-  '/xuexi-rizhi/': [
-    {
-      text: '📝 学习日志',
-      items: [
-        { text: '日志列表', link: '/xuexi-rizhi/' },
-        { text: '日志模板', link: '/xuexi-rizhi/template' },
-      ]
-    }
-  ],
-  '/fenxiang/': [
-    {
-      text: '📢 分享区',
-      items: [
-        { text: '精选文章', link: '/fenxiang/' },
-        { text: '文章模板', link: '/fenxiang/template' },
-      ]
-    },
-    {
-      text: '🧠 言语理解专题',
-      items: [
-        { text: '言语·体系总览与真题归位', link: '/fenxiang/言语体系总览与真题归位' },
-        { text: '言语·每日一页（打印版）', link: '/fenxiang/言语每日一页' },
+        { text: '学习闭环（通用模板）', link: '/cuotiben/学习闭环' },
+        { text: '行测错题集（按模块）', link: '/cuotiben/xingce-cuoti' },
       ]
     }
   ],
@@ -86,15 +58,13 @@ export default defineConfig({
   // 导航栏
   themeConfig: {
     nav: [
-      { text: '首页', link: '/' },
-      { text: '📝 每日速记', link: '/每日速记' },
-      { text: '🧠 言语理解', link: '/fenxiang/言语体系总览与真题归位' },
-      { text: '行测', link: '/xingce/' },
-      { text: '申论', link: '/shenlun/' },
-      { text: '面试', link: '/mianshi/' },
-      { text: '错题本', link: '/cuotiben/' },
-      { text: '学习日志', link: '/xuexi-rizhi/' },
-      { text: '分享区', link: '/fenxiang/' },
+      { text: '🏠 首页', link: '/' },
+      { text: '🗣️ 言语理解', link: '/xingce/yanyu-lijie' },
+      { text: '🔢 数量关系', link: '/xingce/shuliang-guanxi' },
+      { text: '🧩 判断推理', link: '/xingce/panduan-tuili' },
+      { text: '📊 资料分析', link: '/xingce/ziliao-fenxi' },
+      { text: '🌍 常识判断', link: '/xingce/changshi-panduan' },
+      { text: '🧠 错题本', link: '/cuotiben/' },
     ],
 
     sidebar,

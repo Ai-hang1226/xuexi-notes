@@ -5,16 +5,6 @@ hero:
   name: "考公知识库"
   text: "行测 · 五大模块"
   tagline: 把每一次做题，都变成可复用的知识资产
-  actions:
-    - theme: brand
-      text: 🗣️ 言语理解
-      link: /xingce/yanyu-lijie
-    - theme: alt
-      text: 📊 资料分析（提分最快）
-      link: /xingce/ziliao-fenxi
-    - theme: alt
-      text: 🧠 错题本
-      link: /cuotiben/
 
 features:
   - icon: 🗣️

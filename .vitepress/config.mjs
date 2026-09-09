@@ -44,6 +44,7 @@ const sidebar = {
       text: '🧠 错题本',
       items: [
         { text: '错题统计', link: '/cuotiben/' },
+        { text: '学习闭环(通用模板)', link: '/cuotiben/学习闭环' },
         { text: '行测错题集', link: '/cuotiben/xingce-cuoti' },
       ]
     }

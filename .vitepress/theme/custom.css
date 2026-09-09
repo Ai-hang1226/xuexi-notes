@@ -1,0 +1,18 @@
+/* 全站字体：微软雅黑 */
+:root {
+  --vp-font-family-base: "Microsoft YaHei", "微软雅黑", "PingFang SC",
+    "Hiragino Sans GB", "Segoe UI", -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
+  --vp-font-family-mono: "Microsoft YaHei", "微软雅黑", "Cascadia Code",
+    Consolas, "Courier New", monospace;
+}
+
+body {
+  font-family: var(--vp-font-family-base);
+}
+
+/* 表格：列内不强制换行，避免中文长词被挤断 */
+.vp-doc table th,
+.vp-doc table td {
+  white-space: nowrap;
+}

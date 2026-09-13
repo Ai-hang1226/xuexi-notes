@@ -17,7 +17,7 @@ const sidebar = {
       text: '🔢 数量关系',
       items: [
         { text: '数量关系方法库', link: '/xingce/shuliang-guanxi' },
-        { text: '📐 椭圆考点与内接图形最值', link: '/xingce/椭圆考点与内接图形最值' },
+        { text: '📐 椭圆内接图形最值', link: '/xingce/椭圆考点与内接图形最值' },
       ]
     },
     {

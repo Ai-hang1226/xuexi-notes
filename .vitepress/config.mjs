@@ -6,10 +6,11 @@ const sidebar = {
     {
       text: '🗣️ 言语理解',
       items: [
+        { text: '📖 大宝小宝·体系正文(16章)', link: '/xingce/大宝小宝言语体系-正文' },
         { text: '言语理解方法库', link: '/xingce/yanyu-lijie' },
         { text: '🔍 文段识别速查卡', link: '/xingce/言语结构识别速查卡' },
         { text: '📌 言语·今日学习复盘', link: '/xingce/言语学习复盘-2026-09-13' },
-        { text: '✅ 言语·真题归位(14题)', link: '/xingce/言语体系总览与真题归位' },
+        { text: '✅ 言语·真题归位(20题)', link: '/xingce/言语体系总览与真题归位' },
         { text: '🖨️ 言语·每日一页(打印)', link: '/xingce/言语每日一页' },
       ]
     },

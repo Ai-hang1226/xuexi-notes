@@ -51,6 +51,9 @@ const sidebar = {
         { text: '错题统计', link: '/cuotiben/' },
         { text: '学习闭环（通用模板）', link: '/cuotiben/学习闭环' },
         { text: '行测错题集（按模块）', link: '/cuotiben/xingce-cuoti' },
+        { text: '🔢 数量专项复盘·10题', link: '/cuotiben/数量关系专项复盘-2026-10-14' },
+        { text: '🧩 判断专项复盘·8题', link: '/cuotiben/判断推理专项复盘-2026-10-07' },
+        { text: '📊 资料专项复盘·2题', link: '/cuotiben/资料分析专项复盘-2026-10-07' },
       ]
     }
   ],

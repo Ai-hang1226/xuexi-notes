@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="290" viewBox="0 0 1200 290" role="img"><title>判断推理｜先建立关系，再比较选项</title><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#8990B5"/></marker></defs><rect width="100%" height="100%" fill="#FBFCFF"/>
+<text x="50" y="48" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="600" fill="#26324A">
+<tspan x="50" dy="0">判断推理｜先建立关系，再比较选项</tspan>
+</text>
+<rect x="50" y="90" width="257" height="135" rx="18" fill="#ECEEFF" stroke="#5964D8" stroke-width="1.5"/>
+<text x="178.5" y="127" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="600" fill="#5964D8" text-anchor="middle">
+<tspan x="178.5" dy="0">论证</tspan>
+</text>
+<text x="178.5" y="168" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" fill="#39445E" text-anchor="middle">
+<tspan x="178.5" dy="0">论据 → 结论 → 缺口</tspan>
+</text>
+<path d="M307 156 C307 156.0,331 156.0,331 156" fill="none" stroke="#8990B5" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="331" y="90" width="257" height="135" rx="18" fill="#E5F6EF" stroke="#169879" stroke-width="1.5"/>
+<text x="459.5" y="127" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="600" fill="#169879" text-anchor="middle">
+<tspan x="459.5" dy="0">因果</tspan>
+</text>
+<text x="459.5" y="168" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" fill="#39445E" text-anchor="middle">
+<tspan x="459.5" dy="0">他因／反向／控制</tspan>
+</text>
+<path d="M588 156 C588 156.0,612 156.0,612 156" fill="none" stroke="#8990B5" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="612" y="90" width="257" height="135" rx="18" fill="#FFF1DD" stroke="#DC8A26" stroke-width="1.5"/>
+<text x="740.5" y="127" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="600" fill="#DC8A26" text-anchor="middle">
+<tspan x="740.5" dy="0">类比</tspan>
+</text>
+<text x="740.5" y="168" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" fill="#39445E" text-anchor="middle">
+<tspan x="740.5" dy="0">造句 → 方向／必要性</tspan>
+</text>
+<path d="M869 156 C869 156.0,893 156.0,893 156" fill="none" stroke="#8990B5" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="893" y="90" width="257" height="135" rx="18" fill="#F7EAF7" stroke="#B35DB8" stroke-width="1.5"/>
+<text x="1021.5" y="127" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="600" fill="#B35DB8" text-anchor="middle">
+<tspan x="1021.5" dy="0">范围</tspan>
+</text>
+<text x="1021.5" y="168" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="16" font-weight="400" fill="#39445E" text-anchor="middle">
+<tspan x="1021.5" dy="0">检查限定词与强词</tspan>
+</text>
+</svg>

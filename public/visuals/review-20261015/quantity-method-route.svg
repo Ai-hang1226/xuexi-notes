@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1180" viewBox="0 0 500 1180" role="img" aria-labelledby="title desc">
+<title id="title">数量题：由题干线索选方法</title>
+<desc id="desc">来源：数量关系方法库及2026-10-14数量专项第1、4、6、8、9、12、15、16、19题复盘。四类线索为备选方向，不是所有题必须依次使用的步骤。</desc>
+<style>text{font-family:Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif;fill:#19345b;font-size:32px;font-weight:600}.title{font-size:44px;font-weight:800}.head{font-size:38px;font-weight:800}.small{font-size:28px}.formula{font-size:40px;font-weight:700}.muted{fill:#49607b}.blue{fill:#245ddb}.green{fill:#007f70}.orange{fill:#9c4600}</style>
+<rect width="500" height="1180" rx="22" fill="#f5f8ff"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6683ac"/></marker></defs>
+<text x="250" y="70" text-anchor="middle" class="title">数量题，先选方法</text>
+<text x="250" y="119" text-anchor="middle" class="">先认线索，再调用方法</text>
+<rect x="18" y="160" width="464" height="210" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/>
+<rect x="18" y="160" width="10" height="210" rx="5" fill="#245ddb"/>
+<text x="48" y="218" text-anchor="start" class="head blue">比例／平均值</text>
+<text x="48" y="276" text-anchor="start" class="">共同尺度能消去</text>
+<text x="48" y="321" text-anchor="start" class="">可赋值；真实参数设元</text>
+<rect x="18" y="395" width="464" height="210" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/>
+<rect x="18" y="395" width="10" height="210" rx="5" fill="#007f70"/>
+<text x="48" y="453" text-anchor="start" class="head green">计数／比赛概率</text>
+<text x="48" y="511" text-anchor="start" class="">先查违规、同组条件</text>
+<text x="48" y="556" text-anchor="start" class="">再数合法情况或求概率</text>
+<rect x="18" y="630" width="464" height="210" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/>
+<rect x="18" y="630" width="10" height="210" rx="5" fill="#245ddb"/>
+<text x="48" y="688" text-anchor="start" class="head blue">数字规律</text>
+<text x="48" y="746" text-anchor="start" class="">数位内部→相邻运算</text>
+<text x="48" y="791" text-anchor="start" class="">还可试同一除数取余</text>
+<rect x="18" y="865" width="464" height="210" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/>
+<rect x="18" y="865" width="10" height="210" rx="5" fill="#007f70"/>
+<text x="48" y="923" text-anchor="start" class="head green">几何／辅助线</text>
+<text x="48" y="981" text-anchor="start" class="">平行边＋斜边→补直角</text>
+<text x="48" y="1026" text-anchor="start" class="">勾股求宽→面积作差</text>
+<text x="250" y="1134" text-anchor="middle" class="muted">各方法均须回到原题核验</text>
+</svg>

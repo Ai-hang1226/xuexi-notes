@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1390" viewBox="0 0 500 1390" role="img" aria-labelledby="title desc">
+<title id="title">椭圆最大内接矩形：半轴与半边</title>
+<desc id="desc">来源：椭圆考点与内接图形最值。椭圆半长轴a、半短轴b，a大于b。图示矩形边平行于两轴。最大时矩形半长x=a/根号2，半宽y=b/根号2，面积2ab。不是正方形公式。</desc>
+<style>text{font-family:Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif;fill:#19345b;font-size:32px;font-weight:600}.title{font-size:44px;font-weight:800}.head{font-size:38px;font-weight:800}.small{font-size:28px}.formula{font-size:40px;font-weight:700}.muted{fill:#49607b}.blue{fill:#245ddb}.green{fill:#007f70}.orange{fill:#9c4600}</style>
+<rect width="500" height="1390" rx="22" fill="#f5f8ff"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6683ac"/></marker></defs>
+<text x="250" y="70" text-anchor="middle" class="title">椭圆内接矩形</text>
+<text x="250" y="120" text-anchor="middle" class="">半轴与矩形半边分清</text>
+<rect x="18" y="158" width="464" height="406" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/>
+<ellipse cx="250" cy="340" rx="210" ry="105" fill="#eaf0ff" stroke="#245ddb" stroke-width="4"/>
+<rect x="101.508" y="265.754" width="296.984" height="148.492" fill="#bbe8df" fill-opacity=".7" stroke="#007f70" stroke-width="4"/>
+<path d="M40 340 H460 M250 235 V445" stroke="#7b90aa" stroke-width="2" stroke-dasharray="7 6"/>
+<path d="M250 340 H460" stroke="#245ddb" stroke-width="4"/>
+<path d="M250 340 V235" stroke="#245ddb" stroke-width="4"/>
+<circle cx="250" cy="340" r="5" fill="#19345b"/>
+<text x="428" y="382" text-anchor="start" class="formula blue">a</text>
+<text x="265" y="258" text-anchor="start" class="formula blue">b</text>
+<text x="252" y="382" text-anchor="start" class="small">O</text>
+<path d="M250 323 V333 M250 328 H398.492 M398.492 323 V333 M231 265.754 H241 M236 265.754 V340 M231 340 H241" stroke="#007f70" stroke-width="3" fill="none"/>
+<text x="318" y="314" text-anchor="start" class="formula green">x</text>
+<text x="205" y="310" text-anchor="start" class="formula green">y</text>
+<text x="250" y="205" text-anchor="middle" class="small muted">边平行于长、短轴</text>
+<text x="250" y="502" text-anchor="middle" class="blue">蓝色：半轴 a、b</text>
+<text x="250" y="543" text-anchor="middle" class="green">绿色：矩形半边 x、y</text>
+<path d="M250 582 V612" stroke="#6683ac" stroke-width="4" marker-end="url(#arrow)" fill="none"/>
+<rect x="18" y="630" width="464" height="240" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/>
+<text x="250" y="684" text-anchor="middle" class="head">最大面积时</text>
+<text x="79" y="775" text-anchor="start" class="formula green">x =</text>
+<text x="207" y="738" text-anchor="middle" class="formula">a</text>
+<path d="M172 752 H242" stroke="#19345b" stroke-width="2"/>
+<text x="207" y="800" text-anchor="middle" class="formula">√2</text>
+<text x="279" y="775" text-anchor="start" class="formula green">y =</text>
+<text x="408" y="738" text-anchor="middle" class="formula">b</text>
+<path d="M373 752 H443" stroke="#19345b" stroke-width="2"/>
+<text x="408" y="800" text-anchor="middle" class="formula">√2</text>
+<text x="250" y="846" text-anchor="middle" class="small muted">整边长度分别是 2x、2y</text>
+<path d="M250 889 V919" stroke="#6683ac" stroke-width="4" marker-end="url(#arrow)" fill="none"/>
+<rect x="18" y="937" width="464" height="230" rx="18" fill="#e8f7f1" stroke="#8fcec1" stroke-width="2"/>
+<text x="250" y="997" text-anchor="middle" class="head green">最大矩形面积</text>
+<text x="250" y="1055" text-anchor="middle" class="formula">S = (2x)×(2y)</text>
+<text x="250" y="1125" text-anchor="middle" class="title green">= 2ab</text>
+<rect x="18" y="1190" width="464" height="138" rx="18" fill="#fff6eb" stroke="#e2be8b" stroke-width="2"/>
+<text x="250" y="1242" text-anchor="middle" class="orange">a=40，b=20 → 1600</text>
+<text x="250" y="1292" text-anchor="middle" class="orange">明确问正方形须另算</text>
+<text x="250" y="1364" text-anchor="middle" class="small muted">图只表示轴平行内接矩形</text>
+</svg>

@@ -1,5 +1,15 @@
 # 判断推理
 
+## 看图复习
+
+<figure class="study-visual">
+<a href="/xuexi-notes/visuals/review-20261015/reasoning-map.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/reasoning-map.svg" alt="判断推理四类：图形、定义、类比、逻辑的对应工具" width="500" loading="lazy" /></a>
+<figcaption>点击图可查看大图</figcaption>
+</figure>
+
+按题型进入下方四个方法库；[8道原题复盘](/cuotiben/判断推理专项复盘-2026-10-07) · [全站图解速查](/xingce/图解速查)
+
+
 判断推理考察逻辑思维能力，是行测中第二大模块（约 35-40 题）。
 
 ## 📊 四大题型 → 点进去学习

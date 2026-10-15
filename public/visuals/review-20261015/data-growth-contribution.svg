@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1230" viewBox="0 0 500 1230" role="img" aria-labelledby="title desc">
+<title id="title">增长贡献率：先变增量，再求占比</title>
+<desc id="desc">来源：2026-10-07资料分析专项第9题及方法库。工业与GDP均取三季度；工业同比增量约5671.3，GDP同比增量约16236.6，贡献率约34.9%。试卷数据不作现实统计核验。</desc>
+<style>text{font-family:Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif;fill:#19345b;font-size:32px;font-weight:600}.title{font-size:44px;font-weight:800}.head{font-size:38px;font-weight:800}.small{font-size:28px}.formula{font-size:40px;font-weight:700}.muted{fill:#49607b}.blue{fill:#245ddb}.green{fill:#007f70}.orange{fill:#9c4600}</style>
+<rect width="500" height="1230" rx="22" fill="#f5f8ff"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6683ac"/></marker></defs>
+<text x="250" y="70" text-anchor="middle" class="title">增长贡献率</text>
+<text x="250" y="120" text-anchor="middle" class="">先变增量，再求占比</text>
+<rect x="18" y="157" width="464" height="147" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/>
+<text x="42" y="211" text-anchor="start" class="head blue">① 时间范围对齐</text>
+<text x="42" y="264" text-anchor="start" class="">工业与GDP都取三季度</text>
+<path d="M250 323 V352" stroke="#6683ac" stroke-width="4" marker-end="url(#arrow)" fill="none"/>
+<rect x="18" y="370" width="464" height="250" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/>
+<text x="42" y="425" text-anchor="start" class="head blue">② 各自求同比增量</text>
+<text x="83" y="508" text-anchor="start" class="formula">ΔA =</text>
+<text x="328" y="475" text-anchor="middle" class="formula">A×r</text>
+<path d="M260 491 H396" stroke="#19345b" stroke-width="2"/>
+<text x="328" y="541" text-anchor="middle" class="formula">1+r</text>
+<text x="42" y="588" text-anchor="start" class="">A：现期量；r：同比增速</text>
+<path d="M250 639 V668" stroke="#6683ac" stroke-width="4" marker-end="url(#arrow)" fill="none"/>
+<rect x="18" y="686" width="464" height="235" rx="18" fill="#e8f7f1" stroke="#8fcec1" stroke-width="2"/>
+<text x="42" y="743" text-anchor="start" class="head green">③ 再求增量占比</text>
+<text x="184" y="797" text-anchor="middle" class="">部分同比增量</text>
+<path d="M64 815 H304" stroke="#19345b" stroke-width="3"/>
+<text x="184" y="860" text-anchor="middle" class="">总体同比增量</text>
+<text x="320" y="829" text-anchor="start" class="">×100%</text>
+<path d="M250 940 V969" stroke="#6683ac" stroke-width="4" marker-end="url(#arrow)" fill="none"/>
+<rect x="18" y="987" width="464" height="154" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/>
+<text x="250" y="1042" text-anchor="middle" class="head green">第9题：约34.9%</text>
+<text x="250" y="1095" text-anchor="middle" class="">5671.3 ÷ 16236.6</text>
+<text x="250" y="1195" text-anchor="middle" class="orange">勿用现期量占比替代增量比</text>
+</svg>

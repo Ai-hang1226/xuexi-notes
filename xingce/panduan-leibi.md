@@ -1,5 +1,15 @@
 # 类比推理
 
+## 看图复习
+
+<figure class="study-visual">
+<a href="/xuexi-notes/visuals/review-20261015/reasoning-analogy.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/reasoning-analogy.svg" alt="类比推理：造句、一级关系、二级关系" width="500" loading="lazy" /></a>
+<figcaption>点击图可查看大图</figcaption>
+</figure>
+
+先说出关系，再用同一关系核对全部选项 · [全站图解速查](/xingce/图解速查)
+
+
 > 判断推理 · 四大题型之一。[← 返回判断推理总览](panduan-tuili.md)
 
 ## 概述

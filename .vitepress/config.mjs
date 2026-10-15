@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 // 侧边栏配置 - 行测五大模块（按模块分，不再有"行测"总览伞）
 const sidebar = {
   '/xingce/': [
+    { text: '🗺️ 图解速查', link: '/xingce/图解速查' },
     {
       text: '🗣️ 言语理解',
       items: [
@@ -78,6 +79,7 @@ export default defineConfig({
   // 导航栏
   themeConfig: {
     nav: [
+      { text: '🗺️ 图解速查', link: '/xingce/图解速查' },
       { text: '🏠 首页', link: '/' },
       { text: '🗣️ 言语理解', link: '/xingce/yanyu-lijie' },
       { text: '🔢 数量关系', link: '/xingce/shuliang-guanxi' },

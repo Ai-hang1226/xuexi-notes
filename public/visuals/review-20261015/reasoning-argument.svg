@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1270" viewBox="0 0 500 1270" role="img" aria-labelledby="title desc">
+<title id="title">论证：找准缺口</title><desc id="desc">以原卷第14题咖啡与磨牙为题内论证示例，示意论据、结论、中间缺口与选项作用。相关不自动推出直接因果；本图不作医学结论。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#5777a8" stroke-width="2"/></marker></defs>
+<rect width="500" height="1270" rx="24" fill="#f3f7fd"/>
+<g font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#162a4b">
+<text x="250" y="66" font-size="44" font-weight="700" text-anchor="middle" fill="#162a4b">论证：找准缺口</text>
+<text x="250" y="118" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">先写论据、结论、缺口</text>
+<rect x="20" y="150" width="460" height="190" rx="20" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>
+<text x="44" y="205" font-size="38" font-weight="700" text-anchor="start" fill="#2b5288">① 写出论据</text>
+<text x="44" y="256" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">咖啡饮用者</text>
+<text x="44" y="303" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">磨牙指数更高</text>
+<path d="M250 349 V376" fill="none" stroke="#5777a8" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="20" y="390" width="460" height="190" rx="20" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>
+<text x="44" y="445" font-size="38" font-weight="700" text-anchor="start" fill="#2b5288">② 圈定结论</text>
+<text x="44" y="496" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">饮用咖啡</text>
+<text x="44" y="543" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">直接导致磨牙</text>
+<path d="M250 589 V616" fill="none" stroke="#5777a8" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="20" y="630" width="460" height="190" rx="20" fill="#fff8e9" stroke="#ead39c" stroke-width="2"/>
+<text x="44" y="685" font-size="38" font-weight="700" text-anchor="start" fill="#7e591c">③ 补出缺口</text>
+<text x="44" y="736" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">病理、心理等因素</text>
+<text x="44" y="783" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">是否存在组间差异？</text>
+<path d="M250 829 V856" fill="none" stroke="#5777a8" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="20" y="870" width="460" height="190" rx="20" fill="#effaf7" stroke="#a5d6ca" stroke-width="2"/>
+<text x="44" y="925" font-size="38" font-weight="700" text-anchor="start" fill="#176552">④ 检验选项</text>
+<text x="44" y="976" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">选项是否改变了</text>
+<text x="44" y="1023" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">这条推理链？</text>
+<text x="250" y="1122" font-size="38" font-weight="700" text-anchor="middle" fill="#162a4b">相关 ≠ 直接因果</text>
+<text x="250" y="1174" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">同话题 ≠ 有支持或削弱</text>
+<text x="250" y="1226" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">题内示例，不作医学结论</text>
+</g></svg>

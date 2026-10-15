@@ -1,5 +1,15 @@
 # 🧠 错题本
 
+## 看图复习
+
+<figure class="study-visual">
+<a href="/xuexi-notes/visuals/review-20261015/review-loop.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/review-loop.svg" alt="错题复盘：归位、找病因、记对策、新题复测" width="500" loading="lazy" /></a>
+<figcaption>点击图可查看大图</figcaption>
+</figure>
+
+看清错因后再做新题；复盘完成与独立掌握分别记录 · [全站图解速查](/xingce/图解速查)
+
+
 错题是最好的老师。记录每一道让你"恍然大悟"的题，把它变成知识资产。
 **每道错题按模块分开记，归位 → 找病因 → 记对策 → 回炉**（模板见 [学习闭环](学习闭环.md)）。
 

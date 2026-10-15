@@ -11,14 +11,40 @@ body {
   font-family: var(--vp-font-family-base);
 }
 
-/* 表格：列内不强制换行，避免中文长词被挤断 */
-.vp-doc table th,
-.vp-doc table td {
-  white-space: nowrap;
+/* 阅读正文与标题：沿用知识库的大字偏好。 */
+.vp-doc {
+  font-size: 22px;
 }
 
+.vp-doc p,
+.vp-doc li,
+.vp-doc blockquote > p {
+  font-size: 1em;
+  line-height: 1.9;
+}
 
-/* 独立公式：放大、居中；窄屏长式在公式卡内横向滚动。 */
+.vp-doc h1 { line-height: 1.4; }
+.vp-doc h2 { line-height: 1.5; }
+.vp-doc h3 { line-height: 1.5; }
+.vp-doc strong { font-weight: 700; }
+.VPDoc.has-aside .content-container { max-width: 860px; }
+
+/* 长表允许中文换行，额外宽度留在表内滚动。 */
+.vp-doc table { font-size: 20px; }
+.vp-doc table th,
+.vp-doc table td {
+  min-width: 5em;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.7;
+}
+
+/* 行内分数与根号保留阅读空间。 */
+.vp-doc mjx-container {
+  max-width: 100%;
+}
+
+/* 独立公式：大字卡片；长算式分行，极长式只在卡片内滚动。 */
 .vp-doc mjx-container[display="true"] {
   display: block;
   box-sizing: border-box;
@@ -26,10 +52,68 @@ body {
   margin: 1.25rem 0;
   padding: 1.1rem 1rem;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
+  border-left: 4px solid var(--vp-c-brand-1);
+  border-radius: 12px;
   background: var(--vp-c-bg-soft);
-  font-size: 1.12em;
+  font-size: 1.15em;
   text-align: center;
   overflow-x: auto;
   overflow-y: hidden;
+}
+
+/* 原生矢量图可直接点开原图；手机保持单列大字。 */
+.study-visual {
+  margin: 1.5rem 0 2rem;
+  text-align: center;
+  scroll-margin-top: 96px;
+}
+.study-visual a { display: block; }
+.study-visual img {
+  display: block;
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 16px;
+  background: #f6f8fc;
+}
+.study-visual figcaption {
+  margin-top: .65rem;
+  font-size: 16px;
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+}
+.visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+.visual-grid > a {
+  display: block;
+  padding: 1.1rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+  text-decoration: none;
+  line-height: 1.65;
+}
+.visual-grid strong { display: block; margin-bottom: .3rem; }
+.visual-grid span { color: var(--vp-c-text-2); font-size: 18px; }
+
+@media (max-width: 640px) {
+  .vp-doc mjx-container[display="true"] {
+    font-size: 1.05em;
+    padding: 1rem .65rem;
+  }
+  .vp-doc table { font-size: 20px; }
+  .visual-grid { grid-template-columns: 1fr; }
+}
+
+@media print {
+  .vp-doc { font-size: 12pt; }
+  .study-visual img { max-height: 22cm; width: auto; }
+  .study-visual figcaption { display: none; }
+  .visual-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

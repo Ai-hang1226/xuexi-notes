@@ -1,5 +1,15 @@
 # 言语理解与表达
 
+## 看图复习
+
+<figure class="study-visual">
+<a href="/xuexi-notes/visuals/review-20261015/verbal-reading.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/verbal-reading.svg" alt="言语阅读：标志词、结构、观点落点与选项匹配" width="500" loading="lazy" /></a>
+<figcaption>点击图可查看大图</figcaption>
+</figure>
+
+先看阅读路径，再用目录定位所需章节；[结构速查](/xingce/言语结构识别速查卡) · [全站图解速查](/xingce/图解速查)
+
+
 > 🎯 **真题直达**：[言语错题 · 20 题逐题归位](言语体系总览与真题归位.md) ｜ [言语·每日一页（打印版）](言语每日一页.md) ｜ [文段识别速查卡（打印）](言语结构识别速查卡.md) ｜ [大宝小宝·体系正文（16章）](大宝小宝言语体系-正文.md)
 
 ## 概述

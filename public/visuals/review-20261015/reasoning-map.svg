@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1120" viewBox="0 0 500 1120" role="img" aria-labelledby="title desc">
+<title id="title">判断：先分四类</title><desc id="desc">判断推理四类题型的入口图。图形先看组成，定义以题干定义为标准，类比先造句再查二级关系，逻辑区分翻译与论证。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#5777a8" stroke-width="2"/></marker></defs>
+<rect width="500" height="1120" rx="24" fill="#f3f7fd"/>
+<g font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#162a4b">
+<text x="250" y="66" font-size="44" font-weight="700" text-anchor="middle" fill="#162a4b">判断：先分四类</text>
+<text x="250" y="118" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">先认题型，再选工具</text>
+<rect x="20" y="150" width="460" height="190" rx="20" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>
+<text x="44" y="205" font-size="38" font-weight="700" text-anchor="start" fill="#2b5288">图形推理</text>
+<text x="44" y="256" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">同：位置；似：样式</text>
+<text x="44" y="303" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">异：数量、属性</text>
+<rect x="20" y="370" width="460" height="190" rx="20" fill="#effaf7" stroke="#a5d6ca" stroke-width="2"/>
+<text x="44" y="425" font-size="38" font-weight="700" text-anchor="start" fill="#176552">定义判断</text>
+<text x="44" y="476" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">主体 → 条件 → 结果</text>
+<text x="44" y="523" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">按定义逐项对照</text>
+<rect x="20" y="590" width="460" height="190" rx="20" fill="#fff8e9" stroke="#ead39c" stroke-width="2"/>
+<text x="44" y="645" font-size="38" font-weight="700" text-anchor="start" fill="#7e591c">类比推理</text>
+<text x="44" y="696" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">先造句，再查二级</text>
+<text x="44" y="743" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">比方向、必要性与结构</text>
+<rect x="20" y="810" width="460" height="190" rx="20" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>
+<text x="44" y="865" font-size="38" font-weight="700" text-anchor="start" fill="#2b5288">逻辑判断</text>
+<text x="44" y="916" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">翻译：先符号化</text>
+<text x="44" y="963" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">论证：找结论与缺口</text>
+<text x="250" y="1065" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">不是凭熟悉感选答案</text>
+</g></svg>

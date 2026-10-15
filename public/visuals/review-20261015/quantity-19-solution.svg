@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1960" viewBox="0 0 500 1960" role="img" aria-labelledby="title desc">
+<title id="title">第19题：过B补水平线，勾股求宽，再作面积差</title>
+<desc id="desc">来源：2026-10-14数量关系专项第19题及既有辅助线图。A、D在左侧竖边，B、C在右侧竖边，Q在DC上；过B作BE平行DC，E在AD上，角AEB为90度。AD为200，BC与DQ均为100，AB为260。AE为100，BE与DC为240，QC为140。梯形面积36000减三角形ADQ面积10000、三角形BCQ面积7000，得到三角形ABQ面积19000平方米。原题答对，辅助线方法仍待练，不标记为猜对。</desc>
+<style>text{font-family:Microsoft YaHei,PingFang SC,Noto Sans CJK SC,sans-serif;fill:#19345b;font-size:32px;font-weight:600}.title{font-size:44px;font-weight:800}.head{font-size:38px;font-weight:800}.formula{font-size:40px;font-weight:700}.blue{fill:#245ddb}.green{fill:#007f70}.orange{fill:#9c4600}.muted{fill:#49607b}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6683ac"/></marker></defs>
+<rect width="500" height="1960" rx="22" fill="#f5f8ff"/>
+<text x="250" y="70" text-anchor="middle" class="title">第19题：辅助线</text>
+<text x="250" y="120" text-anchor="middle" class="">补直角→求宽→面积差</text>
+<rect x="18" y="155" width="464" height="660" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/>
+<text x="42" y="210" text-anchor="start" class="head blue">① 补水平辅助线</text>
+<text x="42" y="260" text-anchor="start" class="">E在AD上，BE∥DC</text>
+<polygon points="85,305 85,585 225,585" fill="#ffe3b8"/>
+<polygon points="421,445 421,585 225,585" fill="#ccece2"/>
+<polygon points="85,305 421,445 225,585" fill="#dce5ff"/>
+<path d="M85 305 L421 445 V585 H85 Z" fill="none" stroke="#19345b" stroke-width="3"/>
+<path d="M85 305 L225 585 L421 445" fill="none" stroke="#245ddb" stroke-width="3"/>
+<path d="M85 445 H421" stroke="#b86700" stroke-width="4" stroke-dasharray="9 6"/>
+<path d="M85 429 H101 V445" fill="none" stroke="#b86700" stroke-width="3"/>
+<circle cx="85" cy="445" r="5" fill="#b86700"/>
+<text x="49" y="297" text-anchor="start" class="">A</text>
+<text x="436" y="453" text-anchor="start" class="">B</text>
+<text x="436" y="622" text-anchor="start" class="">C</text>
+<text x="49" y="622" text-anchor="start" class="">D</text>
+<text x="214" y="625" text-anchor="start" class="">Q</text>
+<text x="44" y="457" text-anchor="start" class="orange">E</text>
+<text x="241" y="337" text-anchor="start" class="blue">260</text>
+<text x="265" y="486" text-anchor="middle" class="orange">BE ∥ DC</text>
+<text x="151" y="673" text-anchor="middle" class="">DQ=100</text>
+<text x="340" y="673" text-anchor="middle" class="">QC=140</text>
+<text x="250" y="723" text-anchor="middle" class="formula orange">∠AEB＝90°</text>
+<text x="250" y="777" text-anchor="middle" class="muted">AD=200，BC=100</text>
+<path d="M250 834 V865" stroke="#6683ac" stroke-width="4" marker-end="url(#arrow)" fill="none"/>
+<rect x="18" y="885" width="464" height="280" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/>
+<text x="42" y="940" text-anchor="start" class="head blue">② 勾股求宽</text>
+<text x="250" y="994" text-anchor="middle" class="">AE＝200−100＝100</text>
+<text x="250" y="1048" text-anchor="middle" class="">BE＝√(260²−100²)</text>
+<text x="250" y="1110" text-anchor="middle" class="formula blue">＝240＝DC</text>
+<path d="M250 1184 V1215" stroke="#6683ac" stroke-width="4" marker-end="url(#arrow)" fill="none"/>
+<rect x="18" y="1235" width="464" height="350" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/>
+<text x="42" y="1290" text-anchor="start" class="head green">③ 分别算面积</text>
+<text x="42" y="1338" text-anchor="start" class="">梯形：(200+100)×240÷2</text>
+<text x="250" y="1380" text-anchor="middle" class="green">＝36000</text>
+<text x="42" y="1430" text-anchor="start" class="">左△ADQ：200×100÷2</text>
+<text x="250" y="1472" text-anchor="middle" class="orange">＝10000</text>
+<text x="42" y="1522" text-anchor="start" class="">右△BCQ：100×140÷2</text>
+<text x="250" y="1564" text-anchor="middle" class="green">＝7000</text>
+<path d="M250 1604 V1635" stroke="#6683ac" stroke-width="4" marker-end="url(#arrow)" fill="none"/>
+<rect x="18" y="1655" width="464" height="205" rx="18" fill="#e8f7f1" stroke="#8fcec1" stroke-width="2"/>
+<text x="250" y="1710" text-anchor="middle" class="head green">④ 目标三角形ABQ</text>
+<text x="250" y="1760" text-anchor="middle" class="">36000−10000−7000</text>
+<text x="250" y="1825" text-anchor="middle" class="title green">＝19000 平方米</text>
+<text x="250" y="1920" text-anchor="middle" class="muted">原题答对，辅助线方法待练</text>
+</svg>

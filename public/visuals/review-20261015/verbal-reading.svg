@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1390" viewBox="0 0 500 1390" role="img" aria-labelledby="title desc">
+<title id="title">言语：沿结构找落点</title><desc id="desc">言语中心理解的阅读路径：圈标志词、定全文结构、找作者落点、再匹配选项。结构是判据，尾句和词频仅是线索。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#5777a8" stroke-width="2"/></marker></defs>
+<rect width="500" height="1390" rx="24" fill="#f3f7fd"/>
+<g font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#162a4b">
+<text x="250" y="66" font-size="44" font-weight="700" text-anchor="middle" fill="#162a4b">言语：沿结构找落点</text>
+<text x="250" y="118" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">先读文段，再核对选项</text>
+<rect x="20" y="150" width="460" height="150" rx="20" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>
+<text x="44" y="205" font-size="38" font-weight="700" text-anchor="start" fill="#2b5288">① 圈标志词</text>
+<text x="44" y="256" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">但是／因此／需要／更</text>
+<path d="M250 309 V336" fill="none" stroke="#5777a8" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="20" y="350" width="460" height="295" rx="20" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>
+<text x="44" y="405" font-size="38" font-weight="700" text-anchor="start" fill="#2b5288">② 定全文结构</text>
+<text x="44" y="456" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">转折后、递进后</text>
+<text x="44" y="503" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">因果看结果；总分看总句</text>
+<text x="44" y="550" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">并列提共性</text>
+<text x="44" y="597" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">对策找上位总对策</text>
+<path d="M250 654 V681" fill="none" stroke="#5777a8" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="20" y="695" width="460" height="190" rx="20" fill="#fff8e9" stroke="#ead39c" stroke-width="2"/>
+<text x="44" y="750" font-size="38" font-weight="700" text-anchor="start" fill="#7e591c">③ 找作者落点</text>
+<text x="44" y="801" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">分句在为哪句服务？</text>
+<text x="44" y="848" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">排除背景、举例和修饰</text>
+<path d="M250 894 V921" fill="none" stroke="#5777a8" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="20" y="935" width="460" height="190" rx="20" fill="#effaf7" stroke="#a5d6ca" stroke-width="2"/>
+<text x="44" y="990" font-size="38" font-weight="700" text-anchor="start" fill="#176552">④ 再匹配选项</text>
+<text x="44" y="1041" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">话题词 ＋ 落点词</text>
+<text x="44" y="1088" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">保持范围和语气一致</text>
+<text x="250" y="1194" font-size="32" font-weight="700" text-anchor="middle" fill="#162a4b">尾句、词频：只是线索</text>
+<text x="250" y="1245" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">总句、分句：看服务关系</text>
+<text x="250" y="1310" font-size="32" font-weight="700" text-anchor="middle" fill="#162a4b">全文结构才是判断依据</text>
+</g></svg>

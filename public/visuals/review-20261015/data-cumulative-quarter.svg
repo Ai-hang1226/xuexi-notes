@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1550" viewBox="0 0 500 1550" role="img" aria-labelledby="title desc">
+<title id="title">累计转当季：两个年份分别还原，再同比</title>
+<desc id="desc">来源：2026-10-07资料分析专项第15题。S市二季度：2021年3632减1713等于1919；2022年2525减1133等于1392；同比增量负527。S市四季度同比增量为负580、负527、正894、负261，单位万平方米。</desc>
+<style>text{font-family:Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif;fill:#19345b;font-size:32px;font-weight:600}.title{font-size:44px;font-weight:800}.head{font-size:38px;font-weight:800}.small{font-size:28px}.formula{font-size:40px;font-weight:700}.muted{fill:#49607b}.blue{fill:#245ddb}.green{fill:#007f70}.orange{fill:#9c4600}</style>
+<rect width="500" height="1550" rx="22" fill="#f5f8ff"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6683ac"/></marker></defs>
+<text x="250" y="70" text-anchor="middle" class="title">累计值→当季值</text>
+<text x="250" y="120" text-anchor="middle" class="">同比要两个年份分别还原</text>
+<rect x="18" y="157" width="464" height="250" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/>
+<text x="42" y="212" text-anchor="start" class="head blue">① 同一年内先作差</text>
+<text x="250" y="260" text-anchor="middle" class="">二季度＝半年－一季度</text>
+<rect x="42" y="290" width="208" height="58" rx="8" fill="#dce7ff" stroke="#245ddb" stroke-width="2"/>
+<rect x="250" y="290" width="208" height="58" rx="8" fill="#d5f0e8" stroke="#007f70" stroke-width="2"/>
+<text x="146" y="331" text-anchor="middle" class="blue">一季度</text>
+<text x="354" y="331" text-anchor="middle" class="green">二季度</text>
+<text x="250" y="383" text-anchor="middle" class="muted">半年累计＝前两季相加</text>
+<path d="M250 426 V451" stroke="#6683ac" stroke-width="4" marker-end="url(#arrow)" fill="none"/>
+<rect x="18" y="470" width="464" height="288" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/>
+<text x="42" y="523" text-anchor="start" class="head blue">② 两个年份都还原</text>
+<text x="42" y="576" text-anchor="start" class="muted">2021年第二季度</text>
+<text x="42" y="622" text-anchor="start" class="formula">3632−1713＝1919</text>
+<text x="42" y="681" text-anchor="start" class="muted">2022年第二季度</text>
+<text x="42" y="727" text-anchor="start" class="formula">2525−1133＝1392</text>
+<path d="M250 777 V802" stroke="#6683ac" stroke-width="4" marker-end="url(#arrow)" fill="none"/>
+<rect x="18" y="821" width="464" height="175" rx="18" fill="#e8f7f1" stroke="#8fcec1" stroke-width="2"/>
+<text x="42" y="874" text-anchor="start" class="head green">③ 同季度再同比</text>
+<text x="250" y="926" text-anchor="middle" class="formula">1392−1919＝−527</text>
+<text x="250" y="973" text-anchor="middle" class="small muted">今年当季－去年当季</text>
+<path d="M250 1015 V1040" stroke="#6683ac" stroke-width="4" marker-end="url(#arrow)" fill="none"/>
+<rect x="18" y="1058" width="464" height="365" rx="18" fill="#fff" stroke="#c9d8ed" stroke-width="2"/>
+<text x="250" y="1114" text-anchor="middle" class="head">④ S市四季同比增量</text>
+<path d="M42 1250 H458" stroke="#7b90aa" stroke-width="2"/>
+<rect x="56" y="1250.0" width="58" height="58.0" rx="5" fill="#9c4600"/>
+<text x="85" y="1360" text-anchor="middle" class="orange">−580</text>
+<text x="85" y="1404" text-anchor="middle" class="small muted">一季</text>
+<rect x="166" y="1250.0" width="58" height="52.7" rx="5" fill="#9c4600"/>
+<text x="195" y="1360" text-anchor="middle" class="orange">−527</text>
+<text x="195" y="1404" text-anchor="middle" class="small muted">二季</text>
+<rect x="276" y="1160.6" width="58" height="89.4" rx="5" fill="#007f70"/>
+<text x="305" y="1146.6" text-anchor="middle" class="green">+894</text>
+<text x="305" y="1404" text-anchor="middle" class="small muted">三季</text>
+<rect x="386" y="1250.0" width="58" height="26.1" rx="5" fill="#9c4600"/>
+<text x="415" y="1360" text-anchor="middle" class="orange">−261</text>
+<text x="415" y="1404" text-anchor="middle" class="small muted">四季</text>
+<text x="250" y="1471" text-anchor="middle" class="muted">先还原当季，再比同比</text>
+<text x="250" y="1522" text-anchor="middle" class="small muted">图中单位：万平方米</text>
+</svg>

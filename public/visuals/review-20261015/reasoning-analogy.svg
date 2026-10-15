@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1170" viewBox="0 0 500 1170" role="img" aria-labelledby="title desc">
+<title id="title">类比：关系要对齐</title><desc id="desc">类比推理先用一致句式造句，再判断一级关系，比方向必要性语义结构等二级关系，最后核对每组选项与题干的关系层次和方向；先横向后纵向。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#5777a8" stroke-width="2"/></marker></defs>
+<rect width="500" height="1170" rx="24" fill="#f3f7fd"/>
+<g font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#162a4b">
+<text x="250" y="66" font-size="44" font-weight="700" text-anchor="middle" fill="#162a4b">类比：关系要对齐</text>
+<text x="250" y="118" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">先横向，再纵向比较</text>
+<rect x="20" y="150" width="460" height="150" rx="20" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>
+<text x="44" y="205" font-size="38" font-weight="700" text-anchor="start" fill="#2b5288">① 先造句</text>
+<text x="44" y="256" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">少加字，保持句式一致</text>
+<path d="M250 309 V336" fill="none" stroke="#5777a8" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="20" y="350" width="460" height="190" rx="20" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>
+<text x="44" y="405" font-size="38" font-weight="700" text-anchor="start" fill="#2b5288">② 判一级关系</text>
+<text x="44" y="456" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">一种／一部分？</text>
+<text x="44" y="503" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">因果／目的／条件？</text>
+<path d="M250 549 V576" fill="none" stroke="#5777a8" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="20" y="590" width="460" height="190" rx="20" fill="#fff8e9" stroke="#ead39c" stroke-width="2"/>
+<text x="44" y="645" font-size="38" font-weight="700" text-anchor="start" fill="#7e591c">③ 比二级关系</text>
+<text x="44" y="696" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">方向、必要性、语义结构</text>
+<text x="44" y="743" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">必要条件：没它不行</text>
+<path d="M250 789 V816" fill="none" stroke="#5777a8" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="20" y="830" width="460" height="190" rx="20" fill="#effaf7" stroke="#a5d6ca" stroke-width="2"/>
+<text x="44" y="885" font-size="38" font-weight="700" text-anchor="start" fill="#176552">④ 核对各组选项</text>
+<text x="44" y="936" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">与题干保持同一关系</text>
+<text x="44" y="983" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">方向、层次也要一致</text>
+<text x="250" y="1090" font-size="32" font-weight="700" text-anchor="middle" fill="#162a4b">能搭配，只是第一步</text>
+</g></svg>

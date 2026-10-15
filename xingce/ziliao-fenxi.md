@@ -1,5 +1,15 @@
 # 资料分析
 
+## 看图复习
+
+<figure class="study-visual">
+<a href="/xuexi-notes/visuals/review-20261015/data-growth-contribution.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/data-growth-contribution.svg" alt="增长贡献率：部分增量除以总体增量" width="500" loading="lazy" /></a>
+<figcaption>点击图可查看大图</figcaption>
+</figure>
+
+先认分母：贡献率看增量；[累计转当季图解](#累计转当季图解) · [2道原题复盘](/cuotiben/资料分析专项复盘-2026-10-07) · [全站图解速查](/xingce/图解速查)
+
+
 ## 概述
 
 资料分析是行测中**提分最快、性价比最高**的模块。公式固定、套路清晰，只要掌握速算技巧就能拿到高分。
@@ -35,9 +45,13 @@ $$
 
 ### 2. 年均增长
 
+**精确式**（n为增长间隔数，初期、末期值均为正）：
+
 $$
-年均增长率 \approx \frac{末期值 - 初期值}{初期值 \times 年数}
+r=\sqrt[n]{\frac{\text{末期值}}{\text{初期值}}}-1
 $$
+
+原“总增长率÷年数”仅是总增长幅度较小时的一阶近似；选项接近时应使用精确式或代入验证。
 
 $$
 末期值 = 初期值 \times (1 + 年均增长率)^n
@@ -86,8 +100,13 @@ $$
 
 **示例**：$12345 \div 6789$
 
-- 截位为 $12345 \div 68$（除数保留2位）
-- 或 $12345 \div 679$（除数保留3位）
+分子、分母按相同数量级处理，不能只缩小除数而忘记补回数量级：
+
+$$
+\frac{12345}{6789}\approx\frac{123}{68}\approx1.81
+$$
+
+需要更高精度时，可比较$1234/679$；根据选项间距决定保留位数。
 
 ### 2. 特征数字法
 
@@ -295,3 +314,13 @@ $$
 $$
 
 **累计数据问当季，先作差；同比则两个年份分别还原。** 第15题S市当季同比增量为$-580,-527,+894,-261$，符号“−−＋−”。
+
+
+## 累计转当季图解
+
+<figure class="study-visual">
+<a href="/xuexi-notes/visuals/review-20261015/data-cumulative-quarter.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/data-cumulative-quarter.svg" alt="累计数据先还原当季，再计算当季同比增量" width="500" loading="lazy" /></a>
+<figcaption>点击图可查看大图</figcaption>
+</figure>
+
+先分别还原两年的同一季度，再做同比作差；[第15题原题与图表](/cuotiben/资料分析专项复盘-2026-10-07#data-15)。

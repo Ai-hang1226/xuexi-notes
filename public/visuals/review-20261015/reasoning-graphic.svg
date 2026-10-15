@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1100" viewBox="0 0 500 1100" role="img" aria-labelledby="title desc">
+<title id="title">图形：按组成找规律</title><desc id="desc">平面图先看元素组成，相同看位置、相似看样式、不同查数量属性；空间图另走特殊面、箭头、移面和邻位核对路径。各类工具按题型选用。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#5777a8" stroke-width="2"/></marker></defs>
+<rect width="500" height="1100" rx="24" fill="#f3f7fd"/>
+<g font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#162a4b">
+<text x="250" y="66" font-size="44" font-weight="700" text-anchor="middle" fill="#162a4b">图形：按组成找规律</text>
+<text x="250" y="118" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">平面与空间，分路观察</text>
+<rect x="20" y="150" width="460" height="190" rx="20" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>
+<text x="44" y="205" font-size="38" font-weight="700" text-anchor="start" fill="#2b5288">平面图｜先看组成</text>
+<text x="44" y="256" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">同：位置；似：样式</text>
+<text x="44" y="303" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">异：数量、属性</text>
+<path d="M250 349 V376" fill="none" stroke="#5777a8" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="20" y="390" width="460" height="190" rx="20" fill="#fff8e9" stroke="#ead39c" stroke-width="2"/>
+<text x="44" y="445" font-size="38" font-weight="700" text-anchor="start" fill="#7e591c">不同元素｜查两类</text>
+<text x="44" y="496" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">数：面、线、点、笔画</text>
+<text x="44" y="543" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">看：对称、曲直、封闭</text>
+<rect x="20" y="625" width="460" height="190" rx="20" fill="#effaf7" stroke="#a5d6ca" stroke-width="2"/>
+<text x="44" y="680" font-size="38" font-weight="700" text-anchor="start" fill="#176552">空间图｜另走此路</text>
+<text x="44" y="731" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">特殊面 → 箭头判邻位</text>
+<text x="44" y="778" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">面太远 → 移面再画箭头</text>
+<path d="M250 824 V851" fill="none" stroke="#5777a8" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="20" y="865" width="460" height="190" rx="20" fill="#effaf7" stroke="#a5d6ca" stroke-width="2"/>
+<text x="44" y="920" font-size="38" font-weight="700" text-anchor="start" fill="#176552">空间核对｜再验证</text>
+<text x="44" y="971" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">公共棱、时针法辅助</text>
+<text x="44" y="1018" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">方向与相邻面一起核对</text>
+</g></svg>

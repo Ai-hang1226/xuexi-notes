@@ -1,5 +1,15 @@
 # 逻辑判断
 
+## 看图复习
+
+<figure class="study-visual">
+<a href="/xuexi-notes/visuals/review-20261015/reasoning-argument.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/reasoning-argument.svg" alt="论证分析：论据到结论的缺口与选项检验" width="500" loading="lazy" /></a>
+<figcaption>点击图可查看大图</figcaption>
+</figure>
+
+论证看缺口；[假言命题真假图](#假言真假再练一次) · [全站图解速查](/xingce/图解速查)
+
+
 > 判断推理 · 四大题型之一。[← 返回判断推理总览](panduan-tuili.md)
 
 ## 概述
@@ -261,8 +271,16 @@
 
 ### 假言真假再练一次
 
+<figure class="study-visual">
+<a href="/xuexi-notes/visuals/review-20261015/reasoning-conditional.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/reasoning-conditional.svg" alt="假言命题真值表：只有前真后假为假；逆否等价" width="500" loading="lazy" /></a>
+<figcaption>点击图可查看大图</figcaption>
+</figure>
+
 $$
-A\to B\text{为假}\iff A\land\neg B,\qquad A\to B\iff\neg B\to\neg A
+\begin{gathered}
+(A\to B)\text{为假}\iff A\land\neg B\\[8pt]
+A\to B\iff\neg B\to\neg A
+\end{gathered}
 $$
 
 | A | B | A→B |

@@ -1,5 +1,15 @@
 # 常识判断
 
+## 看图复习
+
+<figure class="study-visual">
+<a href="/xuexi-notes/visuals/review-20261015/common-knowledge.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/common-knowledge.svg" alt="常识积累：领域归位、概念区别、来源日期与隔天回看" width="500" loading="lazy" /></a>
+<figcaption>点击图可查看大图</figcaption>
+</figure>
+
+按领域积累一个可复用考点，再回看检验 · [全站图解速查](/xingce/图解速查)
+
+
 ## 概述
 
 常识判断考察知识面广度，靠积累不靠突击。20 题建议用时 10 分钟，不要纠结。

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="990" viewBox="0 0 500 990" role="img" aria-labelledby="title desc">
+<title id="title">定义：按条件逐项对</title><desc id="desc">定义判断先看属于或不属于的问法，抓主体客体、方式条件、原因目的结果，按题干定义逐项比较；关键条件不符排除，不用生活常识替代定义。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#5777a8" stroke-width="2"/></marker></defs>
+<rect width="500" height="990" rx="24" fill="#f3f7fd"/>
+<g font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#162a4b">
+<text x="250" y="66" font-size="44" font-weight="700" text-anchor="middle" fill="#162a4b">定义：按条件逐项对</text>
+<text x="250" y="118" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">题干定义是判断标准</text>
+<rect x="20" y="150" width="460" height="190" rx="20" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>
+<text x="44" y="205" font-size="38" font-weight="700" text-anchor="start" fill="#2b5288">① 先看问法</text>
+<text x="44" y="256" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">属于／不属于？</text>
+<text x="44" y="303" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">问哪个定义先读哪条</text>
+<path d="M250 349 V376" fill="none" stroke="#5777a8" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="20" y="390" width="460" height="190" rx="20" fill="#fff8e9" stroke="#ead39c" stroke-width="2"/>
+<text x="44" y="445" font-size="38" font-weight="700" text-anchor="start" fill="#7e591c">② 圈必要条件</text>
+<text x="44" y="496" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">谁对谁做？用何方式？</text>
+<text x="44" y="543" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">原因、目的、结果是什么？</text>
+<path d="M250 589 V616" fill="none" stroke="#5777a8" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="20" y="630" width="460" height="190" rx="20" fill="#effaf7" stroke="#a5d6ca" stroke-width="2"/>
+<text x="44" y="685" font-size="38" font-weight="700" text-anchor="start" fill="#176552">③ 逐项对照</text>
+<text x="44" y="736" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">关键条件不符 → 排除</text>
+<text x="44" y="783" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">剩余选项比较贴合程度</text>
+<text x="250" y="885" font-size="38" font-weight="700" text-anchor="middle" fill="#162a4b">以题干定义为准</text>
+<text x="250" y="942" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">生活常识不能替代定义</text>
+</g></svg>

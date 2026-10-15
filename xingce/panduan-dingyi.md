@@ -1,5 +1,15 @@
 # 定义判断
 
+## 看图复习
+
+<figure class="study-visual">
+<a href="/xuexi-notes/visuals/review-20261015/reasoning-definition.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/reasoning-definition.svg" alt="定义判断：拆必要条件并逐项核对" width="500" loading="lazy" /></a>
+<figcaption>点击图可查看大图</figcaption>
+</figure>
+
+把主体、条件与结果逐项对上，再排除选项 · [全站图解速查](/xingce/图解速查)
+
+
 > 判断推理 · 四大题型之一。[← 返回判断推理总览](panduan-tuili.md)
 
 ## 概述

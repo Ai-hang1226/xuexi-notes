@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1130" viewBox="0 0 500 1130" role="img" aria-labelledby="title desc">
+<title id="title">假言：只找一个假</title><desc id="desc">假言命题A蕴含B的真值表。仅A真且B假时为假；等价逆否为非B蕴含非A。肯前、否后可推；否前、肯后不必然。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#5777a8" stroke-width="2"/></marker></defs>
+<rect width="500" height="1130" rx="24" fill="#f3f7fd"/>
+<g font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#162a4b">
+<text x="250" y="66" font-size="44" font-weight="700" text-anchor="middle" fill="#162a4b">假言：只找一个假</text>
+<text x="250" y="131" font-size="44" font-weight="700" text-anchor="middle" fill="#162a4b">A → B</text>
+<rect x="20" y="162" width="460" height="380" rx="18" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>
+<text x="94" y="215" font-size="36" font-weight="700" text-anchor="middle" fill="#162a4b">A</text>
+<text x="247" y="215" font-size="36" font-weight="700" text-anchor="middle" fill="#162a4b">B</text>
+<text x="400" y="215" font-size="36" font-weight="700" text-anchor="middle" fill="#162a4b">A → B</text>
+<path d="M20 244 H480 M171 162 V542 M324 162 V542" fill="none" stroke="#d7e1ee" stroke-width="2"/>
+<text x="94" y="299" font-size="38" font-weight="700" text-anchor="middle" fill="#176552">真</text>
+<text x="247" y="299" font-size="38" font-weight="700" text-anchor="middle" fill="#176552">真</text>
+<text x="400" y="299" font-size="38" font-weight="700" text-anchor="middle" fill="#176552">真</text>
+<rect x="22" y="316" width="456" height="70" fill="#fff0f1"/>
+<text x="94" y="369" font-size="38" font-weight="700" text-anchor="middle" fill="#a63240">真</text>
+<text x="247" y="369" font-size="38" font-weight="700" text-anchor="middle" fill="#a63240">假</text>
+<text x="400" y="369" font-size="38" font-weight="700" text-anchor="middle" fill="#a63240">假</text>
+<text x="94" y="439" font-size="38" font-weight="700" text-anchor="middle" fill="#176552">假</text>
+<text x="247" y="439" font-size="38" font-weight="700" text-anchor="middle" fill="#176552">真</text>
+<text x="400" y="439" font-size="38" font-weight="700" text-anchor="middle" fill="#176552">真</text>
+<text x="94" y="509" font-size="38" font-weight="700" text-anchor="middle" fill="#176552">假</text>
+<text x="247" y="509" font-size="38" font-weight="700" text-anchor="middle" fill="#176552">假</text>
+<text x="400" y="509" font-size="38" font-weight="700" text-anchor="middle" fill="#176552">真</text>
+<text x="250" y="603" font-size="32" font-weight="700" text-anchor="middle" fill="#a63240">仅 A 真、B 假时为假</text>
+<rect x="20" y="638" width="460" height="190" rx="20" fill="#effaf7" stroke="#a5d6ca" stroke-width="2"/>
+<text x="44" y="693" font-size="38" font-weight="700" text-anchor="start" fill="#176552">逆否等价</text>
+<text x="44" y="744" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">A → B  ⇔  非B → 非A</text>
+<text x="44" y="791" font-size="32" font-weight="600" text-anchor="start" fill="#162a4b">肯前肯后；否后否前</text>
+<text x="250" y="885" font-size="32" font-weight="700" text-anchor="middle" fill="#162a4b">否前、肯后：不必然</text>
+<path d="M34 920 H466" stroke="#bfd0e8" stroke-width="2"/>
+<text x="250" y="981" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">如果 A 那么 B：A → B</text>
+<text x="250" y="1040" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">只有 A 才 B：B → A</text>
+<text x="250" y="1097" font-size="32" font-weight="700" text-anchor="middle" fill="#162a4b">必要条件放箭头后</text>
+</g></svg>

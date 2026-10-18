@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="1520" viewBox="0 0 1060 1520" role="img" aria-labelledby="title desc">
+<title id="title">语病辨析｜先看关系，再判错误</title><desc id="desc">① 找主干：谁怎样？谁做什么？什么是什么？，先缩句，再放回修饰；不强求句句主谓宾；② 查搭配：主谓、动宾、修饰关系，分别读得通吗？，并列宾语逐项代回；比喻要看对应关系；③ 查语序与句式：时间、程度、动作、递进顺序是否合理？，两套句型有没有拼接？能否保留一种？；④ 查指代与歧义：他／其／对谁／谁在做，能否明确？，可省略不等于可含混；按本意补明试读；⑤ 查逻辑：否定、数量、范围、因果、两面对应，换成直白话：最终到底想表达什么？；⑥ 回题问并复核：找“有语病”还是“没有语病”？，说出缺陷并尝试最小修改，再选答案</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L6,3 z" fill="#1c6271"/></marker></defs>
+<style>text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif;font-weight:700;fill:#173343}.main{font-size:44px}.node{font-size:38px}.body{font-size:32px}</style>
+<rect width="1060" height="1520" fill="#f5f8f9"/>
+<text class="main" x="50" y="65">语病辨析｜先看关系，再判错误</text>
+<text class="body" x="50" y="115" fill="#315766">关键词提醒你检查，不能替你完成判断</text>
+<rect x="50" y="150" width="960" height="160" rx="20" fill="#e4f1f1" stroke="#b4c9d2" stroke-width="2"/>
+<text class="node" x="85" y="198">① 找主干</text>
+<text class="body" x="85" y="247">谁怎样？谁做什么？什么是什么？</text>
+<text class="body" x="85" y="289">先缩句，再放回修饰；不强求句句主谓宾</text>
+<path d="M530,318 L530,339" stroke="#1c6271" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+<rect x="50" y="350" width="960" height="160" rx="20" fill="#edf1fa" stroke="#b4c9d2" stroke-width="2"/>
+<text class="node" x="85" y="398">② 查搭配</text>
+<text class="body" x="85" y="447">主谓、动宾、修饰关系，分别读得通吗？</text>
+<text class="body" x="85" y="489">并列宾语逐项代回；比喻要看对应关系</text>
+<path d="M530,518 L530,539" stroke="#1c6271" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+<rect x="50" y="550" width="960" height="160" rx="20" fill="#e4f1f1" stroke="#b4c9d2" stroke-width="2"/>
+<text class="node" x="85" y="598">③ 查语序与句式</text>
+<text class="body" x="85" y="647">时间、程度、动作、递进顺序是否合理？</text>
+<text class="body" x="85" y="689">两套句型有没有拼接？能否保留一种？</text>
+<path d="M530,718 L530,739" stroke="#1c6271" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+<rect x="50" y="750" width="960" height="160" rx="20" fill="#edf1fa" stroke="#b4c9d2" stroke-width="2"/>
+<text class="node" x="85" y="798">④ 查指代与歧义</text>
+<text class="body" x="85" y="847">他／其／对谁／谁在做，能否明确？</text>
+<text class="body" x="85" y="889">可省略不等于可含混；按本意补明试读</text>
+<path d="M530,918 L530,939" stroke="#1c6271" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+<rect x="50" y="950" width="960" height="160" rx="20" fill="#e4f1f1" stroke="#b4c9d2" stroke-width="2"/>
+<text class="node" x="85" y="998">⑤ 查逻辑</text>
+<text class="body" x="85" y="1047">否定、数量、范围、因果、两面对应</text>
+<text class="body" x="85" y="1089">换成直白话：最终到底想表达什么？</text>
+<path d="M530,1118 L530,1139" stroke="#1c6271" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+<rect x="50" y="1150" width="960" height="160" rx="20" fill="#edf1fa" stroke="#b4c9d2" stroke-width="2"/>
+<text class="node" x="85" y="1198">⑥ 回题问并复核</text>
+<text class="body" x="85" y="1247">找“有语病”还是“没有语病”？</text>
+<text class="body" x="85" y="1289">说出缺陷并尝试最小修改，再选答案</text>
+<rect x="50" y="1340" width="960" height="145" rx="20" fill="#fff0d3" stroke="#d6be8c" stroke-width="2"/>
+<text class="body" x="85" y="1386">省主语不必错；“通过＋使”要看全句主语</text>
+<text class="body" x="85" y="1428">两面对应看句义，不按“是否”字数配对</text>
+<text class="body" x="85" y="1470">口诀：主干 → 搭配 → 句式 → 指代 → 逻辑</text>
+</svg>

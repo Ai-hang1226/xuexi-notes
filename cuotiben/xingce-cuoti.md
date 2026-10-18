@@ -4,7 +4,7 @@
 
 <figure class="study-visual">
 <a href="/xuexi-notes/visuals/review-20261015/review-loop.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/review-loop.svg" alt="错题复盘：归位、找病因、记对策、新题复测" width="500" loading="lazy" /></a>
-<figcaption>点击图可查看大图</figcaption>
+<figcaption>手机可在图内横向滑动；点击查看大图</figcaption>
 </figure>
 
 看清错因后再做新题；复盘完成与独立掌握分别记录 · [全站图解速查](/xingce/图解速查)
@@ -15,6 +15,8 @@
 ---
 
 ## 言语理解错题
+
+**10/18新归档**：[本轮13道错题＋4道答对复习](/cuotiben/言语理解专项复盘-2026-10-17)，完整原题、本人过程与解析单独成页；[全部选项词语辨析](/xingce/言语词义辨析积累表)。
 
 > **最新归档**：[篇章阅读 · 第41—45题（限时作答）](#yanyu-20260913-passage-41) · 2026-09-13。
 

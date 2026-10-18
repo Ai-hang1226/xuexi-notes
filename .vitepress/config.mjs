@@ -9,6 +9,10 @@ const sidebar = {
       items: [
         { text: '📖 大宝小宝·体系正文(16章)', link: '/xingce/大宝小宝言语体系-正文' },
         { text: '言语理解方法库', link: '/xingce/yanyu-lijie' },
+        { text: '言语专项复盘·17题', link: '/cuotiben/言语理解专项复盘-2026-10-17' },
+        { text: '词义辨析·99词', link: '/xingce/言语词义辨析积累表' },
+        { text: '语句排序·完整流程', link: '/xingce/语句排序-先找衔接再验证整体' },
+        { text: '语病辨析·检查框架', link: '/xingce/语病辨析-先找主干再检查关系' },
         { text: '🔍 文段识别速查卡', link: '/xingce/言语结构识别速查卡' },
         { text: '📌 言语·今日学习复盘', link: '/xingce/言语学习复盘-2026-09-13' },
         { text: '✅ 言语·真题归位(20题)', link: '/xingce/言语体系总览与真题归位' },
@@ -52,6 +56,7 @@ const sidebar = {
         { text: '错题统计', link: '/cuotiben/' },
         { text: '学习闭环（通用模板）', link: '/cuotiben/学习闭环' },
         { text: '行测错题集（按模块）', link: '/cuotiben/xingce-cuoti' },
+        { text: '言语专项复盘·17题', link: '/cuotiben/言语理解专项复盘-2026-10-17' },
         { text: '🔢 数量专项复盘·10题', link: '/cuotiben/数量关系专项复盘-2026-10-14' },
         { text: '🧩 判断专项复盘·8题', link: '/cuotiben/判断推理专项复盘-2026-10-07' },
         { text: '📊 资料专项复盘·2题', link: '/cuotiben/资料分析专项复盘-2026-10-07' },

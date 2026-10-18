@@ -117,3 +117,21 @@ body {
   .study-visual figcaption { display: none; }
   .visual-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* 本轮言语流程图：随正文放大，可点开矢量原图。 */
+.study-visual.study-visual-wide img { width: 100%; max-width: 860px; }
+
+@media (max-width: 640px) {
+  .study-visual.study-visual-wide { overflow-x: auto; }
+  .study-visual.study-visual-wide::before {
+    content: "← 左右滑动看完整图 · 点图放大";
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .study-visual.study-visual-wide a { width: 760px; }
+  .study-visual.study-visual-wide img { width: 760px; max-width: none; }
+}

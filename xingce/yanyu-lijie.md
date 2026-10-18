@@ -1,10 +1,12 @@
 # 言语理解与表达
 
+**最新复盘**：[17道精选题](/cuotiben/言语理解专项复盘-2026-10-17) · [词义辨析99词](/xingce/言语词义辨析积累表) · [语句排序](/xingce/语句排序-先找衔接再验证整体) · [语病辨析](/xingce/语病辨析-先找主干再检查关系)。原专项17/30、28:18；复盘理解与独立掌握分开。
+
 ## 看图复习
 
 <figure class="study-visual">
 <a href="/xuexi-notes/visuals/review-20261015/verbal-reading.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/verbal-reading.svg" alt="言语阅读：标志词、结构、观点落点与选项匹配" width="500" loading="lazy" /></a>
-<figcaption>点击图可查看大图</figcaption>
+<figcaption>手机可在图内横向滑动；点击查看大图</figcaption>
 </figure>
 
 先看阅读路径，再用目录定位所需章节；[结构速查](/xingce/言语结构识别速查卡) · [全站图解速查](/xingce/图解速查)

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="1120" viewBox="0 0 940 1120" role="img" aria-labelledby="title desc">
+<title id="title">言语复习：从原始思路到独立验证</title><desc id="desc">逻辑填空看语境比词义，阅读找句子作用，排序查衔接，语病找主干，最后用无提示新题验证。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto"><path d="M0,0 L8,5 L0,10" fill="none" stroke="#245c77" stroke-width="2"/></marker></defs>
+<rect width="940" height="1120" rx="20" fill="#f7fafc"/>
+<g font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#17394a" font-weight="700">
+<text x="55" y="78" font-size="44">言语复习：先认问题，再选方法</text>
+<text x="55" y="131" font-size="32">原卷 17/30 · 28:18 ｜ 讨论完成 ≠ 独立掌握</text>
+<rect x="45" y="176" width="850" height="180" rx="14" fill="#e6f2f5" stroke="#78a8b8"/>
+<text x="75" y="225" font-size="38">逻辑填空：别只凭顺口</text>
+<text x="75" y="279" font-size="32">读完整句 → 预判空意 → 比侧重 → 整组回代</text>
+<text x="75" y="328" font-size="32">提醒：陌生搭配不等于错误，词义更强未必更好</text>
+
+<rect x="45" y="422" width="850" height="180" rx="14" fill="#edf2fc" stroke="#9aadd2"/>
+<text x="75" y="471" font-size="38">阅读与排序：看关系，不只看关键词</text>
+<text x="75" y="525" font-size="32">标句子作用 → 找衔接证据 → 验证整段</text>
+<text x="75" y="574" font-size="32">提醒：首句不必最重要，局部通顺不证明整组对</text>
+
+<rect x="45" y="668" width="850" height="180" rx="14" fill="#f2f3ea" stroke="#a8b291"/>
+<text x="75" y="717" font-size="38">语病辨析：先找主干，再逐项检查</text>
+<text x="75" y="771" font-size="32">搭配 → 句式与语序 → 指代 → 逻辑</text>
+<text x="75" y="820" font-size="32">提醒：省略主语未必错，提示词不能机械判病</text>
+
+<rect x="45" y="914" width="850" height="145" rx="14" fill="#fff" stroke="#245c77" stroke-width="3"/>
+<text x="75" y="966" font-size="38">下一步：遮住解析，独立说出判断依据</text>
+<text x="75" y="1020" font-size="32">旧题能复述 → 新题无提示验证 → 延后复测</text>
+</g></svg>

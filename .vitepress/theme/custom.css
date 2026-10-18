@@ -33,6 +33,7 @@ body {
 .vp-doc table { font-size: 20px; }
 .vp-doc table th,
 .vp-doc table td {
+  font-size: 20px;
   min-width: 5em;
   white-space: normal;
   overflow-wrap: anywhere;

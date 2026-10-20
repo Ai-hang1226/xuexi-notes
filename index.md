@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "考公知识库"
-  text: "行测 · 五大模块"
+  text: "行测 · 申论"
   tagline: 把每一次做题，都变成可复用的知识资产
 
 features:
@@ -27,6 +27,10 @@ features:
     title: 常识判断
     details: 靠积累不靠突击，20题10分钟，知道的快选、不会的凭感觉、绝不恋战
     link: /xingce/changshi-panduan
+  - icon: 📘
+    title: 申论
+    details: 看原文如何变成答案：归纳概括两题、大字结构图、老师提炼逻辑与本人差距
+    link: /shenlun/
   - icon: 🧠
     title: 错题本
     details: 按模块分开记错题，归位→找病因→记对策→回炉，错一道消灭一个盲区
@@ -50,6 +54,8 @@ features:
 [打开图解速查](/xingce/图解速查) → 选模块 → 看结构图 → 查公式与原题。
 
 ## 🔥 最近更新
+
+- `2026-10-21` [申论 · 从原文到答案](/shenlun/) — 新增申论板块与3张大字图；[DAY4城市绿化](/shenlun/day4-city-greening)练总括与行动分组，[DAY5营商环境](/shenlun/day5-business-environment)练措施与成效配对。保留原答、完整材料与老师解析，改写和陌生题验证待完成。
 
 - `2026-10-18` [言语 · 17道重点题完整复盘](/cuotiben/言语理解专项复盘-2026-10-17) — 13错＋4道答对复习，保留原题选项、本人思路与讨论定稿，解析已精简；[99词辨析](/xingce/言语词义辨析积累表)、[排序](/xingce/语句排序-先找衔接再验证整体)与[语病图解](/xingce/语病辨析-先找主干再检查关系)同步更新。
 

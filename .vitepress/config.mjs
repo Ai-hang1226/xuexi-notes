@@ -2,6 +2,24 @@ import { defineConfig } from 'vitepress'
 
 // 侧边栏配置 - 行测五大模块（按模块分，不再有"行测"总览伞）
 const sidebar = {
+  '/shenlun/': [
+    {
+      text: '📘 申论 · 归纳概括',
+      items: [
+        { text: '从原文到答案 · 图解入口', link: '/shenlun/' },
+        { text: 'DAY4 · 城市绿化（做法）', link: '/shenlun/day4-city-greening' },
+        { text: 'DAY5 · 营商环境（措施与成效）', link: '/shenlun/day5-business-environment' },
+      ]
+    },
+    {
+      text: '原题与完整来源',
+      collapsed: true,
+      items: [
+        { text: 'DAY4 · 原题与讲义解析', link: '/shenlun/sources/day4-city-greening' },
+        { text: 'DAY5 · 原题与讲义解析', link: '/shenlun/sources/day5-business-environment' },
+      ]
+    }
+  ],
   '/xingce/': [
     { text: '🗺️ 图解速查', link: '/xingce/图解速查' },
     {
@@ -86,6 +104,7 @@ export default defineConfig({
     nav: [
       { text: '🗺️ 图解速查', link: '/xingce/图解速查' },
       { text: '🏠 首页', link: '/' },
+      { text: '📘 申论', link: '/shenlun/' },
       { text: '🗣️ 言语理解', link: '/xingce/yanyu-lijie' },
       { text: '🔢 数量关系', link: '/xingce/shuliang-guanxi' },
       { text: '🧩 判断推理', link: '/xingce/panduan-tuili' },

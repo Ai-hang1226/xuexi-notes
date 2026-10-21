@@ -25,17 +25,67 @@ body {
 .vp-doc h2 { line-height: 1.5; }
 .vp-doc h3 { line-height: 1.5; }
 .vp-doc strong { font-weight: 700; }
-.VPDoc.has-aside .content-container { max-width: 860px; }
+.VPDoc.has-aside .content .content-container { max-width: 860px; }
 
-/* 长表允许中文换行，额外宽度留在表内滚动。 */
+/* 短标签完整显示，长说明正常换行；宽表只在自己的区域内滚动。 */
+.vp-doc .table-scroll {
+  max-width: 100%;
+  margin: 24px 0;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+.vp-doc .table-scroll:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 3px;
+}
+.vp-doc .table-scroll > table {
+  display: table;
+  width: 100%;
+  min-width: min(100%, 320px);
+  margin: 0;
+  overflow: visible;
+}
+.vp-doc .table-scroll > .study-table {
+  min-width: calc(var(--table-columns) * 10rem);
+}
 .vp-doc table { font-size: 20px; }
 .vp-doc table th,
 .vp-doc table td {
   font-size: 20px;
-  min-width: 5em;
+  min-width: 6em;
   white-space: normal;
-  overflow-wrap: anywhere;
+  word-break: normal;
+  overflow-wrap: break-word;
+  vertical-align: top;
   line-height: 1.7;
+}
+.vp-doc .study-table .table-short-label { white-space: nowrap; }
+.vp-doc .relation-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3em 1em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.vp-doc .relation-list li {
+  margin: 0;
+  white-space: nowrap;
+  line-height: 1.7;
+}
+.vp-doc .table-note { display: block; color: var(--vp-c-text-2); }
+.vp-doc .table-key { white-space: nowrap; }
+
+/* 九项顶栏收为学科菜单，中等屏幕使用主题自带的完整菜单。 */
+.VPNav .VPNavBar,
+.VPNav .VPNavBar .wrapper { background-color: var(--vp-c-bg); }
+@media (min-width: 768px) and (max-width: 959px) {
+  .VPNavBar .VPNavBarMenu,
+  .VPNavBar .VPNavBarAppearance,
+  .VPNavBar .VPNavBarSocialLinks,
+  .VPNavBar .VPNavBarExtra { display: none; }
+  .VPNavBar .VPNavBarHamburger { display: flex; }
+  .VPNav .VPNavScreen { display: block; }
 }
 
 /* 行内分数与根号保留阅读空间。 */
@@ -111,6 +161,13 @@ body {
 }
 
 @media print {
+  .vp-doc .table-scroll { overflow: visible; }
+  .vp-doc .table-scroll > .study-table { min-width: 0; table-layout: fixed; }
+  .vp-doc table th,
+  .vp-doc table td { min-width: 0; padding: 6pt; font-size: 10pt; overflow-wrap: anywhere; }
+  .vp-doc .study-table .table-short-label,
+  .vp-doc .table-key,
+  .vp-doc .relation-list li { white-space: normal; }
   .vp-doc { font-size: 12pt; }
   .study-visual img { max-height: 22cm; width: auto; }
   .study-visual figcaption { display: none; }

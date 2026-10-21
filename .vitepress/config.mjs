@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { readableTables } from './readable-tables.mjs'
 
 // 侧边栏配置 - 行测五大模块（按模块分，不再有"行测"总览伞）
 const sidebar = {
@@ -108,11 +109,13 @@ export default defineConfig({
       { text: '🗺️ 图解速查', link: '/xingce/图解速查' },
       { text: '🏠 首页', link: '/' },
       { text: '📘 申论', link: '/shenlun/' },
-      { text: '🗣️ 言语理解', link: '/xingce/yanyu-lijie' },
-      { text: '🔢 数量关系', link: '/xingce/shuliang-guanxi' },
-      { text: '🧩 判断推理', link: '/xingce/panduan-tuili' },
-      { text: '📊 资料分析', link: '/xingce/ziliao-fenxi' },
-      { text: '🌍 常识判断', link: '/xingce/changshi-panduan' },
+      { text: '📗 行测', items: [
+        { text: '🗣️ 言语理解', link: '/xingce/yanyu-lijie' },
+        { text: '🔢 数量关系', link: '/xingce/shuliang-guanxi' },
+        { text: '🧩 判断推理', link: '/xingce/panduan-tuili' },
+        { text: '📊 资料分析', link: '/xingce/ziliao-fenxi' },
+        { text: '🌍 常识判断', link: '/xingce/changshi-panduan' },
+      ] },
       { text: '🧠 错题本', link: '/cuotiben/' },
     ],
 
@@ -166,6 +169,7 @@ export default defineConfig({
 
   // Markdown 配置
   markdown: {
+    config: readableTables,
     math: true,           // 支持数学公式（资料分析、数量关系用）
     lineNumbers: true,    // 代码行号
     theme: {

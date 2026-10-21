@@ -20,12 +20,12 @@
 
 ## 🧠 体系总览（24 种关系）
 
-| 板块 | 包含（关系清单） |
+| 板块 | 关系清单 |
 |------|-----------------|
-| 一 · 逻辑关系（8种） | 全同 / 全异 / 种属 / 交叉 / 顺承 / 因果 / 目的 / 条件 |
-| 二 · 经验常识（8种） | 功能 / 组成 / 加工 / 命名 / 特征 / 职业 / 位置 / 依据 |
-| 三 · 言语关系（7种） | 释义 / 指代象征 / 成语拆分 / 长诗句 / 近反义 / 结合逻辑 / 词句结构 |
-| 四 · 造句法（兜底） | 没套路就造句；少加字、加一样的字 |
+| <span class="table-key">一 · 逻辑关系</span><span class="table-note">8 种</span> | <ul class="relation-list"><li>全同</li><li>全异</li><li>种属</li><li>交叉</li><li>顺承</li><li>因果</li><li>目的</li><li>条件</li></ul> |
+| <span class="table-key">二 · 经验常识</span><span class="table-note">8 种</span> | <ul class="relation-list"><li>功能</li><li>组成</li><li>加工</li><li>命名</li><li>特征</li><li>职业</li><li>位置</li><li>依据</li></ul> |
+| <span class="table-key">三 · 言语关系</span><span class="table-note">7 种</span> | <ul class="relation-list"><li>释义</li><li>指代象征</li><li>成语拆分</li><li>长诗句</li><li>近反义</li><li>结合逻辑</li><li>词句结构</li></ul> |
+| <span class="table-key">四 · 造句法</span><span class="table-note">兜底方法</span> | 没套路就造句；少加字、加一样的字 |
 
 > 🔑 **先横后纵**：先看横向关系，选不出再比选项。
 > 🧠 **记忆钩子**：逻辑 `同·异·属·交·承·因·目·条` ｜ 常识 `能·部·料·名·性·活·位·据` ｜ 言语 `义·喻·拆·句·反·合·构` —— 共 8+8+7+1 = 24 种。

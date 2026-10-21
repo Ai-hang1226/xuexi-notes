@@ -49,6 +49,8 @@ const sidebar = {
       items: [
         { text: '判断推理总览', link: '/xingce/panduan-tuili' },
         { text: '🔺 图形推理', link: '/xingce/panduan-tuxing' },
+        { text: '图推专项复盘·10题', link: '/cuotiben/图形推理专项复盘-2026-10-21' },
+        { text: '图推特征与操作速查', link: '/xingce/图推特征与操作速查' },
         { text: '📋 定义判断', link: '/xingce/panduan-dingyi' },
         { text: '🔗 类比推理', link: '/xingce/panduan-leibi' },
         { text: '🎯 逻辑判断', link: '/xingce/panduan-luoji' },
@@ -72,6 +74,7 @@ const sidebar = {
       text: '🧠 错题本',
       items: [
         { text: '错题统计', link: '/cuotiben/' },
+        { text: '🔺 图推专项复盘·10题', link: '/cuotiben/图形推理专项复盘-2026-10-21' },
         { text: '学习闭环（通用模板）', link: '/cuotiben/学习闭环' },
         { text: '行测错题集（按模块）', link: '/cuotiben/xingce-cuoti' },
         { text: '言语专项复盘·17题', link: '/cuotiben/言语理解专项复盘-2026-10-17' },

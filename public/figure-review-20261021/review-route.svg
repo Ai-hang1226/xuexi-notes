@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="1420" viewBox="0 0 940 1420" role="img" aria-labelledby="title desc">
+<title id="title">图推复习：对象、特征、操作、验证与复测</title><desc id="desc">从提取对象到独立验证的五步路线，标注本轮容易漏掉的操作。</desc>
+<style>text{font-family:"Times New Roman","Microsoft YaHei","微软雅黑",sans-serif;fill:#152c44;font-weight:700}.title{font-size:44px}.node{font-size:38px}.body{font-size:32px}</style>
+<rect width="940" height="1420" fill="#f6f8fc"/>
+<text x="50" y="70" class="title">图推复盘｜先看见，再调用</text>
+<text x="50" y="123" class="body">10题2对 · 14分42秒 · 独立迁移待验证</text>
+<rect x="42" y="165" width="856" height="196" rx="18" fill="white" stroke="#a9bbcd" stroke-width="2"/>
+<text x="72" y="216" class="node">① 提取对象</text>
+<text x="72" y="273" class="body">黑白方形、特定白面、完整面</text>
+<text x="72" y="323" class="body">乱图先找跨图重复的清晰对象</text>
+<path d="M470 366v31m-12-12 12 12 12-12" fill="none" stroke="#466d94" stroke-width="4"/>
+<rect x="42" y="409" width="856" height="196" rx="18" fill="white" stroke="#a9bbcd" stroke-width="2"/>
+<text x="72" y="460" class="node">② 由特征列候选</text>
+<text x="72" y="517" class="body">交点／连接／笔画／种类／视图</text>
+<text x="72" y="567" class="body">有依据地换方向，不只用熟悉方法</text>
+<path d="M470 610v31m-12-12 12 12 12-12" fill="none" stroke="#466d94" stroke-width="4"/>
+<rect x="42" y="653" width="856" height="196" rx="18" fill="white" stroke="#a9bbcd" stroke-width="2"/>
+<text x="72" y="704" class="node">③ 把方法变成操作</text>
+<text x="72" y="761" class="body">数公共边、查奇点、画投影</text>
+<text x="72" y="811" class="body">比较对象和统计口径保持一致</text>
+<path d="M470 854v31m-12-12 12 12 12-12" fill="none" stroke="#466d94" stroke-width="4"/>
+<rect x="42" y="897" width="856" height="196" rx="18" fill="white" stroke="#a9bbcd" stroke-width="2"/>
+<text x="72" y="948" class="node">④ 验证全部题图与选项</text>
+<text x="72" y="1005" class="body">局部成立 → 检查整组是否成立</text>
+<text x="72" y="1055" class="body">保留解析分歧，不为答案凑条件</text>
+<path d="M470 1098v31m-12-12 12 12 12-12" fill="none" stroke="#466d94" stroke-width="4"/>
+<rect x="42" y="1141" width="856" height="196" rx="18" fill="white" stroke="#a9bbcd" stroke-width="2"/>
+<text x="72" y="1192" class="node">⑤ 无提示新题与延后复测</text>
+<text x="72" y="1249" class="body">旧题听懂 ≠ 陌生题独立完成</text>
+<text x="72" y="1299" class="body">记录正确率、用时和是否独立</text>
+</svg>

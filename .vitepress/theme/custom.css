@@ -1,10 +1,8 @@
-/* 全站字体：微软雅黑 */
+/* 全站字体：英文、数字优先 Times New Roman，中文回落到楷体。 */
 :root {
-  --vp-font-family-base: "Microsoft YaHei", "微软雅黑", "PingFang SC",
-    "Hiragino Sans GB", "Segoe UI", -apple-system, BlinkMacSystemFont,
-    "Helvetica Neue", Arial, sans-serif;
-  --vp-font-family-mono: "Microsoft YaHei", "微软雅黑", "Cascadia Code",
-    Consolas, "Courier New", monospace;
+  --vp-font-family-base: "Times New Roman", "KaiTi", "楷体", "STKaiti",
+    "Kaiti SC", serif;
+  --vp-font-family-mono: var(--vp-font-family-base);
 }
 
 body {

@@ -2,7 +2,7 @@
 <title id="title">假言：只找一个假</title><desc id="desc">假言命题A蕴含B的真值表。仅A真且B假时为假；等价逆否为非B蕴含非A。肯前、否后可推；否前、肯后不必然。</desc>
 <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#5777a8" stroke-width="2"/></marker></defs>
 <rect width="500" height="1130" rx="24" fill="#f3f7fd"/>
-<g font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#162a4b">
+<g font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" fill="#162a4b">
 <text x="250" y="66" font-size="44" font-weight="700" text-anchor="middle" fill="#162a4b">假言：只找一个假</text>
 <text x="250" y="131" font-size="44" font-weight="700" text-anchor="middle" fill="#162a4b">A → B</text>
 <rect x="20" y="162" width="460" height="380" rx="18" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>

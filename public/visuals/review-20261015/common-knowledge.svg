@@ -3,7 +3,7 @@
 <desc id="desc">依据站内《常识判断》的政治、法律、科技、文史、经济、地理分类及日期、知识点、来源积累表，整理为按领域归位、记核心区别、保留来源日期、隔天回看的学习流程。</desc>
 <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#5777a8" stroke-width="2"/></marker></defs>
 <rect width="500" height="1200" rx="24" fill="#f3f7fd"/>
-<g font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#162a4b">
+<g font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" fill="#162a4b">
 <text x="250" y="70" font-size="44" font-weight="800" text-anchor="middle">常识积累四步走</text>
 <text x="250" y="120" font-size="32" font-weight="600" text-anchor="middle">一条知识，留下一个区别</text>
 <rect x="20" y="150" width="460" height="180" rx="20" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>

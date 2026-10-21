@@ -2,7 +2,7 @@
 <title id="title">判断：先分四类</title><desc id="desc">判断推理四类题型的入口图。图形先看组成，定义以题干定义为标准，类比先造句再查二级关系，逻辑区分翻译与论证。</desc>
 <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#5777a8" stroke-width="2"/></marker></defs>
 <rect width="500" height="1120" rx="24" fill="#f3f7fd"/>
-<g font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#162a4b">
+<g font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" fill="#162a4b">
 <text x="250" y="66" font-size="44" font-weight="700" text-anchor="middle" fill="#162a4b">判断：先分四类</text>
 <text x="250" y="118" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">先认题型，再选工具</text>
 <rect x="20" y="150" width="460" height="190" rx="20" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>

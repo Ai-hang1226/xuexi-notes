@@ -2,7 +2,7 @@
 <title id="title">论证：找准缺口</title><desc id="desc">以原卷第14题咖啡与磨牙为题内论证示例，示意论据、结论、中间缺口与选项作用。相关不自动推出直接因果；本图不作医学结论。</desc>
 <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#5777a8" stroke-width="2"/></marker></defs>
 <rect width="500" height="1270" rx="24" fill="#f3f7fd"/>
-<g font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#162a4b">
+<g font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" fill="#162a4b">
 <text x="250" y="66" font-size="44" font-weight="700" text-anchor="middle" fill="#162a4b">论证：找准缺口</text>
 <text x="250" y="118" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">先写论据、结论、缺口</text>
 <rect x="20" y="150" width="460" height="190" rx="20" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>

@@ -1,4 +1,5 @@
 ---
+pageClass: shenlun-page
 title: "DAY4｜F市城市绿化：概括主要做法"
 type: study-review
 status: discussed-pending-rewrite

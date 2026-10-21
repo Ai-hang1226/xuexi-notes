@@ -1,4 +1,5 @@
 ---
+pageClass: shenlun-page
 title: 申论学习｜归纳概括两题复习
 type: study-index
 status: active

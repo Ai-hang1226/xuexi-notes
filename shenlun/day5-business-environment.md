@@ -1,4 +1,5 @@
 ---
+pageClass: shenlun-page
 title: "DAY5｜H市营商环境：措施与成效一起概括"
 type: study-review
 status: discussed

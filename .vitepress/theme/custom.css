@@ -136,3 +136,27 @@ body {
   .study-visual.study-visual-wide a { width: 760px; }
   .study-visual.study-visual-wide img { width: 760px; max-width: none; }
 }
+
+/* 申论专用：略缩字号，保留其他模块原有大字。 */
+.shenlun-page .vp-doc { font-size: 20px; }
+.shenlun-page .vp-doc p,
+.shenlun-page .vp-doc li,
+.shenlun-page .vp-doc blockquote > p { line-height: 1.8; }
+.shenlun-page .vp-doc h1 { font-size: 30px; line-height: 1.45; }
+.shenlun-page .vp-doc h2 { font-size: 25px; line-height: 1.5; }
+.shenlun-page .vp-doc h3 { font-size: 22px; line-height: 1.55; }
+.shenlun-page .vp-doc h4 { font-size: 20px; }
+.shenlun-page .vp-doc table,
+.shenlun-page .vp-doc table th,
+.shenlun-page .vp-doc table td { font-size: 18px; }
+.shenlun-page .visual-grid span { font-size: 17px; }
+.shenlun-page mark { padding: .05em .13em; border-radius: 3px; font-weight: 650; }
+.shenlun-page mark.sl-action { color: #164a8a; background: #e5effc; }
+.shenlun-page mark.sl-effect { color: #1e6338; background: #e4f4e9; }
+.shenlun-page mark.sl-goal { color: #825200; background: #fff0cf; }
+.dark .shenlun-page mark.sl-action { color: #c9dfff; background: #233b5d; }
+.dark .shenlun-page mark.sl-effect { color: #c1e9cf; background: #254836; }
+.dark .shenlun-page mark.sl-goal { color: #ffe1a3; background: #58431e; }
+.shenlun-page .sl-raw { margin: 1.2rem 0; padding: 1rem; border: 1px solid var(--vp-c-divider); border-radius: 10px; }
+.shenlun-page .sl-raw summary { cursor: pointer; font-weight: 650; }
+.shenlun-page .sl-raw p { font-size: 19px; line-height: 1.85; }

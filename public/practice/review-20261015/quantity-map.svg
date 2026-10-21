@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img"><title>数量关系｜复盘完成</title><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#8990B5"/></marker></defs><rect width="100%" height="100%" fill="#FBFCFF"/>
 <rect x="330" y="30" width="540" height="110" rx="18" fill="#25336D" stroke="#25336D" stroke-width="1.5"/>
-<text x="600" y="75" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="28" font-weight="600" fill="#FFF" text-anchor="middle">
+<text x="600" y="75" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="28" font-weight="600" fill="#FFF" text-anchor="middle">
 <tspan x="600" dy="0">数量关系｜复盘完成</tspan>
 </text>
-<text x="600" y="113" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="16" font-weight="400" fill="#DCE3FF" text-anchor="middle">
+<text x="600" y="113" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="16" font-weight="400" fill="#DCE3FF" text-anchor="middle">
 <tspan x="600" dy="0">原专项 20题14对 · 37:46｜提示性补练 2/2</tspan>
 </text>
 <path d="M600 140 V160 H28 V500" fill="none" stroke="#AAB1CE" stroke-width="2"/>
@@ -12,58 +12,58 @@
 <path d="M28 500 H317.5 V520" fill="none" stroke="#DC8A26" stroke-width="2" marker-end="url(#arrow)"/>
 <path d="M28 500 H882.5 V520" fill="none" stroke="#B35DB8" stroke-width="2" marker-end="url(#arrow)"/>
 <rect x="50" y="200" width="535" height="280" rx="18" fill="#ECEEFF" stroke="#5964D8" stroke-width="1.5"/>
-<text x="72" y="238" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="23" font-weight="600" fill="#5964D8">
+<text x="72" y="238" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="23" font-weight="600" fill="#5964D8">
 <tspan x="72" dy="0">建模与比例</tspan>
 </text>
-<text x="74" y="278" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="18" font-weight="400" fill="#26324A">
+<text x="74" y="278" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="18" font-weight="400" fill="#26324A">
 <tspan x="74" dy="0">1｜基准价与均值分开；赋值看尺度</tspan>
 </text>
-<text x="74" y="316" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="18" font-weight="400" fill="#26324A">
+<text x="74" y="316" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="18" font-weight="400" fill="#26324A">
 <tspan x="74" dy="0">8｜比例先找分母，数字带对象</tspan>
 </text>
-<text x="74" y="354" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="18" font-weight="400" fill="#26324A">
+<text x="74" y="354" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="18" font-weight="400" fill="#26324A">
 <tspan x="74" dy="0">12｜共同河宽约掉，速度参数保留</tspan>
 </text>
 <rect x="615" y="200" width="535" height="280" rx="18" fill="#E5F6EF" stroke="#169879" stroke-width="1.5"/>
-<text x="637" y="238" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="23" font-weight="600" fill="#169879">
+<text x="637" y="238" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="23" font-weight="600" fill="#169879">
 <tspan x="637" dy="0">计数与概率</tspan>
 </text>
-<text x="639" y="278" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="18" font-weight="400" fill="#26324A">
+<text x="639" y="278" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="18" font-weight="400" fill="#26324A">
 <tspan x="639" dy="0">6｜总数 − 违规 ＋ 交集</tspan>
 </text>
-<text x="639" y="316" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="18" font-weight="400" fill="#26324A">
+<text x="639" y="316" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="18" font-weight="400" fill="#26324A">
 <tspan x="639" dy="0">9｜每轮先异组，再算同时晋级</tspan>
 </text>
-<text x="639" y="354" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="18" font-weight="400" fill="#26324A">
+<text x="639" y="354" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="18" font-weight="400" fill="#26324A">
 <tspan x="639" dy="0">原第 6 题选项回忆差异保留</tspan>
 </text>
 <rect x="50" y="520" width="535" height="280" rx="18" fill="#FFF1DD" stroke="#DC8A26" stroke-width="1.5"/>
-<text x="72" y="558" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="23" font-weight="600" fill="#DC8A26">
+<text x="72" y="558" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="23" font-weight="600" fill="#DC8A26">
 <tspan x="72" dy="0">数字推理</tspan>
 </text>
-<text x="74" y="598" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="18" font-weight="400" fill="#26324A">
+<text x="74" y="598" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="18" font-weight="400" fill="#26324A">
 <tspan x="74" dy="0">4｜整数数位 → 和／差 → 小数数位</tspan>
 </text>
-<text x="74" y="636" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="18" font-weight="400" fill="#26324A">
+<text x="74" y="636" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="18" font-weight="400" fill="#26324A">
 <tspan x="74" dy="0">15｜相邻求和 → 幂次；提示性题答对</tspan>
 </text>
-<text x="74" y="674" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="18" font-weight="400" fill="#26324A">
+<text x="74" y="674" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="18" font-weight="400" fill="#26324A">
 <tspan x="74" dy="0">16｜统一取余；猜对，C 类方法缺口</tspan>
 </text>
 <rect x="615" y="520" width="535" height="280" rx="18" fill="#F7EAF7" stroke="#B35DB8" stroke-width="1.5"/>
-<text x="637" y="558" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="23" font-weight="600" fill="#B35DB8">
+<text x="637" y="558" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="23" font-weight="600" fill="#B35DB8">
 <tspan x="637" dy="0">几何与周期</tspan>
 </text>
-<text x="639" y="598" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="18" font-weight="400" fill="#26324A">
+<text x="639" y="598" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="18" font-weight="400" fill="#26324A">
 <tspan x="639" dy="0">10｜等长分组：组和公差 m²d</tspan>
 </text>
-<text x="639" y="636" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="18" font-weight="400" fill="#26324A">
+<text x="639" y="636" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="18" font-weight="400" fill="#26324A">
 <tspan x="639" dy="0">19｜补直角 → 求底宽 → 面积差</tspan>
 </text>
-<text x="639" y="674" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="18" font-weight="400" fill="#26324A">
+<text x="639" y="674" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="18" font-weight="400" fill="#26324A">
 <tspan x="639" dy="0">辅助线构造缺口，已备反复练习</tspan>
 </text>
-<text x="50" y="832" font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" font-size="14" font-weight="400" fill="#707A93">
+<text x="50" y="832" font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" font-size="14" font-weight="400" fill="#707A93">
 <tspan x="50" dy="0">姜胡说 · 先看结构，再按链接展开原始证据</tspan>
 </text>
 </svg>

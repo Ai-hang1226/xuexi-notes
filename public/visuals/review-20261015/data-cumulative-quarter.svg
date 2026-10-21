@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="1550" viewBox="0 0 500 1550" role="img" aria-labelledby="title desc">
 <title id="title">累计转当季：两个年份分别还原，再同比</title>
 <desc id="desc">来源：2026-10-07资料分析专项第15题。S市二季度：2021年3632减1713等于1919；2022年2525减1133等于1392；同比增量负527。S市四季度同比增量为负580、负527、正894、负261，单位万平方米。</desc>
-<style>text{font-family:"Times New Roman", "KaiTi", "楷体", "STKaiti", "Kaiti SC", serif;fill:#19345b;font-size:32px;font-weight:600}.title{font-size:44px;font-weight:800}.head{font-size:38px;font-weight:800}.small{font-size:28px}.formula{font-size:40px;font-weight:700}.muted{fill:#49607b}.blue{fill:#245ddb}.green{fill:#007f70}.orange{fill:#9c4600}</style>
+<style>text{font-family:"Times New Roman", "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", sans-serif;fill:#19345b;font-size:32px;font-weight:600}.title{font-size:44px;font-weight:800}.head{font-size:38px;font-weight:800}.small{font-size:28px}.formula{font-size:40px;font-weight:700}.muted{fill:#49607b}.blue{fill:#245ddb}.green{fill:#007f70}.orange{fill:#9c4600}</style>
 <rect width="500" height="1550" rx="22" fill="#f5f8ff"/>
 <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6683ac"/></marker></defs>
 <text x="250" y="70" text-anchor="middle" class="title">累计值→当季值</text>

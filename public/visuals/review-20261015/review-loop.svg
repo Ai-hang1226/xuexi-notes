@@ -3,7 +3,7 @@
 <desc id="desc">来源：站内《学习闭环》通用框架与三模块专项复盘。按归位、找病因、记对策、新题复测循环；复盘完成不等于独立掌握，猜对题仍须验证。</desc>
 <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#5777a8" stroke-width="2"/></marker></defs>
 <rect width="500" height="1270" rx="24" fill="#f3f7fd"/>
-<g font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" fill="#162a4b">
+<g font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" fill="#162a4b">
 <text x="250" y="70" font-size="44" font-weight="800" text-anchor="middle">错题复盘闭环</text>
 <text x="250" y="120" font-size="32" font-weight="600" text-anchor="middle">错题、猜对、慢题都检查</text>
 <rect x="20" y="150" width="460" height="180" rx="20" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>

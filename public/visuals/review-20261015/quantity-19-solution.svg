@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="1960" viewBox="0 0 500 1960" role="img" aria-labelledby="title desc">
 <title id="title">第19题：过B补水平线，勾股求宽，再作面积差</title>
 <desc id="desc">来源：2026-10-14数量关系专项第19题及既有辅助线图。A、D在左侧竖边，B、C在右侧竖边，Q在DC上；过B作BE平行DC，E在AD上，角AEB为90度。AD为200，BC与DQ均为100，AB为260。AE为100，BE与DC为240，QC为140。梯形面积36000减三角形ADQ面积10000、三角形BCQ面积7000，得到三角形ABQ面积19000平方米。原题答对，辅助线方法仍待练，不标记为猜对。</desc>
-<style>text{font-family:"Times New Roman", "KaiTi", "楷体", "STKaiti", "Kaiti SC", serif;fill:#19345b;font-size:32px;font-weight:600}.title{font-size:44px;font-weight:800}.head{font-size:38px;font-weight:800}.formula{font-size:40px;font-weight:700}.blue{fill:#245ddb}.green{fill:#007f70}.orange{fill:#9c4600}.muted{fill:#49607b}</style>
+<style>text{font-family:"Times New Roman", "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", sans-serif;fill:#19345b;font-size:32px;font-weight:600}.title{font-size:44px;font-weight:800}.head{font-size:38px;font-weight:800}.formula{font-size:40px;font-weight:700}.blue{fill:#245ddb}.green{fill:#007f70}.orange{fill:#9c4600}.muted{fill:#49607b}</style>
 <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6683ac"/></marker></defs>
 <rect width="500" height="1960" rx="22" fill="#f5f8ff"/>
 <text x="250" y="70" text-anchor="middle" class="title">第19题：辅助线</text>

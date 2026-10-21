@@ -81,7 +81,7 @@
 
 ## 技术栈
 
-- **全站字体（用户 2026-10-21 指定）**：英文和数字用 Times New Roman，中文用楷体。主题、独立 HTML 和可编辑 SVG 均沿用此顺序：`"Times New Roman", "KaiTi", "楷体", "STKaiti", "Kaiti SC", serif`；调整内容时保留现有字号和图标。
+- **全站字体（用户 2026-10-21 最新指定）**：英文和数字用 Times New Roman，中文用微软雅黑（替代此前的楷体）。主题、独立 HTML 和可编辑 SVG 均沿用此顺序：`"Times New Roman", "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", sans-serif`；调整内容时保留现有字号和图标。
 
 - **框架**：VitePress 1.6.4（Markdown 驱动，零前端基础可维护）
 - **部署**：GitHub Pages（免费），仓库 `Ai-hang1226/xuexi-notes`

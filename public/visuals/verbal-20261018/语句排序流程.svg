@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1060" height="1520" viewBox="0 0 1060 1520" role="img" aria-labelledby="title desc">
 <title id="title">语句排序｜先取证，再验证整体</title><desc id="desc">① 对比选项差异：首句、相邻句、句组顺序，差在哪里？，相同位置不反复研究，集中比较不同处；② 标注句子功能：定义／背景／观点／解释／转折／对策，同一名词反复出现，也可能承担不同任务；③ 寻找衔接证据：指代、关联、总分、时间、话题推进，相邻关系 ≠ 先后关系 ≠ 同组关系；④ 比较候选顺序：谁先引入对象？谁解释谁？转折在哪里？，用证据筛选，保留暂时无法排除的项；⑤ 通读整段验证：指代有着落，逻辑能解释，话题不乱跳，不能为一个局部连接牺牲整段连贯；⑥ 回看题问后选择：选的是完整顺序，说明关键比较依据，看懂本题后，还需用未见新题独立复测</desc>
 <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L6,3 z" fill="#1c6271"/></marker></defs>
-<style>text{font-family:"Times New Roman", "KaiTi", "楷体", "STKaiti", "Kaiti SC", serif;font-weight:700;fill:#173343}.main{font-size:44px}.node{font-size:38px}.body{font-size:32px}</style>
+<style>text{font-family:"Times New Roman", "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", sans-serif;font-weight:700;fill:#173343}.main{font-size:44px}.node{font-size:38px}.body{font-size:32px}</style>
 <rect width="1060" height="1520" fill="#f5f8f9"/>
 <text class="main" x="50" y="65">语句排序｜先取证，再验证整体</text>
 <text class="body" x="50" y="115" fill="#315766">局部连接能成立，不等于整组选项成立</text>

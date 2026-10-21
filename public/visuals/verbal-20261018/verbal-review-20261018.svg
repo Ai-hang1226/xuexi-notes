@@ -2,7 +2,7 @@
 <title id="title">言语复习：从原始思路到独立验证</title><desc id="desc">逻辑填空看语境比词义，阅读找句子作用，排序查衔接，语病找主干，最后用无提示新题验证。</desc>
 <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto"><path d="M0,0 L8,5 L0,10" fill="none" stroke="#245c77" stroke-width="2"/></marker></defs>
 <rect width="940" height="1120" rx="20" fill="#f7fafc"/>
-<g font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" fill="#17394a" font-weight="700">
+<g font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" fill="#17394a" font-weight="700">
 <text x="55" y="78" font-size="44">言语复习：先认问题，再选方法</text>
 <text x="55" y="131" font-size="32">原卷 17/30 · 28:18 ｜ 讨论完成 ≠ 独立掌握</text>
 <rect x="45" y="176" width="850" height="180" rx="14" fill="#e6f2f5" stroke="#78a8b8"/>

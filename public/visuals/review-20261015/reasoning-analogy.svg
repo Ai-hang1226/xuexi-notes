@@ -2,7 +2,7 @@
 <title id="title">类比：关系要对齐</title><desc id="desc">类比推理先用一致句式造句，再判断一级关系，比方向必要性语义结构等二级关系，最后核对每组选项与题干的关系层次和方向；先横向后纵向。</desc>
 <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#5777a8" stroke-width="2"/></marker></defs>
 <rect width="500" height="1170" rx="24" fill="#f3f7fd"/>
-<g font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" fill="#162a4b">
+<g font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" fill="#162a4b">
 <text x="250" y="66" font-size="44" font-weight="700" text-anchor="middle" fill="#162a4b">类比：关系要对齐</text>
 <text x="250" y="118" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">先横向，再纵向比较</text>
 <rect x="20" y="150" width="460" height="150" rx="20" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>

@@ -2,7 +2,7 @@
 <title id="title">图形：按组成找规律</title><desc id="desc">平面图先看元素组成，相同看位置、相似看样式、不同查数量属性；空间图另走特殊面、箭头、移面和邻位核对路径。各类工具按题型选用。</desc>
 <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#5777a8" stroke-width="2"/></marker></defs>
 <rect width="500" height="1100" rx="24" fill="#f3f7fd"/>
-<g font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" fill="#162a4b">
+<g font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" fill="#162a4b">
 <text x="250" y="66" font-size="44" font-weight="700" text-anchor="middle" fill="#162a4b">图形：按组成找规律</text>
 <text x="250" y="118" font-size="32" font-weight="600" text-anchor="middle" fill="#162a4b">平面与空间，分路观察</text>
 <rect x="20" y="150" width="460" height="190" rx="20" fill="#fff" stroke="#bfd0e8" stroke-width="2"/>

@@ -2,7 +2,7 @@
 <title id="title">申论概括｜先分任务，再组织</title><desc id="desc">左列只概括主要做法；右列概括措施与成效。两种题目分别组织，改写和陌生题验证仍待完成。</desc>
 <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10" fill="#526078"/></marker></defs>
 <rect width="1120" height="1300" fill="#f4f7fb"/>
-<g font-family="'Times New Roman', 'KaiTi', '楷体', 'STKaiti', 'Kaiti SC', serif" fill="#172a43">
+<g font-family="'Times New Roman', 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', sans-serif" fill="#172a43">
 <text x="48" y="76" font-size="44" font-weight="800">申论概括｜先分任务，再组织</text>
 <text x="48" y="134" font-size="32" fill="#263b55" font-weight="600">同样找信息，最终答案的组织方式不同</text>
 <rect x="40" y="185" width="500" height="130" rx="20" fill="white" stroke="#216b63" stroke-width="3"/>

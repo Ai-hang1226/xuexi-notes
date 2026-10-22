@@ -60,6 +60,43 @@ body {
   line-height: 1.7;
 }
 .vp-doc .study-table .table-short-label { white-space: nowrap; }
+.vp-doc .study-table .table-prose { min-width: 14em; }
+
+/* Visible reading cues for content wider than its region; regular blocks stay quiet. */
+.vp-doc [data-reading-overflow]::before {
+  display: block;
+  position: sticky;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px 0 10px;
+  font-family: var(--vp-font-family-base);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--vp-c-text-2);
+  text-align: left;
+  white-space: normal;
+}
+.vp-doc [data-reading-overflow="table"]::before { content: "← 左右滑动查看完整表格 →"; }
+.vp-doc [data-reading-overflow="formula"]::before { content: "← 左右滑动查看完整公式 →"; }
+.vp-doc [data-reading-overflow="outline"]::before {
+  content: "← 左右滑动查看完整结构 →";
+  padding: 12px 72px 0 24px;
+}
+/* Plain-text study trees are notes, so code line numbers add no reading value. */
+.vp-doc div.language-.line-numbers-mode,
+.vp-doc div.language-text.line-numbers-mode { padding-left: 0; }
+.vp-doc div.language- .line-numbers-wrapper,
+.vp-doc div.language-text .line-numbers-wrapper,
+.vp-doc div.language- > button.copy,
+.vp-doc div.language-text > button.copy { display: none; }
+.vp-doc div.language-[data-reading-overflow]::before,
+.vp-doc div.language-text[data-reading-overflow]::before { padding-right: 24px; }
+.vp-doc [data-reading-overflow="formula"]:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 3px;
+}
 .vp-doc .relation-list {
   display: flex;
   flex-wrap: wrap;
@@ -161,10 +198,12 @@ body {
 }
 
 @media print {
+  .vp-doc [data-reading-overflow]::before { display: none; }
   .vp-doc .table-scroll { overflow: visible; }
   .vp-doc .table-scroll > .study-table { min-width: 0; table-layout: fixed; }
   .vp-doc table th,
-  .vp-doc table td { min-width: 0; padding: 6pt; font-size: 10pt; overflow-wrap: anywhere; }
+  .vp-doc table td,
+  .vp-doc .study-table .table-prose { min-width: 0; padding: 6pt; font-size: 10pt; overflow-wrap: anywhere; }
   .vp-doc .study-table .table-short-label,
   .vp-doc .table-key,
   .vp-doc .relation-list li { white-space: normal; }

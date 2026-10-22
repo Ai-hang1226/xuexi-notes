@@ -15,6 +15,8 @@ export function readableTables(md) {
         if (!['th_open', 'td_open'].includes(tokens[j].type)) continue
         const inline = tokens[j + 1]
         const text = inline?.type === 'inline' ? inline.content.trim() : ''
+        const prose = inline?.children?.filter(t => ['text', 'code_inline'].includes(t.type)).map(t => t.content).join('') || ''
+        if (prose.replace(/\s/g, '').length > 24) tokens[j].attrJoin('class', 'table-prose')
         if (column === 0 && text && text.length <= 16 && !/[<>$\n]/.test(text)) {
           tokens[j].attrJoin('class', 'table-short-label')
         }

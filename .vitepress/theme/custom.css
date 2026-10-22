@@ -64,6 +64,22 @@ body {
 }
 .vp-doc .study-table .table-short-label { white-space: nowrap; }
 .vp-doc .study-table .table-prose { min-width: 14em; }
+.vp-doc h4 { font-size: 1em; font-weight: 700; line-height: 1.6; }
+
+/* Each accumulated example stays together in a separate reading item. */
+.vp-doc .study-examples > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10em), 1fr));
+  gap: 10px 24px;
+  padding-left: 1.2em;
+}
+.vp-doc .study-examples > ul > li {
+  margin: 0;
+  padding-left: .1em;
+}
+@media print {
+  .vp-doc .study-examples > ul { display: block; }
+}
 
 /* Visible reading cues for content wider than its region; regular blocks stay quiet. */
 .vp-doc [data-reading-overflow]::before {

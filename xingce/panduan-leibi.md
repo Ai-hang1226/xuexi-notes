@@ -27,8 +27,30 @@
 | <span class="table-key">三 · 言语关系</span><span class="table-note">7 种</span> | <ul class="relation-list"><li>释义</li><li>指代象征</li><li>成语拆分</li><li>长诗句</li><li>近反义</li><li>结合逻辑</li><li>词句结构</li></ul> |
 | <span class="table-key">四 · 造句法</span><span class="table-note">兜底方法</span> | 没套路就造句；少加字、加一样的字 |
 
-> 🔑 **先横后纵**：先看横向关系，选不出再比选项。
-> 🧠 **记忆钩子**：逻辑 `同·异·属·交·承·因·目·条` ｜ 常识 `能·部·料·名·性·活·位·据` ｜ 言语 `义·喻·拆·句·反·合·构` —— 共 8+8+7+1 = 24 种。
+<div class="memory-hook" role="note" aria-label="类比推理记忆钩子">
+<p><span aria-hidden="true">🔑</span> <strong>先横后纵</strong>：先看横向关系，选不出再比选项。</p>
+<div class="memory-hook__title">
+<span><span aria-hidden="true">🧠</span> <strong>记忆钩子</strong></span>
+<span class="memory-hook__count">共 8+8+7+1 = 24 种</span>
+</div>
+<div class="memory-hook__groups">
+<div class="memory-hook__row">
+<span class="memory-hook__label">逻辑</span>
+<ul class="memory-hook__tokens"><li>同</li><li>异</li><li>属</li><li>交</li><li>承</li><li>因</li><li>目</li><li>条</li></ul>
+<span class="memory-hook__count">8 种</span>
+</div>
+<div class="memory-hook__row">
+<span class="memory-hook__label">常识</span>
+<ul class="memory-hook__tokens"><li>能</li><li>部</li><li>料</li><li>名</li><li>性</li><li>活</li><li>位</li><li>据</li></ul>
+<span class="memory-hook__count">8 种</span>
+</div>
+<div class="memory-hook__row">
+<span class="memory-hook__label">言语</span>
+<ul class="memory-hook__tokens"><li>义</li><li>喻</li><li>拆</li><li>句</li><li>反</li><li>合</li><li>构</li></ul>
+<span class="memory-hook__count">7 种</span>
+</div>
+</div>
+</div>
 
 ---
 

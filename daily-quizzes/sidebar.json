@@ -1,0 +1,28 @@
+[
+  {
+    "text": "每日测验",
+    "items": [
+      {
+        "text": "测验总览与复测安排",
+        "link": "/daily-quizzes/"
+      }
+    ]
+  },
+  {
+    "text": "2026-10-24",
+    "items": [
+      {
+        "text": "试卷",
+        "link": "/daily-quizzes/2026-10-24"
+      },
+      {
+        "text": "结果与解析",
+        "link": "/daily-quizzes/2026-10-24-review"
+      },
+      {
+        "text": "本人首答",
+        "link": "/daily-quizzes/2026-10-24-answer"
+      }
+    ]
+  }
+]

@@ -355,3 +355,11 @@ body {
 .shenlun-page .sl-raw { margin: 1.2rem 0; padding: 1rem; border: 1px solid var(--vp-c-divider); border-radius: 10px; }
 .shenlun-page .sl-raw summary { cursor: pointer; font-weight: 650; }
 .shenlun-page .sl-raw p { font-size: 19px; line-height: 1.85; }
+
+
+/* 每日测验：沿用大字正文；混合页面中的申论单独保持20px。 */
+.quiz-page .quiz-flow { padding-left: 1.5em; }
+.quiz-page .quiz-flow li { margin: .6em 0; font-weight: 650; }
+.quiz-page .quiz-shenlun { font-size: 20px; }
+.quiz-page .quiz-shenlun table th,
+.quiz-page .quiz-shenlun table td { font-size: 18px; }

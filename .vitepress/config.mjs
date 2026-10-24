@@ -1,8 +1,10 @@
 import { defineConfig } from 'vitepress'
 import { readableTables } from './readable-tables.mjs'
+import dailyQuizSidebar from '../daily-quizzes/sidebar.json'
 
 // 侧边栏配置 - 行测五大模块（按模块分，不再有"行测"总览伞）
 const sidebar = {
+  '/daily-quizzes/': dailyQuizSidebar,
   '/shenlun/': [
     {
       text: '📘 申论 · 归纳概括',
@@ -108,6 +110,7 @@ export default defineConfig({
     nav: [
       { text: '🗺️ 图解速查', link: '/xingce/图解速查' },
       { text: '🏠 首页', link: '/' },
+      { text: '📝 每日测验', link: '/daily-quizzes/' },
       { text: '📘 申论', link: '/shenlun/' },
       { text: '📗 行测', items: [
         { text: '🗣️ 言语理解', link: '/xingce/yanyu-lijie' },

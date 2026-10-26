@@ -23,6 +23,7 @@ next: false
 
 | 日期 | 状态 | 查阅 |
 |---|---|---|
+| 2026-10-27 | 待作答 | [试卷](/daily-quizzes/2026-10-27) · [结果与解析](/daily-quizzes/2026-10-27-review) |
 | 2026-10-26 | 已批改 · 行测7/8 · 13分钟 | [试卷](/daily-quizzes/2026-10-26) · [结果与解析](/daily-quizzes/2026-10-26-review) · [本人首答](/daily-quizzes/2026-10-26-answer) |
 | 2026-10-25 | 休息存档 · 未作答，不计分 | [试卷](/daily-quizzes/2026-10-25) · [结果与解析](/daily-quizzes/2026-10-25-review) |
 | 2026-10-24 | 已批改 · 行测7/8 · 12分钟 | [试卷](/daily-quizzes/2026-10-24) · [结果与解析](/daily-quizzes/2026-10-24-review) · [本人首答](/daily-quizzes/2026-10-24-answer) |

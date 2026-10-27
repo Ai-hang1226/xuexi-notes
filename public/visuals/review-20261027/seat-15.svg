@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="620" viewBox="0 0 1260 620" role="img" aria-label="第15题先定位夫妻再选剩余座位">
+<rect width="1260" height="620" rx="28" fill="#f5f8fc"/><g font-family="Times New Roman, Microsoft YaHei, sans-serif" fill="#17324d" font-weight="700">
+<text x="55" y="65" font-size="44">夫妻必须第一排 → 剩余3人选座位</text><text x="55" y="118" font-size="32">第二排只能1人；过道两侧不算相邻</text>
+<text x="70" y="242" font-size="38">第一排</text><text x="70" y="412" font-size="38">第二排</text>
+<rect x="265" y="165" width="150" height="130" rx="15" fill="#d9a43b"/><rect x="435" y="165" width="150" height="130" rx="15" fill="#d9a43b"/>
+<rect x="760" y="165" width="150" height="130" rx="15" fill="#d7e9fc" stroke="#4679ab" stroke-width="3"/><rect x="930" y="165" width="150" height="130" rx="15" fill="#d7e9fc" stroke="#4679ab" stroke-width="3"/>
+<text x="302" y="241" font-size="38">夫妻</text><text x="472" y="241" font-size="38">夫妻</text><text x="792" y="241" font-size="38">必选</text><text x="962" y="241" font-size="38">必选</text>
+<g fill="#d6eee3" stroke="#4c9b76" stroke-width="3"><rect x="265" y="335" width="150" height="130" rx="15"/><rect x="435" y="335" width="150" height="130" rx="15"/><rect x="760" y="335" width="150" height="130" rx="15"/><rect x="930" y="335" width="150" height="130" rx="15"/></g>
+<text x="292" y="411" font-size="32">候选</text><text x="462" y="411" font-size="32">候选</text><text x="787" y="411" font-size="32">候选</text><text x="957" y="411" font-size="32">候选</text>
+<text x="635" y="310" font-size="32" fill="#71829a">过道</text><text x="70" y="535" font-size="32">夫妻在第一排：1/2；其余6座选3座：符合4种 / 全部20种</text><text x="70" y="582" font-size="38">总概率 = 1/2 × 4/20 = 1/10</text></g></svg>

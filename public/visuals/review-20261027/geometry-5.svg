@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="710" viewBox="0 0 1240 710" role="img" aria-label="第5题辅助图与面积平分">
+<rect width="1240" height="710" rx="28" fill="#f5f8fc"/><g font-family="Times New Roman, Microsoft YaHei, sans-serif" fill="#17324d" font-weight="700">
+<text x="48" y="65" font-size="44">连接AB，延长CB、AO交于D</text><text x="48" y="119" font-size="32">AB = 5；O是直径AD的中点；BO垂直平分AD</text>
+<path d="M 240 540 A 360 360 0 0 1 960 540" fill="none" stroke="#17324d" stroke-width="4"/>
+<polygon points="600,540 960,540 600,360" fill="#cee3fb"/><polygon points="960,540 816,252 600,360" fill="#d2eee1"/>
+<path d="M240 540 L960 540 L816 252 L600 360 L600 540" fill="none" stroke="#17324d" stroke-width="4"/>
+<path d="M240 540 L816 252 M600 360 L960 540" fill="none" stroke="#517da6" stroke-width="4" stroke-dasharray="12 9"/>
+<text x="211" y="585" font-size="38">D</text><text x="580" y="585" font-size="38">O</text><text x="965" y="585" font-size="38">A</text><text x="557" y="359" font-size="38">B</text><text x="819" y="232" font-size="38">C</text>
+<text x="713" y="475" font-size="38">面积5</text><text x="779" y="374" font-size="38">面积6</text>
+<text x="48" y="646" font-size="32">S△ABD = 5 × 4 ÷ 2 = 10 → 中点平分得5 → 四边形面积 = 5 + 6 = 11</text><text x="48" y="689" font-size="28">图解为依据原题条件重绘；原图另行保留。估图“小于6”不作为证明。</text></g></svg>

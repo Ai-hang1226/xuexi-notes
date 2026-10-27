@@ -44,6 +44,8 @@ const sidebar = {
       text: '🔢 数量关系',
       items: [
         { text: '数量关系方法库', link: '/xingce/shuliang-guanxi' },
+        { text: '10/27数量复盘·19题', link: '/cuotiben/数量关系专项复盘-2026-10-27' },
+        { text: '考场选法与适用边界', link: '/xingce/数量考场选法速查-2026-10-27' },
         { text: '📐 椭圆内接图形最值', link: '/xingce/椭圆考点与内接图形最值' },
       ]
     },
@@ -63,6 +65,8 @@ const sidebar = {
       text: '📊 资料分析',
       items: [
         { text: '资料分析方法库', link: '/xingce/ziliao-fenxi' },
+        { text: '10/27资料复盘·5错题', link: '/cuotiben/资料分析专项复盘-2026-10-27' },
+        { text: '读数与百化分1—20', link: '/xingce/资料分析读数与百化分速查' },
       ]
     },
     {
@@ -77,6 +81,8 @@ const sidebar = {
       text: '🧠 错题本',
       items: [
         { text: '错题统计', link: '/cuotiben/' },
+        { text: '10/27资料·5错题', link: '/cuotiben/资料分析专项复盘-2026-10-27' },
+        { text: '10/27数量·19题讨论', link: '/cuotiben/数量关系专项复盘-2026-10-27' },
         { text: '🔺 图推专项复盘·10题', link: '/cuotiben/图形推理专项复盘-2026-10-21' },
         { text: '学习闭环（通用模板）', link: '/cuotiben/学习闭环' },
         { text: '行测错题集（按模块）', link: '/cuotiben/xingce-cuoti' },

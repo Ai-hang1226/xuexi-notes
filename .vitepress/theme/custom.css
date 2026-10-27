@@ -25,8 +25,8 @@ body {
 }
 
 .vp-doc h1 { line-height: 1.4; text-wrap: balance; }
-.vp-doc h2 { line-height: 1.5; text-wrap: balance; }
-.vp-doc h3 { line-height: 1.5; text-wrap: balance; }
+.vp-doc h2 { line-height: 1.5; text-wrap: balance; scroll-margin-top: 96px; }
+.vp-doc h3 { line-height: 1.5; text-wrap: balance; scroll-margin-top: 96px; }
 .vp-doc strong { font-weight: 700; }
 .VPDoc.has-aside .content .content-container { max-width: 860px; }
 

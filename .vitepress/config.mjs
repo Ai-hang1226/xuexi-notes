@@ -10,16 +10,16 @@ const sidebar = {
       text: '📘 申论 · 归纳概括',
       items: [
         { text: '从原文到答案 · 图解入口', link: '/shenlun/' },
-        { text: 'DAY4 · 城市绿化（做法）', link: '/shenlun/day4-city-greening' },
-        { text: 'DAY5 · 营商环境（措施与成效）', link: '/shenlun/day5-business-environment' },
+        { text: 'DAY5 · 城市绿化（做法）', link: '/shenlun/day5-city-greening' },
+        { text: 'DAY6 · 营商环境（措施与成效）', link: '/shenlun/day6-business-environment' },
       ]
     },
     {
       text: '原题与完整来源',
       collapsed: true,
       items: [
-        { text: 'DAY4 · 原题与讲义解析', link: '/shenlun/sources/day4-city-greening' },
-        { text: 'DAY5 · 原题与讲义解析', link: '/shenlun/sources/day5-business-environment' },
+        { text: 'DAY5 · 原题与讲义解析', link: '/shenlun/sources/day5-city-greening' },
+        { text: 'DAY6 · 原题与讲义解析', link: '/shenlun/sources/day6-business-environment' },
       ]
     }
   ],

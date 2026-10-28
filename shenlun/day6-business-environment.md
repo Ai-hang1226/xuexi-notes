@@ -18,12 +18,16 @@ source_type: 课程讲义与本人作答讨论
 
 **复习重点：每组措施接上成效；总括词覆盖整组内容；核准“谁到哪里做什么”。**
 
-本题为讲义正文 **DAY06**，印刷第33—39页／PDF第35—41页。讲义标注“2023年公务员多省联考《申论》题（山西省市卷）Q1”，来源尚未向外部原卷核验。本次只按这位老师的参考答案与解析对照，不另设标准、不计分。
+本题为讲义正文 **DAY06**，印刷第33—39页／PDF第35—41页。讲义标注“2023年公务员多省联考《申论》题（山西省市卷）Q1”，来源尚未向外部原卷核验。本次只按这位老师的参考答案与解析对照，不另引其他答案设标准；2026-10-28起按用户要求补充学习性评分。
 
 <figure class="study-visual study-visual-wide">
 <a href="/xuexi-notes/visuals/shenlun-day6-business-environment.svg" target="_blank" rel="noopener"><img src="/visuals/shenlun-day6-business-environment.svg" alt="申论复习大字结构图" width="1120" loading="eager" decoding="async" /></a>
 <figcaption>手机可在图内左右滑动；点图查看原图</figcaption>
 </figure>
+
+## 首答学习性评分（2026-10-28补评）
+
+<strong>10／15。</strong>依据本人原答及这位老师答案，逐项给分与后续评分规则见[评分记录](/shenlun/scores)。这是本次补评，原答、实际用时和改写状态不变，非官方阅卷结果。
 
 ## 先审题：这是“措施＋成效”双任务
 

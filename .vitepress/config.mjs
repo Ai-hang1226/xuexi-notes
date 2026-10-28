@@ -12,6 +12,9 @@ const sidebar = {
         { text: '从原文到答案 · 图解入口', link: '/shenlun/' },
         { text: 'DAY5 · 城市绿化（做法）', link: '/shenlun/day5-city-greening' },
         { text: 'DAY6 · 营商环境（措施与成效）', link: '/shenlun/day6-business-environment' },
+        { text: 'DAY7 · 背包银行（特点与作用）', link: '/shenlun/day7-backpack-bank' },
+        { text: '特点与作用 · 区分及找点顺序', link: '/shenlun/features-vs-effects' },
+        { text: '学习性评分与后续规则', link: '/shenlun/scores' },
       ]
     },
     {
@@ -20,6 +23,7 @@ const sidebar = {
       items: [
         { text: 'DAY5 · 原题与讲义解析', link: '/shenlun/sources/day5-city-greening' },
         { text: 'DAY6 · 原题与讲义解析', link: '/shenlun/sources/day6-business-environment' },
+        { text: 'DAY7 · 原题与讲义解析', link: '/shenlun/sources/day7-backpack-bank' },
       ]
     }
   ],

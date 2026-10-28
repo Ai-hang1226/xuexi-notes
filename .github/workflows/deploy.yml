@@ -36,7 +36,22 @@ jobs:
         run: npm ci
 
       - name: 构建站点
-        run: npx vitepress build
+        run: |
+          node --input-type=module <<'NODE'
+          import { spawnSync } from 'node:child_process';
+          const result = spawnSync(process.execPath,
+            ['node_modules/vitepress/bin/vitepress.js', 'build'],
+            { encoding: 'utf8' });
+          const output = (result.stdout || '') + (result.stderr || '');
+          process.stdout.write(output);
+          if (result.status !== 0) {
+            const detail = output.replace(/\x1b\[[0-9;]*m/g, '')
+              .split('\n').slice(-25).join('\n').slice(-3500)
+              .replaceAll('%', '%25').replaceAll('\r', '%0D').replaceAll('\n', '%0A');
+            console.log(`::error title=网站构建失败详情::${detail || result.error?.message || '构建命令未完成'}`);
+          }
+          process.exit(result.status ?? 1);
+          NODE
 
       - name: 配置 GitHub Pages
         uses: actions/configure-pages@v4

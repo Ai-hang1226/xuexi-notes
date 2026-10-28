@@ -14,7 +14,7 @@ const sidebar = {
         { text: 'DAY6 · 营商环境（措施与成效）', link: '/shenlun/day6-business-environment' },
         { text: 'DAY7 · 背包银行（特点与作用）', link: '/shenlun/day7-backpack-bank' },
         { text: '特点与作用 · 区分及找点顺序', link: '/shenlun/features-vs-effects' },
-        { text: '学习性评分与后续规则', link: '/shenlun/scores' },
+        { text: '我的评分与进步记录', link: '/shenlun/scores' },
       ]
     },
     {

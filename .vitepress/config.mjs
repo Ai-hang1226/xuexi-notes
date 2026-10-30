@@ -63,6 +63,8 @@ const sidebar = {
         { text: '图推特征与操作速查', link: '/xingce/图推特征与操作速查' },
         { text: '📋 定义判断', link: '/xingce/panduan-dingyi' },
         { text: '🔗 类比推理', link: '/xingce/panduan-leibi' },
+        { text: '10/30类比·7道错题', link: '/cuotiben/类比推理专项复盘-2026-10-30' },
+        { text: '类比具体关系·10组积累', link: '/xingce/类比具体关系积累表' },
         { text: '🎯 逻辑判断', link: '/xingce/panduan-luoji' },
       ]
     },
@@ -86,6 +88,7 @@ const sidebar = {
       text: '🧠 错题本',
       items: [
         { text: '错题统计', link: '/cuotiben/' },
+        { text: '10/30类比·7道错题', link: '/cuotiben/类比推理专项复盘-2026-10-30' },
         { text: '10/30言语·3错与1道纠结', link: '/cuotiben/言语理解专项复盘-2026-10-30' },
         { text: '10/27资料·5错题', link: '/cuotiben/资料分析专项复盘-2026-10-27' },
         { text: '10/27数量·19题讨论', link: '/cuotiben/数量关系专项复盘-2026-10-27' },

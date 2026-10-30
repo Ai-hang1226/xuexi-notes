@@ -34,8 +34,9 @@ const sidebar = {
       items: [
         { text: '📖 大宝小宝·体系正文(16章)', link: '/xingce/大宝小宝言语体系-正文' },
         { text: '言语理解方法库', link: '/xingce/yanyu-lijie' },
+        { text: '10/30言语·3错与1道纠结', link: '/cuotiben/言语理解专项复盘-2026-10-30' },
         { text: '言语专项复盘·17题', link: '/cuotiben/言语理解专项复盘-2026-10-17' },
-        { text: '词义辨析·99词', link: '/xingce/言语词义辨析积累表' },
+        { text: '词义辨析·107词', link: '/xingce/言语词义辨析积累表' },
         { text: '语句排序·完整流程', link: '/xingce/语句排序-先找衔接再验证整体' },
         { text: '语病辨析·检查框架', link: '/xingce/语病辨析-先找主干再检查关系' },
         { text: '🔍 文段识别速查卡', link: '/xingce/言语结构识别速查卡' },
@@ -85,6 +86,7 @@ const sidebar = {
       text: '🧠 错题本',
       items: [
         { text: '错题统计', link: '/cuotiben/' },
+        { text: '10/30言语·3错与1道纠结', link: '/cuotiben/言语理解专项复盘-2026-10-30' },
         { text: '10/27资料·5错题', link: '/cuotiben/资料分析专项复盘-2026-10-27' },
         { text: '10/27数量·19题讨论', link: '/cuotiben/数量关系专项复盘-2026-10-27' },
         { text: '🔺 图推专项复盘·10题', link: '/cuotiben/图形推理专项复盘-2026-10-21' },

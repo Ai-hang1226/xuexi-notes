@@ -23,6 +23,7 @@ next: false
 
 | 日期 | 状态 | 查阅 |
 |---|---|---|
+| 2026-11-01 | 待作答 | [试卷](/daily-quizzes/2026-11-01) · [结果与解析](/daily-quizzes/2026-11-01-review) |
 | 2026-10-31 | 待作答 | [试卷](/daily-quizzes/2026-10-31) · [结果与解析](/daily-quizzes/2026-10-31-review) |
 | 2026-10-30 | 待作答 | [试卷](/daily-quizzes/2026-10-30) · [结果与解析](/daily-quizzes/2026-10-30-review) |
 | 2026-10-29 | 待作答 | [试卷](/daily-quizzes/2026-10-29) · [结果与解析](/daily-quizzes/2026-10-29-review) |

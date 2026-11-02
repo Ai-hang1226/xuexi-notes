@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-28",
+  "updated_on": "2026-11-02",
   "scope": "本聊天课程申论；其他聊天每日测验另册记录",
   "score_type": "依指定老师答案对照的学习性参考分",
   "records": [
@@ -61,6 +61,27 @@
       "practice_date": null,
       "duration_minutes": null,
       "prior_solution_exposure": null,
+      "rewrites": [],
+      "transfer_tests": []
+    },
+    {
+      "id": "DAY8",
+      "topic": "创新公共服务",
+      "type": "问题不足",
+      "score": 11.5,
+      "max": 15,
+      "content": 8.5,
+      "organization": 2,
+      "format": 1,
+      "submitted_on": "2026-11-02",
+      "answer": "DAY8-创新公共服务.md",
+      "target": "从设施现象概括调研、数据与资源整合问题",
+      "score_kind": "first-answer",
+      "assessed_on": "2026-11-02",
+      "practice_date": null,
+      "duration_minutes": null,
+      "prior_solution_exposure": null,
+      "transcription_uncertain": "第4条末尾两字未辨清；不用于扣分",
       "rewrites": [],
       "transfer_tests": []
     }

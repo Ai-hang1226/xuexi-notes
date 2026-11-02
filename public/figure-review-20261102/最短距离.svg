@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="840" viewBox="0 0 1240 840" role="img" aria-labelledby="title desc">
+<title id="title">两个图形之间的最短距离</title><desc id="desc">教学示意：两块黑色三角形之间，橙色线段连接两边缘最近的两点。操作是选对象、找最近点、验证整组。示意不是原题。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#c85b18"/></marker></defs>
+<rect width="1240" height="840" rx="22" fill="#f5f7fa"/>
+<g font-family="'Times New Roman','Microsoft YaHei','微软雅黑',sans-serif" fill="#182b43" font-weight="700">
+<text x="56" y="65" font-size="44">图形之间的关系：最短距离</text>
+<text x="56" y="119" font-size="32">两块分离图形，除了各自形状，也看彼此间隔</text>
+<rect x="70" y="170" width="500" height="500" fill="white" stroke="#b7c3d0" stroke-width="3"/>
+<g stroke="#e1e6ed" stroke-width="2"><path d="M170 170V670 M270 170V670 M370 170V670 M470 170V670 M70 270H570 M70 370H570 M70 470H570 M70 570H570"/></g>
+<path d="M90 190H490L90 590Z" fill="#182b43"/><path d="M550 250V650H150Z" fill="#182b43"/>
+<text x="143" y="260" fill="white" font-size="38">图形 A</text><text x="376" y="615" fill="white" font-size="38">图形 B</text>
+<path d="M300 380L360 440" stroke="#c85b18" stroke-width="7" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<circle cx="300" cy="380" r="7" fill="#c85b18"/><circle cx="360" cy="440" r="7" fill="#c85b18"/>
+<text x="130" y="724" font-size="32" fill="#a94713">橙线：连接最近的边缘点</text>
+<text x="634" y="201" font-size="38">三个步骤</text>
+<g font-size="32"><rect x="630" y="230" width="550" height="118" rx="15" fill="#e7eef6"/><text x="657" y="278">① 选定两块黑色区域</text><text x="657" y="321">全组比较对象保持一致</text>
+<rect x="630" y="375" width="550" height="118" rx="15" fill="#e7eef6"/><text x="657" y="423">② 找边缘最近的两点</text><text x="657" y="466">最近的方向可能是斜向</text>
+<rect x="630" y="520" width="550" height="118" rx="15" fill="#e7eef6"/><text x="657" y="568">③ 比较这段直线长度</text><text x="657" y="611">验证整组，再检查选项</text></g>
+<text x="56" y="790" font-size="32">教学示意，非原题。边缘间距 ≠ 中心距离；倾斜时不能只数白格。</text>
+</g></svg>

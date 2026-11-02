@@ -84,6 +84,27 @@
       "transcription_uncertain": "第4条末尾两字未辨清；不用于扣分",
       "rewrites": [],
       "transfer_tests": []
+    },
+    {
+      "id": "DAY9",
+      "topic": "Q市加数前行",
+      "type": "原因",
+      "score": 7,
+      "max": 10,
+      "content": 5.5,
+      "organization": 1,
+      "format": 0.5,
+      "submitted_on": "2026-11-02",
+      "answer": "DAY9-Q市加数前行.md",
+      "target": "用1361回查六大应用、清单、场景和总体战略",
+      "score_kind": "first-answer",
+      "assessed_on": "2026-11-02",
+      "practice_date": null,
+      "duration_minutes": null,
+      "prior_solution_exposure": null,
+      "transcript_characters": 203,
+      "rewrites": [],
+      "transfer_tests": []
     }
   ]
 }

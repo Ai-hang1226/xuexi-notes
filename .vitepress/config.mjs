@@ -59,6 +59,10 @@ const sidebar = {
     {
       text: '🧩 判断推理',
       items: [
+        { text: '11/02逻辑判断·2道错题', link: '/cuotiben/逻辑判断专项复盘-2026-11-02' },
+        { text: '11/02定义判断·2道错题', link: '/cuotiben/定义判断专项复盘-2026-11-02' },
+        { text: '11/02图形推理·2道错题', link: '/cuotiben/图形推理专项复盘-2026-11-02' },
+        { text: '逻辑与定义·四个检查句', link: '/xingce/逻辑与定义判断-四个检查句' },
         { text: '判断推理总览', link: '/xingce/panduan-tuili' },
         { text: '🔺 图形推理', link: '/xingce/panduan-tuxing' },
         { text: '图推专项复盘·10题', link: '/cuotiben/图形推理专项复盘-2026-10-21' },
@@ -89,6 +93,10 @@ const sidebar = {
     {
       text: '🧠 错题本',
       items: [
+        { text: '11/02逻辑判断·2道错题', link: '/cuotiben/逻辑判断专项复盘-2026-11-02' },
+        { text: '11/02定义判断·2道错题', link: '/cuotiben/定义判断专项复盘-2026-11-02' },
+        { text: '11/02图形推理·2道错题', link: '/cuotiben/图形推理专项复盘-2026-11-02' },
+        { text: '逻辑与定义·四个检查句', link: '/xingce/逻辑与定义判断-四个检查句' },
         { text: '错题统计', link: '/cuotiben/' },
         { text: '10/30类比·7道错题', link: '/cuotiben/类比推理专项复盘-2026-10-30' },
         { text: '10/30言语·3错与1道纠结', link: '/cuotiben/言语理解专项复盘-2026-10-30' },

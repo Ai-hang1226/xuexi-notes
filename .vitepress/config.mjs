@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { readableTables } from './readable-tables.mjs'
 import dailyQuizSidebar from '../daily-quizzes/sidebar.json'
 
-// 侧边栏配置 - 行测五大模块（按模块分，不再有"行测"总览伞）
+// 行测只列方法；个人复盘统一从错题本进入
 const sidebar = {
   '/daily-quizzes/': dailyQuizSidebar,
   '/shenlun/': [
@@ -38,22 +38,16 @@ const sidebar = {
       items: [
         { text: '📖 大宝小宝·体系正文(16章)', link: '/xingce/大宝小宝言语体系-正文' },
         { text: '言语理解方法库', link: '/xingce/yanyu-lijie' },
-        { text: '10/30言语·3错与1道纠结', link: '/cuotiben/言语理解专项复盘-2026-10-30' },
-        { text: '言语专项复盘·17题', link: '/cuotiben/言语理解专项复盘-2026-10-17' },
         { text: '词义辨析·107词', link: '/xingce/言语词义辨析积累表' },
         { text: '语句排序·完整流程', link: '/xingce/语句排序-先找衔接再验证整体' },
         { text: '语病辨析·检查框架', link: '/xingce/语病辨析-先找主干再检查关系' },
         { text: '🔍 文段识别速查卡', link: '/xingce/言语结构识别速查卡' },
-        { text: '📌 言语·今日学习复盘', link: '/xingce/言语学习复盘-2026-09-13' },
-        { text: '✅ 言语·真题归位(20题)', link: '/xingce/言语体系总览与真题归位' },
-        { text: '🖨️ 言语·每日一页(打印)', link: '/xingce/言语每日一页' },
       ]
     },
     {
       text: '🔢 数量关系',
       items: [
         { text: '数量关系方法库', link: '/xingce/shuliang-guanxi' },
-        { text: '10/27数量复盘·19题', link: '/cuotiben/数量关系专项复盘-2026-10-27' },
         { text: '考场选法与适用边界', link: '/xingce/数量考场选法速查-2026-10-27' },
         { text: '📐 椭圆内接图形最值', link: '/xingce/椭圆考点与内接图形最值' },
       ]
@@ -61,17 +55,12 @@ const sidebar = {
     {
       text: '🧩 判断推理',
       items: [
-        { text: '11/02逻辑判断·2道错题', link: '/cuotiben/逻辑判断专项复盘-2026-11-02' },
-        { text: '11/02定义判断·2道错题', link: '/cuotiben/定义判断专项复盘-2026-11-02' },
-        { text: '11/02图形推理·2道错题', link: '/cuotiben/图形推理专项复盘-2026-11-02' },
         { text: '逻辑与定义·四个检查句', link: '/xingce/逻辑与定义判断-四个检查句' },
         { text: '判断推理总览', link: '/xingce/panduan-tuili' },
         { text: '🔺 图形推理', link: '/xingce/panduan-tuxing' },
-        { text: '图推专项复盘·10题', link: '/cuotiben/图形推理专项复盘-2026-10-21' },
         { text: '图推特征与操作速查', link: '/xingce/图推特征与操作速查' },
         { text: '📋 定义判断', link: '/xingce/panduan-dingyi' },
         { text: '🔗 类比推理', link: '/xingce/panduan-leibi' },
-        { text: '10/30类比·7道错题', link: '/cuotiben/类比推理专项复盘-2026-10-30' },
         { text: '类比具体关系·10组积累', link: '/xingce/类比具体关系积累表' },
         { text: '🎯 逻辑判断', link: '/xingce/panduan-luoji' },
       ]
@@ -80,8 +69,6 @@ const sidebar = {
       text: '📊 资料分析',
       items: [
         { text: '资料分析方法库', link: '/xingce/ziliao-fenxi' },
-        { text: '资料新复盘·三错四慢', link: '/cuotiben/资料分析专项复盘-2026-11-02' },
-        { text: '10/27资料复盘·5错题', link: '/cuotiben/资料分析专项复盘-2026-10-27' },
         { text: '读数与百化分1—20', link: '/xingce/资料分析读数与百化分速查' },
       ]
     },
@@ -93,27 +80,11 @@ const sidebar = {
     },
   ],
   '/cuotiben/': [
-    {
-      text: '🧠 错题本',
-      items: [
-        { text: '11/02逻辑判断·2道错题', link: '/cuotiben/逻辑判断专项复盘-2026-11-02' },
-        { text: '11/02定义判断·2道错题', link: '/cuotiben/定义判断专项复盘-2026-11-02' },
-        { text: '11/02图形推理·2道错题', link: '/cuotiben/图形推理专项复盘-2026-11-02' },
-        { text: '逻辑与定义·四个检查句', link: '/xingce/逻辑与定义判断-四个检查句' },
-        { text: '错题统计', link: '/cuotiben/' },
-        { text: '10/30类比·7道错题', link: '/cuotiben/类比推理专项复盘-2026-10-30' },
-        { text: '10/30言语·3错与1道纠结', link: '/cuotiben/言语理解专项复盘-2026-10-30' },
-        { text: '10/27资料·5错题', link: '/cuotiben/资料分析专项复盘-2026-10-27' },
-        { text: '10/27数量·19题讨论', link: '/cuotiben/数量关系专项复盘-2026-10-27' },
-        { text: '🔺 图推专项复盘·10题', link: '/cuotiben/图形推理专项复盘-2026-10-21' },
-        { text: '学习闭环（通用模板）', link: '/cuotiben/学习闭环' },
-        { text: '行测错题集（按模块）', link: '/cuotiben/xingce-cuoti' },
-        { text: '言语专项复盘·17题', link: '/cuotiben/言语理解专项复盘-2026-10-17' },
-        { text: '🔢 数量专项复盘·10题', link: '/cuotiben/数量关系专项复盘-2026-10-14' },
-        { text: '🧩 判断专项复盘·8题', link: '/cuotiben/判断推理专项复盘-2026-10-07' },
-        { text: '📊 资料专项复盘·2题', link: '/cuotiben/资料分析专项复盘-2026-10-07' },
-      ]
-    }
+    { text: '行测错题本', items: [
+      { text: '全部题目 · 按类型筛选', link: '/cuotiben/' },
+      { text: '早期言语归位对照', link: '/cuotiben/言语体系总览与真题归位' },
+      { text: '复盘方法', link: '/cuotiben/学习闭环' },
+    ] },
   ],
 }
 
@@ -140,6 +111,7 @@ export default defineConfig({
       { text: '🏠 首页', link: '/' },
       { text: '📝 每日测验', link: '/daily-quizzes/' },
       { text: '📘 申论', link: '/shenlun/' },
+      { text: '🧠 错题本', link: '/cuotiben/' },
       { text: '📗 行测', items: [
         { text: '🗣️ 言语理解', link: '/xingce/yanyu-lijie' },
         { text: '🔢 数量关系', link: '/xingce/shuliang-guanxi' },
@@ -147,7 +119,6 @@ export default defineConfig({
         { text: '📊 资料分析', link: '/xingce/ziliao-fenxi' },
         { text: '🌍 常识判断', link: '/xingce/changshi-panduan' },
       ] },
-      { text: '🧠 错题本', link: '/cuotiben/' },
     ],
 
     sidebar,

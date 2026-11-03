@@ -80,6 +80,7 @@ const sidebar = {
       text: '📊 资料分析',
       items: [
         { text: '资料分析方法库', link: '/xingce/ziliao-fenxi' },
+        { text: '资料新复盘·三错四慢', link: '/cuotiben/资料分析专项复盘-2026-11-02' },
         { text: '10/27资料复盘·5错题', link: '/cuotiben/资料分析专项复盘-2026-10-27' },
         { text: '读数与百化分1—20', link: '/xingce/资料分析读数与百化分速查' },
       ]

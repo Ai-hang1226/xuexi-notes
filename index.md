@@ -45,13 +45,13 @@ features:
 
 | 模块 | 进度 | 状态 |
 |------|------|------|
-| 🗣️ 言语理解 | ████░░░░░░ 40% | 🟡 进行中 |
-| 🔢 数量关系 | ██░░░░░░░░ 20% | 🟢 刚开始 |
-| 🧩 判断推理 | ██████░░░░ 60% | 🟡 进行中 |
-| 📊 资料分析 | ████████░░ 80% | 🟢 收尾中 |
-| 🌍 常识判断 | ██░░░░░░░░ 15% | 🔴 待推进 |
+| 🗣️ 言语理解 | <span class="prog prog--mid"><span class="pbar" style="--p: 40%"></span><span class="pct">40%</span></span> | <span class="st st--mid">进行中</span> |
+| 🔢 数量关系 | <span class="prog prog--start"><span class="pbar" style="--p: 20%"></span><span class="pct">20%</span></span> | <span class="st st--start">刚开始</span> |
+| 🧩 判断推理 | <span class="prog prog--mid"><span class="pbar" style="--p: 60%"></span><span class="pct">60%</span></span> | <span class="st st--mid">进行中</span> |
+| 📊 资料分析 | <span class="prog prog--done"><span class="pbar" style="--p: 80%"></span><span class="pct">80%</span></span> | <span class="st st--done">收尾中</span> |
+| 🌍 常识判断 | <span class="prog prog--todo"><span class="pbar" style="--p: 15%"></span><span class="pct">15%</span></span> | <span class="st st--todo">待推进</span> |
 
-> 💡 **提示**：进度你自己维护，学完就更新，看着它一点点填满很有成就感。
+> 💡 **提示**：进度你自己维护，学完就更新。颜色是同一支靛蓝的深浅，越接近完成越深，最浅的一档是待推进。
 
 ## 🗺️ 看图复习
 

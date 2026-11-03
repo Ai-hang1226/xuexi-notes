@@ -363,3 +363,88 @@ body {
 .quiz-page .quiz-shenlun { font-size: 20px; }
 .quiz-page .quiz-shenlun table th,
 .quiz-page .quiz-shenlun table td { font-size: 18px; }
+
+
+/* 学习进度条与状态标：颜色按阶段递进，待推进→刚开始→进行中→收尾中。 */
+.vp-doc .prog {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.vp-doc .pbar {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 10px;
+  border-radius: 999px;
+  background: #dfe3ea;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .08);
+  overflow: hidden;
+}
+.vp-doc .pbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: var(--p, 0%);
+  border-radius: inherit;
+  background-color: var(--tone);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, .35), rgba(255, 255, 255, 0) 72%);
+  transition: width .5s cubic-bezier(.4, 0, .2, 1);
+}
+.vp-doc .pct {
+  font-weight: 600;
+  font-size: .95em;
+  font-variant-numeric: tabular-nums;
+  color: var(--vp-c-text-1);
+}
+.vp-doc .st {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: .84em;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-default-soft);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.vp-doc .st::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--tone);
+}
+
+/* 四档色值：同一支靛蓝，越接近完成越深。
+   不放四种色相，避免五行为四种颜色抢注意力；状态语义交给文字和圆点。 */
+.vp-doc .prog--todo,
+.vp-doc .st--todo { --tone: #a3b0e0; }
+.vp-doc .prog--start,
+.vp-doc .st--start { --tone: #7d8fd2; }
+.vp-doc .prog--mid,
+.vp-doc .st--mid { --tone: #5a6fc0; }
+.vp-doc .prog--done,
+.vp-doc .st--done { --tone: #37499f; }
+
+/* 深色模式整体提亮，深底上用亮的一档表示接近完成。 */
+.dark .vp-doc .pbar { background: #30343c; box-shadow: inset 0 1px 2px rgba(0, 0, 0, .5); }
+.dark .vp-doc .prog--todo,
+.dark .vp-doc .st--todo { --tone: #6f7cae; }
+.dark .vp-doc .prog--start,
+.dark .vp-doc .st--start { --tone: #8a9bd4; }
+.dark .vp-doc .prog--mid,
+.dark .vp-doc .st--mid { --tone: #a6b7ea; }
+.dark .vp-doc .prog--done,
+.dark .vp-doc .st--done { --tone: #c2d2ff; }
+
+@media (max-width: 640px) {
+  .vp-doc .pbar { width: 84px; height: 9px; }
+  .vp-doc .prog { gap: 8px; }
+}

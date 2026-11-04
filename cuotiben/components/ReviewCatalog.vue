@@ -62,7 +62,7 @@ const tagClass = t => ({ 错题: 'wrong', 不确定: 'uncertain', 猜题: 'guess
 .question-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
 .review-tag { display: inline-block; padding: 2px 9px; border: 1px solid currentColor; border-radius: 4px; font-size: 17px; line-height: 1.6; font-weight: 700; }
 .wrong { color: #b42318; }.uncertain { color: #7a4d00; }.guess { color: #6b46a1; }.slow { color: #175d64; }.neutral { color: var(--vp-c-text-2); }
-.question-link { font-size: 22px; line-height: 1.65; overflow-wrap: anywhere; }
+.question-link { display: block; font-size: 22px; line-height: 1.65; overflow-wrap: anywhere; }
 .question-meta, .question-note { color: var(--vp-c-text-2); font-size: 17px; line-height: 1.7; margin: 6px 0 0; }
 :global(.dark) .wrong { color: #ffb4ab; }:global(.dark) .uncertain { color: #f4ce83; }:global(.dark) .guess { color: #d4b8ff; }:global(.dark) .slow { color: #97d7dc; }
 @media (max-width: 640px) { .filters { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 12px; }.filters select { width: 100%; min-width: 0; }.reset { text-align: left; }.review-group summary { padding: 18px 2px; }.question-list { padding-left: 2px; padding-right: 2px; } }

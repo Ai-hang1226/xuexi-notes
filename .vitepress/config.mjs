@@ -61,7 +61,7 @@ const sidebar = {
         { text: '图推特征与操作速查', link: '/xingce/图推特征与操作速查' },
         { text: '📋 定义判断', link: '/xingce/panduan-dingyi' },
         { text: '🔗 类比推理', link: '/xingce/panduan-leibi' },
-        { text: '类比具体关系·10组积累', link: '/xingce/类比具体关系积累表' },
+        { text: '类比关系与验证句', link: '/xingce/类比具体关系积累表' },
         { text: '🎯 逻辑判断', link: '/xingce/panduan-luoji' },
       ]
     },

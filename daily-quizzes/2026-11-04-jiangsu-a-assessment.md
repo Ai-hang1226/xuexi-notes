@@ -1,6 +1,7 @@
 ---
-title: 江苏A类50题阶段测评｜待作答
+title: 江苏A类50题阶段测评｜已批改
 pageClass: quiz-page
+status: graded
 source_type: 正式Obsidian阶段测评对应稿
 source_note: notes/study-log/assessments/2026-11-04-江苏A类50题阶段测评.md
 prev: false
@@ -8,6 +9,8 @@ next: false
 ---
 
 # 江苏A类风格阶段测评
+
+**已提交并批改：[查看成绩与解析](/daily-quizzes/2026-11-04-jiangsu-a-assessment-review)。行测78／100（43分钟），申论18.5／25（用时未知）；本卷诊断96.5／125。**
 
 **50道行测＋1道申论小题。建议行测45分钟，申论35分钟，共80分钟；可分两段完成，分别记录真实用时。**
 

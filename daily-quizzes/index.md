@@ -21,7 +21,7 @@ next: false
 
 ## 阶段测评
 
-- [江苏A类风格 · 50题行测＋1道申论小题](/daily-quizzes/2026-11-04-jiangsu-a-assessment)：用户点名的阶段检测，待作答；建议45＋35分钟。本卷诊断满分125分，独立记录，不替换每日8＋1正式卷。
+- [江苏A类阶段测评：结果与批改](/daily-quizzes/2026-11-04-jiangsu-a-assessment-review)：行测78／100（43分钟），申论18.5／25（用时未知），诊断96.5／125；[本人首答](/daily-quizzes/2026-11-04-jiangsu-a-assessment-answer) · [原卷](/daily-quizzes/2026-11-04-jiangsu-a-assessment)。独立于每日正式卷记录。
 
 ## 正式测验
 

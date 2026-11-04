@@ -1,5 +1,175 @@
 [
   {
+    "id": "2026-11-04-jiangsu-a-assessment-q7",
+    "module": "常识判断",
+    "types": [
+      "错题"
+    ],
+    "title": "江苏A类阶段测评第7题｜月食看地球居中",
+    "date": "2026-11-04",
+    "time": "未记录",
+    "seconds": null,
+    "url": "/cuotiben/江苏A类阶段测评复盘-2026-11-04#q7",
+    "note": "首答C→B；单题用时与具体判断过程未提供。",
+    "reviewState": "已批改；具体思路待讨论，独立迁移待验证"
+  },
+  {
+    "id": "2026-11-04-jiangsu-a-assessment-q11",
+    "module": "言语理解",
+    "types": [
+      "错题"
+    ],
+    "title": "江苏A类阶段测评第11题｜两空共同核对语境",
+    "date": "2026-11-04",
+    "time": "未记录",
+    "seconds": null,
+    "url": "/cuotiben/江苏A类阶段测评复盘-2026-11-04#q11",
+    "note": "首答D→C；单题用时与具体判断过程未提供。",
+    "reviewState": "已批改；具体思路待讨论，独立迁移待验证"
+  },
+  {
+    "id": "2026-11-04-jiangsu-a-assessment-q24",
+    "module": "数量关系",
+    "types": [
+      "错题"
+    ],
+    "title": "江苏A类阶段测评第24题｜合作效率减去甲效率",
+    "date": "2026-11-04",
+    "time": "未记录",
+    "seconds": null,
+    "url": "/cuotiben/江苏A类阶段测评复盘-2026-11-04#q24",
+    "note": "首答C→D；单题用时与具体判断过程未提供。",
+    "reviewState": "已批改；具体思路待讨论，独立迁移待验证"
+  },
+  {
+    "id": "2026-11-04-jiangsu-a-assessment-q25",
+    "module": "数量关系",
+    "types": [
+      "错题",
+      "不确定"
+    ],
+    "title": "江苏A类阶段测评第25题｜每一步分别更新糖与总量",
+    "date": "2026-11-04",
+    "time": "未记录",
+    "seconds": null,
+    "url": "/cuotiben/江苏A类阶段测评复盘-2026-11-04#q25",
+    "note": "首答D→A；自报不确定；单题用时与具体判断过程未提供。",
+    "reviewState": "已批改；具体思路待讨论，独立迁移待验证"
+  },
+  {
+    "id": "2026-11-04-jiangsu-a-assessment-q26",
+    "module": "数量关系",
+    "types": [
+      "错题",
+      "不确定"
+    ],
+    "title": "江苏A类阶段测评第26题｜先缩小条件样本空间",
+    "date": "2026-11-04",
+    "time": "未记录",
+    "seconds": null,
+    "url": "/cuotiben/江苏A类阶段测评复盘-2026-11-04#q26",
+    "note": "首答A→D；自报不确定；单题用时与具体判断过程未提供。",
+    "reviewState": "已批改；具体思路待讨论，独立迁移待验证"
+  },
+  {
+    "id": "2026-11-04-jiangsu-a-assessment-q27",
+    "module": "数量关系",
+    "types": [
+      "错题"
+    ],
+    "title": "江苏A类阶段测评第27题｜先求加权平均，再列总量式",
+    "date": "2026-11-04",
+    "time": "未记录",
+    "seconds": null,
+    "url": "/cuotiben/江苏A类阶段测评复盘-2026-11-04#q27",
+    "note": "首答A→C；单题用时与具体判断过程未提供。",
+    "reviewState": "已批改；具体思路待讨论，独立迁移待验证"
+  },
+  {
+    "id": "2026-11-04-jiangsu-a-assessment-q34",
+    "module": "类比推理",
+    "types": [
+      "错题"
+    ],
+    "title": "江苏A类阶段测评第34题｜中间产物与原料、成品",
+    "date": "2026-11-04",
+    "time": "未记录",
+    "seconds": null,
+    "url": "/cuotiben/江苏A类阶段测评复盘-2026-11-04#q34",
+    "note": "首答C→A；单题用时与具体判断过程未提供。",
+    "reviewState": "已批改；具体思路待讨论，独立迁移待验证"
+  },
+  {
+    "id": "2026-11-04-jiangsu-a-assessment-q42",
+    "module": "逻辑判断",
+    "types": [
+      "错题"
+    ],
+    "title": "江苏A类阶段测评第42题｜总耗时下降须不被抵消",
+    "date": "2026-11-04",
+    "time": "未记录",
+    "seconds": null,
+    "url": "/cuotiben/江苏A类阶段测评复盘-2026-11-04#q42",
+    "note": "首答C→D；单题用时与具体判断过程未提供。",
+    "reviewState": "已批改；具体思路待讨论，独立迁移待验证"
+  },
+  {
+    "id": "2026-11-04-jiangsu-a-assessment-q43",
+    "module": "资料分析",
+    "types": [
+      "不确定"
+    ],
+    "title": "江苏A类阶段测评第43题｜分别先求两年的差额",
+    "date": "2026-11-04",
+    "time": "未记录",
+    "seconds": null,
+    "url": "/cuotiben/江苏A类阶段测评复盘-2026-11-04#q43",
+    "note": "首答B→B；自报不确定；单题用时与具体判断过程未提供。",
+    "reviewState": "已批改；具体思路待讨论，独立迁移待验证"
+  },
+  {
+    "id": "2026-11-04-jiangsu-a-assessment-q45",
+    "module": "资料分析",
+    "types": [
+      "错题"
+    ],
+    "title": "江苏A类阶段测评第45题｜增量占增量",
+    "date": "2026-11-04",
+    "time": "未记录",
+    "seconds": null,
+    "url": "/cuotiben/江苏A类阶段测评复盘-2026-11-04#q45",
+    "note": "首答C→A；单题用时与具体判断过程未提供。",
+    "reviewState": "已批改；具体思路待讨论，独立迁移待验证"
+  },
+  {
+    "id": "2026-11-04-jiangsu-a-assessment-q47",
+    "module": "资料分析",
+    "types": [
+      "错题"
+    ],
+    "title": "江苏A类阶段测评第47题｜合计后算增长率",
+    "date": "2026-11-04",
+    "time": "未记录",
+    "seconds": null,
+    "url": "/cuotiben/江苏A类阶段测评复盘-2026-11-04#q47",
+    "note": "首答A→B；单题用时与具体判断过程未提供。",
+    "reviewState": "已批改；具体思路待讨论，独立迁移待验证"
+  },
+  {
+    "id": "2026-11-04-jiangsu-a-assessment-q50",
+    "module": "资料分析",
+    "types": [
+      "错题"
+    ],
+    "title": "江苏A类阶段测评第50题｜户均先分别相除",
+    "date": "2026-11-04",
+    "time": "未记录",
+    "seconds": null,
+    "url": "/cuotiben/江苏A类阶段测评复盘-2026-11-04#q50",
+    "note": "首答C→B；单题用时与具体判断过程未提供。",
+    "reviewState": "已批改；具体思路待讨论，独立迁移待验证"
+  },
+  {
     "id": "3vhpr8r-q2",
     "module": "逻辑判断",
     "types": [

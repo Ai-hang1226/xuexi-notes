@@ -21,7 +21,7 @@ next: false
 
 ## 阶段测评
 
-- [江苏A类阶段测评：结果与批改](/daily-quizzes/2026-11-04-jiangsu-a-assessment-review)：行测78／100（43分钟），申论18.5／25（约15分钟），诊断96.5／125，**两科等权模拟折算76／100**，两部分作答约58分钟；[本人首答](/daily-quizzes/2026-11-04-jiangsu-a-assessment-answer) · [原卷](/daily-quizzes/2026-11-04-jiangsu-a-assessment)。独立于每日正式卷记录。
+- [江苏A类阶段测评：结果与批改](/daily-quizzes/2026-11-04-jiangsu-a-assessment-review)：行测78／100（43分钟），申论18.5／25（约15分钟），诊断96.5／125，**两科等权模拟折算76／100**，两部分作答约58分钟；[本人首答](/daily-quizzes/2026-11-04-jiangsu-a-assessment-answer) · [原卷](/daily-quizzes/2026-11-04-jiangsu-a-assessment)。独立于每日正式卷记录。11／05已完成[12题行测逐题复盘](/cuotiben/江苏A类阶段测评复盘-2026-11-04)，原卷成绩不改，陌生真题验证待进行。
 
 ## 正式测验
 

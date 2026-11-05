@@ -1,0 +1,136 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="将AI学习方法接入行测与申论的七页图解报告：独立作答、定位卡点、本人再做和真题验证。"><title>AI辅助备考｜图解执行报告</title><style>
+:root{font-size:22px;--ink:#142e46;--muted:#486176;--blue:#215c9c;--teal:#127a70;--amber:#975b13;--paper:#f6f9fc;--line:#d5e1eb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#e8eff5;color:var(--ink);font-family:"Times New Roman","Microsoft YaHei","微软雅黑","PingFang SC",sans-serif;line-height:1.65}
+a{color:var(--blue);text-underline-offset:4px}button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible{outline:3px solid var(--teal);outline-offset:4px}
+.toolbar{max-width:1080px;margin:18px auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:0 4px;font-size:18px}.toolbar strong{margin-right:auto}.toolbar a,.toolbar button{border:1px solid #b4c9dc;border-radius:6px;background:white;color:var(--ink);text-decoration:none;padding:7px 15px}.toolbar button{background:var(--blue);color:white;border-color:var(--blue)}
+.sheet{width:1080px;height:1528px;margin:24px auto;background:white;padding:2.72rem;display:flex;flex-direction:column;position:relative;break-after:page;box-shadow:0 4px 24px #142e460c}
+.sheet::before{content:"";position:absolute;left:0;top:0;width:12px;height:100%;background:var(--blue)}.sheet.shenlun::before{background:var(--teal)}
+.mast{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--line);padding-bottom:.65rem;color:var(--muted);font-size:.78rem;margin-bottom:1.15rem;gap:1rem}.mast b{color:var(--ink)}
+h1,h2,h3,p{margin:0}h1{font-size:2.75rem;line-height:1.28;font-weight:800;margin-bottom:.8rem;letter-spacing:.02em}h2{font-size:1.95rem;line-height:1.35;font-weight:800;margin-bottom:.65rem}h3{font-size:1.2rem;line-height:1.4;font-weight:800;margin-bottom:.4rem}p+p{margin-top:.55rem}.lead{font-size:1.12rem;color:var(--muted);line-height:1.65;margin-bottom:1.1rem}.hero-line{font-size:1.7rem;line-height:1.5;font-weight:800;max-width:850px;margin:.5rem 0 1.2rem}
+.page-body{display:flex;flex-direction:column;gap:1rem}.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.panel{background:var(--paper);padding:1rem 1.1rem;border-radius:8px;border:1px solid var(--line)}.panel.blue{border-top:5px solid var(--blue)}.panel.teal{border-top:5px solid var(--teal)}.panel.white{background:white}.callout{border-left:5px solid var(--amber);background:#fff7e9;padding:.75rem 1rem;color:#724815}.callout strong{color:#613a0b}.small{font-size:.84rem;line-height:1.6;color:var(--muted)}.label{font-size:.8rem;color:var(--muted);font-weight:700}.badge{display:inline-block;border-radius:4px;padding:.15rem .55rem;background:#eaf2fb;color:var(--blue);font-size:.8rem;font-weight:700}.badge.pending{background:#fff1d9;color:var(--amber)}.badge.teal{background:#e4f4f0;color:var(--teal)}
+.foot{margin-top:auto;border-top:2px solid var(--line);padding-top:.65rem;font-size:.75rem;display:flex;justify-content:space-between;gap:1rem;color:var(--muted)}
+.loop{display:grid;grid-template-columns:1fr 1fr;gap:.65rem 1.6rem;position:relative}.step{padding:.75rem 1rem;background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--blue);border-radius:6px;min-height:135px}.step strong{display:block;font-size:1.2rem;margin-bottom:.2rem}.step em{font-style:normal;display:inline-flex;width:1.65rem;height:1.65rem;align-items:center;justify-content:center;background:var(--blue);border-radius:50%;color:white;margin-right:.4rem;font-size:.9rem}.step.final{grid-column:1/-1;background:#eaf4f1;border-color:#a5d0c5;border-left-color:var(--teal);min-height:110px}.step.final em{background:var(--teal)}.between{text-align:center;color:var(--muted);font-size:.85rem;margin:-.25rem 0}
+table{border-collapse:collapse;width:100%;table-layout:fixed}th,td{text-align:left;vertical-align:top;padding:.6rem .65rem;border-bottom:1px solid var(--line)}th{background:#eaf1f7;font-weight:800}td strong{display:block}tbody tr:last-child td{border-bottom:0}.map-table{font-size:.91rem}.map-table th:first-child{width:17%}.map-table td:first-child{font-weight:800}.map-table tr{height:154px}.map-table thead tr{height:auto}
+.flow-list{display:grid;gap:.55rem}.flow-row{display:grid;grid-template-columns:3rem 1fr;gap:.6rem;align-items:start;padding:.5rem .7rem;border-bottom:1px solid var(--line)}.flow-row:last-child{border-bottom:0}.num{width:2.1rem;height:2.1rem;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--blue);color:white;font-size:1.1rem;font-weight:800}.shenlun .num{background:var(--teal)}.flow-row strong{font-size:1.04rem}.formula{font-size:1.55rem;font-weight:800;line-height:1.5;text-align:center;padding:.7rem;background:#eaf2fb;border-radius:6px;margin:.55rem 0}.formula small{font-size:.73rem;font-weight:600;display:block}.formula.teal{background:#e4f4f0}
+.case-table{font-size:.9rem}.case-table th:first-child{width:28%}.key-sentence{font-size:1.12rem;font-weight:800;color:var(--blue)}.shenlun{font-size:20px}.shenlun table{font-size:18px}.shenlun .key-sentence{color:var(--teal)}
+.time-top{display:flex;align-items:baseline;gap:.4rem}.time-top b{font-size:2.6rem;line-height:1.1;color:var(--blue)}.teal .time-top b{color:var(--teal)}.time-list{list-style:none;padding:0;margin:.6rem 0 0;display:grid;gap:.4rem}.time-list li{display:grid;grid-template-columns:2.2rem 1fr;gap:.4rem;border-top:1px solid var(--line);padding-top:.35rem}.time-list b{font-size:1.15rem}.time-band{display:flex;min-height:90px;border-radius:6px;overflow:hidden;margin:.7rem 0}.time-band>div{display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:.4rem;font-size:.85rem;font-weight:700}.band-x{flex:35;background:#215c9c;color:white}.band-s{flex:25;background:#127a70;color:white}.band-n{flex:120;background:#eaf1f7;color:var(--ink)}
+.timeline{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.8rem;margin:.2rem 0}.moment{border-top:6px solid var(--blue);padding:.8rem .85rem;background:var(--paper);border-radius:5px}.moment b{font-size:1.75rem;display:block;line-height:1.25;margin-bottom:.45rem}.moment .label{display:block;margin-bottom:.5rem}.branch{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.branch>div{padding:.8rem 1rem;border:2px solid var(--line);border-radius:6px}.branch .pass{border-color:#97c9bb;background:#edf7f3}.branch .retry{border-color:#dfc69f;background:#fff7e9}
+.status-lanes{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}.status-lanes>div{padding:.8rem;border:1px solid var(--line);background:var(--paper);border-radius:6px}.status-lanes b{font-size:1.18rem;display:block}.source-list{padding-left:1.2rem;margin:.3rem 0;font-size:.8rem;line-height:1.6}.source-list li+li{margin-top:.32rem}.rule-list{margin:.2rem 0;padding-left:1.2rem}.rule-list li+li{margin-top:.35rem}
+#p3 .page-body,#p4 .page-body{gap:.7rem}
+.single .toolbar{display:none}.single .sheet{display:none;margin:0;box-shadow:none}.single .sheet.active{display:flex}.single{background:white}.single .sheet::before{width:10px}
+@media screen and (max-width:800px){:root{font-size:20px}.toolbar{padding:10px;margin:0;font-size:16px;gap:8px;position:relative}.toolbar strong{width:100%}.sheet{width:100%;height:auto;min-height:0;margin:14px 0;padding:30px 24px 28px;box-shadow:none}.sheet::before{width:6px}.mast{font-size:14px;align-items:start}h1{font-size:2rem}h2{font-size:1.55rem}.hero-line{font-size:1.4rem}.two,.loop,.branch,.status-lanes,.timeline{grid-template-columns:1fr}.step.final{grid-column:auto}.step{min-height:0}.map-table{font-size:18px}.map-table th,.map-table td{padding:.55rem .4rem}.map-table th:first-child{width:23%}.map-table tr{height:auto}.map-table .extra{display:none}.time-band{min-height:115px}.time-band>div{font-size:15px;padding:8px 4px}.band-x{flex:35}.band-s{flex:25}.band-n{flex:65}.foot{margin-top:1.5rem;font-size:14px}.shenlun{font-size:20px}.source-list{font-size:16px}.case-table{font-size:18px}.flow-row{grid-template-columns:2.4rem 1fr}.formula{font-size:1.3rem}}
+@media print{:root{font-size:16px}html{scroll-behavior:auto}body{background:white;-webkit-print-color-adjust:exact;print-color-adjust:exact}.toolbar{display:none}.sheet,.single .sheet{display:flex;width:210mm;height:297mm;margin:0;padding:2.72rem;box-shadow:none;break-after:page;page-break-after:always}.sheet:last-child{break-after:auto;page-break-after:auto}.sheet::before{width:7px}.shenlun{font-size:14.55px}.shenlun table{font-size:13.1px}.map-table tr{height:112px}.step{min-height:98px}.step.final{min-height:80px}.time-band{min-height:65px}a{color:inherit;text-decoration:none}.foot{font-size:.75rem}}
+@page{size:A4;margin:0}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<nav class="toolbar" aria-label="报告导航"><strong>7页图解报告</strong><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p6">6</a><a href="#p7">7</a><a href="assets/一页执行总图.png">一页总图</a><a href="output/pdf/AI辅助备考图解报告.pdf" download>下载PDF</a><button type="button" id="print">打印</button></nav>
+<main><section class="sheet " id="p1" aria-labelledby="title1">
+    <div class="mast"><b>AI辅助备考 · 图解执行报告</b><span>2026年11月6日 · 试行版</span></div>
+    <h1 id="title1">AI辅助备考<br>把看懂，练成会用</h1>
+    <p class="lead">适用于你当前的行测与申论复习，把视频方法接入已有知识库。</p><div class="page-body">
+<p class="hero-line">每次解析之后，留下两份证据：<br>本人再次输出，另一道真题验证。</p>
+<div class="loop" aria-label="五步学习流程">
+<div class="step"><strong><em>1</em>独立作答</strong><p>先保留答案、过程、把握程度和真实用时。</p></div>
+<div class="step"><strong><em>2</em>定位卡点</strong><p>找到具体哪一步出现偏差，再决定补什么。</p></div>
+<div class="step"><strong><em>3</em>只补关键</strong><p>围绕当前卡点，补必要概念、方法和边界。</p></div>
+<div class="step"><strong><em>4</em>本人再做</strong><p>合上解析，自己列式、解释或重新组织答案。</p></div>
+<div class="step final"><strong><em>5</em>陌生真题验证</strong><p>换同考点另一道完整真题，按独立表现决定复查节奏。</p></div>
+</div>
+<div class="two"><div class="panel blue"><h3>你负责</h3><p>独立判断、动笔输出、说明卡点，报告真实结果。</p></div><div class="panel teal"><h3>AI负责</h3><p>检索已有记录、检查过程、补讲关键，整理和安排验证。</p></div></div>
+<div class="callout"><strong>本次重点</strong><p>把已有解析接到实际练习。图和报告完成，学习状态仍按你的真实作答记录。</p></div>
+<p class="small">报告中的具体安排是本次讨论形成的试行建议；视频依据为作者文案与平台AI章节摘要，未取得完整逐字字幕。</p>
+</div>
+    <div class="foot"><span>先独立作答，再反馈；首答、改写与迁移分开记录。</span><span>1 / 7</span></div></section><section class="sheet " id="p2" aria-labelledby="title2">
+    <div class="mast"><b>AI辅助备考 · 图解执行报告</b><span>2026年11月6日 · 试行版</span></div>
+    <h2 id="title2">五个方法，落到两门考试</h2>
+    <p class="lead">“抓核心”落实为：每次先修一个有证据的失分动作。</p><div class="page-body">
+<table class="map-table"><thead><tr><th>方法</th><th>行测</th><th>申论</th></tr></thead><tbody>
+<tr><td>先测再学</td><td><strong>先做，再看解析。</strong>保留首答、第一步思路、把握与用时。</td><td><strong>先交自己的答案。</strong>按题干、原材料独立写，再对照老师答案。</td></tr>
+<tr><td>抓住核心</td><td><strong>每次盯住一步。</strong>例如浓度列式、资料分母、论证对象。</td><td><strong>每次处理一个缺口。</strong>例如漏点、任务混淆、概括层级或压字数。</td></tr>
+<tr><td>学后动手</td><td><strong>自己重新列式、画图。</strong>还要解释方法为什么适用。</td><td><strong>自己改写失分的一条。</strong>再逐步完成整道题重写。</td></tr>
+<tr><td>自己整理</td><td><strong>识别特征 → 启动方法。</strong>自己说明适用条件和容易混淆的边界。</td><td><strong>题干任务 → 材料分组。</strong>自己组织要点，AI检查证据与遗漏。</td></tr>
+<tr><td>筛选资料</td><td><strong>优先调用已有方法页。</strong>围绕卡点补对应讲解，再继续练习。</td><td><strong>沿用指定老师和讨论定稿。</strong>有材料依据的同义表达应认可。</td></tr>
+</tbody></table>
+<div class="callout"><strong>选题沿用你的最新规则</strong><p>新发训练只用真题：江苏为主、优先A类，可混合国考及其他省考。保留原题干、选项、图表与来源；历史自编题仅作为已有错题保留。</p></div>
+<p class="small">“最重要的20%”来自平台章节摘要，只作为抓关键的比喻。本报告没有据此删减考试模块或承诺固定提分比例。</p>
+</div>
+    <div class="foot"><span>先独立作答，再反馈；首答、改写与迁移分开记录。</span><span>2 / 7</span></div></section><section class="sheet " id="p3" aria-labelledby="title3">
+    <div class="mast"><b>AI辅助备考 · 图解执行报告</b><span>2026年11月6日 · 试行版</span></div>
+    <h2 id="title3">行测：先练自己能起手</h2>
+    <p class="lead">每道代表题，检查“第一步怎么想”以及“关键量有没有对齐”。</p><div class="page-body">
+<div class="flow-list">
+<div class="flow-row"><span class="num">1</span><div><strong>只看原题，独立做</strong><p>选错、猜对、不确定和耗时较长题，优先筛代表题。</p></div></div>
+<div class="flow-row"><span class="num">2</span><div><strong>交出过程，找到第一处偏差</strong><p>说清求什么、第一步怎么做、具体卡在哪一步。</p></div></div>
+<div class="flow-row"><span class="num">3</span><div><strong>AI补讲一个关键动作</strong><p>例如列两列、对分母、画对应关系；归因不足先留待核实。</p></div></div>
+<div class="flow-row"><span class="num">4</span><div><strong>合上解析，重新完成</strong><p>自己列式或画图，解释适用条件，并回到题干核验。</p></div></div>
+<div class="flow-row"><span class="num">5</span><div><strong>另一道真题检查迁移</strong><p>独立首答前，不显示考点提示和解析。</p></div></div>
+</div>
+<div class="panel blue"><h3>已有浓度错题：怎样回练</h3><p>遮住原讲解，独立重填“溶液总量”和“溶质量”两列，再说明每一步变化。</p>
+<div class="formula">浓度 = 溶质量 ÷ 溶液总量<small>最后用：末溶质量 = 末总量 × 已知末浓度</small></div>
+<table class="case-table"><thead><tr><th>操作</th><th>先核对什么</th></tr></thead><tbody><tr><td>加纯水</td><td>总量增加，原溶质量保持。</td></tr><tr><td>充分混匀后倒出</td><td>总量和溶质量同乘剩余比例。</td></tr><tr><td>加同种溶液</td><td>总量增加；新增溶质 = 加入量 × 加入浓度。</td></tr></tbody></table></div>
+<p class="key-sentence">能在无提示下起手，能解释，也能代回核验。</p>
+<p class="small">此例调用已有阶段卷第25题的方法记录，不新编或修改题目。该卷为历史自编题；后续新验证另选完整真题。资料题也可先核对“所求、比较期、分母”；错因以本人过程为准。</p>
+</div>
+    <div class="foot"><span>先独立作答，再反馈；首答、改写与迁移分开记录。</span><span>3 / 7</span></div></section><section class="sheet shenlun" id="p4" aria-labelledby="title4">
+    <div class="mast"><b>AI辅助备考 · 图解执行报告</b><span>2026年11月6日 · 试行版</span></div>
+    <h2 id="title4">申论：把材料重新组织成答案</h2>
+    <p class="lead">本页以你已有小题记录为例。改写保留首答，陌生题再检查独立能力。</p><div class="page-body">
+<div class="flow-list">
+<div class="flow-row"><span class="num">1</span><div><strong>看题干任务</strong><p>明确对象、要求回答的要素、分值及字数限制。</p></div></div>
+<div class="flow-row"><span class="num">2</span><div><strong>回原材料找依据</strong><p>先标明各段有效信息，再判断怎样归组。</p></div></div>
+<div class="flow-row"><span class="num">3</span><div><strong>本人先组织并动笔</strong><p>用自己的语言写清材料信息；按题干需要配对不同任务。</p></div></div>
+<div class="flow-row"><span class="num">4</span><div><strong>AI逐项核对</strong><p>指出已写内容、缺口、证据及压缩方向，认可有效同义表达。</p></div></div>
+<div class="flow-row"><span class="num">5</span><div><strong>改写后，再用另一道真题检查</strong><p>同题改善与未见解析的新题表现分别记录。</p></div></div>
+</div>
+<div class="panel teal"><h3>DAY9：先处理一组明确缺口</h3>
+<table><thead><tr><th>已经写到</th><th>这次重点补齐</th></tr></thead><tbody><tr><td>公共数据平台四项工作；三级治理中心；基层网格。</td><td>六大应用系统、编制清单、“一件事”场景建设；再回查总领。</td></tr></tbody></table>
+<div class="formula teal">回原材料 → 自己补写 → 压缩到200字内</div>
+<p>先遮住老师答案，标出这组信息，再亲手组织进答案。对照时看“证据是否选全、表达是否准确、字数是否合规”。</p></div>
+<div class="two"><div class="panel white"><h3>特点、作用分清任务</h3><p>特点提炼对象的属性；作用回答其功能、结果或影响。具体组织跟随题干。</p></div><div class="panel white"><h3>现象、问题回到依据</h3><p>从材料的解释、建议或明确对比归纳缺口，保留证据链。</p></div></div>
+<p class="small">DAY9为指定讲义自标的2024福建省市卷Q1，原卷尚未另行外核。已有讲义用于旧题回练；以后新发真题须完整核实来源。当前记录不足以判断整科申论水平。</p>
+</div>
+    <div class="foot"><span>先独立作答，再反馈；首答、改写与迁移分开记录。</span><span>4 / 7</span></div></section><section class="sheet " id="p5" aria-labelledby="title5">
+    <div class="mast"><b>AI辅助备考 · 图解执行报告</b><span>2026年11月6日 · 试行版</span></div>
+    <h2 id="title5">每日安排：放进现有时间块</h2>
+    <p class="lead">工作日3小时是已确认的试行预算，实际学习时长按当天记录。</p><div class="page-body">
+<div class="time-band" aria-label="工作日180分钟分配"><div class="band-x">行测旧题<br><b>35分钟</b></div><div class="band-s">申论旧题<br><b>25分钟</b></div><div class="band-n">新题、课程与当日复盘<br><b>120分钟</b></div></div>
+<div class="two">
+<div class="panel blue"><div class="time-top"><b>35</b><strong>分钟 · 行测旧题</strong></div><ul class="time-list"><li><b>20</b><span>独立重做代表题，保留第一步和实际卡点。</span></li><li><b>10</b><span>对照核验，集中补讲本次关键问题。</span></li><li><b>5</b><span>自己复述方法，登记下一次检查。</span></li></ul></div>
+<div class="panel teal"><div class="time-top"><b>25</b><strong>分钟 · 申论旧题</strong></div><ul class="time-list"><li><b>5</b><span>回题干和材料，定位本次要改的一组。</span></li><li><b>10</b><span>遮住参考，亲手改写失分的一条。</span></li><li><b>8</b><span>逐项查漏，核对依据与字数。</span></li><li><b>2</b><span>记录变化及下次检查点。</span></li></ul></div>
+</div>
+<div class="panel"><h3>完整申论重写：每周2次</h3><p>替换部分新题时间。复杂材料或完整小题需要更多时间时，从新内容块调配。</p></div>
+<div class="panel"><h3>休息日：沿用每天6小时窗口</h3><p>旧内容约90分钟，其余接原计划。每日正式测验覆盖的验证计入原训练量。</p></div>
+<div class="callout"><strong>选旧题的优先级</strong><p>不会、猜题、概念混乱 → 反复漏步或同类错误 → 方法成立但耗时较长。同一方法先选1—2道代表题，不按归档日期补欠账。</p></div>
+<p class="small">35和25分钟中的细分是本次建议；120分钟、每周2次完整旧题重写、休息日旧内容约90分钟，均承接原复习执行图。先试行，再按实际效果调整。</p>
+</div>
+    <div class="foot"><span>先独立作答，再反馈；首答、改写与迁移分开记录。</span><span>5 / 7</span></div></section><section class="sheet " id="p6" aria-labelledby="title6">
+    <div class="mast"><b>AI辅助备考 · 图解执行报告</b><span>2026年11月6日 · 试行版</span></div>
+    <h2 id="title6">复查节奏：先有起点，再看表现</h2>
+    <p class="lead">以首次真正闭卷检查为起点，安排约2天与约7天的两次检查。</p><div class="page-body">
+<div class="timeline"><div class="moment"><b>首次检查</b><span class="label">记为起点</span><p>独立做题或改写，记录卡点与结果。</p></div><div class="moment"><b>约2天</b><span class="label">相对首次检查</span><p>复查不稳点，看能否自行完成关键步骤。</p></div><div class="moment"><b>约7天</b><span class="label">相对首次检查</span><p>用同考点另一道完整真题检验迁移。</p></div></div>
+<div class="callout"><strong>两次间隔分别从起点算</strong><p>首次检查后约2天、约7天各查一次。具体日期以实际首次检查日登记；时间未知留待补。</p></div>
+<div class="branch"><div class="retry"><h3>再错、猜对或解释不清</h3><p>先定位具体步骤，约1—2天后再查；必要时缩小本次学习范围。</p></div><div class="pass"><h3>能独立使用并解释</h3><p>逐步拉长间隔，继续观察另一道真题的表现和真实用时。</p></div></div>
+<h3>进步保留三层证据</h3>
+<div class="status-lanes"><div><span class="badge">首答</span><b>第一次独立表现</b><p>保留原答案、真实时间、把握及思路。</p></div><div><span class="badge teal">同题重做／改写</span><b>这一题的改善</b><p>记录补回的点、改变的步骤及提示情况。</p></div><div><span class="badge pending">陌生题验证</span><b>换题后的独立表现</b><p>核对同一个问题能否自行处理。</p></div><div><span class="badge pending">长期掌握</span><b>需要后续证据</b><p>综合不同题与延迟表现判断，状态可修订。</p></div></div>
+<p class="small">研究综述支持练习测试与间隔学习。约2／7天是现有试行节奏，需按实际表现调整；不能据此保证固定提分。研究来源见下一页。</p>
+</div>
+    <div class="foot"><span>先独立作答，再反馈；首答、改写与迁移分开记录。</span><span>6 / 7</span></div></section><section class="sheet " id="p7" aria-labelledby="title7">
+    <div class="mast"><b>AI辅助备考 · 图解执行报告</b><span>2026年11月6日 · 试行版</span></div>
+    <h2 id="title7">怎样与AI协作，怎样检查结果</h2>
+    <p class="lead">每次先明确“本次要验证哪一步”，再把真实结果写回已有记录。</p><div class="page-body">
+<div class="two"><div class="panel blue"><h3>行测交给AI的信息</h3><p>原题与来源、首答、第一步思路、实际卡点、真实用时、是否猜测。</p><p class="small">AI先检查过程；需要提示时注明提示，再由本人重新完成。</p></div><div class="panel teal"><h3>申论交给AI的信息</h3><p>题干、完整材料、本人原答、指定老师答案及真实用时。</p><p class="small">按材料核对已写与缺口，学习性评分不冒充官方分。</p></div></div>
+<div class="panel"><h3>当前记录告诉我们什么</h3><p><b>课程申论DAY5—DAY9：首答5份，改写与陌生题验证尚无提交记录。</b></p><p>近期行测有同题重做和讲解后理解反馈，陌生真题验证仍待进行。下一步优先补齐独立输出证据。</p><p class="small">这里只描述本次读取的记录。阶段卷另记；未提交记录不能推断为从未练习，也不据此断言能力进退。</p></div>
+<div class="panel white"><h3>最近一次复习，可以从这里开始</h3><p><b>行测：</b>已有浓度题两列列式，先遮住解析自行填表。</p><p><b>申论：</b>DAY9回材料补一组缺口，再自行压缩答案。</p><p class="small">这两项是建议起点，尚未记为执行；后续新验证只选完整真题。</p></div>
+<div><h3>来源与阅读范围</h3><ol class="source-list">
+<li>水球泡，2026-10-16，<a href="https://www.douyin.com/video/7696972800556322083">《如何利用AI学习？把测试、练习和反馈接起来》</a>。依据作者文案和平台AI章节摘要，未取得完整逐字字幕。</li>
+<li>2026-11-04共同拟定，<a href="https://ai-hang1226.github.io/xuexi-notes/cuotiben/考前一个月复习执行图.html">《考前一个月复习执行图》</a>；本报告继承35＋25＋120分钟及约2／7天规则。</li>
+<li>2026-11-05方法记录，<a href="https://ai-hang1226.github.io/xuexi-notes/xingce/浓度题-先列溶液与溶质.html">《浓度题：先列溶液与溶质》</a>；2026-11-02，<a href="https://ai-hang1226.github.io/xuexi-notes/shenlun/day9-digital-city.html">DAY9原答与老师对照</a>；<a href="https://ai-hang1226.github.io/xuexi-notes/shenlun/scores.html">申论评分与进步记录</a>。</li>
+<li>Dunlosky等，2013，<a href="https://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html">学习方法研究综述</a>，支持练习测试与间隔学习的一般价值，不直接证明本方案的考试提分效果。</li>
+<li>本报告的分工、分钟细分与案例练法，来自2026-11-06本聊天讨论及现有知识库；完整本地来源见配套说明。</li>
+</ol></div>
+</div>
+    <div class="foot"><span>先独立作答，再反馈；首答、改写与迁移分开记录。</span><span>7 / 7</span></div></section></main><script>
+document.getElementById('print').addEventListener('click',()=>window.print());
+const selected=new URLSearchParams(location.search).get('page');
+if(selected&&/^[1-7]$/.test(selected)){document.body.classList.add('single');document.getElementById('p'+selected).classList.add('active');}
+</script></body></html>

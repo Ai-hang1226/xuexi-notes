@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="2200" viewBox="0 0 1440 2200" role="img" aria-labelledby="title desc">
+  <title id="title">AI辅助备考｜每天这样练</title>
+  <desc id="desc">从独立作答开始，经定位卡点、只补关键、本人再做，到陌生真题验证。每天旧题行测35分钟、申论25分钟。约2天检查不稳点，约7天用同考点另一道真题验证，两者从首次闭卷检查分别起算。首答、改写与迁移分别记录。本图为试行方案。</desc>
+  <defs>
+    <style>
+      text { font-family: "Times New Roman","Microsoft YaHei","微软雅黑","PingFang SC",sans-serif; fill:#142E46; }
+      .title { font-size:54px; font-weight:800; }
+      .section { font-size:40px; font-weight:800; }
+      .node { font-size:38px; font-weight:800; }
+      .body { font-size:32px; font-weight:600; }
+      .bold { font-size:32px; font-weight:800; }
+      .white { fill:#FFFFFF; }
+      .blue { fill:#215C9C; }
+      .teal { fill:#127A70; }
+      .amber { fill:#AF6B19; }
+      .line { stroke:#D5E1EB; stroke-width:2; }
+      .arrow { fill:none; stroke:#526E85; stroke-width:5; stroke-linejoin:round; marker-end:url(#arrow); }
+    </style>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 2 1 L 10 6 L 2 11 Z" fill="#526E85"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="2200" fill="#F6F9FC"/>
+  <path d="M80 56 H1360" stroke="#215C9C" stroke-width="8"/>
+  <text x="80" y="134" class="title">AI辅助备考｜每天这样练</text>
+  <text x="80" y="190" class="body">先独立作答，再按真实反馈调整。</text>
+
+  <!-- 五步按箭头顺序折返，每行最多两列。 -->
+  <rect x="80" y="236" width="590" height="136" rx="18" fill="#FFFFFF" stroke="#D5E1EB" stroke-width="2"/>
+  <text x="112" y="288" class="node blue">1　独立作答</text>
+  <text x="112" y="340" class="body">保留答案、思路和真实用时</text>
+  <rect x="770" y="236" width="590" height="136" rx="18" fill="#FFFFFF" stroke="#D5E1EB" stroke-width="2"/>
+  <text x="802" y="288" class="node blue">2　定位卡点</text>
+  <text x="802" y="340" class="body">找出第一处偏差</text>
+  <path d="M690 304 H748" class="arrow"/>
+  <path d="M1065 384 V414" class="arrow"/>
+
+  <rect x="770" y="438" width="590" height="136" rx="18" fill="#FFFFFF" stroke="#D5E1EB" stroke-width="2"/>
+  <text x="802" y="490" class="node teal">3　只补关键</text>
+  <text x="802" y="542" class="body">一次修一个具体失分动作</text>
+  <rect x="80" y="438" width="590" height="136" rx="18" fill="#FFFFFF" stroke="#D5E1EB" stroke-width="2"/>
+  <text x="112" y="490" class="node teal">4　本人再做</text>
+  <text x="112" y="542" class="body">合上解析，亲手重做或改写</text>
+  <path d="M748 506 H690" class="arrow"/>
+  <path d="M375 586 V616" class="arrow"/>
+
+  <rect x="80" y="640" width="1280" height="124" rx="18" fill="#E9F2FA"/>
+  <text x="112" y="690" class="node blue">5　陌生真题验证</text>
+  <text x="112" y="738" class="body">换一道完整原题，检查自己能否无提示选法、提点与表达。</text>
+
+  <text x="80" y="844" class="section">每天旧题时间，直接这样分</text>
+  <rect x="80" y="880" width="620" height="340" rx="18" fill="#FFFFFF" stroke="#D5E1EB" stroke-width="2"/>
+  <rect x="80" y="880" width="620" height="76" rx="18" fill="#215C9C"/>
+  <rect x="80" y="918" width="620" height="38" fill="#215C9C"/>
+  <text x="112" y="931" class="node white">行测　35分钟</text>
+  <text x="112" y="1018" class="body">20分钟　独立重做代表题</text>
+  <text x="112" y="1090" class="body">10分钟　核对具体卡点</text>
+  <text x="112" y="1162" class="body">5分钟　复述方法、登记复查</text>
+
+  <rect x="740" y="880" width="620" height="340" rx="18" fill="#FFFFFF" stroke="#D5E1EB" stroke-width="2"/>
+  <rect x="740" y="880" width="620" height="76" rx="18" fill="#127A70"/>
+  <rect x="740" y="918" width="620" height="38" fill="#127A70"/>
+  <text x="772" y="931" class="node white">申论　25分钟</text>
+  <text x="772" y="1006" class="body">5分钟　回读题干与材料</text>
+  <text x="772" y="1064" class="body">10分钟　亲手改写一条</text>
+  <text x="772" y="1122" class="body">8分钟　对照材料查漏</text>
+  <text x="772" y="1180" class="body">2分钟　登记复查要点</text>
+
+  <text x="80" y="1310" class="section">从首次闭卷检查，分别往后看</text>
+  <path d="M124 1390 H1316" stroke="#D5E1EB" stroke-width="8"/>
+  <circle cx="124" cy="1390" r="16" fill="#142E46"/>
+  <circle cx="675" cy="1390" r="16" fill="#AF6B19"/>
+  <circle cx="1316" cy="1390" r="16" fill="#127A70"/>
+  <text x="80" y="1456" class="node">首次检查</text>
+  <text x="80" y="1508" class="body">留下真实表现</text>
+  <text x="552" y="1456" class="node amber">约2天</text>
+  <text x="552" y="1508" class="body">复查不稳点</text>
+  <text x="1088" y="1456" class="node teal">约7天</text>
+  <text x="992" y="1508" class="body">同考点另一道真题</text>
+  <text x="80" y="1572" class="body">两次间隔都相对首次检查；再错或猜对，约1—2天后再查。</text>
+
+  <rect x="80" y="1620" width="1280" height="168" rx="18" fill="#FFFFFF" stroke="#D5E1EB" stroke-width="2"/>
+  <text x="112" y="1674" class="node teal">每周2次完整申论旧小题重写</text>
+  <text x="112" y="1726" class="body">替换部分新题时间；复杂材料可借用新题块。</text>
+  <text x="112" y="1769" class="body">已有测验覆盖的验证计入原训练，不重复叠加一套。</text>
+
+  <text x="80" y="1874" class="section">完成什么，就记录什么</text>
+  <text x="80" y="1932" class="body">首答 ／ 同题重做或改写 ／ 陌生题验证，分别保留。</text>
+  <text x="80" y="1992" class="body">新发题只用真题：江苏省考为主，优先A类。</text>
+  <text x="80" y="2052" class="body">按答案、把握程度、方法和真实用时一起判断。</text>
+  <path d="M80 2090 H1360" stroke="#D5E1EB" stroke-width="2"/>
+  <text x="80" y="2146" class="bold amber">试行方案｜不代表已经执行或独立掌握</text>
+</svg>

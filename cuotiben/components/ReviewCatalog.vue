@@ -3,7 +3,7 @@ import { computed, ref } from 'vue'
 import { withBase } from 'vitepress'
 import questions from '../review-catalog.json'
 
-const modules = ['常识判断', '言语理解', '数量关系', '图形推理', '定义判断', '类比推理', '逻辑判断', '资料分析']
+const modules = ['政治理论', '常识判断', '言语理解', '数量关系', '图形推理', '定义判断', '类比推理', '逻辑判断', '资料分析']
 const types = ['错题', '不确定', '猜题', '耗时较长', '未作答', '答对复习', '待复盘']
 const module = ref('全部')
 const type = ref('全部')

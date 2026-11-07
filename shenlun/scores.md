@@ -3,13 +3,29 @@ pageClass: shenlun-page
 title: "申论评分与进步记录｜首答、改写与迁移"
 type: study-scoreboard
 created: 2026-10-28
-updated: 2026-11-04
+updated: 2026-11-07
 status: active
 ---
 
+<script setup>
+import dailyScoreImage from "../daily-quizzes/assets/2026-11-06-essay-score.svg#quiz-figure"
+</script>
+
 # 申论评分与进步记录
 
-<strong>2026-10-28起，按用户要求，对本聊天已提交的课程申论题首答评分，后续默认继续。</strong>当前范围为DAY5—DAY9，不重评其他聊天的每日测验。评分依据为题干、本人原答及这位老师的答案；不另引其他参考答案。
+<strong>2026-10-28起，按用户要求，对本聊天已提交的课程申论题首答评分，后续默认继续。</strong>课程范围为DAY5—DAY9；本次每日真题另列，不重评其他聊天的旧每日卷。评分依据为题干、本人原答及这位老师的答案；不另引其他参考答案。
+
+## 每日真题（独立记录）
+
+| 提交日期 | 题目与本人首答 | 学习性参考分 | 真实用时 | 改写／独立验证 |
+|---|---|---|---:|---|
+| 2026-11-07 | [2020江苏A原第1题：阶段特点](/daily-quizzes/2026-11-06-review) · [原答](/daily-quizzes/2026-11-06-answer) | **10.5/20**，四组3.5＋5＋0＋2 | 16分钟 | 均待提交 |
+
+本题按出卷前“四阶段各5分”框架与指定讲义对照，独立于下方DAY5—DAY9课程基线；不重评旧题，不用不同题型裸分或得分率推断进退。提交日为11月7日，实际作答日未确认。主要缺口为网络强国整段与自主创新特点；原答未超250字。
+
+![本题四组学习性得分](/daily-quizzes/assets/2026-11-06-essay-score.svg)
+
+<a :href="dailyScoreImage" target="_blank" rel="noopener">放大查看本题得分图</a>
 
 ## 阶段测评（自编题，独立记录）
 

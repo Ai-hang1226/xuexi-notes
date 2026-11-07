@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 850" role="img" aria-labelledby="title desc">
+<title id="title">第118题：只求基期比值，先合并再估算</title><desc id="desc">11月动力出口为19除以0.896，储能出口为13.6除以1.239。合并为19除以13.6再乘1.239除以0.896，约1.93，选C。按本题选项粗估1.4乘1.4约1.96也可区分。</desc>
+<style>text{font-family:"Times New Roman","Microsoft YaHei",sans-serif;fill:#163549}.title{font-size:44px;font-weight:700}.node{font-size:38px;font-weight:700}.body{font-size:32px}.small{font-size:28px}</style>
+<rect width="1040" height="850" rx="22" fill="#f4f7fa"/>
+<text x="42" y="68" class="title">第118题｜只求比值，先合并再估算</text>
+<rect x="42" y="108" width="956" height="115" rx="15" fill="#e0ebf2"/>
+<text x="70" y="158" class="node">目标：11月动力出口 ÷ 11月储能出口</text>
+<text x="70" y="202" class="body">对象、时期、出口指标和单位保持一致</text>
+<rect x="42" y="263" width="460" height="140" rx="15" fill="#fff" stroke="#527b91" stroke-width="2"/>
+<rect x="538" y="263" width="460" height="140" rx="15" fill="#fff" stroke="#527b91" stroke-width="2"/>
+<text x="70" y="312" class="node">11月动力出口</text><text x="70" y="367" class="body">19 ÷ 0.896 ≈ 21.2</text>
+<text x="566" y="312" class="node">11月储能出口</text><text x="566" y="367" class="body">13.6 ÷ 1.239 ≈ 11.0</text>
+<text x="42" y="462" class="body">两者相除可合并，不必精算上面两个中间量：</text>
+<rect x="42" y="489" width="956" height="130" rx="15" fill="#dce9ec"/>
+<text x="70" y="542" class="node">(19 ÷ 13.6) × (1.239 ÷ 0.896)</text>
+<text x="70" y="593" class="node">≈ 1.4 × 1.38 ≈ 1.93，选C（1.9）</text>
+<text x="42" y="680" class="body">本题选项相隔0.3，粗估1.4 × 1.4 ≈ 1.96</text>
+<text x="42" y="729" class="body">也能区分；选项接近时再提高精度。</text>
+<text x="42" y="795" class="body">关键短式落纸 → 估算 → 与约21 ÷ 11核量级</text>
+</svg>

@@ -1,20 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 850" role="img" aria-labelledby="title desc">
-<title id="title">第118题：只求基期比值，先合并再估算</title><desc id="desc">11月动力出口为19除以0.896，储能出口为13.6除以1.239。合并为19除以13.6再乘1.239除以0.896，约1.93，选C。按本题选项粗估1.4乘1.4约1.96也可区分。</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 950" role="img" aria-labelledby="title desc">
+<title id="title">第118题：截位、约分、回乘试商</title><desc id="desc">原题选项1.3、1.6、1.9、2.2。两位有效数截位得19除以14乘1.2除以0.90，约分为38除以21。21乘1.8等于37.8，商略大于1.8。此近似偏低，仍超过B与C的分界1.75，当前题选C。1.7的回忆与旧记录分别保留。</desc>
 <style>text{font-family:"Times New Roman","Microsoft YaHei",sans-serif;fill:#163549}.title{font-size:44px;font-weight:700}.node{font-size:38px;font-weight:700}.body{font-size:32px}.small{font-size:28px}</style>
-<rect width="1040" height="850" rx="22" fill="#f4f7fa"/>
-<text x="42" y="68" class="title">第118题｜只求比值，先合并再估算</text>
-<rect x="42" y="108" width="956" height="115" rx="15" fill="#e0ebf2"/>
-<text x="70" y="158" class="node">目标：11月动力出口 ÷ 11月储能出口</text>
-<text x="70" y="202" class="body">对象、时期、出口指标和单位保持一致</text>
-<rect x="42" y="263" width="460" height="140" rx="15" fill="#fff" stroke="#527b91" stroke-width="2"/>
-<rect x="538" y="263" width="460" height="140" rx="15" fill="#fff" stroke="#527b91" stroke-width="2"/>
-<text x="70" y="312" class="node">11月动力出口</text><text x="70" y="367" class="body">19 ÷ 0.896 ≈ 21.2</text>
-<text x="566" y="312" class="node">11月储能出口</text><text x="566" y="367" class="body">13.6 ÷ 1.239 ≈ 11.0</text>
-<text x="42" y="462" class="body">两者相除可合并，不必精算上面两个中间量：</text>
-<rect x="42" y="489" width="956" height="130" rx="15" fill="#dce9ec"/>
-<text x="70" y="542" class="node">(19 ÷ 13.6) × (1.239 ÷ 0.896)</text>
-<text x="70" y="593" class="node">≈ 1.4 × 1.38 ≈ 1.93，选C（1.9）</text>
-<text x="42" y="680" class="body">本题选项相隔0.3，粗估1.4 × 1.4 ≈ 1.96</text>
-<text x="42" y="729" class="body">也能区分；选项接近时再提高精度。</text>
-<text x="42" y="795" class="body">关键短式落纸 → 估算 → 与约21 ÷ 11核量级</text>
+<rect width="1040" height="950" rx="22" fill="#f4f7fa"/>
+<text x="42" y="68" class="title">第118题｜把估算变成能回查的步骤</text>
+<rect x="42" y="110" width="956" height="115" rx="15" fill="#e0ebf2"/>
+<text x="70" y="160" class="node">1 看选项：1.3 / 1.6 / 1.9 / 2.2</text>
+<text x="70" y="204" class="body">当前题先试两位有效数，结果靠分界时再加精度</text>
+<rect x="42" y="255" width="956" height="145" rx="15" fill="#fff" stroke="#527b91" stroke-width="2"/>
+<text x="70" y="305" class="node">2 多步截位：19不变，13.6 → 14</text>
+<text x="70" y="361" class="node">1.239 → 1.2，0.896 → 0.90</text>
+<rect x="42" y="430" width="956" height="120" rx="15" fill="#dce9ec"/>
+<text x="70" y="480" class="node">3 先约分：(19 ÷ 14) × (1.2 ÷ 0.90)</text>
+<text x="70" y="529" class="node">= (19 ÷ 14) × (4 ÷ 3) = 38 ÷ 21</text>
+<rect x="42" y="580" width="956" height="130" rx="15" fill="#fff" stroke="#527b91" stroke-width="2"/>
+<text x="70" y="631" class="node">4 回乘试商：21 × 1.8 = 37.8</text>
+<text x="70" y="682" class="body">比38稍小，所以38 ÷ 21略大于1.8（约1.81）</text>
+<text x="42" y="775" class="body">这次截位式偏低；估到1.81仍在C侧，原题选C。</text>
+<text x="42" y="828" class="body">1.7在B侧，B与C分界为1.75；精算约1.93。</text>
+<text x="42" y="890" class="body">本图为当前原题演算，不冒充老师本人原题解析。</text>
 </svg>

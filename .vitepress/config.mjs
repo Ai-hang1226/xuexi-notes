@@ -38,7 +38,7 @@ const sidebar = {
       items: [
         { text: '📖 大宝小宝·体系正文(16章)', link: '/xingce/大宝小宝言语体系-正文' },
         { text: '言语理解方法库', link: '/xingce/yanyu-lijie' },
-        { text: '词义辨析·107词', link: '/xingce/言语词义辨析积累表' },
+        { text: '词义辨析·115词', link: '/xingce/言语词义辨析积累表' },
         { text: '语句排序·完整流程', link: '/xingce/语句排序-先找衔接再验证整体' },
         { text: '语病辨析·检查框架', link: '/xingce/语病辨析-先找主干再检查关系' },
         { text: '🔍 文段识别速查卡', link: '/xingce/言语结构识别速查卡' },

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="ratio-guide" width="760" height="1130" viewBox="0 0 760 1130">
+<style>text{font-family:"Microsoft YaHei","微软雅黑",sans-serif;font-weight:700;fill:#18363a}.title{font-size:44px}.head{font-size:38px}.body{font-size:32px}</style>
+<rect width="760" height="1130" rx="24" fill="#f3f7f6"/>
+<text x="32" y="66" class="title">平均数与比重</text><text x="32" y="112" class="body">同是商式，先分清问法</text>
+<rect x="24" y="140" width="712" height="170" rx="18" fill="#dceee7"/>
+<text x="44" y="188" class="head">① 先写分子 ÷ 分母</text>
+<text x="44" y="238" class="body">平均数：总量 ÷ 份数</text><text x="44" y="282" class="body">比重：部分 ÷ 整体</text>
+<rect x="24" y="334" width="712" height="164" rx="18" fill="#e8edf8"/>
+<text x="44" y="382" class="head">② 只问升降 → 比a与b</text>
+<text x="44" y="432" class="body">a＞b 上升；a＜b 下降</text><text x="44" y="476" class="body">a＝b 不变</text>
+<rect x="24" y="522" width="712" height="180" rx="18" fill="#f3e7d8"/>
+<text x="44" y="570" class="head">③ 问增长率 → 除以1＋b</text>
+<text x="44" y="624" class="head">(a−b) ÷ (1＋b)</text><text x="44" y="674" class="body">结果用百分数（%）</text>
+<rect x="24" y="726" width="712" height="232" rx="18" fill="#dceee7"/>
+<text x="44" y="774" class="head">④ 问差值 → 乘现期值</text>
+<text x="44" y="824" class="body">现期A/B × (a−b) ÷ (1＋a)</text>
+<text x="44" y="876" class="body">平均数差：沿用原单位</text><text x="44" y="926" class="body">比重差：换算为百分点</text>
+<text x="32" y="1022" class="body">a：分子增速；b：分母增速</text>
+<text x="32" y="1074" class="body">两期分子、分母为正；口径一致</text>
+</svg>

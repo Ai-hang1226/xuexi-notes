@@ -29,7 +29,7 @@ next: false
 
 | 日期 | 状态 | 查阅 |
 |---|---|---|
-| 2026-11-06 | 已批改 · 行测4/8 · 28分钟 | [试卷](/daily-quizzes/2026-11-06) · [结果与解析](/daily-quizzes/2026-11-06-review) · [本人首答](/daily-quizzes/2026-11-06-answer) |
+| 2026-11-06 | 已批改 · 行测4/8 · 28分钟 | [试卷](/daily-quizzes/2026-11-06) · [结果与解析](/daily-quizzes/2026-11-06-review) · [本人首答](/daily-quizzes/2026-11-06-answer) · [申论多平台对照](/daily-quizzes/2026-11-06-essay-comparison) |
 | 2026-11-05 | 待作答 | [试卷](/daily-quizzes/2026-11-05) · [结果与解析](/daily-quizzes/2026-11-05-review) |
 | 2026-11-04 | 待作答 | [试卷](/daily-quizzes/2026-11-04) · [结果与解析](/daily-quizzes/2026-11-04-review) |
 | 2026-11-03 | 待作答 | [试卷](/daily-quizzes/2026-11-03) · [结果与解析](/daily-quizzes/2026-11-03-review) |

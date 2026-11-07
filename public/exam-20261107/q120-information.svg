@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 940" role="img" aria-labelledby="title desc">
+<title id="title">第120题：①缺信息，②求解链完整，选B</title><desc id="desc">①可以还原2024年12月新能源出口量，但汽车总出口量缺少来源，比重不能确定。②合计与动力的现期销量和同比已给，分别还原基期后两期相减得到储能，储能同比可求。只问能否求，不必算出数值。</desc>
+<style>text{font-family:"Times New Roman","Microsoft YaHei",sans-serif;fill:#163549}.title{font-size:44px;font-weight:700}.node{font-size:38px;font-weight:700}.body{font-size:32px}</style>
+<rect width="1040" height="940" rx="22" fill="#f4f7fa"/>
+<text x="42" y="68" class="title">第120题｜确认信息链，算到能判断就停</text>
+<rect x="42" y="110" width="460" height="116" rx="15" fill="#e0ebf2"/>
+<rect x="538" y="110" width="460" height="116" rx="15" fill="#e0ebf2"/>
+<text x="66" y="160" class="node">① 新能源出口比重</text><text x="66" y="205" class="body">2024年12月</text>
+<text x="562" y="160" class="node">② 储能销量同比</text><text x="562" y="205" class="body">2025年12月对比上年同月</text>
+<rect x="42" y="266" width="460" height="160" rx="15" fill="#fff" stroke="#527b91" stroke-width="2"/>
+<rect x="538" y="266" width="460" height="160" rx="15" fill="#fff" stroke="#527b91" stroke-width="2"/>
+<text x="66" y="316" class="node">分子可还原</text><text x="66" y="367" class="body">30 ÷ (1 + 120%)</text><text x="66" y="409" class="body">只得到新能源出口量</text>
+<text x="562" y="316" class="node">合计／动力数据已给</text><text x="562" y="367" class="body">现期销量与各自同比已知</text><text x="562" y="409" class="body">两者基期销量均可还原</text>
+<text x="255" y="474" class="node">↓</text><text x="751" y="474" class="node">↓</text>
+<rect x="42" y="500" width="460" height="150" rx="15" fill="#fff2e9" stroke="#ad713b" stroke-width="2"/>
+<rect x="538" y="500" width="460" height="150" rx="15" fill="#e1efea" stroke="#497b6a" stroke-width="2"/>
+<text x="66" y="550" class="node">分母缺来源</text><text x="66" y="598" class="body">同月汽车总出口量未知</text><text x="66" y="640" class="body">也没有能还原它的关系</text>
+<text x="562" y="550" class="node">储能＝合计−动力</text><text x="562" y="598" class="body">现期、基期各相减</text><text x="562" y="640" class="body">储能两期量可得</text>
+<text x="66" y="716" class="node">① 不能推出</text><text x="562" y="716" class="node">② 同比可求</text>
+<rect x="42" y="765" width="956" height="120" rx="15" fill="#dce9ec"/>
+<text x="70" y="816" class="node">只判“能否求”：①不能、②能，选B</text>
+<text x="70" y="864" class="body">证明求解链完整即可，不必把②的数值算到底</text>
+</svg>

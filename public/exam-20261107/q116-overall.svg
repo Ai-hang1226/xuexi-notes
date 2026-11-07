@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 820" role="img" aria-labelledby="title desc">
+<title id="title">第116题：分母是全部汽车</title><desc id="desc">其他新能源0.3万辆，属于新能源汽车171万辆；新能源汽车占全部汽车52.3%。所求为0.3除以171再乘52.3%，约0.0918%，选A。</desc>
+<style>text{font-family:"Times New Roman","Microsoft YaHei",sans-serif;fill:#173449}.title{font-size:44px;font-weight:700}.node{font-size:38px;font-weight:700}.body{font-size:32px}.small{font-size:28px}</style>
+<rect width="1000" height="820" rx="22" fill="#f4f7fa"/>
+<text x="42" y="66" class="title">第116题｜先认准“占谁”</text>
+<rect x="45" y="102" width="910" height="494" rx="20" fill="#e5edf4" stroke="#386884" stroke-width="3"/>
+<text x="78" y="154" class="node">全部汽车｜约327万辆</text>
+<text x="78" y="198" class="body">题目要求的整体，应该放在分母</text>
+<rect x="95" y="232" width="810" height="318" rx="16" fill="#d0e2e8" stroke="#386884" stroke-width="3"/>
+<text x="128" y="285" class="node">新能源汽车｜171万辆</text>
+<text x="128" y="333" class="body">占全部汽车的52.3%</text>
+<rect x="145" y="370" width="710" height="133" rx="14" fill="#fff" stroke="#9c682f" stroke-width="3"/>
+<text x="178" y="421" class="node">其他新能源｜0.3万辆</text>
+<text x="178" y="469" class="body">171 − 110.8 − 59.9 = 0.3</text>
+<text x="45" y="653" class="body">你列的式子：0.3 ÷ 171，约0.175%</text>
+<text x="45" y="709" class="node">题目所求：0.3 ÷ 171 × 52.3%</text>
+<text x="45" y="765" class="node">≈ 0.0918% ＜ 0.1%，选A</text>
+</svg>

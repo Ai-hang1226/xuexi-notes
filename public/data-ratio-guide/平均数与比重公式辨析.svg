@@ -1,20 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="ratio-guide" width="760" height="1130" viewBox="0 0 760 1130">
+<svg xmlns="http://www.w3.org/2000/svg" id="ratio-guide" width="760" height="1450" viewBox="0 0 760 1450">
 <style>text{font-family:"Microsoft YaHei","微软雅黑",sans-serif;font-weight:700;fill:#18363a}.title{font-size:44px}.head{font-size:38px}.body{font-size:32px}</style>
-<rect width="760" height="1130" rx="24" fill="#f3f7f6"/>
-<text x="32" y="66" class="title">平均数与比重</text><text x="32" y="112" class="body">同是商式，先分清问法</text>
-<rect x="24" y="140" width="712" height="170" rx="18" fill="#dceee7"/>
-<text x="44" y="188" class="head">① 先写分子 ÷ 分母</text>
-<text x="44" y="238" class="body">平均数：总量 ÷ 份数</text><text x="44" y="282" class="body">比重：部分 ÷ 整体</text>
-<rect x="24" y="334" width="712" height="164" rx="18" fill="#e8edf8"/>
-<text x="44" y="382" class="head">② 只问升降 → 比a与b</text>
-<text x="44" y="432" class="body">a＞b 上升；a＜b 下降</text><text x="44" y="476" class="body">a＝b 不变</text>
-<rect x="24" y="522" width="712" height="180" rx="18" fill="#f3e7d8"/>
-<text x="44" y="570" class="head">③ 问增长率 → 除以1＋b</text>
-<text x="44" y="624" class="head">(a−b) ÷ (1＋b)</text><text x="44" y="674" class="body">结果用百分数（%）</text>
-<rect x="24" y="726" width="712" height="232" rx="18" fill="#dceee7"/>
-<text x="44" y="774" class="head">④ 问差值 → 乘现期值</text>
-<text x="44" y="824" class="body">现期A/B × (a−b) ÷ (1＋a)</text>
-<text x="44" y="876" class="body">平均数差：沿用原单位</text><text x="44" y="926" class="body">比重差：换算为百分点</text>
-<text x="32" y="1022" class="body">a：分子增速；b：分母增速</text>
-<text x="32" y="1074" class="body">两期分子、分母为正；口径一致</text>
+<rect width="760" height="1450" rx="24" fill="#f3f7f6"/>
+<text x="28" y="62" class="title">平均数与比重｜左右对照</text>
+<text x="28" y="112" class="body">公式相同，含义与差值单位不同</text>
+<rect x="24" y="140" width="344" height="90" rx="16" fill="#dceee7"/><rect x="392" y="140" width="344" height="90" rx="16" fill="#e8edf8"/>
+<text x="44" y="198" class="head">平均数</text><text x="412" y="198" class="head">比重</text>
+<path d="M380 140v90 M380 302v63 M380 440v158 M380 680v156 M380 916v68 M380 1060v240" stroke="#c5d2d4" stroke-width="2"/>
+<text x="28" y="280" class="head">分子 ÷ 分母</text>
+<text x="44" y="334" class="body">总量 ÷ 份数</text><text x="412" y="334" class="body">部分 ÷ 整体</text>
+<path d="M24 365h712" stroke="#c5d2d4"/>
+<text x="28" y="414" class="head">现期值／基期值</text>
+<text x="44" y="468" class="body">现期：A/B</text><text x="412" y="468" class="body">现期：A/B</text>
+<text x="44" y="518" class="body">基期：A/B ×</text><text x="412" y="518" class="body">基期：A/B ×</text>
+<text x="44" y="566" class="body">(1＋b)/(1＋a)</text><text x="412" y="566" class="body">(1＋b)/(1＋a)</text>
+<path d="M24 598h712" stroke="#c5d2d4"/>
+<text x="28" y="648" class="head">只问升降</text>
+<text x="44" y="704" class="body">a＞b 上升</text><text x="412" y="704" class="body">a＞b 上升</text>
+<text x="44" y="754" class="body">a＜b 下降</text><text x="412" y="754" class="body">a＜b 下降</text>
+<text x="44" y="804" class="body">a＝b 不变</text><text x="412" y="804" class="body">a＝b 不变</text>
+<path d="M24 836h712" stroke="#c5d2d4"/>
+<text x="28" y="886" class="head">相对增长率（%）</text>
+<text x="44" y="946" class="body">(a−b)/(1＋b)</text><text x="412" y="946" class="body">(a−b)/(1＋b)</text>
+<path d="M24 984h712" stroke="#c5d2d4"/>
+<text x="28" y="1034" class="head">两期差值：现期−基期</text>
+<text x="44" y="1090" class="body">A/B × (a−b)</text><text x="412" y="1090" class="body">A/B × (a−b)</text>
+<text x="44" y="1140" class="body">÷ (1＋a)</text><text x="412" y="1140" class="body">÷ (1＋a)</text>
+<text x="44" y="1204" class="body">沿用原单位</text><text x="412" y="1204" class="body">乘100 → 百分点</text>
+<text x="44" y="1250" class="body">如：元/台</text><text x="412" y="1250" class="body">比重先按小数算</text>
+<text x="28" y="1344" class="body">a：各自分子增速；b：各自分母增速</text>
+<text x="28" y="1400" class="body">两期数据为正；对象与比较期一致</text>
 </svg>

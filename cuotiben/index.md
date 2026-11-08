@@ -11,6 +11,8 @@ import ReviewCatalog from './components/ReviewCatalog.vue'
 
 错题、不确定、猜题和耗时较长的题，统一在这里复习。
 
+[按问题回看：对象、分母与问法](/cuotiben/repeated-issues)：连接原题和具体卡点，答错、答对返工及待验证分开记录。
+
 <ReviewCatalog />
 
 <details>

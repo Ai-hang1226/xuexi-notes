@@ -11,6 +11,10 @@ import ReviewCatalog from './components/ReviewCatalog.vue'
 
 错题、不确定、猜题和耗时较长的题，统一在这里复习。
 
+![复习路线：回看原题、看图解、另找真题验证](/question-review-20261108/review-q-study-flow.svg)
+
+**先从一组看图复习：** [资料分析七题](/cuotiben/资料分析专项复盘-2026-11-02) · [数量关系六题](/cuotiben/数量关系专项复盘-2026-11-04) · [图形推理两题](/cuotiben/图形推理专项复盘-2026-11-02)
+
 [按问题回看：对象、分母与问法](/cuotiben/repeated-issues)：连接原题和具体卡点，答错、答对返工及待验证分开记录。
 
 <ReviewCatalog />

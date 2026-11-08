@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">逻辑填空：先找语境依据，再比较词义</title><desc id="desc">四步依次是读语境、找线索、比差别、回代整组。</desc>
+  <defs><marker id="arrow" markerWidth="15" markerHeight="15" refX="12" refY="7.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L15 7.5 L0 15 Z" fill="#476bb0"/></marker></defs>
+  <rect width="600" height="1000" rx="22" fill="#f7f9fd"/>
+  <g font-family="Microsoft YaHei, sans-serif">
+    <text x="38" y="65" fill="#182a48" font-size="42" font-weight="700">逻辑填空｜四步找依据</text>
+    <rect x="34" y="104" width="532" height="160" rx="18" fill="#e8f0ff" stroke="#9fb9e6" stroke-width="2"/>
+    <text x="68" y="156" font-size="40" font-weight="700" fill="#173d79">① 读语境</text><text x="68" y="207" font-size="34" fill="#26374c">这句话想表达什么？</text><text x="68" y="246" font-size="32" fill="#26374c">看主体、对象、动作</text>
+    <rect x="34" y="320" width="532" height="160" rx="18" fill="#e8f6f2" stroke="#a0d0c4" stroke-width="2"/>
+    <text x="68" y="372" font-size="40" font-weight="700" fill="#176659">② 找线索</text><text x="68" y="423" font-size="34" fill="#26374c">看解释、转折、因果</text><text x="68" y="462" font-size="32" fill="#26374c">也看整句或全文意思</text>
+    <rect x="34" y="536" width="532" height="160" rx="18" fill="#fff2df" stroke="#dfc49a" stroke-width="2"/>
+    <text x="68" y="588" font-size="40" font-weight="700" fill="#78511c">③ 比差别</text><text x="68" y="639" font-size="34" fill="#26374c">比较词义、对象、程度</text><text x="68" y="678" font-size="32" fill="#26374c">不清楚的先保留</text>
+    <rect x="34" y="752" width="532" height="160" rx="18" fill="#f0ebfa" stroke="#c1b2dc" stroke-width="2"/>
+    <text x="68" y="804" font-size="40" font-weight="700" fill="#5e4487">④ 回代整组</text><text x="68" y="855" font-size="34" fill="#26374c">每一空都放回去读</text><text x="68" y="894" font-size="32" fill="#26374c">检查全句是否贴切</text>
+    <text x="46" y="972" fill="#3b4c61" font-size="32" font-weight="600">直觉可提出候选，选择要有依据。</text>
+  </g><g fill="none" stroke="#476bb0" stroke-width="5" marker-end="url(#arrow)"><path d="M300 273 V305"/><path d="M300 489 V521"/><path d="M300 705 V737"/></g>
+</svg>

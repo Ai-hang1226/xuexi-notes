@@ -28,6 +28,14 @@ body {
 .vp-doc h2 { line-height: 1.5; text-wrap: balance; scroll-margin-top: 96px; }
 .vp-doc h3 { line-height: 1.5; text-wrap: balance; scroll-margin-top: 96px; }
 .vp-doc strong { font-weight: 700; }
+.vp-doc mark.rv-object, .vp-doc mark.rv-period, .vp-doc mark.rv-target { border-radius: .18em; padding: .03em .12em; font-weight: 700; }
+.vp-doc mark.rv-object { color: #174887; background: #e1ecff; }
+.vp-doc mark.rv-period { color: #76510d; background: #ffedc7; }
+.vp-doc mark.rv-target { color: #155e4c; background: #d9f3e7; }
+.dark .vp-doc mark.rv-object { color: #c8ddff; background: #243e63; }
+.dark .vp-doc mark.rv-period { color: #ffe4ad; background: #5d4522; }
+.dark .vp-doc mark.rv-target { color: #bcefd9; background: #214c3d; }
+.vp-doc img[src*="question-review-20261108/review-"] { display: block; width: 100%; max-width: 600px; height: auto; }
 .VPDoc.has-aside .content .content-container { max-width: 860px; }
 
 /* 短标签完整显示，长说明正常换行；宽表只在自己的区域内滚动。 */

@@ -4,7 +4,7 @@
 ## 看图复习
 
 <figure class="study-visual">
-<a href="/xuexi-notes/compact-flow-20261109/adaptive-f9e0a635791e15b20d40.svg" target="_blank" rel="noopener"><img src="/compact-flow-20261109/adaptive-f9e0a635791e15b20d40.svg" alt="图形推理的观察路线" width="500" loading="lazy" /></a>
+<a href="/xuexi-notes/compact-flow-20261109/aligned-f9e0a635791e15b20d40.svg" target="_blank" rel="noopener"><img src="/compact-flow-20261109/aligned-f9e0a635791e15b20d40.svg" alt="图形推理的观察路线" width="500" loading="lazy" /></a>
 <figcaption>点击图可查看大图</figcaption>
 </figure>
 

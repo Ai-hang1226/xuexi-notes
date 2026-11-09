@@ -8,7 +8,7 @@ outline: [2, 3]
 
 [本人完整首答](/daily-quizzes/2026-11-04-jiangsu-a-assessment-answer) · [原试卷](/daily-quizzes/2026-11-04-jiangsu-a-assessment) · [12题行测复盘](/cuotiben/江苏A类阶段测评复盘-2026-11-04)
 
-<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/adaptive-db944d4e13088fe41968.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source srcset="/compact-flow-20261109/adaptive-db944d4e13088fe41968.svg"><img src="./assets/2026-11-04-assessment-score.svg" alt="本次首答成绩概览" loading="lazy" /></picture></a>
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/aligned-db944d4e13088fe41968.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source srcset="/compact-flow-20261109/aligned-db944d4e13088fe41968.svg"><img src="./assets/2026-11-04-assessment-score.svg" alt="本次首答成绩概览" loading="lazy" /></picture></a>
 
 | 项目 | 结果 | 真实用时 |
 |---|---|---|

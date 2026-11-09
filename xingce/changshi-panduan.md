@@ -3,7 +3,7 @@
 ## 看图复习
 
 <figure class="study-visual">
-<a href="/xuexi-notes/compact-flow-20261109/adaptive-5d7d3053211c0216261c.svg" target="_blank" rel="noopener"><img src="/compact-flow-20261109/adaptive-5d7d3053211c0216261c.svg" alt="常识积累：领域归位、概念区别、来源日期与隔天回看" width="500" loading="lazy" /></a>
+<a href="/xuexi-notes/compact-flow-20261109/aligned-5d7d3053211c0216261c.svg" target="_blank" rel="noopener"><img src="/compact-flow-20261109/aligned-5d7d3053211c0216261c.svg" alt="常识积累：领域归位、概念区别、来源日期与隔天回看" width="500" loading="lazy" /></a>
 <figcaption>点击图可查看大图</figcaption>
 </figure>
 

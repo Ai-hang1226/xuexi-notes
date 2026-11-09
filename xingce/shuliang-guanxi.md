@@ -5,7 +5,7 @@
 ## 看图复习
 
 <figure class="study-visual">
-<a href="/xuexi-notes/visuals/review-20261015/quantity-method-route.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/quantity-method-route.svg" alt="数量选法：先标问题与条件，再按比例、分组、计数、数列或几何选择方法" width="500" loading="lazy" /></a>
+<a href="/xuexi-notes/compact-flow-20261109/aligned-746bac474f264d334637.svg" target="_blank" rel="noopener"><img src="/compact-flow-20261109/aligned-746bac474f264d334637.svg" alt="数量选法：先标问题与条件，再按比例、分组、计数、数列或几何选择方法" width="500" loading="lazy" /></a>
 <figcaption>点击图可查看大图</figcaption>
 </figure>
 

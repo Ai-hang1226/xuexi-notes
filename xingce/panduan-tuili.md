@@ -3,7 +3,7 @@
 ## 看图复习
 
 <figure class="study-visual">
-<a href="/xuexi-notes/compact-flow-20261109/adaptive-556ca2ace4f26ecc81e6.svg" target="_blank" rel="noopener"><img src="/compact-flow-20261109/adaptive-556ca2ace4f26ecc81e6.svg" alt="判断推理四类：图形、定义、类比、逻辑的对应工具" width="500" loading="lazy" /></a>
+<a href="/xuexi-notes/compact-flow-20261109/aligned-556ca2ace4f26ecc81e6.svg" target="_blank" rel="noopener"><img src="/compact-flow-20261109/aligned-556ca2ace4f26ecc81e6.svg" alt="判断推理四类：图形、定义、类比、逻辑的对应工具" width="500" loading="lazy" /></a>
 <figcaption>点击图可查看大图</figcaption>
 </figure>
 

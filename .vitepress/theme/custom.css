@@ -250,7 +250,7 @@ body {
   background: #f6f8fc;
 }
 /* 只用于图推横版试排；手机切换为保留的竖图。 */
-.study-visual.graphic-route-demo img { width: 100%; max-width: 760px; }
+.study-visual.graphic-route-demo img { width: 100%; max-width: 700px; }
 @media (max-width: 640px) {
   .study-visual.graphic-route-demo img { max-width: 390px; }
 }
@@ -476,3 +476,8 @@ body {
   .vp-doc .pbar { width: 84px; height: 9px; }
   .vp-doc .prog { gap: 8px; }
 }
+
+/* 流程复习图：电脑横版，手机保持原竖版，点图看横版大图。 */
+.vp-doc .compact-flow-link { display: block; text-align: center; }
+.vp-doc .compact-flow img { display: block; width: auto; max-width: min(100%, 700px); height: auto; margin: 0 auto; }
+@media (max-width: 640px) { .vp-doc .compact-flow img { max-width: min(100%, 390px); } }

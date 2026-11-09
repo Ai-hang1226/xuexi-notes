@@ -28,7 +28,7 @@
 
 ### ① 2023江苏-言语-主旨概括（题1）
 
-![复习图解｜主旨题｜两方面找共同点](/question-review-20261109-batch47/verbal1.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/b8c21db247abd345cb72.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/b8c21db247abd345cb72.svg"><img src="/question-review-20261109-batch47/verbal1.svg" alt="复习图解｜主旨题｜两方面找共同点" loading="lazy" /></picture></a>
 
 读题标记：蓝色＝对象或范围，橙色＝条件，绿色＝问题或要求。
 
@@ -72,7 +72,7 @@
 
 ### ② 2023江苏-言语-关键词提取（题2）
 
-![复习图解｜关键词｜把各句串起来](/question-review-20261109-batch47/verbal2.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/60bd212dbdd60ee133ca.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/60bd212dbdd60ee133ca.svg"><img src="/question-review-20261109-batch47/verbal2.svg" alt="复习图解｜关键词｜把各句串起来" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -115,7 +115,7 @@
 
 ### ③ 2023江苏-言语-接语选择（题3）
 
-![复习图解｜接语题｜问题之后谈什么](/question-review-20261109-batch47/verbal3.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/c9ac4be3e3fcf86fa253.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/c9ac4be3e3fcf86fa253.svg"><img src="/question-review-20261109-batch47/verbal3.svg" alt="复习图解｜接语题｜问题之后谈什么" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -158,7 +158,7 @@
 
 ### ④ 2023江苏-言语-意图/对策（题4）
 
-![复习图解｜对策题｜对准现实症结](/question-review-20261109-batch48/verbal4.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/f56d7e827fd6c47e6565.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/f56d7e827fd6c47e6565.svg"><img src="/question-review-20261109-batch48/verbal4.svg" alt="复习图解｜对策题｜对准现实症结" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -197,7 +197,7 @@
 
 ### ⑤ 2023江苏-言语-细节判断·选非（题5）
 
-![复习图解｜细节选非｜先核限定语](/question-review-20261109-batch51/verbal5-uncertain.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/40cd76ead4173521e2a4.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/40cd76ead4173521e2a4.svg"><img src="/question-review-20261109-batch51/verbal5-uncertain.svg" alt="复习图解｜细节选非｜先核限定语" loading="lazy" /></picture></a>
 
 > **解析待核：**题干对“相似的结构原理”有限定，下面旧解析将结构相似与原理相近截然分开，解释是否充分仍待核对。[星光公考题库](https://www.xingguanggongkao.com/pc/wb/quesView/id/48228.html)同样给出B为参考答案，但该页暂无解析；本人原答与旧记录保留。
 
@@ -245,7 +245,7 @@
 
 ### ⑥ 2023江苏-言语-主旨概括（题6）
 
-![复习图解｜主旨题｜留意表述强弱](/question-review-20261109-batch48/verbal6.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/570e5ff9bd75826456cf.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/570e5ff9bd75826456cf.svg"><img src="/question-review-20261109-batch48/verbal6.svg" alt="复习图解｜主旨题｜留意表述强弱" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -287,7 +287,7 @@
 
 ### ⑦ 2023江苏-言语-主旨概括（题7）
 
-![复习图解｜主旨题｜论点与论据](/question-review-20261109-batch48/verbal7.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/a83aa3a71fa932da3120.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/a83aa3a71fa932da3120.svg"><img src="/question-review-20261109-batch48/verbal7.svg" alt="复习图解｜主旨题｜论点与论据" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -329,7 +329,7 @@
 
 ### ⑧ 2021江苏A卷-言语-标题选择（题16） {#yanyu-20260912-16}
 
-![复习图解｜标题题｜例子共同证明什么](/question-review-20261109-batch49/verbal8.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/60aa80dd7ea196b4c3d0.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/60aa80dd7ea196b4c3d0.svg"><img src="/question-review-20261109-batch49/verbal8.svg" alt="复习图解｜标题题｜例子共同证明什么" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -383,7 +383,7 @@
 
 ### ⑨ 2021江苏A卷-言语-主旨·意在强调（题17） {#yanyu-20260912-17}
 
-![复习图解｜主旨题｜总对策与分做法](/question-review-20261109-batch49/verbal9.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/bd386e2e7ed1650e0014.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/bd386e2e7ed1650e0014.svg"><img src="/question-review-20261109-batch49/verbal9.svg" alt="复习图解｜主旨题｜总对策与分做法" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -434,7 +434,7 @@ B 罩不住其余三条，**表述片面**（且用“不能仅仅”这种问�
 
 ### ⑩ 2021江苏A卷-言语-语句填空·段尾（题22） {#yanyu-20260912-22}
 
-![复习图解｜段尾填空｜顺着链条向下](/question-review-20261109-batch49/verbal10.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/096ab8bca9bd9bdb7227.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/096ab8bca9bd9bdb7227.svg"><img src="/question-review-20261109-batch49/verbal10.svg" alt="复习图解｜段尾填空｜顺着链条向下" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -498,7 +498,7 @@ B 罩不住其余三条，**表述片面**（且用“不能仅仅”这种问�
 
 ### ⑪ 2021江苏A卷-言语-关键词提取（题23） {#yanyu-20260912-23}
 
-![复习图解｜关键词题｜两种口径对照](/question-review-20261109-batch51/verbal11-dispute.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/d680286aa2cadc6a1bab.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/d680286aa2cadc6a1bab.svg"><img src="/question-review-20261109-batch51/verbal11-dispute.svg" alt="复习图解｜关键词题｜两种口径对照" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -570,7 +570,7 @@ B 罩不住其余三条，**表述片面**（且用“不能仅仅”这种问�
 
 ### ⑫ 2021江苏A卷-言语-主旨概括（题24） {#yanyu-20260912-24}
 
-![复习图解｜主旨题｜主语对还要看谓语](/question-review-20261109-batch49/verbal12.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/f33f310a18181aa61e3c.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/f33f310a18181aa61e3c.svg"><img src="/question-review-20261109-batch49/verbal12.svg" alt="复习图解｜主旨题｜主语对还要看谓语" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -635,7 +635,7 @@ B 罩不住其余三条，**表述片面**（且用“不能仅仅”这种问�
 
 ### ⑬ 2021江苏A卷-言语-主旨概括（题25） {#yanyu-20260913-25}
 
-![复习图解｜因果题｜箭头方向别读反](/question-review-20261109-batch49/verbal13.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/4723f8bfdeb7bdafd4b4.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/4723f8bfdeb7bdafd4b4.svg"><img src="/question-review-20261109-batch49/verbal13.svg" alt="复习图解｜因果题｜箭头方向别读反" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -696,7 +696,7 @@ B 罩不住其余三条，**表述片面**（且用“不能仅仅”这种问�
 
 ### ⑭ 2021江苏A卷-言语-主旨概括（题27） {#yanyu-20260913-27}
 
-![复习图解｜主旨题｜对象与方向](/question-review-20261109-batch49/verbal14.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/2e1184eb503f7a3c4178.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/2e1184eb503f7a3c4178.svg"><img src="/question-review-20261109-batch49/verbal14.svg" alt="复习图解｜主旨题｜对象与方向" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -779,7 +779,7 @@ B 选项：   实施民法典       ──────────────�
 
 ### ⑮ 2021江苏A卷-言语-主旨概括（题29） {#yanyu-20260913-29}
 
-![复习图解｜主旨题｜比较语气与落点](/question-review-20261109-batch51/verbal15-dispute.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/0b2c0abbcf525da69786.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/0b2c0abbcf525da69786.svg"><img src="/question-review-20261109-batch51/verbal15-dispute.svg" alt="复习图解｜主旨题｜比较语气与落点" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -842,7 +842,7 @@ B 选项：   实施民法典       ──────────────�
 
 ### ⑯ 2021江苏C卷-言语-逻辑填空（题38） {#yanyu-20260913-38}
 
-![复习图解｜逻辑填空｜先找强语境](/question-review-20261109-batch52/verbal16.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/9e162231abd7e6d673d0.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/9e162231abd7e6d673d0.svg"><img src="/question-review-20261109-batch52/verbal16.svg" alt="复习图解｜逻辑填空｜先找强语境" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -901,7 +901,7 @@ B 选项：   实施民法典       ──────────────�
 
 ### ⑰ 篇章阅读-语句填空（第41题） {#yanyu-20260913-passage-41}
 
-![复习图解｜句中填空｜看前后是否衔接](/question-review-20261109-batch50/passage41.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/3955687f51fe6e454ad5.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/3955687f51fe6e454ad5.svg"><img src="/question-review-20261109-batch50/passage41.svg" alt="复习图解｜句中填空｜看前后是否衔接" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -947,7 +947,7 @@ B 选项：   实施民法典       ──────────────�
 
 ### ⑱ 篇章阅读-细节理解（第42题） {#yanyu-20260913-passage-42}
 
-![复习图解｜细节题｜回原文找依据](/question-review-20261109-batch50/passage42.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/c5bfd48e80541d3a19fd.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/c5bfd48e80541d3a19fd.svg"><img src="/question-review-20261109-batch50/passage42.svg" alt="复习图解｜细节题｜回原文找依据" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -990,7 +990,7 @@ B 选项：   实施民法典       ──────────────�
 
 ### ⑲ 篇章阅读-细节判断·选非（第44题） {#yanyu-20260913-passage-44}
 
-![复习图解｜选非题｜比喻不是定义](/question-review-20261109-batch50/passage44.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/30e7bc428114eb8cdba8.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/30e7bc428114eb8cdba8.svg"><img src="/question-review-20261109-batch50/passage44.svg" alt="复习图解｜选非题｜比喻不是定义" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 
@@ -1036,7 +1036,7 @@ B 选项：   实施民法典       ──────────────�
 
 ### ⑳ 篇章阅读-标题选择（第45题） {#yanyu-20260913-passage-45}
 
-![复习图解｜标题题｜覆盖全文主干](/question-review-20261109-batch50/passage45.svg)
+<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/7667f19ac2f2c7780e5e.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source media="(min-width: 641px)" srcset="/compact-flow-20261109/7667f19ac2f2c7780e5e.svg"><img src="/question-review-20261109-batch50/passage45.svg" alt="复习图解｜标题题｜覆盖全文主干" loading="lazy" /></picture></a>
 
 **复盘类型：错题**
 

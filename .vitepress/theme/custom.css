@@ -325,6 +325,21 @@ body {
 /* 本轮言语流程图：随正文放大，可点开矢量原图。 */
 .study-visual.study-visual-wide img { width: 100%; max-width: 860px; }
 
+/* 复习图在宽屏上不过度放大；手机保持阅读栏宽度与原比例。 */
+.vp-doc p > img:only-child {
+  max-width: min(100%, 700px);
+  height: auto;
+}
+.vp-doc img[src*="question-review-"],
+.vp-doc p > img[src*="question-review-"]:only-child {
+  display: block;
+  width: auto;
+  max-width: min(100%, 520px);
+  height: auto;
+  margin-inline: auto;
+}
+.study-visual.study-visual-wide img { max-width: min(100%, 700px); }
+
 @media (max-width: 640px) {
   .study-visual.study-visual-wide { overflow-x: auto; }
   .study-visual.study-visual-wide::before {

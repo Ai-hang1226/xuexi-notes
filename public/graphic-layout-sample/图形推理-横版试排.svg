@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">图形推理：看见再动手，横版试排</title>
+  <desc id="desc">固定观察对象，按特征列候选，把方法变成动作，验证整组，再用陌生真题检验。特征只提示候选，不保证一定考该规律。</desc>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L12 6 L0 12 Z" fill="#426ba8"/></marker></defs>
+  <rect width="1200" height="650" rx="22" fill="#f7f9fd"/>
+  <g font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#25344a">
+    <text x="32" y="62" font-size="42" font-weight="700" fill="#182a48">图形推理｜看见再动手</text>
+    <text x="1168" y="60" text-anchor="end" font-size="24" fill="#52657e">横版试排 · 按题图选择候选</text>
+    <rect x="30" y="100" width="360" height="190" rx="16" fill="#e8f0ff" stroke="#9fb9e6" stroke-width="2"/>
+    <text x="50" y="147" font-size="31" font-weight="700" fill="#173d79">① 固定观察对象</text>
+    <text x="50" y="197" font-size="27">看黑白、完整轮廓</text><text x="50" y="239" font-size="27">找多幅图重复的部分</text>
+    <rect x="420" y="100" width="360" height="190" rx="16" fill="#e8f6f2" stroke="#a0d0c4" stroke-width="2"/>
+    <text x="440" y="147" font-size="31" font-weight="700" fill="#176659">② 按特征列候选</text>
+    <text x="440" y="197" font-size="27">交点、连接、笔画</text><text x="440" y="239" font-size="27">元素种类、视图等</text>
+    <rect x="810" y="100" width="360" height="190" rx="16" fill="#fff2df" stroke="#dfc49a" stroke-width="2"/>
+    <text x="830" y="147" font-size="31" font-weight="700" fill="#78511c">③ 把方法变成动作</text>
+    <text x="830" y="197" font-size="27">数公共边、查奇点</text><text x="830" y="239" font-size="27">画投影、比最短距离</text>
+    <rect x="30" y="360" width="360" height="190" rx="16" fill="#f0ebfa" stroke="#c1b2dc" stroke-width="2"/>
+    <text x="50" y="407" font-size="31" font-weight="700" fill="#5e4487">④ 验证整组</text>
+    <text x="50" y="457" font-size="27">同一对象、同一口径</text><text x="50" y="499" font-size="27">核对所有题图和选项</text>
+    <rect x="420" y="360" width="360" height="190" rx="16" fill="#e8f0ff" stroke="#9fb9e6" stroke-width="2"/>
+    <text x="440" y="407" font-size="31" font-weight="700" fill="#173d79">⑤ 陌生真题验证</text>
+    <text x="440" y="457" font-size="27">先独立判断，再看解析</text><text x="440" y="499" font-size="27">记录答案、用时和把握</text>
+    <rect x="810" y="360" width="360" height="190" rx="16" fill="#fff" stroke="#d7deea" stroke-width="2"/>
+    <text x="830" y="407" font-size="31" font-weight="700" fill="#425676">记住这个边界</text>
+    <text x="830" y="457" font-size="27">特征只提示候选</text><text x="830" y="499" font-size="27">不保证一定考该规律</text>
+    <path d="M393 195 H414 M783 195 H804 M393 455 H414" fill="none" stroke="#426ba8" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M990 296 V327 H210 V352" fill="none" stroke="#426ba8" stroke-width="4" stroke-linejoin="round" marker-end="url(#arrow)"/>
+    <text x="32" y="610" font-size="25" fill="#53637a">观察 → 候选 → 动作 → 验证；图形无区分度时，再换有依据的方向。</text>
+  </g>
+</svg>

@@ -249,6 +249,11 @@ body {
   border-radius: 16px;
   background: #f6f8fc;
 }
+/* 只用于图推横版试排；手机切换为保留的竖图。 */
+.study-visual.graphic-route-demo img { width: 100%; max-width: 760px; }
+@media (max-width: 640px) {
+  .study-visual.graphic-route-demo img { max-width: 390px; }
+}
 .study-visual figcaption {
   margin-top: .65rem;
   font-size: 16px;

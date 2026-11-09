@@ -4,7 +4,7 @@
 ## 看图复习
 
 <figure class="study-visual">
-<a href="/xuexi-notes/visuals/review-20261015/reasoning-definition.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/reasoning-definition.svg" alt="定义判断：拆必要条件并逐项核对" width="500" loading="lazy" /></a>
+<a href="/xuexi-notes/compact-flow-20261109/adaptive-5afccdd02776738b625e.svg" target="_blank" rel="noopener"><img src="/compact-flow-20261109/adaptive-5afccdd02776738b625e.svg" alt="定义判断：拆必要条件并逐项核对" width="500" loading="lazy" /></a>
 <figcaption>点击图可查看大图</figcaption>
 </figure>
 

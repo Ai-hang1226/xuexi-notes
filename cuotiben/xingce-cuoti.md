@@ -3,7 +3,7 @@
 ## 看图复习
 
 <figure class="study-visual">
-<a href="/xuexi-notes/visuals/review-20261015/review-loop.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/review-loop.svg" alt="错题复盘：归位、找病因、记对策、新题复测" width="500" loading="lazy" /></a>
+<a href="/xuexi-notes/compact-flow-20261109/adaptive-514ee15d4ea2cc0f5889.svg" target="_blank" rel="noopener"><img src="/compact-flow-20261109/adaptive-514ee15d4ea2cc0f5889.svg" alt="错题复盘：归位、找病因、记对策、新题复测" width="500" loading="lazy" /></a>
 <figcaption>手机可在图内横向滑动；点击查看大图</figcaption>
 </figure>
 

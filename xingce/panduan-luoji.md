@@ -6,7 +6,7 @@
 ## 看图复习
 
 <figure class="study-visual">
-<a href="/xuexi-notes/visuals/review-20261015/reasoning-argument.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/reasoning-argument.svg" alt="论证分析：论据到结论的缺口与选项检验" width="500" loading="lazy" /></a>
+<a href="/xuexi-notes/compact-flow-20261109/adaptive-e5fb2f7c63a8d6a7617b.svg" target="_blank" rel="noopener"><img src="/compact-flow-20261109/adaptive-e5fb2f7c63a8d6a7617b.svg" alt="论证分析：论据到结论的缺口与选项检验" width="500" loading="lazy" /></a>
 <figcaption>点击图可查看大图</figcaption>
 </figure>
 

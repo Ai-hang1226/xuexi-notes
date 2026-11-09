@@ -4,7 +4,7 @@
 ## 看图复习
 
 <figure class="study-visual">
-<a href="/xuexi-notes/visuals/review-20261015/reasoning-analogy.svg" target="_blank" rel="noopener"><img src="/visuals/review-20261015/reasoning-analogy.svg" alt="类比推理：造句、一级关系、二级关系" width="500" loading="lazy" /></a>
+<a href="/xuexi-notes/compact-flow-20261109/adaptive-123561c03ee15764047e.svg" target="_blank" rel="noopener"><img src="/compact-flow-20261109/adaptive-123561c03ee15764047e.svg" alt="类比推理：造句、一级关系、二级关系" width="500" loading="lazy" /></a>
 <figcaption>点击图可查看大图</figcaption>
 </figure>
 

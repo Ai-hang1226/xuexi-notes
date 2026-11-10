@@ -484,3 +484,87 @@ body {
 
 /* 独立展示的横版流程图与复习图使用一致的宽度。 */
 .vp-doc .study-visual img[src*="/compact-flow-20261109/"] { width: 100%; max-width: min(100%, 600px); height: auto; }
+
+/* ============================================================
+   A 档 · 统一字号体系（覆盖式补丁）
+   以正文为唯一基准：桌面 21px / 平板约 19px / 手机 17px，
+   标题、表格、辅助文字全部用 em 相对值，修复 H3 小于正文、
+   H4 等于正文的层级倒挂，并收掉申论页独立的一套 px 刻度。
+   本段集中放在文件末尾覆盖旧规则，确认效果后可再合并清理。
+   ============================================================ */
+:root {
+  --doc-font: clamp(17px, 0.5vw + 15px, 21px);
+  --doc-font-sub: clamp(16px, 0.48vw + 14.2px, 20px);
+  --doc-lh: 1.75;
+  --doc-h1: 1.75em;
+  --doc-h2: 1.4em;
+  --doc-h3: 1.2em;
+  --doc-h4: 1.1em;
+  --doc-table: 0.9em;
+  --doc-small: 0.8em;
+}
+
+/* 正文与标题层级 */
+.vp-doc { font-size: var(--doc-font); }
+.vp-doc p,
+.vp-doc li,
+.vp-doc blockquote > p { font-size: 1em; line-height: var(--doc-lh); }
+.vp-doc h1 { font-size: var(--doc-h1); line-height: 1.35; }
+.vp-doc h2 { font-size: var(--doc-h2); line-height: 1.4; }
+.vp-doc h3 { font-size: var(--doc-h3); line-height: 1.45; }
+.vp-doc h4 { font-size: var(--doc-h4); line-height: 1.5; }
+
+/* 表格与辅助文字跟随正文缩放 */
+.vp-doc table,
+.vp-doc table th,
+.vp-doc table td { font-size: var(--doc-table); }
+.vp-doc [data-reading-overflow]::before,
+.study-visual figcaption,
+.visual-grid span,
+.shenlun-page .visual-grid span,
+.study-visual.study-visual-wide::before { font-size: var(--doc-small); }
+
+/* 申论页不再单用一套 px 刻度，只按次一级基准微调正文 */
+.shenlun-page .vp-doc { font-size: var(--doc-font-sub); }
+.shenlun-page .vp-doc p,
+.shenlun-page .vp-doc li,
+.shenlun-page .vp-doc blockquote > p { line-height: var(--doc-lh); }
+.shenlun-page .vp-doc h1 { font-size: var(--doc-h1); }
+.shenlun-page .vp-doc h2 { font-size: var(--doc-h2); }
+.shenlun-page .vp-doc h3 { font-size: var(--doc-h3); }
+.shenlun-page .vp-doc h4 { font-size: var(--doc-h4); }
+.shenlun-page .vp-doc table,
+.shenlun-page .vp-doc table th,
+.shenlun-page .vp-doc table td { font-size: var(--doc-table); }
+.shenlun-page .sl-raw p { font-size: 1em; line-height: var(--doc-lh); }
+
+/* 每日测验页里内嵌的申论区块同样跟随主刻度 */
+.quiz-page .quiz-shenlun { font-size: var(--doc-font-sub); }
+.quiz-page .quiz-shenlun table th,
+.quiz-page .quiz-shenlun table td { font-size: var(--doc-table); }
+
+/* 错题本等自定义组件里破格的固定字号（scoped 样式定义在组件内） */
+.vp-doc .filters label,
+.vp-doc .reset,
+.vp-doc .result-count,
+.vp-doc .review-group summary span,
+.vp-doc .question-link { font-size: 1em; }
+.vp-doc .exam-provenance { font-size: var(--doc-small); }
+
+/* 小屏：clamp 已把正文降到 17px，这里只收紧行高 */
+@media (max-width: 640px) {
+  .vp-doc p,
+  .vp-doc li,
+  .vp-doc blockquote > p { line-height: 1.7; }
+  .vp-doc table,
+  .vp-doc table th,
+  .vp-doc table td { font-size: var(--doc-table); }
+}
+
+/* 打印仍用固定点数，避免被上面的 em 值覆盖 */
+@media print {
+  .vp-doc { font-size: 12pt; }
+  .vp-doc table th,
+  .vp-doc table td,
+  .vp-doc .study-table .table-prose { font-size: 10pt; }
+}

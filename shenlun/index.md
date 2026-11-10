@@ -4,12 +4,14 @@ title: 申论学习｜归纳概括复习与评分
 type: study-index
 status: active
 created: 2026-10-21
-updated: 2026-10-28
+updated: 2026-11-10
 ---
 
 # 申论｜从原文到答案
 
 **先分清题目任务，再学习老师如何提炼、归类和组织，最后对照本人原答改写。**
+
+[Kiwi申论知识框架](/shenlun/kiwi-framework)：概括、分析、对策、公文与文章写作的讲义主线。
 
 <div class="visual-grid">
 <a href="/xuexi-notes/shenlun/day5-city-greening"><strong>DAY5｜城市绿化</strong><span>只问做法：先分组，再用总括句统领</span></a>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1510" role="img" aria-labelledby="title desc">
+<title id="title">Kiwi申论知识框架</title><desc id="desc">审题、锁定材料、找点、归并、成稿、回查；分为概括、分析、对策、公文和文章五类任务。</desc>
+<style>text{font-family:"Microsoft YaHei","PingFang SC",sans-serif;fill:#26344a}.title{font-size:52px;font-weight:700;fill:#172b4d}.head{font-size:44px;font-weight:700}.body{font-size:36px}.note{font-size:32px}</style>
+<rect width="1400" height="1510" rx="24" fill="#f7f9fd"/>
+<text class="title" x="40" y="70">申论｜从材料到答案</text><text class="note" x="1360" y="65" text-anchor="end">Kiwi讲义主线</text>
+<rect x="40" y="105" width="1320" height="115" rx="18" fill="#fff" stroke="#b6c8e2" stroke-width="3"/>
+<text class="body" x="70" y="174">审题 → 锁材料 → 找点 → 归并 → 成稿 → 回查</text>
+<text class="head" x="40" y="280">先辨任务，再选操作</text>
+<g>
+<rect x="40" y="310" width="640" height="260" rx="18" fill="#e8f0ff" stroke="#9bb5df" stroke-width="3"/><text class="head" x="70" y="365">① 归纳概括</text><text class="body" x="70" y="420">盯住对象与要素</text><text class="body" x="70" y="465">找点 → 分类 → 概括</text><text class="body" x="70" y="510">总括覆盖具体信息</text><text class="note" x="70" y="545">按材料关系选分类维度</text>
+<rect x="720" y="310" width="640" height="260" rx="18" fill="#e8f6f2" stroke="#9acfc0" stroke-width="3"/><text class="head" x="750" y="365">② 综合分析</text><text class="body" x="750" y="420">词句／评价／比较</text><text class="body" x="750" y="465">原因／启示</text><text class="body" x="750" y="510">观点与材料依据对齐</text><text class="note" x="750" y="545">按问法决定是否写措施</text>
+<rect x="40" y="600" width="640" height="260" rx="18" fill="#fff1df" stroke="#dfbf91" stroke-width="3"/><text class="head" x="70" y="655">③ 问题对策</text><text class="body" x="70" y="710">先找材料直接措施</text><text class="body" x="70" y="755">问题／原因／经验转化</text><text class="body" x="70" y="800">补充须有题意与现实依据</text><text class="note" x="70" y="835">检查主体、动作、可行性</text>
+<rect x="720" y="600" width="640" height="260" rx="18" fill="#f0ebfa" stroke="#c1b2dc" stroke-width="3"/><text class="head" x="750" y="655">④ 公文写作</text><text class="body" x="750" y="710">文种、身份、对象、任务</text><text class="body" x="750" y="755">按目的组织材料要点</text><text class="body" x="750" y="800">格式由题目要求决定</text><text class="note" x="750" y="835">核标题、称谓、落款</text>
+<rect x="40" y="890" width="640" height="260" rx="18" fill="#e8f6f2" stroke="#9acfc0" stroke-width="3"/><text class="head" x="70" y="945">⑤ 文章写作</text><text class="body" x="70" y="1000">定总论点与分论点</text><text class="body" x="70" y="1045">论点、论据、分析相扣</text><text class="body" x="70" y="1090">开头引出，结尾回扣</text><text class="note" x="70" y="1125">结构与字数服从题目</text>
+<rect x="720" y="890" width="640" height="260" rx="18" fill="#e8f0ff" stroke="#9bb5df" stroke-width="3"/><text class="head" x="750" y="945">复习与验证</text><text class="body" x="750" y="1000">合上笔记复述操作</text><text class="body" x="750" y="1045">回到本人真题找依据</text><text class="body" x="750" y="1090">用陌生真题独立验证</text><text class="note" x="750" y="1125">首答、改写、迁移分开记录</text>
+</g>
+<rect x="40" y="1190" width="1320" height="175" rx="18" fill="#fff" stroke="#cbd5e3" stroke-width="3"/><text class="head" x="70" y="1245">最后回查</text><text class="body" x="70" y="1300">任务、材料范围、要点、逻辑、字数、格式</text><text class="note" x="70" y="1345">以题目和材料为准，框架帮助寻找方向。</text>
+</svg>

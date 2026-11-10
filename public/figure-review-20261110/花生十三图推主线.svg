@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1380" role="img" aria-labelledby="title desc">
+  <title id="title">图推知识框架：花生十三主线</title>
+  <desc id="desc">先分平面、文字、立体三类。平面图再按定性、定量、位置三条主线观察，并单独识别对称、背景、分割图。最后固定对象和口径，验证整组。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#496b9a"/></marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; fill: #26344a; }
+      .title { font-size: 46px; font-weight: 700; fill: #172b4d; }
+      .sub { font-size: 26px; fill: #53657d; }
+      .head { font-size: 36px; font-weight: 700; }
+      .body { font-size: 29px; }
+      .small { font-size: 26px; }
+    </style>
+  </defs>
+  <rect width="1800" height="1380" rx="28" fill="#f7f9fd"/>
+  <text class="title" x="44" y="66">图形推理｜先分题型，再选观察主线</text>
+  <text class="sub" x="1755" y="64" text-anchor="end">花生十三图推思维导图的整理框架</text>
+
+  <g>
+    <rect x="40" y="105" width="550" height="175" rx="20" fill="#e8f0ff" stroke="#9bb5df" stroke-width="3"/>
+    <text class="head" x="70" y="153" fill="#234b82">① 平面图形</text>
+    <text class="body" x="70" y="202">定性 · 定量 · 位置</text>
+    <text class="small" x="70" y="246">另留意：对称、背景、分割图</text>
+
+    <rect x="625" y="105" width="550" height="175" rx="20" fill="#e8f6f2" stroke="#9acfc0" stroke-width="3"/>
+    <text class="head" x="655" y="153" fill="#176659">② 文字图形</text>
+    <text class="body" x="655" y="202">中文 · 英文字母 · 数字</text>
+    <text class="small" x="655" y="246">先定整体与局部，再观察变化</text>
+
+    <rect x="1210" y="105" width="550" height="175" rx="20" fill="#fff1df" stroke="#dfbf91" stroke-width="3"/>
+    <text class="head" x="1240" y="153" fill="#78511c">③ 立体图形</text>
+    <text class="body" x="1240" y="202">展开图 · 截面 · 视图</text>
+    <text class="small" x="1240" y="246">拼接与堆叠组合</text>
+  </g>
+
+  <text class="head" x="44" y="337" fill="#254b78">平面图：三条分析主线</text>
+  <g>
+    <rect x="40" y="370" width="550" height="300" rx="20" fill="#e9f0ff" stroke="#9bb5df" stroke-width="3"/>
+    <text class="head" x="70" y="422" fill="#234b82">定性分析</text>
+    <text class="small" x="70" y="468">提示：屈臣氏整奇偶风</text>
+    <text class="body" x="70" y="525">曲直 · 对称 · 相同／相似</text>
+    <text class="body" x="70" y="574">整体／部分 · 奇偶</text>
+    <text class="body" x="70" y="623">封闭／开放</text>
+
+    <rect x="625" y="370" width="550" height="300" rx="20" fill="#eaf7f2" stroke="#9acfc0" stroke-width="3"/>
+    <text class="head" x="655" y="422" fill="#176659">定量分析</text>
+    <text class="small" x="655" y="468">提示：点线面角素</text>
+    <text class="body" x="655" y="525">点（交点） · 线（线条／笔画）</text>
+    <text class="body" x="655" y="574">面（封闭区） · 角</text>
+    <text class="body" x="655" y="623">元素种类、数量与变化</text>
+
+    <rect x="1210" y="370" width="550" height="300" rx="20" fill="#fff3e6" stroke="#dfbf91" stroke-width="3"/>
+    <text class="head" x="1240" y="422" fill="#78511c">位置分析</text>
+    <text class="small" x="1240" y="468">提示：直联想移</text>
+    <text class="body" x="1240" y="525">直：垂直／平行</text>
+    <text class="small" x="1240" y="574">联：连接 · 想：方向与相对位置</text>
+    <text class="body" x="1240" y="623">移：移动／旋转／翻转</text>
+  </g>
+
+  <text class="head" x="44" y="730" fill="#254b78">平面特殊题型：按结构挑观察项</text>
+  <g>
+    <rect x="40" y="763" width="550" height="235" rx="20" fill="#f0ebfa" stroke="#c1b2dc" stroke-width="3"/>
+    <text class="head" x="70" y="814" fill="#5e4487">对称图</text>
+    <text class="body" x="70" y="869">整体或局部的对称关系</text>
+    <text class="body" x="70" y="918">轴、中心与对应部分</text>
+
+    <rect x="625" y="763" width="550" height="235" rx="20" fill="#e8f6f2" stroke="#9acfc0" stroke-width="3"/>
+    <text class="head" x="655" y="814" fill="#176659">背景图</text>
+    <text class="body" x="655" y="869">移动、重叠、局部计数</text>
+    <text class="small" x="655" y="922">笔画／面积周长／连接／分组</text>
+    <text class="small" x="655" y="964">对称／循环与重复</text>
+
+    <rect x="1210" y="763" width="550" height="235" rx="20" fill="#fff1df" stroke="#dfbf91" stroke-width="3"/>
+    <text class="head" x="1240" y="814" fill="#78511c">分割图</text>
+    <text class="body" x="1240" y="869">连接 · 大小 · “三不沾”</text>
+    <text class="body" x="1240" y="918">边数 · 对称 · 相似</text>
+  </g>
+
+  <rect x="40" y="1035" width="1720" height="190" rx="22" fill="#ffffff" stroke="#cbd5e3" stroke-width="3"/>
+  <text class="head" x="72" y="1088" fill="#284d7d">做题调用顺序</text>
+  <text class="body" x="72" y="1141">辨题型 → 选明显线索 → 固定对象与口径 → 验证整组和选项</text>
+  <text class="small" x="72" y="1191">快速提醒：平行线、圆与曲线、笔画、连接、直角、数量增减、蛇形路径</text>
+  <text class="small" x="72" y="1267" fill="#8a4b26">特征帮助提出候选，不单独证明规律；按题图选择，不机械穷举。</text>
+  <path d="M315 280 V310" fill="none" stroke="#496b9a" stroke-width="4" marker-end="url(#arrow)"/>
+</svg>

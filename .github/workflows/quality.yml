@@ -1,0 +1,50 @@
+name: 质量守卫
+
+# PR 与手动触发时跑完整校验，不部署；push main 的部署前校验在 deploy.yml 里。
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: 安装依赖
+        run: npm ci
+
+      - name: 数据与链接一致性
+        run: npm run check
+
+      - name: 生产构建
+        run: npm run docs:build
+
+      - name: 构建产物体积守卫
+        run: npm run check:size
+
+      - name: 排版审计（桌面 + 移动端）
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+          SITE_BASE: http://localhost:5174/xuexi-notes
+        run: |
+          npx vitepress preview --port 5174 --host 127.0.0.1 &
+          PREVIEW_PID=$!
+          for i in $(seq 1 30); do
+            if curl -sf http://localhost:5174/xuexi-notes/ > /dev/null; then break; fi
+            sleep 1
+          done
+          curl -sf http://localhost:5174/xuexi-notes/ > /dev/null || { echo "预览服务未就绪"; exit 1; }
+          node scripts/audit-layout.mjs
+          node scripts/audit-layout.mjs mobile
+          kill $PREVIEW_PID || true

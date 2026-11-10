@@ -5,6 +5,7 @@ type: resource
 created: 2026-10-28
 updated: 2026-10-28
 status: processed
+search: false # 由 scripts/optimize-search.mjs 管理
 ---
 
 # DAY7｜原题与老师解析

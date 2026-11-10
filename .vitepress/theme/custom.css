@@ -214,6 +214,25 @@ body {
 .vp-doc mjx-container {
   max-width: 100%;
 }
+/* 行内公式（非独立卡）在窄屏可能比正文栏还宽，限制在单元格/段落内并允许局部滚动，
+   避免撑出页面横向滚动条；桌面端保持原样。 */
+.vp-doc mjx-container:not([display="true"]) {
+  max-width: 100%;
+}
+@media (max-width: 640px) {
+  .vp-doc mjx-container:not([display="true"]) {
+    display: inline-block;
+    vertical-align: middle;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+  }
+  /* 表格里的行内公式：表格本身已在 .table-scroll 内横滑，这里只防二次撑破 */
+  .vp-doc td mjx-container:not([display="true"]),
+  .vp-doc th mjx-container:not([display="true"]) {
+    overflow: visible;
+  }
+}
 
 /* 独立公式：大字卡片；长算式分行，极长式只在卡片内滚动。 */
 .vp-doc mjx-container[display="true"] {

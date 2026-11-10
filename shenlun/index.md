@@ -1,6 +1,6 @@
 ---
 pageClass: shenlun-page
-title: 申论学习｜归纳概括复习与评分
+title: 申论学习｜五大题型与从原文到答案
 type: study-index
 status: active
 created: 2026-10-21
@@ -11,7 +11,21 @@ updated: 2026-11-10
 
 **先分清题目任务，再学习老师如何提炼、归类和组织，最后对照本人原答改写。**
 
-[Kiwi申论知识框架](/shenlun/kiwi-framework)：概括、分析、对策、公文与文章写作的讲义主线。
+::: tip 分类说明
+[📖 Kiwi 申论知识框架](/shenlun/kiwi-framework)是**覆盖五大题型的总纲**，不是「归纳概括」的下属页面。总纲之下按大纲分五类题型；本页的 DAY5—DAY9 属于其中的**归纳概括**。
+:::
+
+## 📖 总纲：五大题型
+
+| 题型 | 讲义方法 | 本人练习 |
+|---|---|---|
+| 📒 归纳概括 | [Kiwi · 归纳概括](/shenlun/kiwi-framework#归纳概括-问什么-归纳什么) | [DAY5](/shenlun/day5-city-greening) · [DAY6](/shenlun/day6-business-environment) · [DAY7](/shenlun/day7-backpack-bank) · [DAY8](/shenlun/day8-public-services) · [DAY9](/shenlun/day9-digital-city) |
+| 🔍 综合分析 | [Kiwi · 综合分析](/shenlun/kiwi-framework#三、综合分析-观点和依据要对齐) | 暂无专项练习 |
+| 💡 问题对策 | [Kiwi · 问题对策](/shenlun/kiwi-framework#四、问题对策-先有问题-再看办法) | 暂无专项练习 |
+| 📄 公文写作 | [Kiwi · 公文写作](/shenlun/kiwi-framework#五、公文写作-文种和任务决定结构) | 暂无专项练习 |
+| ✍️ 文章写作 | [Kiwi · 文章写作](/shenlun/kiwi-framework#六、文章写作-从立意到论证) | 暂无专项练习 |
+
+[🧭 完整申论学习路径](/guide/shenlun)
 
 <div class="visual-grid">
 <a href="/xuexi-notes/shenlun/day5-city-greening"><strong>DAY5｜城市绿化</strong><span>只问做法：先分组，再用总括句统领</span></a>

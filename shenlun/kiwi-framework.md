@@ -9,6 +9,10 @@ status: source-based-summary
 
 # 申论知识框架｜Kiwi讲义主线
 
+::: tip 本页在站内的位置
+这是申论板块的**总纲**，覆盖归纳概括、综合分析、问题对策、公文写作、文章写作五大题型，因此**独立于任何单一题型**，不是「归纳概括」的下属页面。每类题型的讲义方法都可以从本页对应章节进入；本人的 DAY5—DAY9 真题属于「归纳概括」这一题型的实际练习。
+:::
+
 **审题 → 锁定材料 → 找点 → 分类归并 → 按任务成稿 → 回查。**
 
 <figure class="study-visual study-visual-wide"><a href="/xuexi-notes/visuals/shenlun-kiwi-framework.svg" target="_blank" rel="noopener"><img src="/visuals/shenlun-kiwi-framework.svg" alt="Kiwi申论知识框架：从审题到五类任务" loading="lazy" /></a><figcaption>点击查看大图；手机可左右滑动</figcaption></figure>

@@ -3,11 +3,25 @@
   "version": "1.0.0",
   "description": "个人公务员备考知识库 - 学习 × 记录 × 成长 × 分享",
   "scripts": {
+    "data:sync": "node scripts/build-dashboard.mjs",
+    "chapter:sync": "node scripts/gen-chapter-index.mjs",
+    "search:optimize": "node scripts/optimize-search.mjs",
+    "check:data": "node scripts/check-data.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "check:assets": "node scripts/audit-assets.mjs",
+    "check:layout": "node scripts/audit-layout.mjs",
+    "check:size": "node scripts/check-size.mjs",
+    "report:privacy": "node scripts/audit-privacy.mjs",
+    "og:gen": "node scripts/gen-og.mjs",
+    "check": "npm run check:data && npm run check:links && npm run check:assets",
+    "predocs:dev": "npm run chapter:sync && npm run data:sync && npm run report:privacy",
     "docs:dev": "vitepress dev",
+    "predocs:build": "npm run chapter:sync && npm run data:sync && npm run report:privacy && npm run check:data && npm run check:links",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },
   "devDependencies": {
+    "puppeteer-core": "^23.11.1",
     "vitepress": "^1.6.4"
   },
   "dependencies": {

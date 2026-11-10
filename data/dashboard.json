@@ -1,0 +1,168 @@
+{
+  "generatedAt": "2026-11-10",
+  "streak": {
+    "since": "2026-06-05",
+    "days": 158
+  },
+  "questions": {
+    "total": 209,
+    "byType": {
+      "错题": 163,
+      "猜题": 31,
+      "耗时较长": 43,
+      "不确定": 9,
+      "答对复习": 11,
+      "待复盘": 2,
+      "未作答": 5
+    },
+    "byModule": {
+      "言语理解": 53,
+      "数量关系": 49,
+      "图形推理": 27,
+      "定义判断": 3,
+      "类比推理": 19,
+      "逻辑判断": 20,
+      "资料分析": 26,
+      "常识判断": 9,
+      "政治理论": 3
+    },
+    "pendingVerification": 38,
+    "awaitingReview": 2
+  },
+  "quizzes": {
+    "total": 14,
+    "reviewed": 5,
+    "pending": 8,
+    "rest": 1,
+    "assessments": 2
+  },
+  "retests": {
+    "total": 26,
+    "done": 2,
+    "pending": 21,
+    "needsRetry": 3,
+    "list": [
+      {
+        "date": "2026-10-26",
+        "task": "换累计表数据，区分当季比重与同比增量占比",
+        "status": "本次已验证"
+      },
+      {
+        "date": "2026-10-28",
+        "task": "日食与月食的位置关系，换问法或示意核对",
+        "status": "本次答对，仍不稳"
+      },
+      {
+        "date": "2026-10-28",
+        "task": "新短材料在150字内保留三组主要措施与成效",
+        "status": "本次已测，目标未通过"
+      },
+      {
+        "date": "2026-10-29",
+        "task": "陌生顺序概率同时核对首尾与先后条件",
+        "status": "已出题，待作答"
+      },
+      {
+        "date": "2026-10-29",
+        "task": "区分智能与全部、同比与环比并正确还原增量",
+        "status": "已出题，待作答"
+      },
+      {
+        "date": "2026-10-30",
+        "task": "换轮廓和排列，固定对象、按统一共边口径验证全组",
+        "status": "已出题，待作答"
+      },
+      {
+        "date": "2026-10-30",
+        "task": "新数据保留质量守恒，记录首答、原式和真实用时；不设虚构秒数阈值",
+        "status": "已出题，待作答"
+      },
+      {
+        "date": "2026-10-30",
+        "task": "换情境核对位置及必要条件，单独记录确定程度",
+        "status": "已出题，待作答"
+      }
+    ]
+  },
+  "shenlun": {
+    "baselines": [
+      {
+        "name": "DAY5 城市绿化",
+        "score": 11.5,
+        "max": 15
+      },
+      {
+        "name": "DAY6 营商环境",
+        "score": 10,
+        "max": 15
+      },
+      {
+        "name": "DAY7 背包银行",
+        "score": 12,
+        "max": 20
+      },
+      {
+        "name": "DAY8 创新公共服务",
+        "score": 11.5,
+        "max": 15
+      },
+      {
+        "name": "DAY9 Q市加数前行",
+        "score": 7,
+        "max": 10
+      }
+    ],
+    "rewrites": 0,
+    "transfers": 0
+  },
+  "updates": {
+    "total": 22
+  },
+  "modules": [
+    {
+      "name": "言语理解",
+      "link": "/xingce/yanyu-lijie",
+      "icon": "🗣️",
+      "沉淀": 53,
+      "progress": 77,
+      "tone": "mid",
+      "status": "持续沉淀"
+    },
+    {
+      "name": "数量关系",
+      "link": "/xingce/shuliang-guanxi",
+      "icon": "🔢",
+      "沉淀": 49,
+      "progress": 71,
+      "tone": "mid",
+      "status": "持续沉淀"
+    },
+    {
+      "name": "判断推理",
+      "link": "/xingce/panduan-tuili",
+      "icon": "🧩",
+      "沉淀": 69,
+      "progress": 100,
+      "tone": "done",
+      "status": "沉淀最多"
+    },
+    {
+      "name": "资料分析",
+      "link": "/xingce/ziliao-fenxi",
+      "icon": "📊",
+      "沉淀": 26,
+      "progress": 38,
+      "tone": "start",
+      "status": "已有积累"
+    },
+    {
+      "name": "常识判断",
+      "link": "/xingce/changshi-panduan",
+      "icon": "🌍",
+      "沉淀": 12,
+      "progress": 17,
+      "tone": "todo",
+      "status": "待积累"
+    }
+  ]
+}

@@ -1,8 +1,15 @@
 node_modules/
 .vitepress/cache/
 .vitepress/dist/
+.vitepress/dist-stale*/
+.vitepress/.temp*/
+.vitepress/parked-assets/
 .DS_Store
 Thumbs.db
+
+# 本地审计与截图产物，不推送
+.shots/
+data/privacy-report.json
 
 # 输入箱：待读文件，不推送到公开网站
 inbox/

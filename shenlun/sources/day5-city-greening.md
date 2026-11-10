@@ -8,6 +8,7 @@ updated: 2026-10-28
 topics: [申论, 归纳概括, 原始来源]
 source_type: 用户提供的PDF讲义
 author: "用户指定老师；文件署名与版次未独立核验"
+search: false # 由 scripts/optimize-search.mjs 管理
 ---
 
 # DAY5｜F市城市绿化：原题与讲义解析

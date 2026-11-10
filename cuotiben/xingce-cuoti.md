@@ -1,3 +1,7 @@
+---
+search: false # 由 scripts/optimize-search.mjs 管理
+---
+
 # 行测错题集
 
 ## 看图复习

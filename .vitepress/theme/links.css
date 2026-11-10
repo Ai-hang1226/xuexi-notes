@@ -1,0 +1,63 @@
+/* 全站正文链接：把默认「整片亮蓝 + 下划线」换成克制的品牌色与悬停反馈。
+   作用范围限定为 Markdown 正文（段落 / 列表 / 表格 / 标题 / 引用里的无 class 链接），
+   组件自带的按钮与卡片链接保留各自样式，不受影响。 */
+
+.vp-doc :is(p, li, td, th, h1, h2, h3, h4, blockquote) > a:not([class]),
+.vp-doc blockquote a:not([class]) {
+  color: #3730a3;
+  font-weight: 600;
+  text-decoration: none;
+  text-underline-offset: 4px;
+  border-radius: 4px;
+  transition: color .18s, background .18s, text-decoration-color .18s;
+}
+.vp-doc :is(p, li, td, th, h1, h2, h3, h4, blockquote) > a:not([class]):hover,
+.vp-doc blockquote a:not([class]):hover {
+  color: #4f46e5;
+  background: rgba(79, 70, 229, .08);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(79, 70, 229, .55);
+}
+.vp-doc :is(p, li, td, th, h1, h2, h3, h4, blockquote) > a:not([class]):focus-visible,
+.vp-doc blockquote a:not([class]):focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 3px;
+}
+.dark .vp-doc :is(p, li, td, th, h1, h2, h3, h4, blockquote) > a:not([class]),
+.dark .vp-doc blockquote a:not([class]) { color: #a5b4fc; }
+.dark .vp-doc :is(p, li, td, th, h1, h2, h3, h4, blockquote) > a:not([class]):hover,
+.dark .vp-doc blockquote a:not([class]):hover {
+  color: #c7d0ff;
+  background: rgba(165, 180, 252, .12);
+  text-decoration-color: rgba(165, 180, 252, .6);
+}
+
+/* 标题前的 # 锚点：默认不抢视线，悬停标题或键盘聚焦时才淡入。 */
+.vp-doc .header-anchor {
+  color: var(--vp-c-text-3);
+  opacity: 0;
+  font-weight: 400;
+  text-decoration: none;
+  transition: opacity .18s;
+}
+.vp-doc h1:hover .header-anchor,
+.vp-doc h2:hover .header-anchor,
+.vp-doc h3:hover .header-anchor,
+.vp-doc h4:hover .header-anchor,
+.vp-doc .header-anchor:focus-visible { opacity: 1; }
+
+/* 列表里的链接行更舒展，减少密集蓝色文字的压迫感。 */
+.vp-doc li > a:not([class]) { line-height: 1.7; }
+
+/* 上一篇 / 下一篇：默认用正文色，悬停才亮品牌色，避免页脚又出现一片亮蓝。 */
+.VPDocFooter .pager-link .title {
+  color: var(--vp-c-text-1);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .18s;
+}
+.VPDocFooter .pager-link:hover .title { color: var(--vp-c-brand-1); }
+.VPDocFooter .edit-link-button,
+.VPDocFooter .edit-link-button a { text-decoration: none; color: var(--vp-c-text-2); }
+.VPDocFooter .edit-link-button:hover a { color: var(--vp-c-brand-1); }

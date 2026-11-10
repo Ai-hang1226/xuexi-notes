@@ -9,6 +9,7 @@ actual_minutes:
 reported_minutes_approximate: 140
 pageClass: quiz-page
 outline: [2, 2]
+search: false # 由 scripts/optimize-search.mjs 管理
 ---
 
 

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">资料分析三题复盘速览</title>
+  <desc id="desc">第116题分母范围、第118题估算路线、第120题信息链边界的原判、修正与待验证状态</desc>
+  <style>
+    text { font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif; }
+    .title { font-size: 26px; font-weight: 700; fill: #172e42; }
+    .sub { font-size: 14px; fill: #5c6b7a; }
+    .num { font-size: 30px; font-weight: 700; }
+    .tag { font-size: 14px; fill: #5c6b7a; }
+    .old { font-size: 15px; fill: #7a8896; }
+    .arrow { font-size: 16px; font-weight: 700; }
+    .new { font-size: 16px; font-weight: 700; fill: #172e42; }
+    .pill { font-size: 12px; font-weight: 700; }
+    .foot { font-size: 13px; fill: #5c6b7a; }
+  </style>
+  <rect width="960" height="360" rx="20" fill="#f4f7fa"/>
+
+  <text x="40" y="54" class="title">资料分析 · 三题复盘速览</text>
+  <text x="40" y="82" class="sub">原判与修正分开 · 方法试用与独立迁移待验证</text>
+
+  <!-- 116 -->
+  <rect x="36" y="104" width="272" height="200" rx="14" fill="#ffffff" stroke="#dfe6ee"/>
+  <rect x="36" y="104" width="5" height="200" rx="2.5" fill="#c2770a"/>
+  <text x="58" y="150" class="num" fill="#c2770a">116</text>
+  <text x="114" y="148" class="tag">分母范围</text>
+  <text x="58" y="190" class="old">原：分母取新能源</text>
+  <text x="58" y="216" class="arrow" fill="#c2770a">↓</text>
+  <text x="58" y="242" class="new">改：分母取全部汽车</text>
+  <rect x="58" y="260" width="106" height="26" rx="13" fill="#fdf3e4"/>
+  <text x="70" y="278" class="pill" fill="#9a5b06">待试用</text>
+
+  <!-- 118 -->
+  <rect x="344" y="104" width="272" height="200" rx="14" fill="#ffffff" stroke="#dfe6ee"/>
+  <rect x="344" y="104" width="5" height="200" rx="2.5" fill="#4f46e5"/>
+  <text x="366" y="150" class="num" fill="#4f46e5">118</text>
+  <text x="422" y="148" class="tag">估算路线</text>
+  <text x="366" y="190" class="old">原：回忆≈1.7，选B</text>
+  <text x="366" y="216" class="arrow" fill="#4f46e5">↓</text>
+  <text x="366" y="242" class="new">改：合并基期比值再估</text>
+  <rect x="366" y="260" width="106" height="26" rx="13" fill="#eceaff"/>
+  <text x="378" y="278" class="pill" fill="#4338ca">算式待核</text>
+
+  <!-- 120 -->
+  <rect x="652" y="104" width="272" height="200" rx="14" fill="#ffffff" stroke="#dfe6ee"/>
+  <rect x="652" y="104" width="5" height="200" rx="2.5" fill="#dc2626"/>
+  <text x="674" y="150" class="num" fill="#dc2626">120</text>
+  <text x="730" y="148" class="tag">信息链边界</text>
+  <text x="674" y="190" class="old">原：提交A</text>
+  <text x="674" y="216" class="arrow" fill="#dc2626">↓</text>
+  <text x="674" y="242" class="new">改：重判B，原判保留</text>
+  <rect x="674" y="260" width="132" height="26" rx="13" fill="#fdeaea"/>
+  <text x="686" y="278" class="pill" fill="#b91c1c">迁移待确认</text>
+
+  <text x="40" y="338" class="foot">首答  →  逐题讨论  →  方法与边界补齐  →  同考点真题验证（待执行）</text>
+</svg>

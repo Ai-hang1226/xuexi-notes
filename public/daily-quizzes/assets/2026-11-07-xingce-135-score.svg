@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 1010" role="img" aria-labelledby="title desc">
+<title id="title">135题混合真题检测：93题正确，68.89分，约140分钟</title>
+<desc id="desc">政治8/10，常识3/10，言语23/30，数量12/20，判断34/45，资料13/20。超时约20分钟，120分钟限时分未知，数量部分蒙选。</desc>
+<style>text{font-family:"Times New Roman","Microsoft YaHei",sans-serif;fill:#172e42}.title{font-size:44px;font-weight:700}.label{font-size:32px;font-weight:700}.note{font-size:28px}.large{font-size:66px;font-weight:700}</style>
+<rect width="1120" height="1010" rx="24" fill="#f4f7fa"/>
+<text x="48" y="70" class="title">135题混合真题｜首次提交结果</text>
+<text x="48" y="155" class="large">68.89分</text>
+<text x="435" y="145" class="label">93 / 135 正确 · 错42题</text>
+<text x="48" y="208" class="note">约140分钟，含超时回做；120分钟成绩无法还原</text>
+<text x="48" y="308" class="label">政治理论</text>
+<rect x="325" y="278" width="470" height="37" rx="8" fill="#dce4ea"/>
+<rect x="325" y="278" width="376.0" height="37" rx="8" fill="#326b89"/>
+<text x="825" y="307" class="label">8/10 · 80.0%</text>
+<text x="48" y="400" class="label">常识判断</text>
+<rect x="325" y="370" width="470" height="37" rx="8" fill="#dce4ea"/>
+<rect x="325" y="370" width="141.0" height="37" rx="8" fill="#a56a2d"/>
+<text x="825" y="399" class="label">3/10 · 30.0%</text>
+<text x="48" y="492" class="label">言语理解与表达</text>
+<rect x="325" y="462" width="470" height="37" rx="8" fill="#dce4ea"/>
+<rect x="325" y="462" width="360.3" height="37" rx="8" fill="#326b89"/>
+<text x="825" y="491" class="label">23/30 · 76.7%</text>
+<text x="48" y="584" class="label">数量关系</text>
+<rect x="325" y="554" width="470" height="37" rx="8" fill="#dce4ea"/>
+<rect x="325" y="554" width="282.0" height="37" rx="8" fill="#326b89"/>
+<text x="825" y="583" class="label">12/20 · 60.0%</text>
+<text x="48" y="676" class="label">判断推理</text>
+<rect x="325" y="646" width="470" height="37" rx="8" fill="#dce4ea"/>
+<rect x="325" y="646" width="355.1" height="37" rx="8" fill="#326b89"/>
+<text x="825" y="675" class="label">34/45 · 75.6%</text>
+<text x="48" y="768" class="label">资料分析</text>
+<rect x="325" y="738" width="470" height="37" rx="8" fill="#dce4ea"/>
+<rect x="325" y="738" width="305.5" height="37" rx="8" fill="#a56a2d"/>
+<text x="825" y="767" class="label">13/20 · 65.0%</text>
+<path d="M48 850H1070" stroke="#ccd6df" stroke-width="2"/>
+<text x="48" y="900" class="note">数量：部分计算、部分蒙选；具体题号尚未补齐</text>
+<text x="48" y="946" class="note">得分率不等于掌握率；本卷不作真实省考分数预测</text>
+</svg>

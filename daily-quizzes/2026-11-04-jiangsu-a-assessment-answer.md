@@ -1,6 +1,7 @@
 ---
 title: 江苏A类阶段测评｜本人首答
 pageClass: quiz-page
+search: false # 由 scripts/optimize-search.mjs 管理
 ---
 
 # 江苏A类阶段测评｜本人首答

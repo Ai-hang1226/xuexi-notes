@@ -51,10 +51,10 @@
 
     <rect x="1210" y="370" width="550" height="300" rx="20" fill="#fff3e6" stroke="#dfbf91" stroke-width="3"/>
     <text class="head" x="1240" y="422" fill="#78511c">位置分析</text>
-    <text class="small" x="1240" y="468">提示：直联想移</text>
-    <text class="body" x="1240" y="510">直：垂直／平行</text>
-    <text class="body" x="1240" y="550">联：点接／线接</text>
-    <text class="body" x="1240" y="590">想：方向与相对位置</text>
+    <text class="small" x="1240" y="468">提示：直接想位移</text>
+    <text class="small" x="1240" y="510">直：垂直平行 · 接：连接</text>
+    <text class="body" x="1240" y="550">想：方向</text>
+    <text class="body" x="1240" y="590">位：位置关系</text>
     <text class="body" x="1240" y="630">移：移动／旋转／翻转</text>
   </g>
 
@@ -80,7 +80,7 @@
   <rect x="40" y="1035" width="1720" height="190" rx="22" fill="#ffffff" stroke="#cbd5e3" stroke-width="3"/>
   <text class="head" x="72" y="1088" fill="#284d7d">做题调用顺序</text>
   <text class="body" x="72" y="1141">辨题型 → 选明显线索 → 固定对象与口径 → 验证整组和选项</text>
-  <text class="small" x="72" y="1191">快速提醒：平行线、圆与曲线、笔画、连接、直角、数量增减、蛇形路径</text>
+  <text class="small" x="72" y="1191">快速提醒：平行线、圆与曲线、笔画、连接、直角、数量加减、蛇形路径</text>
   <text class="small" x="72" y="1267" fill="#8a4b26">特征帮助提出候选，不单独证明规律；按题图选择，不机械穷举。</text>
   <path d="M315 280 V310" fill="none" stroke="#496b9a" stroke-width="4" marker-end="url(#arrow)"/>
 </svg>

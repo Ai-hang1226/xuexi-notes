@@ -17,7 +17,7 @@ const modules = d.modules
       <p class="cv__sub">行测 · 申论 · 每日测验 · 错题复盘</p>
       <p class="cv__slogan">把每一次做题，<br class="cv__slogan-br" />都变成可复用的知识资产</p>
 
-      <nav class="cv__chips" aria-label="五大模块快捷入口">
+      <nav class="cv__chips" aria-label="六大模块快捷入口">
         <a v-for="m in modules" :key="m.name" class="cv__chip" :href="base(m.link)">{{ m.name }}</a>
       </nav>
 

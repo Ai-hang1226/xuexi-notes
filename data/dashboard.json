@@ -156,11 +156,20 @@
       "status": "已有积累"
     },
     {
+      "name": "政治理论",
+      "link": "/xingce/zhengzhi-lilun",
+      "icon": "🚩",
+      "沉淀": 3,
+      "progress": 4,
+      "tone": "todo",
+      "status": "待积累"
+    },
+    {
       "name": "常识判断",
       "link": "/xingce/changshi-panduan",
       "icon": "🌍",
-      "沉淀": 12,
-      "progress": 17,
+      "沉淀": 9,
+      "progress": 13,
       "tone": "todo",
       "status": "待积累"
     }

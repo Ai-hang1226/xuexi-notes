@@ -28,6 +28,7 @@ const moduleOf = (text) => {
   if (/言语/.test(text)) return { tag: '言语理解', tone: 'verbal' }
   if (/数量/.test(text)) return { tag: '数量关系', tone: 'math' }
   if (/资料/.test(text)) return { tag: '资料分析', tone: 'data' }
+  if (/政治理论|党的创新理论|时政|二十届三中全会|十五五/.test(text)) return { tag: '政治理论', tone: 'common' }
   if (/常识/.test(text)) return { tag: '常识判断', tone: 'common' }
   return { tag: '综合', tone: 'tool' }
 }
@@ -79,6 +80,7 @@ const moduleMeta = [
   { name: '数量关系', link: '/xingce/shuliang-guanxi', icon: '🔢' },
   { name: '判断推理', link: '/xingce/panduan-tuili', icon: '🧩' },
   { name: '资料分析', link: '/xingce/ziliao-fenxi', icon: '📊' },
+  { name: '政治理论', link: '/xingce/zhengzhi-lilun', icon: '🚩' },
   { name: '常识判断', link: '/xingce/changshi-panduan', icon: '🌍' },
 ]
 const moduleNames = ['言语理解', '数量关系', '图形推理', '定义判断', '类比推理', '逻辑判断', '资料分析', '常识判断', '政治理论']
@@ -88,7 +90,9 @@ const moduleGroups = {
   数量关系: ['数量关系'],
   判断推理: ['图形推理', '定义判断', '类比推理', '逻辑判断'],
   资料分析: ['资料分析'],
-  常识判断: ['常识判断', '政治理论'],
+  // 政治理论自 2025 年起从常识判断中单列，两块分开统计
+  政治理论: ['政治理论'],
+  常识判断: ['常识判断'],
 }
 const modules = moduleMeta.map((m) => ({
   ...m,

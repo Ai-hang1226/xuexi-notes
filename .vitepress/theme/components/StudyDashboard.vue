@@ -110,7 +110,7 @@ const statusTone = (s) => /待作答|待复测/.test(s) ? 'warn' : /未通过|�
       <header class="db-head">
         <div>
           <span class="db-kicker">MODULE PROGRESS</span>
-          <h2>五大模块 · 内容沉淀度</h2>
+          <h2>六大模块 · 内容沉淀度</h2>
         </div>
         <span class="db-head__note">按错题目录归档条数自动计算，非手填；不代表掌握程度</span>
       </header>

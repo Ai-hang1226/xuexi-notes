@@ -609,6 +609,82 @@
         }
       ]
     },
+    "zhengzhi": {
+      "title": "政治理论 · 章节导航",
+      "icon": "🚩",
+      "intro": "2025 年起行测单列模块（20 题）：党的创新理论、方针政策、马原与党规党纪。按章跳到知识页对应位置。",
+      "sourceLabel": "打开完整知识页",
+      "sourceLink": "/xingce/zhengzhi-lilun",
+      "sourceFile": "xingce/zhengzhi-lilun.md",
+      "page": "xingce/政治理论章节导航.md",
+      "chapters": [
+        {
+          "no": "一",
+          "title": "考查范围：五块",
+          "anchor": "考查范围-五块",
+          "link": "/xingce/zhengzhi-lilun#考查范围-五块",
+          "points": [
+            "党的创新理论",
+            "重要讲话与文章",
+            "重要会议与文件",
+            "马克思主义基本原理",
+            "党章党规党纪"
+          ]
+        },
+        {
+          "no": "二",
+          "title": "高频考点分布",
+          "anchor": "高频考点分布",
+          "link": "/xingce/zhengzhi-lilun#高频考点分布",
+          "points": [
+            "结论",
+            "领导人讲话及思想",
+            "中央文件及方针政策",
+            "五年规划",
+            "党和国家重大会议",
+            "马克思主义基本原理"
+          ]
+        },
+        {
+          "no": "三",
+          "title": "知识骨架",
+          "anchor": "知识骨架",
+          "link": "/xingce/zhengzhi-lilun#知识骨架",
+          "points": [
+            "1. 习近平新时代中国特色社会主义思想",
+            "2. 中国式现代化",
+            "3. 重要会议与文件",
+            "4. 马克思主义基本原理"
+          ]
+        },
+        {
+          "no": "四",
+          "title": "作答技巧",
+          "anchor": "作答技巧",
+          "link": "/xingce/zhengzhi-lilun#作答技巧",
+          "points": [
+            "三条通用纪律",
+            "提法类题目认原文表述，不认\"意思差不…",
+            "出现\"照搬别国模式\"\"只搞一方面\"这…",
+            "马哲题不要背原理全文，抓\"这句话在讲…",
+            "排除法",
+            "关键词法"
+          ]
+        },
+        {
+          "no": "五",
+          "title": "怎么复习",
+          "anchor": "怎么复习",
+          "link": "/xingce/zhengzhi-lilun#怎么复习",
+          "points": [
+            "按月积累时政",
+            "抓两类主线",
+            "马哲单独过一遍",
+            "做题只复盘错因"
+          ]
+        }
+      ]
+    },
     "changshi": {
       "title": "常识判断 · 知识范围导航",
       "icon": "🌍",
@@ -624,29 +700,19 @@
           "anchor": "📚-考察范围",
           "link": "/xingce/changshi-panduan#📚-考察范围",
           "points": [
-            "政治",
             "法律",
             "科技",
             "文史",
             "经济",
-            "地理"
+            "地理",
+            "生态／社会"
           ]
         },
         {
           "no": "二",
-          "title": "政治常识",
-          "anchor": "一、政治常识",
-          "link": "/xingce/changshi-panduan#一、政治常识",
-          "points": [
-            "时政热点（2025-2026）",
-            "基本政治概念"
-          ]
-        },
-        {
-          "no": "三",
           "title": "法律常识",
-          "anchor": "二、法律常识",
-          "link": "/xingce/changshi-panduan#二、法律常识",
+          "anchor": "一、法律常识",
+          "link": "/xingce/changshi-panduan#一、法律常识",
           "points": [
             "高频考点",
             "宪法",
@@ -656,10 +722,10 @@
           ]
         },
         {
-          "no": "四",
+          "no": "三",
           "title": "科技常识",
-          "anchor": "三、科技常识",
-          "link": "/xingce/changshi-panduan#三、科技常识",
+          "anchor": "二、科技常识",
+          "link": "/xingce/changshi-panduan#二、科技常识",
           "points": [
             "近年重要科技成就",
             "航天",
@@ -668,17 +734,17 @@
           ]
         },
         {
-          "no": "五",
+          "no": "四",
           "title": "文史常识",
-          "anchor": "四、文史常识",
-          "link": "/xingce/changshi-panduan#四、文史常识",
+          "anchor": "三、文史常识",
+          "link": "/xingce/changshi-panduan#三、文史常识",
           "points": [
             "中国古代朝代顺序",
             "文学常识"
           ]
         },
         {
-          "no": "六",
+          "no": "五",
           "title": "🔗 碎片学习资源",
           "anchor": "🔗-碎片学习资源",
           "link": "/xingce/changshi-panduan#🔗-碎片学习资源",
@@ -689,7 +755,7 @@
           ]
         },
         {
-          "no": "七",
+          "no": "六",
           "title": "📝 我的积累",
           "anchor": "📝-我的积累",
           "link": "/xingce/changshi-panduan#📝-我的积累",

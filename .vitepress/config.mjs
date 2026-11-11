@@ -4,8 +4,8 @@ import dailyQuizSidebar from '../daily-quizzes/sidebar.json'
 
 // ─────────────────────────────────────────────────────────────
 // 全站分类原则（依据官方考试大纲 + 内容本身逻辑关系）
-//   行测：五大模块（言语 / 数量 / 判断 / 资料 / 常识），
-//         判断推理再分图形 / 定义 / 类比 / 逻辑四种题型。
+//   行测：六大模块（政治理论 / 言语 / 数量 / 判断 / 资料 / 常识），
+//         政治理论自 2025 年起从常识判断单列；判断推理再分图形 / 定义 / 类比 / 逻辑四种题型。
 //   申论：五大题型（归纳概括 / 综合分析 / 问题对策 / 公文写作 / 文章写作）。
 //         Kiwi 讲义框架是覆盖五大题型的「总纲」，独立一级，
 //         不隶属于任何单一题型；DAY5—DAY9 是总纲之下
@@ -50,12 +50,21 @@ const sidebar = [
   { text: '✨ 精选导读', link: '/share/' },
   { text: '🗺️ 全站地图', link: '/guide/' },
 
-  // ===== 行测：五大模块（官方大纲）=====
+  // ===== 行测：六大模块（官方大纲）=====
   {
     text: '📗 行测',
     collapsed: true,
     items: [
       { text: '🗺️ 跨模块图解速查', link: '/xingce/图解速查' },
+      {
+        text: '🚩 政治理论（2025 起单列）',
+        collapsed: false,
+        items: [
+          { text: '🧭 学习路径', link: '/guide/zhengzhi' },
+          { text: '📖 章节导航 · 5 章', link: '/xingce/政治理论章节导航' },
+          { text: '📚 知识页 · 考查范围与技巧', link: '/xingce/zhengzhi-lilun' },
+        ],
+      },
       {
         text: '🗣️ 言语理解与表达',
         collapsed: true,
@@ -397,6 +406,7 @@ export default defineConfig({
         text: '📗 行测',
         items: [
           { text: '🧭 全站地图', link: '/guide/' },
+          { text: '🚩 政治理论', link: '/xingce/zhengzhi-lilun' },
           { text: '🗣️ 言语理解', link: '/xingce/yanyu-lijie' },
           { text: '🔢 数量关系', link: '/xingce/shuliang-guanxi' },
           { text: '🧩 判断推理', link: '/xingce/panduan-tuili' },

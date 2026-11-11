@@ -148,6 +148,21 @@ const sections = [
     ],
   },
   {
+    key: 'zhengzhi', icon: '🚩', title: '政治理论 · 章节导航',
+    page: 'xingce/政治理论章节导航.md',
+    intro: '2025 年起行测单列模块（20 题）：党的创新理论、方针政策、马原与党规党纪。按章跳到知识页对应位置。',
+    source: 'xingce/zhengzhi-lilun.md',
+    sourceLink: '/xingce/zhengzhi-lilun',
+    sourceLabel: '打开完整知识页',
+    chapterLevel: 2, pointLevel: 3,
+    skipTitles: ['相关', '为什么单独成块', '与常识判断的分工'],
+    related: [
+      { icon: '🚩', title: '政治理论知识页', desc: '考查范围 / 高频考点 / 作答技巧', link: '/xingce/zhengzhi-lilun' },
+      { icon: '🌍', title: '常识判断', desc: '法律 / 科技 / 文史 / 经济', link: '/xingce/常识判断章节导航' },
+      { icon: '🗺️', title: '全站地图', desc: '按逻辑关系找页', link: '/guide/' },
+    ],
+  },
+  {
     key: 'changshi', icon: '🌍', title: '常识判断 · 知识范围导航',
     page: 'xingce/常识判断章节导航.md',
     intro: '按考察范围分章，点任意章节直接跳到知识页对应位置。',

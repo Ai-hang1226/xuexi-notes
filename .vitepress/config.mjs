@@ -167,6 +167,7 @@ const sidebar = [
             text: '📒 归纳概括',
             collapsed: true,
             items: [
+              { text: '📖 讲义精读 · 四步框架与 11 类要素', link: '/shenlun/guina-gaikuo' },
               { text: '📖 讲义方法 → Kiwi 总纲', link: `${kiwi}#归纳概括-问什么-归纳什么` },
               { text: '🔍 特点与作用 · 找点方法', link: '/shenlun/features-vs-effects' },
               { text: 'DAY5 · 城市绿化（概括做法）', link: '/shenlun/day5-city-greening' },
@@ -180,6 +181,7 @@ const sidebar = [
             text: '🔍 综合分析',
             collapsed: true,
             items: [
+              { text: '📖 讲义精读 · 五类题型答题框架', link: '/shenlun/zonghe-fenxi' },
               { text: '📖 讲义方法 → Kiwi 总纲', link: `${kiwi}#三、综合分析-观点和依据要对齐` },
             ],
           },
@@ -187,6 +189,7 @@ const sidebar = [
             text: '💡 问题对策',
             collapsed: true,
             items: [
+              { text: '📖 讲义精读 · 命题形态与对策来源', link: '/shenlun/wenti-duice' },
               { text: '📖 讲义方法 → Kiwi 总纲', link: `${kiwi}#四、问题对策-先有问题-再看办法` },
             ],
           },
@@ -194,6 +197,7 @@ const sidebar = [
             text: '📄 公文写作',
             collapsed: true,
             items: [
+              { text: '📖 讲义精读 · 13 种文种格式速查', link: '/shenlun/gongwen-geshi' },
               { text: '📖 讲义方法 → Kiwi 总纲', link: `${kiwi}#五、公文写作-文种和任务决定结构` },
             ],
           },
@@ -201,6 +205,7 @@ const sidebar = [
             text: '✍️ 文章写作',
             collapsed: true,
             items: [
+              { text: '📖 讲义精读 · 论点与骨架', link: '/shenlun/wenzhang-xiezuo' },
               { text: '📖 讲义方法 → Kiwi 总纲', link: `${kiwi}#六、文章写作-从立意到论证` },
             ],
           },

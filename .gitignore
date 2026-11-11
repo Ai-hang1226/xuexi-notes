@@ -13,3 +13,8 @@ data/privacy-report.json
 
 # 输入箱：待读文件，不推送到公开网站
 inbox/
+
+# 本地工作态
+.workbuddy/
+tmp_a.txt
+tmp_b.txt

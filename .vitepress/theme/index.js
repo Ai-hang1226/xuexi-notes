@@ -7,6 +7,8 @@ import VisualCards from './components/VisualCards.vue'
 import LinkCards from './components/LinkCards.vue'
 import SectionNav from './components/SectionNav.vue'
 import ChapterNav from './components/ChapterNav.vue'
+import BreakPointCard from './components/BreakPointCard.vue'
+import ReadingLegend from './components/ReadingLegend.vue'
 import './custom.css'
 import './brand.css'
 import './links.css'
@@ -21,6 +23,10 @@ export default {
     // 全站通用章节导航：任意板块导航页写 <SectionNav section="板块键" />
     app.component('SectionNav', SectionNav)
     app.component('ChapterNav', ChapterNav)
+    // 题目破题点卡片：内联在题干下写 <BreakPointCard title="..." :points="[...]" />
+    app.component('BreakPointCard', BreakPointCard)
+    // 读题三色图例：页面顶部放 <ReadingLegend />
+    app.component('ReadingLegend', ReadingLegend)
   },
   Layout: {
     setup() {

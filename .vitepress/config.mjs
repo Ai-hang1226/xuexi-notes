@@ -380,7 +380,7 @@ export default defineConfig({
     ['meta', { name: 'twitter:image', content: 'https://ai-hang1226.github.io/xuexi-notes/og-cover.png' }],
   ],
 
-  srcExclude: ['AGENTS.md', 'CLAUDE.md', 'MEMORY.md', '扩展演示-AutoCorrect.md', 'memory/**', 'data/**', '.workbuddy/**'],
+  srcExclude: ['AGENTS.md', 'CLAUDE.md', 'MEMORY.md', '扩展演示-AutoCorrect.md', 'memory/**', 'data/**', '.workbuddy/**', 'docs/**'],
 
   themeConfig: {
     logo: '/logo.svg',

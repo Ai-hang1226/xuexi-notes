@@ -13,7 +13,16 @@ status: discussed-pending-rewrite
 
 ## 题目与本次补充
 
-根据“给定材料1”，谈谈F市“背包银行”模式的<mark class="sl-action">特点</mark>及其在推动乡村振兴过程中起到的<mark class="sl-effect">作用</mark>。20分，不超过400字。讲义DAY07，印刷40—45页／PDF42—47页；题目来源为讲义自标的2024多省联考江西县乡卷Q1，未另作官方原卷核验。
+<ReadingLegend variant="shenlun" />
+
+根据“<mark class="rv-object">给定材料1</mark>”，<mark class="rv-target">谈谈</mark><mark class="rv-object">F市“背包银行”模式</mark>的<mark class="rv-target">特点</mark>及其在推动乡村振兴过程中起到的<mark class="rv-target">作用</mark>。<mark class="rv-period">20分，不超过400字</mark>。讲义DAY07，印刷40—45页／PDF42—47页；题目来源为讲义自标的2024多省联考江西县乡卷Q1，未另作官方原卷核验。
+
+<BreakPointCard title="两问两答：特点讲属性，作用讲影响" :points="[
+  { k: '任务', v: '特点＋作用各成一组；特点写模式的特殊安排，作用写带来的功能与变化' },
+  { k: '范围', v: '给定材料1；对象＝F市「背包银行」模式在乡村振兴中的表现' },
+  { k: '条件', v: '20分、不超过400字' },
+  { k: '陷阱', v: '特点写成做法罗列；同一做法在两问都出现不算重复（双重考核既是特点也支撑作用）；特点难概括时先找作用再回看材料' },
+]" />
 
 ![DAY7特点与作用、DAY8问题任务对照](/question-review-20261108/review-q-shenlun-task78.svg)
 

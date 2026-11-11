@@ -75,11 +75,12 @@ for (const f of files) {
   const strip = (s) =>
     s
       .replace(/<BreakPointCard[\s\S]*?\/>/g, '')
+      .replace(/<ReadingLegend[^>]*?\/>/g, '')
       .replace(/<\/?mark[^>]*>/g, '')
-      .replace(/<ReadingLegend\s*\/>/g, LEGEND)
       .split('\n')
       .map((x) => x.trimEnd())
-      .filter((x) => x.trim())
+      // 图例既可能是组件的渲染位，也可能是早期写死的文字行；两者都不属于题目原文
+      .filter((x) => x.trim() && !/^<p><strong>读题标记：<\/strong>/.test(x.trim()))
 
   const bare = strip(now)
   let origOK = true

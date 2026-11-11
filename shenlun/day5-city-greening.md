@@ -30,7 +30,16 @@ transfer_test_status: "未完成"
 
 ## 题目与来源边界
 
-任务：根据“给定资料1”，概括F市开展城市绿化工作的<mark class="sl-action">主要做法</mark>。要求准确全面、分条列出、不超过200字；讲义标注15分。
+<ReadingLegend variant="shenlun" />
+
+任务：根据“<mark class="rv-object">给定资料1</mark>”，<mark class="rv-target">概括</mark><mark class="rv-object">F市开展城市绿化工作</mark>的<mark class="rv-target">主要做法</mark>。<mark class="rv-period">要求准确全面、分条列出、不超过200字</mark>；讲义标注<mark class="rv-period">15分</mark>。
+
+<BreakPointCard title="只问做法，不写成效" :points="[
+  { k: '任务', v: '概括「主要做法」——只写做了什么的行动主干，不另列成效' },
+  { k: '范围', v: '给定资料1；对象＝F市城市绿化工作' },
+  { k: '条件', v: '准确全面、分条列出、不超过200字、15分' },
+  { k: '陷阱', v: '总括词盖不住子项（「搭建平台」盖不住古树利用与康养基地）；实例压成空话' },
+]" />
 
 蓝色标记做法或措施，绿色标记成效；先看题目究竟问哪一类。
 

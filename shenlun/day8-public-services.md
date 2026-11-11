@@ -15,11 +15,20 @@ status: discussed-pending-rewrite
 
 ## 题目与来源
 
-“给定材料”列举了当下社会公共服务领域的一些新现象，请据此归纳出<mark class="sl-action">创新公共服务中所面临的问题</mark>。（15分）
+<ReadingLegend variant="shenlun" />
+
+“<mark class="rv-object">给定材料</mark>”列举了当下<mark class="rv-object">社会公共服务领域</mark>的一些新现象，请据此<mark class="rv-target">归纳</mark>出<mark class="rv-object">创新公共服务中</mark>所面临的<mark class="rv-target">问题</mark>。（<mark class="rv-period">15分</mark>）
 
 ![DAY7特点与作用、DAY8问题任务对照](/question-review-20261108/review-q-shenlun-task78.svg)
 
-要求：紧扣给定材料，全面准确、条理清楚、语言精练，不超过150字。讲义DAY08，印刷46—54页／PDF48—56页，自标2016年上半年江苏省事业单位招聘考试综应Q1；本次以讲义为准，未外部核验原卷，不另引其他老师评分。
+<mark class="rv-period">要求：紧扣给定材料，全面准确、条理清楚、语言精练，不超过150字</mark>。讲义DAY08，印刷46—54页／PDF48—56页，自标2016年上半年江苏省事业单位招聘考试综应Q1；本次以讲义为准，未外部核验原卷，不另引其他老师评分。
+
+<BreakPointCard title="问的是问题，不是现象" :points="[
+  { k: '任务', v: '归纳「创新公共服务中所面临的问题」——不是罗列现象，也不是写对策' },
+  { k: '范围', v: '给定材料全部四组；对象＝创新公共服务领域' },
+  { k: '条件', v: '紧扣给定材料、全面准确、条理清楚、语言精练、不超过150字、15分' },
+  { k: '陷阱', v: '现象当问题（使用率低是现象，缺民意调查与数据分析才是问题）；材料2、4的成功做法不能一律反转为缺陷' },
+]" />
 
 ## 本人首答｜照片为原始依据
 

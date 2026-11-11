@@ -9,15 +9,22 @@ status: discussed-pending-rewrite
 
 # DAY9｜Q市加“数”前行的原因
 
-<p><strong>读题标记：</strong>蓝色＝对象或范围　·　橙色＝时间或条件　·　绿色＝问题或要求。</p>
-
 <strong>首答学习性参考分：7／10。</strong>已覆盖公共数据平台、三级治理中心、基层网格三块，数据平台四项工作完整。主要缺口是总领战略及“六大应用系统—清单—一件事场景”这一组具体行动；不因未按老师顺序排列扣分。[评分与进步记录](/shenlun/scores)分别保留首答、改写和独立验证。
 
 <figure class="study-visual study-visual-wide"><a href="/xuexi-notes/visuals/shenlun-day9-1361.svg" target="_blank" rel="noopener"><img src="/visuals/shenlun-day9-1361.svg" alt="DAY9：用老师的1361结构检查缺口" width="1120" /></a><figcaption>手机可左右滑动，点图放大</figcaption></figure>
 
 ## 题目与来源
 
-请根据“<mark class="rv-object">给定资料1</mark>”，谈谈<mark class="rv-object">Q市</mark>能够加“数”前行的<mark class="rv-target">原因</mark>。（<mark class="rv-period">10分</mark>）要求：全面、准确、有条理，<mark class="rv-period">不超过200字</mark>。
+<ReadingLegend variant="shenlun" />
+
+请根据“<mark class="rv-object">给定资料1</mark>”，<mark class="rv-target">谈谈</mark><mark class="rv-object">Q市</mark>能够加“数”前行的<mark class="rv-target">原因</mark>。（<mark class="rv-period">10分</mark>）<mark class="rv-period">要求：全面、准确、有条理，不超过200字</mark>。
+
+<BreakPointCard title="原因题：写促成成果的做法、条件与机制" :points="[
+  { k: '任务', v: '谈「原因」——促成加数前行的做法、条件、机制；不要求逐项配成效' },
+  { k: '范围', v: '给定资料1；对象＝Q市加「数」前行' },
+  { k: '条件', v: '全面、准确、有条理、不超过200字、10分' },
+  { k: '陷阱', v: '1361 结构要齐全（六大应用系统／编制清单／「一件事」场景）；成效句可压缩但不能顶替原因' },
+]" />
 
 讲义DAY09，印刷55—59页／PDF57—61页；自标2024年多省联考申论福建省市卷Q1，未另行外核。继续只以指定老师的讲义与答案对照，不引入其他老师另设标准。
 

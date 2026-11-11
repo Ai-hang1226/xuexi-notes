@@ -439,6 +439,7 @@ export default defineConfig({
       }
     },
 
+    // 目录纳入 h1 章标题，让「第一章」「一、倍数特性」这类章节直接进入右侧本页目录。
     outline: { level: [2, 3], label: '本页目录' },
     docFooter: { prev: '← 上一篇', next: '下一篇 →' },
   },

@@ -1,7 +1,7 @@
 node_modules/
 .vitepress/cache/
 .vitepress/dist/
-.vitepress/dist-stale*/
+.vitepress/dist-*/
 .vitepress/.temp*/
 .vitepress/parked-assets/
 .DS_Store

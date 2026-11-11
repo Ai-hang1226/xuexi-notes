@@ -62,6 +62,29 @@ for (const [key, sec] of Object.entries(nav.sections)) {
   }
 }
 
+// 7. 章节正文页（含多个 h1，h1 即「第X章」）必须在目录配置里把 h1 纳入并打上 pageClass，
+//    否则右侧「本页目录」会把重复的页面主标题当第一项、且章级标题不显示。
+const SKIP_DIRS = new Set(['node_modules', '.git', '.vitepress', 'public', 'data', 'scripts', 'dist', '.shots'])
+const mdFiles = []
+;(function walk(dir) {
+  for (const name of fs.readdirSync(path.join(root, dir))) {
+    const rel = dir ? `${dir}/${name}` : name
+    if (fs.statSync(path.join(root, rel)).isDirectory()) {
+      if (!SKIP_DIRS.has(name) && !name.startsWith('dist-') && !name.startsWith('.temp')) walk(rel)
+    } else if (name.endsWith('.md')) mdFiles.push(rel)
+  }
+})('')
+const chapteredPages = mdFiles.filter((f) => {
+  const text = fs.readFileSync(path.join(root, f), 'utf8')
+  const body = text.startsWith('---') ? text.split('---').slice(2).join('---') : text
+  return (body.match(/^#\s+.+$/gm) || []).length >= 2
+})
+for (const f of chapteredPages) {
+  const text = fs.readFileSync(path.join(root, f), 'utf8')
+  check(`章节正文目录 ${f} · outline 含 h1`, /^outline:[ \t]*\[[ \t]*1[ \t]*,/m.test(text), '缺少 outline:[1,x]，章级标题不会进目录')
+  check(`章节正文目录 ${f} · 已标记 pageClass`, /^pageClass:\s*chaptered/m.test(text), '缺少 pageClass:chaptered，重复的页面主标题会占目录首项')
+}
+
 console.log(`通过 ${ok.length} 项：`)
 ok.forEach((x) => console.log('  ✓ ' + x))
 if (failures.length) {

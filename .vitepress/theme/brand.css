@@ -33,7 +33,7 @@
 .dashboard-page .vp-doc p { line-height: inherit; }
 /* 首页取消文档页的窄栏上限，让目录与状态卡在桌面并排展开。 */
 @media (min-width: 768px) {
-  .dashboard-page .VPDoc .container { width: 100%; max-width: 1360px; }
+  .dashboard-page .VPDoc.has-aside .container { width: 100%; max-width: 1360px; }
   .dashboard-page .VPDoc .container > .content { flex: 1 1 auto; width: 100%; min-width: 0; }
 }
 

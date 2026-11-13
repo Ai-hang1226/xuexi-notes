@@ -34,7 +34,7 @@
 /* 首页取消文档页的窄栏上限，让目录与状态卡在桌面并排展开。 */
 @media (min-width: 768px) {
   .dashboard-page .VPDoc.has-aside .container { width: 100%; max-width: 1360px; }
-  .dashboard-page .VPDoc .container > .content { flex: 1 1 auto; width: 100%; min-width: 0; }
+  .dashboard-page .VPDoc .container > .content { flex: 1 1 auto; width: 100%; max-width: none; min-width: 0; }
 }
 
 /* 章节正文页（h1 即「第X章」）：目录里第一项是与正文标题重复的页面主标题。

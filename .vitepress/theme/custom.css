@@ -198,10 +198,10 @@ body {
   white-space: nowrap;
 }
 
-/* 九项顶栏收为学科菜单，中等屏幕使用主题自带的完整菜单。 */
+/* 中等屏幕收合顶栏，避免首页与长菜单挤压或裁切。 */
 .VPNav .VPNavBar,
 .VPNav .VPNavBar .wrapper { background-color: var(--vp-c-bg); }
-@media (min-width: 768px) and (max-width: 959px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .VPNavBar .VPNavBarMenu,
   .VPNavBar .VPNavBarAppearance,
   .VPNavBar .VPNavBarSocialLinks,

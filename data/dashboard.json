@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11",
+  "generatedAt": "2026-11-14",
   "streak": {
     "since": "2026-06-05",
     "days": 158
@@ -31,6 +31,12 @@
   },
   "quizzes": {
     "total": 14,
+    "latest": {
+      "date": "2026-11-06",
+      "status": "已批改 · 行测4/8 · 28分钟",
+      "testUrl": "/daily-quizzes/2026-11-06",
+      "reviewUrl": "/daily-quizzes/2026-11-06-review"
+    },
     "reviewed": 5,
     "pending": 8,
     "rest": 1,

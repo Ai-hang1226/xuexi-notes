@@ -12,6 +12,12 @@ const write = (p, data) => {
 }
 
 const questions = JSON.parse(read('cuotiben/review-catalog.json'))
+const generatedAt = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'Asia/Shanghai',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+}).format(new Date())
 
 // ---------- 更新记录：从首页原文抽取，供首页与更新日志共用 ----------
 const updateSource = read('data/updates-source.md')
@@ -51,8 +57,14 @@ const section = (name, next) => quizMd.split(`## ${name}`)[1]?.split(`## ${next}
 const quizRows = section('正式测验', '复测安排').split('\n').filter((l) => /^\| \d{4}-\d{2}-\d{2} \|/.test(l))
 const quizzes = quizRows.map((l) => {
   const c = l.split('|').map((s) => s.trim())
-  return { date: c[1], status: c[2] }
-})
+  const links = [...(c[3] || '').matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)].map((m) => ({ text: m[1], url: m[2] }))
+  return {
+    date: c[1],
+    status: c[2],
+    testUrl: links.find((link) => link.text === '试卷')?.url || '',
+    reviewUrl: links.find((link) => link.text === '结果与解析')?.url || '',
+  }
+}).sort((a, b) => b.date.localeCompare(a.date))
 const retestRows = section('复测安排', '交流体验').split('\n').filter((l) => /^\| \d{4}-\d{2}-\d{2} \|/.test(l))
 const retests = retestRows.map((l) => {
   const c = l.split('|').map((s) => s.trim())
@@ -110,7 +122,7 @@ const byType = {}
 for (const q of questions) for (const t of q.types) byType[t] = (byType[t] || 0) + 1
 
 const dashboard = {
-  generatedAt: new Date().toISOString().slice(0, 10),
+  generatedAt,
   streak: { since: '2026-06-05', days: Math.round((new Date('2026-11-10') - new Date('2026-06-05')) / 86400000) },
   questions: {
     total: questions.length,
@@ -121,6 +133,7 @@ const dashboard = {
   },
   quizzes: {
     total: quizzes.length,
+    latest: quizzes[0] || null,
     reviewed: quizzes.filter((q) => /已批改/.test(q.status)).length,
     pending: quizzes.filter((q) => /待作答/.test(q.status)).length,
     rest: quizzes.filter((q) => /休息|未作答/.test(q.status)).length,

@@ -45,10 +45,15 @@ const quizSidebar = [
 
 const kiwi = '/shenlun/kiwi-framework'
 const sidebar = [
-  { text: '🎯 今日面板', link: '/#today' },
-  { text: '🏠 首页', link: '/' },
-  { text: '✨ 精选导读', link: '/share/' },
-  { text: '🗺️ 全站地图', link: '/guide/' },
+  {
+    text: '🧭 站点入口',
+    collapsed: true,
+    items: [
+      { text: '🏠 首页', link: '/' },
+      { text: '🗺️ 全站地图', link: '/guide/' },
+      { text: '✨ 精选导读', link: '/share/' },
+    ],
+  },
 
   // ===== 行测：六大模块（官方大纲）=====
   {
@@ -371,7 +376,7 @@ const sidebar = [
 
 export default defineConfig({
   title: '考公知识库',
-  description: '行测 · 申论 · 每日测验 · 错题复盘——把每一次做题，都变成可复用的知识资产',
+  description: '行测知识、申论训练、真题测验与错题复盘的清晰入口',
   lang: 'zh-CN',
   base: '/xuexi-notes/',
   cleanUrls: true,
@@ -385,8 +390,8 @@ export default defineConfig({
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: '考公知识库' }],
     ['meta', { property: 'og:url', content: 'https://ai-hang1226.github.io/xuexi-notes/' }],
-    ['meta', { property: 'og:title', content: '考公知识库 · 学习驾驶舱' }],
-    ['meta', { property: 'og:description', content: '行测 · 申论 · 每日测验 · 错题复盘：把每一次做题，都变成可复用的知识资产' }],
+    ['meta', { property: 'og:title', content: '考公知识库 · 学习目录' }],
+    ['meta', { property: 'og:description', content: '行测知识、申论训练、真题测验与错题复盘的清晰入口' }],
     ['meta', { property: 'og:image', content: 'https://ai-hang1226.github.io/xuexi-notes/og-cover.png' }],
     ['meta', { property: 'og:image:width', content: '1200' }],
     ['meta', { property: 'og:image:height', content: '630' }],
@@ -400,12 +405,9 @@ export default defineConfig({
     logo: '/logo.svg',
     nav: [
       { text: '🏠 首页', link: '/' },
-      { text: '🎯 今日', link: '/#today' },
-      { text: '✨ 精选导读', link: '/share/' },
       {
         text: '📗 行测',
         items: [
-          { text: '🧭 全站地图', link: '/guide/' },
           { text: '🚩 政治理论', link: '/xingce/zhengzhi-lilun' },
           { text: '🗣️ 言语理解', link: '/xingce/yanyu-lijie' },
           { text: '🔢 数量关系', link: '/xingce/shuliang-guanxi' },
@@ -426,7 +428,17 @@ export default defineConfig({
       },
       { text: '📝 每日测验', link: '/daily-quizzes/' },
       { text: '🧠 错题本', link: '/cuotiben/' },
-      { text: '🧰 速查', link: '/tools/' },
+      {
+        text: '📚 更多',
+        items: [
+          { text: '✨ 精选导读', link: '/share/' },
+          { text: '🗺️ 全站地图', link: '/guide/' },
+          { text: '🧰 速算工具箱', link: '/tools/' },
+          { text: '📌 使用指南', link: '/guide/help' },
+          { text: '🕘 更新日志', link: '/guide/changelog' },
+          { text: '🖨️ 江苏 A4 打印讲义', link: '/jiangsu/printable.html' },
+        ],
+      },
     ],
 
     sidebar,

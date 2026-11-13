@@ -1,15 +1,16 @@
 ---
-title: 考公知识库 · 学习驾驶舱
-description: 行测 · 申论 · 每日测验 · 错题复盘——把每一次做题，都变成可复用的知识资产
+title: 考公知识库 · 学习目录
+description: 行测知识、申论训练、真题测验与错题复盘的清晰入口
 pageClass: dashboard-page
 outline: false
 prev: false
 next: false
 editLink: false
+sidebar: false
 ---
 
 <script setup>
-import StudyDashboard from './.vitepress/theme/components/StudyDashboard.vue'
+import KnowledgeHome from './.vitepress/theme/components/KnowledgeHome.vue'
 </script>
 
-<StudyDashboard />
+<KnowledgeHome />

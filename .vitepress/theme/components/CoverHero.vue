@@ -165,23 +165,23 @@ const modules = d.modules
 .cv__enter:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(67, 56, 202, .16); }
 .cv__enter span { font-size: 16px; }
 
-:global(.dark) .cv { background: linear-gradient(135deg, #1b1e33 0%, #202441 48%, #191c30 100%); }
-:global(.dark) .cv__grid {
+:global(.dark .cv){ background: linear-gradient(135deg, #1b1e33 0%, #202441 48%, #191c30 100%); }
+:global(.dark .cv__grid){
   background-image:
     linear-gradient(rgba(165, 180, 252, .06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(165, 180, 252, .06) 1px, transparent 1px);
 }
-:global(.dark) .cv__card { border-color: #3d4266; background: #20233a; box-shadow: 0 24px 60px rgba(0, 0, 0, .3); }
-:global(.dark) .cv__card .cv__eyebrow { border-color: #3d4266; color: #a5b4fc; }
-:global(.dark) .cv__dot { background: #a5b4fc; }
-:global(.dark) .cv__card .cv__title { color: #eef0ff; }
-:global(.dark) .cv__card .cv__sub { color: #aeb6d4; }
-:global(.dark) .cv__card .cv__slogan { color: #a5b4fc; }
-:global(.dark) .cv__chip { border-color: #3d4266; background: #2a2e4c; color: #c7d0ff; }
-:global(.dark) .cv__chip:hover { border-color: #6d64f0; background: #33385e; }
-:global(.dark) .cv__card .cv__foot { border-color: #353a52; color: #98a0bd; }
-:global(.dark) .cv__card .cv__foot b { color: #a5b4fc; }
-:global(.dark) .cv__enter { border-color: #3d4266; background: rgba(32, 35, 58, .9); color: #a5b4fc; }
+:global(.dark .cv__card){ border-color: #3d4266; background: #20233a; box-shadow: 0 24px 60px rgba(0, 0, 0, .3); }
+:global(.dark .cv__card .cv__eyebrow){ border-color: #3d4266; color: #a5b4fc; }
+:global(.dark .cv__dot){ background: #a5b4fc; }
+:global(.dark .cv__card .cv__title){ color: #eef0ff; }
+:global(.dark .cv__card .cv__sub){ color: #aeb6d4; }
+:global(.dark .cv__card .cv__slogan){ color: #a5b4fc; }
+:global(.dark .cv__chip){ border-color: #3d4266; background: #2a2e4c; color: #c7d0ff; }
+:global(.dark .cv__chip:hover){ border-color: #6d64f0; background: #33385e; }
+:global(.dark .cv__card .cv__foot){ border-color: #353a52; color: #98a0bd; }
+:global(.dark .cv__card .cv__foot b){ color: #a5b4fc; }
+:global(.dark .cv__enter){ border-color: #3d4266; background: rgba(32, 35, 58, .9); color: #a5b4fc; }
 
 @media (max-width: 720px) {
   .cv { min-height: 0; padding: 24px 12px 22px; margin-bottom: 32px; border-radius: 18px; }

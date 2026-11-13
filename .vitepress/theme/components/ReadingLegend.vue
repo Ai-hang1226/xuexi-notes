@@ -71,12 +71,12 @@ const items = computed(() => ITEMS[props.variant] || ITEMS.xingce)
 .rl--target i { background: #d9f3e7; border: 1px solid #155e4c; }
 .rl--target b { color: #155e4c; }
 
-:global(.dark) .rl--object i { background: #243e63; border-color: #c8ddff; }
-:global(.dark) .rl--object b { color: #c8ddff; }
-:global(.dark) .rl--period i { background: #5d4522; border-color: #ffe4ad; }
-:global(.dark) .rl--period b { color: #ffe4ad; }
-:global(.dark) .rl--target i { background: #214c3d; border-color: #bcefd9; }
-:global(.dark) .rl--target b { color: #bcefd9; }
+:global(.dark .rl--object i){ background: #243e63; border-color: #c8ddff; }
+:global(.dark .rl--object b){ color: #c8ddff; }
+:global(.dark .rl--period i){ background: #5d4522; border-color: #ffe4ad; }
+:global(.dark .rl--period b){ color: #ffe4ad; }
+:global(.dark .rl--target i){ background: #214c3d; border-color: #bcefd9; }
+:global(.dark .rl--target b){ color: #bcefd9; }
 
 @media (max-width: 680px) {
   .rl { gap: 6px 10px; padding: 9px 11px; font-size: 11.5px; }

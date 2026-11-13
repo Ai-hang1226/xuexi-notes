@@ -414,7 +414,7 @@ export default defineConfig({
       {
         text: '📘 申论',
         items: [
-          { text: '🏠 申论总览', link: '/shenlun/' },
+          { text: '🏠 申论总览 · 从原文到答案', link: '/shenlun/' },
           { text: '📖 总纲 · Kiwi 五大题型', link: kiwi },
           { text: '📒 归纳概括 · 真题', link: '/shenlun/day5-city-greening' },
           { text: '📊 评分与进步', link: '/shenlun/scores' },

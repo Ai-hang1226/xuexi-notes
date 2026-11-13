@@ -303,7 +303,7 @@ const statusTone = (s) => /待作答|待复测/.test(s) ? 'warn' : /未通过|�
 .db-quickbar .db-streak__label { font-size: 11px; }
 .db-quickbar .db-hero__stats { margin-top: 0; }
 .db-quickbar__actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px; }
-:global(.dark) .db-quickbar { border-color: #3d4266; background: rgba(255, 255, 255, .04); }
+:global(.dark .db-quickbar){ border-color: #3d4266; background: rgba(255, 255, 255, .04); }
 
 /* ---------- Hero（封面启用后保留样式供历史类名复用） ---------- */
 .db-hero {
@@ -487,23 +487,23 @@ const statusTone = (s) => /待作答|待复测/.test(s) ? 'warn' : /未通过|�
 .db-footnote code { font-size: 11px; }
 
 /* ---------- 深色模式 ---------- */
-:global(.dark) .db-hero,
-:global(.dark) .db-card--stat,
-:global(.dark) .db-flow { border-color: #353a52; background: linear-gradient(135deg, #1c2033, #242a44); }
-:global(.dark) .db-hero__side,
-:global(.dark) .db-flow__steps div,
-:global(.dark) .db-mini div { border-color: #353a52; background: rgba(255, 255, 255, .04); }
-:global(.dark) .db-hero h1 span,
-:global(.dark) .db-big b,
-:global(.dark) .db-mini b { color: #a5b4fc; }
-:global(.dark) .db-hero__sub,
-:global(.dark) .db-flow__title h2,
-:global(.dark) .db-flow__steps span { color: #d9dced; }
-:global(.dark) .db-eyebrow { border-color: #3d4266; background: rgba(255, 255, 255, .04); color: #a5b4fc; }
-:global(.dark) .db-streak__num { color: #a5b4fc; }
-:global(.dark) .db-hero__stats b { color: #e2e8f0; }
-:global(.dark) .db-btn--line { border-color: #4a4f78; background: rgba(255, 255, 255, .04); color: #a5b4fc; }
-:global(.dark) .db-module__status.is-done { background: #2b3152; color: #c7d2fe; }
+:global(.dark .db-hero),
+:global(.dark .db-card--stat),
+:global(.dark .db-flow){ border-color: #353a52; background: linear-gradient(135deg, #1c2033, #242a44); }
+:global(.dark .db-hero__side),
+:global(.dark .db-flow__steps div),
+:global(.dark .db-mini div){ border-color: #353a52; background: rgba(255, 255, 255, .04); }
+:global(.dark .db-hero h1 span),
+:global(.dark .db-big b),
+:global(.dark .db-mini b){ color: #a5b4fc; }
+:global(.dark .db-hero__sub),
+:global(.dark .db-flow__title h2),
+:global(.dark .db-flow__steps span){ color: #d9dced; }
+:global(.dark .db-eyebrow){ border-color: #3d4266; background: rgba(255, 255, 255, .04); color: #a5b4fc; }
+:global(.dark .db-streak__num){ color: #a5b4fc; }
+:global(.dark .db-hero__stats b){ color: #e2e8f0; }
+:global(.dark .db-btn--line){ border-color: #4a4f78; background: rgba(255, 255, 255, .04); color: #a5b4fc; }
+:global(.dark .db-module__status.is-done){ background: #2b3152; color: #c7d2fe; }
 
 /* ---------- 响应式 ---------- */
 @media (max-width: 1080px) {

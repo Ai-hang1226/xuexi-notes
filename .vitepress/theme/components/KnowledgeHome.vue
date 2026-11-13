@@ -4,6 +4,7 @@ import d from '../../../data/dashboard.json'
 
 const base = (path) => withBase(path)
 const latest = d.quizzes.latest
+const retestProgress = d.retests.total ? Math.round((d.retests.done / d.retests.total) * 100) : 0
 
 const modules = [
   { name: '政治理论', path: '/xingce/zhengzhi-lilun', hint: '章节导航 · 重点表述' },
@@ -106,12 +107,19 @@ const essayLinks = [
         </div>
 
         <div class="status-stats">
+          <div><b>{{ d.quizzes.reviewed }}</b><span>已批改正式测验</span></div>
           <div><b>{{ d.quizzes.pending }}</b><span>待作答历史卷</span></div>
           <div><b>{{ d.questions.total }}</b><span>错题本记录</span></div>
-          <div><b>{{ d.retests.pending }}</b><span>待验证复测</span></div>
+        </div>
+        <div class="status-progress">
+          <div class="status-progress__label"><span>已完成复测记录</span><b>{{ d.retests.done }} / {{ d.retests.total }}</b></div>
+          <div class="status-progress__track" role="progressbar" :aria-valuenow="d.retests.done" aria-valuemin="0" :aria-valuemax="d.retests.total" aria-label="已完成复测记录">
+            <span :style="{ width: `${retestProgress}%` }"></span>
+          </div>
+          <p>{{ d.retests.pending }} 项待验证 · {{ d.retests.needsRetry }} 项需再测</p>
         </div>
         <a class="status-cta" :href="base('/cuotiben/')">进入错题筛选 <span>→</span></a>
-        <p class="status-note">这里显示目录中已登记的数据；未登记的作答和进展不会推测。</p>
+        <p class="status-note">仅统计已登记的数据；完成复测不等于独立掌握，未登记进展不会推测。</p>
       </aside>
     </div>
 
@@ -127,6 +135,7 @@ const essayLinks = [
 .knowledge-home {
   --home-accent: #4f46e5;
   --home-accent-soft: rgba(79, 70, 229, .08);
+  --home-cta: #4f46e5;
   width: min(1360px, 100%);
   margin: 0 auto;
   padding: 30px clamp(18px, 3vw, 42px) 0;
@@ -186,13 +195,20 @@ const essayLinks = [
 .status-stats > div:last-child { grid-column: 1 / -1; }
 .status-stats b { color: var(--home-accent); font-size: 21px; line-height: 1.2; font-variant-numeric: tabular-nums; }
 .status-stats span { color: var(--vp-c-text-2); font-size: 11px; }
-.status-cta { display: flex; align-items: center; justify-content: space-between; padding: 11px 13px; border-radius: 10px; color: #fff !important; background: var(--home-accent); font-size: 14px; font-weight: 700; }
+.status-progress { margin: 4px 0 12px; }
+.status-progress__label { display: flex; justify-content: space-between; gap: 8px; color: var(--vp-c-text-2); font-size: 11px; }
+.status-progress__label b { color: var(--vp-c-text-1); font-variant-numeric: tabular-nums; }
+.status-progress__track { height: 7px; margin: 6px 0; overflow: hidden; border-radius: 999px; background: var(--vp-c-divider); }
+.status-progress__track span { display: block; height: 100%; border-radius: inherit; background: var(--home-accent); transition: width .2s; }
+.status-progress p { margin: 0; color: var(--vp-c-text-2); font-size: 10px; line-height: 1.45; }
+.status-cta { display: flex; align-items: center; justify-content: space-between; padding: 11px 13px; border-radius: 10px; color: #fff !important; background: var(--home-cta); font-size: 14px; font-weight: 700; }
 .status-cta:hover { background: #4338ca; }
 .status-note { margin: 12px 0 0; color: var(--vp-c-text-2); font-size: 11px; line-height: 1.55; }
 .home-footer { display: flex; justify-content: center; gap: 10px; padding: 23px 0 4px; color: var(--vp-c-text-2); font-size: 13px; }
 .home-footer a:hover { color: var(--home-accent); }
-:global(.dark) .home-status { border-color: #454b78; }
-:global(.dark) .latest-quiz { border-color: #454b78; }
+:global(.dark .knowledge-home){ --home-accent: #a5b4fc; --home-accent-soft: rgba(165, 180, 252, .12); --home-cta: #4f46e5; }
+:global(.dark .home-status){ border-color: #454b78; }
+:global(.dark .latest-quiz){ border-color: #454b78; }
 
 @media (max-width: 1100px) {
   .home-layout { grid-template-columns: minmax(0, 1fr); }

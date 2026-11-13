@@ -1,13 +1,13 @@
 ---
 pageClass: shenlun-page
-title: 申论学习｜五大题型与从原文到答案
+title: 申论总览 · 从原文到答案
 type: study-index
 status: active
 created: 2026-10-21
 updated: 2026-11-10
 ---
 
-# 申论｜从原文到答案
+# 申论总览 · 从原文到答案
 
 **先分清题目任务，再学习老师如何提炼、归类和组织，最后对照本人原答改写。**
 

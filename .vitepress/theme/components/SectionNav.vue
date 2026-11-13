@@ -121,8 +121,8 @@ const href = (link) => {
 }
 .cn-card__go { flex: 0 0 auto; margin-left: auto; color: var(--vp-c-brand-1); font-size: 19px; }
 
-:global(.dark) .cn__full { border-color: #3d4266; background: linear-gradient(90deg, #25294a, #20233a); color: #a5b4fc; }
-:global(.dark) .cn-card__no { background: rgba(165, 180, 252, .14); color: #a5b4fc; }
+:global(.dark .cn__full){ border-color: #3d4266; background: linear-gradient(90deg, #25294a, #20233a); color: #a5b4fc; }
+:global(.dark .cn-card__no){ background: rgba(165, 180, 252, .14); color: #a5b4fc; }
 
 @media (max-width: 720px) {
   .cn__hint { margin-left: 0; width: 100%; }

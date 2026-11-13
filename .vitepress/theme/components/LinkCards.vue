@@ -87,7 +87,7 @@ const base = (p) => withBase(p)
 .lc-back:hover { color: var(--vp-c-brand-1); border-color: var(--vp-c-brand-1); background: var(--vp-c-brand-soft); }
 .lc-back:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 3px; }
 
-:global(.dark) .lc-card__icon { background: rgba(165, 180, 252, .14); }
+:global(.dark .lc-card__icon){ background: rgba(165, 180, 252, .14); }
 
 @media (max-width: 720px) {
   .lc__grid { grid-template-columns: 1fr; }

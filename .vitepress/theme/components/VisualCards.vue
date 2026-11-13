@@ -139,11 +139,11 @@ const cards = computed(() => {
 .vc-card__link { display: block; margin-top: auto; padding-top: 16px; color: var(--vc-tone); font-size: 12px; font-weight: 700; text-decoration: none; }
 .vc-card__link:hover { text-decoration: underline; }
 
-:global(.dark) .vc-card__tag,
-:global(.dark) .vc-card__status,
-:global(.dark) .vc-card__link { filter: brightness(1.35); }
-:global(.dark) .vc-change__label--before { background: #303544; color: #cbd5e1; }
-:global(.dark) .vc-steps__no { border-color: var(--vp-c-bg-soft); color: #fff; }
+:global(.dark .vc-card__tag),
+:global(.dark .vc-card__status),
+:global(.dark .vc-card__link){ filter: brightness(1.35); }
+:global(.dark .vc-change__label--before){ background: #303544; color: #cbd5e1; }
+:global(.dark .vc-steps__no){ border-color: var(--vp-c-bg-soft); color: #fff; }
 
 @media (max-width: 1080px) { .vc__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 680px) {

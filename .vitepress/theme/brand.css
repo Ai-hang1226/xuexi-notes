@@ -46,6 +46,11 @@
   padding-left: 0;
 }
 
+/* 135题逐题复盘很长：桌面略收窄行宽，避免一行横跨过多文字。 */
+@media (min-width: 1280px) {
+  .review-135-page .VPDoc .content .content-container { max-width: 720px; }
+}
+
 /* 阅读进度与返回顶部 */
 .site-progress {
   position: fixed;

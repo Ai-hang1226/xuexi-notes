@@ -105,10 +105,10 @@ const accent = computed(() => props.tone || '')
 .bp__val { color: var(--vp-c-text-1); overflow-wrap: anywhere; }
 .bp--plain .bp__key { color: var(--vp-c-text-2); }
 
-:global(.dark) .bp--target { --k-color: #bcefd9; --k-bg: #214c3d; }
-:global(.dark) .bp--object { --k-color: #c8ddff; --k-bg: #243e63; }
-:global(.dark) .bp--period { --k-color: #ffe4ad; --k-bg: #5d4522; }
-:global(.dark) .bp__badge { filter: brightness(1.2); }
+:global(.dark .bp--target){ --k-color: #bcefd9; --k-bg: #214c3d; }
+:global(.dark .bp--object){ --k-color: #c8ddff; --k-bg: #243e63; }
+:global(.dark .bp--period){ --k-color: #ffe4ad; --k-bg: #5d4522; }
+:global(.dark .bp__badge){ filter: brightness(1.2); }
 
 @media (max-width: 680px) {
   .bp { padding: 12px; }

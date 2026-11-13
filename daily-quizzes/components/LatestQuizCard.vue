@@ -46,8 +46,8 @@ const base = (path) => withBase(path)
 .latest-card__primary { padding: 10px 14px; border-radius: 9px; color: #fff !important; background: #4f46e5; }
 .latest-card__primary:hover { background: #4338ca; }
 .latest-card__secondary { color: #4f46e5; }
-:global(.dark) .latest-card { border-color: #454b78; }
-:global(.dark) .latest-card__secondary { color: #b8b5ff; }
+:global(.dark .latest-card){ border-color: #454b78; }
+:global(.dark .latest-card__secondary){ color: #b8b5ff; }
 @media (max-width: 640px) {
   .latest-card { align-items: stretch; flex-direction: column; gap: 14px; margin: 16px 0 20px; padding: 17px; }
   .latest-card__actions { align-items: flex-start; }

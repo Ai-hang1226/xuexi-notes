@@ -33,9 +33,10 @@ import LatestQuizCard from './components/LatestQuizCard.vue'
 <details>
 <summary>阶段测评与整卷结果</summary>
 
-- [11月7日｜135题综合检测结果](/daily-quizzes/2026-11-07-xingce-135-review)：93／135、等题赋分68.89；总用时约140分钟（超时约20分钟），资料33分钟，数量部分计算／部分蒙选。120分钟成绩无法还原；[本人首次提交](/daily-quizzes/2026-11-07-xingce-135-answer) · [原卷](/daily-quizzes/2026-11-07-xingce-135) · [42道错题逐题复盘](/cuotiben/135题混合真题批改-2026-11-07)。本卷独立于每日8＋1。
-
-- [江苏A类阶段测评：结果与批改](/daily-quizzes/2026-11-04-jiangsu-a-assessment-review)：行测78／100（43分钟），申论18.5／25（约15分钟），诊断96.5／125，**两科等权模拟折算76／100**，两部分作答约58分钟；[本人首答](/daily-quizzes/2026-11-04-jiangsu-a-assessment-answer) · [原卷](/daily-quizzes/2026-11-04-jiangsu-a-assessment)。独立于每日正式卷记录。11／05已完成[12题行测逐题复盘](/cuotiben/江苏A类阶段测评复盘-2026-11-04)，原卷成绩不改，陌生真题验证待进行。
+| 日期与类型 | 结果 | 用时 | 说明与记录 |
+|---|---|---|---|
+| 11月7日 · 135题综合检测 | 93／135；等题赋分68.89 | 约140分钟，超120分钟约20分钟 | 资料33分钟；数量部分计算、部分蒙选。120分钟成绩无法还原。本卷独立于每日8＋1。 [结果与批改](/daily-quizzes/2026-11-07-xingce-135-review) · [本人首次提交](/daily-quizzes/2026-11-07-xingce-135-answer) · [原卷](/daily-quizzes/2026-11-07-xingce-135) · [42题逐题复盘](/cuotiben/135题混合真题批改-2026-11-07) |
+| 11月4日 · 江苏A类阶段测评 | 行测78／100；申论18.5／25；诊断96.5／125；两科等权模拟折算76／100 | 约58分钟：行测43分钟、申论约15分钟 | 独立于每日正式卷。11月5日已完成12题行测逐题复盘；原卷成绩不改，陌生真题验证待进行。 [结果与批改](/daily-quizzes/2026-11-04-jiangsu-a-assessment-review) · [本人首答](/daily-quizzes/2026-11-04-jiangsu-a-assessment-answer) · [原卷](/daily-quizzes/2026-11-04-jiangsu-a-assessment) · [12题复盘](/cuotiben/江苏A类阶段测评复盘-2026-11-04) |
 
 </details>
 

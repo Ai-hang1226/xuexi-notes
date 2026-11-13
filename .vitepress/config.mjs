@@ -45,16 +45,6 @@ const quizSidebar = [
 
 const kiwi = '/shenlun/kiwi-framework'
 const sidebar = [
-  {
-    text: '🧭 站点入口',
-    collapsed: true,
-    items: [
-      { text: '🏠 首页', link: '/' },
-      { text: '🗺️ 全站地图', link: '/guide/' },
-      { text: '✨ 精选导读', link: '/share/' },
-    ],
-  },
-
   // ===== 行测：六大模块（官方大纲）=====
   {
     text: '📗 行测',
@@ -404,6 +394,9 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/logo.svg',
+    sidebarMenuLabel: '菜单',
+    returnToTopLabel: '返回顶部',
+    darkModeSwitchLabel: '外观',
     nav: [
       { text: '🏠 首页', link: '/' },
       {

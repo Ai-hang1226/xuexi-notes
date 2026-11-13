@@ -13,8 +13,8 @@ description: 考公知识库的整体分类、层级关系与内容入口
 
 | 板块 | 分类依据 | 层级 |
 |---|---|---|
-| 📗 行测 | 大纲六大模块 | 模块 → 体系 / 方法 / 速查；判断推理再分四种题型；政治理论已单列 |
-| 📘 申论 | 大纲五大题型 | **总纲独立** → 题型 → 讲义方法 / 真题 / 评分 |
+| 📗 行测 | 六大模块 | 模块 → 体系 / 方法 / 速查；判断推理再分四种题型；政治理论已单列 |
+| 📘 申论 | 五大题型 | **总纲独立** → 题型 → 讲义方法 / 真题 / 评分 |
 | 📝 每日测验 | 时间 + 性质 | 总览规则 → 专题测评 → 按月份 |
 | 🧠 错题本 | 复盘动作 | 检索 → 方法 → 按模块 → 整卷 → 词库 → 归档 |
 | 🧰 工具与指南 | 跨板块用途 | 速查 / 计算 / 归档 / 站点说明 |
@@ -38,7 +38,7 @@ description: 考公知识库的整体分类、层级关系与内容入口
 
 | 模块 | 学习路径 | 体系 / 方法 | 速查 |
 |---|---|---|---|
-| 🚩 政治理论 | [打开](/guide/zhengzhi) | [知识页](/xingce/zhengzhi-lilun) · [5 章导航](/xingce/政治理论章节导航) | [作答技巧](/xingce/zhengzhi-lilun) |
+| 🚩 政治理论 | [打开](/guide/zhengzhi) | [知识页](/xingce/zhengzhi-lilun) · [5 章导航](/xingce/政治理论章节导航) | [作答技巧](/xingce/zhengzhi-lilun#作答技巧) |
 | 🗣️ 言语理解 | [打开](/guide/yanyu) | [体系 16 章](/xingce/大宝小宝言语体系-正文) · [方法库](/xingce/yanyu-lijie) | [词义辨析](/xingce/言语词义辨析积累表) · [文段结构](/xingce/言语结构识别速查卡) |
 | 🔢 数量关系 | [打开](/guide/shuliang) | [高照 16 章](/xingce/shuliang-guanxi) · [考场选法](/xingce/数量考场选法速查-2026-10-27) | [图解速查](/xingce/图解速查) |
 | 🧩 判断推理 | [打开](/guide/panduan) | [四大题型总览](/xingce/panduan-tuili) | [图推特征与操作](/xingce/图推特征与操作速查) · [类比关系](/xingce/类比具体关系积累表) |
@@ -46,20 +46,6 @@ description: 考公知识库的整体分类、层级关系与内容入口
 | 🌍 常识判断 | [打开](/guide/changshi) | [常识积累](/xingce/changshi-panduan) | [图解速查](/xingce/图解速查) |
 
 判断推理按大纲再分四种题型：[图形推理](/xingce/panduan-tuxing) · [定义判断](/xingce/panduan-dingyi) · [类比推理](/xingce/panduan-leibi) · [逻辑判断](/xingce/panduan-luoji)。
-
-### 七大板块 · 同款章节导航
-
-每个内容板块都用同一套章节卡片页：**章号 → 章名 → 要点标签 → 直接跳到原文对应位置**。数据与版式由 `scripts/gen-section-nav.mjs` 统一生成，原文一处未删；体系页改动后运行 `npm run chapter:sync` 即可同步全部板块。
-
-<LinkCards :columns="3" :items="[
-  { icon: '🚩', title: '政治理论 · 5 章', desc: '创新理论 / 方针政策 / 马原 / 党规', link: '/xingce/政治理论章节导航' },
-  { icon: '📖', title: '言语体系 · 16 章', desc: '体系正文的章节索引', link: '/xingce/言语体系章节导航' },
-  { icon: '🔢', title: '数量关系 · 16 章', desc: '高照体系的章节索引', link: '/xingce/数量关系章节导航' },
-  { icon: '🧩', title: '判断推理 · 四大题型', desc: '图形 / 定义 / 类比 / 逻辑', link: '/xingce/判断推理章节导航' },
-  { icon: '📊', title: '资料分析 · 方法体系', desc: '公式 / 速算 / 读数归位', link: '/xingce/资料分析章节导航' },
-  { icon: '🌍', title: '常识判断 · 知识范围', desc: '法律 / 科技 / 文史 / 经济', link: '/xingce/常识判断章节导航' },
-  { icon: '✍️', title: '申论 · 五大题型', desc: 'Kiwi 总纲的章节视图', link: '/shenlun/五大题型导航' }
-]" />
 
 ## 四、申论：总纲 + 五大题型
 
@@ -79,20 +65,34 @@ description: 考公知识库的整体分类、层级关系与内容入口
 - [📖 打开 Kiwi 总纲](/shenlun/kiwi-framework) · [🧭 申论学习路径](/guide/shenlun)
 - [📊 评分与进步记录](/shenlun/scores) · [📂 原题与讲义](/shenlun/sources/day5-city-greening)
 
-## 五、每日测验与错题本
+## 五、全站七大板块章节导航
+
+每个内容板块都用同一套章节卡片页：**章号 → 章名 → 要点标签 → 直接跳到原文对应位置**。数据与版式由 `scripts/gen-section-nav.mjs` 统一生成，原文一处未删；体系页改动后运行 `npm run chapter:sync` 即可同步全部板块。
+
+<LinkCards :columns="3" :items="[
+  { icon: '🚩', title: '政治理论 · 5 章', desc: '创新理论 / 方针政策 / 马原 / 党规', link: '/xingce/政治理论章节导航' },
+  { icon: '📖', title: '言语体系 · 16 章', desc: '体系正文的章节索引', link: '/xingce/言语体系章节导航' },
+  { icon: '🔢', title: '数量关系 · 16 章', desc: '高照体系的章节索引', link: '/xingce/数量关系章节导航' },
+  { icon: '🧩', title: '判断推理 · 四大题型', desc: '图形 / 定义 / 类比 / 逻辑', link: '/xingce/判断推理章节导航' },
+  { icon: '📊', title: '资料分析 · 方法体系', desc: '公式 / 速算 / 读数归位', link: '/xingce/资料分析章节导航' },
+  { icon: '🌍', title: '常识判断 · 知识范围', desc: '法律 / 科技 / 文史 / 经济', link: '/xingce/常识判断章节导航' },
+  { icon: '✍️', title: '申论 · 五大题型', desc: 'Kiwi 总纲的章节视图', link: '/shenlun/五大题型导航' }
+]" />
+
+## 六、每日测验与错题本
 
 | 板块 | 结构 | 入口 |
 |---|---|---|
 | 📝 每日测验 | 总览规则 → 专题测评（135 题 / 江苏 A 类）→ 按月份 | [测验首页](/daily-quizzes/) · [按月归档](/guide/archive) |
 | 🧠 错题本 | 检索 → 复盘方法 → 按模块专项 → 整卷与阶段 → 词库 → 历史归档 | [全部题目](/cuotiben/) · [复盘方法](/cuotiben/学习闭环) |
 
-## 六、学习闭环
+## 七、学习闭环
 
 ::: tip 五步走
 **做题**（每日测验留首答）→ **对答案**（结果与解析）→ **归因**（错题本按错因归档）→ **沉淀**（方法库 / 速查表）→ **验证**（换同考点真题复测）
 :::
 
-## 七、说明
+## 八、说明
 
 - 本页与各学习路径页都是**新增的导航层**，没有搬动、删改任何原有笔记。
 - 原有路径、标题、日期、链接全部保持原样；顶部搜索仍可检索全站。

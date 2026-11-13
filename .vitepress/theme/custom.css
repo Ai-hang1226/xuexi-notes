@@ -201,7 +201,7 @@ body {
 /* 中等屏幕收合顶栏，避免首页与长菜单挤压或裁切。 */
 .VPNav .VPNavBar,
 .VPNav .VPNavBar .wrapper { background-color: var(--vp-c-bg); }
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1279px) {
   .VPNavBar .VPNavBarMenu,
   .VPNavBar .VPNavBarAppearance,
   .VPNavBar .VPNavBarSocialLinks,

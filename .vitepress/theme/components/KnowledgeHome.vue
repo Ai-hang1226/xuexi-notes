@@ -212,7 +212,7 @@ const essayLinks = [
 
 @media (max-width: 1100px) {
   .home-layout { grid-template-columns: minmax(0, 1fr); }
-  .home-status { position: static; order: -1; }
+  .home-status { position: static; }
   .status-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .status-stats > div:last-child { grid-column: auto; }
 }

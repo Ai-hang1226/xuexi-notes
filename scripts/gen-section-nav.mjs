@@ -94,7 +94,7 @@ const sections = [
     source: 'xingce/大宝小宝言语体系-正文.md',
     sourceLink: '/xingce/大宝小宝言语体系-正文',
     sourceLabel: '打开完整正文（约 519KB，建议电脑阅读）',
-    chapterLevel: 1, pointLevel: 2, chapterFilter: /^第.+章/, numMode: 'fromTitle',
+    chapterLevel: 1, pointLevel: 2, chapterFilter: /^第.+章/,
     related: [
       { icon: '🧭', title: '言语理解学习路径', desc: '体系 → 方法 → 速查', link: '/guide/yanyu' },
       { icon: '🗣️', title: '言语理解方法库', desc: '本模块的方法沉淀', link: '/xingce/yanyu-lijie' },
@@ -214,8 +214,8 @@ const buildChapters = (cfg) => {
       .filter((x) => x.level === cfg.pointLevel && x.line > h.line && x.line < end && !excluded.includes(x.title))
       .slice(0, 6).map((x) => x.title)
     const anchor = h.customAnchor || slug(h.title)
-    // 卡片编号已用连续中文数字，章名里重复的「一、」前缀去掉，避免「二 · 一、核心公式」这类错位。
-    // 言语体系保留「第X章」原名（正文含两组章号，章名本身即记忆线索）。
+    // 卡片编号统一用连续中文数字，章名里重复的「一、」前缀去掉，避免「二 · 一、核心公式」这类错位。
+    // 言语体系正文已于 2026-11-13 把 3 部分 16 章连续重编为第一章～第十六章，编号直接按正文顺序生成。
     const title = cfg.numMode === 'fromTitle'
       ? h.title
       : h.title.replace(/^[一二三四五六七八九十]+、\s*/, '')

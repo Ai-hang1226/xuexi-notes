@@ -77,6 +77,7 @@ const sidebar = [
           { text: '🧭 学习路径', link: '/guide/yanyu' },
           { text: '📖 体系 · 16 章导航', link: '/xingce/言语体系章节导航' },
           { text: '📚 体系正文（完整 519KB）', link: '/xingce/大宝小宝言语体系-正文' },
+          { text: '✅ 章节编号与答案勘误表', link: '/xingce/言语体系答案勘误表' },
           { text: '🧭 方法库', link: '/xingce/yanyu-lijie' },
           { text: '逻辑填空 · 先找依据再比词', link: '/xingce/逻辑填空先找语境依据再比词' },
           { text: '语句排序 · 先找衔接再验证整体', link: '/xingce/语句排序-先找衔接再验证整体' },

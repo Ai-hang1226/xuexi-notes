@@ -9,6 +9,9 @@ const json = (p) => JSON.parse(read(p))
 const d = json('data/dashboard.json')
 const updates = json('data/updates.json')
 const questions = json('cuotiben/review-catalog.json')
+const quizArchive = json('daily-quizzes/archive-data.json')
+const archivedQuizzes = quizArchive.months.flatMap((month) => month.records)
+  .sort((a, b) => b.date.localeCompare(a.date))
 const source = read('data/updates-source.md')
 const chapter = read('xingce/言语体系章节导航.md')
 const course = read('xingce/大宝小宝言语体系-正文.md')
@@ -26,21 +29,41 @@ eq('更新记录 · dashboard.updates.total = updates.json 条数', d.updates.to
 // 2. 错题目录与看板总数
 eq('错题目录 · review-catalog.json = dashboard.questions.total', questions.length, d.questions.total)
 
-// 3. 五模块沉淀之和应等于错题总数（归档映射无遗漏）
+// 3. 每日测验档案与看板同源，防止归档展示与首页摘要脱节
+eq('每日测验 · 档案记录数 = dashboard.quizzes.total', archivedQuizzes.length, d.quizzes.total)
+eq('每日测验 · 最近日期与 dashboard 一致', archivedQuizzes[0]?.date || '', d.quizzes.latest?.date || '')
+check('每日测验 · 最近状态与 dashboard 一致', (d.quizzes.latest?.status || '').startsWith(archivedQuizzes[0]?.status || ''),
+  `期望以“${archivedQuizzes[0]?.status || ''}”开头，实际为“${d.quizzes.latest?.status || ''}”`)
+check('每日测验 · 最新记录保留作答细节', !archivedQuizzes[0]?.detail || (d.quizzes.latest?.status || '').includes(archivedQuizzes[0].detail),
+  `dashboard.latest 未保留“${archivedQuizzes[0]?.detail || ''}”`)
+check('每日测验 · 每条记录均有试卷与解析链接', archivedQuizzes.every((q) =>
+  q.links.some(([label]) => label === '试卷') && q.links.some(([label]) => label === '结果与解析')),
+'存在缺少试卷或解析入口的正式测验记录')
+const quizLinks = quizArchive.months.flatMap((month) => month.records.flatMap((record) => record.links.map(([, href]) => href)))
+  .concat(quizArchive.assessments.flatMap((record) => record.links.map(({ href }) => href)))
+const routeExists = (href) => {
+  const route = decodeURIComponent(href.split('#')[0]).replace(/^\/+/, '')
+  return [route, `${route}.md`, `${route}/index.md`, `${route}.html`]
+    .some((candidate) => fs.existsSync(path.join(root, candidate)))
+}
+check('每日测验 · 档案入口均指向现存页面', quizLinks.every(routeExists),
+  quizLinks.filter((href) => !routeExists(href)).join(', '))
+
+// 4. 五模块沉淀之和应等于错题总数（归档映射无遗漏）
 const sumDepth = d.modules.reduce((s, m) => s + m.沉淀, 0)
 eq('模块沉淀之和 = 错题总数', sumDepth, d.questions.total)
 
-// 4. 进度必须由沉淀量推导，不允许手填失真值
+// 5. 进度必须由沉淀量推导，不允许手填失真值
 const maxDepth = Math.max(...d.modules.map((m) => m.沉淀))
 for (const m of d.modules) {
   const expected = Math.round((m.沉淀 / maxDepth) * 100)
   eq(`沉淀度 · ${m.name}`, m.progress, expected)
 }
 
-// 5. 复测状态计数自洽
+// 6. 复测状态计数自洽
 eq('复测 · 总数 = 已完成 + 待执行 + 需重试', d.retests.total, d.retests.done + d.retests.pending + d.retests.needsRetry)
 
-// 6. 全站通用章节导航与源页面同步（数据来自 section-nav.json，由 gen-section-nav.mjs 生成）
+// 7. 全站通用章节导航与源页面同步（数据来自 section-nav.json，由 gen-section-nav.mjs 生成）
 const nav = json('data/section-nav.json')
 const chapters = json('data/chapters.json')
 const courseChapters = (course.match(/^# 第.+章/gm) || []).length
@@ -62,9 +85,9 @@ for (const [key, sec] of Object.entries(nav.sections)) {
   }
 }
 
-// 7. 章节正文页（含多个 h1，h1 即「第X章」）必须在目录配置里把 h1 纳入并打上 pageClass，
+// 8. 章节正文页（含多个 h1，h1 即「第X章」）必须在目录配置里把 h1 纳入并打上 pageClass，
 //    否则右侧「本页目录」会把重复的页面主标题当第一项、且章级标题不显示。
-const SKIP_DIRS = new Set(['node_modules', '.git', '.vitepress', 'public', 'data', 'scripts', 'dist', '.shots'])
+const SKIP_DIRS = new Set(['node_modules', '.git', '.vitepress', '.agents', '.claude', 'public', 'data', 'scripts', 'dist', '.shots'])
 const mdFiles = []
 ;(function walk(dir) {
   for (const name of fs.readdirSync(path.join(root, dir))) {

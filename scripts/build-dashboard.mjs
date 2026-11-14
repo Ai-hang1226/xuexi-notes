@@ -52,19 +52,15 @@ const updates = updateLines.map((line) => {
 })
 
 // ---------- 测验与复测 ----------
+const quizArchive = JSON.parse(read('daily-quizzes/archive-data.json'))
+const quizzes = quizArchive.months.flatMap((month) => month.records.map((record) => ({
+  date: record.date,
+  status: record.detail ? `${record.status} · ${record.detail}` : record.status,
+  testUrl: record.links.find(([label]) => label === '试卷')?.[1] || '',
+  reviewUrl: record.links.find(([label]) => label === '结果与解析')?.[1] || '',
+}))).sort((a, b) => b.date.localeCompare(a.date))
 const quizMd = read('daily-quizzes/index.md')
 const section = (name, next) => quizMd.split(`## ${name}`)[1]?.split(`## ${next}`)[0] || ''
-const quizRows = section('正式测验', '复测安排').split('\n').filter((l) => /^\| \d{4}-\d{2}-\d{2} \|/.test(l))
-const quizzes = quizRows.map((l) => {
-  const c = l.split('|').map((s) => s.trim())
-  const links = [...(c[3] || '').matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)].map((m) => ({ text: m[1], url: m[2] }))
-  return {
-    date: c[1],
-    status: c[2],
-    testUrl: links.find((link) => link.text === '试卷')?.url || '',
-    reviewUrl: links.find((link) => link.text === '结果与解析')?.url || '',
-  }
-}).sort((a, b) => b.date.localeCompare(a.date))
 const retestRows = section('复测安排', '交流体验').split('\n').filter((l) => /^\| \d{4}-\d{2}-\d{2} \|/.test(l))
 const retests = retestRows.map((l) => {
   const c = l.split('|').map((s) => s.trim())

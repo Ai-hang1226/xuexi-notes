@@ -1,0 +1,126 @@
+{
+  "assessments": [
+    {
+      "date": "2026-11-07",
+      "title": "135题综合检测",
+      "result": "93／135 · 等题赋分 68.89",
+      "time": "约140分钟，比120分钟多约20分钟",
+      "note": "资料分析33分钟；数量题部分计算、部分蒙选。120分钟成绩无法还原；本卷独立于每日8＋1。",
+      "links": [
+        { "label": "结果与批改", "href": "/daily-quizzes/2026-11-07-xingce-135-review" },
+        { "label": "本人首次提交", "href": "/daily-quizzes/2026-11-07-xingce-135-answer" },
+        { "label": "原卷", "href": "/daily-quizzes/2026-11-07-xingce-135" },
+        { "label": "42题逐题复盘", "href": "/cuotiben/135题混合真题批改-2026-11-07" }
+      ]
+    },
+    {
+      "date": "2026-11-04",
+      "title": "江苏A类阶段测评",
+      "result": "行测78／100；申论18.5／25",
+      "time": "约58分钟：行测43分钟、申论约15分钟",
+      "note": "诊断96.5／125；两科等权模拟折算76／100。11月5日已完成12题行测逐题复盘；原卷成绩不改，陌生真题验证待进行。本卷独立于每日正式卷。",
+      "links": [
+        { "label": "结果与批改", "href": "/daily-quizzes/2026-11-04-jiangsu-a-assessment-review" },
+        { "label": "本人首答", "href": "/daily-quizzes/2026-11-04-jiangsu-a-assessment-answer" },
+        { "label": "原卷", "href": "/daily-quizzes/2026-11-04-jiangsu-a-assessment" },
+        { "label": "12题复盘", "href": "/cuotiben/江苏A类阶段测评复盘-2026-11-04" }
+      ]
+    }
+  ],
+  "months": [
+    {
+      "label": "2026年11月",
+      "records": [
+        {
+          "date": "2026-11-06",
+          "status": "已批改",
+          "detail": "行测4／8 · 28分钟",
+          "links": [["试卷", "/daily-quizzes/2026-11-06"], ["结果与解析", "/daily-quizzes/2026-11-06-review"], ["本人首答", "/daily-quizzes/2026-11-06-answer"], ["申论多平台对照", "/daily-quizzes/2026-11-06-essay-comparison"]]
+        },
+        {
+          "date": "2026-11-05",
+          "status": "待作答",
+          "detail": "",
+          "links": [["试卷", "/daily-quizzes/2026-11-05"], ["结果与解析", "/daily-quizzes/2026-11-05-review"]]
+        },
+        {
+          "date": "2026-11-04",
+          "status": "待作答",
+          "detail": "",
+          "links": [["试卷", "/daily-quizzes/2026-11-04"], ["结果与解析", "/daily-quizzes/2026-11-04-review"]]
+        },
+        {
+          "date": "2026-11-03",
+          "status": "待作答",
+          "detail": "",
+          "links": [["试卷", "/daily-quizzes/2026-11-03"], ["结果与解析", "/daily-quizzes/2026-11-03-review"]]
+        },
+        {
+          "date": "2026-11-02",
+          "status": "已批改",
+          "detail": "行测8／8 · 13分钟",
+          "links": [["试卷", "/daily-quizzes/2026-11-02"], ["结果与解析", "/daily-quizzes/2026-11-02-review"], ["本人首答", "/daily-quizzes/2026-11-02-answer"]]
+        },
+        {
+          "date": "2026-11-01",
+          "status": "待作答",
+          "detail": "",
+          "links": [["试卷", "/daily-quizzes/2026-11-01"], ["结果与解析", "/daily-quizzes/2026-11-01-review"]]
+        }
+      ]
+    },
+    {
+      "label": "2026年10月",
+      "records": [
+        {
+          "date": "2026-10-31",
+          "status": "待作答",
+          "detail": "",
+          "links": [["试卷", "/daily-quizzes/2026-10-31"], ["结果与解析", "/daily-quizzes/2026-10-31-review"]]
+        },
+        {
+          "date": "2026-10-30",
+          "status": "待作答",
+          "detail": "",
+          "links": [["试卷", "/daily-quizzes/2026-10-30"], ["结果与解析", "/daily-quizzes/2026-10-30-review"]]
+        },
+        {
+          "date": "2026-10-29",
+          "status": "待作答",
+          "detail": "",
+          "links": [["试卷", "/daily-quizzes/2026-10-29"], ["结果与解析", "/daily-quizzes/2026-10-29-review"]]
+        },
+        {
+          "date": "2026-10-28",
+          "status": "已批改",
+          "detail": "行测7／8 · 20分钟",
+          "links": [["试卷", "/daily-quizzes/2026-10-28"], ["结果与解析", "/daily-quizzes/2026-10-28-review"], ["本人首答", "/daily-quizzes/2026-10-28-answer"]]
+        },
+        {
+          "date": "2026-10-27",
+          "status": "待作答",
+          "detail": "",
+          "links": [["试卷", "/daily-quizzes/2026-10-27"], ["结果与解析", "/daily-quizzes/2026-10-27-review"]]
+        },
+        {
+          "date": "2026-10-26",
+          "status": "已批改",
+          "detail": "行测7／8 · 13分钟",
+          "links": [["试卷", "/daily-quizzes/2026-10-26"], ["结果与解析", "/daily-quizzes/2026-10-26-review"], ["本人首答", "/daily-quizzes/2026-10-26-answer"]]
+        },
+        {
+          "date": "2026-10-25",
+          "status": "休息存档",
+          "detail": "未作答，不计分",
+          "links": [["试卷", "/daily-quizzes/2026-10-25"], ["结果与解析", "/daily-quizzes/2026-10-25-review"]]
+        },
+        {
+          "date": "2026-10-24",
+          "status": "已批改",
+          "detail": "行测7／8 · 12分钟",
+          "links": [["试卷", "/daily-quizzes/2026-10-24"], ["结果与解析", "/daily-quizzes/2026-10-24-review"], ["本人首答", "/daily-quizzes/2026-10-24-answer"]]
+        }
+      ]
+    }
+  ]
+}

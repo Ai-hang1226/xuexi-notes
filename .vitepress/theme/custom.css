@@ -562,6 +562,51 @@ body {
 .quiz-page .quiz-shenlun table th,
 .quiz-page .quiz-shenlun table td { font-size: var(--doc-table); }
 
+/* 每日测验首页的复测清单在手机上按记录阅读，避免三列长表横向拖动。 */
+@media (max-width: 640px) {
+  .quiz-index-page .vp-doc .table-scroll { overflow: visible; }
+  .quiz-index-page .vp-doc .table-scroll[data-reading-overflow]::before { display: none; }
+  .quiz-index-page .vp-doc .table-scroll > table.study-table { display: block; width: 100%; min-width: 0; table-layout: fixed; }
+  .quiz-index-page .vp-doc table.study-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+  }
+  .quiz-index-page .vp-doc table.study-table tbody { display: grid; gap: 9px; }
+  .quiz-index-page .vp-doc table.study-table tbody tr {
+    display: block;
+    padding: 10px 12px;
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 10px;
+    background: var(--vp-c-bg-soft);
+  }
+  .quiz-index-page .vp-doc table.study-table tbody td {
+    display: block;
+    min-width: 0;
+    padding: 5px 0;
+    border: 0;
+    font-size: 15px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+  }
+  .quiz-index-page .vp-doc table.study-table tbody td::before {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--vp-c-text-2);
+    font-size: 12px;
+    font-weight: 650;
+    line-height: 1.4;
+  }
+  .quiz-index-page .vp-doc table.study-table tbody td:nth-child(1)::before { content: "计划日期"; }
+  .quiz-index-page .vp-doc table.study-table tbody td:nth-child(2)::before { content: "复测目标"; }
+  .quiz-index-page .vp-doc table.study-table tbody td:nth-child(3)::before { content: "当前状态"; }
+}
+
 /* 错题本等自定义组件里破格的固定字号（scoped 样式定义在组件内） */
 .vp-doc .filters label,
 .vp-doc .reset,

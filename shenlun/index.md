@@ -4,61 +4,48 @@ title: 申论总览 · 从原文到答案
 type: study-index
 status: active
 created: 2026-10-21
-updated: 2026-11-10
+updated: 2026-11-14
 ---
 
 # 申论总览 · 从原文到答案
 
-**先分清题目任务，再学习老师如何提炼、归类和组织，最后对照本人原答改写。**
+先分清题目任务，再学习老师如何提炼、归类和组织，最后对照本人原答改写。
 
 ::: tip 分类说明
-[📖 Kiwi 申论知识框架](/shenlun/kiwi-framework)是**覆盖五大题型的总纲**，不是「归纳概括」的下属页面。总纲之下按大纲分五类题型；本页的 DAY5—DAY9 属于其中的**归纳概括**。
+[Kiwi 申论知识框架](/shenlun/kiwi-framework)覆盖申论大纲中的五类题型，是总纲，不是“归纳概括”的下属页面。DAY5—DAY9练习记录均属于归纳概括。
 :::
 
-## 📖 总纲：五大题型
+## 五类题型与练习入口
 
-| 题型 | 讲义方法 | 本人练习 |
-|---|---|---|
-| 📒 归纳概括 | [Kiwi · 归纳概括](/shenlun/kiwi-framework#归纳概括-问什么-归纳什么) | [DAY5](/shenlun/day5-city-greening) · [DAY6](/shenlun/day6-business-environment) · [DAY7](/shenlun/day7-backpack-bank) · [DAY8](/shenlun/day8-public-services) · [DAY9](/shenlun/day9-digital-city) |
-| 🔍 综合分析 | [Kiwi · 综合分析](/shenlun/kiwi-framework#三、综合分析-观点和依据要对齐) | 暂无专项练习 |
-| 💡 问题对策 | [Kiwi · 问题对策](/shenlun/kiwi-framework#四、问题对策-先有问题-再看办法) | 暂无专项练习 |
-| 📄 公文写作 | [Kiwi · 公文写作](/shenlun/kiwi-framework#五、公文写作-文种和任务决定结构) | 暂无专项练习 |
-| ✍️ 文章写作 | [Kiwi · 文章写作](/shenlun/kiwi-framework#六、文章写作-从立意到论证) | 暂无专项练习 |
+- **归纳概括**： [Kiwi归纳概括方法](/shenlun/kiwi-framework#归纳概括-问什么-归纳什么) · 练习：[DAY5](/shenlun/day5-city-greening)、[DAY6](/shenlun/day6-business-environment)、[DAY7](/shenlun/day7-backpack-bank)、[DAY8](/shenlun/day8-public-services)、[DAY9](/shenlun/day9-digital-city)。已有答题、讨论和评分记录；DAY5—DAY6改写及陌生题验证仍待完成。
+- **综合分析**： [Kiwi综合分析方法](/shenlun/kiwi-framework#三、综合分析-观点和依据要对齐)。暂无专项练习。
+- **问题对策**： [Kiwi问题对策方法](/shenlun/kiwi-framework#四、问题对策-先有问题-再看办法)。暂无专项练习。
+- **公文写作**： [Kiwi公文写作方法](/shenlun/kiwi-framework#五、公文写作-文种和任务决定结构)。暂无专项练习。
+- **文章写作**： [Kiwi文章写作方法](/shenlun/kiwi-framework#六、文章写作-从立意到论证)。暂无专项练习。
 
-[🧭 完整申论学习路径](/guide/shenlun)
+[五大题型导航](/shenlun/五大题型导航) · [完整申论学习路径](/guide/shenlun)
 
-<div class="visual-grid">
-<a href="/xuexi-notes/shenlun/day5-city-greening"><strong>DAY5｜城市绿化</strong><span>只问做法：先分组，再用总括句统领</span></a>
-<a href="/xuexi-notes/shenlun/day6-business-environment"><strong>DAY6｜营商环境</strong><span>措施＋成效：把行动与结果配起来</span></a>
-</div>
+## 近期复习重点
 
-<figure class="study-visual study-visual-wide">
-<a href="/xuexi-notes/visuals/shenlun-review-map.svg" target="_blank" rel="noopener"><img src="/visuals/shenlun-review-map.svg" alt="申论复习大字结构图" width="1120" loading="eager" decoding="async" /></a>
-<figcaption>手机可在图内左右滑动；点图查看原图</figcaption>
-</figure>
+- **DAY5｜F市城市绿化**：[原题与讲义解析](/shenlun/day5-city-greening)。只问做法；先分保护、利用两组，再用总括句统领。重点重写第3条。
+- **DAY6｜H市营商环境**：[原题与讲义解析](/shenlun/day6-business-environment)。措施和成效要对应；按处理诉求、政策服务分组，重点重写第2条并补成效。
 
-## 本轮两题
+两题题号按讲义正文，分别为DAY05与DAY06；原答于10月20日提交，实际作答日期、用时、是否先看解析待补。2026年10月28日按用户要求补评学习分。讨论和评分不等于独立掌握。
 
-| 题目 | 只抓这条书写主线 | 当前状态 |
-|---|---|---|
-| [DAY5｜F市城市绿化](/shenlun/day5-city-greening) | 总括做法＋行动主干；重点分清古树保护与利用 | 已讨论、已整理；本人改写待做 |
-| [DAY6｜H市营商环境](/shenlun/day6-business-environment) | 总括措施＋具体操作＋对应成效 | 已讨论、已整理；本人改写待做 |
+<details>
+<summary>查看5份已批改记录与当前复习状态</summary>
 
-题号统一按讲义正文：城市绿化为DAY05，营商环境为DAY06。两题原答于10/20提交；实际作答日期、用时、是否先看解析待补。此前未评分；2026-10-28按用户新要求补评学习分。讨论、评分与归档不等于独立掌握。
+- **[DAY5｜城市绿化](/shenlun/day5-city-greening) · 11.5／15**：四个大板块已基本找到；继续练保护、利用分组与总括范围。改写待做。
+- **[DAY6｜营商环境](/shenlun/day6-business-environment) · 10／15**：练习措施分组、总括范围与成效收束。改写待做。
+- **[DAY7｜背包银行](/shenlun/day7-backpack-bank) · 12／20**：特点与作用；先找作用，再回看做法、比较并合并特点。[方法卡：特点与作用](/shenlun/features-vs-effects)。
+- **[DAY8｜创新公共服务](/shenlun/day8-public-services) · 11.5／15**：四条框架清楚；重点练从设施现象归纳调研、数据与资源问题。
+- **[DAY9｜Q市加数前行](/shenlun/day9-digital-city) · 7／10**：数据平台四项齐；重点补六大应用清单和场景建设，按1361回查后压缩至200字内。首答另记，不据此推断跨题进退。
 
-## 看图复习
+分数均为学习性参考分，保留首答基线；不把不同题型的分数直接比较。改写与陌生题迁移另记，目前尚无提交。[完整评分与进步记录](/shenlun/scores)。
 
-<figure class="study-visual study-visual-wide">
-<a href="/xuexi-notes/visuals/shenlun-day5-city-greening.svg" target="_blank" rel="noopener"><img src="/visuals/shenlun-day5-city-greening.svg" alt="申论复习大字结构图" width="1120" loading="eager" decoding="async" /></a>
-<figcaption>手机可在图内左右滑动；点图查看原图</figcaption>
-</figure>
+</details>
 
-<figure class="study-visual study-visual-wide">
-<a href="/xuexi-notes/visuals/shenlun-day6-business-environment.svg" target="_blank" rel="noopener"><img src="/visuals/shenlun-day6-business-environment.svg" alt="申论复习大字结构图" width="1120" loading="eager" decoding="async" /></a>
-<figcaption>手机可在图内左右滑动；点图查看原图</figcaption>
-</figure>
-
-## 本轮共同方法
+## 归纳概括共同方法
 
 **原文找点 → 分清信息功能 → 合并同类信息 → 总括句统领 → 按题目任务写答案。**
 
@@ -71,36 +58,28 @@ updated: 2026-11-10
 
 本人反馈：“都是按照文段一一抄下来，没有逻辑，很混乱，措施和成效也是混在一起。”本轮讨论进一步收窄：四个大板块已基本找到，重点改进块内分组、总括范围与成效收束；按段找点、在同一条中写措施与成效本身可以成立。具体未见信息还是提炼时舍弃，待结合本人标记确认。
 
-## 改写与验证
+## 看图复习
+
+<figure class="study-visual study-visual-wide">
+<a href="/xuexi-notes/visuals/shenlun-day5-city-greening.svg" target="_blank" rel="noopener"><img src="/visuals/shenlun-day5-city-greening.svg" alt="DAY5城市绿化的分组与答案结构图" width="1120" loading="lazy" decoding="async" /></a>
+<figcaption>点图查看原图；手机可在图内左右滑动</figcaption>
+</figure>
+
+<figure class="study-visual study-visual-wide">
+<a href="/xuexi-notes/visuals/shenlun-day6-business-environment.svg" target="_blank" rel="noopener"><img src="/visuals/shenlun-day6-business-environment.svg" alt="DAY6营商环境的措施与成效配对图" width="1120" loading="lazy" decoding="async" /></a>
+<figcaption>点图查看原图；手机可在图内左右滑动</figcaption>
+</figure>
+
+## 下一步
 
 - [ ] DAY5：先分保护、利用两组，再亲自重写第3条。
 - [ ] DAY6：按处理诉求、政策服务两组，亲自重写第2条并配成效。
 - [ ] 完成后再用未看解析的同类题检验迁移，结果另记。
 
-以上为待完成动作，不记训练完成。既有首轮“独立作答→对应课程→讨论→本人改写→陌生题验证”的约定继续使用，不追加整套课程计划。
+以上为待完成动作，不记训练完成。沿用“独立作答→对应课程→讨论→本人改写→陌生题验证”的既定流程，不追加整套课程计划。
 
 ## 来源与原始资料
 
 - [DAY5原题、完整材料与讲义解析](/shenlun/sources/day5-city-greening)
 - [DAY6原题、完整材料与讲义解析](/shenlun/sources/day6-business-environment)
-- 主要对照为本人提供的老师讲义及其参考答案；本轮还原讲义分析与成稿的书写逻辑，不把补充说明当作老师课堂原话，不以其他答案另设要求。
-
-[返回网站首页](/)
-
-## DAY7与以后评分（2026-10-28补充）
-
-- [DAY7｜背包银行](/shenlun/day7-backpack-bank)：特点与作用、原答对照与学习性评分。
-- [特点与作用：区分及先找作用法](/shenlun/features-vs-effects)：先找作用→回看做法→观察比较→合并特点，成稿仍按题干顺序。
-- [三题评分与长期规则](/shenlun/scores)：DAY5为11.5／15，DAY6为10／15，DAY7为12／20；后续默认继续按本人首答与老师答案给学习分。
-
-## 我的进步入口
-
-[评分与进步记录](/shenlun/scores)：三题首答基线、历次改写、陌生题验证与真实用时分别记录。以后每次批改默认更新并同步Obsidian本地；目前改写与迁移尚无提交。
-
-## DAY8｜问题与不足
-
-[创新公共服务：本人首答与老师对照](/shenlun/day8-public-services)：学习分11.5／15，四条框架清楚，重点练从设施现象归纳调研、数据与资源问题。改写与迁移尚无提交。[查看评分进步](/shenlun/scores)。
-
-## DAY9｜原因与1361组织线索
-
-[Q市加数前行：原答与老师对照](/shenlun/day9-digital-city)：学习分7／10，数据平台四项齐全，重点补六大应用清单和场景建设，按1361回查后压缩至200字内。首答另记，未提交改写或迁移，不作跨题进退判断。
+- 主要对照为本人提供的老师讲义及其参考答案；本页还原讲义分析与成稿的书写逻辑，不把补充说明当作老师课堂原话，也不以其他答案另设要求。

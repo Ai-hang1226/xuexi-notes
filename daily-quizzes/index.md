@@ -1,12 +1,13 @@
 ---
 title: 每日测验
-pageClass: quiz-page
+pageClass: quiz-page quiz-index-page
 prev: false
 next: false
 ---
 
 <script setup>
 import LatestQuizCard from './components/LatestQuizCard.vue'
+import QuizArchive from './components/QuizArchive.vue'
 </script>
 
 # 每日测验
@@ -30,34 +31,7 @@ import LatestQuizCard from './components/LatestQuizCard.vue'
 
 </details>
 
-<details>
-<summary>阶段测评与整卷结果</summary>
-
-| 日期与类型 | 结果 | 用时 | 说明与记录 |
-|---|---|---|---|
-| 11月7日 · 135题综合检测 | 93／135；等题赋分68.89 | 约140分钟，超120分钟约20分钟 | 资料33分钟；数量部分计算、部分蒙选。120分钟成绩无法还原。本卷独立于每日8＋1。 [结果与批改](/daily-quizzes/2026-11-07-xingce-135-review) · [本人首次提交](/daily-quizzes/2026-11-07-xingce-135-answer) · [原卷](/daily-quizzes/2026-11-07-xingce-135) · [42题逐题复盘](/cuotiben/135题混合真题批改-2026-11-07) |
-| 11月4日 · 江苏A类阶段测评 | 行测78／100；申论18.5／25；诊断96.5／125；两科等权模拟折算76／100 | 约58分钟：行测43分钟、申论约15分钟 | 独立于每日正式卷。11月5日已完成12题行测逐题复盘；原卷成绩不改，陌生真题验证待进行。 [结果与批改](/daily-quizzes/2026-11-04-jiangsu-a-assessment-review) · [本人首答](/daily-quizzes/2026-11-04-jiangsu-a-assessment-answer) · [原卷](/daily-quizzes/2026-11-04-jiangsu-a-assessment) · [12题复盘](/cuotiben/江苏A类阶段测评复盘-2026-11-04) |
-
-</details>
-
-## 正式测验
-
-| 日期 | 状态 | 查阅 |
-|---|---|---|
-| 2026-11-06 | 已批改 · 行测4/8 · 28分钟 | [试卷](/daily-quizzes/2026-11-06) · [结果与解析](/daily-quizzes/2026-11-06-review) · [本人首答](/daily-quizzes/2026-11-06-answer) · [申论多平台对照](/daily-quizzes/2026-11-06-essay-comparison) |
-| 2026-11-05 | 待作答 | [试卷](/daily-quizzes/2026-11-05) · [结果与解析](/daily-quizzes/2026-11-05-review) |
-| 2026-11-04 | 待作答 | [试卷](/daily-quizzes/2026-11-04) · [结果与解析](/daily-quizzes/2026-11-04-review) |
-| 2026-11-03 | 待作答 | [试卷](/daily-quizzes/2026-11-03) · [结果与解析](/daily-quizzes/2026-11-03-review) |
-| 2026-11-02 | 已批改 · 行测8/8 · 13分钟 | [试卷](/daily-quizzes/2026-11-02) · [结果与解析](/daily-quizzes/2026-11-02-review) · [本人首答](/daily-quizzes/2026-11-02-answer) |
-| 2026-11-01 | 待作答 | [试卷](/daily-quizzes/2026-11-01) · [结果与解析](/daily-quizzes/2026-11-01-review) |
-| 2026-10-31 | 待作答 | [试卷](/daily-quizzes/2026-10-31) · [结果与解析](/daily-quizzes/2026-10-31-review) |
-| 2026-10-30 | 待作答 | [试卷](/daily-quizzes/2026-10-30) · [结果与解析](/daily-quizzes/2026-10-30-review) |
-| 2026-10-29 | 待作答 | [试卷](/daily-quizzes/2026-10-29) · [结果与解析](/daily-quizzes/2026-10-29-review) |
-| 2026-10-28 | 已批改 · 行测7/8 · 20分钟 | [试卷](/daily-quizzes/2026-10-28) · [结果与解析](/daily-quizzes/2026-10-28-review) · [本人首答](/daily-quizzes/2026-10-28-answer) |
-| 2026-10-27 | 待作答 | [试卷](/daily-quizzes/2026-10-27) · [结果与解析](/daily-quizzes/2026-10-27-review) |
-| 2026-10-26 | 已批改 · 行测7/8 · 13分钟 | [试卷](/daily-quizzes/2026-10-26) · [结果与解析](/daily-quizzes/2026-10-26-review) · [本人首答](/daily-quizzes/2026-10-26-answer) |
-| 2026-10-25 | 休息存档 · 未作答，不计分 | [试卷](/daily-quizzes/2026-10-25) · [结果与解析](/daily-quizzes/2026-10-25-review) |
-| 2026-10-24 | 已批改 · 行测7/8 · 12分钟 | [试卷](/daily-quizzes/2026-10-24) · [结果与解析](/daily-quizzes/2026-10-24-review) · [本人首答](/daily-quizzes/2026-10-24-answer) |
+<QuizArchive />
 
 ## 复测安排
 

@@ -22,15 +22,29 @@ const essayLinks = [
   { name: '公文写作', path: '/shenlun/gongwen-geshi' },
   { name: '文章写作', path: '/shenlun/wenzhang-xiezuo' },
 ]
+
+const quickActions = [
+  { name: '每日测验', hint: '试卷与批改', mark: '测', path: '/daily-quizzes/' },
+  { name: '错题复盘', hint: '按模块筛选', mark: '错', path: '/cuotiben/' },
+  { name: '135题复盘', hint: '42题分组直达', mark: '卷', path: '/cuotiben/135题混合真题批改-2026-11-07' },
+]
 </script>
 
 <template>
   <div class="knowledge-home">
     <header class="home-intro">
-      <span class="home-kicker">PERSONAL EXAM KNOWLEDGE BASE</span>
+      <span class="home-kicker">公考知识库 · 学习入口</span>
       <h1>把知识找到，把练习接上</h1>
       <p>行测六大模块、申论五类题型，以及真题练习和复盘记录。先按目录进入，需要时再看最近状态。</p>
     </header>
+
+    <nav class="home-quick-access" aria-label="常用学习入口">
+      <a v-for="item in quickActions" :key="item.name" class="quick-action" :href="base(item.path)">
+        <span class="quick-action__mark" aria-hidden="true">{{ item.mark }}</span>
+        <span class="quick-action__copy"><b>{{ item.name }}</b><small>{{ item.hint }}</small></span>
+        <span class="quick-action__arrow" aria-hidden="true">↗</span>
+      </a>
+    </nav>
 
     <div class="home-layout">
       <div class="home-directory" aria-label="知识目录">
@@ -64,12 +78,15 @@ const essayLinks = [
 
           <section class="home-section">
             <div class="section-heading">
-              <div><span class="section-index">03</span><h2>练习与复盘</h2></div>
+              <div><span class="section-index">03</span><h2>阶段回看</h2></div>
             </div>
-            <div class="action-links">
-              <a :href="base('/daily-quizzes/')"><span class="action-mark">测</span><span><b>每日测验</b><small>真题练习、首答与批改记录</small></span><i>→</i></a>
-              <a :href="base('/cuotiben/')"><span class="action-mark">错</span><span><b>行测错题本</b><small>按模块、错因和待验证状态筛选</small></span><i>→</i></a>
-              <a :href="base('/cuotiben/135题混合真题批改-2026-11-07')"><span class="action-mark">卷</span><span><b>135题整卷复盘</b><small>按模块直达42道已讨论错题</small></span><i>→</i></a>
+            <div class="stage-links">
+              <a :href="base('/daily-quizzes/2026-11-04-jiangsu-a-assessment-review')">
+                <b>江苏 A 类阶段测评</b><span>结果、用时与复盘边界</span>
+              </a>
+              <a :href="base('/shenlun/scores')">
+                <b>申论评分与进步</b><span>首答、改写和迁移分别记录</span>
+              </a>
             </div>
           </section>
         </div>
@@ -95,10 +112,10 @@ const essayLinks = [
         <p class="status-updated">数据快照生成于 {{ d.generatedAt }}</p>
 
         <div v-if="latest" class="latest-quiz">
-          <span class="latest-quiz__label">最近一条正式测验记录</span>
+          <span class="latest-quiz__label">站内最新已登记正式卷</span>
           <strong>{{ latest.date }}</strong>
           <span class="latest-quiz__result">{{ latest.status }}</span>
-          <a :href="base(latest.testUrl || '/daily-quizzes/')">回看这份试卷 <span>↗</span></a>
+          <a :href="base(latest.testUrl || '/daily-quizzes/')">查看本卷 <span>↗</span></a>
         </div>
         <div v-else class="latest-quiz latest-quiz--empty">
           <span class="latest-quiz__label">正式测验记录</span>
@@ -108,7 +125,7 @@ const essayLinks = [
 
         <div class="status-stats">
           <div><b>{{ d.quizzes.reviewed }}</b><span>已批改正式测验</span></div>
-          <div><b>{{ d.quizzes.pending }}</b><span>待作答历史卷</span></div>
+          <div><b>{{ d.quizzes.pending }}</b><span>未作答旧卷</span></div>
           <div><b>{{ d.questions.total }}</b><span>错题本记录</span></div>
         </div>
         <div class="status-progress">
@@ -118,8 +135,8 @@ const essayLinks = [
           </div>
           <p>{{ d.retests.pending }} 项待验证 · {{ d.retests.needsRetry }} 项需再测</p>
         </div>
-        <a class="status-cta" :href="base('/cuotiben/')">进入错题筛选 <span>→</span></a>
-        <p class="status-note">仅统计已登记的数据；完成复测不等于独立掌握，未登记进展不会推测。</p>
+        <a class="status-cta" :href="base('/daily-quizzes/#复测安排')">查看复测安排 <span>→</span></a>
+        <p class="status-note">未作答旧卷可按需回看，不计欠账。仅统计已登记数据；复测完成不等于独立掌握。</p>
       </aside>
     </div>
 
@@ -147,6 +164,16 @@ const essayLinks = [
 .home-kicker { color: var(--home-accent); font-size: 12px; font-weight: 750; letter-spacing: .1em; }
 .home-intro h1 { margin: 8px 0 8px; border: 0; padding: 0; font-size: clamp(28px, 3vw, 38px); line-height: 1.3; letter-spacing: -.025em; }
 .home-intro p { max-width: 760px; margin: 0; color: var(--vp-c-text-2); font-size: 16px; line-height: 1.75; }
+.home-quick-access { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 0 18px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 13px; background: var(--vp-c-bg-soft); }
+.quick-action { display: grid; grid-template-columns: 27px minmax(0, 1fr) 12px; align-items: center; gap: 10px; min-width: 0; min-height: 72px; padding: 12px 16px; }
+.quick-action + .quick-action { border-left: 1px solid var(--vp-c-divider); }
+.quick-action:hover { background: var(--home-accent-soft); }
+.quick-action__mark { display: grid; place-items: center; width: 27px; height: 27px; border-radius: 8px; color: var(--home-accent); background: var(--vp-c-bg); font-size: 13px; font-weight: 800; }
+.quick-action__copy { min-width: 0; }
+.quick-action__copy b, .quick-action__copy small { display: block; }
+.quick-action__copy b { font-size: 15px; line-height: 1.4; }
+.quick-action__copy small { margin-top: 2px; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.4; }
+.quick-action__arrow { color: var(--home-accent); font-size: 13px; }
 .home-layout { display: grid; grid-template-columns: minmax(0, 1fr) 286px; align-items: start; gap: 24px; }
 .home-directory { display: grid; gap: 18px; min-width: 0; }
 .home-section { min-width: 0; padding: 22px 24px; border: 1px solid var(--vp-c-divider); border-radius: 16px; background: var(--vp-c-bg); }
@@ -168,15 +195,11 @@ const essayLinks = [
 .essay-links a span { color: var(--home-accent); }
 .section-foot-links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 13px; padding-top: 12px; border-top: 1px solid var(--vp-c-divider); }
 .section-foot-links a { color: var(--home-accent); font-size: 13px; font-weight: 650; }
-.action-links { display: grid; }
-.action-links > a { display: grid; grid-template-columns: 34px minmax(0, 1fr) 16px; align-items: center; gap: 10px; padding: 12px 0; border-top: 1px solid var(--vp-c-divider); }
-.action-links > a:first-child { padding-top: 0; border-top: 0; }
-.action-links > a:last-child { padding-bottom: 0; }
-.action-mark { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 10px; color: var(--home-accent); background: var(--home-accent-soft); font-size: 14px; font-weight: 800; }
-.action-links b, .action-links small { display: block; }
-.action-links b { font-size: 15px; }
-.action-links small { margin-top: 2px; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.45; }
-.action-links i { color: var(--home-accent); font-style: normal; }
+.stage-links { display: grid; gap: 10px; }
+.stage-links a { display: grid; gap: 3px; padding: 11px 12px; border-left: 3px solid var(--home-accent); background: var(--vp-c-bg-soft); }
+.stage-links a:hover { background: var(--home-accent-soft); }
+.stage-links b { font-size: 14px; }
+.stage-links span { color: var(--vp-c-text-2); font-size: 12px; line-height: 1.5; }
 .resource-links { display: flex; flex-wrap: wrap; gap: 8px; }
 .resource-links a { padding: 8px 12px; border: 1px solid var(--vp-c-divider); border-radius: 999px; color: var(--vp-c-text-2); font-size: 13px; transition: .18s; }
 .home-status { position: sticky; top: calc(var(--vp-nav-height) + 24px); padding: 20px; border: 1px solid #d9dcf7; border-radius: 16px; background: linear-gradient(155deg, var(--vp-c-bg), var(--vp-c-bg-soft)); }
@@ -194,16 +217,17 @@ const essayLinks = [
 .status-stats > div { display: grid; gap: 2px; padding: 10px; border: 1px solid var(--vp-c-divider); border-radius: 10px; background: var(--vp-c-bg); }
 .status-stats > div:last-child { grid-column: 1 / -1; }
 .status-stats b { color: var(--home-accent); font-size: 21px; line-height: 1.2; font-variant-numeric: tabular-nums; }
-.status-stats span { color: var(--vp-c-text-2); font-size: 11px; }
+.status-stats span { color: var(--vp-c-text-2); font-size: 12px; line-height: 1.4; }
 .status-progress { margin: 4px 0 12px; }
-.status-progress__label { display: flex; justify-content: space-between; gap: 8px; color: var(--vp-c-text-2); font-size: 11px; }
+.status-progress__label { display: flex; justify-content: space-between; gap: 8px; color: var(--vp-c-text-2); font-size: 12px; }
 .status-progress__label b { color: var(--vp-c-text-1); font-variant-numeric: tabular-nums; }
 .status-progress__track { height: 7px; margin: 6px 0; overflow: hidden; border-radius: 999px; background: var(--vp-c-divider); }
 .status-progress__track span { display: block; height: 100%; border-radius: inherit; background: var(--home-accent); transition: width .2s; }
-.status-progress p { margin: 0; color: var(--vp-c-text-2); font-size: 10px; line-height: 1.45; }
+.status-progress p { margin: 0; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.45; }
 .status-cta { display: flex; align-items: center; justify-content: space-between; padding: 11px 13px; border-radius: 10px; color: #fff !important; background: var(--home-cta); font-size: 14px; font-weight: 700; }
 .status-cta:hover { background: #4338ca; }
-.status-note { margin: 12px 0 0; color: var(--vp-c-text-2); font-size: 11px; line-height: 1.55; }
+.status-note { margin: 12px 0 0; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.55; }
+.knowledge-home a:focus-visible { outline: 3px solid var(--home-accent); outline-offset: 3px; border-radius: 4px; }
 .home-footer { display: flex; justify-content: center; gap: 10px; padding: 23px 0 4px; color: var(--vp-c-text-2); font-size: 13px; }
 .home-footer a:hover { color: var(--home-accent); }
 :global(.dark .knowledge-home){ --home-accent: #a5b4fc; --home-accent-soft: rgba(165, 180, 252, .12); --home-cta: #4f46e5; }
@@ -228,6 +252,12 @@ const essayLinks = [
 @media (max-width: 480px) {
   .home-intro h1 { font-size: 28px; }
   .home-section { padding: 16px 13px; border-radius: 13px; }
+  .home-quick-access { margin-bottom: 13px; }
+  .quick-action { grid-template-columns: 24px minmax(0, 1fr); gap: 7px; min-height: 76px; padding: 10px 9px; }
+  .quick-action__mark { width: 24px; height: 24px; font-size: 12px; }
+  .quick-action__copy b { font-size: 13px; }
+  .quick-action__copy small { font-size: 12px; }
+  .quick-action__arrow { display: none; }
   .section-heading { align-items: flex-start; }
   .section-heading h2 { font-size: 19px; }
   .section-more { padding-top: 5px; font-size: 12px; }
@@ -240,5 +270,9 @@ const essayLinks = [
   .status-stats { grid-template-columns: 1fr 1fr; }
   .status-stats > div:last-child { grid-column: 1 / -1; }
   .home-footer { font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .knowledge-home *, .knowledge-home *::before, .knowledge-home *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
 </style>

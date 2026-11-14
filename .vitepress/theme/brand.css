@@ -51,6 +51,35 @@
   .review-135-page .VPDoc .content .content-container { max-width: 720px; }
 }
 
+/* 135题复盘先给出真实成绩口径，再按六个模块组织42道题。 */
+.review-135-page .review-135-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 18px 0 6px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+}
+.review-135-page .review-135-summary > div {
+  display: grid;
+  align-content: center;
+  gap: 3px;
+  min-width: 0;
+  padding: 13px 14px;
+}
+.review-135-page .review-135-summary > div + div { border-left: 1px solid var(--vp-c-divider); }
+.review-135-page .review-135-summary strong { color: var(--vp-c-brand-1); font-size: 21px; line-height: 1.35; font-variant-numeric: tabular-nums; }
+.review-135-page .review-135-summary span { color: var(--vp-c-text-2); font-size: 13px; line-height: 1.4; }
+.review-135-page .review-135-summary-note { margin: 0 0 18px; color: var(--vp-c-text-2); font-size: .82em; line-height: 1.6; }
+@media (max-width: 640px) {
+  .review-135-page .review-135-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .review-135-page .review-135-summary > div { padding: 11px 12px; }
+  .review-135-page .review-135-summary > div + div { border-left: 0; }
+  .review-135-page .review-135-summary > div:nth-child(even) { border-left: 1px solid var(--vp-c-divider); }
+  .review-135-page .review-135-summary > div:nth-child(n + 3) { border-top: 1px solid var(--vp-c-divider); }
+  .review-135-page .review-135-summary strong { font-size: 19px; }
+}
+
 /* 阅读进度与返回顶部 */
 .site-progress {
   position: fixed;

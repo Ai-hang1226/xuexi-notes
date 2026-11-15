@@ -4,24 +4,24 @@ title: 申论总览 · 从原文到答案
 type: study-index
 status: active
 created: 2026-10-21
-updated: 2026-11-14
+updated: 2026-11-15
 ---
 
 # 申论总览 · 从原文到答案
 
 先分清题目任务，再学习老师如何提炼、归类和组织，最后对照本人原答改写。
 
-::: tip 分类说明
-[Kiwi 申论知识框架](/shenlun/kiwi-framework)覆盖申论大纲中的五类题型，是总纲，不是“归纳概括”的下属页面。DAY5—DAY9练习记录均属于归纳概括。
+::: tip 分类与覆盖
+[Kiwi 申论知识框架](/shenlun/kiwi-framework)覆盖申论大纲中的五类题型，是总纲，不是“归纳概括”的下属页面。DAY5—DAY9练习记录均属于归纳概括。**方法框架覆盖五类；本人练习与评分记录目前集中在归纳概括，其余四类暂无专项练习。**
 :::
 
 ## 五类题型与练习入口
 
-- **归纳概括**： [Kiwi归纳概括方法](/shenlun/kiwi-framework#归纳概括-问什么-归纳什么) · 练习：[DAY5](/shenlun/day5-city-greening)、[DAY6](/shenlun/day6-business-environment)、[DAY7](/shenlun/day7-backpack-bank)、[DAY8](/shenlun/day8-public-services)、[DAY9](/shenlun/day9-digital-city)。已有答题、讨论和评分记录；DAY5—DAY6改写及陌生题验证仍待完成。
-- **综合分析**： [Kiwi综合分析方法](/shenlun/kiwi-framework#三、综合分析-观点和依据要对齐)。暂无专项练习。
-- **问题对策**： [Kiwi问题对策方法](/shenlun/kiwi-framework#四、问题对策-先有问题-再看办法)。暂无专项练习。
-- **公文写作**： [Kiwi公文写作方法](/shenlun/kiwi-framework#五、公文写作-文种和任务决定结构)。暂无专项练习。
-- **文章写作**： [Kiwi文章写作方法](/shenlun/kiwi-framework#六、文章写作-从立意到论证)。暂无专项练习。
+- **归纳概括**：[题型方法详页](/shenlun/guina-gaikuo) · [Kiwi总纲对应章节](/shenlun/kiwi-framework#归纳概括-问什么-归纳什么) · 练习：[DAY5](/shenlun/day5-city-greening)、[DAY6](/shenlun/day6-business-environment)、[DAY7](/shenlun/day7-backpack-bank)、[DAY8](/shenlun/day8-public-services)、[DAY9](/shenlun/day9-digital-city)。已有答题、讨论和评分记录；DAY5—DAY6改写及陌生题验证仍待完成。
+- **综合分析**：[题型方法详页](/shenlun/zonghe-fenxi) · [Kiwi总纲对应章节](/shenlun/kiwi-framework#三、综合分析-观点和依据要对齐)。暂无专项练习。
+- **问题对策**：[题型方法详页](/shenlun/wenti-duice) · [Kiwi总纲对应章节](/shenlun/kiwi-framework#四、问题对策-先有问题-再看办法)。暂无专项练习。
+- **公文写作**：[题型方法详页](/shenlun/gongwen-geshi) · [Kiwi总纲对应章节](/shenlun/kiwi-framework#五、公文写作-文种和任务决定结构)。暂无专项练习。
+- **文章写作**：[题型方法详页](/shenlun/wenzhang-xiezuo) · [Kiwi总纲对应章节](/shenlun/kiwi-framework#六、文章写作-从立意到论证)。暂无专项练习。
 
 [五大题型导航](/shenlun/五大题型导航) · [完整申论学习路径](/guide/shenlun)
 

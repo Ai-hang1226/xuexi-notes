@@ -1,10 +1,14 @@
 <script setup>
 import { withBase } from 'vitepress'
 import d from '../../../data/dashboard.json'
+import quizArchive from '../../../daily-quizzes/archive-data.json'
 
 const base = (path) => withBase(path)
 const latest = d.quizzes.latest
-const retestProgress = d.retests.total ? Math.round((d.retests.done / d.retests.total) * 100) : 0
+const latestAssessment = [...quizArchive.assessments].sort((a, b) => b.date.localeCompare(a.date))[0]
+const latestAssessmentReview = latestAssessment?.links.find(({ label }) => /题.*复盘/.test(label))?.href
+  || latestAssessment?.links.find(({ label }) => label === '结果与批改')?.href
+  || '/guide/archive'
 
 const modules = [
   { name: '政治理论', path: '/xingce/zhengzhi-lilun', hint: '章节导航 · 重点表述' },
@@ -26,7 +30,7 @@ const essayLinks = [
 const quickActions = [
   { name: '每日测验', hint: '试卷与批改', mark: '测', path: '/daily-quizzes/' },
   { name: '错题复盘', hint: '按模块筛选', mark: '错', path: '/cuotiben/' },
-  { name: '135题复盘', hint: '42题分组直达', mark: '卷', path: '/cuotiben/135题混合真题批改-2026-11-07' },
+  { name: '最近整卷复盘', hint: latestAssessment ? latestAssessment.date + ' · ' + latestAssessment.title : '查看整卷与阶段测评', mark: '卷', path: latestAssessmentReview },
 ]
 </script>
 
@@ -112,31 +116,28 @@ const quickActions = [
         <p class="status-updated">数据快照生成于 {{ d.generatedAt }}</p>
 
         <div v-if="latest" class="latest-quiz">
-          <span class="latest-quiz__label">站内最新已登记正式卷</span>
+          <span class="latest-quiz__label">最新日常测验</span>
           <strong>{{ latest.date }}</strong>
           <span class="latest-quiz__result">{{ latest.status }}</span>
           <a :href="base(latest.testUrl || '/daily-quizzes/')">查看本卷 <span>↗</span></a>
         </div>
         <div v-else class="latest-quiz latest-quiz--empty">
-          <span class="latest-quiz__label">正式测验记录</span>
+          <span class="latest-quiz__label">日常测验记录</span>
           <strong>暂无记录</strong>
           <a :href="base('/daily-quizzes/')">打开测验目录 <span>↗</span></a>
         </div>
 
         <div class="status-stats">
           <div><b>{{ d.quizzes.reviewed }}</b><span>已批改正式测验</span></div>
-          <div><b>{{ d.quizzes.pending }}</b><span>未作答旧卷</span></div>
+          <div><b>{{ d.quizzes.pending }}</b><span>可选回看旧卷</span></div>
           <div><b>{{ d.questions.total }}</b><span>错题本记录</span></div>
         </div>
         <div class="status-progress">
-          <div class="status-progress__label"><span>已完成复测记录</span><b>{{ d.retests.done }} / {{ d.retests.total }}</b></div>
-          <div class="status-progress__track" role="progressbar" :aria-valuenow="d.retests.done" aria-valuemin="0" :aria-valuemax="d.retests.total" aria-label="已完成复测记录">
-            <span :style="{ width: `${retestProgress}%` }"></span>
-          </div>
-          <p>{{ d.retests.pending }} 项待验证 · {{ d.retests.needsRetry }} 项需再测</p>
+          <div class="status-progress__label"><span>复测验证</span><b>已完成 {{ d.retests.done }} 项</b></div>
+          <p>其余项目随正常真题逐步安排，不把未作答旧卷算作欠账。</p>
         </div>
         <a class="status-cta" :href="base('/daily-quizzes/#复测安排')">查看复测安排 <span>→</span></a>
-        <p class="status-note">未作答旧卷可按需回看，不计欠账。仅统计已登记数据；复测完成不等于独立掌握。</p>
+        <p class="status-note">仅统计本站已登记数据；复测完成不等于独立掌握。</p>
       </aside>
     </div>
 
@@ -221,8 +222,6 @@ const quickActions = [
 .status-progress { margin: 4px 0 12px; }
 .status-progress__label { display: flex; justify-content: space-between; gap: 8px; color: var(--vp-c-text-2); font-size: 12px; }
 .status-progress__label b { color: var(--vp-c-text-1); font-variant-numeric: tabular-nums; }
-.status-progress__track { height: 7px; margin: 6px 0; overflow: hidden; border-radius: 999px; background: var(--vp-c-divider); }
-.status-progress__track span { display: block; height: 100%; border-radius: inherit; background: var(--home-accent); transition: width .2s; }
 .status-progress p { margin: 0; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.45; }
 .status-cta { display: flex; align-items: center; justify-content: space-between; padding: 11px 13px; border-radius: 10px; color: #fff !important; background: var(--home-cta); font-size: 14px; font-weight: 700; }
 .status-cta:hover { background: #4338ca; }

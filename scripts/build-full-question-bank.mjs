@@ -11,6 +11,8 @@ const read = (file) => fs.readFileSync(path.join(root, file), 'utf8').replace(/\
 const bank = JSON.parse(read('retest/questions.json'))
 const reviews = JSON.parse(read('cuotiben/review-catalog.json'))
 const recoveredFragments = JSON.parse(read('retest/recovered-lesson-fragments.json')).questions
+const fenbiVerified = JSON.parse(read('retest/fenbi-verified.json')).questions
+const publicCandidates = JSON.parse(read('retest/public-source-candidates.json')).records
 const entries = []
 const byFingerprint = new Map()
 const byReviewUrl = new Map()
@@ -36,9 +38,15 @@ function fingerprint(stem, options = []) {
 function route(file, anchor = '') {
   return '/' + file.replace(/\.md$/, '') + (anchor ? '#' + anchor : '')
 }
+function addAlias(item, alias) {
+  if (!alias || alias === item.id) return
+  item.aliases ||= []
+  if (!item.aliases.includes(alias)) item.aliases.push(alias)
+}
 function add(entry, key = '') {
   const known = key && byFingerprint.get(key)
   if (known) {
+    addAlias(known, entry.id)
     if (entry.sourceUrl && !known.sources.some((s) => s.url === entry.sourceUrl)) {
       known.sources.push({ label: entry.source, url: entry.sourceUrl })
     }
@@ -107,6 +115,15 @@ function questionBody(block) {
     .replace(/<\/?section[^>]*>/g, '').replace(/<script\b[\s\S]*?<\/script>/gi, '')
     .replace(/^\s*\[.*?(?:首答|结果|批改).*?\].*$/gm, '').trim()
 }
+function reviewOriginal(block) {
+  const marker = /(?:\*\*(?:题目回顾|完整原题与选项|原题与全部选项)\*\*[：:]?|^#{2,5}\s*(?:题目回顾|完整原题与选项|原题与全部选项)\s*$)/m.exec(block)
+  if (!marker) return ''
+  let original = block.slice(marker.index + marker[0].length)
+  const boundary = original.search(/^(?:\s*<BreakPointCard\b|\s*<a\s+class=|#{2,5}\s+(?:本人思路|最终正确解析|易错提醒|题源|复盘)|\s*\*\*(?:本人思路|最终正确解析|易错提醒|参考答案|正确答案|解析|原答|题源)[^\n]*|\s*---\s*$)/m)
+  if (boundary >= 0) original = original.slice(0, boundary)
+  const firstLine = original.split('\n').find((line) => line.trim()) || ''
+  return /^>/.test(firstLine) ? firstQuoted(original) : questionBody(original)
+}
 
 // Start from the existing test: IDs and local mistake records stay unchanged.
 for (const q of bank.questions) {
@@ -137,8 +154,14 @@ for (let i = 0; i < lessonParts.matches.length; i++) {
   const options = choices?.options || []
   const sourceUrl = route(lessonFile, lessonAnchors.get(h.line))
   const recovered = !options.length && recoveredFragments.find((q) => clean(q.lessonStem) === clean(stem))
-  const linked = recovered && entries.find((entry) => entry.quizId === recovered.id)
-  if (linked) linked.sources.push({ label: '知识点讲义原片段', url: sourceUrl })
+  const verified = fenbiVerified.find((q) => q.reviewUrl === sourceUrl)
+  const verifiedFingerprint = verified && fingerprint(render(verified.stem), verified.options.map((option) => ({ html: inline(option.text) })))
+  const linked = (verified && (entries.find((entry) => entry.quizId === verified.id) || byFingerprint.get(verifiedFingerprint)))
+    || (recovered && entries.find((entry) => entry.quizId === recovered.id))
+  if (linked) {
+    addAlias(linked, stableId(sourceUrl))
+    if (!linked.sources.some((source) => source.url === sourceUrl)) linked.sources.push({ label: '知识点讲义原题', url: sourceUrl })
+  }
   else add({
     id: stableId(sourceUrl), subject: '行测', status: options.length === 4 ? '待核对' : '题面不完整',
     title: '言语讲义 · ' + h.title, source: '知识点讲义', sourceUrl,
@@ -163,8 +186,9 @@ for (const name of dailyFiles) {
   const isHistory = /本卷[^\n]*(?:自编|模拟)|AI自编|本次体验不替代/.test(intro)
   const isReal = !isHistory && /真题|网友回忆版/.test(intro)
   const reviewFile = file.replace(/\.md$/, '-review.md')
-  const reviewText = fs.existsSync(path.join(root, reviewFile)) ? read(reviewFile).slice(0, 1600) : ''
-  const pending = name.endsWith('-trial.md') || /等待交卷|尚未收到本人作答/.test(reviewText)
+  const hasReview = fs.existsSync(path.join(root, reviewFile))
+  const reviewText = hasReview ? read(reviewFile).slice(0, 1600) : ''
+  const pending = name.endsWith('-trial.md') || !hasReview || /等待交卷|尚未收到本人作答/.test(reviewText)
   const heading = isAssessment ? /^###\s+第\s*(\d+)题[^\n]*$/ : /^##\s+第\s*(\d+)题[^\n]*$/
   const { lines, matches } = headingMatches(text, heading)
   const pageAnchors = anchors(file, text)
@@ -226,7 +250,10 @@ const bigText = read(bigPaper)
 for (const hit of bigText.matchAll(/^### 第(\d+)题\s*\{#q\d+\}\n([\s\S]*?)(?=^### (?:第\d+题|阅读材料)|^## |$(?![\s\S]))/gm)) {
   const n = Number(hit[1]), url = route(bigPaper, 'q' + n)
   const known = entries.find((entry) => entry.quizId === 'q' + n)
-  if (known) known.sources.push({ label: '135题综合真题卷', url })
+  if (known) {
+    addAlias(known, stableId(url))
+    if (!known.sources.some((source) => source.url === url)) known.sources.push({ label: '135题综合真题卷', url })
+  }
   else {
     const body = hit[2], start = body.indexOf('<div class="exam-question">')
     const stop = body.indexOf('<p class="exam-provenance">', start)
@@ -242,6 +269,11 @@ for (const hit of bigText.matchAll(/^### 第(\d+)题\s*\{#q\d+\}\n([\s\S]*?)(?=^
 // Keep all pre-existing review references, including incomplete early notes.
 for (const row of reviews) {
   let known = byReviewUrl.get(row.url) || entries.find((entry) => entry.sources.some((s) => s.url === row.url))
+  const verified = fenbiVerified.find((question) => question.reviewUrl === row.url)
+  if (!known && verified) {
+    const key = fingerprint(render(verified.stem), verified.options.map((option) => ({ html: inline(option.text) })))
+    known = entries.find((entry) => entry.quizId === verified.id) || byFingerprint.get(key)
+  }
   if (!known && row.url.includes('135题混合真题批改')) {
     const n = row.url.match(/#q(\d+)/)?.[1]
     known = entries.find((entry) => entry.quizId === 'q' + n || entry.sourceUrl === route(bigPaper, 'q' + n))
@@ -251,6 +283,7 @@ for (const row of reviews) {
     known = entries.find((entry) => entry.title === '2026-11-04 · 阶段测评 · 第' + n + '题')
   }
   if (known) {
+    addAlias(known, stableId(row.url))
     if (!known.sources.some((s) => s.url === row.url)) known.sources.push({ label: '错题复盘', url: row.url })
   } else {
     const [page, anchor] = row.url.split('#')
@@ -266,8 +299,7 @@ for (const row of reviews) {
         let end = at + 1
         while (end < lines.length && !new RegExp('^#{1,' + level + '}\\s').test(lines[end])) end++
         const block = lines.slice(at + 1, end).join('\n')
-        const marker = block.search(/\*\*(?:题目回顾|完整原题与选项)\*\*[：:]?/)
-        let original = marker >= 0 ? firstQuoted(block.slice(marker)) : ''
+        let original = reviewOriginal(block)
         if (!original) original = block.match(/<summary>[^<]*(?:原题|全部选项)[^<]*<\/summary>\s*([\s\S]*?)<\/details>/)?.[1] || ''
         const choices = splitChoices(original)
         if (choices?.stem) { stemHtml = render(choices.stem); options = choices.options }
@@ -281,6 +313,29 @@ for (const row of reviews) {
       search: row.title + ' ' + textOf([stemHtml, ...options.map((o) => o.html)].join(' ')), stemHtml, options }, fingerprint(stemHtml, options))
   }
   coverage.reviewReferences++
+}
+
+// Pick up newly added, clearly delimited review questions on later builds even
+// when the hand-maintained review catalogue has not yet been updated.
+for (const name of fs.readdirSync(path.join(root, 'cuotiben')).filter((value) => value.endsWith('.md'))) {
+  const file = 'cuotiben/' + name, text = read(file), lines = text.split('\n')
+  for (let i = 0; i < lines.length; i++) {
+    const heading = lines[i].match(/^(#{2,4})\s+(?:第\s*\d+\s*题|题\s*\d+)[^\n]*\{#(q[\w-]+)\}\s*$/)
+    if (!heading) continue
+    const url = route(file, heading[2])
+    if (entries.some((entry) => entry.sources.some((source) => source.url === url))) continue
+    let end = i + 1
+    while (end < lines.length && !new RegExp('^#{1,' + heading[1].length + '}\\s').test(lines[end])) end++
+    const original = reviewOriginal(lines.slice(i + 1, end).join('\n'))
+    if (!original) continue
+    const choices = splitChoices(original)
+    const stemHtml = choices?.stem ? render(choices.stem) : render(original)
+    const options = choices?.options || []
+    add({ id:stableId(url), subject:'行测', status:options.length === 4 ? '待核对' : '题面待整理',
+      title:lines[i].replace(/^#+\s*/, '').replace(/\s*\{#[^}]+\}\s*$/, '').trim(),
+      source:'错题复盘', sourceUrl:url, excerpt:textOf(stemHtml).slice(0, 220),
+      search:textOf([stemHtml, ...options.map((option) => option.html)].join(' ')), stemHtml, options }, fingerprint(stemHtml, options))
+  }
 }
 
 // The verbal-method map repeats questions alongside learning methods. Keep its
@@ -349,6 +404,18 @@ for (const name of fs.readdirSync(path.join(root, 'xingce')).filter((x) => x.end
     add({ id: stableId(file + ':' + i), subject: '行测', status: '题面待整理', title: name.replace(/\.md$/, '') + ' · 例题', source: '知识点方法页', sourceUrl: url, excerpt: textOf(stemHtml).slice(0, 220), search: textOf(stemHtml), stemHtml, options: [] })
     coverage.otherExamples++
   }
+}
+
+// A matching public paper is a lead, not proof of Fenbi's current answer.
+// Keep it behind the source link; it does not make an unverified question scored.
+for (const candidate of publicCandidates) {
+  const item = entries.find((entry) => entry.id === candidate.catalogId || entry.aliases?.includes(candidate.catalogId)
+    || entry.sources.some((source) => source.url === candidate.reviewUrl))
+  if (!item || item.status === '可自动判分' || item.sources.some((source) => source.url === candidate.sourceUrl)) continue
+  item.sources.push({
+    label: (candidate.knownDisagreement ? '公开候选题源（答案有分歧）' : '公开候选题源（待核）') + ' · 编号 ' + candidate.qid,
+    url: candidate.sourceUrl,
+  })
 }
 
 const summary = Object.fromEntries([...new Set(entries.map((entry) => entry.status))]

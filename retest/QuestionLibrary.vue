@@ -47,7 +47,9 @@ const resultCorrect = computed(() => isScored.value && picked.value === current.
 const markedCount = computed(() => catalogue.entries.filter((q) => isMarked(q)).length)
 
 function isMarked(item) {
-  return !!libraryRecords.value.marked[item.id] || !!(item.quizId && quizMistakes.value[item.quizId])
+  return !!libraryRecords.value.marked[item.id]
+    || !!item.aliases?.some((id) => libraryRecords.value.marked[id])
+    || !!(item.quizId && quizMistakes.value[item.quizId])
 }
 
 function updateFilter(label) {
@@ -103,7 +105,10 @@ function submitQuestion() {
 }
 function toggleMarked(item) {
   const removing = isMarked(item)
-  if (removing) delete libraryRecords.value.marked[item.id]
+  if (removing) {
+    delete libraryRecords.value.marked[item.id]
+    for (const id of item.aliases || []) delete libraryRecords.value.marked[id]
+  }
   else libraryRecords.value.marked[item.id] = true
   if (item.quizId) {
     try {
@@ -155,6 +160,19 @@ onMounted(() => {
     }
     const quizSaved = JSON.parse(localStorage.getItem(quizStorageKey) || '{}')
     quizMistakes.value = quizSaved.mistakeCounts && typeof quizSaved.mistakeCounts === 'object' ? quizSaved.mistakeCounts : {}
+    let needsSave = false
+    for (const item of catalogue.entries) {
+      const previouslyMarked = libraryRecords.value.marked[item.id]
+        || item.aliases?.some((id) => libraryRecords.value.marked[id])
+      if (item.quizId && previouslyMarked && !quizMistakes.value[item.quizId]) {
+        quizMistakes.value[item.quizId] = 1
+        needsSave = true
+      }
+    }
+    if (needsSave) {
+      quizSaved.mistakeCounts = quizMistakes.value
+      localStorage.setItem(quizStorageKey, JSON.stringify(quizSaved))
+    }
   } catch {
     storageWarning.value = true
   }

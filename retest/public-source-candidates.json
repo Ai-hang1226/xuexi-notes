@@ -1,0 +1,464 @@
+{
+  "description": "公开真题副本中的可能对应题目，仅供继续核对；尚未逐题直接核对粉笔，不用于自动判分。",
+  "records": [
+    {
+      "catalogId": "site-cdd126cf6c98c90e",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-26",
+      "qid": "1746732",
+      "sourceTitle": "2016年国家公务员录用考试《行测》题（副省级）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2016%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E5%89%AF%E7%9C%81%E7%BA%A7%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-c8a000445053b7b5",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-69-讲义标注正确率-58",
+      "qid": "2028390",
+      "sourceTitle": "2017年国家公务员录用考试《行测》题（副省级）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2017%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E5%89%AF%E7%9C%81%E7%BA%A7%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-a7919c30bd8371bb",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-10",
+      "qid": "2187549",
+      "sourceTitle": "2018年421联考《行测》题（云南卷）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2018%E5%B9%B4421%E8%81%94%E8%80%83%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E4%BA%91%E5%8D%97%E5%8D%B7%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-f4055958992d6edd",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-45",
+      "qid": "2187669",
+      "sourceTitle": "2018年421联考《行测》题（内蒙古卷）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2018%E5%B9%B4421%E8%81%94%E8%80%83%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%B7%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-879711a3fef3993f",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-36",
+      "qid": "2187756",
+      "sourceTitle": "2018年421联考《行测》题（天津卷）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2018%E5%B9%B4421%E8%81%94%E8%80%83%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E5%A4%A9%E6%B4%A5%E5%8D%B7%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-5dcd2b2d269c654d",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-60-讲义标注正确率-50",
+      "qid": "2187762",
+      "sourceTitle": "2018年421联考《行测》题（山东卷）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2018%E5%B9%B4421%E8%81%94%E8%80%83%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E5%B1%B1%E4%B8%9C%E5%8D%B7%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-d0ee6802ede8ba2f",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-59-讲义标注正确率-58",
+      "qid": "2172337",
+      "sourceTitle": "2018年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2018%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-671a26ad299bd6eb",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-8-讲义标注正确率-54",
+      "qid": "2172352",
+      "sourceTitle": "2018年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2018%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-4c2b21eea65dc006",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-40",
+      "qid": "2172354",
+      "sourceTitle": "2018年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2018%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-33d94c871b94d7bc",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-41-讲义标注正确率-56",
+      "qid": "2444715",
+      "sourceTitle": "2019年四川省公务员录用考试《行测》题（下半年）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2019%E5%B9%B4%E5%9B%9B%E5%B7%9D%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E4%B8%8B%E5%8D%8A%E5%B9%B4%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": true
+    },
+    {
+      "catalogId": "site-e457a7b61b91e721",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-1-1",
+      "qid": "2367877",
+      "sourceTitle": "2019年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2019%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-c8c8747566e3dd0b",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-27",
+      "qid": "2367910",
+      "sourceTitle": "2019年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2019%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-2799aedd1d48ef92",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-1",
+      "qid": "2388269",
+      "sourceTitle": "2019年河北省公务员录用考试《行测》题（县级+乡镇）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2019%E5%B9%B4%E6%B2%B3%E5%8C%97%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E5%8E%BF%E7%BA%A7%2B%E4%B9%A1%E9%95%87%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-8e313f064f38f7a2",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-6-18-讲义标注正确率-67",
+      "qid": "2423266",
+      "sourceTitle": "2019年甘肃省公务员录用考试《行测》题（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2019%E5%B9%B4%E7%94%98%E8%82%83%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-c756d02d105f7156",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-5-1-讲义标注正确率-53",
+      "qid": "2393940",
+      "sourceTitle": "2019年青海省公务员录用考试《行测》题省市州级（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2019%E5%B9%B4%E9%9D%92%E6%B5%B7%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%E7%9C%81%E5%B8%82%E5%B7%9E%E7%BA%A7%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": true
+    },
+    {
+      "catalogId": "site-0c805e9e95225728",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-18-讲义标注正确率-34",
+      "qid": "2616006",
+      "sourceTitle": "2020年安徽省公务员录用考试《行测》试题（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2020%E5%B9%B4%E5%AE%89%E5%BE%BD%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E8%AF%95%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": true
+    },
+    {
+      "catalogId": "site-ec1fa02d30614096",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-17",
+      "qid": "2448451",
+      "sourceTitle": "2020年国家公务员录用考试《行测》题（地市级网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2020%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E7%BA%A7%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-f6082fba3a8be183",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-48",
+      "qid": "2448485",
+      "sourceTitle": "2020年国家公务员录用考试《行测》题（地市级网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2020%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E7%BA%A7%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-03920e1502f24780",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-33",
+      "qid": "2604313",
+      "sourceTitle": "2020年广东省公务员录用考试《行测》试题（县级卷）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2020%E5%B9%B4%E5%B9%BF%E4%B8%9C%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E8%AF%95%E9%A2%98%EF%BC%88%E5%8E%BF%E7%BA%A7%E5%8D%B7%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-55a58fc8691370e7",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-20",
+      "qid": "2452622",
+      "sourceTitle": "2020年江苏省公务员录用考试《行测》题（C类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2020%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88C%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-c7c0ac89101d4026",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-2",
+      "qid": "2452624",
+      "sourceTitle": "2020年江苏省公务员录用考试《行测》题（C类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2020%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88C%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-c8d1681e1ee77a6c",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-33-1",
+      "qid": "2452536",
+      "sourceTitle": "2020年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2020%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-67b25548e8831d70",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-34",
+      "qid": "2452553",
+      "sourceTitle": "2020年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2020%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-7499a44934ba3a7e",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-6-讲义标注正确率-71",
+      "qid": "2662873",
+      "sourceTitle": "2020年新疆公务员录用考试《行测》试题（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2020%E5%B9%B4%E6%96%B0%E7%96%86%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E8%AF%95%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-cfd2eb2b53836787",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-27",
+      "qid": "3522403",
+      "sourceTitle": "2021年云南公务员录用考试《行测》题（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2021%E5%B9%B4%E4%BA%91%E5%8D%97%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-bfcea5068b462d58",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-6-讲义标注正确率-69",
+      "qid": "3523547",
+      "sourceTitle": "2021年四川省公务员录用考试《行测》题（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2021%E5%B9%B4%E5%9B%9B%E5%B7%9D%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-5a0e037eafdfe3ae",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-1-1",
+      "qid": "3523557",
+      "sourceTitle": "2021年四川省公务员录用考试《行测》题（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2021%E5%B9%B4%E5%9B%9B%E5%B7%9D%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-7273732c19cee5da",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-11-讲义标注正确率-40",
+      "qid": "2741713",
+      "sourceTitle": "2021年山东省公务员录用考试《行测》试题（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2021%E5%B9%B4%E5%B1%B1%E4%B8%9C%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E8%AF%95%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-a2844e1ce2dddb5c",
+      "reviewUrl": "/cuotiben/xingce-cuoti#yanyu-20260913-29",
+      "qid": "2742036",
+      "sourceTitle": "2021年江苏省公务员录用考试《行测》题（B类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2021%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88B%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-58c025e63a4fcd9a",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-5-讲义标注正确率-47",
+      "qid": "2742078",
+      "sourceTitle": "2021年江苏省公务员录用考试《行测》题（B类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2021%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88B%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": true
+    },
+    {
+      "catalogId": "site-b8c7f234c22fd61f",
+      "reviewUrl": "/cuotiben/xingce-cuoti#yanyu-20260912-23",
+      "qid": "2742078",
+      "sourceTitle": "2021年江苏省公务员录用考试《行测》题（B类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2021%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88B%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": true
+    },
+    {
+      "catalogId": "site-8e6896220ec12dea",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-6-2",
+      "qid": "4004613",
+      "sourceTitle": "2021年新疆生产建设兵团行政执法类公务员考试《行测》题（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2021%E5%B9%B4%E6%96%B0%E7%96%86%E7%94%9F%E4%BA%A7%E5%BB%BA%E8%AE%BE%E5%85%B5%E5%9B%A2%E8%A1%8C%E6%94%BF%E6%89%A7%E6%B3%95%E7%B1%BB%E5%85%AC%E5%8A%A1%E5%91%98%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-ee3966e405f70cf9",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-34-讲义标注正确率-40",
+      "qid": "2742073",
+      "sourceTitle": "2021年江苏省公务员录用考试《行测》题（C类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2021%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88C%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": true
+    },
+    {
+      "catalogId": "site-bf8f2bb4b893d0c9",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-1-10",
+      "qid": "2776118",
+      "sourceTitle": "2021年浙江省公务员录用考试《行测》题（B类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2021%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88B%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-e69b681d82b1ff54",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-65",
+      "qid": "4662339",
+      "sourceTitle": "2022年山东省公务员录用考试《行测》试题（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2022%E5%B9%B4%E5%B1%B1%E4%B8%9C%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E8%AF%95%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-4427566a99abe360",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-21",
+      "qid": "4817727",
+      "sourceTitle": "2022年四川省公务员录用考试《行测》题（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2022%E5%B9%B4%E5%9B%9B%E5%B7%9D%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-2dc452d0ed51dd4d",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-28-讲义标注正确率-58",
+      "qid": "4639344",
+      "sourceTitle": "2022年国家公务员录用考试《行测》题（副省级网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2022%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E5%89%AF%E7%9C%81%E7%BA%A7%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-65d637c58ffb0064",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-7-讲义标注正确率-40",
+      "qid": "4651527",
+      "sourceTitle": "2022年江苏省公务员录用考试《行测》题（B类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2022%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88B%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-86e4b17e2a9a88c4",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-5-19",
+      "qid": "4651539",
+      "sourceTitle": "2022年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2022%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-54823066da140be0",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-7-17",
+      "qid": "4817949",
+      "sourceTitle": "2022年青海省公务员录用考试《行测》题（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2022%E5%B9%B4%E9%9D%92%E6%B5%B7%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-3752975559ecde38",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-64",
+      "qid": "4817900",
+      "sourceTitle": "2022年青海省公务员录用考试《行测》题（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2022%E5%B9%B4%E9%9D%92%E6%B5%B7%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-6f085d8c7f2e3377",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-1-12-讲义标注正确率-66",
+      "qid": "4817961",
+      "sourceTitle": "2022年青海省公务员录用考试《行测》题（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2022%E5%B9%B4%E9%9D%92%E6%B5%B7%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-3a31d11490d75cce",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-10-讲义标注正确率-61",
+      "qid": "5423667",
+      "sourceTitle": "2023年上海市公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2023%E5%B9%B4%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-9bc8bc672cbc4a4c",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-5-7-讲义标注正确率-56",
+      "qid": "5509947",
+      "sourceTitle": "2023年天津市公务员考试《行测》题（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2023%E5%B9%B4%E5%A4%A9%E6%B4%A5%E5%B8%82%E5%85%AC%E5%8A%A1%E5%91%98%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-f86f0e06a0b8f609",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-37-讲义标注正确率-40",
+      "qid": "5445902",
+      "sourceTitle": "2023年国家公务员录用考试《行测》题（副省级网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2023%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E5%89%AF%E7%9C%81%E7%BA%A7%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-f6b5e245137d44e0",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-45-讲义标注正确率-57",
+      "qid": "5445909",
+      "sourceTitle": "2023年国家公务员录用考试《行测》题（副省级网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2023%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E5%89%AF%E7%9C%81%E7%BA%A7%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-6f4754abf90beed3",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-66",
+      "qid": "5445689",
+      "sourceTitle": "2023年国家公务员录用考试《行测》题（行政执法卷网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2023%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E8%A1%8C%E6%94%BF%E6%89%A7%E6%B3%95%E5%8D%B7%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-a82a62facc239b68",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-7-5-讲义标注正确率-23",
+      "qid": "5430427",
+      "sourceTitle": "2023年浙江省公务员录用考试《行测》题（B类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2023%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88B%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-84893af3388b461c",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-1-6-1",
+      "qid": "12536463",
+      "sourceTitle": "2024年四川省公务员录用考试《行测》试题（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2024%E5%B9%B4%E5%9B%9B%E5%B7%9D%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E8%AF%95%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-9dee90e81d2dd582",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-7-3",
+      "qid": "5893727",
+      "sourceTitle": "2024年国家公务员录用考试《行测》题（地市级网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2024%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E7%BA%A7%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-fe5576c99202f2df",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-1-8",
+      "qid": "5911318",
+      "sourceTitle": "2024年浙江省公务员录用考试《行测》题（B类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2024%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88B%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false
+    }
+  ]
+}

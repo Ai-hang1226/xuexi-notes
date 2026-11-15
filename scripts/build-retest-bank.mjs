@@ -4,7 +4,7 @@ import crypto from 'node:crypto'
 import { createMarkdownRenderer } from 'vitepress'
 
 // Historical records remain unchanged; only traceable, complete questions
-// with an unambiguous reference answer are exported.
+// with a documented reference answer are exported.
 const root = process.cwd()
 const output = path.join(root, 'retest/questions.json')
 const md = await createMarkdownRenderer(root, { html: true, math: true }, '/')
@@ -50,6 +50,12 @@ function add(q, page) {
   const imageRefs = [...q.stemHtml.matchAll(/<img\b[^>]*src=["']([^"']+)/gi)].map((m) => m[1]).join('|')
   const fingerprint = crypto.createHash('sha256').update(normalized + imageRefs).digest('hex')
   if (fingerprints.has(fingerprint)) {
+    if (page === 'retest/fenbi-verified.json') {
+      const previous = questions.find((item) => item.id === fingerprints.get(fingerprint))
+      if (previous && previous.correct !== q.correct) {
+        throw new Error('粉笔答案与既有题库不一致，请核对题面和选项后再发布：' + q.number)
+      }
+    }
     fail(page, q.number, '与已收录题目重复')
     return
   }
@@ -89,10 +95,6 @@ for (const match of paper.matchAll(/^### 阅读材料（第(\d+)[—–-](\d+)�
 }
 for (const match of paper.matchAll(/^### 第(\d+)题\s*\{#q\d+\}\n([\s\S]*?)(?=^### (?:第\d+题|阅读材料)|^## |$(?![\s\S]))/gm)) {
   const number = +match[1]
-  if (number === 35) {
-    fail(paperFile, number, '答案争议或题面版本待核')
-    continue
-  }
   const block = match[2]
   const start = block.indexOf('<div class="exam-question">')
   const provenance = block.match(/<p class="exam-provenance">([^<]+)<\/p>/)
@@ -124,8 +126,10 @@ for (const match of paper.matchAll(/^### 第(\d+)题\s*\{#q\d+\}\n([\s\S]*?)(?=^
     reviewUrl: legacy135.has(number)
       ? '/cuotiben/135题混合真题批改-2026-11-07#q' + number
       : '/daily-quizzes/2026-11-07-xingce-135#q' + number,
-    sourceUrl: number === 96 ? 'https://www.huatu.com/2026/0314/2854050.html' : '',
-    gradingNote: number === 96 ? '华图对相同的“成虫”回忆版参考 A，并讨论了其他关系可能带来的争议；不同回忆资料的文字仍有差异。' : '',
+    sourceUrl: number === 35 ? 'https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%B0%94%E6%BA%B6%E8%83%B6%E5%92%8C%E6%82%AC%E6%B5%AE%E9%A2%97%E7%B2%92&courseSet=xingce&course=xingce&qType=1'
+      : number === 96 ? 'https://www.huatu.com/2026/0314/2854050.html' : '',
+    gradingNote: number === 35 ? '本题按粉笔回忆版参考 B 判分；其他机构有 D 的解析，且不同回忆版存在“质疑／制约”的文字差异。该参考不等同官方答案。'
+      : number === 96 ? '华图对相同的“成虫”回忆版参考 A，并讨论了其他关系可能带来的争议；不同回忆资料的文字仍有差异。' : '',
     origin: '综合真题卷',
   }, paperFile)
 }
@@ -351,6 +355,9 @@ for (const item of JSON.parse(read('retest/lesson-source-matches.json')).questio
 }
 for (const item of JSON.parse(read('retest/recovered-lesson-fragments.json')).questions) {
   addVerifiedLesson(item, 'retest/recovered-lesson-fragments.json')
+}
+for (const item of JSON.parse(read('retest/fenbi-verified.json')).questions) {
+  addVerifiedLesson(item, 'retest/fenbi-verified.json')
 }
 
 const origins = Object.fromEntries([...new Set(questions.map((q) => q.origin))]

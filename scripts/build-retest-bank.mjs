@@ -349,6 +349,9 @@ for (let index = 0; index < examples.length; index++) {
 for (const item of JSON.parse(read('retest/lesson-source-matches.json')).questions) {
   addVerifiedLesson(item, 'retest/lesson-source-matches.json')
 }
+for (const item of JSON.parse(read('retest/recovered-lesson-fragments.json')).questions) {
+  addVerifiedLesson(item, 'retest/recovered-lesson-fragments.json')
+}
 
 const origins = Object.fromEntries([...new Set(questions.map((q) => q.origin))]
   .map((name) => [name, questions.filter((q) => q.origin === name).length]))

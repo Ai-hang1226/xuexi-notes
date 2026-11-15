@@ -1,0 +1,360 @@
+import fs from 'node:fs'
+import path from 'node:path'
+import crypto from 'node:crypto'
+import { createMarkdownRenderer } from 'vitepress'
+
+// This catalogue records questions already present on the website. It does not
+// infer an answer, change a previous attempt, or promote a fragment to a test.
+const root = process.cwd()
+const md = await createMarkdownRenderer(root, { html: true, math: true }, '/')
+const read = (file) => fs.readFileSync(path.join(root, file), 'utf8').replace(/\r\n/g, '\n')
+const bank = JSON.parse(read('retest/questions.json'))
+const reviews = JSON.parse(read('cuotiben/review-catalog.json'))
+const recoveredFragments = JSON.parse(read('retest/recovered-lesson-fragments.json')).questions
+const entries = []
+const byFingerprint = new Map()
+const byReviewUrl = new Map()
+const coverage = { lessonExamples: 0, paperQuestions: 0, reviewReferences: 0, mappedExamples: 0, essaySources: 0, otherExamples: 0 }
+
+function textOf(value = '') {
+  return value.replace(/<[^>]*>/g, ' ').replace(/&(?:nbsp|#160);/g, ' ')
+    .replace(/&(?:amp|lt|gt|quot);/g, ' ').replace(/\s+/g, ' ').trim()
+}
+function clean(value = '') {
+  return value.replace(/<\/?mark\b[^>]*>/gi, '').replace(/<script\b[\s\S]*?<\/script>/gi, '').trim()
+}
+const render = (value) => md.render(clean(value)).trim()
+const inline = (value) => md.renderInline(clean(value)).trim()
+const stableId = (value) => 'site-' + crypto.createHash('sha256').update(value).digest('hex').slice(0, 16)
+function fingerprint(stem, options = []) {
+  if (!stem || options.length !== 4) return ''
+  const body = [stem, ...options.map((o) => o.html)].join('')
+    .replace(/<[^>]*>/g, '').replace(/[\s\u00a0\p{P}\p{S}]/gu, '').slice(0, 600)
+  const images = [...stem.matchAll(/<img\b[^>]*src=["']([^"']+)/gi)].map((m) => m[1]).join('|')
+  return crypto.createHash('sha256').update(body + images).digest('hex')
+}
+function route(file, anchor = '') {
+  return '/' + file.replace(/\.md$/, '') + (anchor ? '#' + anchor : '')
+}
+function add(entry, key = '') {
+  const known = key && byFingerprint.get(key)
+  if (known) {
+    if (entry.sourceUrl && !known.sources.some((s) => s.url === entry.sourceUrl)) {
+      known.sources.push({ label: entry.source, url: entry.sourceUrl })
+    }
+    return known
+  }
+  const item = { ...entry, sources: entry.sourceUrl ? [{ label: entry.source, url: entry.sourceUrl }] : [] }
+  entries.push(item)
+  if (key) byFingerprint.set(key, item)
+  if (entry.sourceUrl) byReviewUrl.set(entry.sourceUrl, item)
+  return item
+}
+function anchors(file, text) {
+  const result = new Map()
+  const tokens = md.parse(text, {})
+  for (let i = 0; i < tokens.length; i++) {
+    const token = tokens[i]
+    if (token.type === 'heading_open' && token.map) {
+      result.set(token.map[0], token.attrGet('id') || '')
+    }
+  }
+  return result
+}
+function headingMatches(text, re) {
+  const lines = text.split('\n')
+  const matches = []
+  for (let i = 0; i < lines.length; i++) {
+    const hit = lines[i].match(re)
+    if (hit) matches.push({ line: i, number: hit[1], title: lines[i].replace(/^#+\s*/, '').replace(/\s*\{#[^}]+\}\s*$/, '').trim() })
+  }
+  return { lines, matches }
+}
+function splitChoices(text) {
+  const lines = text.split('\n')
+  const choices = []
+  const re = /^\s*(?:>\s*)?(?:[-*]\s*)?(?:\*\*)?([A-D])(?:[．.、)）:]|\*\*(?:[．.、)）:]|\s)|\s|$)(?:\*\*)?\s*(.*)$/
+  for (let i = 0; i < lines.length; i++) {
+    const hit = lines[i].match(re)
+    if (hit) choices.push({ label: hit[1], line: i, text: hit[2] })
+  }
+  if (choices.length !== 4 || choices.map((c) => c.label).join('') !== 'ABCD') return null
+  const options = choices.map((choice, i) => {
+    let optionEnd = choices[i + 1]?.line ?? lines.length
+    if (i === choices.length - 1) {
+      const heading = lines.findIndex((line, n) => n > choice.line && /^#{1,3}\s/.test(line))
+      if (heading >= 0) optionEnd = Math.min(optionEnd, heading)
+    }
+    const rest = lines.slice(choice.line + 1, optionEnd)
+      .join('\n').replace(/<\/?section[^>]*>/g, '').trim()
+    return { label: choice.label, html: rest ? render(choice.text + '\n\n' + rest) : inline(choice.text) }
+  })
+  return { stem: lines.slice(0, choices[0].line).join('\n').trim(), options }
+}
+function firstQuoted(text) {
+  const lines = text.split('\n')
+  const start = lines.findIndex((line) => /^>\s?/.test(line) && !/^>\s*(?:🏷️|⚠️)/.test(line))
+  if (start < 0) return ''
+  const out = []
+  for (let i = start; i < lines.length; i++) {
+    if (!/^>/.test(lines[i])) break
+    out.push(lines[i].replace(/^>\s?/, ''))
+  }
+  return out.join('\n').trim()
+}
+function questionBody(block) {
+  return block.replace(/^\s*(?:来源|题源)[：:][^\n]*$/gm, '')
+    .replace(/<\/?section[^>]*>/g, '').replace(/<script\b[\s\S]*?<\/script>/gi, '')
+    .replace(/^\s*\[.*?(?:首答|结果|批改).*?\].*$/gm, '').trim()
+}
+
+// Start from the existing test: IDs and local mistake records stay unchanged.
+for (const q of bank.questions) {
+  const questionName = typeof q.number === 'number' ? '第' + q.number + '题' : String(q.number)
+  add({
+    id: q.id, quizId: q.id, subject: '行测', status: '可自动判分',
+    title: q.module + ' · ' + questionName, source: q.origin,
+    sourceUrl: q.reviewUrl, excerpt: textOf(q.stemHtml).slice(0, 220),
+    search: textOf([q.stemHtml, ...q.options.map((o) => o.html)].join(' ')),
+  }, fingerprint(q.stemHtml, q.options))
+}
+
+// Every named lesson example gets an entry, even if the lecture only supplied
+// a fragment or its inferred answer has not been checked.
+const lessonFile = 'xingce/大宝小宝言语体系-正文.md'
+const lesson = read(lessonFile)
+const lessonAnchors = anchors(lessonFile, lesson)
+const lessonParts = headingMatches(lesson, /^#{4,5}\s+例\s*(\d+\.\d+)[^\n]*$/)
+for (let i = 0; i < lessonParts.matches.length; i++) {
+  const h = lessonParts.matches[i]
+  const block = lessonParts.lines.slice(h.line + 1, lessonParts.matches[i + 1]?.line ?? lessonParts.lines.length).join('\n')
+  const tag = block.search(/^>\s*🏷️/m)
+  const beforeTag = tag < 0 ? block : block.slice(0, tag)
+  const quotedQuestion = firstQuoted(beforeTag)
+  const choices = splitChoices(quotedQuestion)
+  const stem = choices ? choices.stem : quotedQuestion
+  const stemHtml = stem ? render(stem) : ''
+  const options = choices?.options || []
+  const sourceUrl = route(lessonFile, lessonAnchors.get(h.line))
+  const recovered = !options.length && recoveredFragments.find((q) => clean(q.lessonStem) === clean(stem))
+  const linked = recovered && entries.find((entry) => entry.quizId === recovered.id)
+  if (linked) linked.sources.push({ label: '知识点讲义原片段', url: sourceUrl })
+  else add({
+    id: stableId(sourceUrl), subject: '行测', status: options.length === 4 ? '待核对' : '题面不完整',
+    title: '言语讲义 · ' + h.title, source: '知识点讲义', sourceUrl,
+    excerpt: textOf(stemHtml).slice(0, 220) || '原页为讲义片段，请打开原位置查看。',
+    search: textOf([stemHtml, ...options.map((o) => o.html)].join(' ')),
+    stemHtml, options,
+  }, fingerprint(stemHtml, options))
+  coverage.lessonExamples++
+}
+
+// Daily papers and the historical assessment are indexed separately from
+// their answer/review pages. Pending papers remain pending and are not graded.
+const dailyFiles = fs.readdirSync(path.join(root, 'daily-quizzes'))
+  .filter((name) => /^\d{4}-\d{2}-\d{2}(?:-[^.]+)?\.md$/.test(name)
+    && !/-(?:answer|review|essay|summary|score)(?:-|\.md$)/.test(name)
+    && name !== '2026-11-07-xingce-135.md').sort()
+for (const name of dailyFiles) {
+  const file = 'daily-quizzes/' + name
+  const text = read(file)
+  const isAssessment = name.includes('assessment')
+  const intro = text.slice(0, 1800)
+  const isHistory = /本卷[^\n]*(?:自编|模拟)|AI自编|本次体验不替代/.test(intro)
+  const isReal = !isHistory && /真题|网友回忆版/.test(intro)
+  const reviewFile = file.replace(/\.md$/, '-review.md')
+  const reviewText = fs.existsSync(path.join(root, reviewFile)) ? read(reviewFile).slice(0, 1600) : ''
+  const pending = name.endsWith('-trial.md') || /等待交卷|尚未收到本人作答/.test(reviewText)
+  const heading = isAssessment ? /^###\s+第\s*(\d+)题[^\n]*$/ : /^##\s+第\s*(\d+)题[^\n]*$/
+  const { lines, matches } = headingMatches(text, heading)
+  const pageAnchors = anchors(file, text)
+  for (let i = 0; i < matches.length; i++) {
+    const h = matches[i]
+    let end = matches[i + 1]?.line ?? lines.length
+    for (let j = h.line + 1; j < end; j++) {
+      if (/^##\s+(?:交卷|七、申论|申论)/.test(lines[j])) { end = j; break }
+    }
+    const body = questionBody(lines.slice(h.line + 1, end).join('\n'))
+    const isEssay = !isAssessment && (Number(h.number) >= 9 || (name.includes('-trial') && Number(h.number) === 3))
+    const choices = isEssay ? null : splitChoices(body)
+    const stemHtml = choices?.stem ? render(choices.stem) : (isEssay ? render(body) : '')
+    const options = choices?.options || []
+    let materialHtml = ''
+    if (isAssessment && Number(h.number) >= 43) {
+      let materialStart = h.line - 1
+      while (materialStart >= 0 && !/^### 资料[一二]/.test(lines[materialStart])) materialStart--
+      if (materialStart >= 0) {
+        let materialEnd = materialStart + 1
+        while (materialEnd < lines.length && !/^### 第\d+题/.test(lines[materialEnd])) materialEnd++
+        materialHtml = render(lines.slice(materialStart + 1, materialEnd).join('\n'))
+      }
+    }
+    const url = route(file, pageAnchors.get(h.line))
+    let linked
+    if (name === '2026-11-06.md' && !isEssay) {
+      linked = entries.find((entry) => entry.quizId && bank.questions.some((q) => q.id === entry.quizId
+        && q.number === Number(h.number) && q.reviewUrl.includes('每日测验复盘-2026-11-06')))
+    }
+    const item = {
+      id: stableId(url), subject: isEssay ? '申论' : '行测',
+      status: pending ? '原卷待答' : isEssay && isReal ? '申论材料题' : isHistory ? '历史自编' : '待核对',
+      title: name.slice(0, 10) + (isAssessment ? ' · 阶段测评' : name.includes('trial') ? ' · 体验卷' : ' · 每日测验') + ' · 第' + h.number + '题',
+      source: isReal ? '每日真题卷' : isHistory ? '历史自编卷' : '每日试卷（题源待核）', sourceUrl: url,
+      excerpt: textOf(stemHtml).slice(0, 220) || '请打开原卷查看题目和配图。',
+      search: textOf([materialHtml, stemHtml, ...options.map((o) => o.html)].join(' ')), stemHtml, options, materialHtml,
+    }
+    if (linked) {
+      linked.sources.push({ label: item.source, url })
+    } else add(item, fingerprint(stemHtml, options))
+    coverage.paperQuestions++
+  }
+  if (isAssessment) {
+    const at = lines.findIndex((line) => /^## 七、申论/.test(line))
+    if (at >= 0) {
+      const until = lines.findIndex((line, i) => i > at && /^## 交卷/.test(line))
+      const stemHtml = render(questionBody(lines.slice(at + 1, until < 0 ? lines.length : until).join('\n')))
+      const url = route(file, pageAnchors.get(at))
+      add({ id: stableId(url), subject: '申论', status: '历史自编', title: '2026-11-04 · 阶段测评 · 申论', source: '历史自编卷', sourceUrl: url, excerpt: textOf(stemHtml).slice(0, 220), search: textOf(stemHtml), stemHtml, options: [] })
+      coverage.paperQuestions++
+    }
+  }
+}
+
+// The 135-question paper has custom HTML and fixed question IDs.
+const bigPaper = 'daily-quizzes/2026-11-07-xingce-135.md'
+const bigText = read(bigPaper)
+for (const hit of bigText.matchAll(/^### 第(\d+)题\s*\{#q\d+\}\n([\s\S]*?)(?=^### (?:第\d+题|阅读材料)|^## |$(?![\s\S]))/gm)) {
+  const n = Number(hit[1]), url = route(bigPaper, 'q' + n)
+  const known = entries.find((entry) => entry.quizId === 'q' + n)
+  if (known) known.sources.push({ label: '135题综合真题卷', url })
+  else {
+    const body = hit[2], start = body.indexOf('<div class="exam-question">')
+    const stop = body.indexOf('<p class="exam-provenance">', start)
+    const original = start >= 0 && stop > start ? body.slice(body.indexOf('>', start) + 1, stop) : ''
+    const options = [...original.matchAll(/<div class="exam-option">\s*<strong>([A-D])\.<\/strong>\s*([\s\S]*?)<\/div>/g)]
+      .map((m) => ({ label: m[1], html: m[2].trim() }))
+    const stemHtml = clean(original.replace(/<div class="exam-option">\s*<strong>[A-D]\.<\/strong>\s*[\s\S]*?<\/div>/g, ''))
+    add({ id: stableId(url), subject: '行测', status: '答案有争议', title: '135题综合真题卷 · 第' + n + '题', source: '综合真题卷', sourceUrl: url, excerpt: textOf(stemHtml).slice(0, 220), search: textOf(stemHtml), stemHtml, options })
+  }
+  coverage.paperQuestions++
+}
+
+// Keep all pre-existing review references, including incomplete early notes.
+for (const row of reviews) {
+  let known = byReviewUrl.get(row.url) || entries.find((entry) => entry.sources.some((s) => s.url === row.url))
+  if (!known && row.url.includes('135题混合真题批改')) {
+    const n = row.url.match(/#q(\d+)/)?.[1]
+    known = entries.find((entry) => entry.quizId === 'q' + n || entry.sourceUrl === route(bigPaper, 'q' + n))
+  }
+  if (!known && row.url.includes('江苏A类阶段测评复盘-2026-11-04')) {
+    const n = row.url.match(/#q(\d+)/)?.[1]
+    known = entries.find((entry) => entry.title === '2026-11-04 · 阶段测评 · 第' + n + '题')
+  }
+  if (known) {
+    if (!known.sources.some((s) => s.url === row.url)) known.sources.push({ label: '错题复盘', url: row.url })
+  } else {
+    const [page, anchor] = row.url.split('#')
+    const file = page.replace(/^\//, '') + '.md'
+    let stemHtml = '', options = []
+    if (anchor && fs.existsSync(path.join(root, file))) {
+      const text = read(file), lines = text.split('\n')
+      const explicit = lines.findIndex((line) => line.includes('{#' + anchor + '}'))
+      const headingMap = anchors(file, text)
+      const at = explicit >= 0 ? explicit : [...headingMap].find(([, id]) => id === anchor)?.[0]
+      if (Number.isInteger(at)) {
+        const level = lines[at].match(/^#+/)?.[0].length || 3
+        let end = at + 1
+        while (end < lines.length && !new RegExp('^#{1,' + level + '}\\s').test(lines[end])) end++
+        const block = lines.slice(at + 1, end).join('\n')
+        const marker = block.search(/\*\*(?:题目回顾|完整原题与选项)\*\*[：:]?/)
+        let original = marker >= 0 ? firstQuoted(block.slice(marker)) : ''
+        if (!original) original = block.match(/<summary>[^<]*(?:原题|全部选项)[^<]*<\/summary>\s*([\s\S]*?)<\/details>/)?.[1] || ''
+        const choices = splitChoices(original)
+        if (choices?.stem) { stemHtml = render(choices.stem); options = choices.options }
+        else if (original) stemHtml = render(original)
+      }
+    }
+    const status = /争议|分歧/.test((row.reviewState || '') + (row.note || '')) ? '答案有争议'
+      : options.length === 4 ? '待核对' : '题面待整理'
+    add({ id: stableId(row.url), subject: '行测', status, title: row.title, source: '错题复盘', sourceUrl: row.url,
+      excerpt: textOf(stemHtml).slice(0, 220) || '保留原题或原复盘，题面完整性与答案仍需核对。',
+      search: row.title + ' ' + textOf([stemHtml, ...options.map((o) => o.html)].join(' ')), stemHtml, options }, fingerprint(stemHtml, options))
+  }
+  coverage.reviewReferences++
+}
+
+// The verbal-method map repeats questions alongside learning methods. Keep its
+// actual question text but never copy answer-bearing headings into the prompt.
+const mappedFile = 'cuotiben/言语体系总览与真题归位.md'
+const mappedText = read(mappedFile), mappedAnchors = anchors(mappedFile, mappedText)
+const mapped = headingMatches(mappedText, /^###\s+▶\s*题\s*(\d+)[^\n]*$/)
+for (let i = 0; i < mapped.matches.length; i++) {
+  const h = mapped.matches[i], block = mapped.lines.slice(h.line + 1, mapped.matches[i + 1]?.line ?? mapped.lines.length).join('\n')
+  const marker = block.search(/\*\*真题重现\*\*[：:]?/)
+  const original = marker >= 0 ? firstQuoted(block.slice(marker)) : ''
+  const choices = splitChoices(original), stemHtml = choices?.stem ? render(choices.stem) : ''
+  const options = choices?.options || [], url = route(mappedFile, mappedAnchors.get(h.line))
+  const explicitAnchor = h.title.match(/\{#([^}]+)\}/)?.[1] || mappedAnchors.get(h.line)
+  const corresponding = entries.find((entry) => entry.sources.some((s) => s.url.includes('xingce-cuoti')
+    && ((explicitAnchor && s.url.endsWith('#' + explicitAnchor))
+      || (Number(h.number) <= 7 && s.url.includes('#_' + h.number + '-2023江苏-')))))
+  if (corresponding) corresponding.sources.push({ label: '言语体系真题归位', url })
+  else add({ id: stableId(url), subject: '行测', status: /争议/.test(h.title) ? '答案有争议' : options.length === 4 ? '待核对' : '题面待整理',
+    title: '言语体系真题 · 第' + h.number + '题', source: '言语体系真题归位', sourceUrl: url,
+    excerpt: textOf(stemHtml).slice(0, 220) || '请打开原页查看原题和材料。',
+    search: textOf([stemHtml, ...options.map((o) => o.html)].join(' ')), stemHtml, options }, fingerprint(stemHtml, options))
+  coverage.mappedExamples++
+}
+
+// Five source pages contain full essay materials. Strip highlighting and
+// answer-oriented editor headings before they are presented for a new attempt.
+const essays = [
+  ['day5-city-greening', 'DAY5 · 城市绿化', '2024安徽A，讲义标注'],
+  ['day6-business-environment', 'DAY6 · 营商环境', '2023山西省市，讲义标注'],
+  ['day7-backpack-bank', 'DAY7 · 背包银行', '2024江西县乡，讲义标注'],
+  ['day8-public-services', 'DAY8 · 公共服务', '2016江苏事业单位，讲义标注'],
+  ['day9-digital-city', 'DAY9 · 数字城市', '2024福建省市，讲义标注'],
+]
+for (const [slug, title, source] of essays) {
+  const file = 'shenlun/sources/' + slug + '.md', text = read(file)
+  let body = ''
+  if (/## 一、题干与要求/.test(text)) {
+    const prompt = text.split('## 一、题干与要求')[1]?.split('## 二、完整材料')[0] || ''
+    const material = (text.split('## 二、完整材料')[1]?.split('## 三、')[0] || '').replace(/^[^\n]*\n/, '')
+    body = prompt.replace(/^\*\*题目来源[^\n]*$/gm, '').replace(/^\*\*讲义单元[^\n]*$/gm, '') + '\n\n' + material
+  } else {
+    body = text.split('## 完整讲义文字')[1]?.split(/^## 老师/m)[0] || ''
+  }
+  body = body.replace(/^>\s*\*\*?阅读标记[^\n]*$/gm, '').replace(/^###\s+材料\d+[^\n]*$/gm, '')
+    .replace(/^\*\*(?:对应答案|背景展示)[^\n]*\*\*\s*$/gm, '')
+    .replace(/^\s*DAY\d+[^\n]*$/gm, '').replace(/^\s*20\d\d 年公务员[^\n]*$/gm, '').trim()
+  const stemHtml = render(body), url = '/shenlun/' + slug
+  add({ id: 'essay-' + slug, subject: '申论', status: '申论材料题', title, source, sourceUrl: url, excerpt: textOf(stemHtml).slice(0, 220), search: textOf(stemHtml), stemHtml, options: [] })
+  coverage.essaySources++
+}
+
+// Standalone method pages sometimes contain a worked question or a fragment.
+for (const name of fs.readdirSync(path.join(root, 'xingce')).filter((x) => x.endsWith('.md') && x !== '大宝小宝言语体系-正文.md')) {
+  const file = 'xingce/' + name, text = read(file), pageAnchors = anchors(file, text), lines = text.split('\n')
+  for (let i = 0; i < lines.length; i++) {
+    if (!/^#{2,5}\s*(?:例题|第\d+题)|^\*\*(?:✅\s*)?例题\*\*[：:]/.test(lines[i])) continue
+    let body = lines[i]
+    if (/^#{2,5}/.test(lines[i])) {
+      const next = lines.slice(i + 1).find((line) => line.trim())
+      if (next && !/^#{1,5}\s|(?:答案|解析|解答|原卷|首答|用时|复盘)/.test(next)) body += '\n\n' + next
+    }
+    const stemHtml = render(body)
+    const previous = [...pageAnchors.keys()].filter((line) => line <= i).at(-1)
+    const url = route(file, pageAnchors.get(i) || pageAnchors.get(previous))
+    add({ id: stableId(file + ':' + i), subject: '行测', status: '题面待整理', title: name.replace(/\.md$/, '') + ' · 例题', source: '知识点方法页', sourceUrl: url, excerpt: textOf(stemHtml).slice(0, 220), search: textOf(stemHtml), stemHtml, options: [] })
+    coverage.otherExamples++
+  }
+}
+
+const summary = Object.fromEntries([...new Set(entries.map((entry) => entry.status))]
+  .map((status) => [status, entries.filter((entry) => entry.status === status).length]))
+if (coverage.lessonExamples !== lessonParts.matches.length || coverage.reviewReferences !== reviews.length) {
+  throw new Error('题目目录覆盖数量不匹配')
+}
+fs.writeFileSync(path.join(root, 'retest/full-catalog.json'), JSON.stringify({ summary, coverage, entries }, null, 2) + '\n', 'utf8')
+console.log('全站题库目录：' + entries.length + ' 条；' + JSON.stringify(summary) + '；来源覆盖 ' + JSON.stringify(coverage))

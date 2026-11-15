@@ -185,6 +185,7 @@ onBeforeUnmount(() => {
           <h1>错题再练，交卷即看结果</h1>
           <p>每次从当前题库抽取20道完整真题。答题过程不显示答案，交卷后自动计分，并把答错或未作答的题加入本机的优先复测列表。</p>
           <button class="button button--primary" type="button" @click="startQuiz">开始20题复测 <span aria-hidden="true">→</span></button>
+          <a class="button button--quiet library-entry" :href="withBase('/retest/library/')">查看全站题库 →</a>
           <small class="privacy-note">答题记录仅保存在当前浏览器；不改写原有成绩和复测台账。</small>
         </div>
         <div class="intro-metrics" aria-label="复测题库信息">
@@ -215,7 +216,7 @@ onBeforeUnmount(() => {
       <aside class="source-note">
         <b>题库从哪里来</b>
         <p>目前收录综合真题卷 {{ bank.origins['综合真题卷'] || 0 }} 题、历史错题和复盘 {{ bank.origins['历史错题与复盘'] || 0 }} 题、知识点例题 {{ bank.origins['知识点例题'] || 0 }} 题，其中含事业单位职业能力真题，题目下方会标明来源。题库仍在扩充：来源、选项或答案需要核实的题，以及有争议的题，暂不自动判分。参考答案来自题库，不冒充官方答案。</p>
-        <p>本站新增的复盘题符合导入条件时，会在网站重新构建后加入；其他测验的错题暂不会即时自动同步。本页面答错的题保存在当前浏览器并优先再练，不跨设备同步。熟题得分只反映本轮复习，不代表陌生题水平。</p>
+        <p>本站新增的复盘题符合导入条件时，会在网站重新构建后加入；其他测验的错题暂不会即时自动同步。20题复测和全站题库中可判分题答错后，会保存在当前浏览器并优先再练，不跨设备同步。熟题得分只反映本轮复习，不代表陌生题水平。</p>
         <p><a :href="withBase('/retest/answer-evidence')">查看答案核对记录（含答案）↗</a></p>
       </aside>
       <p v-if="storageWarning" class="storage-warning">当前浏览器没有保存本地记录；关闭页面后，本次记录可能无法保留。</p>
@@ -334,6 +335,7 @@ onBeforeUnmount(() => {
 .button--primary:hover { background: #4338ca; }
 .button--quiet { border-color: var(--vp-c-divider); color: var(--vp-c-text-1); background: var(--vp-c-bg); }
 .button--quiet:hover, .button--outline:hover { border-color: var(--quiz-accent); color: var(--quiz-accent); }
+.library-entry { margin-left: 8px; text-decoration: none; }
 .button--outline { width: 100%; border-color: #c7c9f2; color: var(--quiz-accent); background: var(--vp-c-bg); }
 .privacy-note { display: block; margin-top: 11px; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.55; }
 .intro-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }

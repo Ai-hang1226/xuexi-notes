@@ -294,7 +294,7 @@ for (const item of verifiedJiangsu) {
   }, 'retest/jiangsu-matches.json')
 }
 
-for (const item of JSON.parse(read('retest/knowledge-source-matches.json')).questions) {
+function addVerifiedLesson(item, page) {
   add({
     id: item.id, number: item.number, type: '知识点例题', module: '言语理解',
     source: item.source, sourceUrl: item.sourceUrl, correct: item.correct,
@@ -302,7 +302,10 @@ for (const item of JSON.parse(read('retest/knowledge-source-matches.json')).ques
     stemHtml: html(item.stem),
     options: item.options.map((option) => ({ label: option.label, html: inline(option.text) })),
     materialTitle: '', materialHtml: '', reviewUrl: item.reviewUrl, origin: '知识点例题',
-  }, 'retest/knowledge-source-matches.json')
+  }, page)
+}
+for (const item of JSON.parse(read('retest/knowledge-source-matches.json')).questions) {
+  addVerifiedLesson(item, 'retest/knowledge-source-matches.json')
 }
 
 const lessonFile = 'xingce/大宝小宝言语体系-正文.md'
@@ -340,6 +343,11 @@ for (let index = 0; index < examples.length; index++) {
     stemHtml: html(stem), options: choices.options, materialTitle: '', materialHtml: '',
     reviewUrl: '/xingce/大宝小宝言语体系-正文', origin: '知识点例题',
   }, lessonFile)
+}
+
+// Preserve IDs already used by browser records; new matches follow existing imports.
+for (const item of JSON.parse(read('retest/lesson-source-matches.json')).questions) {
+  addVerifiedLesson(item, 'retest/lesson-source-matches.json')
 }
 
 const origins = Object.fromEntries([...new Set(questions.map((q) => q.origin))]

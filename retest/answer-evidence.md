@@ -27,7 +27,27 @@ outline: [2, 2]
 
 同一道题在不同回忆资料中选项顺序不一样：本站讲义与[金标尺题库](https://www.jbcgk.com/wp/search/detail?id=OkZywYqjaJ&type=question)把“百炼钢化为绕指柔”放在 **C**，另一份[安徽卷资料](https://static.32xueyuan.com/zq/u/cms/ah/202501/231119396t18.pdf)把相同内容放在 **D**。两份资料的参考答案对应相同选项内容；复测按照页面实际展示的顺序判 **C**，不只比较字母。
 
+### 2021 联考：乌龙茶香气
+
+**题库参考 A。** [小麦公考](https://www.xiaomaigongkao.com/Article/article_details/id/1000039465.html)和[安徽卷资料](https://static.32xueyuan.com/zq/u/cms/ah/202501/23111936qcur.pdf)均给 A。全文围绕香气的酶促形成与胁迫的关联展开；D 只概括了其中的损伤和低温。站内原来的 D 是标注了把握中低的推断，现已在原文旁补上题源和更正说明。
+
 ## 暂不自动判分
+
+### 新闻传播学科重构
+
+站内讲义推断 B，[星光公考](https://www.xingguanggongkao.com/Pc/XingQuestion/search/subject_id/2/keywords/1.51.216.52%2B%E5%8C%BB%E5%AD%A6%E6%A3%80%E6%96%B0%E9%97%BB%E5%87%BA%E7%89%88%E7%A0%94%E7%A9%B6%E9%99%A2/p/41.html)参考 C；本站既有勘误表还记录了有机构参考 B。两种解释对“人与技术的关系”和“对待技术体系”哪个更能概括全文存在分歧，暂不自动判分。
+
+### 考试大纲与应试教育
+
+[星光公考](https://www.xingguanggongkao.com/Wb/quesView/id/44567.html)参考 A，强调削弱大纲的强导向；[另一份解析](https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf)参考 C，认为文段主要陈述应试教育被强化。暂不自动判分。
+
+### 传统村落保护
+
+[小麦公考](https://www.xiaomaigongkao.com/Article/article_details/id/1000045947.html)参考 B，[湖北华图](https://m.hb.huatu.com/hbgwy/1745411.html)参考 D。二者对题目要求概括精神文化价值还是扩大保护名录有不同解释，暂不自动判分。
+
+### 传统文化与《花木兰》
+
+[星光公考](https://www.xingguanggongkao.com/pc/wb/quesView/id/30507.html)参考 B；本站既有勘误表记录华图等资料参考 A。由于存在机构分歧，暂不自动判分。
 
 ### 2026 福建回忆卷：月球火山玻璃珠
 

@@ -205,6 +205,8 @@ search: false # 由 scripts/optimize-search.mjs 管理
 
 > **解析待核：**题干对“相似的结构原理”有限定，下面旧解析将结构相似与原理相近截然分开，解释是否充分仍待核对。[星光公考题库](https://www.xingguanggongkao.com/pc/wb/quesView/id/48228.html)同样给出B为参考答案，但该页暂无解析；本人原答与旧记录保留。
 
+> **2026-11-15 题源补查：**[星光公考](https://www.xingguanggongkao.com/pc/wb/quesView/id/48228.html)与[另一份江苏卷参考](https://kaoweilai.cn/zhenti-js-2023-a.html)均给 B。更稳妥的区分是：原文的相似性带有“有时候、某种程度、似乎”等限定，B 项去掉了限定。原文说差别大的是材料和信号处理方式，不能据此断言“原理差别很大”。下方旧解释保留作追溯，复习以本条为准；参考答案不冒充官方公布。
+
 **复盘类型：错题**
 
 - **日期**：2026-09-07

@@ -16,7 +16,7 @@
     "check": "npm run check:data && npm run check:links && npm run check:assets",
     "predocs:dev": "npm run chapter:sync && npm run data:sync && npm run report:privacy",
     "docs:dev": "vitepress dev",
-    "predocs:build": "npm run chapter:sync && npm run data:sync && npm run report:privacy && npm run check:data && npm run check:links",
+    "predocs:build": "npm run chapter:sync && npm run data:sync && npm run report:privacy && npm run check:data && npm run check:links && node scripts/build-retest-bank.mjs",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },

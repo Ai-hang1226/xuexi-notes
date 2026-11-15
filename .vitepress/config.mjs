@@ -239,6 +239,7 @@ const sidebar = [
     text: '🧠 错题本',
     collapsed: true,
     items: [
+      { text: '行测20题复测', link: '/retest/' },
       { text: '📊 全部题目 · 筛选检索', link: '/cuotiben/' },
       {
         text: '🧭 怎么复盘',

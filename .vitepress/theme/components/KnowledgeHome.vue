@@ -28,6 +28,7 @@ const essayLinks = [
 ]
 
 const quickActions = [
+  { name: '开始行测复测', hint: '20题 · 交卷自动判分', mark: '测', path: '/retest/' },
   { name: '每日测验', hint: '试卷与批改', mark: '测', path: '/daily-quizzes/' },
   { name: '错题复盘', hint: '按模块筛选', mark: '错', path: '/cuotiben/' },
   { name: '最近整卷复盘', hint: latestAssessment ? latestAssessment.date + ' · ' + latestAssessment.title : '查看整卷与阶段测评', mark: '卷', path: latestAssessmentReview },
@@ -165,7 +166,7 @@ const quickActions = [
 .home-kicker { color: var(--home-accent); font-size: 12px; font-weight: 750; letter-spacing: .1em; }
 .home-intro h1 { margin: 8px 0 8px; border: 0; padding: 0; font-size: clamp(28px, 3vw, 38px); line-height: 1.3; letter-spacing: -.025em; }
 .home-intro p { max-width: 760px; margin: 0; color: var(--vp-c-text-2); font-size: 16px; line-height: 1.75; }
-.home-quick-access { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 0 18px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 13px; background: var(--vp-c-bg-soft); }
+.home-quick-access { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0 0 18px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 13px; background: var(--vp-c-bg-soft); }
 .quick-action { display: grid; grid-template-columns: 27px minmax(0, 1fr) 12px; align-items: center; gap: 10px; min-width: 0; min-height: 72px; padding: 12px 16px; }
 .quick-action + .quick-action { border-left: 1px solid var(--vp-c-divider); }
 .quick-action:hover { background: var(--home-accent-soft); }
@@ -244,6 +245,9 @@ const quickActions = [
   .home-intro { margin-bottom: 18px; }
   .home-intro p { font-size: 15px; }
   .home-layout, .home-directory { gap: 13px; }
+  .home-quick-access { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .quick-action:nth-child(3) { border-left: 0; border-top: 1px solid var(--vp-c-divider); }
+  .quick-action:nth-child(4) { border-top: 1px solid var(--vp-c-divider); }
   .home-section { padding: 18px 16px; }
   .home-section-grid { grid-template-columns: 1fr; gap: 13px; }
   .module-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }

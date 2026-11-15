@@ -11,6 +11,21 @@ import ReviewCatalog from './components/ReviewCatalog.vue'
 
 错题、不确定、猜题和耗时较长的题统一收录。先用下方筛选定位题目，再看原答、讨论结论和复测状态。
 
+<div class="retest-entry">
+  <div><strong>想直接做一组题？</strong><span>从可判分真题中抽20题，交卷后自动看分数和答案。</span></div>
+  <a href="/xuexi-notes/retest/">开始行测复测 →</a>
+</div>
+
+<style>
+.retest-entry { display:flex; align-items:center; justify-content:space-between; gap:16px; margin:20px 0; padding:16px 18px; border:1px solid #d8daf7; border-radius:13px; background:linear-gradient(120deg,var(--vp-c-bg-soft),var(--vp-c-bg)); }
+.retest-entry div { display:grid; gap:4px; }
+.retest-entry strong { font-size:15px; }
+.retest-entry span { color:var(--vp-c-text-2); font-size:13px; line-height:1.5; }
+.retest-entry a { flex:0 0 auto; padding:10px 14px; border-radius:9px; color:#fff; background:#4f46e5; font-size:13px; font-weight:700; text-decoration:none; }
+.retest-entry a:hover { background:#4338ca; }
+@media(max-width:560px) { .retest-entry { align-items:flex-start; flex-direction:column; } }
+</style>
+
 <ReviewCatalog />
 
 ## 专题复习与记录说明

@@ -5,6 +5,7 @@
     {
       "id": "site-0d3e3651d39afbdf",
       "fenbiQid": 2708779,
+      "module": "言语理解",
       "number": "例 1.1",
       "source": "2020年11月21日福建省事业单位公开招聘考试 《综合基础知识》试题（网友回忆版）第36题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%9C%A8%E5%85%A8%E7%A4%BE%E4%BC%9A%E5%85%B1%E5%90%8C%E5%8A%AA%E5%8A%9B%E4%B8%8B%EF%BC%8C%E6%88%91%E5%9B%BD%E8%84%B1%E8%B4%AB%E6%94%BB%E5%9D%9A%E5%8F%96%E5%BE%97%E5%86%B3%E5%AE%9A%E6%80%A7%E6%88%90%E5%B0%B1%EF%BC%9A&courseSet=syzc&course=syzc&qType=1",
@@ -29,11 +30,12 @@
         }
       ],
       "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-1-1",
-      "gradingNote": "本站讲义仅保留片段；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
     },
     {
       "id": "site-0634301140549a75",
       "fenbiQid": 5510064,
+      "module": "言语理解",
       "number": "例 1.2",
       "source": "2023年江西省公务员录用考试《行测》题（网友回忆版）第58题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%B9%B4%EF%BC%8C%E7%BE%8E%E5%9B%BD%E8%BF%90%E5%8A%A8%E5%8C%BB%E5%AD%A6%E5%AD%A6%E4%BC%9A%E5%AF%B9%E8%B5%AB%E7%BD%97%E8%BF%AA%E7%A7%91%E6%96%AF%E8%BF%90%E5%8A%A8%E5%92%8C%E5%8C%BB%E5%AD%A6%E7%9B%B8%E7%BB%93%E5%90%88%E7%9A%84%E7%90%86%E5%BF%B5%E8%BF%9B&courseSet=xingce&course=xingce&qType=1",
@@ -58,11 +60,42 @@
         }
       ],
       "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-1-2",
-      "gradingNote": "本站讲义仅保留片段；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-01be14a052280341",
+      "fenbiQid": 4644103,
+      "module": "言语理解",
+      "number": "例 1.5",
+      "source": "2021年12月5日贵州事业单位笔试《公共基础知识》（网友回忆版）第24题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%85%B7%E4%BD%93%E6%9D%A5%E8%AF%B4%EF%BC%8C%E5%B0%B1%E6%98%AF%E5%89%A7%E6%9C%AC%E4%B8%AD%E4%BF%A1%E6%81%AF%E9%87%8F%E7%9A%84%E5%8F%A0%E5%8A%A0%EF%BC%8C%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "stem": "<p>对于一个影视或舞台作品，编剧是创意的基础，有了编剧才有后面一系列环节。对于怎么选一个题材、怎么做出一部精品，在技术上有一整套复杂流程。有些编剧不太讲技术，写过一部好剧以后，就再没出过其他作品。一个职业编剧应该是可以持续创造生产的，这就需要技巧。具体来说，就是剧本中信息量的叠加，以及解决问题的巧妙方法的叠加。对于故事中出现的矛盾冲突，要用技巧来解决，而不是用巧合来解决，这样，这部戏的“干货”就会很足很足。信息量充足，解决问题的技巧丰富而智慧，是编剧重要的创作本领。</p><p>这段文字意在强调（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "编剧对影视和舞台作品的基础作用"
+        },
+        {
+          "label": "B",
+          "text": "如何成为一个合格称职的职业编剧"
+        },
+        {
+          "label": "C",
+          "text": "提升编剧的创作水准已经迫在眉睫"
+        },
+        {
+          "label": "D",
+          "text": "编剧技术对职业编剧创作的重要性"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-1-5",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
     },
     {
       "id": "site-0d6703d63ceb81f1",
       "fenbiQid": 2012704,
+      "module": "言语理解",
       "number": "例 1.8",
       "source": "2015年上半年事业单位联考D类《职业能力倾向测验》题（内蒙古/甘肃/宁夏/浙江）（网友回忆版）第49题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%83%B3%E7%9F%A5%E9%81%93%E4%BA%BA%E5%A6%82%E4%BD%95%E6%84%9F%E5%8F%97%E3%80%81%E6%80%9D%E8%80%83%E3%80%81%E5%88%A4%E6%96%AD%EF%BC%8C%E4%BD%86%E5%8F%88%E6%97%A0%E6%B3%95%E7%9C%8B%E5%88%B0%E5%A4%A7%E8%84%91%E6%80%8E&courseSet=syzc&course=syzc&qType=1",
@@ -92,6 +125,7 @@
     {
       "id": "site-821b022f1dc00413",
       "fenbiQid": 25091,
+      "module": "言语理解",
       "number": "例 2.3",
       "source": "2011年国家公务员录用考试《行测》题第54题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%9B%AE%E5%89%8D%EF%BC%8C%E6%88%91%E5%9B%BD%E6%AD%A3%E5%A4%84%E4%BA%8E%E4%BA%A7%E4%B8%9A%E7%BB%93%E6%9E%84%E8%B0%83%E6%95%B4%E7%9A%84%E5%85%B3%E9%94%AE%E9%98%B6%E6%AE%B5%E3%80%82%E5%9C%A8%E5%BD%93%E5%89%8D%E7%9A%84%E4%B8%96%E7%95%8C%E7%BB%8F%E6%B5%8E&courseSet=xingce&course=xingce&qType=1",
@@ -116,11 +150,42 @@
         }
       ],
       "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-3",
-      "gradingNote": "本站讲义仅保留片段；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-5a50d2e88f8fff40",
+      "fenbiQid": 5525316,
+      "module": "言语理解",
+      "number": "例 2.4",
+      "source": "2023年3月4日重庆市事业单位联考D类《职业能力倾向测验》笔试试题（网友回忆版）第45题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%8D%AE%E4%B8%96%E7%95%8C%E5%8D%AB%E7%94%9F%E7%BB%84%E7%BB%87%E7%BB%9F%E8%AE%A1%EF%BC%8C%E4%B8%AA%E4%BD%93%2050%25%E7%9A%84%E5%BF%83%E7%90%86%E5%81%A5%E5%BA%B7%E9%97%AE%E9%A2%98%E5%87%BA&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "stem": "<p>据世界卫生组织统计，个体50%的心理健康问题出现在儿童青少年阶段，而这个阶段正是智力、自我同一性和人格社会化的发展阶段，由于儿童青少年知识经验和社会阅历匮乏，心理社会性功能尚未成熟，一旦他们的心理健康问题不能及时预防，调查和干预，矫正，很可能为成年后心理障碍，心理疾病埋下隐患，应验所谓“幸福的童年治愈一生，不幸的童年要用一生去治愈”。为此，作为改善与提升我国大中小学生心理健康熟知的基本前提，摸清他们心理健康问题检出率的“家底”应属当务之急。</p><p>这一篇文章的引言部分，文章标题应该是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "大数据时代学生心理危机防范与反应机制"
+        },
+        {
+          "label": "B",
+          "text": "学生青春期心理特征及家庭教育误区分析"
+        },
+        {
+          "label": "C",
+          "text": "教育信息化过程中学生健康问题考察与研究"
+        },
+        {
+          "label": "D",
+          "text": "中国学生心理健康问题检出率以及教育启示"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-4-讲义标注正确率-65",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
     },
     {
       "id": "site-aa44b379c50fe0ed",
       "fenbiQid": 5509702,
+      "module": "言语理解",
       "number": "例 2.5",
       "source": "2023年吉林省公务员录用考试《行测》题（网友回忆版）第42题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%88%91%E5%9B%BD%E8%87%AA%E5%8F%A4%E4%BB%A5%E6%9D%A5%E5%B0%B1%E6%9C%89%E5%8B%A4%E4%BF%AD%E8%8A%82%E7%BA%A6%E7%9A%84%E5%85%89%E8%8D%A3%E4%BC%A0%E7%BB%9F%EF%BC%8C%E5%B0%BD%E7%AE%A1%E7%8E%B0%E5%9C%A8%E7%94%9F%E6%B4%BB%E6%9D%A1%E4%BB%B6%E5%A5%BD%E4%BA%86&courseSet=xingce&course=xingce&qType=1",
@@ -150,6 +215,7 @@
     {
       "id": "site-97db54eb7c8e4c05",
       "fenbiQid": 2732692,
+      "module": "言语理解",
       "number": "例 2.8",
       "source": "2021年上海市公务员录用考试《行测》题（B类）（网友回忆版）第17题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%88%91%E4%BB%AC%E6%98%AF%E5%90%A6%E7%9C%9F%E7%9A%84%E5%AF%B9%E9%9F%B3%E4%B9%90%E4%BA%A7%E7%94%9F%E4%BA%86%E6%83%85%E7%BB%AA%E5%85%B1%E9%B8%A3%EF%BC%9F%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E7%9C%8B%E4%BC%BC%E7%AE%80%E5%8D%95%E7%9A%84%E9%97%AE%E9%A2%98&courseSet=xingce&course=xingce&qType=1",
@@ -174,11 +240,12 @@
         }
       ],
       "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-8",
-      "gradingNote": "本站讲义仅保留片段；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
     },
     {
       "id": "site-c92efc28246d9882",
       "fenbiQid": 2021736,
+      "module": "言语理解",
       "number": "例 2.9",
       "source": "2016年吉林省公务员录用考试《行测》题（甲级）第43题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%97%A5%E6%9C%AC%E4%B9%9D%E5%B7%9E%207.3%20%E7%BA%A7%E5%9C%B0%E9%9C%87%E3%80%81%E7%BC%85%E7%94%B8%207.2%20%E7%BA%A7%E5%9C%B0%E9%9C%87%E3%80%81%E9%98%BF%E5%AF%8C%E6%B1%97%20&courseSet=xingce&course=xingce&qType=1",
@@ -203,11 +270,12 @@
         }
       ],
       "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-9",
-      "gradingNote": "本站讲义仅保留片段；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
     },
     {
       "id": "site-5a88afb9591fa80d",
       "fenbiQid": 2187673,
+      "module": "言语理解",
       "number": "例 2.12",
       "source": "2018年黑龙江省公务员考试（乡镇）题（网友回忆版）第41题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%B9%B4%E6%9F%90%E8%B0%83%E6%9F%A5%E6%8A%A5%E5%91%8A%E6%98%BE%E7%A4%BA%EF%BC%8C%E8%B6%85%E8%BF%87%208%20%E6%88%90%E5%B1%85%E6%B0%91%E5%AE%B6%E5%BA%AD%E8%AE%A4%E4%B8%BA%E9%98%85%E8%AF%BB%E6%98%AF%E5%AD%A9%E5%AD%90%E8%AE%A4%E8%AF%86&courseSet=xingce&course=xingce&qType=1",
@@ -232,11 +300,42 @@
         }
       ],
       "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-12-讲义标注正确率-44",
-      "gradingNote": "本站讲义仅保留片段；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-d0a46810f390ab4e",
+      "fenbiQid": 2052330,
+      "module": "言语理解",
+      "number": "例 2.15",
+      "source": "2016年下半年全国事业单位联考E类《职业能力倾向测验》题（网友回忆版）第33题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%B8%82%E5%9C%BA%E6%B3%A2%E5%8A%A8%E5%8F%97%E5%B8%82%E5%9C%BA%E4%BF%A1%E6%81%AF%E6%8A%AB%E9%9C%B2%E7%9A%84%E5%BD%B1%E5%93%8D%E7%9B%B8%E5%BD%93%E5%A4%A7%EF%BC%8C%E5%86%B3%E5%AE%9A%E8%94%AC%E8%8F%9C%E4%BB%B7%E6%A0%BC&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "stem": "<p>市场波动受市场信息披露的影响相当大，决定蔬菜价格的因素包括产量、质量、库存量、出口量等等，而这些信息的披露，却向来没有超然于具体利益之外的第三方机构主导。一些从业人员在某关键节点上通过发布片面且真假难辨的信息来引导市场情绪，管理部门对此却束手无策。权威的第三方信息披露，本来就需要相关部门出面组织，而做好这样的日常服务，会比出事后再“强化监管”有效得多。</p><p>这段文字意在强调在蔬菜交易中（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "市场信息披露应引入权威的第三方机构"
+        },
+        {
+          "label": "B",
+          "text": "管理部门应对信息发布渠道强化监管"
+        },
+        {
+          "label": "C",
+          "text": "应限制市场从业人员的信息发布权限"
+        },
+        {
+          "label": "D",
+          "text": "市场信息的披露会直接影响蔬菜价格"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-15-讲义标注正确率-60",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
     },
     {
       "id": "site-626f459aa53daeed",
       "fenbiQid": 1789528,
+      "module": "言语理解",
       "number": "例 2.18",
       "source": "2016年江苏省公务员录用考试《行测》题（A类）第24题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%86%85%E5%AE%B9%E4%BA%A7%E4%B8%9A%E5%8C%85%E6%8B%AC%E4%B8%89%E4%B8%AA%E5%B1%82%E6%AC%A1%EF%BC%9A%E4%BF%A1%E6%81%AF%E3%80%81%E7%9F%A5%E8%AF%86%E5%92%8C%E6%99%BA%E6%85%A7%E3%80%82%E6%8A%A5%E4%B8%9A%E6%9B%B4%E5%A4%9A&courseSet=xingce&course=xingce&qType=1",
@@ -266,6 +365,7 @@
     {
       "id": "site-369bdf75db91423b",
       "fenbiQid": 455307,
+      "module": "言语理解",
       "number": "例 2.19",
       "source": "2014年浙江省公务员录用考试《行测》题（B类）第21题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%80%BB%E4%BD%93%E4%B8%8A%E7%9C%8B%EF%BC%8C%E6%88%91%E5%9B%BD%E6%98%AF%E4%B8%80%E4%B8%AA%E8%B5%84%E6%BA%90%E7%B4%A7%E7%BC%BA%E7%9A%84%E5%9B%BD%E5%AE%B6%EF%BC%8C%E8%B5%84%E6%BA%90%E7%B4%A7%E7%BC%BA%E6%84%88%E7%9B%8A&courseSet=xingce&course=xingce&qType=1",
@@ -293,8 +393,39 @@
       "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
     },
     {
+      "id": "site-9f742e143c932ed5",
+      "fenbiQid": 2056940,
+      "module": "言语理解",
+      "number": "例 2.21",
+      "source": "2017年上半年事业单位联考D类《职业能力倾向测验》题（云南/湖北/安徽/贵州/宁夏/广西/青海/陕西/内蒙古/上海网友回忆版）第44题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%A7%91%E4%B8%BE%E6%98%AF%E4%B8%80%E7%A7%8D%E5%A4%8D%E6%9D%82%E7%9A%84%E6%96%87%E5%8C%96%E7%8E%B0%E8%B1%A1%E3%80%82%E7%84%B6%E8%80%8C%EF%BC%8C%E5%9C%A8%E7%8E%B0%E4%BB%A3%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%AF%B9%E4%BC%A0&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "stem": "<p>科举是一种复杂的文化现象。然而，在现代中国人对传统事物的看法中，科举大概也是被误解最深的制度。我们不应忽略科举制的历史性，试想在传统社会，能构想出其他更好的选才制度来吗？古代的中国统治者和许多文化巨人并不是没有看到科举制的局限和弊端，也不都是因循守旧之辈。但经过反复比较，最后还是选择了科举制，这实际上是一种择善而从。古代一些学者批评科举取士并不等于反对科举制度。从古代到近代的学者对科举制的批判主要是对应试现象、对考试内容和形式的批判，特别是对八股取士的批判，很少有人否定科举制本身。</p><p>这段文字意在强调（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "古代学者对科举制的肯定多过否定"
+        },
+        {
+          "label": "B",
+          "text": "科举制的弊端并非来自其制度本身"
+        },
+        {
+          "label": "C",
+          "text": "科举制是当时历史条件下的理性选择"
+        },
+        {
+          "label": "D",
+          "text": "应从现实情况出发多角度评价科举制"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-21-讲义标注正确率-55",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
       "id": "site-c5382d0a024169ad",
       "fenbiQid": 2028374,
+      "module": "言语理解",
       "number": "例 2.23",
       "source": "2017年国家公务员录用考试《行测》题（地市级）第42题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%9C%A8%E5%9F%8E%E9%95%87%E5%8C%96%E5%88%9D%E3%80%81%E4%B8%AD%E6%9C%9F%EF%BC%8C%E7%BE%8E%E5%9B%BD%E5%A5%89%E8%A1%8C%E8%87%AA%E7%94%B1%E7%BB%8F%E6%B5%8E%E7%90%86%E8%AE%BA%EF%BC%8C%E5%B8%82%E5%9C%BA%E6%9C%BA%E5%88%B6&courseSet=xingce&course=xingce&qType=1",
@@ -324,6 +455,7 @@
     {
       "id": "site-c13c5e248a2a9b71",
       "fenbiQid": 5102217,
+      "module": "言语理解",
       "number": "例 2.24",
       "source": "2022年辽宁省公务员录用考试《行测》题（网友回忆版）第53题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%85%B3%E4%BA%8E%E2%80%9C%E5%A4%A9%E9%B9%85%E9%83%BD%E6%98%AF%E7%99%BD%E8%89%B2%E7%9A%84%E2%80%9D%E8%BF%99%E4%B8%80%E5%81%87%E8%AF%B4%EF%BC%8C%E9%80%9A%E5%B8%B8%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E4%B8%80%E5%8F%AA&courseSet=xingce&course=xingce&qType=1",
@@ -351,8 +483,219 @@
       "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
     },
     {
+      "id": "site-7aa7b393c1e5f875",
+      "fenbiQid": 5525276,
+      "module": "言语理解",
+      "number": "例 2.26",
+      "source": "2023年3月4日重庆市事业单位联考D类《职业能力倾向测验》笔试试题（网友回忆版）第36题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%95%B0%E5%AD%A6%E6%96%87%E5%8C%96%E5%9C%A8%E6%95%B0%E5%AD%A6%E5%BC%BA%E5%9B%BD%E4%B8%AD%E5%8F%91%E6%8C%A5%E7%9D%80%E9%87%8D%E8%A6%81%E7%9A%84%E4%BD%9C%E7%94%A8%E5%92%8C%E5%BD%B1%E5%93%8D%EF%BC%8C%E6%B3%95%E3%80%81&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "stem": "<p>数学文化在数学强国中发挥着重要的作用和影响，法、德、俄等当代数学强国的经验都启示我们，数学在全社会范围的普及和重视程度，对一个国家数学的发展乃至整个国家综合国力的提升都具有重要意义。当前，我国数学文化的土壤还不够深厚，公众对数学的研究的了解和兴趣十分有限，而专业科研工作者又往往对自己研究领域之外关注较少。今天，数学学科从高度分化的阶段，又逐渐开始呈现出重新走向交叉融合的趋势，我国数学发展要走向强盛，就需要在加强数学文化氛围方面付出更多努力。</p><p>这段文字意在（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "提出数学实力影响国家实力"
+        },
+        {
+          "label": "B",
+          "text": "呼吁大力培育数学文化土壤"
+        },
+        {
+          "label": "C",
+          "text": "强调借鉴数学强国的发展经验"
+        },
+        {
+          "label": "D",
+          "text": "提倡数学家更多呼应社会关切"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-26",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-db75dadc502a96b6",
+      "fenbiQid": 2578271,
+      "module": "言语理解",
+      "number": "例 2.27",
+      "source": "2020年7月25日全国事业单位联考E类《职业能力倾向测验》题（安徽/湖北/内蒙古/青海/甘肃/广西/宁夏/云南/四川网友回忆版）第39题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%B0%8F%E5%89%A7%E5%9C%BA%E7%9A%84%E2%80%9C%E5%B0%8F%E2%80%9D%E9%A6%96%E5%85%88%E4%BD%93%E7%8E%B0%E5%9C%A8%E7%89%A9%E7%90%86%E7%A9%BA%E9%97%B4%E7%9A%84%E2%80%9C%E5%B0%8F%E2%80%9D%E3%80%82%E4%B8%80%E8%88%AC%E6%9D%A5&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "stem": "<p>小剧场的“小”首先体现在物理空间的“小”。一般来讲，小剧场在物理空间的容纳度上是小的，演出空间基本上在2000平方米左右，观众席在500座以下，最为常见的为200至300个座位。参演人数不多，一般为2至6人，有时也会有独角戏。这就决定了演剧空间的紧凑性和观演关系的紧密性。因此，小剧场不宜过度渲染舞台美术的宏阔与震撼效果，而应该关注思想性、艺术形式表达或创新探索维度等戏剧艺术的本体呈现。用英国著名戏剧家彼得·布鲁克的话来说：“你若要看到什么有质量的东西，就得创造一个空的空间。”小剧场便是以鲜活的、新颖的方式传递内容、意义、表达、语言和音乐等核心艺术元素的存在。</p><p>这段文字意在说明（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "小剧场营造出了一个空的艺术创作空间"
+        },
+        {
+          "label": "B",
+          "text": "物理空间的小决定了小剧场创作的特点"
+        },
+        {
+          "label": "C",
+          "text": "小剧场创作应更关注戏剧艺术本体呈现"
+        },
+        {
+          "label": "D",
+          "text": "小剧场具有更加多元化方向的创作取向"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-27",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-358bfed5778bd774",
+      "fenbiQid": 5525280,
+      "module": "言语理解",
+      "number": "例 2.28",
+      "source": "2023年3月4日重庆市事业单位联考D类《职业能力倾向测验》笔试试题（网友回忆版）第38题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%B8%89%E5%8F%A0%E7%BA%AA%E6%98%AF%E7%B4%A7%E6%8E%A5%E7%9D%80%E4%BA%8C%E5%8F%A0%E7%BA%AA%E4%B9%8B%E5%90%8E%E7%9A%84%E4%B8%80%E4%B8%AA%E7%BA%AA%EF%BC%8C%E6%98%AF%E4%B8%AD%E7%94%9F%E4%BB%A3%E7%9A%84%E7%AC%AC%E4%B8%80&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "stem": "<p>三叠纪是紧接着二叠纪之后的一个纪，是中生代的第一个纪。这个时代开创了爬行动物和裸子植物的空前繁盛，三叠纪生物在经历了二叠纪末大灭绝后的复苏和演化，呈现出一派繁荣景象，出现恐龙等新一代中生代霸主，但随后又遭受一次全球性的生物大灭绝事件。这次大灭绝事件尽管没有像其他四次大灭绝那样引人注目，却赋予三叠纪以特殊的意义，即三叠纪是各个纪中唯一经历了从灾难中走出来，在获得新的演化辉煌时刻再次遭遇生物大灭绝的时代，它对中生代生物界的发展，尤其是开创恐龙鼎盛时代，乃至后续新生代生物界的演化，都有深远影响。</p><p>这段文字意在强调（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "三叠纪在生物史上有重要意义"
+        },
+        {
+          "label": "B",
+          "text": "生物大灭绝事件曾经多次发生"
+        },
+        {
+          "label": "C",
+          "text": "中生代生物界的演化历尽劫难"
+        },
+        {
+          "label": "D",
+          "text": "恐龙鼎盛时代的出现非常偶然"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-28",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-1728ce948554fdbb",
+      "fenbiQid": 2328006,
+      "module": "言语理解",
+      "number": "例 2.33",
+      "source": "2018年新疆巴音郭楞蒙古自治州面向社会公开招聘事业单位工作人员笔试《行政职业能力测验》题（网友回忆版）第17题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%BA%BA%E7%B1%BB%E6%8B%A5%E6%9C%89%E4%B8%80%E5%88%87%E5%8A%9B%E9%87%8F%E5%92%8C%E5%BC%B1%E7%82%B9%EF%BC%8C%E6%8B%A5%E6%9C%89%E4%B8%80%E5%88%87%E5%8F%AA%E6%9C%89%E4%BA%BA%E7%B1%BB%E6%89%8D%E6%8B%A5%E6%9C%89%E7%9A%84&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "stem": "<p>人类拥有一切力量和弱点，拥有一切只有人类才拥有的感情。我希望每一项新的惊人的技术突破都会遇到来自心理学家、社会学家、医学家和法律专家以及一切能够监督、评估新技术对人的影响的其他各种专业人士的怀疑主义的质难。这段文字的主要意思是：（  ）</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "人类不断取得新的惊人的技术突破"
+        },
+        {
+          "label": "B",
+          "text": "人类拥有一切力量和弱点"
+        },
+        {
+          "label": "C",
+          "text": "新的技术突破都来自心理学家、社会学家、医学家等人"
+        },
+        {
+          "label": "D",
+          "text": "人类必须重视技术突破带来的负面影响"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-33",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-203875c50a4a3602",
+      "fenbiQid": 2419767,
+      "module": "言语理解",
+      "number": "例 2.34",
+      "source": "2019年4月北京市西城区事业单位公开招聘考试《公共基本能力测验》（管理岗）题精选（网友回忆版）第26题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%B2%A1%E6%9C%89%E8%BF%BD%E6%98%9F%E7%BB%8F%E5%8E%86%E7%9A%84%E4%BA%BA%E4%B9%9F%E8%AE%B8%E5%BE%88%E9%9A%BE%E6%98%8E%E7%99%BD%E7%B2%89%E4%B8%9D%E7%BE%A4%E4%BD%93%E2%80%9C%E5%81%9A%E6%95%B0%E6%8D%AE%E2%80%9D%E7%9A%84&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "stem": "<p>没有追星经历的人也许很难明白粉丝群体“做数据”的能力和热情从何而来，在所谓的流量时代，粉丝通过应用新技术和养成的追星习惯，逐渐掌握了干预和影响明星影响力数据的能力。他们从幕后走到台前，从孤立走向群体，借助社交媒体不断发声，成为娱乐产业链条中不能被忽视的一方。在上述过程中，“粉丝文化”也逐渐从小众的“亚文化”圈层不断向大众文化输送新名词、新概念。尽管因为参与制作数据获得了地位、话语权的提升，但粉丝们并不十分认同娱乐市场中，一些品牌方、平台方对数据的过分依赖，在实际参与过程中，粉丝们对明星数据的实质有了更清晰的认识。</p><p>这段文字主要支持了这样一个观点，即（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "随着“流量至上”热潮的退却，粉丝追星逐渐趋向理智"
+        },
+        {
+          "label": "B",
+          "text": "粉丝在娱乐产业链条中有着越来越重要的话语权"
+        },
+        {
+          "label": "C",
+          "text": "没有追星经历的人很难明白粉丝群体追星的热情从何而来"
+        },
+        {
+          "label": "D",
+          "text": "一些品牌方、平台方对粉丝越来越依赖"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-34-讲义标注正确率-54",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-5b960ba58cfcd6f5",
+      "fenbiQid": 3761899,
+      "module": "言语理解",
+      "number": "例 2.39",
+      "source": "2021年4月3日陕西省西安市事业单位《职业能力测验》精选题（网友回忆版）第38题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%89%80%E8%B0%93%E6%95%99%E8%82%B2%E7%9A%84%E2%80%9C%E5%85%B3%E9%94%AE%E6%9C%9F%E2%80%9D%EF%BC%8C%E6%98%AF%E6%8C%87%E4%BA%BA%E7%94%9F%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%9F%E3%80%82%E5%9C%A8&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "stem": "<p>所谓教育的“关键期”，是指人生学习的最佳时期。在这个年龄段培养孩子的行为习惯成效最大。如果在这个年龄段对孩子实施某种教育，可以事半功倍，而一旦错过了这个年龄段，再进行这种教育，效果就明显差多了，甚至终身难以弥补。</p><p>这段文字主要说明的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "教育的“关键期”的定义"
+        },
+        {
+          "label": "B",
+          "text": "抓住教育的“关键期”才能事半功倍"
+        },
+        {
+          "label": "C",
+          "text": "在教育的“关键期”培养人可以事倍功半"
+        },
+        {
+          "label": "D",
+          "text": "孩子行为习惯不好，往往是教育错过了“关键期”"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-39-讲义标注正确率-45",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-79320448d94f73e2",
+      "fenbiQid": 3587946,
+      "module": "言语理解",
+      "number": "例 2.43",
+      "source": "2021年4月24日浙江省事业单位招聘考试《职业能力倾向测验》试题（网友回忆版）第13题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E4%BD%9C%E4%B8%BA%E4%B8%80%E7%A7%8D%E7%8E%B0%E4%BB%A3%E4%BA%A7%E6%9D%83%E5%88%B6%E5%BA%A6%EF%BC%8C%E6%9C%AC%E8%B4%A8%E6%98%AF%E9%80%9A%E8%BF%87%E4%BA%A7%E6%9D%83%E6%BF%80%E5%8A%B1&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "stem": "<p>知识产权作为一种现代产权制度，本质是通过产权激励，帮助创新者获得与其技术贡献相适应的回报。一家创新型企业研发新产品，必然要投入大量人力、物力和财力，如果知识产权得不到有效保护，就会严重影响企业的积极性及生产效益，进而影响整个创新环境。没有知识产权这一无形资产，企业就会失去核心竞争力，创新就成了无根之木、无源之水。</p><p>对这段文字的主旨概括，最准确的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "产权激励是创新的动力之源"
+        },
+        {
+          "label": "B",
+          "text": "保护知识产权就是保护创新"
+        },
+        {
+          "label": "C",
+          "text": "任何创新都需要大量人力、物力投入"
+        },
+        {
+          "label": "D",
+          "text": "知识产权是企业或个人的核心竞争力"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-43",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
       "id": "site-da377d6a2e883b60",
       "fenbiQid": 2445088,
+      "module": "言语理解",
       "number": "例 2.44",
       "source": "2019年黑龙江边境县（市、区）急需紧缺专业岗公务员考试《行测》题第55题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%9C%A8%E5%B7%A5%E4%BD%9C%E4%B8%AD%EF%BC%8C%E5%8F%AA%E6%9C%89%E6%97%B6%E5%88%BB%E8%B7%B5%E8%A1%8C%E7%BE%A4%E4%BC%97%E8%B7%AF%E7%BA%BF%EF%BC%8C%E6%89%8D%E8%83%BD%E4%BB%8E%E6%A0%B9%E6%9C%AC%E4%B8%8A%E9%93%B2%E9%99%A4&courseSet=xingce&course=xingce&qType=1",
@@ -382,6 +725,7 @@
     {
       "id": "site-f6082fba3a8be183",
       "fenbiQid": 2448485,
+      "module": "言语理解",
       "number": "例 2.48",
       "source": "2020年国家公务员录用考试《行测》题（地市级网友回忆版）第52题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E2%80%9C%E9%A3%8E%E7%AD%9D%E4%B8%8D%E6%96%AD%E7%BA%BF%E2%80%9D%E6%98%AF%E5%90%B4%E5%86%A0%E4%B8%AD%E4%B8%8A%E4%B8%96%E7%BA%AA%2080%20%E5%B9%B4%E4%BB%A3%E5%89%8D%E5%90%8E%E6%8F%90%E5%87%BA&courseSet=xingce&course=xingce&qType=1",
@@ -411,6 +755,7 @@
     {
       "id": "site-6047d97f2f174711",
       "fenbiQid": 2187771,
+      "module": "言语理解",
       "number": "例 2.49",
       "source": "2018年421联考《行测》题（河北卷）（网友回忆版）第56题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%BB%8E%E5%AF%B9%E6%8A%80%E6%9C%AF%E4%B8%8E%E7%9F%A5%E8%AF%86%E5%85%B3%E7%B3%BB%E7%9A%84%E6%A2%B3%E7%90%86&courseSet=xingce&course=xingce&qType=1",
@@ -438,8 +783,99 @@
       "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。 本题在本站旧讲义或其他资料中出现过不同判断，本轮按粉笔参考判分；原记录保留。"
     },
     {
+      "id": "site-331e00135ae01019",
+      "fenbiQid": 4553663,
+      "module": "言语理解",
+      "number": "例 2.53",
+      "source": "2021年10月23日全国事业单位联考B类《职业能力倾向测验》试题（安徽/湖南/四川网友回忆版）第33题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%8F%A4%E5%B8%8C%E8%85%8A%E7%9A%84%E6%9F%8F%E6%8B%89%E5%9B%BE%E3%80%81%E4%BA%9A%E9%87%8C%E5%A3%AB%E5%A4%9A%E5%BE%B7%E9%83%BD%E6%8F%90%E5%87%BA%E8%BF%87%E4%B8%B0%E5%AF%8C%E7%9A%84%E8%BE%A9%E8%AF%81%E6%B3%95%E6%80%9D&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "stem": "<p>古希腊的柏拉图、亚里士多德都提出过丰富的辩证法思想，在《理想国》《形而上学》等著作中，以多种方式揭示了事物发展变化的辩证规律。文艺复兴运动以后，从康德到黑格尔，德国古典哲学把辩证法思想推向了一个新的高度。特别是黑格尔在《逻辑学》《自然哲学》等经典著作中，把辩证法作为其哲学理论体系的基础，系统构建了一个庞大的绝对精神辩证法王国。这些经典著作和论述都是我们提高辩证思维能力应该认真阅读和汲取的思想资源。</p><p>这段文字意在强调（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "阅读经典著作有助于提高辩证思维能力"
+        },
+        {
+          "label": "B",
+          "text": "辩证法思想经历了漫长的发展演变过程"
+        },
+        {
+          "label": "C",
+          "text": "西方哲学的进步推动了辩证法思想的发展"
+        },
+        {
+          "label": "D",
+          "text": "辩证法在整个哲学体系中占有重要的地位"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-53",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-d99b9d832b513b28",
+      "fenbiQid": 2387831,
+      "module": "言语理解",
+      "number": "例 2.54",
+      "source": "2019年上半年全国事业单位联考D类《职业能力倾向测验》题（云南/贵州/湖北/安徽/陕西/青海/甘肃网友回忆版）第50题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%B8%80%E7%9B%B4%E4%BB%A5%E6%9D%A5%EF%BC%8C%E4%BA%BA%E4%BB%AC%E5%93%80%E5%8F%B9%E4%BC%A0%E7%BB%9F%E5%AA%92%E4%BD%93%E7%9A%84%E5%BC%8F%E5%BE%AE%EF%BC%8C%E5%AE%9E%E5%88%99%E6%8B%85%E5%BF%83%E7%9A%84%E6%98%AF%E9%9A%8F&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "stem": "<p>一直以来，人们哀叹传统媒体的式微，实则担心的是随着传统媒体一起消失的新闻的严肃性、权威性、可信性，是随着传统媒体一起消失的“精益求精的老编辑们”。对严肃新闻的漠不关心，对娱乐报道的过度追捧，对谣言谎言的麻木不仁，才是这个时代面临的更为迫切的问题。真正严肃的新闻正在流失，真正深度的思考日益稀缺，这才是更需要警惕的。</p><p>这段文字意在说明（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "当前严肃新闻的日渐缺席值得警惕"
+        },
+        {
+          "label": "B",
+          "text": "传统媒体被新媒体替代是大势所趋"
+        },
+        {
+          "label": "C",
+          "text": "新闻所体现出的核心价值不会消失"
+        },
+        {
+          "label": "D",
+          "text": "传统媒体将以崭新的面貌面向世人"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-54",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-103ae996b2f1704b",
+      "fenbiQid": 2204150,
+      "module": "言语理解",
+      "number": "例 2.58",
+      "source": "2018年上半年全国事业单位联考D类《职业能力倾向测验》题（云南/湖北/安徽/贵州/宁夏/青海/陕西/甘肃网友回忆版）第54题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%85%A8%E7%90%83%E5%8C%96%E7%9A%84%E6%97%B6%E4%BB%A3%E9%87%8C%EF%BC%8C%E8%AF%AD%E8%A8%80%E7%9A%84%E8%A7%84%E8%8C%83%E6%80%A7%E8%A6%81%E6%B1%82%E8%B6%8A%E6%9D%A5%E8%B6%8A%E9%AB%98%EF%BC%8C%E5%8F%AF%E4%BB%A5%E9%A2%84&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "stem": "<p>全球化的时代里，语言的规范性要求越来越高，可以预见，许多小方言区将逐渐消失，“五里不同音、十里不同调”的格局将逐步改变，直到形成若干稳定的大方言区。然而，语言并非只有交际属性，它还有文化属性，每一种方言或语言，都承载了一段历史、一种文化。这种历史和文化，与特定的语言或方言形成共生关系，换成别的语言或方言表达就变了味，失去了许多内涵。假如歌曲《十送红军》没有了乡音，莫言的小说没有了高密话，赵本山小品没有了东北腔调，恐怕许多意蕴和趣味就消失了。</p><p>这段文字意在强调：</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "全球化时代语言的统一和规范是大势所趋"
+        },
+        {
+          "label": "B",
+          "text": "方言相对于普通话而言具有更强的表现力"
+        },
+        {
+          "label": "C",
+          "text": "保护方言在全球化背景下具有特殊的意义"
+        },
+        {
+          "label": "D",
+          "text": "历史文化与特定语言的共生关系正在消失"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-58",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
       "id": "site-d0ee6802ede8ba2f",
       "fenbiQid": 2172337,
+      "module": "言语理解",
       "number": "例 2.59",
       "source": "2018年江苏省公务员录用考试《行测》题（C类）（网友回忆版）第28题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%BB%A5%E7%94%A8%E7%9A%84%E9%A3%8E%E9%99%A9%EF%BC%8C%E4%BC%9A%E5%AF%B9%E4%B8%AA%E4%BA%BA%E9%9A%90%E7%A7%81%E6%9D%83%E7%AD%89%E4%BA%BA%E6%A0%BC%E6%9D%83%E5%B8%A6%E6%9D%A5%E7%8E%B0%E5%AE%9E%E5%A8%81&courseSet=xingce&course=xingce&qType=1",
@@ -467,8 +903,69 @@
       "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
     },
     {
+      "id": "site-fce0ac8d4b034fd1",
+      "fenbiQid": 5339733,
+      "module": "言语理解",
+      "number": "例 2.60",
+      "source": "2022年7月2日四川省成都市服务基层《职业能力倾向测验》笔试精选题（网友回忆版）第6题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%89%80%E6%9C%89%E4%BD%9C%E5%93%81%E9%83%BD%E8%BF%AB%E4%BD%BF%E6%88%96%E8%80%85%E8%AF%B4%E6%98%AF%E5%90%AF%E7%A4%BA%E6%88%91%E4%BB%AC%E8%A6%81%E9%9D%99%E4%B8%8B%E5%BF%83%E6%9D%A5%EF%BC%8C%E8%A6%81%E5%8A%AA%E5%8A%9B&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "stem": "<p>所有作品都迫使或者说是启示我们要静下心来，要努力使诗歌保持朴素的品格，要经常默念“敲打”这个词，要让它在耳边震荡、回响，它要像一把锤子来到手上，要敲掉那些多余的、浮华的、虚妄的东西，比如那些夸张的、沉滞的，缺乏生命力的想象，或者那些硬拼凑上去的、所谓的“意义”等等——这些东西应被彻底敲掉，从而使诗歌变得结实、有力，露出筋和骨。</p><p>这段话的主旨是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "意义对于诗歌来说并不重要"
+        },
+        {
+          "label": "B",
+          "text": "朴素是诗歌应有的品质"
+        },
+        {
+          "label": "C",
+          "text": "读诗需要平心静气"
+        },
+        {
+          "label": "D",
+          "text": "诗歌要经常去“敲打”"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-60-讲义标注正确率-44",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-b66775b801d6fc06",
+      "fenbiQid": 2569973,
+      "module": "言语理解",
+      "number": "例 2.63",
+      "source": "2019年11月10日广东省湛江市雷州市社会保险基金管理局考试《职业能力测验》精选题（网友回忆版）第12题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%80%9D%E8%80%83%E6%98%AF%E5%88%9B%E6%96%B0%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%8C%E6%98%AF%E4%B8%80%E5%BA%A7%E6%8E%98%E4%B9%8B%E4%B8%8D%E5%B0%BD%E7%9A%84%E8%83%BD%E5%8A%9B%E5%AE%9D%E5%BA%93%EF%BC%8C%E6%B2%A1&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "stem": "<p>思考是创新的第一步，是一座掘之不尽的能力宝库，没有思考能力就缺乏行动能力，就谈不到创新，谈不到创造性工作。只有努力养成善于思考的良好习惯，形成人人思考、自觉思考、终生思考的好风气，我们为人民服务的本领才能提高，为人民执政的能力才能增强，建设创新型国家才有深厚的群众基础和社会基础。这段文字主要表达的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "创新离不开思考"
+        },
+        {
+          "label": "B",
+          "text": "思考是为了创新"
+        },
+        {
+          "label": "C",
+          "text": "没有创新就没有思考"
+        },
+        {
+          "label": "D",
+          "text": "没有良好的思考习惯就没有创新"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-63-讲义标注正确率-63",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
       "id": "site-3752975559ecde38",
       "fenbiQid": 4817900,
+      "module": "言语理解",
       "number": "例 2.64",
       "source": "2022年青海省公务员录用考试《行测》题（网友回忆版）第51题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%9C%A8%E5%8F%A4%E6%B3%95%E9%85%B1%E5%9D%8A%E9%87%8C%EF%BC%8C%E8%92%B8%E7%85%AE%E8%BF%87%E7%9A%84%E5%A4%A7%E8%B1%86%E5%92%8C%E9%9D%A2%E7%B2%89%E6%8B%8C%E5%9D%87%E5%8C%80%E5%90%8E%EF%BC%8C%E9%9C%80%E8%A6%81%E5%88%B0&courseSet=xingce&course=xingce&qType=1",
@@ -498,6 +995,7 @@
     {
       "id": "site-2799aedd1d48ef92",
       "fenbiQid": 2388269,
+      "module": "言语理解",
       "number": "例 3.1",
       "source": "2019年河北省公务员录用考试《行测》题（县级+乡镇）（网友回忆版）第47题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E3%80%8A%E4%BA%AC%E6%B4%A5%E5%86%80%E5%8D%8F%E5%90%8C%E5%8F%91%E5%B1%95%E8%A7%84%E5%88%92%E7%BA%B2%E8%A6%81%E3%80%8B%E6%98%8E%E7%A1%AE%E6%8C%87%E5%87%BA%EF%BC%9A%E5%8C%97%E4%BA%AC%E4%B8%BA%E5%85%A8%E5%9B%BD%E6%94%BF&courseSet=xingce&course=xingce&qType=1",
@@ -522,11 +1020,132 @@
         }
       ],
       "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-1",
-      "gradingNote": "本站讲义仅保留片段；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-d0fb9e834a4ef956",
+      "fenbiQid": 2204111,
+      "module": "言语理解",
+      "number": "例 3.2",
+      "source": "2018年上半年全国事业单位联考D类《职业能力倾向测验》题（云南/湖北/安徽/贵州/宁夏/青海/陕西/甘肃网友回忆版）第44题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E3%80%8A%E5%8F%B2%E8%AE%B0%E3%80%8B%E7%9A%84%E7%94%9F%E5%91%BD%E5%8A%9B%E6%BA%90%E4%BA%8E%E5%8E%86%E4%BB%A3%E8%AF%BB%E8%80%85%E5%AF%B9%E5%AE%83%E7%9A%84%E6%8E%A5%E5%8F%97%E3%80%82%E5%AE%83%E4%BD%9C%E4%B8%BA%E4%B8%80&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "stem": "<p>《史记》的生命力源于历代读者对它的接受。它作为一条文化链，有传播者、接受者、研究者，历代不绝，乃至于形成一门学问——“史记学”。这门学问的形成过程，就是《史记》生命力延伸的过程。汉魏六朝是传播和初步研究时期，此后不断发展，20世纪以来进入高潮时期。《史记》的生命力还来源于其世界性的传播与研究：在日本，各种形式的《史记》抄本、刻本，或选本，或全本，数量在百种以上，普及程度非常广泛；在欧美国家，《史记》也愈来愈受到重视，全本的俄语、法语版已经问世，全本的英语版也即将完成。世界范围的《史记》研究愈来愈深入，显示出《史记》永久的魅力和生命力。</p><p>这段文字主要介绍了：</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "《史记》的传播过程"
+        },
+        {
+          "label": "B",
+          "text": "“史记学”的独特魅力"
+        },
+        {
+          "label": "C",
+          "text": "《史记》受重视的原因"
+        },
+        {
+          "label": "D",
+          "text": "《史记》生命力的来源"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-2",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-44c74ceec6a6b3c0",
+      "fenbiQid": 5140903,
+      "module": "言语理解",
+      "number": "例 3.3",
+      "source": "2022年7月23日广东省事业单位高校毕业生招聘考试《基本能力测试》（网友回忆版）第41题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%85%88%E8%BF%9B%E5%88%B6%E9%80%A0%E4%B8%9A%E6%98%AF%E4%B8%8E%E4%BC%A0%E7%BB%9F%E4%BA%A7%E4%B8%9A%E7%9B%B8%E5%AF%B9%E8%80%8C%E8%A8%80%E7%9A%84%EF%BC%8C%E5%AE%83%E5%8F%AF%E4%BB%A5%E7%94%B1%E4%BC%A0%E7%BB%9F%E4%BA%A7&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "stem": "<p>先进制造业是与传统产业相对而言的，它可以由传统产业融入先进技术升级而成，也可以由新技术的颠覆性突破而衍生出，通常具备以下特点：处在全球生产体系的高端，生产流通高度智能化······产品附加值高、技术含量高；吸收计算机、电子信息、材料以及现代管理技术等领域的高新技术成果，在技术和研发方面保持先进水平；采用先进的管理方式和技术手段，有较好的经济收益和市场效果。</p><p>这段文字主要讲了（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "先进制造业与传统制造业的区别"
+        },
+        {
+          "label": "B",
+          "text": "先进制造业的主要特征"
+        },
+        {
+          "label": "C",
+          "text": "先进制造业的突出优势"
+        },
+        {
+          "label": "D",
+          "text": "传统业先进制造业关系"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-3-讲义标注正确率-65",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-ffba34b7f902abc3",
+      "fenbiQid": 2427816,
+      "module": "言语理解",
+      "number": "例 3.4",
+      "source": "2019年9月7日北京市朝阳区规范管理事业单位招聘笔试试题（网友回忆版）第44题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%A4%8F%E5%A4%A9%E7%9A%84%E5%8C%97%E6%9E%81%E7%86%8A%E8%A2%AB%E8%BF%AB%E7%99%BB%E5%B2%B8%EF%BC%8C%E5%AF%BB%E6%89%BE%E6%B5%86%E6%9E%9C%E3%80%81%E9%B8%9F%E8%9B%8B%E5%92%8C%E5%8A%A8%E7%89%A9%E5%B0%B8%E4%BD%93%E5%85%85&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "stem": "<p>夏天的北极熊被迫登岸，寻找浆果、鸟蛋和动物尸体充饥，甚至在垃圾场翻找食物残渣。但这些能量来源，都只能算是塞牙缝的零食。夏天的大多数时间里，北极熊都在忍饥挨饿，依赖体内脂肪生活，科学家把这种状态称为“行走中的休眠”。但“行走中的休眠”消耗的能量，比真正的冬眠高很多。夏天的北极熊，经常因为皮下脂肪耗竭而显得十分瘦长。</p><p>这段话主要说明了（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "夏天北极熊的生存方式"
+        },
+        {
+          "label": "B",
+          "text": "夏天的北极熊瘦长的原因"
+        },
+        {
+          "label": "C",
+          "text": "北极熊艰难的生存环境"
+        },
+        {
+          "label": "D",
+          "text": "地球变暖对北极熊的影响"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-4-讲义标注正确率-64",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-c16631097eeeceaa",
+      "fenbiQid": 2513624,
+      "module": "言语理解",
+      "number": "例 3.6",
+      "source": "2018年6月浙江省温州市文成县事业单位公开招聘工作人员考试《职业能力倾向测验》题（网友回忆版）第40题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%BA%BA%E7%B1%BB%E7%A4%BE%E4%BC%9A%E4%B8%80%E7%9B%B4%E6%98%AF%E7%94%B1%E2%80%9C%E4%BA%8C%E5%88%86%E6%B3%95%E2%80%9D%E7%9A%84%E6%80%9D%E7%BB%B4%E6%96%B9%E5%BC%8F%E7%BB%9F%E6%B2%BB%E7%9A%84%EF%BC%8C%E4%BA%BA%E5%92%8C&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "stem": "<p>人类社会一直是由“二分法”的思维方式统治的，人和外部世界（即自然界和人造物世界之和）是思维中被分裂开来的两个最基本的元素。人和外部世界的长期共生共存，本来是相互依赖和相互扶助的关系，却由于人过于看重自身的能量，外部世界又的确不具备主动的对抗性，助成了人的主宰之位，而人又在对外部世界施加随心所欲的改造中，膨胀了自己的霸主意识，弱化甚至失去了对大自然的敬畏，更不将自己创造出来的物件放在眼里。这种“二分法”的思维方式自然而然地导引出了“人类中心主义”。</p><p>这段文字意在说明（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "人类“二分法”的思维方式的缺陷"
+        },
+        {
+          "label": "B",
+          "text": "人类“二分法”的思维模式使人凌驾于外部世界"
+        },
+        {
+          "label": "C",
+          "text": "人类的自我中心导致失去敬畏"
+        },
+        {
+          "label": "D",
+          "text": "“人类中心主义”是如何形成的"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-6-讲义标注正确率-66",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
     },
     {
       "id": "site-7273732c19cee5da",
       "fenbiQid": 2741713,
+      "module": "言语理解",
       "number": "例 3.11",
       "source": "2021年山东省公务员录用考试《行测》试题（网友回忆版）第23题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E9%9A%8F%E7%9D%80%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A4%9A%E7%9A%84%E5%9B%BD%E5%AE%B6%E6%8A%95%E5%85%A5%E5%88%B0%E5%86%9B%E7%94%A8%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E7%A0%94%E7%A9%B6%E4%B8%8E%E5%BC%80%E5%8F%91%E4%B8%AD&courseSet=xingce&course=xingce&qType=1",
@@ -554,8 +1173,69 @@
       "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
     },
     {
+      "id": "site-bc5e45fbbf6373d5",
+      "fenbiQid": 2052326,
+      "module": "言语理解",
+      "number": "例 3.13",
+      "source": "2016年下半年全国事业单位联考E类《职业能力倾向测验》题（网友回忆版）第31题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%B8%8D%E8%AE%B2%E9%81%93%E7%90%86%E7%9A%84%E8%AF%9D%E8%AF%AD%E9%80%BB%E8%BE%91%E6%98%AF%E5%80%BC%E5%BE%97%E8%AD%A6%E6%83%95%E7%9A%84%EF%BC%8C%E9%95%BF%E6%9C%9F%E5%A4%84%E4%BA%8E%E8%BF%99%E6%A0%B7%E7%9A%84%E8%A8%80&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "stem": "<p>不讲道理的话语逻辑是值得警惕的，长期处于这样的言论状态中，难免影响理性表达。好的公共表达应该是温和理性的，即便是带有情绪的话语，也应该对事不对人。言论自由是我们的权利，但说负责的话也是我们的义务，没有限度的自由只会带来人与人之间的不信任感，使得社会缺少应有的共识。公共平台是自我言语表达的载体，体现着发言者的个人素养，作为受过良好教育的现代公民，当有这份责任意识。</p><p>这段文字意在说明（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "公共表达时更应遵守对事不对人的原则"
+        },
+        {
+          "label": "B",
+          "text": "遵循讲道理的话语逻辑是理性表达的前提"
+        },
+        {
+          "label": "C",
+          "text": "公民在公共平台上应有理性表达的义务"
+        },
+        {
+          "label": "D",
+          "text": "有限的自由空间是人们建立信任感的基础"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-13",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-c2653854f3c8a407",
+      "fenbiQid": 2200571,
+      "module": "言语理解",
+      "number": "例 3.16",
+      "source": "2018年5月浙江省事业单位统考《职业能力倾向测试》题（网友回忆版）第15题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E9%89%B4%E4%BA%8E%E5%88%B6%E9%80%A0%E4%B8%9A%E9%87%8D%E5%BF%83%E7%9A%84%E8%BD%AC%E7%A7%BB%E5%A4%9A%E7%94%B1%E8%B7%A8%E5%9B%BD%E5%85%AC%E5%8F%B8%E4%B8%BB%E5%AF%BC%EF%BC%8C%E4%B8%94%E7%9B%B8%E5%85%B3%E7%BB%8F%E6%B5%8E&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "stem": "<p>鉴于制造业重心的转移多由跨国公司主导，且相关经济利益均由发达国家获取，因此，发达国家应该更多承担这部分额外排放的减排责任，通过技术转移、扩大在发展中国家的低碳技术研发和应用投资等手段，使得从事制造业生产特别是低端制造业生产的发展中国家能够应用更高能效、更低碳的生产技术，以减缓温室气体排放增速，控制气候变暖效应，实现全球可持续发展。</p><p>这段文字意在说明（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "跨国公司是产业转移的幕后推手"
+        },
+        {
+          "label": "B",
+          "text": "发达国家应当承担主要的减排责任"
+        },
+        {
+          "label": "C",
+          "text": "发展中国家迫切需要技术援助"
+        },
+        {
+          "label": "D",
+          "text": "可持续发展应当成为全世界的共同选择"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-16",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
       "id": "site-ec1fa02d30614096",
       "fenbiQid": 2448451,
+      "module": "言语理解",
       "number": "例 3.17",
       "source": "2020年国家公务员录用考试《行测》题（地市级网友回忆版）第42题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E8%A5%BF%E5%A4%AA%E5%B9%B3%E6%B4%8B%E6%98%AF%E5%85%A8%E7%90%83%E6%B5%B7%E5%B1%B1%E7%B3%BB%E7%BB%9F%E5%88%86%E5%B8%83%E6%9C%80%E4%B8%BA%E9%9B%86%E4%B8%AD%E7%9A%84%E6%B5%B7%E5%9F%9F%EF%BC%8C%E4%BA%BA%E7%B1%BB%E5%AF%B9&courseSet=xingce&course=xingce&qType=1",
@@ -585,6 +1265,7 @@
     {
       "id": "site-55a58fc8691370e7",
       "fenbiQid": 2452622,
+      "module": "言语理解",
       "number": "例 3.20",
       "source": "2020年江苏省公务员录用考试《行测》题（C类）（网友回忆版）第19题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%B9%A6%E9%99%A2%E6%98%AF%E4%B8%AD%E5%9B%BD%E5%8E%86%E5%8F%B2%E4%B8%8A%E4%B8%80%E7%A7%8D%E7%8B%AC%E5%85%B7%E7%89%B9%E8%89%B2%E7%9A%84%E6%96%87%E5%8C%96%E6%95%99%E8%82%B2%E5%BD%A2%E5%BC%8F%EF%BC%8C%E5%9C%A8%E4%B9%A6&courseSet=xingce&course=xingce&qType=1",
@@ -614,6 +1295,7 @@
     {
       "id": "site-c8c8747566e3dd0b",
       "fenbiQid": 2367910,
+      "module": "言语理解",
       "number": "例 3.27",
       "source": "2019年江苏省公务员录用考试《行测》题（A类）（网友回忆版）第26题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%BB%8E%E9%A1%B6%E5%B1%82%E8%AE%BE%E8%AE%A1%E4%B8%8A%E7%9C%8B%EF%BC%8C%E6%88%91%E5%9B%BD%E5%B7%A5%E5%8C%A0%E7%B2%BE%E7%A5%9E%E5%9F%B9%E8%82%B2%E5%BB%BA%E8%AE%BE%E9%9C%80%E7%AB%8B%E8%B6%B3%E4%BA%8E%E6%90%AD%E5%BB%BA&courseSet=xingce&course=xingce&qType=1",
@@ -643,6 +1325,7 @@
     {
       "id": "site-2dc452d0ed51dd4d",
       "fenbiQid": 4639344,
+      "module": "言语理解",
       "number": "例 3.28",
       "source": "2022年国家公务员录用考试《行测》题（副省级网友回忆版）第49题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%9B%AE%E5%89%8D%EF%BC%8C%E6%88%91%E5%9B%BD%E8%87%AA%E4%B8%BB%E9%80%89%E8%82%B2%E5%93%81%E7%A7%8D%E6%92%AD%E7%A7%8D%E9%9D%A2%E7%A7%AF%E5%8D%A0%2095%25%E4%BB%A5%E4%B8%8A%EF%BC%8C%E8%89%AF&courseSet=xingce&course=xingce&qType=1",
@@ -672,6 +1355,7 @@
     {
       "id": "site-03920e1502f24780",
       "fenbiQid": 2604313,
+      "module": "言语理解",
       "number": "例 3.33",
       "source": "2020年广东省公务员录用考试《行测》试题（县级卷）（网友回忆版）第7题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%B8%BA%E5%BA%94%E5%AF%B9%E7%96%AB%E6%83%85%E7%BB%99%E4%BC%81%E4%B8%9A%E7%BB%8F%E8%90%A5%E5%B8%A6%E6%9D%A5%E7%9A%84%E4%B8%8D%E5%88%A9%E5%BD%B1%E5%93%8D%EF%BC%8C%E5%B9%BF%E4%B8%9C%E7%9C%81%E6%94%BF%E5%BA%9C%E8%BF%91&courseSet=xingce&course=xingce&qType=1",
@@ -701,6 +1385,7 @@
     {
       "id": "site-879711a3fef3993f",
       "fenbiQid": 2187756,
+      "module": "言语理解",
       "number": "例 3.36",
       "source": "2018年421联考《行测》题（天津卷）（网友回忆版）第34题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%B0%B4%E7%86%8A%E8%99%AB%E4%B9%9F%E5%8F%AB%E6%B0%B4%E7%86%8A%EF%BC%8C%E6%98%AF%E5%AF%B9%E7%BC%93%E6%AD%A5%E5%8A%A8%E7%89%A9%E9%97%A8%E7%94%9F%E7%89%A9%E7%9A%84%E4%BF%97%E7%A7%B0%EF%BC%8C%E6%9C%89%E8%AE%B0%E5%BD%95&courseSet=xingce&course=xingce&qType=1",
@@ -725,11 +1410,12 @@
         }
       ],
       "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-36",
-      "gradingNote": "本站讲义仅保留片段；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
     },
     {
       "id": "site-f86f0e06a0b8f609",
       "fenbiQid": 5445902,
+      "module": "言语理解",
       "number": "例 3.37",
       "source": "2023年国家公务员录用考试《行测》题（副省级网友回忆版）第42题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%AE%8B%E4%BB%81%E5%AE%97%E5%A4%A9%E5%9C%A3%E4%BA%94%E5%B9%B4%EF%BC%881027%20%E5%B9%B4%EF%BC%89%EF%BC%8C%E5%8C%97%E5%AE%8B%E7%BF%B0%E6%9E%97%E5%8C%BB%E5%AE%98%E9%99%A2%E7%9A%84&courseSet=xingce&course=xingce&qType=1",
@@ -759,6 +1445,7 @@
     {
       "id": "site-4c2b21eea65dc006",
       "fenbiQid": 2172354,
+      "module": "言语理解",
       "number": "例 3.40",
       "source": "2018年江苏省公务员录用考试《行测》题（C类）（网友回忆版）第16题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%8F%91%E5%B1%95%E4%B9%A1%E6%9D%91%E6%97%85%E6%B8%B8%E7%BC%BA%E5%B0%91%E8%B5%84%E9%87%91%E6%94%AF%E6%8C%81%EF%BC%8C%E8%BF%99%E4%B8%80%E9%9A%BE%E9%A2%98%E4%BA%9F%E9%9C%80%E7%A0%B4%E8%A7%A3%E3%80%82%E4%B9%A1%E6%9D%91&courseSet=xingce&course=xingce&qType=1",
@@ -788,6 +1475,7 @@
     {
       "id": "site-33d94c871b94d7bc",
       "fenbiQid": 2444715,
+      "module": "言语理解",
       "number": "例 3.41",
       "source": "2019年四川省公务员录用考试《行测》题（下半年）（网友回忆版）第38题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%EF%BC%8C%E7%BA%B5%E4%BD%BF%E5%9C%A8%E7%9F%AD%E6%97%B6%E9%97%B4%E5%86%85%E8%83%BD%E5%8F%96%E5%BE%97%E4%BD%B3%E7%BB%A9%EF%BC%8C%E4%B9%9F%E4%BC%9A%E5%9B%A0%E8%BF%87%E5%BA%A6%E6%B6%88%E8%B4%B9%E7%94%A8&courseSet=xingce&course=xingce&qType=1",
@@ -812,11 +1500,42 @@
         }
       ],
       "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-41-讲义标注正确率-56",
-      "gradingNote": "本站讲义仅保留片段；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。 本题在本站旧讲义或其他资料中出现过不同判断，本轮按粉笔参考判分；原记录保留。"
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。 本题在本站旧讲义或其他资料中出现过不同判断，本轮按粉笔参考判分；原记录保留。"
+    },
+    {
+      "id": "site-bc881abac297e609",
+      "fenbiQid": 2451261,
+      "module": "言语理解",
+      "number": "例 3.43",
+      "source": "2019年山西省阳泉市直事业单位《行政职业能力测验》精选题（网友回忆版）第34题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%9C%A8%E7%BE%8E%E5%9B%BD%EF%BC%8C%E5%AD%A6%E6%9C%AF%E7%95%8C%E3%80%81%E5%B7%A5%E5%95%86%E7%95%8C%E3%80%81%E4%B8%BB%E7%AE%A1%E9%83%A8%E9%97%A8%E5%92%8C%E5%A4%9A%E6%95%B0%E6%B6%88%E8%B4%B9%E8%80%85%E5%80%BE%E5%90%91&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "stem": "<p>在美国，学术界、工商界、主管部门和多数消费者倾向于认为用豆浆代替牛奶是一种更健康的选择。不过，绝大多数西方人很不喜欢豆味，所以美国的豆浆有进一步去除或掩盖豆味的操作，而中国人就会觉得这样一点儿豆浆味也没有。对奶味的偏好和对豆味的排斥，是豆浆在西方不够受欢迎的主要原因。此外，豆浆在保存过程中比牛奶容易发生聚集下沉，这也给豆浆成为牛奶那样的方便食品带来了难度。保存难度高，加上市场需求量不是那么大，导致美国豆浆的价格远远高于牛奶。</p><p>对这段文字的主旨概括最准确的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "豆浆相比牛奶而言是一种更健康的选择"
+        },
+        {
+          "label": "B",
+          "text": "指出豆浆打入美国市场所必需的技术手段"
+        },
+        {
+          "label": "C",
+          "text": "剖析豆浆在美国市场上价格偏高的原因"
+        },
+        {
+          "label": "D",
+          "text": "分析豆浆在西方不受欢迎的原因"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-43-讲义标注正确率-58",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
     },
     {
       "id": "site-f6b5e245137d44e0",
       "fenbiQid": 5445909,
+      "module": "言语理解",
       "number": "例 3.45",
       "source": "2023年国家公务员录用考试《行测》题（副省级网友回忆版）第46题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%9B%AE%E5%89%8D%EF%BC%8C%E6%88%91%E5%9B%BD%E2%80%9C%E4%B8%89%E5%86%9C%E2%80%9D%E5%B7%A5%E4%BD%9C%E9%87%8D%E5%BF%83%E5%B7%B2%E5%8E%86%E5%8F%B2%E6%80%A7%E8%BD%AC%E5%90%91%E5%85%A8%E9%9D%A2%E6%8E%A8%E8%BF%9B%E4%B9%A1&courseSet=xingce&course=xingce&qType=1",
@@ -844,8 +1563,129 @@
       "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
     },
     {
+      "id": "site-328090fa613de876",
+      "fenbiQid": 4992771,
+      "module": "言语理解",
+      "number": "例 3.49",
+      "source": "2022年5月21日全国事业单位联考D类《职业能力倾向测验》试题（内蒙古/宁夏/新疆/湖北/湖南/云南/贵州/广西/四川/海南网友回忆版）第37题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%9C%A8%E7%A7%91%E7%A0%94%E9%A2%86%E5%9F%9F%EF%BC%8C%E4%BA%BA%E4%BB%AC%E4%B9%9F%E5%96%9C%E6%AC%A2%E5%BA%86%E7%A5%9D%E5%A4%A7%E6%96%B0%E9%97%BB%EF%BC%8C%E6%AF%94%E5%A6%82%E8%AF%81%E5%AE%9E%E4%BA%86%E9%BB%91%E6%B4%9E&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "stem": "<p>在科研领域，人们也喜欢庆祝大新闻，比如证实了黑洞的存在、发明了编辑DNA的方法等。与之相比，一些耗时多年、极其艰辛的研究却鲜为人知，因为它们没有带来决定性的结果，似乎不能为解决科学问题提供任何证据，尽管它们能让我们离答案更近一步。这些没有得到预期结果的研究被称为“零结果”，它们驱使我们前进，让我们避免重复同样的错误，为未来的研究指引方向。如果没有它们，科学的发展可能放缓甚至受阻。我们可以从中学到很多东西，然而它们通常不会被发表。这不仅会导致科研效率低下，也显示当前的科学出版流程可能存在很大问题。</p><p>这段文字意在（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "揭示“零结果”的价值"
+        },
+        {
+          "label": "B",
+          "text": "指出科研领域存在的偏见"
+        },
+        {
+          "label": "C",
+          "text": "反思忽视“零结果”的问题"
+        },
+        {
+          "label": "D",
+          "text": "说明科研发展过程中的复杂性"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-49-讲义标注正确率-55",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-ca7e1a3a0215d6a1",
+      "fenbiQid": 2578255,
+      "module": "言语理解",
+      "number": "例 3.50",
+      "source": "2020年7月25日全国事业单位联考E类《职业能力倾向测验》题（安徽/湖北/内蒙古/青海/甘肃/广西/宁夏/云南/四川网友回忆版）第35题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E9%A6%86%E9%98%81%E4%BD%93%E8%AF%9E%E7%94%9F%E4%BA%8E%E6%98%8E%E6%9C%9D%E7%A7%91%E4%B8%BE%E5%8F%96%E5%A3%AB%EF%BC%8C%E6%98%AF%E6%8C%87%E6%B5%81%E8%A1%8C%E4%BA%8E%E9%A6%86%E9%98%81%E5%8F%8A%E7%A7%91%E4%B8%BE%E8%80%83&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "stem": "<p>馆阁体诞生于明朝科举取士，是指流行于馆阁及科举考场的一种书写体式，也属于当时官方使用的书体，主要为楷书。它作为一种方正、光沼、乌黑、大小一律的明代官场书体，在清代也得到了一定的弘扬。明代称其为“台阁体”，清代才称为“馆阁体”。馆阁体在某种程度上限制了楷书的书写自由，使得明清两代的楷书在很大范围内缺少个性，这是它的局限。但是，作为一种官方使用的书体，它又具有别的书体不可替代的实用价值，至少，它可以在科举考试阅卷的过程中，不会因为书写潦草而影响考官阅读评卷。所以，馆阁体在科举兴盛之际，能独占官方运用的文字鳌头，也是自然而然的事情。</p><p>这段文字意在强调（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "应辩证地评价馆阁体的艺术价值"
+        },
+        {
+          "label": "B",
+          "text": "馆阁体有其存在的历史和实用价值"
+        },
+        {
+          "label": "C",
+          "text": "官方使用书体的选择标准相对更加严苛"
+        },
+        {
+          "label": "D",
+          "text": "馆阁体一定程度上促进了科举考试的发展"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-50",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-83acec45867f9c6f",
+      "fenbiQid": 2419772,
+      "module": "言语理解",
+      "number": "例 3.54",
+      "source": "2019年4月北京市西城区事业单位公开招聘考试《公共基本能力测验》（管理岗）题精选（网友回忆版）第29题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%A4%A7%E5%AD%A6%E7%9A%84%E7%A0%94%E7%A9%B6%E5%9B%BA%E7%84%B6%E5%BA%94%E8%AF%A5%E4%B8%BA%E7%BB%8F%E6%B5%8E%E5%8F%91%E5%B1%95%E5%81%9A%E5%87%BA%E9%87%8D%E8%A6%81%E7%9A%84%E8%B4%A1%E7%8C%AE%EF%BC%8C%E5%A4%A7%E5%AD%A6&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "stem": "<p>大学的研究固然应该为经济发展做出重要的贡献，大学教育也应该帮助学生从事有益并令人满意的工作。然而对于一种最好的教育来说，还存在着无法用美元或人民币衡量的更重要的方面。它不仅应有助我们在专业领域内更具创造性，还应该使我们变得更善于深思熟虑，更有追求的理想和洞察力，成为更完美、更成功的人，我想，这种人所能创造的价值，很难用金钱来衡量。</p><p>这段话主要支持了这样一个观点，即（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "大学应该抛除单纯的创造财富之说，应该更多地关注科学研究"
+        },
+        {
+          "label": "B",
+          "text": "科学研究可以促进经济发展，大学重视科研实质是在创造财富"
+        },
+        {
+          "label": "C",
+          "text": "大学应关注如何教育一个成功的人，而非培养一个会赚钱的人"
+        },
+        {
+          "label": "D",
+          "text": "更善于深思熟虑，具有高超洞察力的人，往往能创造更多财富"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-54",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-9554e4540e075d99",
+      "fenbiQid": 2419774,
+      "module": "言语理解",
+      "number": "例 3.55",
+      "source": "2019年4月北京市西城区事业单位公开招聘考试《公共基本能力测验》（管理岗）题精选（网友回忆版）第30题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%BA%BA%E7%9A%84%E6%9C%AC%E8%B4%A8%E5%9C%A8%E4%BA%8E%E8%87%AA%E7%94%B1%EF%BC%8C%E5%9C%A8%E4%BA%8E%E5%AF%B9%E6%9C%AA%E6%9D%A5%E7%94%9F%E6%B4%BB%E7%9A%84%E5%88%9B%E6%96%B0%EF%BC%8C%E5%9C%A8%E4%BA%8E%E6%8A%95%E8%BA%AB&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "stem": "<p>人的本质在于自由，在于对未来生活的创新，在于投身公共领域去感受无限可能性以及不可预测性。而极权主义敌视个人和生活的个性，它用单一性、一致性与封闭性消灭了生活的多样性、开放性和丰富性，它用所谓历史发展的“必然规律”消灭了人的行动的不可预测性和不可控制性，一句话，消灭了自由。</p><p>这段话主要支持了这样一个观点，即（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "人的本质就是自由，任何想压抑自由的做法，都会得到人的反抗"
+        },
+        {
+          "label": "B",
+          "text": "自由是个很模糊的东西，很难把握，更别说用共性来使之统一化"
+        },
+        {
+          "label": "C",
+          "text": "历史发展的必然规律就是用大一统的法则，来实现整个社会的和谐"
+        },
+        {
+          "label": "D",
+          "text": "单一的极权主义违背了人的本质，用共性代替个性的做法是错误的"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-55",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
       "id": "site-5dcd2b2d269c654d",
       "fenbiQid": 2187762,
+      "module": "言语理解",
       "number": "例 3.60",
       "source": "2018年421联考《行测》题（山东卷）（网友回忆版）第22题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E8%BF%91%E4%BB%A3%E4%BB%A5%E6%9D%A5%E4%BA%BA%E7%B1%BB%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95%E8%BF%87%E7%A8%8B%E4%B8%8E%E5%8F%A4%E4%BB%A3%E4%B8%8D%E5%90%8C%E3%80%82%E5%8F%A4%E4%BB%A3%E6%8A%80%E6%9C%AF%E5%8F%91&courseSet=xingce&course=xingce&qType=1",
@@ -873,8 +1713,99 @@
       "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
     },
     {
+      "id": "site-8cc9c40dd5190313",
+      "fenbiQid": 2056834,
+      "module": "言语理解",
+      "number": "例 3.61",
+      "source": "2017年上半年事业单位联考D类《职业能力倾向测验》题（云南/湖北/安徽/贵州/宁夏/广西/青海/陕西/内蒙古/上海网友回忆版）第45题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E8%BF%87%E5%8E%BB%E7%9A%84%E8%90%A5%E9%94%80%E6%98%AF%E6%BC%8F%E6%96%97%E6%95%88%E5%BA%94%EF%BC%8C%E4%BC%A0%E7%BB%9F%E5%AA%92%E4%BD%93%E4%B8%8A%E7%9A%84%E5%B9%BF%E5%91%8A%E8%AE%A9%E5%8F%97%E4%BC%97%E4%BB%8E%E5%BE%88&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "stem": "<p>过去的营销是漏斗效应，传统媒体上的广告让受众从很宽的漏斗口进入，买单的到了漏斗的底端。网红的营销则是涟漪效应，每个波纹和波纹之间会有碰撞，影响面更宽，影响的深度更深。网红通过树立个人品牌、贯彻自我的生活方式吸引粉丝，粉丝可能对传统广告是排斥的，但是乐于模仿偶像而消费。在社交平台上，粉丝之间的沟通渠道打通了，他们甚至不仅仅购物，而且乐于把自己的喜好传播给别人，每一次点赞、评论、转发，涟漪就扩散一次。</p><p>这段文字主要介绍（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "网红营销影响巨大的原因"
+        },
+        {
+          "label": "B",
+          "text": "粉丝在网络时代的消费特征"
+        },
+        {
+          "label": "C",
+          "text": "传统营销与网络营销模式的区别"
+        },
+        {
+          "label": "D",
+          "text": "社交平台中网红与粉丝的互动模式"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-61-讲义标注正确率-64",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-9b1ddd943034879b",
+      "fenbiQid": 2419768,
+      "module": "言语理解",
+      "number": "例 3.62",
+      "source": "2019年4月北京市西城区事业单位公开招聘考试《公共基本能力测验》（管理岗）题精选（网友回忆版）第27题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%8F%A4%E4%BB%A3%E5%B8%8C%E8%85%8A%E7%9A%84%E6%B0%91%E4%B8%BB%E5%88%B6%E5%BA%A6%EF%BC%8C%E4%B8%BB%E8%A6%81%E6%98%AF%E4%BB%A5%E9%9B%85%E5%85%B8%E4%B8%BA%E4%BB%A3%E8%A1%A8%E5%BB%BA%E7%AB%8B%E5%92%8C%E5%8F%91%E5%B1%95&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "stem": "<p>古代希腊的民主制度，主要是以雅典为代表建立和发展起来的。根据亚里士多德在《雅典政制》中的记载，雅典原来也是贵族当政，按照门第和财富选任执政官，后来经过多次改革，民主政治才逐渐完善起来。</p><p>这段文字直接支持了这样一个观点，即（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "希腊的民主制度首先确立在雅典"
+        },
+        {
+          "label": "B",
+          "text": "雅典的民主政治不是一蹴而就的"
+        },
+        {
+          "label": "C",
+          "text": "希腊也是按照门第和财富选任执政官"
+        },
+        {
+          "label": "D",
+          "text": "民主政治的完善是一个漫长的过程"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-62",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-c46f2cb0b7440377",
+      "fenbiQid": 2578294,
+      "module": "言语理解",
+      "number": "例 3.64",
+      "source": "2020年7月25日全国事业单位联考E类《职业能力倾向测验》题（安徽/湖北/内蒙古/青海/甘肃/广西/宁夏/云南/四川网友回忆版）第37题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%BE%88%E9%95%BF%E4%B8%80%E6%AE%B5%E6%97%B6%E9%97%B4%EF%BC%8C%E4%B8%AD%E5%9B%BD%E6%96%87%E5%AD%A6%E6%B5%B7%E5%A4%96%E4%BC%A0%E6%92%AD%E4%B8%BB%E8%A6%81%E4%BE%9D%E8%B5%96%E6%9C%89%E8%A7%84%E6%A8%A1%E6%9C%89%E4%BD%93&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "stem": "<p>很长一段时间，中国文学海外传播主要依赖有规模有体系的经典作品译介，这些译介在推动中国文学走出去的过程中发挥了重要作用，但有时也会出现译介书目和目标读者的喜好、接受度之间有差距的情况，从而影响译介和推广效果。而如今，类型文学海外传播则更注重市场需求，有时候甚至表现出从“译出”到“译入”的变化，即不是先译好了再推送，而是对方主动译入。据称，中国网络小说的许多海外读者因为等不及人工翻译，便通过机器翻译来实时阅读中文更新内容，这种如饥似渴的读者需求是中国文学走出去的根本动力。</p><p>这段文字意在说明（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "中国文学走出去首先需要满足市场需求"
+        },
+        {
+          "label": "B",
+          "text": "类型文学在国外读者中拥有很高的人气"
+        },
+        {
+          "label": "C",
+          "text": "中国文学的传播方式会直接影响到效果"
+        },
+        {
+          "label": "D",
+          "text": "中国文学海外传播的路径需要与时俱进"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-64-讲义标注正确率-59",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
       "id": "site-e69b681d82b1ff54",
       "fenbiQid": 4662339,
+      "module": "言语理解",
       "number": "例 3.65",
       "source": "2022年山东省公务员录用考试《行测》试题（网友回忆版）第31题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%96%B0%E7%9A%84%E6%8A%80%E6%9C%AF%E6%88%96%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%88%9A%E5%87%BA%E7%8E%B0%E6%97%B6%EF%BC%8C%E7%94%B1%E4%BA%8E%E8%BF%98%E4%B8%8D%E5%A4%9F%E6%88%90%E7%86%9F%E3%80%81%E8%A7%84%E6%A8%A1&courseSet=xingce&course=xingce&qType=1",
@@ -904,6 +1835,7 @@
     {
       "id": "site-6f4754abf90beed3",
       "fenbiQid": 5445689,
+      "module": "言语理解",
       "number": "例 3.66",
       "source": "2023年国家公务员录用考试《行测》题（行政执法卷网友回忆版）第42题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%B8%82%E5%9C%BA%E7%BB%8F%E6%B5%8E%E6%97%B6%E6%9C%9F%EF%BC%8C%E5%8A%B3%E5%8A%A8%E5%AF%86%E9%9B%86%E5%9E%8B%E5%88%B6%E9%80%A0%E5%B7%A5%E5%8E%82%E6%99%AE%E9%81%8D%E9%87%87%E7%94%A8%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%8A%80&courseSet=xingce&course=xingce&qType=1",
@@ -928,11 +1860,42 @@
         }
       ],
       "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-66",
-      "gradingNote": "本站讲义仅保留片段；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-9470d3956e16df7b",
+      "fenbiQid": 2204096,
+      "module": "言语理解",
+      "number": "例 3.68",
+      "source": "2018年上半年全国事业单位联考E类《职业能力倾向测验》题（云南/湖北/安徽/贵州/宁夏/广西/青海/陕西/甘肃网友回忆版）第40题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%8F%A4%E5%BE%80%E4%BB%8A%E6%9D%A5%EF%BC%8C%E4%BA%BA%E4%BB%AC%E5%AF%B9%E4%BA%8E%E4%BF%A1%E6%81%AF%E5%8A%A0%E5%AF%86%E7%9A%84%E6%8E%A2%E7%B4%A2%E4%BB%8E%E6%9C%AA%E5%81%9C%E6%AD%A2%E3%80%82%E5%8F%A4%E6%97%B6%E5%80%99&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "stem": "<p>古往今来，人们对于信息加密的探索从未停止。古时候，人们在信封上滴蜡盖上火印，但仍防不住有人拆开、读完再复原。现代，人们用电磁波传递秘密，但“音量”再低，也防不住精细的窃听。后来，科学家设法将“音量”调低到如此程度：只依靠一颗颗光子，任何窃密者去测量都会破坏它，从而被发现。如今，量子通讯将信息减弱到极限，即量子级别，再小心的读取都会彻底改变它。</p><p>这段文字主要介绍了：</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "量子通讯的加密原理"
+        },
+        {
+          "label": "B",
+          "text": "量子通讯的最大优势"
+        },
+        {
+          "label": "C",
+          "text": "信息加密的主要方式"
+        },
+        {
+          "label": "D",
+          "text": "信息加密的发展历程"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-68",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
     },
     {
       "id": "site-c8a000445053b7b5",
       "fenbiQid": 2028390,
+      "module": "言语理解",
       "number": "例 3.69",
       "source": "2017年国家公务员录用考试《行测》题（地市级）第44题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%9C%A8%E5%8F%A4%E4%BB%A3%EF%BC%8C%E5%AF%B9%E6%9C%AA%E7%9F%A5%E4%B8%96%E7%95%8C%E7%9A%84%E6%81%90%E6%83%A7%E6%84%9F%E4%B8%8D%E5%8F%AA%E5%B1%9E%E4%BA%8E%E5%84%BF%E7%AB%A5%E3%80%82%E4%B8%AD%E4%B8%96%E7%BA%AA%E7%9A%84&courseSet=xingce&course=xingce&qType=1",
@@ -960,8 +1923,159 @@
       "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
     },
     {
+      "id": "site-2ef72a70faa0f9bf",
+      "fenbiQid": 3087523,
+      "module": "言语理解",
+      "number": "例 3.70",
+      "source": "2019年1月12日天津市西青区李七庄街招聘编外人员《职业能力测试》精选题（网友回忆版）第25题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%9C%A8%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E8%A7%82%E5%BF%B5%E4%B8%AD%EF%BC%8C%E9%9B%95%E5%A1%91%E4%B8%80%E7%9B%B4%E6%9C%AA%E8%A2%AB%E7%9C%8B%E4%BD%9C%E6%98%AF%E4%B8%8E%E7%BB%98%E7%94%BB%E5%90%8C%E7%AD%89%E7%9A%84&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "stem": "<p>在中国传统观念中，雕塑一直未被看作是与绘画同等的艺术形式；在中国传统学术中，也只有“画学”而没有“雕塑学”。历史上的这种不重视，造成19世纪末20世纪初，大量具有极高史料研究价值的石雕作品流失海外。而今天，新兴收藏家们的目光也只停留在艺术品的财富表象上，因此使得元、明、清三代的铜鎏金佛像价格一路飞涨，而面对那些真正体现中国雕塑文化及历史风貌的高古石雕时，他们表现得却有些畏畏缩缩、举棋不定，这难免让人觉得遗憾。</p><p>这段文字主要谈论的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "观念上重视雕塑艺术的意义"
+        },
+        {
+          "label": "B",
+          "text": "高古石雕在中国不受重视的原因"
+        },
+        {
+          "label": "C",
+          "text": "目前雕塑收藏家不成熟的心态"
+        },
+        {
+          "label": "D",
+          "text": "雕塑收藏品价格与价值背离的状况"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-70-讲义标注正确率-42",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-b56bfd64eda4cbdb",
+      "fenbiQid": 2368130,
+      "module": "言语理解",
+      "number": "例 3.75",
+      "source": "2019年3月23日福建省事业单位联考《综合基础知识》笔试试题（网友回忆版）第42题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%B1%B1%E4%B8%9C%E8%81%8A%E5%9F%8E%E6%9D%A8%E6%B0%8F%E6%B5%B7%E6%BA%90%E9%98%81%E4%B8%8E%E6%B1%9F%E8%8B%8F%E5%B8%B8%E7%86%9F%E7%9E%BF%E6%B0%8F%E9%93%81%E7%90%B4%E9%93%9C%E5%89%91%E6%A5%BC%E9%BD%90%E5%90%8D%EF%BC%8C&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "stem": "<p>山东聊城杨氏海源阁与江苏常熟瞿氏铁琴铜剑楼齐名，有“南瞿北杨”之誉。瞿氏世居江南人文荟萃之地，占尽地利，收聚满坑满谷，但其家仅是当地富户，子孙多未出仕；而杨家虽在北方，既富拥资财，父子又均为进士出身，跻身官宦，学邃见广，有眼光善鉴别，并利用为官之便，将各地收聚之书辇运回故里庋藏。</p><p>这段文字旨在说明：</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "江南人文荟萃更适于藏书"
+        },
+        {
+          "label": "B",
+          "text": "山东聊城杨氏富甲一方甚于江苏常熟瞿氏"
+        },
+        {
+          "label": "C",
+          "text": "山东聊城杨氏海源阁藏书更优"
+        },
+        {
+          "label": "D",
+          "text": "“南瞿北杨”藏书俱丰难分伯仲"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-75-讲义标注正确率-44",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-02c2f93dbc5e01c8",
+      "fenbiQid": 2007640,
+      "module": "言语理解",
+      "number": "例 3.79",
+      "source": "2015年11月福建省事业单位考试《综合基础知识》题（网友回忆版）第48题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E4%BC%81%E4%B8%9A%E7%94%9F%E6%80%81%E4%B8%8D%E4%BB%85%E8%A6%81%E6%9C%89%E8%8B%A5%E5%B9%B2%E5%9C%A8%E5%85%A8%E7%90%83%E8%8C%83%E5%9B%B4%E5%86%85%E6%9C%89%E7%AB%9E%E4%BA%89&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "stem": "<p>一个良好的企业生态不仅要有若干在全球范围内有竞争力优势的大企业大集团，还必须有大批富有活力、专业化程度高、协作能力强的中小企业，形成大企业和中小企业分工协作的体系。当前，我国大企业和中小企业之间的关系不够紧密和协调，缺乏国外企业间“联合舰队”式作战能力。     </p><p>这段文字意在强调（    ）。 </p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "我国需要整编企业“联合舰队”"
+        },
+        {
+          "label": "B",
+          "text": "大企业是我国经济发展中的主体"
+        },
+        {
+          "label": "C",
+          "text": "我国中小企业应得到更多的重视"
+        },
+        {
+          "label": "D",
+          "text": "大企业和中小企业之间矛盾重重"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-79",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-4f70d98602bdb375",
+      "fenbiQid": 2056886,
+      "module": "言语理解",
+      "number": "例 4.1",
+      "source": "2017年上半年全国事业单位联考E类《职业能力倾向测验》题（云南/湖北/安徽/贵州/宁夏/广西/青海/内蒙古网友回忆版）第37题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%8F%A4%E8%80%81%E7%9A%84%E9%97%AE%E7%AD%94%E6%96%87%E5%8C%96%E4%B8%AD%E9%97%AE%E4%B8%8E%E7%AD%94%E7%9A%84%E5%BD%A2%E5%BC%8F%E5%92%8C%E5%AF%BB%E9%97%AE%E3%80%81%E6%8B%B7%E9%97%AE%E3%80%81%E8%BF%BD%E9%97%AE%EF%BC%8C&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "stem": "<p>古老的问答文化中问与答的形式和寻问、拷问、追问，都孕育着我们今天的谜语这种文化形式的各种要素。在神话思维的追问下，远古的先人们一点点地积累起关于世界的解答，这也成为后来人类思维与意识的模式和底层文化。当先人们要将这些知识传授给他们的下一代时，儿童游戏中的谜语形式便诞生了。后人又把先人们的文化问答通过新颖、曲折、变形的游戏问答加以传授和衔接，谜语便应运而生了。设问与回答是后世猜谜活动的本体，一切谜语文化都是从这里出发的。</p><p>这段文字主要说的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "人类思维模式深受问答文化的影响"
+        },
+        {
+          "label": "B",
+          "text": "谜语传承了先人对世界的认识和解答"
+        },
+        {
+          "label": "C",
+          "text": "谜语文化源于古老的问答文化"
+        },
+        {
+          "label": "D",
+          "text": "儿童游戏是古代知识传授的重要方式"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-1",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-f41bd766c559e211",
+      "fenbiQid": 2858423,
+      "module": "言语理解",
+      "number": "例 4.3",
+      "source": "2018年1月20日安徽省淮北市大学生特岗补录《职业能力测试》题（网友回忆版）第32题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%9A%AE%E8%82%A4%E8%80%81%E5%8C%96%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%BE%88%E5%A4%9A%EF%BC%8C%E5%85%B6%E4%B8%AD%E6%9C%89%E4%BA%9B%E4%B8%8E%E4%B8%AA%E4%BA%BA%E4%BD%93%E8%B4%A8%E6%9C%89%E5%85%B3%EF%BC%8C%E6%9C%89%E4%BA%9B&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "stem": "<p>皮肤老化的原因很多，其中有些与个人体质有关，有些则因外界因素影响造成。不规律的饮食习惯会导致过度肥胖或体重不足，更可能造成两种情况交替产生。此外机体各种组合成分，如碳水化合物、油脂、蛋白质、维生素及机体必需的微量元素等分配不均衡，也会造成皮肤老化现象。</p><p>这段文字想表达的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "微量元素分配不均衡"
+        },
+        {
+          "label": "B",
+          "text": "肥胖或体重不足与个人体质有关"
+        },
+        {
+          "label": "C",
+          "text": "皮肤老化的原因"
+        },
+        {
+          "label": "D",
+          "text": "不规律的饮食习惯会导致肥胖或体重不足"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-3",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
       "id": "site-bfcea5068b462d58",
       "fenbiQid": 3523547,
+      "module": "言语理解",
       "number": "例 4.6",
       "source": "2021年四川省公务员录用考试《行测》题（网友回忆版）第36题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%BE%8E%E5%9B%BD%E3%80%8A%E7%A7%91%E5%AD%A6%E3%80%8B%E6%9D%82%E5%BF%97%E7%9A%84%E4%B8%80%E9%A1%B9%E7%A0%94%E7%A9%B6%E8%A1%A8%E6%98%8E%EF%BC%9A%E5%92%96%E5%95%A1%E5%9B%A0%E6%98%AF%E8%AE%A9%E8%9C%9C%E8%9C%82%E5%BF%A0&courseSet=xingce&course=xingce&qType=1",
@@ -989,8 +2103,39 @@
       "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
     },
     {
+      "id": "site-4b0fdc02f9c9ab12",
+      "fenbiQid": 2114370,
+      "module": "言语理解",
+      "number": "例 4.9",
+      "source": "2017年9月2日福建省事业单位第三次联考《综合基础知识》笔试试题（网友回忆版）第43题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%B8%AD%E5%BE%AE%E5%AD%90%E6%98%AF%E5%AE%87%E5%AE%99%E4%B8%AD%E9%99%A4%E4%BA%86%E5%85%89%E5%AD%90%E4%B9%8B%E5%A4%96%E6%95%B0%E9%87%8F%E6%9C%80%E4%B8%BA%E4%BC%97%E5%A4%9A%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%B2%92%E5%AD%90&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "stem": "<p>中微子是宇宙中除了光子之外数量最为众多的基本粒子，但是人类对于中微子的研究开始得却较晚，原因就在于这种粒子可以自由来去，极少与其他物质发生相互作用，因而极难探测。此前，人类根本没有觉察到这种基本粒子的存在。尽管每秒都有数以万亿计的中微子以近乎光速的速度穿过人类的身体，人类却对这些无所知觉。从概率上来说，一个中微子可以穿越一光年的铅而不发生一次碰撞。</p><p>这段文字意在强调：</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "中微子是宇宙中数量众多的基本粒子"
+        },
+        {
+          "label": "B",
+          "text": "人类对于中微子的研究开始得比较晚"
+        },
+        {
+          "label": "C",
+          "text": "中微子的运行速度快得超乎想象"
+        },
+        {
+          "label": "D",
+          "text": "中微子的存在很难被感知或探测"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-9-讲义标注正确率-16",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
       "id": "site-3a31d11490d75cce",
       "fenbiQid": 5423667,
+      "module": "言语理解",
       "number": "例 4.10",
       "source": "2023年上海市公务员录用考试《行测》题（A类）（网友回忆版）第15题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E8%BF%91%E4%BB%A3%E4%B8%8A%E6%B5%B7%E4%B8%8D%E5%85%89%E6%98%AF%E4%B8%AD%E5%9B%BD%E7%89%B9%E5%A4%A7%E5%9F%8E%E5%B8%82%EF%BC%8C%E8%BF%98%E6%98%AF%E5%A4%96%E5%9B%BD%E4%BA%BA%E5%B1%85%E4%BD%8F%E6%AF%94%E4%BE%8B%E6%9C%80&courseSet=xingce&course=xingce&qType=1",
@@ -1018,8 +2163,69 @@
       "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
     },
     {
+      "id": "site-d71e6c8530bdba6d",
+      "fenbiQid": 5298422,
+      "module": "言语理解",
+      "number": "例 4.12",
+      "source": "2022年9月17日全国事业单位联考D类《职业能力倾向测验》试题（甘肃/湖北/陕西/吉林长春/重庆市属）（网友回忆版）第41题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%9C%8D%E8%A3%85%EF%BC%8C%E4%BD%9C%E4%B8%BA%E6%98%BE%E8%91%97%E7%9A%84%E7%A4%BE%E4%BC%9A%E7%AC%A6%E5%8F%B7%E5%92%8C%E6%A0%87%E5%BF%97%EF%BC%8C%E5%85%B7%E5%A4%87%E5%88%92%E6%B8%85%E6%80%A7%E5%88%AB%E7%9A%84%E7%95%8C&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "stem": "<p>服装，作为显著的社会符号和标志，具备划清性别的界限的功能，唐代盛行的女着男装打破了这一界限，这是历史各朝代都不曾有过的大规模易装，颠覆了社会基本的礼法规则。而服饰在性别上所刻画出的分界线，又绝不仅是两性在外观上的区别，它更意味着表象之下的价值与能力，以及在社会中承担的角色。这一时期女着男装盛行除了对外来文化的尝鲜，也有女子地位上升、针对女子的礼教束缚被逐渐打破的原因在。</p><p>这段文字意在（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "剖析唐代盛行女着男装的意义"
+        },
+        {
+          "label": "B",
+          "text": "强调服装作为社会符号的功能"
+        },
+        {
+          "label": "C",
+          "text": "对比古代不同时期的服装特点"
+        },
+        {
+          "label": "D",
+          "text": "揭示服装文化背后的礼法规则"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-12-讲义标注正确率-65",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-75c2fcd7a3aa3604",
+      "fenbiQid": 2012580,
+      "module": "言语理解",
+      "number": "例 4.15",
+      "source": "2016年上半年事业单位联考D类《职业能力倾向测验》题（湖北/广西/贵州/宁夏/青海/内蒙古/陕西汉中）（网友回忆版）第48题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%9C%A8%E6%89%80%E6%9C%89%E7%9A%84%E7%81%B5%E9%95%BF%E7%B1%BB%E5%8A%A8%E7%89%A9%E4%B8%AD%EF%BC%8C%E4%BA%BA%E7%B1%BB%E7%9A%84%E6%99%BA%E5%8A%9B%E6%97%A0%E7%96%91%E9%AB%98%E5%B1%85%E6%A6%9C%E9%A6%96%EF%BC%8C%E4%BD%86&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "stem": "<p>在所有的灵长类动物中，人类的智力无疑高居榜首，但在所有的灵长类动物中，也只有人类会为阿尔茨海默症所困。上海的研究小组日前发表论文指出，这两者可能密不可分，他们分析了90名先祖来自非洲、亚洲或欧洲的志愿者的基因后发现，大约距今20万到5万年间，与人类大脑发育相关的6个基因发生显著的改变。这会增加神经元的连接，令现代人变得更聪明。然而，也正是这6个变异的基因，令阿尔茨海默症变得更复杂难解。</p><p>这段文字主要介绍（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "人类与其他灵长类动物的差别"
+        },
+        {
+          "label": "B",
+          "text": "人类大脑发育的关键阶段"
+        },
+        {
+          "label": "C",
+          "text": "现代人类变聪明的原因"
+        },
+        {
+          "label": "D",
+          "text": "阿尔茨海默症与基因突变的关系"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-15",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
       "id": "site-0c805e9e95225728",
       "fenbiQid": 2616006,
+      "module": "言语理解",
       "number": "例 4.18",
       "source": "2020年海南公务员录用考试《行测》试题（网友回忆版）第60题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%B0%B4%E7%86%8A%E8%A2%AB%E8%AE%A4%E4%B8%BA%E6%98%AF%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%80%E9%A1%BD%E5%BC%BA%E7%9A%84%E5%8A%A8%E7%89%A9%EF%BC%8C%E5%85%B6%E6%98%BE%E8%91%97%E7%89%B9%E5%BE%81%E6%98%AF%E8%83%BD%E5%9C%A8&courseSet=xingce&course=xingce&qType=1",
@@ -1047,8 +2253,69 @@
       "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。 本题在本站旧讲义或其他资料中出现过不同判断，本轮按粉笔参考判分；原记录保留。"
     },
     {
+      "id": "site-8801e5c57bc10d69",
+      "fenbiQid": 4429346,
+      "module": "言语理解",
+      "number": "例 4.19",
+      "source": "2021年9月4日福建省事业单位联考《综合基础知识》试题（网友回忆版）第51题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E8%A7%A3%E5%86%B3%E8%8D%AF%E5%93%81%E7%8E%AF%E5%A2%83%E6%B1%A1%E6%9F%93%E9%97%AE%E9%A2%98%EF%BC%8C%E7%8E%AF%E5%A2%83%E7%9B%91%E6%B5%8B%E5%92%8C%E6%B1%A1%E6%9F%93%E6%B2%BB%E7%90%86%E5%9B%BA%E7%84%B6%E9%87%8D%E8%A6%81&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "stem": "<p>解决药品环境污染问题，环境监测和污染治理固然重要，但更有效的方式是加强药品生产、使用和废气的管理，减少药品对环境的污染物排放。因为药品一旦进入环境，再进行清除将耗费大量资源，还会遇到很多技术难题。<br>最适合做这段文字标题的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "药品环境污染治理遇到许多技术难题"
+        },
+        {
+          "label": "B",
+          "text": "药品环境污染前端管理胜于末端治理"
+        },
+        {
+          "label": "C",
+          "text": "解决药品环境污染问题刻不容缓"
+        },
+        {
+          "label": "D",
+          "text": "加强药品环境管理需要多方参与"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-19",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-0906e0fd610571ab",
+      "fenbiQid": 4710707,
+      "module": "言语理解",
+      "number": "例 4.25",
+      "source": "2021年5月9日河北省石家庄市市直事业单位公开招聘考试《职业能力测验》笔试精选题（网友回忆版）第31题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E8%B0%83%E6%9F%A5%E5%8F%91%E7%8E%B0%EF%BC%8C%E2%80%9C%E8%8A%B1%E5%91%97%E2%80%9D%E2%80%9C%E5%80%9F%E5%91%97%E2%80%9D%E2%80%9C%E4%BA%AC%E4%B8%9C%E7%99%BD%E6%9D%A1%E2%80%9D%E7%AD%89%E4%BE%BF%E6%8D%B7%E7%9A%84%E5%B0%8F&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "stem": "<p>调查发现，“花呗”“借呗”“京东白条”等便捷的小额借贷平台，迎合甚至刺激了部分大学生“先消费，再分期还贷”的理念，一些大学生通过负债借贷维持超前消费。与此相应，炫富、挥霍等消费行为在大学生中时有发生，“名媛”“土豪”等词语风行网络，成为个别大学生羡慕不劳而获生活的“幻想目标”。</p><p>这段话中作者意在说明的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "消费主义网络渗透力增强"
+        },
+        {
+          "label": "B",
+          "text": "大学生要理性消费"
+        },
+        {
+          "label": "C",
+          "text": "大学生更依赖网络消费"
+        },
+        {
+          "label": "D",
+          "text": "新模式下的超前消费"
+        }
+      ],
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-25",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
       "id": "site-cdd126cf6c98c90e",
       "fenbiQid": 1746732,
+      "module": "言语理解",
       "number": "例 4.26",
       "source": "2016年国家公务员录用考试《行测》题（副省级）第52题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E9%9A%8F%E7%9D%80%E5%80%BA%E5%8A%A1%E7%BD%AE%E6%8D%A2%E8%AE%A1%E5%88%92%E7%9A%84%E5%AE%9E%E6%96%BD%EF%BC%8C%E5%9C%B0%E6%96%B9%E5%80%BA%E5%88%B0%E6%9C%9F%E4%B8%8D%E8%83%BD%E5%81%BF%E4%BB%98%E7%9A%84%E9%A3%8E%E9%99%A9&courseSet=xingce&course=xingce&qType=1",
@@ -1078,6 +2345,7 @@
     {
       "id": "site-cfd2eb2b53836787",
       "fenbiQid": 3522403,
+      "module": "言语理解",
       "number": "例 4.27",
       "source": "2021年青海省公务员录用考试《行测》题（网友回忆版）第47题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E9%AB%98%E6%A0%A1%E8%AE%BE%E7%AB%8B%E5%AE%B6%E6%94%BF%E6%9C%AC%E7%A7%91%E4%B8%93%E4%B8%9A%E5%8F%97%E5%88%B0%E8%88%86%E8%AE%BA%E7%9A%84%E8%B4%A8%E7%96%91%EF%BC%8C%E5%9B%A0%E4%B8%BA%E5%9C%A8%E4%BC%A0%E7%BB%9F%E8%A7%82&courseSet=xingce&course=xingce&qType=1",
@@ -1107,6 +2375,7 @@
     {
       "id": "site-67b25548e8831d70",
       "fenbiQid": 2452553,
+      "module": "言语理解",
       "number": "例 4.34",
       "source": "2020年江苏省公务员录用考试《行测》题（A类）（网友回忆版）第29题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%B8%AA%E6%A1%88%E7%A0%94%E7%A9%B6%E7%9A%84%E7%BB%8F%E9%AA%8C%E5%91%8A%E8%AF%89%E6%88%91%E4%BB%AC%EF%BC%8C%E6%B3%95%E5%AD%A6%E7%90%86%E8%AE%BA%E5%85%B6%E5%AE%9E%E5%8F%AA%E6%98%AF%E4%BB%8E%E7%89%B9%E5%AE%9A%E7%BB%B4&courseSet=xingce&course=xingce&qType=1",
@@ -1136,6 +2405,7 @@
     {
       "id": "site-f1a1aff11ff05cee",
       "fenbiQid": 5102676,
+      "module": "言语理解",
       "number": "例 4.39",
       "source": "2022年天津市公务员录用考试《行测》试题（网友回忆版）第29题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E9%95%BF%E6%9C%9F%E4%BB%A5%E6%9D%A5%E8%80%83%E8%AF%95%E5%A4%A7%E7%BA%B2%E8%A7%84%E5%AE%9A%E4%BA%86%E8%80%83%E8%AF%95&courseSet=xingce&course=xingce&qType=1",
@@ -1165,6 +2435,7 @@
     {
       "id": "site-a7a2e4733b526b04",
       "fenbiQid": 5509821,
+      "module": "言语理解",
       "number": "例 4.40",
       "source": "2023年辽宁省公务员录用考试《行测》题（网友回忆版）第40题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%A4%9A%E5%B9%B4%E6%9D%A5%E4%B8%80%E4%BA%9B%E4%B8%93%E5%AE%B6%E5%AD%A6%E8%80%85%E6%8C%81%E7%BB%AD%E5%91%BC%E5%90%81&courseSet=xingce&course=xingce&qType=1",
@@ -1194,6 +2465,7 @@
     {
       "id": "site-f4055958992d6edd",
       "fenbiQid": 2187669,
+      "module": "言语理解",
       "number": "例 4.45",
       "source": "2018年421联考《行测》题（天津卷）（网友回忆版）第28题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E9%BB%91%E6%B4%9E%E6%98%AF%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA%E6%9C%80%E4%B8%8D%E7%A5%A5%E7%9A%84%E9%A2%84%E8%A8%80%EF%BC%9A%E8%BF%87%E5%A4%9A%E7%89%A9%E8%B4%A8%E6%88%96&courseSet=xingce&course=xingce&qType=1",
@@ -1223,6 +2495,7 @@
     {
       "id": "site-c756d02d105f7156",
       "fenbiQid": 2393940,
+      "module": "言语理解",
       "number": "例 5.1",
       "source": "2019年青海省公务员录用考试《行测》题省市州级（A类）（网友回忆版）第39题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E9%9A%8F%E7%9D%80%E7%8E%B0%E4%BB%A3%E5%8C%96%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%8A%A0%E5%BF%AB%EF%BC%8C%E4%BC%A0%E7%BB%9F%E6%96%87%E5%8C%96%E7%9A%84%E5%8F%91%E5%B1%95%E7%A9%BA%E9%97%B4%E8%A2%AB%E5%8E%8B%E7%BC%A9%E4%BA%86&courseSet=xingce&course=xingce&qType=1",
@@ -1252,6 +2525,7 @@
     {
       "id": "site-9bc8bc672cbc4a4c",
       "fenbiQid": 5509947,
+      "module": "言语理解",
       "number": "例 5.7",
       "source": "2023年新疆公务员录用考试《行测》试题（网友回忆版）第44题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%8E%9F%E5%A7%8B%E4%BD%93%E8%82%B2%E7%9A%84%E8%90%8C%E8%8A%BD%E4%B8%8E%E6%97%A5%E5%A4%8D%E4%B8%80%E6%97%A5%E5%9C%B0%E7%94%9F%E4%BA%A7%E5%8A%B3%E5%8A%A8%E5%88%86%E4%B8%8D%E5%BC%80%EF%BC%8C%E8%B7%B3%E7%BB%B3%E8%BF%90&courseSet=xingce&course=xingce&qType=1",
@@ -1281,6 +2555,7 @@
     {
       "id": "site-86e4b17e2a9a88c4",
       "fenbiQid": 4651539,
+      "module": "言语理解",
       "number": "例 5.19",
       "source": "2022年江苏省公务员录用考试《行测》题（A类）（网友回忆版）第23题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%99%BD%E5%99%AA%E5%A3%B0%E6%98%AF%E6%8C%87%E5%8A%9F%E7%8E%87%E8%B0%B1%E5%AF%86%E5%BA%A6%E5%9C%A8%E6%95%B4%E4%B8%AA%E9%A2%91%E7%8E%87%E9%A2%91%E5%9F%9F%E5%86%85%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83%E7%9A%84%EF%BC%8C&courseSet=xingce&course=xingce&qType=1",
@@ -1310,6 +2585,7 @@
     {
       "id": "site-84893af3388b461c",
       "fenbiQid": 12536463,
+      "module": "言语理解",
       "number": "例 1.6",
       "source": "2024年四川省公务员录用考试《行测》试题（网友回忆版）第44题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E2%91%A0%E5%8E%9F%E5%85%88%E7%9A%84%E5%B0%8F%E8%AF%B4%E5%86%99%E4%BD%9C%EF%BC%8C%E9%83%BD%E6%98%AF%E7%85%A7%E7%9D%80%E6%83%AF%E4%BE%8B%E5%9C%A8%E5%B9%95%E5%86%99%EF%BC%8C%E4%BA%BA%E4%BB%AC%E5%AF%B9%E6%96%87%E5%AD%A6&courseSet=xingce&course=xingce&qType=1",
@@ -1339,6 +2615,7 @@
     {
       "id": "site-fe5576c99202f2df",
       "fenbiQid": 5911318,
+      "module": "言语理解",
       "number": "例 1.8",
       "source": "2024年浙江省公务员录用考试《行测》题（A类）（网友回忆版）第34题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E2%91%A0%E5%B0%8F%E6%91%8A%E8%B4%A9%E6%9C%89%E7%94%9F%E5%AD%98%E9%9C%80%E6%B1%82%EF%BC%8C%E4%B8%94%E8%83%BD%E4%BE%BF%E5%88%A9%E7%99%BE%E5%A7%93%E7%94%9F%E6%B4%BB%EF%BC%8C%E4%BD%86%E5%9F%8E%E5%B8%82%E8%BF%90%E8%A1%8C&courseSet=xingce&course=xingce&qType=1",
@@ -1368,6 +2645,7 @@
     {
       "id": "site-bf8f2bb4b893d0c9",
       "fenbiQid": 2776118,
+      "module": "言语理解",
       "number": "例 1.10",
       "source": "2021年浙江省公务员录用考试《行测》题（C类）（网友回忆版）第38题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E2%91%A0%E4%BD%86%E6%98%AF%E7%8E%B0%E5%AE%9E%E4%B8%AD%E6%95%B0%E6%8D%AE%E6%98%AF%E5%90%84%E6%9C%BA%E6%9E%84%E6%88%96%E4%B8%AA%E4%BA%BA%E7%9A%84%E6%A0%B8%E5%BF%83%E8%B5%84%E4%BA%A7%EF%BC%8C%E6%95%B0%E6%8D%AE%E5%AD%A4&courseSet=xingce&course=xingce&qType=1",
@@ -1397,6 +2675,7 @@
     {
       "id": "site-6f085d8c7f2e3377",
       "fenbiQid": 4817961,
+      "module": "言语理解",
       "number": "例 1.12",
       "source": "2022年青海省公务员录用考试《行测》题（网友回忆版）第59题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E2%91%A0%E6%AD%A4%E5%A4%96%EF%BC%8C%E5%9C%A8%E9%9B%86%E6%88%90%E5%90%84%E9%AB%98%E9%93%81%E5%BC%BA%E5%9B%BD%E5%85%88%E8%BF%9B%E6%88%90%E7%86%9F%E6%8A%80%E6%9C%AF%E7%9A%84%E5%9F%BA%E7%A1%80%E4%B8%8A%EF%BC%8C%E4%B8%AD&courseSet=xingce&course=xingce&qType=1",
@@ -1426,6 +2705,7 @@
     {
       "id": "site-5a0e037eafdfe3ae",
       "fenbiQid": 3523557,
+      "module": "言语理解",
       "number": "例 2.1",
       "source": "2021年四川省公务员录用考试《行测》题（网友回忆版）第40题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%88%91%E4%BB%AC%E7%9C%8B%E7%89%A9%E4%BD%93%E6%97%B6%EF%BC%8C%E7%89%A9%E4%BD%93%E5%8F%8D%E5%B0%84%E7%9A%84%E5%85%89%E7%BA%BF%E7%BB%8F%E8%BF%87%E8%A7%92%E8%86%9C%EF%BC%8C%E7%A9%BF%E8%BF%87%E7%9E%B3%E5%AD%94%EF%BC%8C&courseSet=xingce&course=xingce&qType=1",
@@ -1455,6 +2735,7 @@
     {
       "id": "site-7499a44934ba3a7e",
       "fenbiQid": 2662873,
+      "module": "言语理解",
       "number": "例 2.6",
       "source": "2020年新疆公务员录用考试《行测》试题（网友回忆版）第45题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%B1%89%E8%AF%AD%E3%80%81%E8%97%8F%E8%AF%AD%E3%80%81%E7%BE%8C%E8%AF%AD%E3%80%81%E7%BC%85%E8%AF%AD%E7%AD%89%20400%20%E5%A4%9A%E7%A7%8D%E4%B8%9C%E4%BA%9A%E8%AF%AD%E8%A8%80%E8%A2%AB&courseSet=xingce&course=xingce&qType=1",
@@ -1484,6 +2765,7 @@
     {
       "id": "site-a7919c30bd8371bb",
       "fenbiQid": 2187549,
+      "module": "言语理解",
       "number": "例 2.10",
       "source": "2018年贵州省选调高校优秀毕业生到基层工作考试《行测》试题（网友回忆版）第43题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%90%86%E8%A7%A3%E8%A7%86%E7%9F%A5%E8%A7%89%E5%B7%A5%E4%BD%9C%E6%9C%BA%E5%88%B6%E7%9A%84%E4%BC%A0%E7%BB%9F%E8%A7%82%E7%82%B9%E5%8F%AF%E8%BF%BD%E6%BA%AF%E8%87%B3%2016%20%E4%B8%96%E7%BA%AA&courseSet=xingce&course=xingce&qType=1",
@@ -1513,6 +2795,7 @@
     {
       "id": "site-4427566a99abe360",
       "fenbiQid": 4817727,
+      "module": "言语理解",
       "number": "例 2.21",
       "source": "2022年四川省公务员录用考试《行测》题（网友回忆版）第28题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%25%EF%BC%89%E4%B9%8C%E9%B8%A6%E4%B8%8E%E4%BA%BA%E7%B1%BB%E5%9C%A8%E8%A1%8C%E4%B8%BA%E4%B8%8A%E6%9C%89%E8%AE%B8%E5%A4%9A%E6%9C%89%E8%B6%A3%E7%9A%84%E5%85%B1%E5%90%8C%E7%82%B9%EF%BC%9A%E9%83%BD%E5%96%9C%E6%AC%A2&courseSet=xingce&course=xingce&qType=1",
@@ -1542,6 +2825,7 @@
     {
       "id": "site-c8d1681e1ee77a6c",
       "fenbiQid": 2452536,
+      "module": "言语理解",
       "number": "例 3.33",
       "source": "2020年江苏省公务员录用考试《行测》题（A类）（网友回忆版）第26题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%8F%A4%E5%85%B8%E9%9F%B3%E4%B9%90%E9%87%8C%E6%9C%89%E5%BE%88%E5%A4%9A%E2%80%9C%E7%82%AB%E6%8A%80%E2%80%9D%E7%9A%84%E6%9B%B2%E7%9B%AE%EF%BC%8C%E5%9C%A8%E5%8E%86%E5%8F%B2%E5%8F%91%E5%B1%95%E4%B8%AD%EF%BC%8C%E6%9C%89&courseSet=xingce&course=xingce&qType=1",
@@ -1571,6 +2855,7 @@
     {
       "id": "site-ee3966e405f70cf9",
       "fenbiQid": 2742073,
+      "module": "言语理解",
       "number": "例 3.34",
       "source": "2021年江苏省公务员录用考试《行测》题（C类）（网友回忆版）第29题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%88%91%E4%BB%AC%E8%83%BD%E5%A4%9F%E5%9C%A8%E4%B9%A6%E4%B8%AD%E5%AE%89%E9%9D%99%E4%B8%8B%E6%9D%A5%E3%80%82%E5%BD%93%E4%BD%A0%E6%89%93%E5%BC%80%E4%B8%80%E6%9C%AC%E4%B9%A6%EF%BC%8C%E5%B0%B1%E5%A5%BD%E5%83%8F%E5%BB%BA&courseSet=xingce&course=xingce&qType=1",
@@ -1600,6 +2885,7 @@
     {
       "id": "site-e457a7b61b91e721",
       "fenbiQid": 2367877,
+      "module": "言语理解",
       "number": "例 4.1",
       "source": "2019年江苏省公务员录用考试《行测》题（C类）（网友回忆版）第24题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%A0%B9%E6%8D%AE%E6%96%B0%E7%9A%84%E5%88%91%E4%BA%8B%E8%AF%81%E6%8D%AE%E8%A7%84%E5%88%99%EF%BC%8C%E9%89%B4%E5%AE%9A%E6%A3%80%E6%9D%90%E7%9A%84%E7%9C%9F%E5%AE%9E%E6%80%A7%E5%92%8C%E5%90%8C%E4%B8%80%E6%80%A7%E5%B7%B2&courseSet=xingce&course=xingce&qType=1",
@@ -1629,6 +2915,7 @@
     {
       "id": "site-c7c0ac89101d4026",
       "fenbiQid": 2452624,
+      "module": "言语理解",
       "number": "例 4.2",
       "source": "2020年江苏省公务员录用考试《行测》题（C类）（网友回忆版）第20题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%BB%9F%E4%B8%80%E7%9A%84%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%92%8C%E5%88%86%E7%B1%BB%E7%AE%A1%E7%90%86%E6%A0%87%E5%87%86%E6%9C%89%E5%88%A9%E4%BA%8E%E6%94%BF%E5%8A%A1%E6%95%B0%E6%8D%AE%E7%9A%84%E6%95%B4%E5%90%88&courseSet=xingce&course=xingce&qType=1",
@@ -1658,6 +2945,7 @@
     {
       "id": "site-58c025e63a4fcd9a",
       "fenbiQid": 2742078,
+      "module": "言语理解",
       "number": "例 4.5",
       "source": "2021年江苏省公务员录用考试《行测》题（C类）（网友回忆版）第21题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%9F%A5%E6%83%85%E5%90%8C%E6%84%8F%E5%8E%9F%E5%88%99%E6%99%AE%E9%81%8D%E9%80%82%E7%94%A8%E4%BA%8E%E5%8C%BB%E7%96%97%E9%A2%86%E5%9F%9F%EF%BC%8C%E9%80%9A%E8%BF%87%E5%AF%B9%E6%82%A3%E8%80%85%E8%BF%9B%E8%A1%8C%E9%A3%8E&courseSet=xingce&course=xingce&qType=1",
@@ -1687,6 +2975,7 @@
     {
       "id": "site-65d637c58ffb0064",
       "fenbiQid": 4651527,
+      "module": "言语理解",
       "number": "例 4.7",
       "source": "2022年江苏省公务员录用考试《行测》题（A类）（网友回忆版）第21题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%86%9C%E6%9D%91%E9%87%91%E8%9E%8D%E9%9C%80%E6%B1%82%E6%98%AF%E5%90%A6%E6%BB%A1%E8%B6%B3%EF%BC%8C%E5%AF%B9%E5%86%9C%E6%9D%91%E5%8F%91%E5%B1%95%E7%9A%84%E8%BF%9B%E7%A8%8B%E6%9C%89%E6%9E%81%E5%A4%A7%E5%BD%B1%E5%93%8D&courseSet=xingce&course=xingce&qType=1",
@@ -1716,6 +3005,7 @@
     {
       "id": "site-671a26ad299bd6eb",
       "fenbiQid": 2172352,
+      "module": "言语理解",
       "number": "例 4.8",
       "source": "2018年江苏省公务员录用考试《行测》题（C类）（网友回忆版）第22题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%B2%BE%E5%87%86%E6%89%B6%E8%B4%AB%E4%B8%8D%E8%83%BD%E4%BB%85%E4%BB%85%E4%B8%93%E6%B3%A8%E4%B8%AA%E5%88%AB%E4%BA%8B%E5%AE%9E%EF%BC%8C%E5%9F%8B%E5%A4%B4%E8%A7%A3%E5%86%B3%E4%B8%AA%E5%88%AB%E9%97%AE%E9%A2%98%EF%BC%8C&courseSet=xingce&course=xingce&qType=1",
@@ -1745,6 +3035,7 @@
     {
       "id": "site-b8c7f234c22fd61f",
       "fenbiQid": 2742078,
+      "module": "言语理解",
       "number": "⑪ 2021江苏A卷-言语-关键词提取（题23）",
       "source": "2021年江苏省公务员录用考试《行测》题（C类）（网友回忆版）第21题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%9F%A5%E6%83%85%E5%90%8C%E6%84%8F%E5%8E%9F%E5%88%99%E6%99%AE%E9%81%8D%E9%80%82%E7%94%A8%E4%BA%8E%E5%8C%BB%E7%96%97%E9%A2%86%E5%9F%9F%EF%BC%8C%E9%80%9A%E8%BF%87%E5%AF%B9%E6%82%A3%E8%80%85%E8%BF%9B%E8%A1%8C%E9%A3%8E&courseSet=xingce&course=xingce&qType=1",
@@ -1774,6 +3065,7 @@
     {
       "id": "site-8e6896220ec12dea",
       "fenbiQid": 4004613,
+      "module": "言语理解",
       "number": "例 6.2",
       "source": "2021年新疆生产建设兵团行政执法类公务员考试《行测》题（网友回忆版）第32题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%92%8C%E5%B9%B3%E7%8A%B9%E5%A6%82%E7%A9%BA%E6%B0%94%E5%92%8C%E9%98%B3%E5%85%89%EF%BC%8C%E5%8F%97%E7%9B%8A%E8%80%8C%E4%B8%8D%E8%A7%89%EF%BC%8C%E5%A4%B1%E4%B9%8B%E5%88%99%E9%9A%BE%E5%AD%98%E3%80%82%E5%BC%B1%E8%82%89&courseSet=xingce&course=xingce&qType=1",
@@ -1803,6 +3095,7 @@
     {
       "id": "site-8e313f064f38f7a2",
       "fenbiQid": 2423266,
+      "module": "言语理解",
       "number": "例 6.18",
       "source": "2019年甘肃省公务员录用考试《行测》题（网友回忆版）第24题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%BE%B7%E5%9B%BD%E7%A7%91%E5%AD%A6%E5%AE%B6%E5%92%8C%E7%A7%91%E5%AD%A6%E6%94%BF%E7%AD%96%E5%88%B6%E8%AE%A2%E8%80%85%E7%9A%84________%E6%84%8F%E8%AF%86&courseSet=xingce&course=xingce&qType=1",
@@ -1832,6 +3125,7 @@
     {
       "id": "site-9dee90e81d2dd582",
       "fenbiQid": 5893727,
+      "module": "言语理解",
       "number": "例 7.3",
       "source": "2024年国家公务员录用考试《行测》题（副省级网友回忆版）第37题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%A0%91%E7%85%A7%E6%A0%B7%E8%83%BD%E8%87%B4%E5%AF%8C%E2%80%9D%3B%E5%9C%A8%E9%99%95%E8%A5%BF%E5%BB%B6%E5%AE%89%EF%BC%8C%E4%BE%9D%E6%89%98%E8%87%AA%E7%84%B6%E7%94%9F%20%E6%80%81%E4%BC%98&courseSet=xingce&course=xingce&qType=1",
@@ -1861,6 +3155,7 @@
     {
       "id": "site-a82a62facc239b68",
       "fenbiQid": 5430427,
+      "module": "言语理解",
       "number": "例 7.5",
       "source": "2023年浙江省公务员录用考试《行测》题（C类）（网友回忆版）第75题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=__________%20%E3%80%82%E6%96%B0%E4%B8%AD%E5%9B%BD%E6%88%90%E7%AB%8B%E4%BB%A5%E6%9D%A5%EF%BC%8C%E5%BE%88%E5%A4%9A%E7%94%BB%E5%AE%B6&courseSet=xingce&course=xingce&qType=1",
@@ -1890,6 +3185,7 @@
     {
       "id": "site-54823066da140be0",
       "fenbiQid": 4817949,
+      "module": "言语理解",
       "number": "例 7.17",
       "source": "2022年青海省公务员录用考试《行测》题（网友回忆版）第48题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E8%AF%BA%E8%B4%9D%E5%B0%94%E7%89%A9%E7%90%86%E5%AD%A6%E5%A5%96%E5%BE%97%E4%B8%BB%E4%BA%9A%E5%BD%93%C2%B7%E9%87%8C%E6%96%AF%E6%B5%8B%E5%BE%97%E7%9A%84%E5%93%88%E5%8B%83%E5%B8%B8%E6%95%B0%E4%B8%BA%207&courseSet=xingce&course=xingce&qType=1",
@@ -1919,6 +3215,7 @@
     {
       "id": "site-a2844e1ce2dddb5c",
       "fenbiQid": 2742036,
+      "module": "言语理解",
       "number": "⑮ 2021江苏A卷-言语-主旨概括（题29）",
       "source": "2021年江苏省公务员录用考试《行测》题（B类）（网友回忆版）第17题（粉笔题库参考）",
       "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E2%91%A0%E4%BA%BA%E7%B1%BB%E7%A4%BE%E4%BC%9A%E4%B8%8D%E6%98%AF%E5%8D%95%E5%90%91%E5%BA%A6%E7%9A%84%E7%BA%BF%E6%80%A7%E5%8F%91%E5%B1%95%EF%BC%8C%E5%BE%97%E5%A4%B1%E4%B9%8B%E9%97%B4%E7%9A%84%E5%88%A9%E5%BC%8A%E9%9C%80&courseSet=xingce&course=xingce&qType=1",
@@ -1944,6 +3241,277 @@
       ],
       "reviewUrl": "/cuotiben/xingce-cuoti#yanyu-20260913-29",
       "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。"
+    },
+    {
+      "id": "site-706e68207f793929",
+      "fenbiQid": 2742050,
+      "module": "言语理解",
+      "number": "文化意蕴与乐符流淌：局部画面词干扰",
+      "source": "2021年江苏省公务员录用考试《行测》题（C类）（网友回忆版）第32题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E9%9A%8F%E7%9D%80%E5%B9%B4%E9%BE%84%E5%A2%9E%E9%95%BF%E5%92%8C%E9%98%85%E5%8E%86%E5%A2%9E%E5%8A%A0%E6%88%91%E5%BC%80%E5%A7%8B%E6%80%9D%E8%80%83&courseSet=xingce&course=xingce&qType=1",
+      "correct": "B",
+      "stem": "<p>随着年龄增长和阅历增加，我开始思考怎样用古典音乐语言表现中国文化，怎样将中国文化______融入到我对古典音乐的诠释中。我会把中国文化的诗意美融入到演奏中。“穿衣蛱蝶深深见，点水蜻蜓款款飞”，让观众在乐符的______中仿佛听到蝴蝶翅膀的振动声，看到蜻蜓点水般的涟漪款款。</p><p>依次填入画横线处最恰当的一项是：</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "韵味 共振"
+        },
+        {
+          "label": "B",
+          "text": "意蕴 流淌"
+        },
+        {
+          "label": "C",
+          "text": "精髓 飞扬"
+        },
+        {
+          "label": "D",
+          "text": "感受 跳跃"
+        }
+      ],
+      "reviewUrl": "/cuotiben/早期行测补充复盘#culture-word",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-b2bf43880666cf75",
+      "fenbiQid": 5755697,
+      "module": "判断推理",
+      "number": "甲乙态度：否定问法与假设",
+      "source": "2023年江苏省公务员录用考试《行测》题（A类）（网友回忆版）第102题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%88%91%E7%9F%A5%E9%81%93%E6%B6%88%E8%B4%B9%E8%80%85%E4%B8%8D%E6%84%BF%E6%84%8F%E9%85%8D%E5%90%88%E4%B8%8D%E8%BF%87&courseSet=xingce&course=xingce&qType=1",
+      "correct": "C",
+      "stem": "<p>甲对乙说：“没事，没事，我知道消费者不愿意配合。不过，我倒是很在意您对这件事的态度，请您把您的态度告诉我，因为您的态度会左右我下一步的选择。”</p><p>以下哪项不可能是甲在对话时的假设？</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "甲不太在意消费者不愿意配合"
+        },
+        {
+          "label": "B",
+          "text": "这件事乙是有自己态度的"
+        },
+        {
+          "label": "C",
+          "text": "乙会把对事情的态度告诉甲"
+        },
+        {
+          "label": "D",
+          "text": "甲对下一步的选择是有想法的"
+        }
+      ],
+      "reviewUrl": "/cuotiben/早期行测补充复盘#attitude-assumption",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-d5a96e74b256447f",
+      "fenbiQid": 5697876,
+      "module": "判断推理",
+      "number": "支教团选组长：先卡中年语文双条件",
+      "source": "2023年江苏省公务员录用考试《行测》题（A类）（网友回忆版）第93题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%9F%90%E5%B8%82%E6%95%99%E8%82%B2%E5%B1%80%E6%B4%BE%E5%87%BA%E7%94%B1%E7%94%B2%E4%B9%99%E4%B8%99%E4%B8%81%E6%88%8A&courseSet=xingce&course=xingce&qType=1",
+      "correct": "D",
+      "stem": "<p>某市教育局派出由甲、乙、丙、丁、戊5名优秀教师组成的支教团支援西部。已知：</p><p>（1）有3人为青年教师，2人为中年教师；</p><p>（2）语文教师有2人，数学教师有3人；</p><p>（3）甲与丙同龄，丁与戊年龄相差最大；</p><p>（4）乙与戊所教课程相同，丙与丁所教课程不同；</p><p>（5）担任组长的是一名中年语文教师。</p><p>根据以上陈述，可以推出以下哪项？</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "甲是组长"
+        },
+        {
+          "label": "B",
+          "text": "乙是组长"
+        },
+        {
+          "label": "C",
+          "text": "丙是组长"
+        },
+        {
+          "label": "D",
+          "text": "丁是组长"
+        }
+      ],
+      "reviewUrl": "/cuotiben/早期行测补充复盘#teacher-leader",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-9e7a446973b14351",
+      "fenbiQid": 5697257,
+      "module": "数量关系",
+      "automaticGrading": false,
+      "number": "2023 江苏 A 类第 55 题 · 椭圆方阵",
+      "source": "2023年江苏省公务员录用考试《行测》题（A类）（网友回忆版）第55题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%9F%90%E5%AD%A6%E6%A0%A1%E7%9A%84%E8%BF%90%E5%8A%A8%E5%9C%BA%E6%98%AF%E6%A4%AD%E5%9C%86%E5%BD%A2%E3%80%82%E8%BE%B9%E7%95%8C%E6%A4%AD%E5%9C%86%E4%B8%8A%E4%B8%80%E7%82%B9%E5%88%B0%E4%B8%AD%E5%BF%83%E8%B7%9D%E7%A6%BB&courseSet=xingce&course=xingce&qType=1",
+      "correct": "D",
+      "stem": "<p>某学校的运动场是椭圆形。边界椭圆上一点到中心距离的最小值是20米，两点间距离的最大值为80米。若学生在该运动场上排成方阵，则所排成方阵面积的最大值为（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "1280平方米"
+        },
+        {
+          "label": "B",
+          "text": "1360平方米"
+        },
+        {
+          "label": "C",
+          "text": "1440平方米"
+        },
+        {
+          "label": "D",
+          "text": "1600平方米"
+        }
+      ],
+      "reviewUrl": "/xingce/椭圆考点与内接图形最值",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。 本题在本站旧讲义或其他资料中出现过不同判断，本轮按粉笔参考判分；原记录保留。"
+    },
+    {
+      "id": "site-f209092f620c18a3",
+      "fenbiQid": 5697915,
+      "module": "判断推理",
+      "number": "① 2023 江苏省考 A 卷·逻辑判断（第103题）",
+      "source": "2023年江苏省公务员录用考试《行测》题（A类）（网友回忆版）第103题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%9C%89%E8%BA%AB%E9%AB%98%E4%B8%BA1.65%E7%B1%B31.68%E7%B1%B3&courseSet=xingce&course=xingce&qType=1",
+      "correct": "D",
+      "stem": "<p>有身高为1.65米、1.68米、1.70米和1.72米的四人，其中有两人体型偏瘦，两人体型偏胖。关于身高体型，这四个人有如下陈述：</p><p>甲：我身高不到1.70米；</p><p>乙：丙身高1.72米，偏瘦；</p><p>丙：丁身高1.68米，偏胖；</p><p>丁：乙身高1.65米，偏瘦。</p><p>如果体型偏瘦的说真话，体型偏胖的说假话，那么可以推出以下哪项？</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "甲身高1.65米，偏胖"
+        },
+        {
+          "label": "B",
+          "text": "乙身高1.70米，偏瘦"
+        },
+        {
+          "label": "C",
+          "text": "丙身高1.72米，偏瘦"
+        },
+        {
+          "label": "D",
+          "text": "丁身高1.68米，偏胖"
+        }
+      ],
+      "reviewUrl": "/cuotiben/xingce-cuoti#panduan-2023-jiangsu-a-103",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-77d6728c467b42ab",
+      "fenbiQid": 5699127,
+      "module": "数量关系",
+      "number": "周期工程：最后一轮完成后不再休息",
+      "source": "2023年江苏省公务员录用考试《行测》题（A类）（网友回忆版）第61题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%94%B2%E3%80%81%E4%B9%99%E4%B8%A4%E4%B8%AA%E5%B7%A5%E7%A8%8B%E9%98%9F%E5%90%88%E4%BD%9C%E5%AE%8C%E6%88%90%E4%B8%80%E9%A1%B9%E5%B7%A5%E7%A8%8B&courseSet=xingce&course=xingce&qType=1",
+      "correct": "C",
+      "stem": "<p>甲、乙两个工程队合作完成一项工程，甲每工作3天休息1天，乙每工作5天休息2天。若甲先工作，2天后乙加入，则再用21天完工；若乙先工作，12天后甲加入，则再用15天完工。甲单独完成该项工程需要的天数是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "43"
+        },
+        {
+          "label": "B",
+          "text": "44"
+        },
+        {
+          "label": "C",
+          "text": "47"
+        },
+        {
+          "label": "D",
+          "text": "48"
+        }
+      ],
+      "reviewUrl": "/cuotiben/早期行测补充复盘#cyclic-work",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-e5250f77c341825a",
+      "fenbiQid": 5697932,
+      "module": "判断推理",
+      "number": "事欲立须心立：必要条件标志词",
+      "source": "2023年江苏省公务员录用考试《行测》题（A类）（网友回忆版）第91题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%90%86%E6%83%B3%E4%BF%A1%E5%BF%B5%E6%98%AF%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E5%91%98%E7%B2%BE%E7%A5%9E%E4%B8%8A%E7%9A%84&courseSet=xingce&course=xingce&qType=1",
+      "correct": "A",
+      "stem": "<p>欲事立，须是心立。理想信念是中国共产党员精神上的“钙”，一个人理想信念坚定，“骨头”就硬；理想信念缺失或者不坚定，精神上就会“缺钙”，就会得“软骨病”，就容易在考验面前迷失方向。</p><p>以下哪项不能由以上陈述推出？</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "一个人若不想事立，他就无须心立"
+        },
+        {
+          "label": "B",
+          "text": "如果一个人“骨头”不硬，就说明他的理想信念不坚定"
+        },
+        {
+          "label": "C",
+          "text": "一个人理想信念缺失，他就会得“软骨病”"
+        },
+        {
+          "label": "D",
+          "text": "若一个人不容易在考验面前迷失方向，就说明他有坚定的理想信念"
+        }
+      ],
+      "reviewUrl": "/cuotiben/早期行测补充复盘#necessity-xu",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-74dd8ed7212496f5",
+      "fenbiQid": 2741964,
+      "module": "数量关系",
+      "number": "shuliang-guanxi · 例题",
+      "source": "2021年江苏省公务员录用考试《行测》题（C类）（网友回忆版）第62题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%9F%90%E7%9C%81%E9%80%89%E6%B4%BE%E8%8B%A5%E5%B9%B2%E5%90%8D%E6%9C%AC%E7%A7%91%E7%94%9F%E5%92%8C%E7%A0%94%E7%A9%B6%E7%94%9F&courseSet=xingce&course=xingce&qType=1",
+      "correct": "A",
+      "stem": "<p>某省选派若干名本科生和研究生去乡村支教，其中男生和女生的比例是7：3，研究生和本科生的比例是1：4。若男本科生的人数恰好为女研究生人数的4倍，则女本科生至少比男研究生多：</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "3人"
+        },
+        {
+          "label": "B",
+          "text": "6人"
+        },
+        {
+          "label": "C",
+          "text": "9人"
+        },
+        {
+          "label": "D",
+          "text": "12人"
+        }
+      ],
+      "reviewUrl": "/xingce/shuliang-guanxi#✅-深挖-比例交叉·整除问题-统一比例-2×2表-⭐高频",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
+    },
+    {
+      "id": "site-a79ad790c38c4bbf",
+      "fenbiQid": 5699127,
+      "module": "数量关系",
+      "number": "shuliang-guanxi · 例题",
+      "source": "2023年江苏省公务员录用考试《行测》题（A类）（网友回忆版）第61题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%94%B2%E3%80%81%E4%B9%99%E4%B8%A4%E4%B8%AA%E5%B7%A5%E7%A8%8B%E9%98%9F%E5%90%88%E4%BD%9C%E5%AE%8C%E6%88%90%E4%B8%80%E9%A1%B9%E5%B7%A5%E7%A8%8B&courseSet=xingce&course=xingce&qType=1",
+      "correct": "C",
+      "stem": "<p>甲、乙两个工程队合作完成一项工程，甲每工作3天休息1天，乙每工作5天休息2天。若甲先工作，2天后乙加入，则再用21天完工；若乙先工作，12天后甲加入，则再用15天完工。甲单独完成该项工程需要的天数是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "text": "43"
+        },
+        {
+          "label": "B",
+          "text": "44"
+        },
+        {
+          "label": "C",
+          "text": "47"
+        },
+        {
+          "label": "D",
+          "text": "48"
+        }
+      ],
+      "reviewUrl": "/xingce/shuliang-guanxi#✅-深挖-周期循环工程·干几天休几天-最后一步别多算休息日-⭐高频",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。"
     }
   ]
 }

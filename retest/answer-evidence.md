@@ -55,6 +55,10 @@ outline: [2, 2]
 
 ## 暂不自动判分
 
+### 2023 江苏 A 类：椭圆运动场与方阵
+
+[粉笔题库](https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%9F%90%E5%AD%A6%E6%A0%A1%E7%9A%84%E8%BF%90%E5%8A%A8%E5%9C%BA%E6%98%AF%E6%A4%AD%E5%9C%86%E5%BD%A2&courseSet=xingce&course=xingce&qType=1)对同题参考 **D（1600 平方米）**；[另一份江苏回忆卷解析](https://kaoweilai.cn/zhenti-js-2023-a.html)参考 **A（1280 平方米）**。允许一般矩形时，最大面积为 $2ab=1600$；严格按正方形时，最大面积为 $4a^2b^2/(a^2+b^2)=1280$。题干写“方阵”，目前无法确认考试机关的判分口径，因此完整题目入库，但暂不纳入自动判分。
+
 ### 2025 云南：曲直交点图形题
 
 [回忆版题库的同题解析](https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/05-%E5%88%A4%E6%96%AD%E6%8E%A8%E7%90%86/2025%E5%B9%B4%E4%BA%91%E5%8D%97%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md)收录两种规律：看曲线端点与中段交替得 D；看横竖线与斜线交替可得 A，题库说明倾向 D。两种解释均已记录，缺少足以确定唯一答案的官方依据，暂不自动判分。

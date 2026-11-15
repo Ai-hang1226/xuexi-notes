@@ -13,6 +13,7 @@ const reviews = JSON.parse(read('cuotiben/review-catalog.json'))
 const recoveredFragments = JSON.parse(read('retest/recovered-lesson-fragments.json')).questions
 const fenbiVerified = JSON.parse(read('retest/fenbi-verified.json')).questions
 const publicCandidates = JSON.parse(read('retest/public-source-candidates.json')).records
+const methodReferences = JSON.parse(read('retest/method-question-references.json')).questions
 const entries = []
 const byFingerprint = new Map()
 const byReviewUrl = new Map()
@@ -401,8 +402,32 @@ for (const name of fs.readdirSync(path.join(root, 'xingce')).filter((x) => x.end
     const stemHtml = render(body)
     const previous = [...pageAnchors.keys()].filter((line) => line <= i).at(-1)
     const url = route(file, pageAnchors.get(i) || pageAnchors.get(previous))
-    add({ id: stableId(file + ':' + i), subject: '行测', status: '题面待整理', title: name.replace(/\.md$/, '') + ' · 例题', source: '知识点方法页', sourceUrl: url, excerpt: textOf(stemHtml).slice(0, 220), search: textOf(stemHtml), stemHtml, options: [] })
+    const id = stableId(file + ':' + i)
+    const verified = fenbiVerified.find((question) => question.id === id)
+    const key = verified && fingerprint(render(verified.stem), verified.options.map((option) => ({ html: inline(option.text) })))
+    const linked = verified && (entries.find((entry) => entry.quizId === verified.id) || byFingerprint.get(key))
+    if (linked) {
+      addAlias(linked, id)
+      if (!linked.sources.some((source) => source.url === url)) linked.sources.push({ label: '知识点方法页', url })
+    } else {
+      add({ id, subject: '行测', status: '题面待整理', title: name.replace(/\.md$/, '') + ' · 例题', source: '知识点方法页', sourceUrl: url, excerpt: textOf(stemHtml).slice(0, 220), search: textOf(stemHtml), stemHtml, options: [] })
+    }
     coverage.otherExamples++
+  }
+}
+
+// Some method pages mention a question without displaying its complete stem.
+// Keep its disputed status even after finding the original question.
+for (const question of methodReferences) {
+  const id = stableId(question.sourceUrl)
+  const verified = fenbiVerified.find((row) => row.id === id)
+  const stemHtml = render(verified?.stem || question.stem)
+  const options = (verified?.options || question.options).map((option) => ({ label:option.label, html:inline(option.text) }))
+  const entry = add({ id, subject:'行测', status:question.status, title:question.title,
+    source:'知识点方法页', sourceUrl:question.sourceUrl, excerpt:textOf(stemHtml).slice(0, 220),
+    search:textOf([stemHtml, ...options.map((option) => option.html)].join(' ')), stemHtml, options })
+  if (verified && !entry.sources.some((source) => source.url === verified.sourceUrl)) {
+    entry.sources.push({ label:'粉笔参考答案（作答后查看）', url:verified.sourceUrl })
   }
 }
 
@@ -412,8 +437,9 @@ for (const candidate of publicCandidates) {
   const item = entries.find((entry) => entry.id === candidate.catalogId || entry.aliases?.includes(candidate.catalogId)
     || entry.sources.some((source) => source.url === candidate.reviewUrl))
   if (!item || item.status === '可自动判分' || item.sources.some((source) => source.url === candidate.sourceUrl)) continue
+  const checked = fenbiVerified.some((question) => question.id === candidate.catalogId)
   item.sources.push({
-    label: (candidate.knownDisagreement ? '公开候选题源（答案有分歧）' : '公开候选题源（待核）') + ' · 编号 ' + candidate.qid,
+    label: (checked ? '公开对照题源' : candidate.knownDisagreement ? '公开候选题源（答案有分歧）' : '公开候选题源（待核）') + ' · 编号 ' + candidate.qid,
     url: candidate.sourceUrl,
   })
 }

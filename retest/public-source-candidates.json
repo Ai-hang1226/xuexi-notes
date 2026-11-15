@@ -459,6 +459,169 @@
       "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2024%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88B%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
       "needsFenbi": true,
       "knownDisagreement": false
+    },
+    {
+      "catalogId": "site-706e68207f793929",
+      "reviewUrl": "/cuotiben/早期行测补充复盘#culture-word",
+      "qid": "2742050",
+      "sourceTitle": "2021年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-%E8%A8%80%E8%AF%AD%E7%90%86%E8%A7%A3%E4%B8%8E%E8%A1%A8%E8%BE%BE/2021%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false,
+      "manualOriginalSummary": true,
+      "searchText": "随着年龄增长和阅历增加我开始思考",
+      "mustContain": [
+        "中国文化",
+        "乐符",
+        "蝴蝶"
+      ],
+      "module": "言语理解"
+    },
+    {
+      "catalogId": "site-b2bf43880666cf75",
+      "reviewUrl": "/cuotiben/早期行测补充复盘#attitude-assumption",
+      "qid": "5755697",
+      "sourceTitle": "2023年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/05-%E5%88%A4%E6%96%AD%E6%8E%A8%E7%90%86/2023%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false,
+      "manualOriginalSummary": true,
+      "searchText": "我知道消费者不愿意配合不过",
+      "mustContain": [
+        "消费者不愿意配合",
+        "态度",
+        "下一步的选择"
+      ],
+      "module": "判断推理"
+    },
+    {
+      "catalogId": "site-d5a96e74b256447f",
+      "reviewUrl": "/cuotiben/早期行测补充复盘#teacher-leader",
+      "qid": "5697876",
+      "sourceTitle": "2023年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/05-%E5%88%A4%E6%96%AD%E6%8E%A8%E7%90%86/2023%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false,
+      "manualOriginalSummary": true,
+      "searchText": "某市教育局派出由甲乙丙丁戊",
+      "mustContain": [
+        "支教团",
+        "中年语文教师",
+        "甲与丙同龄"
+      ],
+      "module": "判断推理"
+    },
+    {
+      "catalogId": "site-f209092f620c18a3",
+      "reviewUrl": "/cuotiben/xingce-cuoti#panduan-2023-jiangsu-a-103",
+      "qid": "5697915",
+      "sourceTitle": "2023年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/05-%E5%88%A4%E6%96%AD%E6%8E%A8%E7%90%86/2023%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false,
+      "manualOriginalSummary": true,
+      "searchText": "有身高为1.65米1.68米",
+      "mustContain": [
+        "1.65米",
+        "1.68米",
+        "1.70米",
+        "1.72米",
+        "偏瘦",
+        "偏胖"
+      ],
+      "module": "判断推理"
+    },
+    {
+      "catalogId": "site-e5250f77c341825a",
+      "reviewUrl": "/cuotiben/早期行测补充复盘#necessity-xu",
+      "qid": "5697932",
+      "sourceTitle": "2023年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/05-%E5%88%A4%E6%96%AD%E6%8E%A8%E7%90%86/2023%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false,
+      "manualOriginalSummary": true,
+      "searchText": "理想信念是中国共产党员精神上的",
+      "mustContain": [
+        "欲事立",
+        "理想信念",
+        "骨头",
+        "软骨病"
+      ],
+      "module": "判断推理"
+    },
+    {
+      "catalogId": "site-77d6728c467b42ab",
+      "reviewUrl": "/cuotiben/早期行测补充复盘#cyclic-work",
+      "qid": "5699127",
+      "sourceTitle": "2023年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/04-%E6%95%B0%E9%87%8F%E5%85%B3%E7%B3%BB/2023%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false,
+      "manualOriginalSummary": true,
+      "searchText": "甲、乙两个工程队合作完成一项工程",
+      "mustContain": [
+        "每工作3天休息1天",
+        "每工作5天休息2天",
+        "21天完工",
+        "15天完工"
+      ],
+      "module": "数量关系"
+    },
+    {
+      "catalogId": "site-a79ad790c38c4bbf",
+      "reviewUrl": "/xingce/shuliang-guanxi#✅-深挖-周期循环工程·干几天休几天-最后一步别多算休息日-⭐高频",
+      "qid": "5699127",
+      "sourceTitle": "2023年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/04-%E6%95%B0%E9%87%8F%E5%85%B3%E7%B3%BB/2023%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false,
+      "manualOriginalSummary": true,
+      "searchText": "甲、乙两个工程队合作完成一项工程",
+      "mustContain": [
+        "每工作3天休息1天",
+        "每工作5天休息2天",
+        "21天完工",
+        "15天完工"
+      ],
+      "module": "数量关系"
+    },
+    {
+      "catalogId": "site-74dd8ed7212496f5",
+      "reviewUrl": "/xingce/shuliang-guanxi#✅-深挖-比例交叉·整除问题-统一比例-2×2表-⭐高频",
+      "qid": "2741964",
+      "sourceTitle": "2021年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/04-%E6%95%B0%E9%87%8F%E5%85%B3%E7%B3%BB/2021%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": false,
+      "manualOriginalSummary": true,
+      "searchText": "某省选派若干名本科生和研究生",
+      "mustContain": [
+        "7",
+        "3",
+        "1",
+        "4",
+        "本科生",
+        "研究生"
+      ],
+      "module": "数量关系"
+    },
+    {
+      "catalogId": "site-9e7a446973b14351",
+      "reviewUrl": "/xingce/椭圆考点与内接图形最值",
+      "qid": "5697257",
+      "sourceTitle": "2023年江苏省公务员录用考试《行测》题（A类）（网友回忆版）",
+      "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/04-%E6%95%B0%E9%87%8F%E5%85%B3%E7%B3%BB/2023%E5%B9%B4%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88A%E7%B1%BB%EF%BC%89%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
+      "needsFenbi": true,
+      "knownDisagreement": true,
+      "manualOriginalSummary": false,
+      "excludeAutoGrade": true,
+      "searchText": "某学校的运动场是椭圆形",
+      "mustContain": [
+        "20米",
+        "80米",
+        "方阵"
+      ],
+      "module": "数量关系"
     }
   ]
 }

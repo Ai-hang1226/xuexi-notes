@@ -196,7 +196,7 @@ onMounted(() => {
         <span><strong>{{ bank.imported }}</strong> 道可自动判分</span>
         <span><strong>{{ markedCount }}</strong> 条本机待复习</span>
       </div>
-      <p class="scope-note">同一道题尽量合并不同出处；未识别出的重复可能仍会分别显示。历史自编题仅作回看。答案有分歧或题面不完整的题不会自动判分。</p>
+      <p class="scope-note">同一道题尽量合并不同出处；未识别出的重复可能仍会分别显示。历史自编题仅作回看。标为“答案有争议”或题面不完整的题不自动判分；部分可判分题有其他资料的不同参考，会在结果中说明。</p>
 
       <section class="search-panel" aria-label="筛选题目">
         <label class="search-label" for="question-search">搜索题目</label>

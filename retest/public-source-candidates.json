@@ -767,6 +767,57 @@
         "不符合"
       ],
       "versionNote": "旧复盘只有材料节选且有字词差异；复测展示粉笔回忆版的完整材料和原题。"
+    },
+    {
+      "catalogId": "site-9ebc8905e7ab2125",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-1-13",
+      "qid": "5102180",
+      "sourceTitle": "2022年浙江省公务员录用考试《行测》题（C类）（网友回忆版）第40题",
+      "sourceCourse": "xingce",
+      "searchText": "在这片土地上，红色文化______而博大，除了红色史迹，这里还诞生了许多红色文化名人",
+      "mustContain": [
+        "红色文化______而博大",
+        "推动着时代______",
+        "成为不断奋进的精神动力"
+      ],
+      "manualOriginalSummary": true,
+      "replaceVariantWithOriginal": true,
+      "module": "言语理解",
+      "versionNote": "本站讲义把第一空“厚重”和第三空“凝结”写入题干；复测恢复粉笔回忆版三空原题，按粉笔参考答案判分，原资料与历史记录保留。"
+    },
+    {
+      "catalogId": "site-5bfe9f7f0da41ef9",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-1-10-1",
+      "qid": "2067080",
+      "sourceTitle": "2017年辽宁省公安机关及省属监狱系统考试录用公务员（人民警察）考试《行测》题第14题",
+      "sourceCourse": "xingce",
+      "searchText": "诗在其所具有的诸般品格中，十分重要的一条便是对生活的别具匠心的打量。诗人的目光仿佛具有________的本领，生活中许多琐碎、平淡甚至枯燥的事物，经过它的描述，便产生了丰富的意味。依次填入画横线部分最恰当的一项是：",
+      "mustContain": [
+        "诸般品格中十分",
+        "的目光仿佛具有",
+        "过它的描述便产"
+      ],
+      "manualOriginalSummary": true,
+      "replaceVariantWithOriginal": true,
+      "module": "言语理解",
+      "versionNote": "本站讲义题面或选项与粉笔回忆版存在差异；复测展示粉笔完整题面和选项，并按粉笔参考答案判分，原资料与历史记录保留。"
+    },
+    {
+      "catalogId": "site-28446720b917d0ed",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-1-8-1",
+      "qid": "2387734",
+      "sourceTitle": "2019年浙江省公务员录用考试《行测》题（A类）（网友回忆版）第33题",
+      "sourceCourse": "xingce",
+      "searchText": "太空是一个充满未知和挑战的领域，面对人类的雄心，当前的化学火箭早已力不从心。因为化学火箭所携带的燃料要占总重的 90%以上，能量密度较低，工作时间也不长。若要飞向更远的深空和开展星际旅行，必须________，寻找新的“登天之梯”。依次填入划横线部分最恰当的一项是：",
+      "mustContain": [
+        "知和挑战的领域",
+        "携带的燃料要占",
+        "的深空和开展星"
+      ],
+      "manualOriginalSummary": true,
+      "replaceVariantWithOriginal": true,
+      "module": "言语理解",
+      "versionNote": "本站讲义题面或选项与粉笔回忆版存在差异；复测展示粉笔完整题面和选项，并按粉笔参考答案判分，原资料与历史记录保留。"
     }
   ]
 }

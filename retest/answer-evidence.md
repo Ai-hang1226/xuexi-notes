@@ -115,3 +115,14 @@ outline: [2, 2]
 [回忆版题库的同题解析](https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/05-%E5%88%A4%E6%96%AD%E6%8E%A8%E7%90%86/2025%E5%B9%B4%E4%BA%91%E5%8D%97%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md)收录两种规律：看曲线端点与中段交替得 D；看横竖线与斜线交替可得 A，题库说明倾向 D。两种解释均已记录，缺少足以确定唯一答案的官方依据，暂不自动判分。
 
 这些处理只影响新复测是否抽取及使用哪个题库参考，不改写历史首答、成绩或复测状态。
+
+
+## 2026-11-16 补充：恢复三道完整粉笔回忆版例题
+
+按粉笔题号重新取回完整题面、四个选项与参考答案，新增三道此前在讲义中题面或选项不完整的例题：
+
+- **言语讲义例 1.13：2022 年浙江省公务员考试 C 类第 40 题**，粉笔参考 **B**。原讲义把“厚重”和“凝结”填入了题干；复测恢复三空原题。[粉笔题库](https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%9C%A8%E8%BF%99%E7%89%87%E5%9C%9F%E5%9C%B0%E4%B8%8A%EF%BC%8C%E7%BA%A2%E8%89%B2%E6%96%87%E5%8C%96______%E8%80%8C%E5%8D%9A%E5%A4%A7%EF%BC%8C%E9%99%A4%E4%BA%86%E7%BA%A2&courseSet=xingce&course=xingce&qType=1)。
+- **言语讲义例 1.10：2017 年辽宁省公安机关及省属监狱系统招录考试第 14 题**，粉笔参考 **C**。[粉笔题库](https://www.fenbi.com/spa/tiku/guide/question/search?q=%E8%AF%97%E5%9C%A8%E5%85%B6%E6%89%80%E5%85%B7%E6%9C%89%E7%9A%84%E8%AF%B8%E8%88%AC%E5%93%81%E6%A0%BC%E4%B8%AD%EF%BC%8C%E5%8D%81%E5%88%86%E9%87%8D%E8%A6%81%E7%9A%84%E4%B8%80%E6%9D%A1%E4%BE%BF%E6%98%AF%E5%AF%B9%E7%94%9F&courseSet=xingce&course=xingce&qType=1)。
+- **言语讲义例 1.8：2019 年浙江省公务员考试 A 类第 33 题**，粉笔参考 **B**。[粉笔题库](https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%A4%AA%E7%A9%BA%E6%98%AF%E4%B8%80%E4%B8%AA%E5%85%85%E6%BB%A1%E6%9C%AA%E7%9F%A5%E5%92%8C%E6%8C%91%E6%88%98%E7%9A%84%E9%A2%86%E5%9F%9F%EF%BC%8C%E9%9D%A2%E5%AF%B9%E4%BA%BA%E7%B1%BB%E7%9A%84%E9%9B%84%E5%BF%83%EF%BC%8C&courseSet=xingce&course=xingce&qType=1)。
+
+三题均在复测中展示粉笔回忆版原题；粉笔答案只作为本网站复测参考，不代表考试机关正式公布答案。原讲义和历史答题记录未改。

@@ -21,7 +21,7 @@ const storageWarning = ref(false)
 const groups = [
   { label: '全部', test: () => true },
   { label: '可自动判分', test: (q) => q.status === '可自动判分' },
-  { label: '待核对', test: (q) => ['待核对', '题面不完整', '答案有争议', '题面待整理'].includes(q.status) },
+  { label: '待核对', test: (q) => ['待核对', '题面不完整', '答案有争议', '题面待整理', '暂未匹配真题', '相似题未确认', '题源待补充', '候选题待核对', '检索受限', '检索未完成', '尚未检索', '真题已归位·未自动判分'].includes(q.status) },
   { label: '申论', test: (q) => q.subject === '申论' },
   { label: '历史自编', test: (q) => q.status === '历史自编' },
   { label: '原卷待答', test: (q) => q.status === '原卷待答' },
@@ -146,7 +146,11 @@ function labelFor(status) {
   return {
     '可自动判分': '可自动判分', '待核对': '答案待核', '题面不完整': '题面不完整',
     '原卷待答': '原卷待答', '历史自编': '历史自编', '申论材料题': '申论材料题',
-    '答案有争议': '答案有争议', '题面待整理': '原页待整理',
+    '答案有争议': '答案有争议', '题面待整理': '原页待整理', '暂未匹配真题': '暂未匹配真题',
+    '相似题未确认': '相似题未确认', '题源待补充': '题源待补充',
+    '候选题待核对': '候选题待核对', '检索受限': '粉笔检索受限',
+    '检索未完成': '检索未完成', '尚未检索': '尚未检索',
+    '教学示例': '教学示例', '真题已归位·未自动判分': '真题已归位 · 未自动判分',
   }[status] || status
 }
 
@@ -196,7 +200,7 @@ onMounted(() => {
         <span><strong>{{ bank.imported }}</strong> 道可自动判分</span>
         <span><strong>{{ markedCount }}</strong> 条本机待复习</span>
       </div>
-      <p class="scope-note">同一道题尽量合并不同出处；未识别出的重复可能仍会分别显示。历史自编题仅作回看。标为“答案有争议”或题面不完整的题不自动判分；部分可判分题有其他资料的不同参考，会在结果中说明。</p>
+      <p class="scope-note">同一道题尽量合并不同出处；历史自编题仅作回看。待核对区会标明暂未匹配真题、候选不符或题源待补充；这些题不会自动判分。教学示例与已归位但未完成直核的真题也会标清。</p>
 
       <section class="search-panel" aria-label="筛选题目">
         <label class="search-label" for="question-search">搜索题目</label>
@@ -229,7 +233,7 @@ onMounted(() => {
         <h1>{{ selected.title }}</h1>
         <p v-if="selected.status === '原卷待答'" class="reader-note">原卷仍是待答状态；这里的练习不会替你提交原卷，也不会改变原有成绩。</p>
         <p v-else-if="selected.status === '历史自编'" class="reader-note">这是历史自编练习，保留供回看；不计入真题自动判分。</p>
-        <p v-else-if="!isScored && !isEssay" class="reader-note">这道题的题源、题面或答案尚需核对，暂不自动判断对错。</p>
+        <p v-else-if="!isScored && !isEssay" class="reader-note">{{ selected.reviewNote || '这道题的题源、题面或答案尚需核对，暂不自动判断对错。' }}</p>
         <p v-if="isEssay" class="reader-note">先根据材料作答，再查看原页的参考内容。申论按主观题处理，不自动给分。</p>
 
         <div v-if="current.materialHtml" class="material-box"><strong>{{ current.materialTitle || '题目材料' }}</strong><div class="question-text" v-html="formatHtml(current.materialHtml)"></div></div>
@@ -260,7 +264,7 @@ onMounted(() => {
             <p v-if="current.gradingNote">{{ current.gradingNote }}</p>
           </template>
           <template v-else-if="isEssay"><strong>作答已保存在当前浏览器</strong><p>可以打开原页对照材料和已有参考内容；不会自动改写你以前的答案或成绩。</p></template>
-          <template v-else><strong>已记录本次选择：{{ picked }}</strong><p>这道题暂不自动判分；原页可能包含尚待核对的推断或历史解析。</p></template>
+          <template v-else><strong>已记录本次选择：{{ picked }}</strong><p>这道题暂不自动判分；原页可能包含尚待核对的推断或历史解析。</p><p v-if="current.referenceAnswer"><strong>参考答案：{{ current.referenceAnswer }}</strong></p><p v-if="current.referenceNote">{{ current.referenceNote }}</p></template>
         </div>
 
         <div v-if="submitted || (!canChoose && !isEssay)" class="source-links">

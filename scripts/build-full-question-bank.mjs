@@ -14,6 +14,7 @@ const recoveredFragments = JSON.parse(read('retest/recovered-lesson-fragments.js
 const fenbiVerified = JSON.parse(read('retest/fenbi-verified.json')).questions
 const publicCandidates = JSON.parse(read('retest/public-source-candidates.json')).records
 const methodReferences = JSON.parse(read('retest/method-question-references.json')).questions
+const dispositions = JSON.parse(read('retest/question-dispositions.json')).records
 const entries = []
 const byFingerprint = new Map()
 const byReviewUrl = new Map()
@@ -450,10 +451,34 @@ for (const candidate of publicCandidates) {
   if (!item || item.status === '可自动判分' || item.sources.some((source) => source.url === candidate.sourceUrl)) continue
   const checked = fenbiVerified.some((question) => question.id === candidate.catalogId)
   item.sources.push({
-    label: (checked ? '公开对照题源' : candidate.knownDisagreement ? '公开候选题源（答案有分歧）' : '公开候选题源（待核）') + ' · 编号 ' + candidate.qid,
+    label: candidate.sourceMatchVerified ? '粉笔检索命中题源（答案待直核）' : (checked ? '公开对照题源' : candidate.knownDisagreement ? '公开候选题源（答案有分歧）' : '公开候选题源（待核）') + ' · 编号 ' + candidate.qid,
     url: candidate.sourceUrl,
   })
 }
+
+let matchedDispositions = 0
+for (const decision of dispositions) {
+  const entry = entries.find((row) => row.id === decision.id || row.aliases?.includes(decision.id))
+  if (!entry) throw new Error('题库状态记录未匹配到目录条目：' + decision.id)
+  matchedDispositions++
+  if (entry.status === '可自动判分') continue
+  entry.status = decision.status || entry.status
+  if (decision.title) entry.title = decision.title
+  if (decision.source) entry.source = decision.source
+  if (decision.reviewNote) entry.reviewNote = decision.reviewNote
+  if (decision.referenceAnswer) entry.referenceAnswer = decision.referenceAnswer
+  if (decision.referenceNote) entry.referenceNote = decision.referenceNote
+  if (decision.stem) {
+    entry.stemHtml = render(decision.stem)
+    entry.options = (decision.options || []).map((option) => ({ label:option.label, html:inline(option.text) }))
+    entry.excerpt = textOf(entry.stemHtml).slice(0, 220)
+    entry.search = textOf([entry.title, entry.stemHtml, ...entry.options.map((option) => option.html)].join(' '))
+  }
+  for (const [label, url] of [['粉笔题库检索结果（需直核解析）', decision.sourceUrl], ['题目与粉笔答案转录（公开回忆版）', decision.paperUrl]]) {
+    if (url && !entry.sources.some((source) => source.url === url)) entry.sources.push({ label, url })
+  }
+}
+if (matchedDispositions !== dispositions.length) throw new Error('题库状态记录未全部应用')
 
 const summary = Object.fromEntries([...new Set(entries.map((entry) => entry.status))]
   .map((status) => [status, entries.filter((entry) => entry.status === status).length]))

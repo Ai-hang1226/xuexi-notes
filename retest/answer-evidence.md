@@ -126,3 +126,41 @@ outline: [2, 2]
 - **言语讲义例 1.8：2019 年浙江省公务员考试 A 类第 33 题**，粉笔参考 **B**。[粉笔题库](https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%A4%AA%E7%A9%BA%E6%98%AF%E4%B8%80%E4%B8%AA%E5%85%85%E6%BB%A1%E6%9C%AA%E7%9F%A5%E5%92%8C%E6%8C%91%E6%88%98%E7%9A%84%E9%A2%86%E5%9F%9F%EF%BC%8C%E9%9D%A2%E5%AF%B9%E4%BA%BA%E7%B1%BB%E7%9A%84%E9%9B%84%E5%BF%83%EF%BC%8C&courseSet=xingce&course=xingce&qType=1)。
 
 三题均在复测中展示粉笔回忆版原题；粉笔答案只作为本网站复测参考，不代表考试机关正式公布答案。原讲义和历史答题记录未改。
+
+## 2026-11-16：新增核对的 23 道粉笔真题
+
+本批题目已按粉笔检索结果恢复题源、原题设问、四个选项和参考答案。答案均标为粉笔题库参考，不等同考试机关正式公布答案。题卡内可打开对应粉笔检索来源。
+
+| 站内题目 | 粉笔题号 | 参考答案 |
+|---|---:|:---:|
+| [言语讲义 例 2.66](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-2-66) | 5072481 | **A** |
+| [言语讲义 例 3.46](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-3-46-讲义标注正确率-52) | 5298694 | **C** |
+| [言语讲义 例 1.4](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-1-4-1) | 2401804 | **D** |
+| [言语讲义 例 2.15](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-2-15-讲义标注正确率-46) | 3528070 | **A** |
+| [言语讲义 例 3.5](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-3-5-1) | 3827933 | **B** |
+| [言语讲义 例 3.8](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-3-8) | 22953 | **A** |
+| [言语讲义 例 3.9](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-3-9) | 26287 | **A** |
+| [言语讲义 例 1.2](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-1-2-2) | 4553741 | **A** |
+| [言语讲义 例 1.3](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-1-3-2) | 2680202 | **C** |
+| [言语讲义 例 1.4](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-1-4-2) | 4553746 | **D** |
+| [言语讲义 例 1.5](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-1-5-1) | 2012684 | **A** |
+| [言语讲义 例 1.11](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-1-11) | 3698155 | **B** |
+| [言语讲义 例 1.14](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-1-14) | 2012686 | **B** |
+| [言语讲义 例 1.15](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-1-15) | 2057032 | **D** |
+| [言语讲义 例 1.18](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-1-18-讲义标注正确率-50) | 3698153 | **A** |
+| [言语讲义 例 2.3](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-2-3-1) | 2377261 | **D** |
+| [言语讲义 例 2.4](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-2-4-1) | 2204091 | **B** |
+| [言语讲义 例 2.5](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-2-5-讲义标注正确率-60) | 3698145 | **D** |
+| [言语讲义 例 2.9](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-2-9-1) | 2680199 | **A** |
+| [言语讲义 例 2.15](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-2-15) | 5396818 | **D** |
+| [第7题｜第一空留竞争项，第二空用具体语境决胜](https://ai-hang1226.github.io/xuexi-notes/cuotiben/言语理解专项复盘-2026-10-17#q7) | 10443346 | **A** |
+| [言语讲义 例 5.1](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-5-1) | 2377266 | **D** |
+| [言语讲义 例 5.9](https://ai-hang1226.github.io/xuexi-notes/xingce/大宝小宝言语体系-正文#例-5-9-1) | 2387709 | **A** |
+
+### 尚未直接核定的记录
+
+本次把剩余记录分为：38 条暂未匹配真题、8 条相似候选题未确认、5 条题源信息待补充。它们继续保留在全站题库，但不自动判分；每条题卡会说明具体原因。
+
+另将方法页“2015—2019新动能指数”还原为2021年江苏C类第118题完整材料与选项。粉笔检索命中 QID 2741961，但详情接口当前返回403；答案B由表格数据独立复算，并与公开回忆版中转录的粉笔参考相符，因此只供交卷后对照，不参与自动评分。
+
+混合增长率的8%/20%算式示例标为教学示例；椭圆方阵、曲直交点两题仍保留“答案有争议”状态。

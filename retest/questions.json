@@ -1,9 +1,9 @@
 {
-  "imported": 630,
+  "imported": 632,
   "origins": {
     "综合真题卷": 135,
     "历史错题与复盘": 143,
-    "知识点例题": 352
+    "知识点例题": 354
   },
   "skippedCount": 49,
   "excluded": [
@@ -21006,6 +21006,72 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-7-16",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-2ac72504b21e0772",
+      "number": "例 7.18",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2014年国家公务员录用考试《行测》题第53题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96%E5%BE%97%E4%B8%BB%E5%9F%83%E5%88%A9%E4%BA%9A%E6%96%AF%C2%B7%E5%8D%A1%E5%86%85%E6%8F%90%E7%9A%84%E6%9D%B0%E4%BD%9C%E3%80%8A%E7%BE%A4%E4%BC%97%E4%B8%8E%E6%9D%83&courseSet=xingce&course=xingce&qType=1",
+      "correct": "D",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>诺贝尔文学奖得主埃利亚斯·卡内提的杰作《群众与权力》是一部分析不同族群特征的最具影响力的著作。该著作从不同角度剖析群众的形象，首先是按国别、地缘、族群来展开，并去分析每个国家特殊的文化背景，由于作者没有从经济层面展开分析，在国别分析中范围仅限于欧洲，因此，本文尝试______。</p><p>填入划横线部分最恰当的一句是：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "从经济层面来谈谈欧洲族群特征研究对我国的启示"
+        },
+        {
+          "label": "B",
+          "html": "从文化层面来谈谈特殊文化背景对欧洲族群的影响"
+        },
+        {
+          "label": "C",
+          "html": "从文化层面来谈谈欧洲文化背景对日本族群的影响"
+        },
+        {
+          "label": "D",
+          "html": "从经济层面来谈谈中国和日本的族群特征及其启示"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-7-18-讲义标注正确率-52",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-ac73962bada4883a",
+      "number": "例 7.21",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2019年黑龙江边境县（市、区）急需紧缺专业岗公务员考试《行测》题第38题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E8%AE%B2%E5%A5%BD%E4%B8%AD%E5%9B%BD%E6%95%85%E4%BA%8B%E3%80%81%E4%BC%A0%E6%92%AD%E5%A5%BD%E4%B8%AD%E5%9B%BD%E5%A3%B0%E9%9F%B3%EF%BC%8C%E4%B9%A0%E8%BF%91%E5%B9%B3%E6%80%BB%E4%B9%A6%E8%AE%B0%E4%B8%BA%E6%88%91%E4%BB%AC%E6%A0%91%E7%AB%8B%E4%BA%86%E5%85%89%E8%BE%89%E5%85%B8%E8%8C%83%E3%80%82%E5%BC%95%E7%94%A8%E5%BD%93%E5%9C%B0%E8%B0%9A%E8%AF%AD%E3%80%81%E7%BB%93%E5%90%88%E4%B8%AA%E4%BA%BA%E7%BB%8F%E5%8E%86%E3%80%81%E8%AE%B2%E8%BF%B0%E6%84%9F%E4%BA%BA%E6%95%85%E4%BA%8B%E2%80%A6%E2%80%A6%E5%85%9A%E7%9A%84%E5%8D%81%E5%85%AB%E5%A4%A7%E4%BB%A5%E6%9D%A5%EF%BC%8C%E4%B9%A0%E8%BF%91%E5%B9%B3%E6%80%BB%E4%B9%A6%E8%AE%B0%E5%9C%A8%E5%87%BA%E8%AE%BF%E3%80%81%E5%87%BA%E5%B8%AD%E9%87%8D%E8%A6%81%E5%9B%BD%E9%99%85%E4%BC%9A%E8%AE%AE&courseSet=xingce&course=xingce&qType=1",
+      "correct": "B",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。 本站讲义中段文字缺失；复测按粉笔回忆版恢复完整题干与选项，参考答案B来自粉笔，原讲义保留。",
+      "stemHtml": "<p>讲好中国故事、传播好中国声音，习近平总书记为我们树立了光辉典范。引用当地谚语、结合个人经历、讲述感人故事……党的十八大以来，习近平总书记在出访、出席重要国际会议、会见来访外国客人时，用外界听得懂的语言，______。</p><p>填入画横线部分最恰当的一项是：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "创新对外话语表达，展示真实、立体、全面的中国"
+        },
+        {
+          "label": "B",
+          "html": "以润物细无声的方式，增进世界对中国的了解"
+        },
+        {
+          "label": "C",
+          "html": "立足本国，面向世界，让中国文化不断传播出去"
+        },
+        {
+          "label": "D",
+          "html": "让中国理念、中国主张、中国方案更具触发共鸣的力量"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-7-21-讲义标注正确率-27",
       "origin": "知识点例题"
     }
   ]

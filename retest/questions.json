@@ -1,9 +1,9 @@
 {
-  "imported": 613,
+  "imported": 621,
   "origins": {
     "综合真题卷": 135,
     "历史错题与复盘": 143,
-    "知识点例题": 335
+    "知识点例题": 343
   },
   "skippedCount": 49,
   "excluded": [
@@ -20445,6 +20445,270 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-1-讲义标注正确率-63",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-71bfd07e34237381",
+      "number": "例 5.2",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2021年新疆公务员录用考试《行测》试题（网友回忆版）第31题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%9C%89%E4%BA%9B%E6%99%AF%E5%8C%BA%E5%80%9F%E5%8A%A9%E7%83%AD%E6%92%AD%E5%BD%B1%E8%A7%86%E5%89%A7%EF%BC%8C%E4%B8%8D%E4%BB%85%E6%8F%90%E9%AB%98%E4%BA%86%E4%BA%BA%E6%B0%94%EF%BC%8C%E8%80%8C%E4%B8%94%E5%B8%A6%E6%9D%A5%E4%BA%86%E5%8F%AF%E8%A7%82%E7%9A%84%E7%BB%8F%E6%B5%8E%E6%94%B6%E5%85%A5%EF%BC%8C%E5%8F%AF%E8%B0%93______%E3%80%82%E5%85%B6%E5%AE%9E%EF%BC%8C%E4%BB%94%E7%BB%86%E5%88%86%E6%9E%90%E8%BF%99%E4%BA%9B%E6%88%90%E5%8A%9F%E6%A1%88%E4%BE%8B%EF%BC%8C%E4%B8%8D%E9%9A%BE%E5%8F%91%E7%8E%B0%EF%BC%8C%E8%BF%99%E4%BA%9B%E6%99%AF%E5%8C%BA%E5%B0%B1%E6%98%AF%E5%BD%B1%E8%A7%86%E5%89%A7%E7%9A%84%E6%8B%8D%E6%91%84%E5%9C%B0%EF%BC%8C%E5%89%A7%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0&courseSet=xingce&course=xingce&qType=1",
+      "correct": "B",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。 本站讲义只保留了原题中的部分横线或单空词语选项；本次按粉笔回忆版补齐原题完整题干与组合选项，参考答案来自粉笔；原讲义正文与历史答题记录保留。",
+      "stemHtml": "<p>有些景区借助热播影视剧，不仅提高了人气，而且带来了可观的经济收入，可谓______。其实，仔细分析这些成功案例，不难发现，这些景区就是影视剧的拍摄地，剧中的元素与景区高度______，游客带着观感游览，很容易引发情感共鸣。</p><p>依次填入画横线部分最恰当的一项是：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "一举多得 相似"
+        },
+        {
+          "label": "B",
+          "html": "名利双收 契合"
+        },
+        {
+          "label": "C",
+          "html": "两全其美 匹配"
+        },
+        {
+          "label": "D",
+          "html": "公私兼顾 重叠"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-5-2-1",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-fedd8d872efde656",
+      "number": "例 5.4",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2019年浙江省公务员录用考试《行测》题（A类）（网友回忆版）第30题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%8E%86%E4%BB%A3%E5%AE%98%E4%BF%AE%E5%8F%B2%E7%B1%8D%EF%BC%8C%E7%94%B1%E4%BA%8E%E5%8F%97%E7%BC%96%E5%8F%B2%E6%8C%87%E5%AF%BC%E6%80%9D%E6%83%B3%E3%80%81%E5%89%8D%E4%BB%A3%E6%A1%A3%E6%A1%88%E5%92%8C%E7%AF%87%E5%B9%85%E7%AD%89%E9%99%90%E5%88%B6%EF%BC%8C%E4%B8%8D%E5%8F%AF%E8%83%BD%E5%AE%8C%E5%85%A8%E5%87%86%E7%A1%AE%EF%BC%8C%E4%B9%9F%E4%B8%8D%E5%8F%AF%E8%83%BD______%E3%80%82%E4%BA%8E%E6%98%AF%EF%BC%8C%E5%90%8E%E4%B8%96%E5%90%84%E7%A7%8D%E5%8F%B2%E7%B1%BB%E7%9A%84%E2%80%9C%E6%9C%AD%E8%AE%B0%E2%80%9D%E2%80%9C%E7%BA%A0%E8%B0%AC%E2%80%9D%E2%80%9C%E5%95%86%E6%A6%B7%E2%80%9D%E7%AD%89%E8%91%97%E4%BD%9C______%E3%80%82%E8%80%8C&courseSet=xingce&course=xingce&qType=1",
+      "correct": "C",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。 本站讲义只保留了原题中的部分横线或单空词语选项；本次按粉笔回忆版补齐原题完整题干与组合选项，参考答案来自粉笔；原讲义正文与历史答题记录保留。",
+      "stemHtml": "<p>历代官修史籍，由于受编史指导思想、前代档案和篇幅等限制，不可能完全准确，也不可能______。于是，后世各种史类的“札记”“纠谬”“商榷”等著作______。而历代笔记、诗文中所记作者亲历、亲闻的事实，便是这类“札记”“纠谬”之作的根据。</p><p>依次填入划横线部分最恰当的一项是：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "事无巨细  汗牛充栋"
+        },
+        {
+          "label": "B",
+          "html": "十全十美  此起彼伏"
+        },
+        {
+          "label": "C",
+          "html": "面面俱到  层出不穷"
+        },
+        {
+          "label": "D",
+          "html": "字斟句酌  不绝如缕"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-5-4-1",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-5617ed94e3183dcb",
+      "number": "例 5.6",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2019年黑龙江边境县（市、区）急需紧缺专业岗公务员考试《行测》题第31题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=______%E5%BD%A2%E5%BC%8F%E4%B8%BB%E4%B9%89%E4%BB%85%E4%BB%85%E6%9C%89%E5%A4%96%E5%8A%9B______%E8%BF%98%E8%BF%9C%E8%BF%9C%E4%B8%8D%E5%A4%9F%EF%BC%8C%E5%A6%82%E6%9E%9C%E4%B8%8D%E8%83%BD%E5%AF%B9%E5%BD%A2%E5%BC%8F%E4%B8%BB%E4%B9%89%E7%9A%84%E6%96%87%E5%8C%96%E3%80%81%E7%A4%BE%E4%BC%9A%E3%80%81%E5%8E%86%E5%8F%B2%E6%B7%B1%E5%B1%82%E6%AC%A1%E7%9A%84%E6%A0%B9%E6%BA%90______%EF%BC%8C%E9%82%A3%E5%B0%B1%E4%B8%8D%E8%83%BD%E7%9C%9F%E6%AD%A3%E9%99%A4%E5%BC%8A%E3%80%82%20%E4%BE%9D%E6%AC%A1%E5%A1%AB%E5%85%A5%E5%88%92%E6%A8%AA%E7%BA%BF%E9%83%A8%E5%88%86%E6%9C%80%E6%81%B0%E5%BD%93&courseSet=xingce&course=xingce&qType=1",
+      "correct": "D",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。 本站讲义只保留了原题中的部分横线或单空词语选项；本次按粉笔回忆版补齐原题完整题干与组合选项，参考答案来自粉笔；原讲义正文与历史答题记录保留。",
+      "stemHtml": "<p>______形式主义仅仅有外力______还远远不够，如果不能对形式主义的文化、社会、历史深层次的根源______，那就不能真正除弊。</p><p>依次填入划横线部分最恰当的一项是：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "破除  干扰  斩草除根"
+        },
+        {
+          "label": "B",
+          "html": "遏制  干涉  扬汤止沸"
+        },
+        {
+          "label": "C",
+          "html": "打击  干碍  除恶务尽"
+        },
+        {
+          "label": "D",
+          "html": "消除  干预  釜底抽薪"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-5-6",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-79db5ffdeeb22513",
+      "number": "例 5.8",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2022年青海省公务员录用考试《行测》题（网友回忆版）第37题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%B8%AD%E5%9B%BD%E4%BC%81%E4%B8%9A%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E3%80%81%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E3%80%81%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%E3%80%81%E7%94%9F%E7%89%A9%E8%AF%86%E5%88%AB%E3%80%81%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB%E5%92%8C%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF%E9%A2%86%E5%9F%9F%E4%B8%8D%E6%96%AD%E5%8F%96%E5%BE%97______%E3%80%82%E5%9C%A8%E7%BB%8F%E5%8E%86%E4%BA%86PC%E6%97%B6%E4%BB%A3%E7%9A%84Windows%E5%92%8C%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3%E7%9A%84A&courseSet=xingce&course=xingce&qType=1",
+      "correct": "B",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。 本站讲义只保留了原题中的部分横线或单空词语选项；本次按粉笔回忆版补齐原题完整题干与组合选项，参考答案来自粉笔；原讲义正文与历史答题记录保留。",
+      "stemHtml": "<p>中国企业在计算机视觉、机器学习、图像识别、生物识别、语音识别和自然语言处理关键技术领域不断取得______。在经历了PC时代的Windows和移动互联网时代的Android和iOS之后，与新一代人工智能相______的操作系统正在______ 原有的垄断。</p><p>依次填入划横线部分最恰当的一项是：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "突进 适合 颠覆"
+        },
+        {
+          "label": "B",
+          "html": "突破 适应 打破"
+        },
+        {
+          "label": "C",
+          "html": "进步 对应 击破"
+        },
+        {
+          "label": "D",
+          "html": "进展 切合 破除"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-5-8-1",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-869340985cc271af",
+      "number": "例 5.10",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2018年浙江省选调生村官招录考试《行测》试题（网友回忆版）第29题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%BA%92%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3%E6%9C%80%E5%A5%87%E5%A6%99%E7%9A%84%E5%9C%B0%E6%96%B9%E5%B0%B1%E6%98%AF%E4%BA%BA%E4%BA%BA%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%EF%BC%8C%E4%BA%BA%E4%BA%BA%E5%8F%AF%E4%BB%A5%E5%8F%91%E5%A3%B0%E3%80%82%E8%99%BD%E7%84%B6%E5%AD%98%E5%9C%A8%E6%98%8E%E6%98%BE%E7%9A%84%E2%80%9C%E7%BE%8A%E7%BE%A4%E6%95%88%E5%BA%94%E2%80%9D%EF%BC%8C%E4%BD%86%E5%B9%B6%E4%B8%8D%E6%98%AF%E9%9A%8F%E4%BE%BF%E5%93%AA%E4%B8%AA%E2%80%9C%E5%A4%A7V%E2%80%9D%E5%B0%B1%E8%83%BD______%E8%80%8C%E5%8E%BB%E3%80%82%E6%83%B3%E5%BD%93%E9%A2%86%E5%A4%B4%E7%BE%8A%E7%9A%84%E5%BE%88%E5%A4%9A%EF%BC%8C%E4%BD%86%E8%83%BD%E6%9C%80%E5%90%8E%E5%B8%A6%E8%B5%B0%E7%BE%8A&courseSet=xingce&course=xingce&qType=1",
+      "correct": "A",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。 本站讲义只保留了原题中的部分横线或单空词语选项；本次按粉笔回忆版补齐原题完整题干与组合选项，参考答案来自粉笔；原讲义正文与历史答题记录保留。",
+      "stemHtml": "<p>互联网时代最奇妙的地方就是人人可以参与，人人可以发声。虽然存在明显的“羊群效应”，但并不是随便哪个“大V”就能______而去。想当领头羊的很多，但能最后带走羊群的不多，或许这才是网络领域里热闹不断，各路观点______的道理所在。</p><p>依次填入划横线部分最恰当的一项是：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "裹挟  层出不穷"
+        },
+        {
+          "label": "B",
+          "html": "引导  参差错落"
+        },
+        {
+          "label": "C",
+          "html": "挟持  此起彼伏"
+        },
+        {
+          "label": "D",
+          "html": "诱导  良莠不齐"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-5-10-1",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-cf66f9c2492bb3e0",
+      "number": "例 5.12",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2021年新疆公务员录用考试《行测》试题（网友回忆版）第29题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%96%87%E7%89%A9%E7%9C%8B%E4%BC%BC%E6%B2%A1%E6%9C%89%E7%94%9F%E5%91%BD%E3%80%81%E6%B2%A1%E6%9C%89%E5%A3%B0%E9%9F%B3%EF%BC%8C%E4%BD%86%E6%98%AF%E5%AE%83%E4%BB%AC______%E4%BA%86%E5%8E%86%E5%8F%B2%E7%9A%84%E9%A3%8E%E4%BA%91%EF%BC%8C%E5%AF%84%E6%89%98%E7%9D%80%E5%85%88%E4%BA%BA%E7%9A%84%E6%83%85%E6%80%80%EF%BC%8C%E5%85%85%E6%BB%A1%E4%BA%86%E7%94%9F%E5%91%BD%E7%9A%84%E6%B4%BB%E5%8A%9B%E3%80%82%E5%9C%A8%E5%8D%9A%E7%89%A9%E9%A6%86%EF%BC%8C%E6%88%91%E4%BB%AC%E9%80%9A%E8%BF%87%E5%AF%B9%E6%96%87%E7%89%A9%E7%9A%84%E7%9E%BB%E4%BB%B0%EF%BC%8C%E4%B8%8E%E5%85%88%E4%BA%BA%E7%9A%84%E7%94%9F%E5%91%BD%E6%8E%A5%E7%BB%AD%E4%BA%86%E8%B5%B7%E6%9D%A5%EF%BC%8C%E5%9C%A8__&courseSet=xingce&course=xingce&qType=1",
+      "correct": "B",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。 本站讲义只保留了原题中的部分横线或单空词语选项；本次按粉笔回忆版补齐原题完整题干与组合选项，参考答案来自粉笔；原讲义正文与历史答题记录保留。",
+      "stemHtml": "<p>文物看似没有生命、没有声音，但是它们______了历史的风云，寄托着先人的情怀，充满了生命的活力。在博物馆，我们通过对文物的瞻仰，与先人的生命接续了起来，在______中实现了与历史的对话、与先人的情感交流，这也是博物馆所追求的文化目标。</p><p>依次填入画横线部分最恰当的一项是：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "经历 凝重"
+        },
+        {
+          "label": "B",
+          "html": "浸透 宁静"
+        },
+        {
+          "label": "C",
+          "html": "蕴含 平淡"
+        },
+        {
+          "label": "D",
+          "html": "折射 沧桑"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-5-12-讲义标注正确率-29",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-01c266454f459baf",
+      "number": "例 6.1",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2018年江苏省公务员录用考试《行测》题（C类）（网友回忆版）第32题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%B9%BF%E5%9C%B0%E6%8B%A5%E6%9C%89%E7%8B%AC%E7%89%B9%E7%9A%84%E8%87%AA%E7%84%B6%E6%99%AF%E8%A7%82%E7%BE%8E%E3%80%82%E6%B9%BF%E5%9C%B0%E7%9A%84%E8%87%AA%E7%84%B6%E6%99%AF%E8%A7%82%E6%98%AF%E6%B9%BF%E5%9C%B0%E8%87%AA%E7%84%B6%E8%80%8C%E7%84%B6%E3%80%81%E8%87%AA%E8%B6%B3%E8%87%AA%E5%BE%97%E7%9A%84%E8%87%AA%E7%84%B6%E4%B9%8B%E6%80%A7%E7%9A%84______%EF%BC%8C%E6%98%AF%E5%A4%A7%E8%87%AA%E7%84%B6%E7%9A%84______%E9%80%A0%E5%B0%B1%E7%9A%84%E8%87%AA%E7%84%B6%E7%94%9F%E6%80%81%E5%B9%B3%E8%A1%A1%E4%B9%8B%E7%BE%8E%E3%80%82%20%E4%BE%9D%E6%AC%A1%E5%A1%AB%E5%85%A5%E5%88%92%E6%A8%AA%E7%BA%BF%E5%A4%84%E6%9C%80%E6%81%B0%E5%BD%93&courseSet=xingce&course=xingce&qType=1",
+      "correct": "A",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。 本站讲义只保留了原题中的部分横线或单空词语选项；本次按粉笔回忆版补齐原题完整题干与组合选项，参考答案来自粉笔；原讲义正文与历史答题记录保留。",
+      "stemHtml": "<p>湿地拥有独特的自然景观美。湿地的自然景观是湿地自然而然、自足自得的自然之性的______，是大自然的______造就的自然生态平衡之美。</p><p>依次填入划横线处最恰当的一项是：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "彰显  鬼斧神工"
+        },
+        {
+          "label": "B",
+          "html": "显现  沧海桑田"
+        },
+        {
+          "label": "C",
+          "html": "凸显  开天辟地"
+        },
+        {
+          "label": "D",
+          "html": "展现  精雕细琢"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-6-1",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-dfb66a61984a6011",
+      "number": "例 6.5",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2012年915联考《行测》题（新疆/福建/重庆/河南）第21题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%B8%BA%E4%BA%86%E6%BB%A1%E8%B6%B3%E4%B8%8D%E6%96%AD%E8%A2%AB%E5%88%B6%E9%80%A0%E5%87%BA%E6%9D%A5%E3%80%81%E8%A2%AB%E5%88%BA%E6%BF%80%E8%B5%B7%E6%9D%A5%E7%9A%84%E6%AC%B2%E6%9C%9B%EF%BC%8C______%E7%9A%84%E5%95%86%E5%93%81%E5%B0%B1%E5%83%8F%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E7%9A%84%E5%B1%B1%E6%B4%9E%EF%BC%8C%E6%88%90%E4%B8%BA______%E8%B4%AD%E4%B9%B0%E6%AC%B2%E7%9A%84%E5%BC%95%E6%93%8E%E3%80%82%E5%85%B6%E5%AE%9E%EF%BC%8C%E6%8B%A5%E6%9C%89%E5%86%8D%E5%A4%9A%EF%BC%8C%E4%B9%9F%E6%B0%B8%E8%BF%9C%E6%B8%B4%E6%9C%9B%E8%B4%A7%E6%9E%B6%E4%B8%8A%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E3%80%82%20%E4%BE%9D%E6%AC%A1%E5%A1%AB&courseSet=xingce&course=xingce&qType=1",
+      "correct": "B",
+      "gradingNote": "本站仅保留原题片段或复盘摘要；题干和选项按粉笔回忆版补齐，参考答案来自粉笔，不代表官方公布答案。 本站讲义只保留了原题中的部分横线或单空词语选项；本次按粉笔回忆版补齐原题完整题干与组合选项，参考答案来自粉笔；原讲义正文与历史答题记录保留。",
+      "stemHtml": "<p>为了满足不断被制造出来、被刺激起来的欲望，______的商品就像阿里巴巴的山洞，成为______购买欲的引擎。其实，拥有再多，也永远渴望货架上的下一个。</p><p>依次填入划横线部分最恰当的一项是：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "五花八门   触动"
+        },
+        {
+          "label": "B",
+          "html": "琳琅满目   触发"
+        },
+        {
+          "label": "C",
+          "html": "丰富多彩   触及"
+        },
+        {
+          "label": "D",
+          "html": "形形色色   触碰"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-6-5",
       "origin": "知识点例题"
     }
   ]

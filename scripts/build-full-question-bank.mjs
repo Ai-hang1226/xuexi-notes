@@ -46,9 +46,9 @@ function addAlias(item, alias) {
   if (!item.aliases.includes(alias)) item.aliases.push(alias)
 }
 function add(entry, key = '') {
-  const known = key && byFingerprint.get(key)
+  const known = entries.find((item) => item.id === entry.id) || (key && byFingerprint.get(key))
   if (known) {
-    addAlias(known, entry.id)
+    if (known.id !== entry.id) addAlias(known, entry.id)
     if (entry.sourceUrl && !known.sources.some((s) => s.url === entry.sourceUrl)) {
       known.sources.push({ label: entry.source, url: entry.sourceUrl })
     }
@@ -132,7 +132,7 @@ for (const q of bank.questions) {
   const questionName = typeof q.number === 'number' ? '第' + q.number + '题' : String(q.number)
   add({
     id: q.id, quizId: q.id, subject: '行测', status: '可自动判分',
-    title: q.module + ' · ' + questionName, source: q.origin,
+    title: q.title || q.module + ' · ' + questionName, source: q.origin,
     sourceUrl: q.reviewUrl, excerpt: textOf(q.stemHtml).slice(0, 220),
     search: textOf([q.stemHtml, ...q.options.map((o) => o.html)].join(' ')),
   }, fingerprint(q.stemHtml, q.options))

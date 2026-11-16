@@ -22,6 +22,8 @@ const displaySource = (value) => value
 const catalog = JSON.parse(read('cuotiben/review-catalog.json'))
 const recovered = new Map(JSON.parse(read('retest/recovered-sources.json')).records
   .map((record) => [record.number, record]))
+const userConfirmedAnswers = new Map(JSON.parse(read('retest/user-confirmed-answer-resolutions.json')).records
+  .map((record) => [record.reviewUrl, record]))
 const legacy135 = new Set(catalog.filter((item) => item.url.includes('135题混合真题批改'))
   .map((item) => Number(item.url.match(/#q(\d+)/)?.[1])).filter(Number.isFinite))
 
@@ -216,9 +218,10 @@ for (const item of reviewEntries) {
   }
   const backup = file.includes('言语理解专项复盘-2026-10-17')
     ? recovered.get(Number(anchor.slice(1))) : null
+  const userResolution = userConfirmedAnswers.get(item.url)
   const source = sourceLine(block) || (backup ? '题源（平台标注）：' + backup.source : '')
   const pageAnswer = answerFrom(block, source)
-  const answer = backup ? (pageAnswer && pageAnswer !== backup.answer ? '' : backup.answer) : pageAnswer
+  const answer = userResolution?.correct || (backup ? (pageAnswer && pageAnswer !== backup.answer ? '' : backup.answer) : pageAnswer)
   let question = extractOriginal(block)
   // Some figure questions show all four choices in the original image.
   if (!question && file.includes('图形推理专项复盘-2026-10-21')) {
@@ -234,7 +237,7 @@ for (const item of reviewEntries) {
       }
     }
   }
-  if (file.includes('图形推理专项复盘-2026-10-21') && anchor === 'q1') {
+  if (file.includes('图形推理专项复盘-2026-10-21') && anchor === 'q1' && !userResolution) {
     fail(file, anchor, '答案存在分歧')
     continue
   }
@@ -265,13 +268,14 @@ for (const item of reviewEntries) {
   const module = ['图形推理', '逻辑判断', '定义判断', '类比推理'].includes(item.module) ? '判断推理' : item.module
   add({
     id: 'review-' + crypto.createHash('sha256').update(identity).digest('hex').slice(0, 16),
+    title: userResolution?.title || '',
     number: Number(anchor.slice(1)), type: item.module, module, correct: answer,
     source: displaySource(source),
     ...question, materialTitle, materialHtml: material, reviewUrl: item.url,
-    sourceUrl: file.includes('每日测验复盘-2026-11-06') && anchor === 'q2'
-      ? 'https://www.xingguanggongkao.com/Wb/quesView/id/50610.html' : '',
-    gradingNote: file.includes('每日测验复盘-2026-11-06') && anchor === 'q2'
-      ? '星光公考及其他题库参考 B；被转载的来源文章也使用“名副其实、映照”。题库参考不等同官方公布答案。' : '',
+    sourceUrl: userResolution?.sourceUrl || (file.includes('每日测验复盘-2026-11-06') && anchor === 'q2'
+      ? 'https://www.xingguanggongkao.com/Wb/quesView/id/50610.html' : ''),
+    gradingNote: userResolution?.gradingNote || (file.includes('每日测验复盘-2026-11-06') && anchor === 'q2'
+      ? '星光公考及其他题库参考 B；被转载的来源文章也使用“名副其实、映照”。题库参考不等同官方公布答案。' : ''),
     origin: '历史错题与复盘',
   }, file)
 }
@@ -305,7 +309,7 @@ function addVerifiedLesson(item, page) {
     : ''
   add({
     id: item.id, number: item.number, type: isReview ? '错题复盘' : '知识点例题', module: item.module || '言语理解',
-    source: item.source, sourceUrl: item.sourceUrl, correct: item.correct,
+    title: item.title || item.catalogTitle || '', source: item.source, sourceUrl: item.sourceUrl, correct: item.correct,
     gradingNote: item.gradingNote || '',
     stemHtml: html(item.stem),
     options: item.options.map((option) => ({ label: option.label, html: inline(option.text) })),
@@ -364,6 +368,12 @@ for (const item of JSON.parse(read('retest/recovered-lesson-fragments.json')).qu
 for (const item of JSON.parse(read('retest/fenbi-verified.json')).questions) {
   if (item.automaticGrading === false) continue
   addVerifiedLesson(item, 'retest/fenbi-verified.json')
+}
+
+for (const [reviewUrl, resolution] of userConfirmedAnswers) {
+  if (!questions.some((question) => question.reviewUrl === reviewUrl && question.correct === resolution.correct)) {
+    throw new Error('用户确认的答案未进入可判分题库：' + reviewUrl)
+  }
 }
 
 const origins = Object.fromEntries([...new Set(questions.map((q) => q.origin))]

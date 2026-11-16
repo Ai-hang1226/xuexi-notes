@@ -117,7 +117,7 @@ function questionBody(block) {
     .replace(/^\s*\[.*?(?:首答|结果|批改).*?\].*$/gm, '').trim()
 }
 function reviewOriginal(block) {
-  const marker = /(?:\*\*(?:题目回顾|完整原题与选项|原题与全部选项)\*\*[：:]?|^#{2,5}\s*(?:题目回顾|完整原题与选项|原题与全部选项)\s*$)/m.exec(block)
+  const marker = /(?:\*\*(?:题目回顾|完整原题与选项|原题与全部选项|原题与选项|原题和选项)\*\*[：:]?|^#{2,5}\s*(?:题目回顾|完整原题与选项|原题与全部选项|原题与选项|原题和选项)\s*$)/m.exec(block)
   if (!marker) return ''
   let original = block.slice(marker.index + marker[0].length)
   const boundary = original.search(/^(?:\s*<BreakPointCard\b|\s*<a\s+class=|#{2,5}\s+(?:本人思路|最终正确解析|易错提醒|题源|复盘)|\s*\*\*(?:本人思路|最终正确解析|易错提醒|参考答案|正确答案|解析|原答|题源)[^\n]*|\s*---\s*$)/m)
@@ -289,7 +289,7 @@ for (const row of reviews) {
   } else {
     const [page, anchor] = row.url.split('#')
     const file = page.replace(/^\//, '') + '.md'
-    let stemHtml = '', options = []
+    let stemHtml = '', options = [], disputedFigure = false
     if (anchor && fs.existsSync(path.join(root, file))) {
       const text = read(file), lines = text.split('\n')
       const explicit = lines.findIndex((line) => line.includes('{#' + anchor + '}'))
@@ -305,9 +305,18 @@ for (const row of reviews) {
         const choices = splitChoices(original)
         if (choices?.stem) { stemHtml = render(choices.stem); options = choices.options }
         else if (original) stemHtml = render(original)
+        if (!original && file === 'cuotiben/图形推理专项复盘-2026-10-21.md' && anchor === 'q1') {
+          const figure = block.match(/<figure\b[^>]*>[\s\S]*?<\/figure>/)?.[0]
+          if (figure && /第1题-原题与选项\.png/.test(figure)
+              && fs.existsSync(path.join(root, 'public/figure-review-20261021/第1题-原题与选项.png'))) {
+            stemHtml = render('从所给的四个选项中选择最合适的一项，填入问号处，使图形呈现一定规律。\n\n' + figure)
+            options = ['A', 'B', 'C', 'D'].map((label) => ({ label, html:'' }))
+            disputedFigure = true
+          }
+        }
       }
     }
-    const status = /争议|分歧/.test((row.reviewState || '') + (row.note || '')) ? '答案有争议'
+    const status = disputedFigure || /争议|分歧/.test((row.reviewState || '') + (row.note || '')) ? '答案有争议'
       : options.length === 4 ? '待核对' : '题面待整理'
     add({ id: stableId(row.url), subject: '行测', status, title: row.title, source: '错题复盘', sourceUrl: row.url,
       excerpt: textOf(stemHtml).slice(0, 220) || '保留原题或原复盘，题面完整性与答案仍需核对。',
@@ -405,7 +414,9 @@ for (const name of fs.readdirSync(path.join(root, 'xingce')).filter((x) => x.end
     const id = stableId(file + ':' + i)
     const verified = fenbiVerified.find((question) => question.id === id)
     const key = verified && fingerprint(render(verified.stem), verified.options.map((option) => ({ html: inline(option.text) })))
-    const linked = verified && (entries.find((entry) => entry.quizId === verified.id) || byFingerprint.get(key))
+    const sourceNumber = name === '语句排序-先找衔接再验证整体.md' ? lines[i].match(/^###\s*第(15|18|28)题/)?.[1] : ''
+    const referenced = sourceNumber && byReviewUrl.get('/cuotiben/言语理解专项复盘-2026-10-17#q' + sourceNumber)
+    const linked = referenced || (verified && (entries.find((entry) => entry.quizId === verified.id) || byFingerprint.get(key)))
     if (linked) {
       addAlias(linked, id)
       if (!linked.sources.some((source) => source.url === url)) linked.sources.push({ label: '知识点方法页', url })

@@ -1,9 +1,9 @@
 {
-  "imported": 590,
+  "imported": 594,
   "origins": {
     "综合真题卷": 135,
     "历史错题与复盘": 143,
-    "知识点例题": 312
+    "知识点例题": 316
   },
   "skippedCount": 49,
   "excluded": [
@@ -17643,6 +17643,39 @@
       "origin": "知识点例题"
     },
     {
+      "id": "site-c6d4a8e307699d80",
+      "number": "例 2.22",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2019年黑龙江边境县（市、区）急需紧缺专业岗公务员考试《行测》题第41题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%87%A0%E5%8D%81%E5%B9%B4%E6%9D%A5%EF%BC%8C%E5%8F%B2%E5%AD%A6%E7%A0%94%E7%A9%B6%E6%9C%80%E5%A4%A7%E7%9A%84%E5%8F%98%E5%8C%96%E4%B9%8B%E4%B8%80%EF%BC%8C%E5%B0%B1%E6%98%AF%E7%A0%94%E7%A9%B6%E8%B6%8A%E5%81%9A%E8%B6%8A&courseSet=xingce&course=xingce&qType=1",
+      "correct": "C",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>几十年来，史学研究最大的变化之一，就是研究越做越细，课题越做越小，也越做越深。当然，这种越做越细、越做越小、越做越深的现象本身确实很好，历史学是应该做细、做小、做深——不细、不小、不深、大而不当，不接地气，从空到空，这样的历史学是没有出路的，也看不到发展的前景。</p><p>本文段接下来最有可能讲述的是：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "历史学做细、做小、做深可能的原因"
+        },
+        {
+          "label": "B",
+          "html": "历史学做细、做小、做深创造的价值"
+        },
+        {
+          "label": "C",
+          "html": "历史学做细、做小、做深带来的问题"
+        },
+        {
+          "label": "D",
+          "html": "历史学做细、做小、做深开创的前景"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-22-讲义标注正确率-26",
+      "origin": "知识点例题"
+    },
+    {
       "id": "site-28ffe9f55da84a8d",
       "number": "例 2.23",
       "type": "知识点例题",
@@ -17838,6 +17871,39 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-7",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-b011d391431d3cb3",
+      "number": "例 3.14",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2015年吉林省公务员录用考试《行测》题（4月乙级）第26题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%B8%80%E9%A1%B9%E6%96%B0%E7%A0%94%E7%A9%B6%E5%8F%91%E7%8E%B0%EF%BC%8C%E4%BD%8E%E6%B8%A9%E8%83%BD%E9%80%9A%E8%BF%87%E5%B0%86%E6%89%80%E8%B0%93%E7%9A%84%E2%80%9C%E5%9D%8F%E2%80%9D%E8%84%82%E8%82%AA%E8%BD%AC%E5%8C%96&courseSet=xingce&course=xingce&qType=1",
+      "correct": "D",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>一项新研究发现，低温能通过将所谓的“坏”脂肪转化为“好”脂肪帮助人体燃烧卡路里。这一理论基于两种脂肪的不同特性。我们都再熟悉不过的讨厌的白色脂肪会吸收额外的卡路里并将它们储存在肚子、腰间和大腿中。但成年人还有少量的另一种“健康脂肪”，这种褐色脂肪专门燃烧卡路里同时产生热量。婴儿有大量褐色脂肪来保暖，褐色脂肪多的成年人也更苗条。</p><p>下列在文中没有提及的是：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "褐色脂肪是一种“健康脂肪”"
+        },
+        {
+          "label": "B",
+          "html": "成年人体内既有白色脂肪也有褐色脂肪"
+        },
+        {
+          "label": "C",
+          "html": "低温能够将白色脂肪转变成褐色脂肪"
+        },
+        {
+          "label": "D",
+          "html": "婴儿体内的褐色脂肪更多"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-14-1",
       "origin": "知识点例题"
     },
     {
@@ -18267,6 +18333,72 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-2",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-8b1b23c0c0495c64",
+      "number": "例 4.3",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2014年江苏省公务员录用考试《行测》题（A类）第5题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%25%EF%BC%89%E8%B4%A2%E4%BA%A7%E5%AE%89%E5%85%A8%E4%B8%80%E7%9B%B4%E6%98%AF%E4%BA%BA%E4%BB%AC%E5%BF%A7%E8%99%91%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%8C%E5%A6%82%E6%9E%9C%E4%BA%BA%E4%BB%AC%E6%97%A0&courseSet=xingce&course=xingce&qType=1",
+      "correct": "C",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>财产安全一直是人们忧虑的一个问题，如果人们无法保障其个人财产的安全，就不可能有积极性去创造财富，即使创造财富，也会转移。个人财产的安全，既体现在保有环节，也体现在交易环节。为避免交易风险，需要通过国家机关的登记行为来确认其物权状态，从而保障其真实性，登记行为本身是以国家信用做担保的，而国家信用的背后又是法律信用。<br>这段文字的关键词是：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "交易风险 物权登记  法律信用"
+        },
+        {
+          "label": "B",
+          "html": "财产安全 交易环节  国家信用"
+        },
+        {
+          "label": "C",
+          "html": "财产安全 物权登记  国家信用"
+        },
+        {
+          "label": "D",
+          "html": "物权登记 国家担保  法律信用"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-3-1",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-172b4611d660c39e",
+      "number": "例 4.4",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2010年江苏省公务员录用考试《行测》题（A类）第10题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%89%80%E6%9C%89%E7%9A%84%E4%BD%9C%E7%89%A9%E9%83%BD%E6%98%AF%E8%87%AA%E9%87%8E%E7%94%9F%E5%93%81%E7%A7%8D%E6%BC%94%E5%8C%96%E8%80%8C%E6%9D%A5%E7%9A%84%EF%BC%8C%E8%BF%99%E6%84%8F%E5%91%B3%E7%9D%80%EF%BC%8C%E7%94%A8&courseSet=xingce&course=xingce&qType=1",
+      "correct": "C",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>所有的作物都是自野生品种演化而来的，这意味着，用达尔文主义的说法就是，野生品种在漫长的时间里获得了生存所需的适应能力。然而在驯化与种植中，发生了遗传侵蚀，这种适应力也遭受损失，甚至其野生祖先也可能灭绝。因此今天的很多作物一旦突然间无人种植，直接就会消亡。</p><p>这段文字的关键词是：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "适应能力"
+        },
+        {
+          "label": "B",
+          "html": "驯化过程"
+        },
+        {
+          "label": "C",
+          "html": "遗传侵蚀"
+        },
+        {
+          "label": "D",
+          "html": "野生物种"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-4-讲义标注正确率-49",
       "origin": "知识点例题"
     },
     {

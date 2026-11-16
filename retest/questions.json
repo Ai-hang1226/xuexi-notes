@@ -1,9 +1,9 @@
 {
-  "imported": 574,
+  "imported": 590,
   "origins": {
     "综合真题卷": 135,
-    "历史错题与复盘": 131,
-    "知识点例题": 308
+    "历史错题与复盘": 143,
+    "知识点例题": 312
   },
   "skippedCount": 49,
   "excluded": [
@@ -18567,6 +18567,138 @@
       "origin": "知识点例题"
     },
     {
+      "id": "site-5b9566ad8425204f",
+      "number": "例 1.12",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2017年上半年全国事业单位联考E类《职业能力倾向测验》题（云南/湖北/安徽/贵州/宁夏/广西/青海/内蒙古网友回忆版）第23题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E9%83%91%E6%9D%BF%E6%A1%A5%E7%94%BB%E7%AB%B9%E7%BB%9D%E9%9D%9E%E5%87%AD%E7%A9%BA%E8%87%86%E9%80%A0%E3%80%81%E7%81%B5%E6%84%9F%E6%89%80%E8%87%B3%EF%BC%8C%E8%80%8C%E6%98%AF%E9%95%BF%E6%9C%9F%E6%BD%9C%E5%BF%83%E8%A7%82&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>郑板桥画竹绝非凭空臆造、灵感所至，而是长期潜心观察、细致体味的结果。郑板桥观察生活，不是______；相反，他是极为细致且有一定深度的。他观察竹子，不仅正面看，而且从侧面看；不仅在日光下看，而且在月影下看；不仅直接看，而且间接从粉墙纸窗上看其映像，来体味其诗情画意。</p><p>填入画横线部分最恰当的一项是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "一蹴而就"
+        },
+        {
+          "label": "B",
+          "html": "走马观花"
+        },
+        {
+          "label": "C",
+          "html": "天马行空"
+        },
+        {
+          "label": "D",
+          "html": "浅尝辄止"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-1-12-讲义标注正确率-66-1",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-0ba58731f6f7c3aa",
+      "number": "例 1.16",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2017年上半年事业单位联考D类《职业能力倾向测验》题（云南/湖北/安徽/贵州/宁夏/广西/青海/陕西/内蒙古/上海网友回忆版）第33题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%BB%8E%E7%AC%A6%E5%8F%B7%E5%8C%96%E5%88%B0%E6%95%B0%E5%AD%97%E5%8C%96%EF%BC%8C%E4%BF%A1%E6%81%AF%E5%9C%A8%E4%BA%BA%E7%B1%BB%E8%BF%9B%E5%8C%96%E5%92%8C%E6%96%87%E6%98%8E%E5%8F%91%E5%B1%95%E4%B8%AD%E7%9A%84%E9%87%8D&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>从符号化到数字化，信息在人类进化和文明发展中的重要性毋庸置疑。如果说符号化产生了知识的“宝库”，那么作为数字化的产物，大数据将成为人类的“超级矿藏”，其资源性、基础性与战略性的价值已经______。为应对大数据时代的到来，国际竞争正在悄然展开。</p><p>填入画横线部分最恰当的一项是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "略胜一筹"
+        },
+        {
+          "label": "B",
+          "html": "初露峥嵘"
+        },
+        {
+          "label": "C",
+          "html": "不可胜数"
+        },
+        {
+          "label": "D",
+          "html": "今非昔比"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-1-16-讲义标注正确率-68",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-9bee16ac4638f9a2",
+      "number": "例 1.17",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2021年10月23日全国事业单位联考B类《职业能力倾向测验》试题（安徽/湖南/四川网友回忆版）第28题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%94%B5%E5%BD%B1%E6%98%AF%E2%80%9C%E6%96%87%E5%8C%96%E5%90%8D%E7%89%87%E2%80%9D%EF%BC%8C%E7%94%9F%E5%8A%A8%E5%9C%B0%E5%B1%95%E7%A4%BA%E7%9D%80%E4%B8%80%E4%B8%AA%E5%9B%BD%E5%AE%B6%E7%9A%84%E5%BD%A2%E8%B1%A1%EF%BC%9B&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>电影是“文化名片”，生动地展示着一个国家的形象；也是“文化底片”，形象地显影着一个国家的______；电影是“文化芯片”，深刻地______着一个国家的精神密码。电影并不提供解决方案，但却让陌生的心灵相通，成为我们彼此贴近、______对方的“通行证”。</p><p>填入横线处最恰当的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "内涵  传递  理解"
+        },
+        {
+          "label": "B",
+          "html": "底蕴  揭示  抵达"
+        },
+        {
+          "label": "C",
+          "html": "神采  谱写  拥抱"
+        },
+        {
+          "label": "D",
+          "html": "气质  建构  接纳"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-1-17-讲义标注正确率-55",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-b95c161c0b649c3b",
+      "number": "例 2.8",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2022年9月17日全国事业单位联考B类《职业能力倾向测验》试题（安徽/甘肃/海南/湖北/湖南/四川绵阳/云南/吉林长春/重庆市属）（网友回忆版）第23题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E9%9A%8F%E7%9D%80%E5%B9%B4%E8%BD%BB%E4%BA%BA%E4%B8%8D%E6%96%AD%E6%90%AC%E8%87%B3%E6%96%B0%E5%9F%8E%EF%BC%8C%E5%8F%A4%E5%9F%8E%E7%9A%84%E6%B4%BB%E5%8A%9B%E6%97%A5%E5%87%8F%EF%BC%8C%E5%A6%82%E4%BD%95%E7%94%A8%E6%96%B0&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>随着年轻人不断搬至新城，古城的活力日减，如何用新鲜血液激活（    ）的古城？恐怕没有比组织年轻人徒步“走读”更好的方式了，通过开展一系列活动来激发年轻一代的主人翁意识，是（    ）古城的重要一步。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "濒危  还原"
+        },
+        {
+          "label": "B",
+          "html": "衰颓  挽救"
+        },
+        {
+          "label": "C",
+          "html": "退化  重启"
+        },
+        {
+          "label": "D",
+          "html": "落寞  复苏"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-2-8-讲义标注正确率-56",
+      "origin": "知识点例题"
+    },
+    {
       "id": "site-8e6896220ec12dea",
       "number": "例 6.2",
       "type": "知识点例题",
@@ -19158,6 +19290,402 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/cuotiben/xingce-cuoti#yanyu-20260913-25",
+      "origin": "历史错题与复盘"
+    },
+    {
+      "id": "site-ced1460f32879fa3",
+      "number": "⑲ 篇章阅读-细节判断·选非（第44题）",
+      "type": "错题复盘",
+      "module": "言语理解",
+      "source": "2021年江苏省公务员录用考试《行测》题（B类）（网友回忆版）第44题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%B8%8B%E5%88%97%E5%85%B3%E4%BA%8E%E2%80%9C%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E2%80%9D%E7%9A%84%E6%8F%8F%E8%BF%B0%E4%B8%8D%E7%AC%A6%E5%90%88%E6%96%87%E6%84%8F%E7%9A%84%E6%98%AF&courseSet=xingce&course=xingce&qType=1",
+      "correct": "A",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。 旧复盘只有材料节选，A 项多了一个“子”字；复测展示粉笔回忆版的完整材料和原题。",
+      "stemHtml": "<p>下列关于“知识图谱”的描述不符合文意的是：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "其架构被称为生物分子模型"
+        },
+        {
+          "label": "B",
+          "html": "是相关知识有序形成的体系"
+        },
+        {
+          "label": "C",
+          "html": "就像是将知识点有序串联起来的项链"
+        },
+        {
+          "label": "D",
+          "html": "可以帮助人类更好地认识主客观世界"
+        }
+      ],
+      "materialTitle": "阅读材料",
+      "materialHtml": "<p>        索引以及一切检索工具，本质上都是揭示人类知识内在关联的认知方式，而且完全符合人类的认识习惯。我们通过研究索引的______，可以获得极大的启示。索引揭示的知识规则，是构建新媒体时代人类知识体系的基础，也是实现知识发现新方案的基础。索引具有三种功能：学术进阶的工具、知识发现的手段和学术评价的标准。传统的检索工具，其实是人类认知思维的外在表现。</p><p>        索引有两种形态，分别代表了人类的两种认知形式，即知识扩展和模式识别。知识扩展又分为两种形式，其一是单向度的知识扩展模型，就是在同一个文献内部提出某些关键词制成索引，当读者在一个段落中发现其中一个关键词，可以经由索引扩展到本书其他段落、篇章中的同一词，这是个闭合循环的知识扩展模型；其二是开放性的知识扩展，就是读者在书中发现一个关键词，通过综合索引跳转至多种文献中与之相关的关键词，从而不断向外扩展。在这个模型之上，如果把多个知识关联序列进行叠加，我们便掌握了一种新的认知形式，就是模式识别。不是说通过一个已知的关键词去找它在文献中出现的位置，而是根据某些边际条件探索某个关键词集，即获取位于一个相关知识序列中的知识集合。比如说，我们综合利用唐代的士族世系表、科举年表、职官年表，可以探索士族出身的文士通过科举途径入仕和此后的升迁途径中较之寒门子弟有何优势，甚至可以结合士族郡望表进一步细致分析不同地域士族的升降与科举之间的关系。模式识别是学术研究更高级的思维过程。</p><p>        知识扩展和模式识别都依赖于知识系统的有序性和关联性，由此形成的知识图谱，是有关联的、有序的知识集合。这个知识集合中，所有知识点都在一个相互关联的网络体系中，不是单个的珠子，而是固定在一串项链上，我们可以知道它的定位，知道它跟其他知识之间的关联。</p><p>        知识图谱正是用以实现模式识别思维功能的方案，它由多个知识本体库和多个知识模型组成，把这些知识模型进行叠加以实现模式识别功能。知识图谱的综合架构有点像生物分子模型，任何一个知识点都能够在它的分子链上找到，而每个分子链跟其他的分子链之间还有一种关联，那么我们可以通过它的颜色、大小、方向来定位它到底是哪个具体的知识。我们看单独的知识点，它是海量知识中一个不确定的点，但当我们把不同来源的知识进行拼合的时候，其实它就变成了一个某种七巧板拼成的固定形状，每一个单块都是不可移动的，是互相关联从而互相限定的。那么，以往所有的问题、错误，包括误解，其实都可以在这个体系中再认识。</p><p>        这种知识管理方案能够让我们把传统媒体中的经验、知识和智慧，平滑地移入新媒体中，实现基于规则的方案和基于统计的方案的结合，也就是基于计算机技术的和基于专业领域知识的知识管理方案的完美结合，进而辅助人类更广阔、深入地认识主观世界和客观世界。</p>",
+      "reviewUrl": "/cuotiben/xingce-cuoti#yanyu-20260913-passage-44",
+      "origin": "历史错题与复盘"
+    },
+    {
+      "id": "site-da9ddcbc231193e7",
+      "number": "01 粉笔专项-判断推理-论证支持·排除生产不足（原卷第1题）",
+      "type": "错题复盘",
+      "module": "判断推理",
+      "source": "2025年4月26日四川省成都市“蓉漂人才荟”事业单位《综合知识测试》笔试试题（网友回忆版）第57题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%BD%93%E5%89%8D%EF%BC%8C%E6%88%91%E5%9B%BD%E4%BA%BA%E5%9D%87%E8%80%95%E5%9C%B0%E9%9D%A2%E7%A7%AF%E5%9C%A8%E4%B8%8D%E6%96%AD%E7%BC%A9%E5%B0%8F%EF%BC%8C%E4%BA%8E%E6%98%AF%E6%9C%89%E4%BA%BA%E8%AE%A4%E4%B8%BA%E5%B0%86&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>当前，我国人均耕地面积在不断缩小，于是有人认为将来会因为耕地面积锐减而引发饥饿危机。但也有人认为，饥饿危机产生的原因总是源于分配而不是生产。下列论据中，最能支持后者观点的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "将来不会有粮食分配不公"
+        },
+        {
+          "label": "B",
+          "html": "将来不会有粮食短缺"
+        },
+        {
+          "label": "C",
+          "html": "将来粮食的产量不会低于当前"
+        },
+        {
+          "label": "D",
+          "html": "将来不会有饥饿危机"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/cuotiben/判断推理专项复盘-2026-10-07#judgment-1",
+      "origin": "历史错题与复盘"
+    },
+    {
+      "id": "site-c0255fbe5a6033cd",
+      "number": "14 粉笔专项-判断推理-削弱·相关与直接因果（原卷第14题）",
+      "type": "错题复盘",
+      "module": "判断推理",
+      "source": "2026年3月29日全国事业单位联考E类《职业能力倾向测验》笔试试题（河北/广西/山西/云南/辽宁/湖北/贵州/江西/宁夏/安徽/黑龙江/重庆/吉林/海南/湖南/甘肃）（网友回忆版）第85题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E9%95%BF%E6%9C%9F%E7%A3%A8%E7%89%99%E4%BC%9A%E5%AF%B9%E4%BA%BA%E7%B1%BB%E5%81%A5%E5%BA%B7%E9%80%A0%E6%88%90%E4%B8%8D%E5%90%8C%E7%A8%8B%E5%BA%A6%E7%9A%84%E5%BD%B1%E5%93%8D%E3%80%82%E2%91%A1%E6%9C%80%E8%BF%91%EF%BC%8C&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>长期磨牙会对人类健康造成不同程度的影响。最近，研究人员分析了106名成年志愿者饮用咖啡和睡觉磨牙的关系，研究发现，与不饮用咖啡的人相比，咖啡饮用者睡觉磨牙症的发生指数有所提高。研究人员认为，饮用咖啡与睡觉磨牙具有直接的因果关系。</p><p>以下哪项如果为真，最能削弱上述结论？（    ）</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "吸烟、饮酒等不良习惯也是导致睡觉磨牙的原因"
+        },
+        {
+          "label": "B",
+          "html": "是否饮用咖啡与睡眠质量等睡眠指标并没有关联"
+        },
+        {
+          "label": "C",
+          "html": "睡觉磨牙是病理因素和心理因素共同作用的结果"
+        },
+        {
+          "label": "D",
+          "html": "饮用含有咖啡因的红茶的志愿者并没有睡觉磨牙"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/cuotiben/判断推理专项复盘-2026-10-07#judgment-14",
+      "origin": "历史错题与复盘"
+    },
+    {
+      "id": "site-845cbd5ddcfa18c8",
+      "number": "22 粉笔专项-判断推理-论证支持·控制比较条件（原卷第22题）",
+      "type": "错题复盘",
+      "module": "判断推理",
+      "source": "2025年9月7日河南省郑州市事业单位《职业能力测验》笔试试题（考生回忆版）第67题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%A0%94%E7%A9%B6%E6%98%BE%E7%A4%BA%EF%BC%8C%E4%BD%BF%E7%94%A8%E5%8F%AF%E9%99%8D%E8%A7%A3%E5%BF%AB%E9%80%92%E8%A2%8B%E7%9A%84%E5%B9%B3%E5%8F%B0%E7%94%A8%E6%88%B7%E5%A4%8D%E8%B4%AD%E7%8E%87%E6%AF%94%E6%99%AE%E9%80%9A&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>2025研究显示，使用可降解快递袋的平台用户复购率比普通高18%，90%受访者认为环保包装袋体现企业责任感。</p><p>下列哪项为真，最能支持上述观点？（    ）</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "复购率高的用户中，75%表示会主动推荐环保商品给亲友"
+        },
+        {
+          "label": "B",
+          "html": "可降解快递袋生产成本高30%，但企业通过碳积分获得补贴"
+        },
+        {
+          "label": "C",
+          "html": "使用环保包装的平台在商品价格、物流速度上与普通商品无异"
+        },
+        {
+          "label": "D",
+          "html": "国家市场监管总局要求2026年起全面禁用不可降解袋"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/cuotiben/判断推理专项复盘-2026-10-07#judgment-22",
+      "origin": "历史错题与复盘"
+    },
+    {
+      "id": "site-a1c79453bfd5a1e2",
+      "number": "01 粉笔专项-数量关系-加权平均与设元（原卷第1题）",
+      "type": "错题复盘",
+      "module": "数量关系",
+      "source": "2026年3月28日陕西事业单位统考D类《职业能力倾向测验》笔试试题（网友回忆版）第47题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%9F%90%E8%B6%85%E5%B8%82%E5%BC%80%E5%B1%95%E4%BC%9A%E5%91%98%E6%97%A5%E6%B4%BB%E5%8A%A8%EF%BC%8C%E5%8F%82%E4%B8%8E%E6%B4%BB%E5%8A%A8%E7%9A%84%E9%A1%BE%E5%AE%A2%E4%B8%AD%E6%9C%891%2F4%E6%8A%BD&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>某超市开展会员日活动，参与活动的顾客中有1/4抽中了满减红包，抽中红包的顾客平均实付金额比活动基准价低12元，未抽中红包的顾客平均实付金额比活动基准价高4元，所有参与活动顾客的平均实付金额为88元。那么该活动的基准价是多少元？（    ）</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "86"
+        },
+        {
+          "label": "B",
+          "html": "88"
+        },
+        {
+          "label": "C",
+          "html": "90"
+        },
+        {
+          "label": "D",
+          "html": "92"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/cuotiben/数量关系专项复盘-2026-10-14#quantity-1",
+      "origin": "历史错题与复盘"
+    },
+    {
+      "id": "site-27fb1c4b337d52a5",
+      "number": "04 粉笔专项-数量关系-数字推理·数位和差（原卷第4题）",
+      "type": "错题复盘",
+      "module": "数量关系",
+      "source": "2026年4月18日江苏省事业单位招聘考试《综合知识和能力素质》（管理岗、专技-其他岗客观题）（网友回忆版）第20题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%EF%BC%8C21.31%EF%BC%8C62.84%EF%BC%8C41.53%EF%BC%8C53.82&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>32.51，21.31，62.84，41.53，53.82，（    ）</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "93.26"
+        },
+        {
+          "label": "B",
+          "html": "81.33"
+        },
+        {
+          "label": "C",
+          "html": "52.74"
+        },
+        {
+          "label": "D",
+          "html": "43.71"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/cuotiben/数量关系专项复盘-2026-10-14#quantity-4",
+      "origin": "历史错题与复盘"
+    },
+    {
+      "id": "site-5e20c265e6098aa8",
+      "number": "06 粉笔专项-数量关系-排列组合·扣除违规（原卷第6题）",
+      "type": "错题复盘",
+      "module": "数量关系",
+      "source": "2026年4月25日浙江省事业单位统考《职业能力倾向测验》笔试试题（网友回忆版）第29题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%9F%90%E5%A4%A7%E5%AD%A6%E5%9C%A8%E5%91%A8%E5%9B%9B%E5%92%8C%E5%91%A8%E4%BA%94%E4%B8%BA%E5%AD%A6%E7%94%9F%E5%BC%80%E8%AE%BE%E9%80%89%E4%BF%AE%E8%AF%BE%E7%A8%8B%EF%BC%8C%E5%91%A8%E5%9B%9B%E6%9C%89%E7%94%B2%E3%80%81&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>某大学在周四和周五为学生开设选修课程，周四有甲、乙、丙、丁四门课程，周五有甲、乙、戊、己、庚五门课程，且课程时间均不重叠。小吴计划选择三门不同的课程，那么有多少种选课方式？（    ）</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "56"
+        },
+        {
+          "label": "B",
+          "html": "62"
+        },
+        {
+          "label": "C",
+          "html": "64"
+        },
+        {
+          "label": "D",
+          "html": "70"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/cuotiben/数量关系专项复盘-2026-10-14#quantity-6",
+      "origin": "历史错题与复盘"
+    },
+    {
+      "id": "site-003c684990a661ea",
+      "number": "08 粉笔专项-数量关系-成活率·比例分母（原卷第8题）",
+      "type": "错题复盘",
+      "module": "数量关系",
+      "source": "2025年12月20日重庆市属及区县事业单位第四季度公开招聘工作人员《职业能力倾向测验》笔试试题（网友回忆版）第60题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%94%B2%E3%80%81%E4%B9%99%E4%B8%A4%E6%94%AF%E6%A4%8D%E6%A0%91%E9%98%9F%E5%85%B1%E5%90%8C%E5%8F%82%E4%B8%8E%E7%94%9F%E6%80%81%E4%BF%AE%E5%A4%8D%E3%80%82%E7%94%B2%E9%98%9F%E7%A7%8D%E6%A4%8D%E4%BA%8640&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>甲、乙两支植树队共同参与生态修复。甲队种植了400棵树，成活率90%；乙队种植若干棵树，两队植树总成活率为80%，且所有成活树中甲队占比为60%。则乙队植树成活率约是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "69%"
+        },
+        {
+          "label": "B",
+          "html": "78%"
+        },
+        {
+          "label": "C",
+          "html": "81%"
+        },
+        {
+          "label": "D",
+          "html": "85%"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/cuotiben/数量关系专项复盘-2026-10-14#quantity-8",
+      "origin": "历史错题与复盘"
+    },
+    {
+      "id": "site-1d175050267f2b19",
+      "number": "09 粉笔专项-数量关系-概率·逐轮异组（原卷第9题）",
+      "type": "错题复盘",
+      "module": "数量关系",
+      "source": "2026年3月29日全国事业单位联考B类《职业能力倾向测验》笔试试题（河北/广西/山西/云南/辽宁/湖北/贵州/江西/宁夏/安徽/黑龙江/重庆/吉林/青海/海南/湖南/内蒙古/甘肃）（网友回忆版）第50题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%BA%BA%E5%8F%82%E5%8A%A0%E7%94%9F%E4%BA%A7%E6%8A%80%E8%83%BD%E6%AF%94%E8%B5%9B%EF%BC%8C%E8%A2%AB%E9%9A%8F%E6%9C%BA%E5%B9%B3%E5%9D%87%E5%88%86%E6%88%9016%E7%BB%84%E8%BF%9B%E8%A1%8C%E5%88%9D%E8%B5%9B&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>48人参加生产技能比赛，被随机平均分成16组进行初赛，每组第1名进入复赛；复赛选手又被随机平均分成4组，每组第1名进入决赛、已知张、刘在初赛组中排名1、2、3位的概率均为1/3，如果进入复赛，在组中排名1、2、3.4位的概率均为1/4，问张和刘均进入决赛的概率在以下哪个范围内？（    ）</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "不到1/250"
+        },
+        {
+          "label": "B",
+          "html": "1/250-1/200之间"
+        },
+        {
+          "label": "C",
+          "html": "1/200-1/150之间"
+        },
+        {
+          "label": "D",
+          "html": "超过1/150"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/cuotiben/数量关系专项复盘-2026-10-14#quantity-9",
+      "origin": "历史错题与复盘"
+    },
+    {
+      "id": "site-7bd78a8abda6fca7",
+      "number": "10 粉笔专项-数量关系-等差数列·周总量（原卷第10题）",
+      "type": "错题复盘",
+      "module": "数量关系",
+      "source": "2026年3月14日广东省事业单位高校毕业生招聘考试《基本能力测试》（网友回忆版）第64题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%95%86%E5%BA%97%E4%BB%8E%E5%91%A8%E4%B8%80%E5%BC%80%E5%A7%8B%E9%94%80%E5%94%AE%E6%9F%90%E7%A7%8D%E4%BA%A7%E5%93%81%EF%BC%8C%E4%B8%94%E4%B9%8B%E5%90%8E%E6%AF%8F%E4%B8%80%E5%A4%A9%E7%9A%84%E9%94%80%E9%87%8F%E9%83%BD&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>商店从周一开始销售某种产品，且之后每一天的销量都比前一天多2件，第五周的销量正好是第二周的2倍，则商店第一周销售了（    ）件这种产品。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "182"
+        },
+        {
+          "label": "B",
+          "html": "196"
+        },
+        {
+          "label": "C",
+          "html": "210"
+        },
+        {
+          "label": "D",
+          "html": "224"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/cuotiben/数量关系专项复盘-2026-10-14#quantity-10",
+      "origin": "历史错题与复盘"
+    },
+    {
+      "id": "site-a39128645effe398",
+      "number": "15 粉笔专项-数量关系-数字推理·相邻和与幂次（原卷第15题）",
+      "type": "错题复盘",
+      "module": "数量关系",
+      "source": "2026年4月11日天津市市直事业单位和高校第四批公开招聘工作人员《职业能力测验》笔试试题（网友回忆版）第2题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%EF%BC%8C1%EF%BC%8C3%EF%BC%8C24%EF%BC%8C232%EF%BC%8C%EF%BC%88%20%EF%BC%89%E3%80%82&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>0，1，3，24，232，（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "2238"
+        },
+        {
+          "label": "B",
+          "html": "2536"
+        },
+        {
+          "label": "C",
+          "html": "2649"
+        },
+        {
+          "label": "D",
+          "html": "2893"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/cuotiben/数量关系专项复盘-2026-10-14#quantity-15",
+      "origin": "历史错题与复盘"
+    },
+    {
+      "id": "site-329886d8e31bc211",
+      "number": "16 粉笔专项-数量关系-数字推理·统一取余（原卷第16题）",
+      "type": "错题复盘",
+      "module": "数量关系",
+      "source": "2026年4月25日福建省事业单位统考《综合基础知识》笔试试题（网友回忆版）第90题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%EF%BC%8C%EF%BC%88%20%EF%BC%89%EF%BC%8C38%EF%BC%8C18%EF%BC%8C54%EF%BC%8C76&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>15，（    ），38，18，54，76</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "21"
+        },
+        {
+          "label": "B",
+          "html": "22"
+        },
+        {
+          "label": "C",
+          "html": "23"
+        },
+        {
+          "label": "D",
+          "html": "24"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/cuotiben/数量关系专项复盘-2026-10-14#quantity-16",
       "origin": "历史错题与复盘"
     }
   ]

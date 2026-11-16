@@ -300,13 +300,17 @@ for (const item of verifiedJiangsu) {
 
 function addVerifiedLesson(item, page) {
   const isReview = item.reviewUrl?.startsWith('/cuotiben/')
+  const material = item.material
+    ? item.material.replace(/^<p>(?=<p>)/, '').replace(/<\/p>\s*$/, '')
+    : ''
   add({
     id: item.id, number: item.number, type: isReview ? '错题复盘' : '知识点例题', module: item.module || '言语理解',
     source: item.source, sourceUrl: item.sourceUrl, correct: item.correct,
     gradingNote: item.gradingNote || '',
     stemHtml: html(item.stem),
     options: item.options.map((option) => ({ label: option.label, html: inline(option.text) })),
-    materialTitle: '', materialHtml: '', reviewUrl: item.reviewUrl, origin: isReview ? '历史错题与复盘' : '知识点例题',
+    materialTitle: material ? '阅读材料' : '', materialHtml: material ? html(material) : '',
+    reviewUrl: item.reviewUrl, origin: isReview ? '历史错题与复盘' : '知识点例题',
   }, page)
 }
 for (const item of JSON.parse(read('retest/knowledge-source-matches.json')).questions) {

@@ -1,9 +1,9 @@
 {
-  "imported": 552,
+  "imported": 574,
   "origins": {
     "综合真题卷": 135,
-    "历史错题与复盘": 126,
-    "知识点例题": 291
+    "历史错题与复盘": 131,
+    "知识点例题": 308
   },
   "skippedCount": 49,
   "excluded": [
@@ -17775,6 +17775,369 @@
       "origin": "知识点例题"
     },
     {
+      "id": "site-47a38b60a5295990",
+      "number": "例 3.6",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2022年7月2日四川省成都市服务基层《职业能力倾向测验》笔试精选题（网友回忆版）第11题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%B8%80%E6%88%98%E7%BB%93%E6%9D%9F%E4%BB%A5%E5%90%8E%EF%BC%8C%E4%B8%AD%E5%9B%BD%E6%B5%B7%E5%A4%96%E7%A7%BB%E6%B0%91%E6%8E%80%E8%B5%B7%E7%AC%AC%E4%B8%89%E4%B8%AA%E9%AB%98%E6%BD%AE%EF%BC%8C%E5%85%B6%E4%B8%BB%E8%A6%81&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>一战结束以后，中国海外移民掀起第三个高潮，其主要流向仍是东南亚，直接动力是东南亚的经济繁荣。20世纪初以来，西方工业革命所带动的新兴产业的发展，陆续波及其东南亚的殖民地。东南亚经济发展刺激了对劳动力的需求的增长，廉价劳动力从中国南方不断涌入东南亚。</p><p>下列说法与文意不符的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "掀起第三个海外移民高潮的直接原因是东南亚的经济发展"
+        },
+        {
+          "label": "B",
+          "html": "华人廉价劳工移民东南亚主要从事工业革命以来的新兴产业"
+        },
+        {
+          "label": "C",
+          "html": "第一、二个海外移民高潮其主要流向是东南亚"
+        },
+        {
+          "label": "D",
+          "html": "西方工业革命带动了东南亚经济繁荣"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-6",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-667412fdc81bb200",
+      "number": "例 3.7",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2022年5月21日福建省事业单位《综合基础知识》笔试试题（网友回忆版）第38题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=G%20%E6%97%B6%E4%BB%A3%E7%9A%84%E5%88%B0%E6%9D%A5%EF%BC%8C%E6%A0%87%E5%BF%97%E7%9D%80%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E8%B7%83%E5%8D%87%E8%87%B3%E5%85%A8%E7%90%83&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>5G时代的到来，标志着中国移动通信技术跃升至全球领先地位。这对中国网络文化抓住中国技术领先契机、“引领全球文化”具有划时代的历史意义。5G时代是智能终端应用更为广泛、智能思维极尽挥洒、创意创新充分涌现的好时机，“智能制造”“智能服务”“智能产业”“智能文化”“无人文化”等无处不在。</p><p>根据上述材料，下列说法错误的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "5G时代智能终端应用更普及"
+        },
+        {
+          "label": "B",
+          "html": "5G时代中国引领全球文化"
+        },
+        {
+          "label": "C",
+          "html": "5G时代智能网络应用更广泛"
+        },
+        {
+          "label": "D",
+          "html": "中国进入5G网络文化新时代"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-7",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-3bf5442ffc08861a",
+      "number": "例 3.17",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2015年四川省成都市大邑县事业单位考试《职业能力倾向测验》精选题（网友回忆版）第48题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%BD%93%E4%BC%97%E7%BE%9E%E8%BE%B1%E5%AD%A6%E7%94%9F%EF%BC%8C%E4%BB%A5%E5%86%B7%E9%85%B7%E7%9A%84%E6%83%A9%E7%BD%9A%E6%80%A7%E4%BD%93%E9%AA%8C%E2%80%9C%E5%9F%B9%E5%85%BB%E2%80%9D%E4%BA%86%E5%AD%A6%E7%94%9F%E7%9A%84&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>当众羞辱学生，以冷酷的惩罚性体验“培养”了学生的自卑、仇恨甚至社会攻击倾向，而侵害了自尊心、信任能力和集体归属感。一次当众羞辱就是对人的尊严的一次践踏，反复的羞辱体验则将导致人格尊严的丧失。而人类社会最重要的价值——爱、道德、公民品格与社会凝聚力——都有赖于人对自我、对他人的尊严的确认与珍视。</p><p>对材料的理解不当的一项是（  ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "当众羞辱对青少年心灵具有严重的伤害性"
+        },
+        {
+          "label": "B",
+          "html": "对自我、对他人尊严的确认和珍视，将凸显人类社会最重要的价值"
+        },
+        {
+          "label": "C",
+          "html": "学生有了自卑、仇恨甚至社会攻击倾向，就会走向犯罪"
+        },
+        {
+          "label": "D",
+          "html": "学生被多次当众羞辱将导致其人格尊严的丧失"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-17-1",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-e0d9f20c219c471f",
+      "number": "例 3.20",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2020年江苏省省属事业单位公开招聘笔试试题（管理岗客观题）（网友回忆版）第17题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E3%80%8A%E6%96%87%E5%BF%83%E9%9B%95%E9%BE%99%E3%80%8B%E6%9C%89%E8%A8%80%EF%BC%8C%E2%80%9C%E6%83%85%E8%80%85%E6%96%87%E4%B9%8B%E7%BB%8F%EF%BC%8C%E8%BE%9E%E8%80%85%E7%90%86%E4%B9%8B%E7%BA%AC%EF%BC%9B%E7%BB%8F%E6%AD%A3&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>《文心雕龙》有言，“情者文之经，辞者理之纬；经正而后纬成，理定而后辞畅”。这是行文的典范，又何尝不是语言的真义？话语真情充沛、逻辑严谨，自然能生发出直抵人心的力量。穆青采访焦裕禄事迹时情动于衷，挥洒热泪，多年后，其采访日记上仍依稀可见斑斑泪痕。有了真情的贯注，那么语言和作品就都有了永不枯竭的活力，可以抵御时光而历久弥新。</p><p>下列说法与文意不符的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "言之成理是言辞畅达的基础"
+        },
+        {
+          "label": "B",
+          "html": "情理兼具是遣词造句的要点"
+        },
+        {
+          "label": "C",
+          "html": "语言的真义在于历久弥新"
+        },
+        {
+          "label": "D",
+          "html": "语言的力量贵在贯注真情"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-20-1",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-d383e4e8c4f7de54",
+      "number": "例 3.23",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2018年广东省肇庆市封开县事业单位笔试《综合知识》（综合类）精选题第11题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E8%BF%91%E4%BA%9B%E5%B9%B4%E6%9D%A5%EF%BC%8C%E6%88%91%E5%9B%BD%E7%BD%91%E7%BB%9C%E6%B8%B8%E6%88%8F%E5%B8%82%E5%9C%BA%E8%A7%84%E6%A8%A1%E4%B8%8D%E6%96%AD%E6%89%A9%E5%A4%A7%EF%BC%8C%E8%A1%8C%E4%B8%9A%E7%89%88%E5%9B%BE&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>近些年来，我国网络游戏市场规模不断扩大，行业版图快速扩张，“搞代码”“做游戏”“写程序”的IT工程师，都成了众人口中的“香饽饽”职业。一份最新的报告数据显示，2018年第一季度，中国网络游戏市场维持稳定增长，市场规模达643.3亿元，各大游戏厂商纷纷加大网游出海业务布局。毫无疑问，我国网络游戏市场正在快速奔跑。下列说法中，对这段文字理解正确的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "我国网络游戏市场的蓬勃发展带来了相关的新兴职业"
+        },
+        {
+          "label": "B",
+          "html": "“搞代码”“做游戏”已经成为了时下年轻人最向往的职业"
+        },
+        {
+          "label": "C",
+          "html": "越来越多企业选择跨行业加入网络游戏市场"
+        },
+        {
+          "label": "D",
+          "html": "我国的网络游戏市场正在保持良好的发展势头"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-23",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-443ed4e1e292d620",
+      "number": "例 3.25",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2021年9月25日浙江省事业单位招聘考试《职业能力倾向测验》试题（网友回忆版）第12题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E8%9E%BA%E7%B1%BB%E5%8A%A8%E7%89%A9%E7%9A%84%E8%9E%BA%E5%A3%B3%E5%A4%96%E5%BD%A2%E7%9C%8B%E4%BC%BC%E7%AE%80%E5%8D%95%EF%BC%8C%E5%8D%B4%E9%9D%9E%E5%B8%B8%E8%80%83%E7%A9%B6%E3%80%82%E8%9E%BA%E5%A3%B3%E5%88%86%E5%86%85&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>螺类动物的螺壳外形看似简单，却非常考究。螺壳分内、中、外三层，中层最厚，用方解石筑成；外层用薄薄的、比较粗糙的彩色角质层作壳面，并常用花纹装饰；内层也很薄，用文石做成，被“加工”得特别光洁，因为这层壳紧挨着螺柔软、稚嫩的肉体。螺壳的厚度和坚固程度还可以根据所处自然环境来进行“设计”和“施工”。在石头多的水底，为避免磨损，壳就会长得很厚实；有的螺是过漂浮生活的，这类螺的壳长得非常薄而轻巧；在多淤泥的水底，螺怕陷到泥里爬不出来，所以壳口和壳体长着许多刺。螺壳能御寒、能防热、还能避敌害，同时也能背着到处走，可谓是一件“建筑杰作”。</p><p>这段文字没有提及（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "螺壳的分类"
+        },
+        {
+          "label": "B",
+          "html": "螺壳的功能"
+        },
+        {
+          "label": "C",
+          "html": "螺壳的材质"
+        },
+        {
+          "label": "D",
+          "html": "螺壳的结构"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-25",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-6a76d11219065d62",
+      "number": "例 3.26",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2020年9月5日福建省事业单位公开招聘考试 《综合基础知识》（厦门卷客观题部分）试题（网友回忆版）第29题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E9%AC%BC%E6%96%A7%E7%A5%9E%E5%B7%A5%EF%BC%8C%E5%A4%A9%E6%9C%BA%E7%8B%AC%E8%BF%90%E3%80%82%E5%88%AB%E5%A4%84%E7%9A%84%E5%B1%B1%EF%BC%8C%E9%83%BD%E6%98%AF%E4%BA%B2%E4%BA%B2%E7%83%AD%E7%83%AD%E5%9C%B0%E6%89%8B%E6%8B%89&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>鬼斧神工，天机独运。别处的山，都是亲亲热热地手拉着手，臂挽着臂，唯有张家界的山，彼此保持头角峥嵘的独立，谁也不待见谁。别处的峰，再陡再险也能踩在脚下，唯有张家界，以她的危崖崩壁，拒绝从猿到人的一切趾印。每柱岩峰，都青筋裸露、血性十足地直插霄汉。而峰巅的每处缝隙，每尺泥士，又必定有苍松或翠柏，亭亭如盖地笑傲尘寰。银崖翠冠，站远了看，犹如放大的苏州盆景。曲壑蟠涧，更增添无限空蒙幽翠。风吹过，一啸百吟；云漫开，万千气韵。</p><p>上述语段对张家界的山水描写没有提到的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "山峰的形态"
+        },
+        {
+          "label": "B",
+          "html": "峰顶的松柏"
+        },
+        {
+          "label": "C",
+          "html": "岩峰的走向"
+        },
+        {
+          "label": "D",
+          "html": "山壑与山涧"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-26-讲义标注正确率-63",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-e8e774ffbc5c656a",
+      "number": "例 3.27",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2020年江苏省省属事业单位公开招聘笔试试题（专技岗客观题）（网友回忆版）第19题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E8%80%95%E5%9C%B0%E6%98%AF%E7%B2%AE%E9%A3%9F%E7%94%9F%E4%BA%A7%E7%9A%84%E5%9F%BA%E7%A1%80%EF%BC%8C%E6%98%AF%E5%A2%9E%E5%BC%BA%E7%B2%AE%E9%A3%9F%E7%94%9F%E4%BA%A7%E8%83%BD%E5%8A%9B%E7%9A%84%E6%A0%B9%E6%9C%AC%E4%BF%9D&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>耕地是粮食生产的基础，是增强粮食生产能力的根本保障，因此，要实行最严格的耕地保护制度。全面划定基本农田，保证粮食作物的播种面积；严格执行土地总体规划，严禁建设项目占用基本农田，加强对耕地资源的宏观管理；实施全国高标准农田建设总体规划，提升耕地质量，加强耕作层土壤的剥离再利用；建设高产稳产商品粮基地，打造粮食生产功能区。</p><p>关于“耕地保护制度”的意义，文中未涉及的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "减少农药化肥使用，杜绝耕地土壤污染"
+        },
+        {
+          "label": "B",
+          "html": "切实保障国家的粮食安全"
+        },
+        {
+          "label": "C",
+          "html": "一定程度上遏制基建规模盲目扩张"
+        },
+        {
+          "label": "D",
+          "html": "确保农业生产可持续发展"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-27-1",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-cc318a016bd7e5d9",
+      "number": "例 3.28",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2022年11月12日事业单位联考C类《职业能力倾向测验》试题（辽宁/云南网友回忆版）\t\t\t第38题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E9%B2%81%E5%AE%A3%E5%85%AC%E4%B8%89%E5%B9%B4%EF%BC%8C%E6%A5%9A%E5%9B%BD%E7%9A%84%E5%86%9B%E9%98%9F%E7%9B%B4%E6%8A%B5%E6%B4%9B%E9%98%B3%E5%91%A8%E5%A4%A9%E5%AD%90%E8%84%9A%E4%B8%8B%E3%80%82%E6%A5%9A%E7%8E%8B%E5%B0%B1&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>鲁宣公三年，楚国的军队直抵洛阳周天子脚下。楚王就派人去打听，象征天子权威的九鼎到底有多重，由此留下来一个成语——问鼎中原。结果周天子派王孙满去跟楚庄王讲了一通大道理，说：“周德虽衰，天命未改，鼎之轻重，未可问也。”王孙满话说得漂亮。并且仿佛也可以看见，《左传》的作者记录这种情节的时候，也是写得眉飞色舞的。</p><p>根据文意推断，下列理解正确的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "周天子认为周王室依然强大"
+        },
+        {
+          "label": "B",
+          "html": "该文段作者认为楚国难以撼动周天子权威"
+        },
+        {
+          "label": "C",
+          "html": "王孙满认为楚庄王不应当问鼎之轻重"
+        },
+        {
+          "label": "D",
+          "html": "《左传》认为王孙满在说漂亮的大道理"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-28-讲义标注正确率-43",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-7f15c78f6784b95c",
+      "number": "例 3.29",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2019年3月23日福建省事业单位联考《综合基础知识》笔试试题（网友回忆版）第36题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%B8%80%E4%B8%AA%E5%9C%B0%E5%8C%BA%E7%89%A9%E8%B4%A8%E7%9A%84%E8%B4%AB%E5%9B%B0%EF%BC%8C%E5%BE%80%E5%BE%80%E4%B8%8E%E5%85%B6%E7%B2%BE%E7%A5%9E%E7%9A%84%E8%B4%AB%E4%B9%8F%E3%80%81%E6%96%87%E5%8C%96%E7%9A%84%E8%90%BD&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>一个地区物质的贫困，往往与其精神的贫乏、文化的落后息息相关。正是时下很多地方乡村文化的整体性衰落，导致民众很难获得足够丰富、正常的文化滋养和精神润泽。</p><p>由上述文字不能推出：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "乡土中国的发展亟需精神扶贫"
+        },
+        {
+          "label": "B",
+          "html": "中国乡村出现了物质与精神的“双重贫困”"
+        },
+        {
+          "label": "C",
+          "html": "与硬件建设相比，流动在硬件背后的“文化流”更为重要"
+        },
+        {
+          "label": "D",
+          "html": "有必要从文化层面重建乡土中国"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-29-讲义标注正确率-57",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-f560e2b265a72582",
+      "number": "例 3.30",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2022年6月25日安徽省事业单位统考《职业能力倾向测验》试题（网友回忆版）第37题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%9B%BD%E5%86%85%E5%A4%9A%E4%B8%AA%E7%9C%81%E5%B8%82%E9%83%BD%E5%88%B6%E5%AE%9A%E4%BA%86%E4%BB%A5%E5%85%AC%E4%BA%A4%E5%92%8C%E5%87%BA%E7%A7%9F%E8%BD%A6%E4%B8%BA%E9%87%8D%E7%82%B9%E7%9A%84%E5%85%AC%E5%85%B1%E9%A2%86&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>国内多个省市都制定了以公交和出租车为重点的公共领域车辆电动化目标，目前也取得了阶段性的成绩。然而，在新能源公共交通大军中，作为基数更大且节能减排效益更高的出租车，却在新能源汽车的推广方面出现了明显的滞后。主要原因在于充电不便利、充电时间长导致运营时间缩短，影响营业收入。在进行充分调研之后，有人发现以换电为主、应急充电为辅的换电模式，可以有效缓解出租车的充电困扰，同时节约运营成本，能够在条件适宜的城市促进纯电动出租车的推广。</p><p>根据这段文字，下列说法不准确的是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "换电模式的应用有利于电动出租车在全国的推行"
+        },
+        {
+          "label": "B",
+          "html": "公共领域车辆电动化目标为国内多个省市所接受"
+        },
+        {
+          "label": "C",
+          "html": "新能源汽车在出租车领域的推广受到很多因素制约"
+        },
+        {
+          "label": "D",
+          "html": "推动城市公共交通电动化转型取得了阶段性的成绩"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-3-30-讲义标注正确率-36",
+      "origin": "知识点例题"
+    },
+    {
       "id": "site-c8d1681e1ee77a6c",
       "number": "例 3.33",
       "type": "知识点例题",
@@ -18003,6 +18366,204 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-8-讲义标注正确率-54",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-77277f5c8937fa6f",
+      "number": "例 4.9",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2022年9月17日全国事业单位联考E类《职业能力倾向测验》试题（甘肃/湖北/陕西/云南/吉林长春/重庆市属）（网友回忆版）第36题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%A0%91%E6%9C%A8%E5%B9%B4%E8%BD%AE%E6%98%AF%E6%B0%94%E5%80%99%E5%AD%A6%E7%A0%94%E7%A9%B6%E9%87%8C%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E4%BB%A3%E7%94%A8%E6%8C%87%E6%A0%87%EF%BC%8C%E5%85%B6%E5%AE%9A%E5%B9%B4%E6%96%B9&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>树木年轮是气候学研究里最重要的代用指标，其定年方法准确可靠，气候敏感性与分辨率较高，被国际气候学研究广泛应用。干旱区与半干旱区是树木年轮研究工作的重点区域，我国在阿勒泰区域已经开展了大量的树木年轮研究工作，不过采样样本较少，气象数据年份较短，数据处理的精度存在问题，因此有必要开展新的树木年轮采样工作。随着全球气候变暖，阿勒泰区域的气候条件变化深刻，研究西伯利亚落叶松在气候变化下的生长情况，对于研究西利亚落叶松在应对全球变暖背景下如何发展和变化具有重要意义，对森林生长环境保护具有重要的借鉴和指导作用。</p><p>这段文字的关键词是：（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "树木年轮  气候学研究  全球变暖"
+        },
+        {
+          "label": "B",
+          "html": "生态环境  气象数据  气候敏感性"
+        },
+        {
+          "label": "C",
+          "html": "气候学代用指标  年轮研究  气候条件"
+        },
+        {
+          "label": "D",
+          "html": "年轮采样  阿勒泰区域  西伯利亚落叶松"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-9-讲义标注正确率-26",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-a7ae735abc541633",
+      "number": "例 4.11",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2016年下半年全国事业单位联考E类《职业能力倾向测验》题（网友回忆版）第34题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%A7%91%E5%AD%A6%E4%BC%A0%E6%92%AD%E7%90%86%E8%AE%BA%E4%B8%AD%E6%9C%89%E4%B8%80%E4%B8%AA%E6%AC%A0%E7%BC%BA%E6%A8%A1%E5%9E%8B%EF%BC%8C%E7%94%A8%E4%BB%A5%E6%8F%8F%E8%BF%B0%E6%9F%90%E7%B1%BB%E7%A7%91%E6%99%AE%E6%B4%BB&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。 本题在本站旧讲义或其他资料中出现过不同判断，本轮按粉笔参考判分；原记录保留。",
+      "stemHtml": "<p>科学传播理论中有一个欠缺模型，用以描述某类科普活动的动机，大意是指如果公众对某项科学活动不支持，可能是因为对相关知识的了解相对欠缺——因为不懂，所以恐慌。科学家的对策便是对公众进行科学普及，他们坚信一旦公众了解了细节知识，熟悉该门科学及其技术的运作过程，便会相信专家的判断。这类科普行为也有专门的称谓，即“公众理解科学”。这一行为的立场和首要目标受益者实际上是科学共同体，而非公众。</p><p>这段文字的关键词可以归纳为（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "科学普及、公众理解科学"
+        },
+        {
+          "label": "B",
+          "html": "科学传播理论、欠缺模型"
+        },
+        {
+          "label": "C",
+          "html": "科学共同体、科普行为"
+        },
+        {
+          "label": "D",
+          "html": "科普活动、动机"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-11-讲义标注正确率-11",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-0b350875217fd7d7",
+      "number": "例 4.10",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2019年10月27日江苏省淮安市事业单位招聘《职业能力倾向测试》题（A类）（网友回忆版）第44题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E6%9C%89%E5%AD%A6%E8%80%85%E8%AE%A4%E4%B8%BA%EF%BC%8C%E5%B7%AB%E8%A7%8B%E7%9A%84%E5%9C%B0%E4%BD%8D%E5%9C%A8%E5%A4%8F%E6%9C%9D%E5%B7%B2%E7%BB%8F%E6%80%A5%E5%89%A7%E4%B8%8B%E9%99%8D%E3%80%82%E4%B8%8D%E8%BF%87%EF%BC%8C&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>有学者认为，巫觋的地位在夏朝已经急剧下降。不过，巫觋在官方和民间的各种祭祀中仍然发挥作用，其参与的名称各异的前戏剧活动，一直延续到今天。现在我们在江西、贵州等地看到的“傩戏”或“地戏”，其将鬼神祭祀与戏剧融为一体的仪式，就多少包含了远古仪式的遗存。诚然，国家在每年春夏秋冬和各节令大典，及遇有战争之类重大事件时，还是会按例举行严肃的祭祀仪礼，但这些仪礼的效用与功能，早就发生了巨大变化。苏轼认为早在夏商周三代，各种祭祀性活动，就已包含非常明显的游戏或戏剧的因素，而祭祀神灵、祖先这一原初动机，反渐渐演变为依附性的功能。</p><p>这段文字所在的文章，论述主题最可能是：（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "巫术"
+        },
+        {
+          "label": "B",
+          "html": "祭祀"
+        },
+        {
+          "label": "C",
+          "html": "戏剧"
+        },
+        {
+          "label": "D",
+          "html": "礼仪"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-4-10-讲义标注正确率-22",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-3f9b9fae7d7f4288",
+      "number": "例 1.1",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2020年7月25日全国事业单位联考E类《职业能力倾向测验》题（安徽/湖北/内蒙古/青海/甘肃/广西/宁夏/云南/四川网友回忆版）第21题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%B8%80%E6%9C%AC%E4%B9%A6%E9%A6%96%E5%85%88%E8%A6%81%E5%AD%A9%E5%AD%90%E5%96%9C%E6%AC%A2%EF%BC%8C%E7%84%B6%E5%90%8E%E5%86%8D%E5%80%92%E8%BF%87%E6%9D%A5%E7%9C%8B%E8%BF%99%E6%9C%AC%E4%B9%A6%E5%A5%BD%E4%B8%8D%E5%A5%BD&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>一本书首先要孩子喜欢，然后再倒过来看这本书好不好，而不是先认为这本书是好书，就要求孩子去读。孩子从书中获得什么，也不是______的，比如我们说阅读对作文有好处，但也不是孩子读了一本书，立刻就会写作文了。</p><p>填入画横线部分最恰当的一项是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "立竿见影"
+        },
+        {
+          "label": "B",
+          "html": "千篇一律"
+        },
+        {
+          "label": "C",
+          "html": "唾手可得"
+        },
+        {
+          "label": "D",
+          "html": "游刃有余"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-1-1-2",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-9305740d1a755f8a",
+      "number": "例 1.7",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2019年下半年全国事业单位联考C类《职业能力倾向测验》题（贵州/湖北/内蒙古/安徽/云南/青海/甘肃/四川网友回忆版）第21题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E4%B8%8D%E6%96%AD%E5%8F%91%E5%B1%95%EF%BC%8C%E4%B9%A6%E7%94%BB%E6%96%87%E7%89%A9%E7%9A%84%E4%BF%AE%E5%A4%8D%E5%B7%A5%E4%BD%9C%E4%B9%9F%E8%A6%81____&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>科学技术不断发展，书画文物的修复工作也要______，在沿袭中国传统技法的同时，也要运用现代科学技术、借鉴西方的修复理念。</p><p>填入画横线部分最恰当的一项是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "与时俱进"
+        },
+        {
+          "label": "B",
+          "html": "推陈出新"
+        },
+        {
+          "label": "C",
+          "html": "精益求精"
+        },
+        {
+          "label": "D",
+          "html": "革故鼎新"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-1-7-1",
+      "origin": "知识点例题"
+    },
+    {
+      "id": "site-6d16611273e59323",
+      "number": "例 1.9",
+      "type": "知识点例题",
+      "module": "言语理解",
+      "source": "2018年下半年全国事业单位联考E类《职业能力倾向测验》题（贵州/甘肃/青海网友回忆版）第23题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%BD%9C%E4%B8%BA%E5%87%BA%E7%89%88%E9%A3%8E%E5%B0%9A%E7%9A%84%E5%BC%95%E9%A2%86%E8%80%85%EF%BC%8C%E5%87%BA%E7%89%88%E4%BA%BA%E9%9C%80%E8%A6%81_______%20&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>作为出版风尚的引领者，出版人需要______，能够从茫茫人海中发现有价值的作者，能够从只言片语中发现优秀作品。</p><p>填入画横线部分最恰当的一项是（    ）。</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "高瞻远瞩"
+        },
+        {
+          "label": "B",
+          "html": "兢兢业业"
+        },
+        {
+          "label": "C",
+          "html": "独具慧眼"
+        },
+        {
+          "label": "D",
+          "html": "左右逢源"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/xingce/大宝小宝言语体系-正文#例-1-9-2",
       "origin": "知识点例题"
     },
     {
@@ -18433,6 +18994,171 @@
       "materialHtml": "",
       "reviewUrl": "/xingce/shuliang-guanxi#✅-深挖-比例交叉·整除问题-统一比例-2×2表-⭐高频",
       "origin": "知识点例题"
+    },
+    {
+      "id": "site-c2b363edc3173605",
+      "number": "06 粉笔专项-判断推理-类比·声音与拟声词（原卷第6题）",
+      "type": "错题复盘",
+      "module": "判断推理",
+      "source": "2026年3月28日全国事业单位联考A类《职业能力倾向测验》笔试试题（河北/广西/山西/云南/辽宁/湖北/贵州/江西/宁夏/安徽/黑龙江/上海/重庆/吉林/青海/海南/湖南/甘肃）（网友回忆版）第66题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E9%9B%B7%E5%A3%B0%EF%BC%9A%E9%9A%86%E9%9A%86&courseSet=syzc&course=syzc&qType=1",
+      "correct": "C",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>雷声：隆隆</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "气息：奄奄"
+        },
+        {
+          "label": "B",
+          "html": "余音：袅袅"
+        },
+        {
+          "label": "C",
+          "html": "泉水：淙淙"
+        },
+        {
+          "label": "D",
+          "html": "风雨：潇潇"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/cuotiben/判断推理专项复盘-2026-10-07#judgment-6",
+      "origin": "历史错题与复盘"
+    },
+    {
+      "id": "site-7eb32554eeb456e7",
+      "number": "23 粉笔专项-判断推理-类比·必要条件（原卷第23题）",
+      "type": "错题复盘",
+      "module": "判断推理",
+      "source": "2026年3月29日全国事业单位联考B类《职业能力倾向测验》笔试试题（河北/广西/山西/云南/辽宁/湖北/贵州/江西/宁夏/安徽/黑龙江/重庆/吉林/青海/海南/湖南/内蒙古/甘肃）（网友回忆版）第77题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%BD%93%E6%A3%80%E5%90%88%E6%A0%BC%EF%BC%9A%E5%8F%82%E5%86%9B%E5%85%A5%E4%BC%8D&courseSet=syzc&course=syzc&qType=1",
+      "correct": "B",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>体检合格：参军入伍</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "专项培训：参与项目"
+        },
+        {
+          "label": "B",
+          "html": "参加比赛：获得冠军"
+        },
+        {
+          "label": "C",
+          "html": "工作年限：考试报名"
+        },
+        {
+          "label": "D",
+          "html": "考核优秀：职级晋升"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/cuotiben/判断推理专项复盘-2026-10-07#judgment-23",
+      "origin": "历史错题与复盘"
+    },
+    {
+      "id": "site-64a311641137cf77",
+      "number": "34 粉笔专项-判断推理-类比·成语与俗语释义（原卷第34题）",
+      "type": "错题复盘",
+      "module": "判断推理",
+      "source": "2026年3月14日广东省事业单位高校毕业生招聘考试《基本能力测试》（网友回忆版）第80题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%BC%84%E5%B7%A7%E6%88%90%E6%8B%99%EF%BC%9A%E7%94%BB%E8%99%8E%E4%B8%8D%E6%88%90%E5%8F%8D%E7%B1%BB%E7%8A%AC&courseSet=syzc&course=syzc&qType=1",
+      "correct": "A",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。 原复盘保留 A、D 两项的关系辨析；本次按粉笔参考 A 判分。",
+      "stemHtml": "<p>弄巧成拙：画虎不成反类犬</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "因小失大：捡了芝麻丢了西瓜"
+        },
+        {
+          "label": "B",
+          "html": "以弱制强：太岁头上动土"
+        },
+        {
+          "label": "C",
+          "html": "忍气吞声：前言不搭后语"
+        },
+        {
+          "label": "D",
+          "html": "不自量力：一根扁担挑泰山"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/cuotiben/判断推理专项复盘-2026-10-07#judgment-34",
+      "origin": "历史错题与复盘"
+    },
+    {
+      "id": "site-33bffcc7d8135af9",
+      "number": "35 粉笔专项-判断推理-类比·因果与交叉反义（原卷第35题）",
+      "type": "错题复盘",
+      "module": "判断推理",
+      "source": "2026年3月29日全国事业单位联考D类《职业能力倾向测验》笔试试题（河北/广西/山西/云南/辽宁/湖北/贵州/宁夏/安徽/黑龙江/重庆/吉林/海南/甘肃）（网友回忆版）第76题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E5%8B%A4%E5%85%B4%EF%BC%9A%E6%87%92%E8%B4%A5&courseSet=syzc&course=syzc&qType=1",
+      "correct": "D",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。",
+      "stemHtml": "<p>勤兴：懒败</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "大材：小用"
+        },
+        {
+          "label": "B",
+          "html": "亲贤：疏佞"
+        },
+        {
+          "label": "C",
+          "html": "云散：月明"
+        },
+        {
+          "label": "D",
+          "html": "进荣：退辱"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/cuotiben/判断推理专项复盘-2026-10-07#judgment-35",
+      "origin": "历史错题与复盘"
+    },
+    {
+      "id": "site-704fd74b5e7fda34",
+      "number": "⑬ 2021江苏A卷-言语-主旨概括（题25）",
+      "type": "错题复盘",
+      "module": "言语理解",
+      "source": "2021年江苏省公务员录用考试《行测》题（B类）（网友回忆版）第24题（粉笔题库参考）",
+      "sourceUrl": "https://www.fenbi.com/spa/tiku/guide/question/search?q=%E4%B8%AD%E5%9B%BD%E7%9B%AE%E5%89%8D%E5%B9%B6%E6%B2%A1%E6%9C%89%E4%B8%BB%E6%B5%81%E7%9A%84%E5%BB%89%E7%A7%9F%E4%BD%8F%E5%AE%85%E4%BE%9B%E7%BB%99%E6%B8%A0%E9%81%93%EF%BC%8C%E4%BD%8E%E6%88%90%E6%9C%AC%E7%A7%9F%E8%B5%81&courseSet=xingce&course=xingce&qType=1",
+      "correct": "C",
+      "gradingNote": "已按粉笔题库核对题干、选项和参考答案；回忆版可能有文字差异，参考答案不等同官方公布答案。 原复盘 D 项少一个“的”，复测展示粉笔回忆版选项；粉笔参考 C 与原复盘一致。",
+      "stemHtml": "<p>中国目前并没有主流的廉租住宅供给渠道，低成本租赁住房的很多功能，是由非正规的“城中村”来承担的。近些年，南方和北方的城市发展差距越来越大，在对这一现象进行解释的研究中，城中村占整个城市建成区面积的比例，应该是一个很有解释能力的变量。南方很多城市“半违章”的城中村，使得低成本可租赁住房的可获得性远远高于北方城市。正是这些低成本的住宅，使得利润微薄的制造业得以在地价昂贵的大城市生存下来。</p><p>这段文字重在说明：</p>",
+      "options": [
+        {
+          "label": "A",
+          "html": "城市管理者不应对已有的城中村违章现象加以限制"
+        },
+        {
+          "label": "B",
+          "html": "利润微薄的制造业很难在房价高昂的城市生存发展"
+        },
+        {
+          "label": "C",
+          "html": "低成本可租赁住房的可获得性决定了制造业的发展"
+        },
+        {
+          "label": "D",
+          "html": "制造业在南方城市的发展与廉租房的供给密切相关"
+        }
+      ],
+      "materialTitle": "",
+      "materialHtml": "",
+      "reviewUrl": "/cuotiben/xingce-cuoti#yanyu-20260913-25",
+      "origin": "历史错题与复盘"
     }
   ]
 }

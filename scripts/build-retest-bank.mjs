@@ -20,6 +20,9 @@ const displaySource = (value) => value
   .replace(/(?:平台|题库)参考(?:答案)?[：:\s]*[A-D][^。]*。?/g, '')
   .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').trim()
 const catalog = JSON.parse(read('cuotiben/review-catalog.json'))
+const skillIndex = JSON.parse(read('retest/xingcezhenti-index.json'))
+const skillPool = JSON.parse(read('retest/xingcezhenti-pool.json'))
+const skillImports = JSON.parse(read('retest/xingcezhenti-imports.json'))
 const recovered = new Map(JSON.parse(read('retest/recovered-sources.json')).records
   .map((record) => [record.number, record]))
 const userConfirmedAnswers = new Map(JSON.parse(read('retest/user-confirmed-answer-resolutions.json')).records
@@ -38,6 +41,10 @@ function assetsExist(content) {
 }
 
 function add(q, page) {
+  if (/github\.com\/ERRRC\/xingcezhenti\//i.test(q.sourceUrl || '')) {
+    q.sourceSystem ||= skillIndex.repository
+    q.sourceCommit ||= skillIndex.commit
+  }
   if (!q.correct || !/^[A-D]$/.test(q.correct) || q.options.length !== 4
       || q.options.map((option) => option.label).join('') !== 'ABCD' || !q.stemHtml.trim()) {
     fail(page, q.number, '题干、选项或参考答案不完整')
@@ -370,6 +377,81 @@ for (const item of JSON.parse(read('retest/fenbi-verified.json')).questions) {
   addVerifiedLesson(item, 'retest/fenbi-verified.json')
 }
 
+const moduleNames = {
+  politics: '政治理论',
+  general: '常识判断',
+  language: '言语理解',
+  quantity: '数量关系',
+  reasoning: '判断推理',
+  data: '资料分析',
+}
+if (skillIndex.repository !== 'ERRRC/xingcezhenti'
+    || skillIndex.commit !== skillImports.commit
+    || skillImports.repository !== skillIndex.repository
+    || skillPool.repository !== skillIndex.repository || skillPool.commit !== skillIndex.commit
+    || skillPool.modules.reduce((sum, module) => sum + module.questionCount, 0) !== skillPool.indexedQuestions
+    || !Array.isArray(skillImports.questions)) {
+  throw new Error('行测真题技能来源版本与导入清单不一致。')
+}
+const pinnedPapers = new Map(skillIndex.entries.map((paper) => [paper.path, paper]))
+let skillPending = 0
+for (const item of skillImports.questions) {
+  const paper = pinnedPapers.get(item.paperPath)
+  if (!paper || item.sourceSha !== paper.sha || item.sourceCommit !== skillIndex.commit) {
+    fail('retest/xingcezhenti-imports.json', item.qid || item.id || '未知题号', '原题文件不在固定版本目录中或哈希不一致')
+    continue
+  }
+  if (!item.fenbi?.answer || !item.fenbi?.questionUrl || item.fenbi?.confirmedSameQuestion !== true
+      || !/^https:\/\/(?:www\.)?fenbi\.com\//i.test(item.fenbi.questionUrl)
+      || !/^\d{4}-\d{2}-\d{2}$/.test(item.fenbi.checkedAt || '')) {
+    skillPending++
+    fail('retest/xingcezhenti-imports.json', item.qid || item.id || '未知题号', '待在粉笔官网核对题目版本与答案，暂不进入可判分题库')
+    continue
+  }
+  const answer = item.fenbi.answer
+  if (!/^[A-D]$/.test(answer) || (item.upstreamAnswer && item.upstreamAnswer !== answer && item.conflictResolved !== true)) {
+    skillPending++
+    fail('retest/xingcezhenti-imports.json', item.qid || item.id || '未知题号', '上游与粉笔答案不一致，需确认题面版本并记录争议处理')
+    continue
+  }
+  const module = moduleNames[item.module]
+  if (!module || !item.id || !item.title || !item.qid || !item.number
+      || !item.stem || !Array.isArray(item.options)) {
+    fail('retest/xingcezhenti-imports.json', item.qid || item.id || '未知题号', '缺少原题、题号、模块或四个选项')
+    continue
+  }
+  const sourceUrl = `https://github.com/${skillIndex.repository}/blob/${skillIndex.commit}/${item.paperPath.split('/').map(encodeURIComponent).join('/')}`
+  const stemHtml = item.stemHtml ? item.stemHtml : html(item.stem)
+  const materialHtml = item.materialHtml || (item.material ? html(item.material) : '')
+  const options = item.options.map((option) => ({
+    label: option.label,
+    html: option.html ? option.html : option.text ? inline(option.text) : '',
+  }))
+  add({
+    id: item.id,
+    title: item.title,
+    number: item.number,
+    type: module,
+    module,
+    correct: answer,
+    source: `${item.title}第${item.number}题（ERRRC固定版原题；粉笔题库参考答案${answer}）`,
+    sourceUrl,
+    reviewUrl: item.reviewUrl || sourceUrl,
+    gradingNote: `题面按 ERRRC/xingcezhenti 固定版本 ${skillIndex.commit.slice(0, 12)} 核对；答案与同版本题面已在粉笔题库核对（${item.fenbi.checkedAt}）。粉笔题库参考答案不等同于官方公告。${item.upstreamAnswer && item.upstreamAnswer !== answer ? ' 已记录并处理上游答案差异。' : ''}`,
+    stemHtml,
+    options,
+    materialTitle: item.materialTitle || (materialHtml ? '原题共用材料' : ''),
+    materialHtml,
+    origin: '行测真题技能导入',
+    sourceSystem: 'ERRRC/xingcezhenti',
+    sourceCommit: skillIndex.commit,
+    sourcePaper: item.paperPath,
+    sourceQid: item.qid,
+    fenbiQuestionUrl: item.fenbi.questionUrl,
+    fenbiCheckedAt: item.fenbi.checkedAt,
+  }, 'retest/xingcezhenti-imports.json')
+}
+
 for (const [reviewUrl, resolution] of userConfirmedAnswers) {
   if (!questions.some((question) => question.reviewUrl === reviewUrl && question.correct === resolution.correct)) {
     throw new Error('用户确认的答案未进入可判分题库：' + reviewUrl)
@@ -379,8 +461,27 @@ for (const [reviewUrl, resolution] of userConfirmedAnswers) {
 const origins = Object.fromEntries([...new Set(questions.map((q) => q.origin))]
   .map((name) => [name, questions.filter((q) => q.origin === name).length]))
 if (questions.length < 20) throw new Error('题库只有 ' + questions.length + ' 题，未生成')
+const publicIndex = path.join(root, 'public', 'retest', 'xingcezhenti-index.json')
+fs.mkdirSync(path.dirname(publicIndex), { recursive: true })
+fs.copyFileSync(path.join(root, 'retest', 'xingcezhenti-index.json'), publicIndex)
+
 fs.writeFileSync(output, JSON.stringify({
-  imported: questions.length, origins, skippedCount: skipped.length, excluded: skipped, questions,
+  imported: questions.length,
+  origins,
+  skillSource: {
+    repository: skillIndex.repository,
+    commit: skillIndex.commit,
+    indexedFiles: skillIndex.entries.length,
+    indexedQuestions: skillPool.indexedQuestions,
+    fromYear: skillPool.fromYear,
+    throughYear: skillPool.throughYear,
+    modules: skillPool.modules,
+    imported: questions.filter((question) => question.sourceSystem === skillIndex.repository).length,
+    awaitingFenbi: skillPending,
+  },
+  skippedCount: skipped.length,
+  excluded: skipped,
+  questions,
 }, null, 2) + '\n', 'utf8')
 console.log('已导入 ' + questions.length + ' 题：' + JSON.stringify(origins) + '；' + skipped.length + ' 条重复或待核。')
 console.log('已写入 ' + path.relative(root, output))

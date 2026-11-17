@@ -5,6 +5,54 @@
     "历史错题与复盘": 145,
     "知识点例题": 380
   },
+  "skillSource": {
+    "repository": "ERRRC/xingcezhenti",
+    "commit": "278984401124db40da5163a31275b8deb9c282f4",
+    "indexedFiles": 2964,
+    "indexedQuestions": 33107,
+    "fromYear": 2020,
+    "throughYear": 2026,
+    "modules": [
+      {
+        "key": "politics",
+        "folder": "01-政治理论",
+        "label": "政治理论",
+        "questionCount": 1937
+      },
+      {
+        "key": "general",
+        "folder": "02-常识判断",
+        "label": "常识判断",
+        "questionCount": 4507
+      },
+      {
+        "key": "language",
+        "folder": "03-言语理解与表达",
+        "label": "言语理解",
+        "questionCount": 8742
+      },
+      {
+        "key": "quantity",
+        "folder": "04-数量关系",
+        "label": "数量关系",
+        "questionCount": 3743
+      },
+      {
+        "key": "reasoning",
+        "folder": "05-判断推理",
+        "label": "判断推理",
+        "questionCount": 9550
+      },
+      {
+        "key": "data",
+        "folder": "06-资料分析",
+        "label": "资料分析",
+        "questionCount": 4628
+      }
+    ],
+    "imported": 122,
+    "awaitingFenbi": 0
+  },
   "skippedCount": 48,
   "excluded": [
     {
@@ -6334,7 +6382,9 @@
       "reviewUrl": "/cuotiben/图形推理专项复盘-2026-10-21#q1",
       "sourceUrl": "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/05-%E5%88%A4%E6%96%AD%E6%8E%A8%E7%90%86/2025%E5%B9%B4%E4%BA%91%E5%8D%97%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E9%A2%98%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.md",
       "gradingNote": "按用户于2026-11-16确认的个人复测标准判为 D。此题为2025年云南省考行测网友回忆版第62题；公开回忆版保留了 D（曲线交点位置交替）与 A（横竖线、斜线交替）两种解释。本站后续复测以用户确认的 D 判分，不宣称为考试机关正式答案。原卷首答 A、原错题状态及历史复测记录保持原样。",
-      "origin": "历史错题与复盘"
+      "origin": "历史错题与复盘",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "review-f25ffb85862da46b",
@@ -9460,7 +9510,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2097164",
@@ -9494,7 +9546,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2097224",
@@ -9528,7 +9582,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2097226",
@@ -9562,7 +9618,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2097234",
@@ -9596,7 +9654,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2133554",
@@ -9630,7 +9690,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2133598",
@@ -9664,7 +9726,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2133722",
@@ -9698,7 +9762,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2139494",
@@ -9732,7 +9798,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2139558",
@@ -9766,7 +9834,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2144533",
@@ -9800,7 +9870,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2144705",
@@ -9834,7 +9906,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2184693",
@@ -9868,7 +9942,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2184700",
@@ -9902,7 +9978,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2185060",
@@ -9936,7 +10014,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2187554",
@@ -9970,7 +10050,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2187557",
@@ -10004,7 +10086,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2187606",
@@ -10038,7 +10122,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2187672",
@@ -10072,7 +10158,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2187732",
@@ -10106,7 +10194,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2187744",
@@ -10140,7 +10230,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2187770",
@@ -10174,7 +10266,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2247232",
@@ -10208,7 +10302,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2264395",
@@ -10242,7 +10338,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2376509",
@@ -10276,7 +10374,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2377249",
@@ -10310,7 +10410,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2387697",
@@ -10344,7 +10446,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2387703",
@@ -10378,7 +10482,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2402024",
@@ -10412,7 +10518,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2423277",
@@ -10446,7 +10554,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2448445",
@@ -10480,7 +10590,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2448446",
@@ -10514,7 +10626,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2448453",
@@ -10548,7 +10662,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2448458",
@@ -10582,7 +10698,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2448463",
@@ -10616,7 +10734,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2448471",
@@ -10650,7 +10770,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2448479",
@@ -10684,7 +10806,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2448481",
@@ -10718,7 +10842,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2448489",
@@ -10752,7 +10878,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2577967",
@@ -10786,7 +10914,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2578646",
@@ -10820,7 +10950,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2578978",
@@ -10854,7 +10986,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2662224",
@@ -10888,7 +11022,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2719313",
@@ -10922,7 +11058,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2741723",
@@ -10956,7 +11094,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2776107",
@@ -10990,7 +11130,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2776113",
@@ -11024,7 +11166,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-3522408",
@@ -11058,7 +11202,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-3522413",
@@ -11092,7 +11238,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-3522414",
@@ -11126,7 +11274,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-3522420",
@@ -11160,7 +11310,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-3522424",
@@ -11194,7 +11346,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-3522425",
@@ -11228,7 +11382,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-3522549",
@@ -11296,7 +11452,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-3522574",
@@ -11330,7 +11488,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-3522578",
@@ -11364,7 +11524,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-3522593",
@@ -11398,7 +11560,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-3522594",
@@ -11432,7 +11596,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-3522900",
@@ -11466,7 +11632,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-3523558",
@@ -11500,7 +11668,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-3523564",
@@ -11534,7 +11704,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-4004484",
@@ -11568,7 +11740,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-4004564",
@@ -11602,7 +11776,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-4004746",
@@ -11636,7 +11812,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-4651812",
@@ -11670,7 +11848,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-4658466",
@@ -11704,7 +11884,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-4673115",
@@ -11738,7 +11920,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-4817715",
@@ -11772,7 +11956,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-4817718",
@@ -11806,7 +11992,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-4817944",
@@ -11840,7 +12028,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-4925445",
@@ -11874,7 +12064,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5101717",
@@ -11908,7 +12100,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5101820",
@@ -11942,7 +12136,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5101842",
@@ -11976,7 +12172,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5101843",
@@ -12010,7 +12208,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5101853",
@@ -12044,7 +12244,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5101871",
@@ -12078,7 +12280,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5101917",
@@ -12112,7 +12316,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5101922",
@@ -12146,7 +12352,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5101948",
@@ -12180,7 +12388,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5102187",
@@ -12214,7 +12424,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5102205",
@@ -12248,7 +12460,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5102254",
@@ -12282,7 +12496,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5102392",
@@ -12316,7 +12532,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5102633",
@@ -12350,7 +12568,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5102661",
@@ -12384,7 +12604,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5102671",
@@ -12418,7 +12640,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5430284",
@@ -12452,7 +12676,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5445691",
@@ -12486,7 +12712,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5445693",
@@ -12520,7 +12748,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5445694",
@@ -12554,7 +12784,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5445698",
@@ -12588,7 +12820,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5445735",
@@ -12622,7 +12856,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5445824",
@@ -12656,7 +12892,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5445837",
@@ -12690,7 +12928,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5445867",
@@ -12724,7 +12964,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5509489",
@@ -12758,7 +13000,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5509492",
@@ -12792,7 +13036,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5509497",
@@ -12826,7 +13072,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5509504",
@@ -12860,7 +13108,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5509826",
@@ -12894,7 +13144,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5510055",
@@ -12928,7 +13180,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5510058",
@@ -12962,7 +13216,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-5893510",
@@ -12996,7 +13252,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-10204655",
@@ -13030,7 +13288,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-10297075",
@@ -13064,7 +13324,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-10297456",
@@ -13098,7 +13360,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-16593196",
@@ -13132,7 +13396,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-verified-2017-sydw-33",
@@ -13234,7 +13500,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-recovered-2187550",
@@ -13268,7 +13536,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-recovered-2187740",
@@ -13302,7 +13572,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-recovered-2133594",
@@ -13336,7 +13608,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-recovered-2133706",
@@ -13370,7 +13644,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-recovered-2144520",
@@ -13404,7 +13680,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-recovered-2606186",
@@ -13438,7 +13716,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-recovered-3522572",
@@ -13472,7 +13752,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-recovered-2776099",
@@ -13506,7 +13788,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-recovered-4817713",
@@ -13540,7 +13824,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-recovered-4662393",
@@ -13574,7 +13860,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-recovered-5101829",
@@ -13608,7 +13896,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "lesson-recovered-5445702",
@@ -13642,7 +13932,9 @@
       "materialTitle": "",
       "materialHtml": "",
       "reviewUrl": "/xingce/大宝小宝言语体系-正文",
-      "origin": "知识点例题"
+      "origin": "知识点例题",
+      "sourceSystem": "ERRRC/xingcezhenti",
+      "sourceCommit": "278984401124db40da5163a31275b8deb9c282f4"
     },
     {
       "id": "site-0d3e3651d39afbdf",

@@ -1,0 +1,25 @@
+{
+  "repository": "ERRRC/xingcezhenti",
+  "commit": "278984401124db40da5163a31275b8deb9c282f4",
+  "fromYear": 2020,
+  "throughYear": 2026,
+  "indexedQuestions": 33107,
+  "eligibleSourceFiles": 1712,
+  "sourceIndexEntries": 2964,
+  "questionCountSources": [
+    "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/01-政治理论/README.md",
+    "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/02-常识判断/README.md",
+    "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/03-言语理解与表达/README.md",
+    "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/04-数量关系/README.md",
+    "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/05-判断推理/README.md",
+    "https://github.com/ERRRC/xingcezhenti/blob/278984401124db40da5163a31275b8deb9c282f4/06-资料分析/README.md"
+  ],
+  "modules": [
+    { "key": "politics", "folder": "01-政治理论", "label": "政治理论", "questionCount": 1937 },
+    { "key": "general", "folder": "02-常识判断", "label": "常识判断", "questionCount": 4507 },
+    { "key": "language", "folder": "03-言语理解与表达", "label": "言语理解", "questionCount": 8742 },
+    { "key": "quantity", "folder": "04-数量关系", "label": "数量关系", "questionCount": 3743 },
+    { "key": "reasoning", "folder": "05-判断推理", "label": "判断推理", "questionCount": 9550 },
+    { "key": "data", "folder": "06-资料分析", "label": "资料分析", "questionCount": 4628 }
+  ]
+}

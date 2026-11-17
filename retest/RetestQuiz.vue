@@ -376,6 +376,10 @@ function questionLabel(number) {
 onMounted(() => {
   readLocalRecords()
   timer = window.setInterval(() => { now.value = Date.now() }, 1000)
+  if (new URLSearchParams(window.location.search).get('start') === '1') {
+    window.history.replaceState(window.history.state, '', `${window.location.pathname}${window.location.hash}`)
+    void startQuiz()
+  }
 })
 
 onBeforeUnmount(() => {

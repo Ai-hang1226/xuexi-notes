@@ -191,10 +191,10 @@ onMounted(load)
 </template>
 
 <style scoped>
-.essay-retest { --essay-accent: #4f46e5; width: min(1080px, 100%); margin: 0 auto; padding: 26px clamp(12px, 2.5vw, 28px) 52px; color: var(--vp-c-text-1); font-family: var(--vp-font-family-base); }
+.essay-retest { --essay-accent: var(--vp-c-brand-1); --essay-action: var(--vp-c-brand-1); width: min(1080px, 100%); margin: 0 auto; padding: 26px clamp(12px, 2.5vw, 28px) 52px; color: var(--vp-c-text-1); font-family: var(--vp-font-family-base); }
 .essay-retest h1, .essay-retest h2, .essay-retest h3, .essay-retest p { margin-top: 0; }
 .eyebrow { color: var(--essay-accent); font-size: 12px; font-weight: 750; letter-spacing: .07em; }
-.essay-hero, .result-head { padding: clamp(24px, 4vw, 40px); border: 1px solid #d8daf7; border-radius: 21px; background: radial-gradient(circle at 92% 8%, rgba(99,102,241,.14), transparent 32%), var(--vp-c-bg-soft); }
+.essay-hero, .result-head { padding: clamp(24px, 4vw, 40px); border: 1px solid color-mix(in srgb, var(--essay-accent) 20%, var(--vp-c-divider)); border-radius: 21px; background: radial-gradient(circle at 92% 8%, color-mix(in srgb, var(--essay-accent) 12%, transparent), transparent 32%), var(--vp-c-bg-soft); }
 .essay-hero h1, .answer-head h1, .result-head h1 { margin: 9px 0; border: 0; padding: 0; font-size: clamp(27px, 4vw, 40px); line-height: 1.23; letter-spacing: -.025em; }
 .essay-hero > p, .answer-head > p, .result-head > p { max-width: 820px; color: var(--vp-c-text-2); font-size: 14px; line-height: 1.8; }
 .essay-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; max-width: 620px; margin-top: 22px; }
@@ -209,13 +209,14 @@ onMounted(load)
 .essay-card { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 17px 19px; border: 1px solid var(--vp-c-divider); border-radius: 14px; background: var(--vp-c-bg); }
 .essay-card__copy { min-width: 0; }
 .essay-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 7px; }
-.essay-tags span { padding: 3px 8px; border-radius: 99px; color: var(--essay-accent); background: rgba(79,70,229,.09); font-size: 10px; font-weight: 750; }
+.essay-tags span { padding: 3px 8px; border-radius: 99px; color: var(--essay-accent); background: var(--vp-c-brand-soft); font-size: 10px; font-weight: 750; }
 .essay-tags .tag-self-made { color: #955900; background: #fff4d9; }
 .essay-card h3 { margin: 0 0 5px; font-size: 16px; }
 .essay-card p { display: -webkit-box; overflow: hidden; margin: 0 0 7px; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.7; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .essay-card small { color: var(--vp-c-text-2); font-size: 11px; }
 .action-button, .secondary-button { display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; gap: 9px; min-height: 43px; padding: 0 15px; border: 1px solid transparent; border-radius: 10px; font: inherit; font-size: 13px; font-weight: 750; text-decoration: none; cursor: pointer; }
-.action-button { color: #fff; background: var(--essay-accent); box-shadow: 0 6px 16px rgba(79,70,229,.16); }
+.action-button { color: #fff; background: var(--essay-action); box-shadow: 0 6px 16px color-mix(in srgb, var(--essay-action) 20%, transparent); }
+.action-button:hover { background: #274eae; }
 .secondary-button { border-color: var(--vp-c-divider); color: var(--vp-c-text-1); background: var(--vp-c-bg); }
 .action-button:hover, .secondary-button:hover { transform: translateY(-1px); }
 .essay-note { margin-top: 19px; padding: 15px 17px; border: 1px solid var(--vp-c-divider); border-left: 4px solid var(--essay-accent); border-radius: 12px; background: var(--vp-c-bg-soft); }
@@ -230,18 +231,19 @@ onMounted(load)
 .prompt-content :deep(img) { display: block; max-width: 100%; height: auto; margin: 12px auto; }
 .writing-heading small { display: block; margin-top: 4px; color: var(--vp-c-text-2); font-size: 11px; }
 .writing-card textarea { display: block; width: 100%; min-height: 340px; margin-top: 13px; padding: 14px; resize: vertical; border: 1px solid var(--vp-c-divider); border-radius: 11px; color: var(--vp-c-text-1); background: var(--vp-c-bg); font: inherit; font-size: 15px; line-height: 1.9; }
-.writing-card textarea:focus-visible { outline: 3px solid rgba(79,70,229,.23); border-color: #9995ef; }
+.writing-card textarea:focus-visible { outline: 3px solid color-mix(in srgb, var(--essay-accent) 30%, transparent); border-color: var(--essay-accent); }
 .writing-actions, .after-submit-links, .result-actions { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 15px; }
 .writing-actions > small { color: var(--vp-c-text-2); font-size: 11px; line-height: 1.6; }
 .validation-message, .storage-warning { color: #b45309; font-size: 12px; }
-.no-auto-score { padding: 10px 12px; border-radius: 9px; background: rgba(79,70,229,.07); }
+.no-auto-score { padding: 10px 12px; border-radius: 9px; background: var(--vp-c-brand-soft); }
 .answer-copy { white-space: pre-wrap; overflow-wrap: anywhere; margin-top: 12px; color: var(--vp-c-text-1); font-size: 14px; line-height: 1.9; }
 .essay-attempt { margin-top: 8px; padding: 12px 14px; border: 1px solid var(--vp-c-divider); border-radius: 10px; background: var(--vp-c-bg); }
 .essay-attempt summary { color: var(--vp-c-text-1); font-size: 12px; font-weight: 700; cursor: pointer; }
 .essay-attempt .answer-copy { padding-top: 10px; border-top: 1px solid var(--vp-c-divider); }
 .storage-warning { margin: 15px 0 0; }
-:global(.dark) .essay-retest { --essay-accent: #a5b4fc; }
-:global(.dark) .essay-hero, :global(.dark) .result-head { border-color: #454b78; }
+:global(.dark) .essay-retest { --essay-accent: var(--vp-c-brand-1); --essay-action: #315DCB; }
+:global(.dark) .action-button:hover { background: #274eae; }
+:global(.dark) .essay-hero, :global(.dark) .result-head { border-color: color-mix(in srgb, var(--essay-accent) 35%, var(--vp-c-divider)); }
 :global(.dark) .essay-tags .tag-self-made { color: #ffd98b; background: #493711; }
 @media (max-width: 620px) {
   .essay-retest { padding: 16px 12px 34px; }

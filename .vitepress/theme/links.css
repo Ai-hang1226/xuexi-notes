@@ -4,7 +4,7 @@
 
 .vp-doc :is(p, li, td, th, h1, h2, h3, h4, blockquote) > a:not([class]),
 .vp-doc blockquote a:not([class]) {
-  color: #3730a3;
+  color: var(--vp-c-brand-1);
   font-weight: 600;
   text-decoration: none;
   text-underline-offset: 4px;
@@ -13,11 +13,11 @@
 }
 .vp-doc :is(p, li, td, th, h1, h2, h3, h4, blockquote) > a:not([class]):hover,
 .vp-doc blockquote a:not([class]):hover {
-  color: #4f46e5;
-  background: rgba(79, 70, 229, .08);
+  color: var(--vp-c-brand-2);
+  background: var(--vp-c-brand-soft);
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-decoration-color: rgba(79, 70, 229, .55);
+  text-decoration-color: color-mix(in srgb, var(--vp-c-brand-1) 55%, transparent);
 }
 .vp-doc :is(p, li, td, th, h1, h2, h3, h4, blockquote) > a:not([class]):focus-visible,
 .vp-doc blockquote a:not([class]):focus-visible {
@@ -25,12 +25,12 @@
   outline-offset: 3px;
 }
 .dark .vp-doc :is(p, li, td, th, h1, h2, h3, h4, blockquote) > a:not([class]),
-.dark .vp-doc blockquote a:not([class]) { color: #a5b4fc; }
+.dark .vp-doc blockquote a:not([class]) { color: var(--vp-c-brand-1); }
 .dark .vp-doc :is(p, li, td, th, h1, h2, h3, h4, blockquote) > a:not([class]):hover,
 .dark .vp-doc blockquote a:not([class]):hover {
-  color: #c7d0ff;
-  background: rgba(165, 180, 252, .12);
-  text-decoration-color: rgba(165, 180, 252, .6);
+  color: var(--vp-c-brand-2);
+  background: var(--vp-c-brand-soft);
+  text-decoration-color: color-mix(in srgb, var(--vp-c-brand-1) 60%, transparent);
 }
 
 /* 标题前的 # 锚点：默认不抢视线，悬停标题或键盘聚焦时才淡入。 */

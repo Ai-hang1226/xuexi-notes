@@ -372,13 +372,16 @@ export default defineConfig({
   lang: 'zh-CN',
   base: '/xuexi-notes/',
   cleanUrls: true,
+  // 首页链接较多，默认预加载会同时拉取大体积练习页脚本，造成点击迟滞。
+  // 改为用户实际点击时再加载对应页面。
+  router: { prefetchLinks: false },
 
   // 分享卡片必须用绝对 URL，相对路径多数平台抓取不到
   sitemap: { hostname: 'https://ai-hang1226.github.io/xuexi-notes' },
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/xuexi-notes/favicon.svg' }],
-    ['meta', { name: 'theme-color', content: '#4f46e5' }],
+    ['meta', { name: 'theme-color', content: '#315DCB' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: '考公知识库' }],
     ['meta', { property: 'og:url', content: 'https://ai-hang1226.github.io/xuexi-notes/' }],
@@ -421,11 +424,11 @@ export default defineConfig({
           { text: '📊 评分与进步', link: '/shenlun/scores' },
         ],
       },
-      { text: '📝 每日测验', link: '/daily-quizzes/' },
       { text: '🧠 错题本', link: '/cuotiben/' },
       {
         text: '📚 更多',
         items: [
+          { text: '📝 每日测验 · 历史卷', link: '/daily-quizzes/' },
           { text: '✨ 精选导读', link: '/share/' },
           { text: '🗺️ 全站地图', link: '/guide/' },
           { text: '🧰 速算工具箱', link: '/tools/' },

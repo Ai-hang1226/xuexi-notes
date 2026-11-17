@@ -126,10 +126,10 @@ function gitBlobSha1(bytes) {
     [...new Uint8Array(digest)].map((value) => value.toString(16).padStart(2, '0')).join(''))
 }
 
-async function loadPaper(entry, index) {
+async function loadPaper(entry, index, signal) {
   if (!paperCache.has(entry.path)) {
     paperCache.set(entry.path, (async () => {
-      const response = await fetch(rawBase(index.repository, index.commit) + encodePath(entry.path), { cache: 'force-cache' })
+      const response = await fetch(rawBase(index.repository, index.commit) + encodePath(entry.path), { cache: 'force-cache', signal })
       if (!response.ok) throw new Error(`读取来源失败（HTTP ${response.status}）：${entry.path}`)
       const bytes = new Uint8Array(await response.arrayBuffer())
       const header = new TextEncoder().encode(`blob ${bytes.length}\0`)
@@ -258,7 +258,7 @@ function weightedPick(entries) {
   return entries.at(-1)
 }
 
-export async function fetchSkillQuestions({ index, pool, targetCounts, excludedIds = new Set(), excludedTexts = new Set() }) {
+export async function fetchSkillQuestions({ index, pool, targetCounts, excludedIds = new Set(), excludedTexts = new Set(), signal }) {
   if (index.repository !== pool.repository || index.commit !== pool.commit || index.entries.length !== pool.sourceIndexEntries) {
     throw new Error('技能题库目录版本不一致，已停止抽题。')
   }
@@ -269,6 +269,7 @@ export async function fetchSkillQuestions({ index, pool, targetCounts, excludedI
   const modules = pool.modules.filter((module) => (targetCounts[module.key] || 0) > 0)
   const loaded = []
   for (let offset = 0; offset < modules.length; offset += 2) {
+    if (signal?.aborted) throw new DOMException('抽题已停止', 'AbortError')
     const batch = await Promise.all(modules.slice(offset, offset + 2).map(async (module) => {
     const target = targetCounts[module.key]
     const remaining = eligibleEntries.filter((entry) => entry.path.startsWith(`${module.folder}/`))
@@ -277,10 +278,11 @@ export async function fetchSkillQuestions({ index, pool, targetCounts, excludedI
     const failures = []
     let networkFailures = 0
     for (let tries = 0; tries < 12 && candidates.length < target && remaining.length; tries++) {
+      if (signal?.aborted) throw new DOMException('抽题已停止', 'AbortError')
       const entry = weightedPick(remaining)
       remaining.splice(remaining.indexOf(entry), 1)
       try {
-        const text = await loadPaper(entry, index)
+        const text = await loadPaper(entry, index, signal)
         for (const question of parseSkillPaper(text, entry, pool)) {
           if (excludedIds.has(question.id) || seen.has(question.id)) continue
           const fingerprint = normalizeQuestionText(question.stemHtml + question.options.map((option) => option.html).join(''))
@@ -289,6 +291,7 @@ export async function fetchSkillQuestions({ index, pool, targetCounts, excludedI
           candidates.push(question)
         }
       } catch (error) {
+        if (signal?.aborted) throw error
         failures.push(error.message)
         if (error instanceof TypeError || /failed to fetch|networkerror|cors|http (?:403|429)/i.test(error.message)) {
           networkFailures++

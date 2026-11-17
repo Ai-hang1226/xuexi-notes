@@ -104,9 +104,9 @@ function questionFingerprint(question) {
   return normalizeQuestionText(question.stemHtml + question.options.map((option) => option.html).join(''))
 }
 
-async function loadSkillIndex() {
+async function loadSkillIndex(signal) {
   if (!skillIndexPromise) {
-    skillIndexPromise = fetch(withBase('/retest/xingcezhenti-index.json'), { cache: 'force-cache' })
+    skillIndexPromise = fetch(withBase('/retest/xingcezhenti-index.json'), { cache: 'force-cache', signal })
       .then((response) => {
         if (!response.ok) throw new Error(`技能题库目录暂不可用（HTTP ${response.status}）`)
         return response.json()
@@ -119,18 +119,24 @@ async function loadSkillIndex() {
   return skillIndexPromise
 }
 
-async function drawQuestions() {
+async function drawQuestions(signal) {
   const previousMistakes = availableQuestions.value
     .filter((question) => mistakeCounts.value[question.id] || questionHistory.value[question.id]?.some((item) => !item.isCorrect))
     .sort((a, b) => (mistakeCounts.value[b.id] || 0) - (mistakeCounts.value[a.id] || 0)
       || (questionHistory.value[b.id]?.at(-1)?.finishedAt || '').localeCompare(questionHistory.value[a.id]?.at(-1)?.finishedAt || ''))
   const priority = previousMistakes.slice(0, 10)
   const chosen = new Set(priority.map((question) => question.id))
-  const localPool = shuffle(questions.filter((question) => !isSkillQuestion(question) && !chosen.has(question.id)))
-  const localQuestions = localPool.slice(0, Math.min(1, questionCount - priority.length))
+  const attemptedIds = new Set(Object.keys(questionHistory.value))
+  const previouslyDone = shuffle(availableQuestions.value.filter((question) =>
+    attemptedIds.has(question.id) && !chosen.has(question.id)))
+    .slice(0, Math.min(5, questionCount - priority.length))
+  for (const question of previouslyDone) chosen.add(question.id)
+
+  const localPool = shuffle(questions.filter((question) => !chosen.has(question.id)))
+  const localQuestions = localPool.slice(0, Math.min(5, questionCount - priority.length - previouslyDone.length))
   for (const question of localQuestions) chosen.add(question.id)
 
-  const skillCount = questionCount - priority.length - localQuestions.length
+  const skillCount = questionCount - priority.length - previouslyDone.length - localQuestions.length
   let remote = { questions: [], failures: [] }
   if (skillCount > 0) {
     const knownSkillQuestions = questions.filter(isSkillQuestion)
@@ -140,28 +146,36 @@ async function drawQuestions() {
       ...chosen,
     ])
     const excludedTexts = new Set(knownSkillQuestions.map(questionFingerprint).filter(Boolean))
-    const index = await loadSkillIndex()
-    remote = await fetchSkillQuestions({
-      index,
-      pool: skillPool,
-      targetCounts: allocateModuleTargets(skillCount),
-      excludedIds,
-      excludedTexts,
-    })
+    try {
+      const index = await loadSkillIndex(signal)
+      remote = await fetchSkillQuestions({
+        index,
+        pool: skillPool,
+        targetCounts: allocateModuleTargets(skillCount),
+        excludedIds,
+        excludedTexts,
+        signal,
+      })
+    } catch (error) {
+      remote.failures.push(error.message || '技能真题源连接失败')
+    }
   }
 
   const remoteIds = new Set(remote.questions.map((question) => question.id))
   for (const id of remoteIds) chosen.add(id)
   const fallback = shuffle(availableQuestions.value.filter((question) => !chosen.has(question.id)))
-  const selected = [...priority, ...localQuestions, ...remote.questions]
+  const selected = [...priority, ...previouslyDone, ...localQuestions, ...remote.questions]
   const complete = [...selected, ...fallback.slice(0, questionCount - selected.length)]
   if (complete.length !== questionCount) throw new Error('当前可用题目不足20道，暂时无法开始。')
 
-  const localFill = questionCount - priority.length - remote.questions.length
+  const localFill = questionCount - priority.length - previouslyDone.length - remote.questions.length
   const sourceFailures = remote.failures.length
-  poolNotice.value = remote.questions.length === skillCount
-    ? `本轮从2020年及以后技能真题池抽取 ${remote.questions.length} 道，并优先安排 ${priority.length} 道曾错题。`
-    : `技能题源本轮载入 ${remote.questions.length} 道；其余 ${localFill} 道由网站现有题库补齐。${sourceFailures ? '部分来源文件未能读取，已自动跳过。' : ''}`
+  const triedCount = previouslyDone.length
+  poolNotice.value = sourceFailures && remote.questions.length === 0
+    ? `技能真题源连接较慢或暂不可用，本轮已从曾错题、已做题和本站题库补足20题；不会一直等待。`
+    : remote.questions.length === skillCount
+      ? `本轮包含 ${triedCount} 道已做题、${localQuestions.length} 道本站题库题和 ${remote.questions.length} 道2020年及以后技能真题；曾错题优先。`
+      : `技能题源本轮载入 ${remote.questions.length} 道；已从曾错题、已做题和本站题库补足其余 ${localFill} 道。${sourceFailures ? '未能读取的来源已自动跳过。' : ''}`
   return shuffle(complete)
 }
 
@@ -169,8 +183,10 @@ async function startQuiz() {
   if (loadingQuiz.value) return
   loadingQuiz.value = true
   poolNotice.value = ''
+  const controller = new AbortController()
+  const timeout = window.setTimeout(() => controller.abort(), 9000)
   try {
-    selectedQuestions.value = await drawQuestions()
+    selectedQuestions.value = await drawQuestions(controller.signal)
     answers.value = {}
     currentIndex.value = 0
     startedAt.value = Date.now()
@@ -181,6 +197,7 @@ async function startQuiz() {
   } catch (error) {
     poolNotice.value = `${error.message} 本轮未开始；可以重试，网络不可用时请稍后再试。`
   } finally {
+    window.clearTimeout(timeout)
     loadingQuiz.value = false
   }
 }
@@ -231,7 +248,7 @@ function submitQuiz() {
   }
   const nextArchive = { ...questionArchive.value }
   for (const item of results.value) {
-    if (isSkillQuestion(item) && !item.isCorrect) nextArchive[item.id] = item
+    if (isSkillQuestion(item)) nextArchive[item.id] = item
   }
   attempts.value = [attempt, ...attempts.value]
   mistakeCounts.value = nextMistakes
@@ -395,7 +412,7 @@ onBeforeUnmount(() => {
           <span class="eyebrow">行测复测 · 全站错题持续积累</span>
           <h1>错题再练，交卷即看结果</h1>
           <p>每次抽取20道题：从2020年及以后的技能真题源按需加载，也会保留网站已有题目；以前错过的题优先进入本轮。交卷后自动计分，历次作答留在当前浏览器。</p>
-          <button class="button button--primary" type="button" :disabled="loadingQuiz" @click="startQuiz">{{ loadingQuiz ? '正在从真题库抽题…' : '开始20题复测' }} <span v-if="!loadingQuiz" aria-hidden="true">→</span></button>
+          <button class="button button--primary" type="button" :disabled="loadingQuiz" @click="startQuiz">{{ loadingQuiz ? '正在组 20 题…' : '开始20题复测' }} <span v-if="!loadingQuiz" aria-hidden="true">→</span></button>
           <a class="button button--quiet library-entry" :href="withBase('/retest/library/')">查看全站题库 →</a>
           <a class="button button--quiet library-entry" :href="withBase('/retest/essay.html')">申论复测 →</a>
           <small class="privacy-note">新记录保存在当前浏览器，可按题查看历次作答；不改写原有成绩和复测台账。</small>
@@ -621,22 +638,22 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-.retest-shell { --quiz-accent: #4f46e5; --quiz-accent-soft: rgba(79,70,229,.09); width: min(1180px, 100%); margin: 0 auto; padding: 26px clamp(12px, 2.5vw, 28px) 52px; color: var(--vp-c-text-1); font-family: var(--vp-font-family-base); }
+.retest-shell { --quiz-accent: var(--vp-c-brand-1); --quiz-accent-soft: var(--vp-c-brand-soft); --quiz-action: var(--vp-c-brand-1); width: min(1180px, 100%); margin: 0 auto; padding: 26px clamp(12px, 2.5vw, 28px) 52px; color: var(--vp-c-text-1); font-family: var(--vp-font-family-base); }
 .retest-shell h1, .retest-shell h2, .retest-shell p { margin-top: 0; }
 .eyebrow { color: var(--quiz-accent); font-size: 12px; font-weight: 750; letter-spacing: .08em; }
-.intro-card { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(220px, .8fr); align-items: center; gap: 28px; padding: clamp(24px, 4vw, 44px); border: 1px solid #d8daf7; border-radius: 22px; background: radial-gradient(circle at 90% 10%, rgba(99,102,241,.14), transparent 34%), linear-gradient(140deg, var(--vp-c-bg), var(--vp-c-bg-soft)); }
+.intro-card { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(220px, .8fr); align-items: center; gap: 28px; padding: clamp(24px, 4vw, 44px); border: 1px solid color-mix(in srgb, var(--quiz-accent) 20%, var(--vp-c-divider)); border-radius: 22px; background: radial-gradient(circle at 90% 10%, color-mix(in srgb, var(--quiz-accent) 12%, transparent), transparent 34%), linear-gradient(140deg, var(--vp-c-bg), var(--vp-c-bg-soft)); }
 .intro-copy h1 { margin: 9px 0 10px; border: 0; padding: 0; font-size: clamp(29px, 4vw, 43px); line-height: 1.2; letter-spacing: -.03em; }
 .intro-copy p { max-width: 700px; margin-bottom: 21px; color: var(--vp-c-text-2); font-size: 16px; line-height: 1.75; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; padding: 0 17px; border: 1px solid transparent; border-radius: 11px; font: inherit; font-size: 14px; font-weight: 720; cursor: pointer; transition: transform .16s, background .16s, border-color .16s; }
 .button:hover:not(:disabled) { transform: translateY(-1px); }
-.button:focus-visible { outline: 3px solid rgba(79,70,229,.35); outline-offset: 2px; }
+.button:focus-visible { outline: 3px solid color-mix(in srgb, var(--quiz-accent) 40%, transparent); outline-offset: 2px; }
 .button:disabled { cursor: not-allowed; opacity: .45; }
-.button--primary { color: #fff; background: var(--quiz-accent); box-shadow: 0 7px 18px rgba(79,70,229,.16); }
-.button--primary:hover { background: #4338ca; }
+.button--primary { color: #fff; background: var(--quiz-action); box-shadow: 0 7px 18px color-mix(in srgb, var(--quiz-action) 20%, transparent); }
+.button--primary:hover { background: #274eae; }
 .button--quiet { border-color: var(--vp-c-divider); color: var(--vp-c-text-1); background: var(--vp-c-bg); }
 .button--quiet:hover, .button--outline:hover { border-color: var(--quiz-accent); color: var(--quiz-accent); }
 .library-entry { margin-left: 8px; text-decoration: none; }
-.button--outline { width: 100%; border-color: #c7c9f2; color: var(--quiz-accent); background: var(--vp-c-bg); }
+.button--outline { width: 100%; border-color: color-mix(in srgb, var(--quiz-accent) 32%, var(--vp-c-divider)); color: var(--quiz-accent); background: var(--vp-c-bg); }
 .privacy-note { display: block; margin-top: 11px; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.55; }
 .pool-notice { margin: 12px 0 0; padding: 11px 14px; border: 1px solid var(--vp-c-divider); border-left: 3px solid var(--quiz-accent); border-radius: 10px; color: var(--vp-c-text-2); background: var(--vp-c-bg-soft); font-size: 12px; line-height: 1.6; }
 .intro-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }
@@ -662,7 +679,7 @@ onBeforeUnmount(() => {
 .mistake-intro { margin: -7px 0 14px; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.7; }
 .mistake-tools { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; color: var(--vp-c-text-2); font-size: 11px; }
 .mistake-tools input { width: min(100%, 330px); min-height: 40px; padding: 0 12px; border: 1px solid var(--vp-c-divider); border-radius: 10px; color: var(--vp-c-text-1); background: var(--vp-c-bg); font: inherit; font-size: 13px; }
-.mistake-tools input:focus-visible { outline: 3px solid rgba(79,70,229,.25); outline-offset: 1px; }
+.mistake-tools input:focus-visible { outline: 3px solid color-mix(in srgb, var(--quiz-accent) 32%, transparent); outline-offset: 1px; }
 .mistake-list { display: grid; gap: 8px; }
 .mistake-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 13px 14px; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg); }
 .mistake-row__copy { display: grid; gap: 5px; min-width: 0; }
@@ -705,16 +722,16 @@ onBeforeUnmount(() => {
 .answer-options { display: grid; gap: 9px; min-width: 0; margin: 0; padding: 0; border: 0; }
 .answer-options legend { margin-bottom: 8px; color: var(--vp-c-text-2); font-size: 12px; }
 .answer-option { display: grid; grid-template-columns: 1px 30px minmax(0, 1fr); align-items: start; gap: 11px; min-width: 0; padding: 12px 13px; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg); cursor: pointer; transition: border-color .15s, background .15s; }
-.answer-option:hover, .answer-option.is-selected { border-color: #9995ef; background: var(--quiz-accent-soft); }
+.answer-option:hover, .answer-option.is-selected { border-color: var(--quiz-accent); background: var(--quiz-accent-soft); }
 .answer-option input { width: 1px; height: 1px; margin: 0; opacity: .01; }
-.answer-option input:focus-visible + .answer-letter { outline: 3px solid rgba(79,70,229,.35); outline-offset: 2px; }
+.answer-option input:focus-visible + .answer-letter { outline: 3px solid color-mix(in srgb, var(--quiz-accent) 40%, transparent); outline-offset: 2px; }
 .answer-letter { display: inline-grid; place-items: center; width: 29px; height: 29px; border: 1px solid var(--vp-c-divider); border-radius: 9px; color: var(--vp-c-text-2); background: var(--vp-c-bg-soft); font-size: 12px; font-weight: 800; }
-.answer-option.is-selected .answer-letter { border-color: var(--quiz-accent); color: #fff; background: var(--quiz-accent); }
+.answer-option.is-selected .answer-letter { border-color: var(--quiz-action); color: #fff; background: var(--quiz-action); }
 .answer-option__content { min-width: 0; padding-top: 3px; font-size: 14px; line-height: 1.65; }
 .answer-option__content :deep(p) { margin: 0; }
 .source-line { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 5px 12px; margin: 16px 0 0; padding-top: 12px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 11px; line-height: 1.55; }
 .question-actions, .result-actions { display: flex; justify-content: space-between; gap: 10px; margin-top: 19px; }
-.submit-confirm { display: flex; justify-content: space-between; align-items: center; gap: 18px; margin-top: 16px; padding: 15px; border: 1px solid #c9c8f6; border-radius: 12px; background: var(--quiz-accent-soft); }
+.submit-confirm { display: flex; justify-content: space-between; align-items: center; gap: 18px; margin-top: 16px; padding: 15px; border: 1px solid color-mix(in srgb, var(--quiz-accent) 28%, var(--vp-c-divider)); border-radius: 12px; background: var(--quiz-accent-soft); }
 .submit-confirm strong { font-size: 13px; }
 .submit-confirm p { margin: 3px 0 0; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.5; }
 .submit-confirm > div:last-child { display: flex; flex-shrink: 0; gap: 8px; }
@@ -732,7 +749,7 @@ onBeforeUnmount(() => {
 .legend-dot--current { background: var(--quiz-accent); }
 .legend-dot--answered { background: #9dd9bf; }
 .question-nav > p { margin: 10px 0 0; color: var(--vp-c-text-2); font-size: 11px; line-height: 1.6; }
-.result-hero { padding: clamp(22px, 4vw, 38px); border: 1px solid #d8daf7; border-radius: 19px; background: radial-gradient(circle at 90% 0, rgba(99,102,241,.13), transparent 32%), var(--vp-c-bg-soft); }
+.result-hero { padding: clamp(22px, 4vw, 38px); border: 1px solid color-mix(in srgb, var(--quiz-accent) 20%, var(--vp-c-divider)); border-radius: 19px; background: radial-gradient(circle at 90% 0, color-mix(in srgb, var(--quiz-accent) 11%, transparent), transparent 32%), var(--vp-c-bg-soft); }
 .score-line { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; margin: 5px 0 8px; }
 .score-line > strong { color: var(--quiz-accent); font-size: clamp(44px, 8vw, 66px); line-height: 1; font-variant-numeric: tabular-nums; }
 .score-line > span { color: var(--vp-c-text-2); font-size: 15px; }
@@ -773,8 +790,9 @@ onBeforeUnmount(() => {
 .review-link { display: inline-flex; margin-top: 13px; color: var(--quiz-accent); font-size: 12px; font-weight: 700; text-decoration: none; }
 .review-link--source { margin-left: 16px; }
 .review-link:hover { text-decoration: underline; }
-:global(.dark) .retest-shell { --quiz-accent: #a5b4fc; --quiz-accent-soft: rgba(165,180,252,.12); }
-:global(.dark) .intro-card, :global(.dark) .result-hero { border-color: #454b78; }
+:global(.dark) .retest-shell { --quiz-accent: var(--vp-c-brand-1); --quiz-accent-soft: var(--vp-c-brand-soft); --quiz-action: #315DCB; }
+:global(.dark) .button--primary:hover { background: #274eae; }
+:global(.dark) .number-grid button.is-current { border-color: var(--quiz-action); background: var(--quiz-action); }
 :global(.dark) .number-grid button.is-answered:not(.is-current) { border-color: #286449; color: #8ee0b5; background: #163d2d; }
 :global(.dark) .result-index--correct, :global(.dark) .review-option--correct { border-color: #286449; color: #a5e7c2; background: #163d2d; }
 :global(.dark) .result-index--wrong, :global(.dark) .review-option--wrong { border-color: #713933; color: #ffbab1; background: #3c201e; }

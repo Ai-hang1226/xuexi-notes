@@ -61,6 +61,11 @@ const reset = () => { module.value = '全部'; type.value = '全部'; keyword.va
       <div class="is-pending"><b>{{ stats.pendingVerification }}</b><span>独立运用待验证</span></div>
     </div>
     <p class="pending-note"><strong>状态说明：</strong>{{ stats.pendingVerification }} 条已完成本题复盘，但还没有用陌生真题独立验证；{{ stats.awaitingReview }} 条尚未单独复盘。看过解析或重做原题都不自动记为已掌握。</p>
+    <div v-if="stats.pendingVerification" class="pending-practice">
+      <span>想先检查原题回忆？可以从待验证记录对应的原题中抽 20 道复做。</span>
+      <a :href="withBase('/retest/') + '?scope=pending-originals&start=1'">复做待验证原题 →</a>
+      <small>这只是原题复做，不代表完成陌生真题迁移验证；复测状态会继续保留。</small>
+    </div>
 
     <div class="module-bars" aria-label="模块沉淀分布">
       <span v-for="m in moduleBars" :key="m.name" class="module-bar" :title="`${m.name} ${m.count} 条`">
@@ -92,7 +97,7 @@ const reset = () => { module.value = '全部'; type.value = '全部'; keyword.va
         </select>
       </label>
       <button class="pending-toggle" :class="{ active: pendingFilter === 'transfer' }" :aria-pressed="pendingFilter === 'transfer'" type="button" @click="togglePendingFilter('transfer')">
-        只看独立验证
+        只看待独立验证
       </button>
       <button class="pending-toggle pending-review-toggle" :class="{ active: pendingFilter === 'review' }" :aria-pressed="pendingFilter === 'review'" :disabled="!stats.awaitingReview" type="button" @click="togglePendingFilter('review')">
         只看待复盘（{{ stats.awaitingReview }}）
@@ -129,6 +134,11 @@ const reset = () => { module.value = '全部'; type.value = '全部'; keyword.va
 .catalog-stats .is-pending b { color: #b45309; }
 .pending-note { margin: -2px 0 16px; color: var(--vp-c-text-2); font-size: 13px; line-height: 1.65; }
 .pending-note strong { color: var(--vp-c-text-1); }
+.pending-practice { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 4px 16px; margin: 0 0 18px; padding: 13px 15px; border: 1px solid color-mix(in srgb, var(--vp-c-brand-1) 24%, var(--vp-c-divider)); border-radius: 12px; background: color-mix(in srgb, var(--vp-c-brand-soft) 55%, var(--vp-c-bg)); }
+.pending-practice > span { color: var(--vp-c-text-1); font-size: 13px; line-height: 1.6; }
+.pending-practice > a { grid-column: 2; grid-row: 1; color: var(--vp-c-brand-1); font-size: 13px; font-weight: 750; text-decoration: none; white-space: nowrap; }
+.pending-practice > a:hover { text-decoration: underline; }
+.pending-practice > small { grid-column: 1 / -1; color: var(--vp-c-text-2); font-size: 11px; line-height: 1.55; }
 .module-bars { display: flex; align-items: end; gap: 10px; height: 78px; margin: 0 0 20px; padding: 10px 14px 0; border: 1px solid var(--vp-c-divider); border-radius: 12px; }
 .module-bar { position: relative; display: flex; flex: 1; align-items: end; justify-content: center; height: 100%; }
 .module-bar i { display: block; width: 100%; max-width: 46px; min-height: 4px; border-radius: 6px 6px 0 0; background: linear-gradient(180deg, #6d64f0, #4f46e5); opacity: .82; }
@@ -173,6 +183,8 @@ const reset = () => { module.value = '全部'; type.value = '全部'; keyword.va
   .pending-toggle, .reset { text-align: left; }
   .pending-review-toggle { grid-column: 1 / -1; }
   .filters select, .filters input { width: 100%; min-width: 0; }
+  .pending-practice { grid-template-columns: 1fr; gap: 7px; }
+  .pending-practice > a { grid-column: 1; grid-row: auto; white-space: normal; }
   .review-group summary { padding: 18px 2px; }
   .question-list { padding-left: 2px; padding-right: 2px; }
 }

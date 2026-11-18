@@ -183,9 +183,9 @@ const shenlunTopics = [
   .library-heading { align-items: flex-start; flex-direction: column; gap: 4px; }
   .library-section { padding: 13px 11px; }
   .knowledge-links { gap: 6px; }
-  .knowledge-link { min-height: 46px; padding: 7px 8px; }
-  .knowledge-link strong { font-size: 11px; }
-  .knowledge-link small { font-size: 9px; }
+  .knowledge-link { min-height: 58px; padding: 8px; }
+  .knowledge-link strong { display: -webkit-box; overflow: hidden; font-size: 13px; line-height: 1.35; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  .knowledge-link small { display: -webkit-box; overflow: hidden; font-size: 11px; line-height: 1.4; white-space: normal; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 }
 @media (prefers-reduced-motion: reduce) {
   .knowledge-home *, .knowledge-home *::before, .knowledge-home *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }

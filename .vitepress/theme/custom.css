@@ -615,6 +615,13 @@ body {
 .vp-doc .question-link { font-size: 1em; }
 .vp-doc .exam-provenance { font-size: var(--doc-small); }
 
+/* 135题复盘很长：让读者先按行测模块跳转，且锚点避开固定导航栏。 */
+.review-135-page .review-135-module-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 16px; }
+.review-135-page .review-135-module-nav a { display: inline-flex; align-items: center; min-height: 36px; padding: 0 11px; border: 1px solid var(--vp-c-divider); border-radius: 9px; color: var(--vp-c-brand-1); background: var(--vp-c-bg-soft); font-size: 13px; font-weight: 700; text-decoration: none; }
+.review-135-page .review-135-module-nav a:hover { border-color: var(--vp-c-brand-1); background: var(--vp-c-brand-soft); }
+.review-135-page .vp-doc h2[id^="module-"] { scroll-margin-top: calc(var(--vp-nav-height) + 22px); }
+.review-135-page .review-135-module-nav a:focus-visible { outline: 3px solid var(--vp-c-brand-1); outline-offset: 2px; }
+
 /* 小屏：clamp 已把正文降到 17px，这里只收紧行高 */
 @media (max-width: 640px) {
   .vp-doc p,

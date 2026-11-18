@@ -1,12 +1,19 @@
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, ref, shallowRef } from 'vue'
 import { withBase } from 'vitepress'
-import catalogue from './full-catalog.json'
-import bank from './questions.json'
+import skillPool from './xingcezhenti-pool.json'
+import RecordBackup from './components/RecordBackup.vue'
+import { getAnswerEvidenceForCatalog } from './question-evidence.js'
 
 const quizStorageKey = 'xuexi-notes:retest-prototype:v1'
 const libraryStorageKey = 'xuexi-notes:question-library:v1'
-const questionById = new Map(bank.questions.map((q) => [q.id, q]))
+const catalogue = shallowRef({ entries: [] })
+const importedQuestionCount = ref(0)
+const loadingCatalogue = ref(true)
+const catalogueError = ref('')
+const questionById = new Map()
+const transferPendingIds = new Set()
+const pendingReviewUrls = new Set()
 const query = ref('')
 const filter = ref('全部')
 const visibleCount = ref(30)
@@ -17,10 +24,85 @@ const submitted = ref(false)
 const libraryRecords = ref({ drafts: {}, marked: {}, answers: {} })
 const quizMistakes = ref({})
 const storageWarning = ref(false)
+let cataloguePromise = null
+
+async function loadCatalogue() {
+  if (!cataloguePromise) {
+    cataloguePromise = Promise.all([
+      import('./full-catalog.json'),
+      import('./questions.json'),
+      import('../cuotiben/review-catalog.json'),
+    ]).then(([catalogueModule, bankModule, reviewModule]) => {
+      const bank = bankModule.default
+      for (const item of reviewModule.default) {
+        if (/独立运用待验证/.test(item.note || '') && item.url) pendingReviewUrls.add(item.url)
+      }
+      for (const question of bank.questions) {
+        questionById.set(question.id, question)
+        if (pendingReviewUrls.has(question.reviewUrl)) transferPendingIds.add(question.id)
+      }
+      importedQuestionCount.value = bank.imported
+      catalogue.value = catalogueModule.default
+      catalogueError.value = ''
+      let needsSave = false
+      for (const item of catalogue.value.entries) {
+        const previouslyMarked = libraryRecords.value.marked[item.id]
+          || item.aliases?.some((id) => libraryRecords.value.marked[id])
+        if (item.quizId && previouslyMarked && !quizMistakes.value[item.quizId]) {
+          quizMistakes.value[item.quizId] = 1
+          needsSave = true
+        }
+      }
+      if (needsSave) {
+        try {
+          const quizSaved = JSON.parse(localStorage.getItem(quizStorageKey) || '{}')
+          quizSaved.mistakeCounts = quizMistakes.value
+          localStorage.setItem(quizStorageKey, JSON.stringify(quizSaved))
+        } catch {
+          storageWarning.value = true
+        }
+      }
+      return catalogue.value
+    }).catch((error) => {
+      cataloguePromise = null
+      throw error
+    }).finally(() => {
+      loadingCatalogue.value = false
+    })
+  }
+  return cataloguePromise
+}
+
+function evidenceFor(item) {
+  return getAnswerEvidenceForCatalog(item, questionById, skillPool.repository)
+}
+
+function isTransferPending(item) {
+  return !!item.quizId && transferPendingIds.has(item.quizId)
+}
+
+function evidenceBadgeLabel(item) {
+  const evidence = evidenceFor(item)
+  return ({
+    fenbi: '粉笔已核对',
+    'fenbi-reference': '粉笔回忆版参考',
+    upstream: '上游答案未直核',
+    disputed: '版本有差异',
+    personal: '个人复测口径',
+    noted: '依据见说明',
+    unknown: '答案待核验',
+  })[evidence?.key] || ''
+}
 
 const groups = [
   { label: '全部', test: () => true },
   { label: '可自动判分', test: (q) => q.status === '可自动判分' },
+  { label: '粉笔已核对', test: (q) => evidenceFor(q)?.key === 'fenbi' },
+  { label: '答案需留意', test: (q) => {
+    const evidence = evidenceFor(q)
+    return !!evidence && evidence.key !== 'fenbi'
+  } },
+  { label: '待独立验证', test: (q) => isTransferPending(q) },
   { label: '待核对', test: (q) => ['待核对', '题面不完整', '答案有争议', '题面待整理', '暂未匹配真题', '相似题未确认', '题源待补充', '候选题待核对', '检索受限', '检索未完成', '尚未检索', '真题已归位·未自动判分'].includes(q.status) },
   { label: '申论', test: (q) => q.subject === '申论' },
   { label: '历史自编', test: (q) => q.status === '历史自编' },
@@ -30,7 +112,7 @@ const groups = [
 const filtered = computed(() => {
   const terms = query.value.trim().toLowerCase().split(/\s+/).filter(Boolean)
   const group = groups.find((g) => g.label === filter.value) || groups[0]
-  return catalogue.entries.filter((q) => {
+  return catalogue.value.entries.filter((q) => {
     if (!group.test(q)) return false
     const haystack = `${q.title} ${q.source} ${q.excerpt} ${q.search || ''}`.toLowerCase()
     return terms.every((term) => haystack.includes(term))
@@ -44,7 +126,7 @@ const isEssay = computed(() => selected.value?.subject === '申论')
 const canChoose = computed(() => !isEssay.value && current.value?.options?.length === 4)
 const isScored = computed(() => selected.value?.status === '可自动判分' && !!current.value?.correct)
 const resultCorrect = computed(() => isScored.value && picked.value === current.value.correct)
-const markedCount = computed(() => catalogue.entries.filter((q) => isMarked(q)).length)
+const markedCount = computed(() => catalogue.value.entries.filter((q) => isMarked(q)).length)
 
 function isMarked(item) {
   return !!libraryRecords.value.marked[item.id]
@@ -164,22 +246,12 @@ onMounted(() => {
     }
     const quizSaved = JSON.parse(localStorage.getItem(quizStorageKey) || '{}')
     quizMistakes.value = quizSaved.mistakeCounts && typeof quizSaved.mistakeCounts === 'object' ? quizSaved.mistakeCounts : {}
-    let needsSave = false
-    for (const item of catalogue.entries) {
-      const previouslyMarked = libraryRecords.value.marked[item.id]
-        || item.aliases?.some((id) => libraryRecords.value.marked[id])
-      if (item.quizId && previouslyMarked && !quizMistakes.value[item.quizId]) {
-        quizMistakes.value[item.quizId] = 1
-        needsSave = true
-      }
-    }
-    if (needsSave) {
-      quizSaved.mistakeCounts = quizMistakes.value
-      localStorage.setItem(quizStorageKey, JSON.stringify(quizSaved))
-    }
   } catch {
     storageWarning.value = true
   }
+  void loadCatalogue().catch(() => {
+    catalogueError.value = '题库暂时未能载入；请检查网络后刷新页面重试。'
+  })
 })
 </script>
 
@@ -197,9 +269,10 @@ onMounted(() => {
 
       <div class="library-summary">
         <span><strong>{{ catalogue.entries.length }}</strong> 条题目记录</span>
-        <span><strong>{{ bank.imported }}</strong> 道可自动判分</span>
+        <span><strong>{{ importedQuestionCount || '…' }}</strong> 道可自动判分</span>
         <span><strong>{{ markedCount }}</strong> 条本机待复习</span>
       </div>
+      <RecordBackup />
       <p class="scope-note">同一道题尽量合并不同出处；历史自编题仅作回看。待核对区会标明暂未匹配真题、候选不符或题源待补充；这些题不会自动判分。教学示例与已归位但未完成直核的真题也会标清。</p>
 
       <section class="search-panel" aria-label="筛选题目">
@@ -211,9 +284,11 @@ onMounted(() => {
         <p class="result-count">找到 {{ filtered.length }} 条<span v-if="query">与“{{ query }}”相关的记录</span></p>
       </section>
 
-      <section class="question-list" aria-label="题目列表">
+      <p v-if="loadingCatalogue" class="catalog-loading" role="status">正在载入全站题目与来源信息，筛选区会很快开放。</p>
+      <p v-else-if="catalogueError" class="catalog-loading catalog-loading--error" role="alert">{{ catalogueError }}</p>
+      <section v-else class="question-list" aria-label="题目列表">
         <article v-for="item in displayed" :key="item.id" class="library-card">
-          <div class="card-meta"><span>{{ item.subject }}</span><span>{{ labelFor(item.status) }}</span><span>{{ item.source }}</span></div>
+          <div class="card-meta"><span>{{ item.subject }}</span><span>{{ labelFor(item.status) }}</span><span>{{ item.source }}</span><span v-if="evidenceBadgeLabel(item)" class="evidence-chip" :class="`evidence-chip--${evidenceFor(item).key}`" :title="evidenceFor(item).explanation">{{ evidenceBadgeLabel(item) }}</span><span v-if="isTransferPending(item)" class="pending-chip">待独立验证</span></div>
           <h2>{{ item.title }}</h2>
           <p>{{ item.excerpt }}</p>
           <div class="card-actions">
@@ -235,6 +310,7 @@ onMounted(() => {
         <p v-else-if="selected.status === '历史自编'" class="reader-note">这是历史自编练习，保留供回看；不计入真题自动判分。</p>
         <p v-else-if="!isScored && !isEssay" class="reader-note">{{ selected.reviewNote || '这道题的题源、题面或答案尚需核对，暂不自动判断对错。' }}</p>
         <p v-if="isEssay" class="reader-note">先根据材料作答，再查看原页的参考内容。申论按主观题处理，不自动给分。</p>
+        <div v-if="!isEssay && evidenceFor(selected)" class="answer-evidence" :class="`answer-evidence--${evidenceFor(selected).key}`"><strong>答案核验：{{ evidenceFor(selected).label }}</strong><span>{{ evidenceFor(selected).explanation }}</span></div>
 
         <div v-if="current.materialHtml" class="material-box"><strong>{{ current.materialTitle || '题目材料' }}</strong><div class="question-text" v-html="formatHtml(current.materialHtml)"></div></div>
         <div v-if="current.stemHtml" class="question-text" v-html="formatHtml(current.stemHtml)"></div>
@@ -300,6 +376,10 @@ input[type=search], textarea { width: 100%; border: 1px solid var(--vp-c-divider
 .library-card, .reader-card { min-width: 0; padding: 19px; border: 1px solid var(--vp-c-divider); border-radius: 14px; background: var(--vp-c-bg); }
 .card-meta { display: flex; flex-wrap: wrap; gap: 6px; color: #4f46e5; font-size: 11px; font-weight: 700; }
 .card-meta span { padding: 3px 7px; border-radius: 6px; background: rgba(79,70,229,.08); }
+.card-meta .evidence-chip, .card-meta .pending-chip { border: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); background: var(--vp-c-bg-soft); }
+.card-meta .evidence-chip--fenbi { border-color: #7bc7a2; color: #147a50; background: #eaf8f0; }
+.card-meta .evidence-chip--disputed, .card-meta .evidence-chip--upstream, .card-meta .evidence-chip--unknown, .card-meta .evidence-chip--personal { border-color: #e4b85f; color: #8a5700; background: #fff7e7; }
+.card-meta .pending-chip { border-color: #df9c45; color: #935000; background: #fff4e4; }
 .library-card h2 { margin: 10px 0 7px; border: 0; padding: 0; font-size: 16px; line-height: 1.45; }
 .library-card p { min-height: 4.8em; margin: 0; overflow: hidden; color: var(--vp-c-text-2); font-size: 13px; line-height: 1.65; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
 .card-actions { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 13px; }
@@ -332,8 +412,17 @@ textarea { resize: vertical; min-height: 150px; line-height: 1.7; }
 .reader-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
 .answer-result { margin-top: 20px; padding: 15px; border: 1px solid #c7d2fe; border-radius: 10px; background: rgba(79,70,229,.07); font-size: 14px; line-height: 1.7; }
 .answer-result p { margin: 6px 0 0; color: var(--vp-c-text-2); }
+.answer-evidence { display: grid; gap: 4px; margin: 13px 0; padding: 11px 13px; border: 1px solid var(--vp-c-divider); border-left: 3px solid #4f46e5; border-radius: 9px; background: var(--vp-c-bg-soft); }
+.answer-evidence strong { font-size: 12px; }
+.answer-evidence span { color: var(--vp-c-text-2); font-size: 12px; line-height: 1.6; }
+.answer-evidence--fenbi { border-left-color: #14865d; }
+.answer-evidence--fenbi strong { color: #147a50; }
+.answer-evidence--disputed, .answer-evidence--upstream, .answer-evidence--unknown, .answer-evidence--personal { border-left-color: #c2841b; }
 .source-links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 20px; color: var(--vp-c-text-2); font-size: 13px; }
 .storage-warning { color: #b45309; font-size: 13px; }
 button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid rgba(79,70,229,.35); outline-offset: 2px; }
 @media (max-width: 650px) { .library-header { align-items: flex-start; flex-direction: column; } .question-list { grid-template-columns: 1fr; } .library-summary { gap: 6px 20px; } .library-card p { min-height: 0; } }
+:global(.dark) .card-meta .evidence-chip--fenbi, :global(.dark) .answer-evidence--fenbi { color: #9fe1bd; background: #163d2d; }
+:global(.dark) .card-meta .evidence-chip--disputed, :global(.dark) .card-meta .evidence-chip--upstream, :global(.dark) .card-meta .evidence-chip--unknown, :global(.dark) .card-meta .evidence-chip--personal, :global(.dark) .card-meta .pending-chip { color: #f4ce83; background: #3b301a; }
+:global(.dark) .answer-evidence--disputed, :global(.dark) .answer-evidence--upstream, :global(.dark) .answer-evidence--unknown, :global(.dark) .answer-evidence--personal { border-left-color: #8b692a; }
 </style>

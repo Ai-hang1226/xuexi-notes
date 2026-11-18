@@ -2,6 +2,7 @@
 import { computed, onMounted, ref } from 'vue'
 import { withBase } from 'vitepress'
 import bank from './essay-review.json'
+import RecordBackup from './components/RecordBackup.vue'
 
 const storageKey = 'xuexi-notes:essay-retest:v1'
 const essays = bank.essays || []
@@ -114,6 +115,8 @@ onMounted(load)
           <div><strong>自动保存</strong><span>草稿留在当前浏览器</span></div>
         </div>
       </header>
+
+      <RecordBackup />
 
       <section class="essay-list-section">
         <div class="list-heading"><div><span class="eyebrow">题目清单</span><h2>选择一道已做过的题</h2></div><a :href="safeUrl('/retest/')">返回行测复测</a></div>

@@ -1,21 +1,29 @@
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { withBase } from 'vitepress'
-import bank from './questions.json'
 import skillPool from './xingcezhenti-pool.json'
+import RecordBackup from './components/RecordBackup.vue'
+import { getAnswerEvidence } from './question-evidence.js'
+import { createQuestionClock } from './question-clock.js'
 import { fetchSkillQuestions, normalizeQuestionText } from '../scripts/xingcezhenti-runtime.mjs'
 
 const questionCount = 20
 const storageKey = 'xuexi-notes:retest-prototype:v1'
-const questions = bank.questions
+const questions = ref([])
+const localQuestionCount = ref(0)
+const questionDataLoaded = ref(false)
+const pendingOriginalQuestions = computed(() => questions.value.filter((question) => transferPendingUrls.has(question.reviewUrl)))
+const transferPendingUrls = new Set()
 const mode = ref('intro')
 const questionArchive = ref({})
 const selectedQuestions = ref([])
 const answers = ref({})
+const uncertainAnswers = ref({})
 const currentIndex = ref(0)
 const startedAt = ref(0)
 const submittedAt = ref(0)
 const now = ref(Date.now())
+const currentRunScope = ref('mixed')
 const attempts = ref([])
 const mistakeCounts = ref({})
 const questionHistory = ref({})
@@ -27,6 +35,37 @@ const loadingQuiz = ref(false)
 const poolNotice = ref('')
 let timer = null
 let skillIndexPromise = null
+let localQuestionPromise = null
+
+async function loadLocalQuestionData() {
+  if (!localQuestionPromise) {
+    localQuestionPromise = Promise.all([
+      import('./questions.json'),
+      import('../cuotiben/review-catalog.json'),
+    ]).then(([bankModule, catalogModule]) => {
+      const bank = bankModule.default
+      questions.value = bank.questions
+      localQuestionCount.value = bank.imported
+      for (const item of catalogModule.default) {
+        if (/独立运用待验证/.test(item.note || '') && item.url) transferPendingUrls.add(item.url)
+      }
+      questionDataLoaded.value = true
+      return questions.value
+    }).catch((error) => {
+      localQuestionPromise = null
+      throw error
+    })
+  }
+  return localQuestionPromise
+}
+
+function browserIsActive() {
+  return typeof document !== 'undefined'
+    && document.visibilityState === 'visible'
+    && document.hasFocus()
+}
+
+const questionClock = createQuestionClock(browserIsActive)
 
 const currentQuestion = computed(() => selectedQuestions.value[currentIndex.value])
 const activeQuestionCount = computed(() => mode.value === 'mistake-answer' ? 1 : questionCount)
@@ -37,8 +76,8 @@ const elapsedSeconds = computed(() => startedAt.value
   : 0)
 const progress = computed(() => Math.round((answeredCount.value / activeQuestionCount.value) * 100))
 const availableQuestions = computed(() => [
-  ...questions,
-  ...Object.values(questionArchive.value).filter((question) => !questions.some((item) => item.id === question.id)),
+  ...questions.value,
+  ...Object.values(questionArchive.value).filter((question) => !questions.value.some((item) => item.id === question.id)),
 ])
 const bankedMistakeCount = computed(() => availableQuestions.value.filter((question) => mistakeCounts.value[question.id]).length)
 const mistakeRecords = computed(() => availableQuestions.value
@@ -51,10 +90,24 @@ const mistakeRecords = computed(() => availableQuestions.value
   .sort((a, b) => Number(b.lastAttempt?.isCorrect === false) - Number(a.lastAttempt?.isCorrect === false)
     || b.wrongCount - a.wrongCount
     || (b.lastAttempt?.finishedAt || '').localeCompare(a.lastAttempt?.finishedAt || '')))
+const flaggedReviewRecords = computed(() => availableQuestions.value
+  .map((question) => {
+    const history = questionHistory.value[question.id] || []
+    const markedAttempts = history.filter((item) => item.isUncertain || item.isSlow)
+    return markedAttempts.length ? { question, history, markedAttempts, lastAttempt: history.at(-1) || null } : null
+  })
+  .filter(Boolean)
+  .sort((a, b) => (b.lastAttempt?.finishedAt || '').localeCompare(a.lastAttempt?.finishedAt || '')))
 const visibleMistakeRecords = computed(() => {
   const query = mistakeFilter.value.trim().toLocaleLowerCase()
   if (!query) return mistakeRecords.value
   return mistakeRecords.value.filter(({ question }) => [question.module, question.type, question.source, question.title, question.number]
+    .filter(Boolean).join(' ').toLocaleLowerCase().includes(query))
+})
+const visibleFlaggedRecords = computed(() => {
+  const query = mistakeFilter.value.trim().toLocaleLowerCase()
+  if (!query) return flaggedReviewRecords.value
+  return flaggedReviewRecords.value.filter(({ question }) => [question.module, question.type, question.source, question.title, question.number]
     .filter(Boolean).join(' ').toLocaleLowerCase().includes(query))
 })
 const pendingMistakeCount = computed(() => mistakeRecords.value.filter((record) => record.lastAttempt?.isCorrect === false).length)
@@ -62,8 +115,14 @@ const results = computed(() => selectedQuestions.value.map((question) => ({
   ...question,
   answer: answers.value[question.id] || '',
   isCorrect: answers.value[question.id] === question.correct,
+  isUncertain: Boolean(uncertainAnswers.value[question.id]),
+  durationSeconds: Math.floor(questionClock.elapsedMs(question.id, now.value) / 1000),
+  isSlow: isSlowQuestion(question, Math.floor(questionClock.elapsedMs(question.id, now.value) / 1000)),
+  answerEvidence: getAnswerEvidence(question, skillPool.repository),
 })))
 const correctCount = computed(() => results.value.filter((item) => item.isCorrect).length)
+const evidenceNeedsAttentionCount = computed(() => results.value.filter((item) => item.answerEvidence.key !== 'fenbi').length)
+const reviewFlagCount = computed(() => results.value.filter((item) => !item.isCorrect || item.isUncertain || item.isSlow).length)
 const moduleStats = computed(() => {
   const grouped = new Map()
   for (const item of results.value) {
@@ -87,6 +146,22 @@ function shuffle(items) {
 function isSkillQuestion(question) {
   return question.sourceSystem === skillPool.repository
     || question.sourceUrl?.includes(`/${skillPool.repository}/`)
+}
+
+function isSlowQuestion(question, seconds) {
+  const kind = `${question.module || ''} ${question.type || ''}`
+  if (/图形推理|图形判断/.test(kind)) return seconds > 90
+  if (/类比推理|逻辑判断/.test(kind)) return seconds > 60
+  return false
+}
+
+function isReviewPriority(question) {
+  return Boolean(mistakeCounts.value[question.id])
+    || questionHistory.value[question.id]?.some((item) => !item.isCorrect || item.isUncertain || item.isSlow)
+}
+
+function questionSeconds(questionId) {
+  return Math.floor(questionClock.elapsedMs(questionId, now.value) / 1000)
 }
 
 function allocateModuleTargets(count) {
@@ -119,9 +194,23 @@ async function loadSkillIndex(signal) {
   return skillIndexPromise
 }
 
-async function drawQuestions(signal) {
+async function drawQuestions(signal, scope = 'mixed') {
+  if (scope === 'pending-originals') {
+      const priority = pendingOriginalQuestions.value
+      .filter(isReviewPriority)
+      .sort((a, b) => (mistakeCounts.value[b.id] || 0) - (mistakeCounts.value[a.id] || 0)
+        || (questionHistory.value[b.id]?.at(-1)?.finishedAt || '').localeCompare(questionHistory.value[a.id]?.at(-1)?.finishedAt || ''))
+      .slice(0, 10)
+    const chosen = new Set(priority.map((question) => question.id))
+    const rest = shuffle(pendingOriginalQuestions.value.filter((question) => !chosen.has(question.id)))
+    const selected = [...priority, ...rest.slice(0, questionCount - priority.length)]
+    if (selected.length !== questionCount) throw new Error(`待验证原题目前只有 ${selected.length} 道可抽，无法组成20题。`)
+    poolNotice.value = `本轮从 ${pendingOriginalQuestions.value.length} 道待验证记录对应的原题中抽取20道。此模式用于复做原题；答对不会自动清除“独立运用待验证”状态。`
+    return shuffle(selected)
+  }
+
   const previousMistakes = availableQuestions.value
-    .filter((question) => mistakeCounts.value[question.id] || questionHistory.value[question.id]?.some((item) => !item.isCorrect))
+    .filter(isReviewPriority)
     .sort((a, b) => (mistakeCounts.value[b.id] || 0) - (mistakeCounts.value[a.id] || 0)
       || (questionHistory.value[b.id]?.at(-1)?.finishedAt || '').localeCompare(questionHistory.value[a.id]?.at(-1)?.finishedAt || ''))
   const priority = previousMistakes.slice(0, 10)
@@ -132,14 +221,14 @@ async function drawQuestions(signal) {
     .slice(0, Math.min(5, questionCount - priority.length))
   for (const question of previouslyDone) chosen.add(question.id)
 
-  const localPool = shuffle(questions.filter((question) => !chosen.has(question.id)))
+  const localPool = shuffle(questions.value.filter((question) => !chosen.has(question.id)))
   const localQuestions = localPool.slice(0, Math.min(5, questionCount - priority.length - previouslyDone.length))
   for (const question of localQuestions) chosen.add(question.id)
 
   const skillCount = questionCount - priority.length - previouslyDone.length - localQuestions.length
   let remote = { questions: [], failures: [] }
   if (skillCount > 0) {
-    const knownSkillQuestions = questions.filter(isSkillQuestion)
+    const knownSkillQuestions = questions.value.filter(isSkillQuestion)
     const excludedIds = new Set([
       ...Object.keys(questionHistory.value),
       ...Object.keys(mistakeCounts.value),
@@ -179,20 +268,25 @@ async function drawQuestions(signal) {
   return shuffle(complete)
 }
 
-async function startQuiz() {
+async function startQuiz(scope = 'mixed') {
   if (loadingQuiz.value) return
   loadingQuiz.value = true
+  currentRunScope.value = scope
   poolNotice.value = ''
   const controller = new AbortController()
   const timeout = window.setTimeout(() => controller.abort(), 9000)
   try {
-    selectedQuestions.value = await drawQuestions(controller.signal)
+    await loadLocalQuestionData()
+    selectedQuestions.value = await drawQuestions(controller.signal, scope)
     answers.value = {}
+    uncertainAnswers.value = {}
     currentIndex.value = 0
     startedAt.value = Date.now()
     submittedAt.value = 0
     confirmSubmit.value = false
+    questionClock.reset()
     mode.value = 'answer'
+    questionClock.select(selectedQuestions.value[0]?.id)
     scrollToTop()
   } catch (error) {
     poolNotice.value = `${error.message} 本轮未开始；可以重试，网络不可用时请稍后再试。`
@@ -205,12 +299,16 @@ async function startQuiz() {
 function startMistakeReview(question) {
   selectedQuestions.value = [question]
   answers.value = {}
+  uncertainAnswers.value = {}
   currentIndex.value = 0
   startedAt.value = Date.now()
   submittedAt.value = 0
   mistakeResult.value = null
   confirmSubmit.value = false
+  currentRunScope.value = 'mixed'
+  questionClock.reset()
   mode.value = 'mistake-answer'
+  questionClock.select(question.id)
   scrollToTop()
 }
 
@@ -219,9 +317,18 @@ function selectAnswer(label) {
   answers.value[currentQuestion.value.id] = label
 }
 
+function toggleUncertain() {
+  const id = currentQuestion.value?.id
+  if (!id) return
+  uncertainAnswers.value = { ...uncertainAnswers.value, [id]: !uncertainAnswers.value[id] }
+}
+
 function goTo(index) {
-  if (index < 0 || index >= questionCount) return
+  if (index < 0 || index >= selectedQuestions.value.length) return
+  if (index === currentIndex.value) return
+  questionClock.pause()
   currentIndex.value = index
+  questionClock.select(selectedQuestions.value[index]?.id)
   confirmSubmit.value = false
   scrollToTop()
 }
@@ -231,6 +338,8 @@ function requestSubmit() {
 }
 
 function submitQuiz() {
+  questionClock.pause()
+  now.value = Date.now()
   submittedAt.value = Date.now()
   const nextMistakes = { ...mistakeCounts.value }
   const attempt = {
@@ -239,12 +348,14 @@ function submitQuiz() {
     durationSeconds: elapsedSeconds.value,
     correct: correctCount.value,
     total: questionCount,
-    answers: results.value.map(({ id, answer, correct, isCorrect }) => ({ id, answer, correct, isCorrect })),
+    answers: results.value.map(({ id, answer, correct, isCorrect, isUncertain, durationSeconds, isSlow }) => ({
+      id, answer, correct, isCorrect, isUncertain, durationSeconds, isSlow,
+    })),
   }
 
   for (const item of results.value) {
     if (!item.isCorrect) nextMistakes[item.id] = (nextMistakes[item.id] || 0) + 1
-    recordQuestionAttempt(item, attempt.id, '20题复测', attempt.durationSeconds)
+    recordQuestionAttempt(item, attempt.id, '20题复测', item.durationSeconds)
   }
   const nextArchive = { ...questionArchive.value }
   for (const item of results.value) {
@@ -262,13 +373,19 @@ function submitQuiz() {
 function submitMistakeReview() {
   const question = currentQuestion.value
   if (!question || !answers.value[question.id]) return
+  questionClock.pause()
+  now.value = Date.now()
   submittedAt.value = Date.now()
   const answer = answers.value[question.id]
+  const durationSeconds = questionSeconds(question.id)
   const result = {
     ...question,
     answer,
     isCorrect: answer === question.correct,
-    durationSeconds: elapsedSeconds.value,
+    isUncertain: Boolean(uncertainAnswers.value[question.id]),
+    durationSeconds,
+    isSlow: isSlowQuestion(question, durationSeconds),
+    answerEvidence: getAnswerEvidence(question, skillPool.repository),
     finishedAt: new Date(submittedAt.value).toISOString(),
   }
   const id = `${submittedAt.value}-${Math.random().toString(36).slice(2, 8)}`
@@ -289,6 +406,9 @@ function recordQuestionAttempt(item, sessionId, kind, durationSeconds) {
     correct: item.correct,
     isCorrect: Boolean(item.isCorrect),
     durationSeconds,
+    durationScope: 'question',
+    isUncertain: Boolean(item.isUncertain),
+    isSlow: Boolean(item.isSlow),
   }
   questionHistory.value = {
     ...questionHistory.value,
@@ -299,7 +419,7 @@ function recordQuestionAttempt(item, sessionId, kind, durationSeconds) {
 function persistLocalRecords() {
   try {
     localStorage.setItem(storageKey, JSON.stringify({
-      schemaVersion: 2,
+      schemaVersion: 3,
       attempts: attempts.value,
       mistakeCounts: mistakeCounts.value,
       questionHistory: questionHistory.value,
@@ -316,7 +436,15 @@ function readLocalRecords() {
     if (Array.isArray(saved.attempts)) attempts.value = saved.attempts
     if (saved.mistakeCounts && typeof saved.mistakeCounts === 'object') mistakeCounts.value = saved.mistakeCounts
     if (saved.questionHistory && typeof saved.questionHistory === 'object') {
-      questionHistory.value = saved.questionHistory
+      questionHistory.value = Object.fromEntries(Object.entries(saved.questionHistory).map(([id, rows]) => [
+        id,
+        Array.isArray(rows) ? rows.map((row) => ({
+          ...row,
+          durationScope: row.durationScope || (row.kind === '单题复测' ? 'question' : 'round'),
+          isUncertain: Boolean(row.isUncertain),
+          isSlow: Boolean(row.isSlow),
+        })) : [],
+      ]))
     } else {
       // Upgrade the earlier prototype's retained session rows without discarding them.
       const migrated = {}
@@ -332,6 +460,9 @@ function readLocalRecords() {
             correct: answer.correct || '',
             isCorrect: Boolean(answer.isCorrect),
             durationSeconds: attempt.durationSeconds || 0,
+            durationScope: 'round',
+            isUncertain: Boolean(answer.isUncertain),
+            isSlow: Boolean(answer.isSlow),
           })
         }
       }
@@ -390,17 +521,37 @@ function questionLabel(number) {
   return typeof number === 'number' ? '第 ' + number + ' 题' : number
 }
 
+function syncQuestionClock() {
+  if (browserIsActive()) questionClock.resume()
+  else questionClock.pause()
+}
+
 onMounted(() => {
   readLocalRecords()
-  timer = window.setInterval(() => { now.value = Date.now() }, 1000)
-  if (new URLSearchParams(window.location.search).get('start') === '1') {
+  void loadLocalQuestionData().catch(() => {
+    poolNotice.value = '本地题库暂时未能载入；点击开始时会重试，题库恢复后才能显示完整题目。'
+  })
+  timer = window.setInterval(() => {
+    now.value = Date.now()
+    syncQuestionClock()
+  }, 1000)
+  window.addEventListener('focus', syncQuestionClock)
+  window.addEventListener('blur', syncQuestionClock)
+  document.addEventListener('visibilitychange', syncQuestionClock)
+  const params = new URLSearchParams(window.location.search)
+  const scope = params.get('scope') === 'pending-originals' ? 'pending-originals' : 'mixed'
+  if (params.get('start') === '1') {
     window.history.replaceState(window.history.state, '', `${window.location.pathname}${window.location.hash}`)
-    void startQuiz()
+    void startQuiz(scope)
   }
 })
 
 onBeforeUnmount(() => {
   if (timer) window.clearInterval(timer)
+  questionClock.pause()
+  window.removeEventListener('focus', syncQuestionClock)
+  window.removeEventListener('blur', syncQuestionClock)
+  document.removeEventListener('visibilitychange', syncQuestionClock)
 })
 </script>
 
@@ -411,8 +562,10 @@ onBeforeUnmount(() => {
         <div class="intro-copy">
           <span class="eyebrow">行测复测 · 全站错题持续积累</span>
           <h1>错题再练，交卷即看结果</h1>
-          <p>每次抽取20道题：从2020年及以后的技能真题源按需加载，也会保留网站已有题目；以前错过的题优先进入本轮。交卷后自动计分，历次作答留在当前浏览器。</p>
-          <button class="button button--primary" type="button" :disabled="loadingQuiz" @click="startQuiz">{{ loadingQuiz ? '正在组 20 题…' : '开始20题复测' }} <span v-if="!loadingQuiz" aria-hidden="true">→</span></button>
+          <p>每次抽取20道题：从2020年及以后的技能真题源按需加载，也会保留网站已有题目；错题、不确定题和按题型阈值偏慢的题优先进入本轮。交卷后自动计分，逐题用时和历次作答留在当前浏览器。</p>
+          <button class="button button--primary" type="button" :disabled="loadingQuiz" @click="startQuiz('mixed')">{{ loadingQuiz ? '正在组 20 题…' : '开始20题复测' }} <span v-if="!loadingQuiz" aria-hidden="true">→</span></button>
+          <button class="button button--outline pending-scope-button" type="button" :disabled="loadingQuiz || (questionDataLoaded && pendingOriginalQuestions.length < questionCount)" @click="startQuiz('pending-originals')">{{ questionDataLoaded ? `复做待验证原题（${pendingOriginalQuestions.length} 道）` : '读取题库后复做待验证原题' }}</button>
+          <small class="pending-scope-note">复做原题用于回忆和检查，不会自动清除“独立运用待验证”状态。</small>
           <a class="button button--quiet library-entry" :href="withBase('/retest/library/')">查看全站题库 →</a>
           <a class="button button--quiet library-entry" :href="withBase('/retest/essay.html')">申论复测 →</a>
           <small class="privacy-note">新记录保存在当前浏览器，可按题查看历次作答；不改写原有成绩和复测台账。</small>
@@ -426,10 +579,12 @@ onBeforeUnmount(() => {
       <p v-if="poolNotice" class="pool-notice" role="status">{{ poolNotice }}</p>
 
       <section class="how-it-works" aria-label="测验流程">
-        <div><span>01</span><b>抽题</b><small>从2020年起的技能真题源抽题；网站已有题和曾错题继续保留。</small></div>
-        <div><span>02</span><b>作答</b><small>可跳题、改答案，也可返回检查；答案暂不显示。</small></div>
-        <div><span>03</span><b>复习</b><small>历次作答按题保存，错题可单独重做，重复错误不会覆盖旧记录。</small></div>
+        <div><span>01</span><b>抽题</b><small>从2020年起的技能真题源抽题；答错、不确定或按题型阈值偏慢的题优先复习。</small></div>
+        <div><span>02</span><b>作答</b><small>可跳题、改答案，也可返回检查；可以标记“猜测 / 不确定”。</small></div>
+        <div><span>03</span><b>复习</b><small>逐题用时和标记会按题保存；历史记录保留，熟题答对不自动认定掌握。</small></div>
       </section>
+
+      <RecordBackup />
 
       <section class="record-section" v-if="attempts.length">
         <div class="section-title"><div><span class="eyebrow">当前浏览器</span><h2>最近复测记录</h2></div><span>{{ attempts.length }} 次</span></div>
@@ -483,9 +638,35 @@ onBeforeUnmount(() => {
         <div v-else class="empty-state">还没有行测错题记录。完成第一组复测后，错题会自动出现在这里。</div>
       </section>
 
+      <section v-if="flaggedReviewRecords.length" class="record-section mistake-bank">
+        <div class="section-title">
+          <div><span class="eyebrow">答对也值得回看</span><h2>不确定与耗时题</h2></div>
+          <span>{{ flaggedReviewRecords.length }} 道带复盘标记</span>
+        </div>
+        <div class="mistake-tools">
+          <label><span class="sr-only">筛选不确定或耗时题</span><input v-model="mistakeFilter" type="search" placeholder="按模块、题目或来源搜索"></label>
+          <span>保留猜测标记与题型阈值耗时记录</span>
+        </div>
+        <div v-if="visibleFlaggedRecords.length" class="mistake-list">
+          <article v-for="record in visibleFlaggedRecords" :key="record.question.id" class="mistake-row">
+            <div class="mistake-row__copy">
+              <div class="mistake-row__tags">
+                <span>{{ record.question.module }}</span><span>{{ questionLabel(record.question.number) }}</span>
+                <span v-if="record.markedAttempts.some((item) => item.isUncertain)" class="review-flag review-flag--uncertain">不确定 / 猜题</span>
+                <span v-if="record.markedAttempts.some((item) => item.isSlow)" class="review-flag review-flag--slow">耗时较长</span>
+              </div>
+              <strong>{{ record.question.title || record.question.source }}</strong>
+              <small>最近一次 {{ record.lastAttempt?.isCorrect ? '答对' : '答错 / 未答' }} · <template v-if="record.lastAttempt?.durationScope === 'round'">旧记录整卷用时 {{ formatDuration(record.lastAttempt?.durationSeconds || 0) }}</template><template v-else>本题用时 {{ formatDuration(record.lastAttempt?.durationSeconds || 0) }}</template></small>
+            </div>
+            <button class="button button--outline mistake-review-button" type="button" @click="startMistakeReview(record.question)">单独再做</button>
+          </article>
+        </div>
+        <div v-else class="empty-state">没有找到匹配题目，换个模块名或关键词试试。</div>
+      </section>
+
       <aside class="source-note">
         <b>题库从哪里来</b>
-        <p>技能题源覆盖2020—2026年六个模块，共 {{ skillPool.indexedQuestions.toLocaleString('zh-CN') }} 道、{{ skillPool.eligibleSourceFiles.toLocaleString('zh-CN') }} 份原题文件，题目在点击开始后从固定版本按需读取并校验；这样不用把约百兆原始资料一次塞进网页。网站本身另有 {{ bank.imported }} 道已整理题，包括综合真题、历史错题和知识点例题。<a :href="skillPool.questionCountSources[0]" target="_blank" rel="noopener">查看上游模块索引 ↗</a></p>
+        <p>技能题源覆盖2020—2026年六个模块，共 {{ skillPool.indexedQuestions.toLocaleString('zh-CN') }} 道、{{ skillPool.eligibleSourceFiles.toLocaleString('zh-CN') }} 份原题文件，题目在点击开始后从固定版本按需读取并校验；这样不用把约百兆原始资料一次塞进网页。网站本身另有 {{ questionDataLoaded ? localQuestionCount : '正在载入' }} 道已整理题，包括综合真题、历史错题和知识点例题。<a :href="skillPool.questionCountSources[0]" target="_blank" rel="noopener">查看上游模块索引 ↗</a></p>
         <p>技能题的参考答案取自对应固定版原卷，尚未逐题与粉笔核对；遇到题面或答案疑问时，需按同题版本到粉笔核对。只有完整四选项且答案明确为A—D的题进入自动判分。浏览器保存每题历次作答；熟题得分不代表陌生题水平。</p>
         <p><a :href="pageHref('/retest/answer-evidence')">查看答案核对记录（含答案）↗</a></p>
       </aside>
@@ -495,7 +676,10 @@ onBeforeUnmount(() => {
     <template v-else-if="(mode === 'answer' || mode === 'mistake-answer') && currentQuestion">
       <header class="quiz-topbar">
         <div><span class="eyebrow">{{ mode === 'mistake-answer' ? '行测单题复测' : '行测20题复测' }} · 第 {{ currentIndex + 1 }} / {{ activeQuestionCount }} 题</span><h1>按自己的节奏完成</h1></div>
-        <div class="timer-pill"><span class="timer-dot"></span><span>用时</span><strong>{{ formatDuration(elapsedSeconds) }}</strong></div>
+        <div class="timer-pills">
+          <div class="timer-pill"><span class="timer-dot"></span><span>整卷</span><strong>{{ formatDuration(elapsedSeconds) }}</strong></div>
+          <div class="timer-pill timer-pill--question"><span>本题</span><strong>{{ formatDuration(questionSeconds(currentQuestion.id)) }}</strong></div>
+        </div>
       </header>
       <p v-if="poolNotice" class="pool-notice" role="status">{{ poolNotice }}</p>
       <div class="progress-track" role="progressbar" :aria-valuenow="answeredCount" :aria-valuemin="0" :aria-valuemax="activeQuestionCount">
@@ -521,6 +705,12 @@ onBeforeUnmount(() => {
             </label>
           </fieldset>
           <div class="source-line"><span>{{ currentQuestion.source }}</span></div>
+          <div class="question-review-tools">
+            <button class="uncertainty-button" :class="{ active: uncertainAnswers[currentQuestion.id] }" type="button" :aria-pressed="Boolean(uncertainAnswers[currentQuestion.id])" @click="toggleUncertain">
+              {{ uncertainAnswers[currentQuestion.id] ? '已标记：不确定 / 猜题' : '标记不确定 / 猜题' }}
+            </button>
+            <small>本题用时按当前题目页面可见时间累计。</small>
+          </div>
 
           <div v-if="mode === 'answer'" class="question-actions">
             <button class="button button--quiet" type="button" :disabled="currentIndex === 0" @click="goTo(currentIndex - 1)">← 上一题</button>
@@ -540,7 +730,7 @@ onBeforeUnmount(() => {
         <aside class="question-nav">
           <div class="question-nav__heading"><strong>{{ mode === 'mistake-answer' ? '单题复测' : '答题卡' }}</strong><span>{{ answeredCount }}/{{ activeQuestionCount }}</span></div>
           <div class="number-grid">
-            <button v-for="(question, index) in selectedQuestions" :key="question.id" type="button" :class="{ 'is-current': index === currentIndex, 'is-answered': answers[question.id] }" :aria-label="`第${index + 1}题${answers[question.id] ? '已作答' : '未作答'}`" @click="goTo(index)">{{ index + 1 }}</button>
+            <button v-for="(question, index) in selectedQuestions" :key="question.id" type="button" :class="{ 'is-current': index === currentIndex, 'is-answered': answers[question.id], 'is-uncertain': uncertainAnswers[question.id] }" :aria-label="`第${index + 1}题${answers[question.id] ? '已作答' : '未作答'}${uncertainAnswers[question.id] ? '，已标记不确定' : ''}`" @click="goTo(index)">{{ index + 1 }}</button>
           </div>
           <div class="nav-legend"><span><i class="legend-dot legend-dot--current"></i>当前题</span><span><i class="legend-dot legend-dot--answered"></i>已作答</span></div>
           <button v-if="mode === 'answer'" class="button button--outline" type="button" @click="requestSubmit">交卷并看结果</button>
@@ -554,7 +744,7 @@ onBeforeUnmount(() => {
       <header class="result-hero">
         <span class="eyebrow">单题复测已记录 · {{ formatDate(mistakeResult.finishedAt) }}</span>
         <div class="score-line"><strong>{{ mistakeResult.isCorrect ? '答对' : '再看' }}</strong><b>你的答案 {{ answerText(mistakeResult) }} · 参考答案 {{ mistakeResult.correct }}</b></div>
-        <p>用时 {{ formatDuration(mistakeResult.durationSeconds) }}。这次结果已追加保存；过去答错记录仍保留。</p>
+        <p>本题用时 {{ formatDuration(mistakeResult.durationSeconds) }}<template v-if="mistakeResult.isUncertain"> · 你标记了不确定 / 猜题</template><template v-if="mistakeResult.isSlow"> · 超过该题型复盘阈值</template>。这次结果已追加保存；过去记录仍保留。</p>
         <div class="result-actions">
           <button class="button button--primary" type="button" @click="startMistakeReview(mistakeResult)">再复测一次 →</button>
           <button class="button button--quiet" type="button" @click="mode = 'intro'">回到错题复测库</button>
@@ -572,6 +762,7 @@ onBeforeUnmount(() => {
               </div>
             </div>
             <p class="source-line">{{ mistakeResult.source }}</p>
+            <div class="answer-evidence" :class="`answer-evidence--${mistakeResult.answerEvidence.key}`"><strong>答案依据：{{ mistakeResult.answerEvidence.label }}</strong><span>{{ mistakeResult.answerEvidence.explanation }}</span></div>
             <p v-if="mistakeResult.gradingNote" class="grading-note">{{ mistakeResult.gradingNote }}</p>
             <a v-if="mistakeResult.reviewUrl" class="review-link" :href="pageHref(mistakeResult.reviewUrl)" target="_blank" rel="noopener">打开原题解析 ↗</a>
             <a v-if="mistakeResult.fenbiQuestionUrl" class="review-link review-link--source" :href="mistakeResult.fenbiQuestionUrl" target="_blank" rel="noopener">粉笔题目与答案 ↗</a>
@@ -582,7 +773,7 @@ onBeforeUnmount(() => {
           <div class="section-title"><div><span class="eyebrow">本题档案</span><h2>历次作答</h2></div><span>{{ (questionHistory[mistakeResult.id] || []).length }} 次</span></div>
           <div class="history-list">
             <div v-for="(item, index) in [...(questionHistory[mistakeResult.id] || [])].reverse()" :key="item.sessionId + '-' + index" class="history-row question-history-row">
-              <span>{{ formatDate(item.finishedAt) }} · {{ item.kind }}</span><strong>你的答案 {{ item.answer || '未作答' }}</strong><span>参考 {{ item.correct }}</span><span :class="item.isCorrect ? 'status-good' : 'status-bad'">{{ item.isCorrect ? '答对' : '答错' }}</span>
+              <span>{{ formatDate(item.finishedAt) }} · {{ item.kind }}</span><strong>你的答案 {{ item.answer || '未作答' }}</strong><span>参考 {{ item.correct }}</span><span>{{ item.durationScope === 'round' ? '整卷' : '本题' }} {{ formatDuration(item.durationSeconds || 0) }}</span><span :class="item.isCorrect ? 'status-good' : 'status-bad'">{{ item.isCorrect ? '答对' : '答错' }}<template v-if="item.isUncertain"> · 不确定</template><template v-if="item.isSlow"> · 慢题</template></span>
             </div>
           </div>
         </section>
@@ -594,8 +785,10 @@ onBeforeUnmount(() => {
       <header class="result-hero">
         <span class="eyebrow">本轮复测完成</span>
         <div class="score-line"><strong>{{ correctCount * 5 }}</strong><span>/ 100 分</span><i></i><b>答对 {{ correctCount }} / {{ questionCount }} 题</b></div>
-        <p>本轮用时 {{ formatDuration(elapsedSeconds) }}。答错和未作答的题已加入本机优先复测列表；答对只记本轮结果，不自动判定为已掌握。</p>
-        <div class="result-actions"><button class="button button--primary" type="button" @click="startQuiz">再抽20题 →</button><button class="button button--quiet" type="button" @click="mode = 'intro'">回到复测首页</button></div>
+        <p v-if="currentRunScope === 'pending-originals'">本轮用时 {{ formatDuration(elapsedSeconds) }}。这是对已收录原题的复做；即使答对，也不会自动清除“独立运用待验证”状态。</p>
+        <p v-else>本轮用时 {{ formatDuration(elapsedSeconds) }}。错题、不确定题和超过既定题型阈值的题会进入本机优先复习；正确答案仍需看题目依据，得分不自动等于掌握。</p>
+        <p v-if="evidenceNeedsAttentionCount" class="score-evidence-note">本轮 {{ evidenceNeedsAttentionCount }} 道题的答案依据不是“粉笔题库核对”状态；请逐题查看答案标识和来源说明。</p>
+        <div class="result-actions"><button class="button button--primary" type="button" @click="startQuiz(currentRunScope)">再抽20题 →</button><button class="button button--quiet" type="button" @click="mode = 'intro'">回到复测首页</button></div>
       </header>
 
       <section class="module-results">
@@ -609,12 +802,12 @@ onBeforeUnmount(() => {
       </section>
 
       <section class="review-section">
-        <div class="section-title"><div><span class="eyebrow">逐题核对</span><h2>答案与原题</h2></div><span>{{ results.filter((item) => !item.isCorrect).length }} 道需回看</span></div>
-        <details v-for="(item, index) in results" :key="item.id" class="result-item" :open="!item.isCorrect">
+        <div class="section-title"><div><span class="eyebrow">逐题核对</span><h2>答案与原题</h2></div><span>{{ reviewFlagCount }} 道带复盘标记</span></div>
+        <details v-for="(item, index) in results" :key="item.id" class="result-item" :open="!item.isCorrect || item.isUncertain || item.isSlow">
           <summary>
             <span class="result-index" :class="item.isCorrect ? 'result-index--correct' : 'result-index--wrong'">{{ index + 1 }}</span>
-            <span class="result-summary-copy"><strong>{{ item.module }} · {{ questionLabel(item.number) }}</strong><small>你的答案：{{ answerText(item) }}　参考答案：{{ item.correct }}</small></span>
-            <span class="result-status" :class="item.isCorrect ? 'result-status--correct' : 'result-status--wrong'">{{ !item.answer ? '未作答' : item.isCorrect ? '答对' : '答错' }}</span>
+            <span class="result-summary-copy"><strong>{{ item.module }} · {{ questionLabel(item.number) }}</strong><small>你的答案：{{ answerText(item) }}　参考答案：{{ item.correct }}　·　本题 {{ formatDuration(item.durationSeconds) }}</small></span>
+            <span class="result-status" :class="item.isCorrect ? 'result-status--correct' : 'result-status--wrong'">{{ !item.answer ? '未作答' : item.isCorrect ? '答对' : '答错' }}<template v-if="item.isUncertain"> · 不确定</template><template v-if="item.isSlow"> · 耗时长</template></span>
           </summary>
           <div class="result-detail">
             <div v-if="item.materialHtml" class="result-material"><b>{{ item.materialTitle }}</b><div class="material-content" v-html="formatHtml(item.materialHtml)"></div></div>
@@ -625,6 +818,7 @@ onBeforeUnmount(() => {
               </div>
             </div>
             <p class="source-line">{{ item.source }}</p>
+            <div class="answer-evidence" :class="`answer-evidence--${item.answerEvidence.key}`"><strong>答案依据：{{ item.answerEvidence.label }}</strong><span>{{ item.answerEvidence.explanation }}</span></div>
             <p v-if="item.gradingNote" class="grading-note">{{ item.gradingNote }}</p>
             <a v-if="item.reviewUrl" class="review-link" :href="pageHref(item.reviewUrl)" target="_blank" rel="noopener">打开原复盘与解析 ↗</a>
             <a v-if="item.fenbiQuestionUrl" class="review-link review-link--source" :href="item.fenbiQuestionUrl" target="_blank" rel="noopener">粉笔题目与答案 ↗</a>
@@ -654,6 +848,8 @@ onBeforeUnmount(() => {
 .button--quiet:hover, .button--outline:hover { border-color: var(--quiz-accent); color: var(--quiz-accent); }
 .library-entry { margin-left: 8px; text-decoration: none; }
 .button--outline { width: 100%; border-color: color-mix(in srgb, var(--quiz-accent) 32%, var(--vp-c-divider)); color: var(--quiz-accent); background: var(--vp-c-bg); }
+.pending-scope-button { margin-top: 10px; }
+.pending-scope-note { display: block; margin-top: 6px; color: var(--vp-c-text-2); font-size: 11px; line-height: 1.55; }
 .privacy-note { display: block; margin-top: 11px; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.55; }
 .pool-notice { margin: 12px 0 0; padding: 11px 14px; border: 1px solid var(--vp-c-divider); border-left: 3px solid var(--quiz-accent); border-radius: 10px; color: var(--vp-c-text-2); background: var(--vp-c-bg-soft); font-size: 12px; line-height: 1.6; }
 .intro-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }
@@ -700,8 +896,11 @@ onBeforeUnmount(() => {
 .storage-warning { margin: 14px 0 0; color: #b45309; font-size: 13px; }
 .quiz-topbar { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 13px; }
 .quiz-topbar h1 { margin: 4px 0 0; border: 0; font-size: clamp(23px, 3vw, 30px); }
+.timer-pills { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
 .timer-pill { display: flex; align-items: center; gap: 8px; padding: 9px 13px; border: 1px solid var(--vp-c-divider); border-radius: 999px; color: var(--vp-c-text-2); background: var(--vp-c-bg); font-size: 12px; }
 .timer-pill strong { color: var(--vp-c-text-1); font-size: 14px; font-variant-numeric: tabular-nums; }
+.timer-pill--question { border-color: color-mix(in srgb, var(--quiz-accent) 25%, var(--vp-c-divider)); }
+.timer-pill--question strong { color: var(--quiz-accent); }
 .timer-dot { width: 7px; height: 7px; border-radius: 50%; background: #22a06b; }
 .progress-track, .module-track { overflow: hidden; height: 8px; border-radius: 99px; background: var(--vp-c-bg-soft); }
 .progress-track > span, .module-track > span { display: block; height: 100%; border-radius: inherit; background: var(--quiz-accent); transition: width .2s; }
@@ -730,6 +929,11 @@ onBeforeUnmount(() => {
 .answer-option__content { min-width: 0; padding-top: 3px; font-size: 14px; line-height: 1.65; }
 .answer-option__content :deep(p) { margin: 0; }
 .source-line { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 5px 12px; margin: 16px 0 0; padding-top: 12px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 11px; line-height: 1.55; }
+.question-review-tools { display: flex; align-items: center; flex-wrap: wrap; gap: 9px 12px; margin-top: 12px; }
+.question-review-tools > small { color: var(--vp-c-text-2); font-size: 11px; line-height: 1.5; }
+.uncertainty-button { min-height: 36px; padding: 0 11px; border: 1px solid var(--vp-c-divider); border-radius: 9px; color: var(--vp-c-text-2); background: var(--vp-c-bg); font: inherit; font-size: 11px; font-weight: 700; cursor: pointer; }
+.uncertainty-button:hover, .uncertainty-button.active { border-color: #c2841b; color: #8a5700; background: #fff7e7; }
+.uncertainty-button:focus-visible { outline: 3px solid color-mix(in srgb, #c2841b 35%, transparent); outline-offset: 2px; }
 .question-actions, .result-actions { display: flex; justify-content: space-between; gap: 10px; margin-top: 19px; }
 .submit-confirm { display: flex; justify-content: space-between; align-items: center; gap: 18px; margin-top: 16px; padding: 15px; border: 1px solid color-mix(in srgb, var(--quiz-accent) 28%, var(--vp-c-divider)); border-radius: 12px; background: var(--quiz-accent-soft); }
 .submit-confirm strong { font-size: 13px; }
@@ -743,6 +947,7 @@ onBeforeUnmount(() => {
 .number-grid button { aspect-ratio: 1; min-width: 0; border: 1px solid var(--vp-c-divider); border-radius: 9px; color: var(--vp-c-text-2); background: var(--vp-c-bg); font-size: 12px; font-weight: 700; cursor: pointer; }
 .number-grid button.is-current { border-color: var(--quiz-accent); color: #fff; background: var(--quiz-accent); }
 .number-grid button.is-answered:not(.is-current) { border-color: #9dd9bf; color: #137a50; background: #eaf8f0; }
+.number-grid button.is-uncertain:not(.is-current) { border-color: #d8a343; color: #895400; background: #fff5dc; }
 .nav-legend { display: flex; justify-content: space-between; margin: 0 0 14px; color: var(--vp-c-text-2); font-size: 10px; }
 .nav-legend span { display: flex; align-items: center; gap: 5px; }
 .legend-dot { width: 8px; height: 8px; border-radius: 3px; background: var(--vp-c-bg-soft); }
@@ -756,6 +961,7 @@ onBeforeUnmount(() => {
 .score-line > i { width: 1px; height: 18px; margin: 0 5px; background: var(--vp-c-divider); }
 .score-line > b { font-size: 15px; }
 .result-hero > p { max-width: 790px; margin: 8px 0 0; color: var(--vp-c-text-2); font-size: 13px; line-height: 1.7; }
+.score-evidence-note { padding: 9px 12px; border-left: 3px solid #ca8b24; border-radius: 6px; background: color-mix(in srgb, #f6c95f 15%, var(--vp-c-bg)); }
 .result-actions { justify-content: flex-start; }
 .module-results { padding: 20px; }
 .module-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 25px; }
@@ -787,6 +993,15 @@ onBeforeUnmount(() => {
 .review-option .answer-letter { width: 25px; height: 25px; font-size: 11px; }
 .review-option :deep(p) { margin: 0; }
 .grading-note { margin: 12px 0 0; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.7; }
+.answer-evidence { display: grid; gap: 4px; margin-top: 12px; padding: 11px 13px; border: 1px solid var(--vp-c-divider); border-left: 3px solid var(--quiz-accent); border-radius: 9px; background: var(--vp-c-bg-soft); }
+.answer-evidence strong { font-size: 12px; }
+.answer-evidence span { color: var(--vp-c-text-2); font-size: 11px; line-height: 1.6; }
+.answer-evidence--fenbi { border-left-color: #14865d; }
+.answer-evidence--fenbi strong { color: #147a50; }
+.answer-evidence--disputed, .answer-evidence--upstream, .answer-evidence--unknown, .answer-evidence--personal { border-left-color: #c2841b; }
+.review-flag { border: 1px solid currentColor; }
+.review-flag--uncertain { color: #8a5700 !important; background: #fff4d6 !important; }
+.review-flag--slow { color: #175d64 !important; background: #e9f6f6 !important; }
 .review-link { display: inline-flex; margin-top: 13px; color: var(--quiz-accent); font-size: 12px; font-weight: 700; text-decoration: none; }
 .review-link--source { margin-left: 16px; }
 .review-link:hover { text-decoration: underline; }
@@ -794,6 +1009,10 @@ onBeforeUnmount(() => {
 :global(.dark) .button--primary:hover { background: #274eae; }
 :global(.dark) .number-grid button.is-current { border-color: var(--quiz-action); background: var(--quiz-action); }
 :global(.dark) .number-grid button.is-answered:not(.is-current) { border-color: #286449; color: #8ee0b5; background: #163d2d; }
+:global(.dark) .number-grid button.is-uncertain:not(.is-current), :global(.dark) .uncertainty-button:hover, :global(.dark) .uncertainty-button.active { border-color: #8b692a; color: #f4ce83; background: #3b301a; }
+:global(.dark) .review-flag--uncertain { color: #f4ce83 !important; background: #3b301a !important; }
+:global(.dark) .review-flag--slow { color: #97d7dc !important; background: #17383c !important; }
+:global(.dark) .answer-evidence--fenbi strong { color: #8ee0b5; }
 :global(.dark) .result-index--correct, :global(.dark) .review-option--correct { border-color: #286449; color: #a5e7c2; background: #163d2d; }
 :global(.dark) .result-index--wrong, :global(.dark) .review-option--wrong { border-color: #713933; color: #ffbab1; background: #3c201e; }
 @media (max-width: 850px) {
@@ -812,7 +1031,10 @@ onBeforeUnmount(() => {
   .how-it-works { grid-template-columns: 1fr; gap: 8px; }
   .how-it-works > div { padding: 12px; }
   .quiz-topbar { align-items: flex-start; }
+  .timer-pills { gap: 6px; }
   .timer-pill { gap: 6px; padding: 8px 10px; }
+  .timer-pill span { font-size: 10px; }
+  .timer-pill strong { font-size: 12px; }
   .question-card { padding: 16px 13px; }
   .question-content { font-size: 15px; line-height: 1.8; }
   .mistake-row { align-items: flex-start; gap: 10px; padding: 11px; }
@@ -833,6 +1055,7 @@ onBeforeUnmount(() => {
   .module-grid { grid-template-columns: 1fr; }
   .module-results { padding: 16px 13px; }
   .result-actions { flex-wrap: wrap; }
+  .result-actions .button { flex: 1 1 auto; }
   .result-item > summary { gap: 8px; padding: 11px 10px; }
   .result-summary-copy strong { font-size: 12px; }
   .result-summary-copy small { font-size: 10px; }

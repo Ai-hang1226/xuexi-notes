@@ -495,6 +495,10 @@ export default defineConfig({
       { text: '📗 行测', link: '/xingce/' },
       { text: '📘 申论', link: '/shenlun/' },
       { text: '🧠 错题本', link: '/cuotiben/' },
+      { text: '📝 测验历史', link: '/daily-quizzes/' },
+      { text: '🗺️ 全站地图', link: '/guide/' },
+      { text: '🧮 速算工具', link: '/tools/' },
+      { text: '🖨️ A4打印讲义', link: '/jiangsu/printable.html', target: '_blank', rel: 'noopener' },
       {
         text: '📚 更多',
         items: [

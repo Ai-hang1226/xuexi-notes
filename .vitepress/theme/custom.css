@@ -201,6 +201,24 @@ body {
 /* 中等屏幕收合顶栏，避免首页与长菜单挤压或裁切。 */
 .VPNav .VPNavBar,
 .VPNav .VPNavBar .wrapper { background-color: var(--vp-c-bg); }
+
+/* 宽屏直接展示常用入口；窄屏保留在“更多”中，避免重复和导航拥挤。 */
+.VPNavBarMenu > .VPNavBarMenuLink:nth-of-type(n+5),
+.VPNavScreenMenu > .VPNavScreenMenuLink:nth-of-type(n+5) {
+  display: none;
+}
+@media (min-width: 1600px) {
+  .VPNavBarMenu > .VPNavBarMenuLink:nth-of-type(n+5) {
+    display: flex;
+  }
+  .VPNavBarMenu > .VPNavBarMenuLink:nth-of-type(5) {
+    margin-left: 8px;
+    padding-left: 20px;
+    border-left: 1px solid var(--vp-c-divider);
+  }
+  .VPNavBarMenu > .VPNavBarMenuGroup { display: none; }
+}
+
 @media (min-width: 768px) and (max-width: 1279px) {
   .VPNavBar .VPNavBarMenu,
   .VPNavBar .VPNavBarAppearance,

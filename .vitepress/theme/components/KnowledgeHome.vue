@@ -12,7 +12,6 @@ const practices = [
     detail: `已做题、本站题库与${skillYears}`,
     action: '开始测验',
     path: '/retest/?start=1',
-    primary: true,
   },
   {
     name: '申论复测',
@@ -62,7 +61,6 @@ const shenlunTopics = [
         v-for="item in practices"
         :key="item.name"
         class="practice-card"
-        :class="{ 'practice-card--primary': item.primary }"
         :href="base(item.path)"
       >
         <span class="practice-card__label">{{ item.label }}</span>
@@ -122,7 +120,6 @@ const shenlunTopics = [
   --home-accent: var(--vp-c-brand-1);
   --home-accent-soft: var(--vp-c-brand-soft);
   --home-accent-border: color-mix(in srgb, var(--home-accent) 24%, var(--vp-c-divider));
-  --home-action: var(--vp-c-brand-1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,16 +135,13 @@ const shenlunTopics = [
 .home-kicker { color: var(--home-accent); font-size: 12px; font-weight: 750; letter-spacing: .025em; }
 .home-intro h1 { margin: 8px 0 7px; border: 0; padding: 0; font-size: clamp(27px, 3vw, 36px); line-height: 1.25; letter-spacing: -.025em; }
 .home-intro p { margin: 0; color: var(--vp-c-text-2); font-size: 14px; line-height: 1.7; }
-.home-practices { display: grid; grid-template-columns: 1.12fr 1fr 1fr; gap: 12px; margin-bottom: 30px; }
+.home-practices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 30px; }
 .practice-card { display: grid; align-content: start; gap: 7px; min-width: 0; min-height: 166px; padding: 18px 19px 15px; border: 1px solid var(--vp-c-divider); border-radius: 13px; background: var(--vp-c-bg); transition: transform .16s ease, border-color .16s ease, background .16s ease, box-shadow .16s ease; }
 .practice-card:hover { transform: translateY(-2px); border-color: var(--home-accent); background: var(--home-accent-soft); box-shadow: 0 8px 20px color-mix(in srgb, var(--home-accent) 10%, transparent); }
 .practice-card__label { color: var(--home-accent); font-size: 11px; font-weight: 700; }
 .practice-card > strong { font-size: 20px; line-height: 1.3; }
 .practice-card__detail { min-height: 34px; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.5; }
 .practice-card__action { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 8px; color: var(--home-accent); font-size: 12px; font-weight: 750; }
-.practice-card--primary { border-color: var(--home-accent); color: #fff; background: var(--home-action); box-shadow: 0 8px 22px color-mix(in srgb, var(--home-action) 18%, transparent); }
-.practice-card--primary:hover { background: var(--vp-c-brand-2); }
-.practice-card--primary > strong, .practice-card--primary .practice-card__label, .practice-card--primary .practice-card__detail, .practice-card--primary .practice-card__action { color: #fff !important; }
 .home-library { margin-top: 2px; }
 .library-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 12px; }
 .library-heading h2 { margin: 4px 0 0; font-size: 19px; line-height: 1.35; }
@@ -166,8 +160,6 @@ const shenlunTopics = [
 .knowledge-link__arrow { flex: 0 0 auto; color: var(--home-accent); font-size: 11px; }
 .knowledge-link--progress { grid-column: 1 / -1; }
 .knowledge-home a:focus-visible { outline: 3px solid var(--home-accent); outline-offset: 3px; border-radius: 5px; }
-:global(.dark .knowledge-home) { --home-action: #315DCB; }
-:global(.dark .practice-card--primary:hover) { background: #274eae; }
 @media (max-width: 760px) {
   .knowledge-home { padding: 23px 16px 10px; }
   .home-practices { grid-template-columns: 1fr; gap: 9px; margin-bottom: 23px; }

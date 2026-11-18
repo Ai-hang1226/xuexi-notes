@@ -366,6 +366,94 @@ const sidebar = [
   },
 ]
 
+const sidebarGroup = (title) => sidebar.find((group) => group.text === title)
+const sectionSidebars = {
+  '/xingce/': [
+    {
+      text: '📗 行测学习',
+      collapsed: false,
+      items: [
+        { text: '行测知识入口', link: '/xingce/' },
+        { text: '政治理论', link: '/guide/zhengzhi' },
+        { text: '言语理解', link: '/guide/yanyu' },
+        { text: '数量关系', link: '/guide/shuliang' },
+        { text: '判断推理', link: '/guide/panduan' },
+        { text: '资料分析', link: '/guide/ziliao' },
+        { text: '常识判断', link: '/guide/changshi' },
+        { text: '跨模块图解速查', link: '/xingce/图解速查' },
+        { text: '全站题库', link: '/retest/library/' },
+        { text: '错题复盘', link: '/cuotiben/' },
+      ],
+    },
+  ],
+  '/shenlun/': [
+    {
+      text: '📘 申论学习',
+      collapsed: false,
+      items: [
+        { text: '申论总览', link: '/shenlun/' },
+        { text: '学习路径', link: '/guide/shenlun' },
+        { text: 'Kiwi 五大题型总纲', link: '/shenlun/kiwi-framework' },
+        { text: '归纳概括', link: '/shenlun/guina-gaikuo' },
+        { text: '综合分析', link: '/shenlun/zonghe-fenxi' },
+        { text: '问题对策', link: '/shenlun/wenti-duice' },
+        { text: '公文写作', link: '/shenlun/gongwen-geshi' },
+        { text: '文章写作', link: '/shenlun/wenzhang-xiezuo' },
+        { text: '评分与进步', link: '/shenlun/scores' },
+      ],
+    },
+  ],
+  '/daily-quizzes/': [sidebarGroup('📝 每日测验')],
+  '/cuotiben/': [sidebarGroup('🧠 错题本')],
+  '/share/': [sidebarGroup('✨ 精选导读')],
+  '/tools/': [sidebarGroup('🧰 工具与指南')],
+  '/guide/': [
+    {
+      text: '📗 行测学习路径',
+      collapsed: false,
+      items: [
+        { text: '政治理论', link: '/guide/zhengzhi' },
+        { text: '言语理解', link: '/guide/yanyu' },
+        { text: '数量关系', link: '/guide/shuliang' },
+        { text: '判断推理', link: '/guide/panduan' },
+        { text: '资料分析', link: '/guide/ziliao' },
+        { text: '常识判断', link: '/guide/changshi' },
+      ],
+    },
+    {
+      text: '📘 申论学习路径',
+      collapsed: true,
+      items: [
+        { text: '申论总览', link: '/shenlun/' },
+        { text: 'Kiwi 五大题型总纲', link: '/shenlun/kiwi-framework' },
+        { text: '五大题型导航', link: '/shenlun/五大题型导航' },
+      ],
+    },
+    {
+      text: '📚 网站指南',
+      collapsed: true,
+      items: [
+        { text: '全站地图', link: '/guide/' },
+        { text: '使用指南', link: '/guide/help' },
+        { text: '更新日志', link: '/guide/changelog' },
+        { text: '历史归档', link: '/guide/archive' },
+      ],
+    },
+  ],
+  '/retest/': [
+    {
+      text: '复测工具',
+      collapsed: false,
+      items: [
+        { text: '行测20题复测', link: '/retest/' },
+        { text: '全站题库筛选', link: '/retest/library/' },
+        { text: '申论复测', link: '/retest/essay' },
+        { text: '错题复盘', link: '/cuotiben/' },
+      ],
+    },
+  ],
+}
+
 export default defineConfig({
   title: '考公知识库',
   description: '行测知识、申论训练、真题测验与错题复盘的清晰入口',
@@ -420,7 +508,8 @@ export default defineConfig({
       },
     ],
 
-    sidebar,
+    // 使用按路径收敛的侧栏，让页面只显示当前学习区常用入口，降低平板导航负担。
+    sidebar: sectionSidebars,
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Ai-hang1226/xuexi-notes' }

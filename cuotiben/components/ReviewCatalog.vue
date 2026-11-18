@@ -8,16 +8,18 @@ const types = ['错题', '不确定', '猜题', '耗时较长', '未作答', '�
 const module = ref('全部')
 const type = ref('全部')
 const keyword = ref('')
-const onlyPending = ref(false)
+const pendingFilter = ref('')
 const sort = ref('date-desc')
 
-const isPending = q => /待验证|未验证|独立迁移/.test(q.note || '') || q.types.includes('待复盘')
+const isTransferPending = q => /待验证|未验证|独立迁移/.test(q.note || '')
+const isReviewPending = q => q.types.includes('待复盘')
 const stats = computed(() => ({
   total: questions.length,
   wrong: questions.filter(q => q.types.includes('错题')).length,
   guess: questions.filter(q => q.types.includes('猜题')).length,
   slow: questions.filter(q => q.types.includes('耗时较长')).length,
-  pending: questions.filter(isPending).length,
+  pendingVerification: questions.filter(isTransferPending).length,
+  awaitingReview: questions.filter(isReviewPending).length,
 }))
 const moduleBars = computed(() => {
   const max = Math.max(...modules.map(n => questions.filter(q => q.module === n).length))
@@ -31,7 +33,7 @@ const filtered = computed(() => {
   const list = questions.filter(q =>
     (module.value === '全部' || q.module === module.value) &&
     (type.value === '全部' || q.types.includes(type.value)) &&
-    (!onlyPending.value || isPending(q)) &&
+    (!pendingFilter.value || (pendingFilter.value === 'transfer' ? isTransferPending(q) : isReviewPending(q))) &&
     (!kw || (q.title + ' ' + (q.note || '')).toLowerCase().includes(kw)))
   const sorted = [...list]
   if (sort.value === 'date-asc') sorted.sort((a, b) => (a.date || '').localeCompare(b.date || ''))
@@ -44,7 +46,8 @@ const groups = computed(() => modules.map(name => ({
 })).filter(g => g.questions.length))
 const title = q => q.title.replace(/^\d+ 粉笔专项-(?:数量关系|判断推理|资料分析)-/, '').replace(/（原卷第(\d+)题）/, '（第$1题）')
 const tagClass = t => ({ 错题: 'wrong', 不确定: 'uncertain', 猜题: 'guess', 耗时较长: 'slow' }[t] || 'neutral')
-const reset = () => { module.value = '全部'; type.value = '全部'; keyword.value = ''; onlyPending.value = false }
+const togglePendingFilter = value => { pendingFilter.value = pendingFilter.value === value ? '' : value }
+const reset = () => { module.value = '全部'; type.value = '全部'; keyword.value = ''; pendingFilter.value = '' }
 </script>
 
 <template>
@@ -55,8 +58,9 @@ const reset = () => { module.value = '全部'; type.value = '全部'; keyword.va
       <div><b>{{ stats.wrong }}</b><span>错题</span></div>
       <div><b>{{ stats.guess }}</b><span>猜题</span></div>
       <div><b>{{ stats.slow }}</b><span>慢题</span></div>
-      <div class="is-pending"><b>{{ stats.pending }}</b><span>待验证 / 待复盘</span></div>
+      <div class="is-pending"><b>{{ stats.pendingVerification }}</b><span>独立运用待验证</span></div>
     </div>
+    <p class="pending-note"><strong>状态说明：</strong>{{ stats.pendingVerification }} 条已完成本题复盘，但还没有用陌生真题独立验证；{{ stats.awaitingReview }} 条尚未单独复盘。看过解析或重做原题都不自动记为已掌握。</p>
 
     <div class="module-bars" aria-label="模块沉淀分布">
       <span v-for="m in moduleBars" :key="m.name" class="module-bar" :title="`${m.name} ${m.count} 条`">
@@ -87,10 +91,13 @@ const reset = () => { module.value = '全部'; type.value = '全部'; keyword.va
           <option value="time-desc">用时 · 长到短</option>
         </select>
       </label>
-      <button class="pending-toggle" :class="{ active: onlyPending }" type="button" @click="onlyPending = !onlyPending">
-        只看待验证
+      <button class="pending-toggle" :class="{ active: pendingFilter === 'transfer' }" :aria-pressed="pendingFilter === 'transfer'" type="button" @click="togglePendingFilter('transfer')">
+        只看独立验证
       </button>
-      <button v-if="module !== '全部' || type !== '全部' || keyword || onlyPending" class="reset" type="button" @click="reset">清除筛选</button>
+      <button class="pending-toggle pending-review-toggle" :class="{ active: pendingFilter === 'review' }" :aria-pressed="pendingFilter === 'review'" :disabled="!stats.awaitingReview" type="button" @click="togglePendingFilter('review')">
+        只看待复盘（{{ stats.awaitingReview }}）
+      </button>
+      <button v-if="module !== '全部' || type !== '全部' || keyword || pendingFilter" class="reset" type="button" @click="reset">清除筛选</button>
     </div>
 
     <p class="result-count" role="status" aria-live="polite">
@@ -98,7 +105,7 @@ const reset = () => { module.value = '全部'; type.value = '全部'; keyword.va
     </p>
     <p v-if="!filtered.length" class="empty">这一类暂时没有记录，可以换关键词或清除筛选。</p>
 
-    <details v-for="group in groups" :key="group.name" class="review-group" :open="module !== '全部' || type !== '全部' || onlyPending || !!keyword">
+    <details v-for="group in groups" :key="group.name" class="review-group" :open="module !== '全部' || type !== '全部' || !!pendingFilter || !!keyword">
       <summary>{{ group.name }} <span>{{ group.questions.length }} 条</span></summary>
       <ul class="question-list">
         <li v-for="q in group.questions" :key="q.id">
@@ -120,6 +127,8 @@ const reset = () => { module.value = '全部'; type.value = '全部'; keyword.va
 .catalog-stats span { color: var(--vp-c-text-2); font-size: 13px; }
 .catalog-stats .is-pending { border-color: #f0b357; background: rgba(245, 158, 11, .09); }
 .catalog-stats .is-pending b { color: #b45309; }
+.pending-note { margin: -2px 0 16px; color: var(--vp-c-text-2); font-size: 13px; line-height: 1.65; }
+.pending-note strong { color: var(--vp-c-text-1); }
 .module-bars { display: flex; align-items: end; gap: 10px; height: 78px; margin: 0 0 20px; padding: 10px 14px 0; border: 1px solid var(--vp-c-divider); border-radius: 12px; }
 .module-bar { position: relative; display: flex; flex: 1; align-items: end; justify-content: center; height: 100%; }
 .module-bar i { display: block; width: 100%; max-width: 46px; min-height: 4px; border-radius: 6px 6px 0 0; background: linear-gradient(180deg, #6d64f0, #4f46e5); opacity: .82; }
@@ -132,6 +141,7 @@ const reset = () => { module.value = '全部'; type.value = '全部'; keyword.va
 .search-field input { width: 100%; }
 .pending-toggle { padding: 10px 14px; border: 1px solid #e0a94a; border-radius: 8px; color: #92400e; background: #fff8e8; font: inherit; font-size: 16px; font-weight: 700; cursor: pointer; }
 .pending-toggle.active { color: #fff; background: #b45309; border-color: #b45309; }
+.pending-toggle:disabled { opacity: .55; cursor: not-allowed; }
 .reset { color: var(--vp-c-brand-1); padding: 10px 0; font: inherit; font-size: 16px; text-decoration: underline; cursor: pointer; }
 .filters :focus-visible, summary:focus-visible, .question-link:focus-visible { outline: 3px solid var(--vp-c-brand-1); outline-offset: 4px; }
 .result-count { color: var(--vp-c-text-2); font-size: 16px; }
@@ -161,6 +171,7 @@ const reset = () => { module.value = '全部'; type.value = '全部'; keyword.va
   .filters { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 12px; }
   .search-field { grid-column: 1 / -1; }
   .pending-toggle, .reset { text-align: left; }
+  .pending-review-toggle { grid-column: 1 / -1; }
   .filters select, .filters input { width: 100%; min-width: 0; }
   .review-group summary { padding: 18px 2px; }
   .question-list { padding-left: 2px; padding-right: 2px; }

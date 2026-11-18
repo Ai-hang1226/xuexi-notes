@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14",
+  "generatedAt": "2026-11-18",
   "streak": {
     "since": "2026-06-05",
     "days": 158
@@ -11,8 +11,7 @@
       "猜题": 31,
       "耗时较长": 43,
       "不确定": 9,
-      "答对复习": 11,
-      "待复盘": 2,
+      "答对复习": 13,
       "未作答": 5
     },
     "byModule": {
@@ -27,7 +26,7 @@
       "政治理论": 3
     },
     "pendingVerification": 38,
-    "awaitingReview": 2
+    "awaitingReview": 0
   },
   "quizzes": {
     "total": 14,

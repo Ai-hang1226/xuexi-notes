@@ -15,7 +15,13 @@ import './links.css'
 
 export default {
   extends: DefaultTheme,
-  enhanceApp({ app }) {
+  enhanceApp({ app, router }) {
+    router.onBeforeRouteChange = () => {
+      if (typeof document !== 'undefined') document.documentElement.dataset.routeLoading = 'true'
+    }
+    router.onAfterRouteChange = () => {
+      if (typeof document !== 'undefined') delete document.documentElement.dataset.routeLoading
+    }
     // 全局注册：任意 Markdown 页面填好 frontmatter 列表后直接写 <VisualCards field="..." />
     app.component('VisualCards', VisualCards)
     // 全局注册：把蓝色下划线链接列表换成入口卡片

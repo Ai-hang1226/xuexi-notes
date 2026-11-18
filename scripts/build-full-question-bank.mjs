@@ -486,4 +486,38 @@ if (coverage.lessonExamples !== lessonParts.matches.length || coverage.reviewRef
   throw new Error('题目目录覆盖数量不匹配')
 }
 fs.writeFileSync(path.join(root, 'retest/full-catalog.json'), JSON.stringify({ summary, coverage, entries }, null, 2) + '\n', 'utf8')
+
+const reviewPriorityTypes = new Set(['错题', '猜题', '不确定', '耗时较长'])
+const priorityReviews = reviews.filter((item) => item.types?.some((type) => reviewPriorityTypes.has(type)))
+const reviewByUrl = new Map(priorityReviews.map((item) => [item.url, item]))
+const scoreableIds = new Set(bank.questions.map((question) => question.id))
+const priorityQuestions = new Map()
+const mappedReviewUrls = new Set()
+for (const entry of entries) {
+  if (entry.status !== '可自动判分') continue
+  const questionId = scoreableIds.has(entry.id) ? entry.id : entry.aliases?.find((id) => scoreableIds.has(id))
+  if (!questionId) continue
+  for (const source of entry.sources) {
+    const review = reviewByUrl.get(source.url)
+    if (!review) continue
+    mappedReviewUrls.add(review.url)
+    const mapped = priorityQuestions.get(questionId) || { id: questionId, types: [], date: '', reviewUrls: [] }
+    for (const type of review.types) if (reviewPriorityTypes.has(type) && !mapped.types.includes(type)) mapped.types.push(type)
+    if (review.date && (!mapped.date || review.date < mapped.date)) mapped.date = review.date
+    if (!mapped.reviewUrls.includes(review.url)) mapped.reviewUrls.push(review.url)
+    priorityQuestions.set(questionId, mapped)
+  }
+}
+const unavailableReviews = priorityReviews.filter((item) => !mappedReviewUrls.has(item.url)).map((item) => {
+  const entry = entries.find((candidate) => candidate.sources.some((source) => source.url === item.url))
+  return { id: item.id, title: item.title, types: item.types, date: item.date, url: item.url, status: entry?.status || '未进入自动判分题库' }
+})
+const priorityIndex = {
+  sourceRecords: priorityReviews.length,
+  mappedRecords: mappedReviewUrls.size,
+  unavailableReviews,
+  questions: [...priorityQuestions.values()].sort((a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id)),
+}
+fs.writeFileSync(path.join(root, 'retest/review-priority.json'), JSON.stringify(priorityIndex, null, 2) + '\n', 'utf8')
 console.log('全站题库目录：' + entries.length + ' 条；' + JSON.stringify(summary) + '；来源覆盖 ' + JSON.stringify(coverage))
+console.log('历史优先复测：' + priorityIndex.mappedRecords + '/' + priorityIndex.sourceRecords + ' 条进入自动判分题库；' + unavailableReviews.length + ' 条仍待完善')

@@ -403,27 +403,8 @@ export default defineConfig({
     darkModeSwitchLabel: '外观',
     nav: [
       { text: '🏠 首页', link: '/' },
-      {
-        text: '📗 行测',
-        items: [
-          { text: '🚩 政治理论', link: '/xingce/zhengzhi-lilun' },
-          { text: '🗣️ 言语理解', link: '/xingce/yanyu-lijie' },
-          { text: '🔢 数量关系', link: '/xingce/shuliang-guanxi' },
-          { text: '🧩 判断推理', link: '/xingce/panduan-tuili' },
-          { text: '📊 资料分析', link: '/xingce/ziliao-fenxi' },
-          { text: '🌍 常识判断', link: '/xingce/changshi-panduan' },
-          { text: '🗺️ 图解速查', link: '/xingce/图解速查' },
-        ],
-      },
-      {
-        text: '📘 申论',
-        items: [
-          { text: '🏠 申论总览 · 从原文到答案', link: '/shenlun/' },
-          { text: '📖 总纲 · Kiwi 五大题型', link: kiwi },
-          { text: '📒 归纳概括 · 真题', link: '/shenlun/day5-city-greening' },
-          { text: '📊 评分与进步', link: '/shenlun/scores' },
-        ],
-      },
+      { text: '📗 行测', link: '/xingce/' },
+      { text: '📘 申论', link: '/shenlun/' },
       { text: '🧠 错题本', link: '/cuotiben/' },
       {
         text: '📚 更多',

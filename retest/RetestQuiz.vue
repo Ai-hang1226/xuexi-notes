@@ -9,9 +9,11 @@ import { fetchSkillQuestions, normalizeQuestionText } from '../scripts/xingcezhe
 
 const questionCount = 20
 const storageKey = 'xuexi-notes:retest-prototype:v1'
+const historicalReviewById = new Map()
 const questions = ref([])
 const localQuestionCount = ref(0)
 const questionDataLoaded = ref(false)
+const unscoredReviewCount = ref(0)
 const pendingOriginalQuestions = computed(() => questions.value.filter((question) => transferPendingUrls.has(question.reviewUrl)))
 const transferPendingUrls = new Set()
 const mode = ref('intro')
@@ -42,10 +44,13 @@ async function loadLocalQuestionData() {
     localQuestionPromise = Promise.all([
       import('./questions.json'),
       import('../cuotiben/review-catalog.json'),
-    ]).then(([bankModule, catalogModule]) => {
+      import('./review-priority.json'),
+    ]).then(([bankModule, catalogModule, priorityModule]) => {
       const bank = bankModule.default
       questions.value = bank.questions
       localQuestionCount.value = bank.imported
+      for (const item of priorityModule.default.questions) historicalReviewById.set(item.id, item)
+      unscoredReviewCount.value = priorityModule.default.unavailableReviews.length
       for (const item of catalogModule.default) {
         if (/独立运用待验证/.test(item.note || '') && item.url) transferPendingUrls.add(item.url)
       }
@@ -79,7 +84,7 @@ const availableQuestions = computed(() => [
   ...questions.value,
   ...Object.values(questionArchive.value).filter((question) => !questions.value.some((item) => item.id === question.id)),
 ])
-const bankedMistakeCount = computed(() => availableQuestions.value.filter((question) => mistakeCounts.value[question.id]).length)
+const reviewPriorityCount = computed(() => availableQuestions.value.filter(isReviewPriority).length)
 const mistakeRecords = computed(() => availableQuestions.value
   .filter((question) => mistakeCounts.value[question.id] || questionHistory.value[question.id]?.some((item) => !item.isCorrect))
   .map((question) => {
@@ -111,15 +116,18 @@ const visibleFlaggedRecords = computed(() => {
     .filter(Boolean).join(' ').toLocaleLowerCase().includes(query))
 })
 const pendingMistakeCount = computed(() => mistakeRecords.value.filter((record) => record.lastAttempt?.isCorrect === false).length)
-const results = computed(() => selectedQuestions.value.map((question) => ({
-  ...question,
-  answer: answers.value[question.id] || '',
-  isCorrect: answers.value[question.id] === question.correct,
-  isUncertain: Boolean(uncertainAnswers.value[question.id]),
-  durationSeconds: Math.floor(questionClock.elapsedMs(question.id, now.value) / 1000),
-  isSlow: isSlowQuestion(question, Math.floor(questionClock.elapsedMs(question.id, now.value) / 1000)),
-  answerEvidence: getAnswerEvidence(question, skillPool.repository),
-})))
+const results = computed(() => selectedQuestions.value.map((question) => {
+  const durationMs = questionClock.elapsedMs(question.id, now.value)
+  return {
+    ...question,
+    answer: answers.value[question.id] || '',
+    isCorrect: answers.value[question.id] === question.correct,
+    isUncertain: Boolean(uncertainAnswers.value[question.id]),
+    durationSeconds: Math.floor(durationMs / 1000),
+    isSlow: isSlowQuestion(question, durationMs),
+    answerEvidence: getAnswerEvidence(question, skillPool.repository),
+  }
+}))
 const correctCount = computed(() => results.value.filter((item) => item.isCorrect).length)
 const evidenceNeedsAttentionCount = computed(() => results.value.filter((item) => item.answerEvidence.key !== 'fenbi').length)
 const reviewFlagCount = computed(() => results.value.filter((item) => !item.isCorrect || item.isUncertain || item.isSlow).length)
@@ -148,16 +156,57 @@ function isSkillQuestion(question) {
     || question.sourceUrl?.includes(`/${skillPool.repository}/`)
 }
 
-function isSlowQuestion(question, seconds) {
+function isSlowQuestion(question, durationMs) {
   const kind = `${question.module || ''} ${question.type || ''}`
-  if (/图形推理|图形判断/.test(kind)) return seconds > 90
-  if (/类比推理|逻辑判断/.test(kind)) return seconds > 60
+  if (/图形推理|图形判断/.test(kind)) return durationMs > 90_000
+  if (/类比推理|逻辑判断/.test(kind)) return durationMs > 60_000
   return false
 }
 
+function cleanCorrectStreak(question) {
+  const history = questionHistory.value[question.id] || []
+  let streak = 0
+  for (let index = history.length - 1; index >= 0; index--) {
+    const attempt = history[index]
+    if (!attempt.isCorrect || attempt.isUncertain || attempt.isSlow) break
+    streak++
+  }
+  return streak
+}
+
 function isReviewPriority(question) {
-  return Boolean(mistakeCounts.value[question.id])
+  if (cleanCorrectStreak(question) >= 2) return false
+  const historicalReview = historicalReviewById.get(question.id)
+  return Boolean(historicalReview)
+    || Boolean(mistakeCounts.value[question.id])
     || questionHistory.value[question.id]?.some((item) => !item.isCorrect || item.isUncertain || item.isSlow)
+}
+
+function reviewPriorityRank(question) {
+  const history = questionHistory.value[question.id] || []
+  const latest = history.at(-1)
+  if (latest && !latest.isCorrect) return 0
+  if (latest?.isUncertain) return 1
+  if (latest?.isSlow) return 2
+
+  const types = historicalReviewById.get(question.id)?.types || []
+  const rank = types.includes('错题') || mistakeCounts.value[question.id]
+    ? 0
+    : types.includes('不确定')
+      ? 1
+      : types.includes('猜题')
+        ? 2
+        : 3
+  return rank + (cleanCorrectStreak(question) > 0 ? 4 : 0)
+}
+
+function compareReviewPriority(a, b) {
+  const rank = reviewPriorityRank(a) - reviewPriorityRank(b)
+  if (rank) return rank
+  const aLast = questionHistory.value[a.id]?.at(-1)?.finishedAt || historicalReviewById.get(a.id)?.date || ''
+  const bLast = questionHistory.value[b.id]?.at(-1)?.finishedAt || historicalReviewById.get(b.id)?.date || ''
+  return aLast.localeCompare(bLast)
+    || (mistakeCounts.value[b.id] || 0) - (mistakeCounts.value[a.id] || 0)
 }
 
 function questionSeconds(questionId) {
@@ -198,9 +247,8 @@ async function drawQuestions(signal, scope = 'mixed') {
   if (scope === 'pending-originals') {
       const priority = pendingOriginalQuestions.value
       .filter(isReviewPriority)
-      .sort((a, b) => (mistakeCounts.value[b.id] || 0) - (mistakeCounts.value[a.id] || 0)
-        || (questionHistory.value[b.id]?.at(-1)?.finishedAt || '').localeCompare(questionHistory.value[a.id]?.at(-1)?.finishedAt || ''))
-      .slice(0, 10)
+      .sort(compareReviewPriority)
+      .slice(0, questionCount)
     const chosen = new Set(priority.map((question) => question.id))
     const rest = shuffle(pendingOriginalQuestions.value.filter((question) => !chosen.has(question.id)))
     const selected = [...priority, ...rest.slice(0, questionCount - priority.length)]
@@ -211,9 +259,8 @@ async function drawQuestions(signal, scope = 'mixed') {
 
   const previousMistakes = availableQuestions.value
     .filter(isReviewPriority)
-    .sort((a, b) => (mistakeCounts.value[b.id] || 0) - (mistakeCounts.value[a.id] || 0)
-      || (questionHistory.value[b.id]?.at(-1)?.finishedAt || '').localeCompare(questionHistory.value[a.id]?.at(-1)?.finishedAt || ''))
-  const priority = previousMistakes.slice(0, 10)
+    .sort(compareReviewPriority)
+  const priority = previousMistakes.slice(0, questionCount)
   const chosen = new Set(priority.map((question) => question.id))
   const attemptedIds = new Set(Object.keys(questionHistory.value))
   const previouslyDone = shuffle(availableQuestions.value.filter((question) =>
@@ -221,11 +268,19 @@ async function drawQuestions(signal, scope = 'mixed') {
     .slice(0, Math.min(5, questionCount - priority.length))
   for (const question of previouslyDone) chosen.add(question.id)
 
-  const localPool = shuffle(questions.value.filter((question) => !chosen.has(question.id)))
-  const localQuestions = localPool.slice(0, Math.min(5, questionCount - priority.length - previouslyDone.length))
+  const remainingLocalSlots = questionCount - priority.length - previouslyDone.length
+  const localPool = shuffle(questions.value.filter((question) => !chosen.has(question.id)
+    && !isReviewPriority(question)
+    && (previousMistakes.length === 0 || attemptedIds.has(question.id))))
+  const localLimit = previousMistakes.length > 0
+    ? remainingLocalSlots
+    : Math.min(5, remainingLocalSlots)
+  const localQuestions = localPool.slice(0, localLimit)
   for (const question of localQuestions) chosen.add(question.id)
 
-  const skillCount = questionCount - priority.length - previouslyDone.length - localQuestions.length
+  const skillCount = previousMistakes.length === 0
+    ? questionCount - priority.length - previouslyDone.length - localQuestions.length
+    : 0
   let remote = { questions: [], failures: [] }
   if (skillCount > 0) {
     const knownSkillQuestions = questions.value.filter(isSkillQuestion)
@@ -260,11 +315,13 @@ async function drawQuestions(signal, scope = 'mixed') {
   const localFill = questionCount - priority.length - previouslyDone.length - remote.questions.length
   const sourceFailures = remote.failures.length
   const triedCount = previouslyDone.length
-  poolNotice.value = sourceFailures && remote.questions.length === 0
-    ? `技能真题源连接较慢或暂不可用，本轮已从曾错题、已做题和本站题库补足20题；不会一直等待。`
-    : remote.questions.length === skillCount
-      ? `本轮包含 ${triedCount} 道已做题、${localQuestions.length} 道本站题库题和 ${remote.questions.length} 道2020年及以后技能真题；曾错题优先。`
-      : `技能题源本轮载入 ${remote.questions.length} 道；已从曾错题、已做题和本站题库补足其余 ${localFill} 道。${sourceFailures ? '未能读取的来源已自动跳过。' : ''}`
+  poolNotice.value = previousMistakes.length > 0
+    ? `本轮优先复测 ${priority.length} 道旧错题、不确定题、猜题或偏慢题；待熟悉旧题共 ${previousMistakes.length} 道。其余题目从本站题库补齐，旧题优先池清空前不加入新技能真题。`
+    : sourceFailures && remote.questions.length === 0
+      ? `历史优先池已清空；技能真题源暂不可用，本轮已从已做题和本站题库补足20题。`
+      : remote.questions.length === skillCount
+        ? `历史优先池已清空。本轮包含 ${triedCount} 道已做题、${localQuestions.length} 道本站题和 ${remote.questions.length} 道2020年及以后新真题。`
+        : `历史优先池已清空；技能题源本轮载入 ${remote.questions.length} 道，已从已做题和本站题库补足其余 ${localFill} 道。${sourceFailures ? '未能读取的来源已自动跳过。' : ''}`
   return shuffle(complete)
 }
 
@@ -377,14 +434,15 @@ function submitMistakeReview() {
   now.value = Date.now()
   submittedAt.value = Date.now()
   const answer = answers.value[question.id]
-  const durationSeconds = questionSeconds(question.id)
+  const durationMs = questionClock.elapsedMs(question.id, now.value)
+  const durationSeconds = Math.floor(durationMs / 1000)
   const result = {
     ...question,
     answer,
     isCorrect: answer === question.correct,
     isUncertain: Boolean(uncertainAnswers.value[question.id]),
     durationSeconds,
-    isSlow: isSlowQuestion(question, durationSeconds),
+    isSlow: isSlowQuestion(question, durationMs),
     answerEvidence: getAnswerEvidence(question, skillPool.repository),
     finishedAt: new Date(submittedAt.value).toISOString(),
   }
@@ -562,26 +620,27 @@ onBeforeUnmount(() => {
         <div class="intro-copy">
           <span class="eyebrow">行测复测 · 全站错题持续积累</span>
           <h1>错题再练，交卷即看结果</h1>
-          <p>每次抽取20道题：从2020年及以后的技能真题源按需加载，也会保留网站已有题目；错题、不确定题和按题型阈值偏慢的题优先进入本轮。交卷后自动计分，逐题用时和历次作答留在当前浏览器。</p>
+          <p>每轮先复测你以前做错、猜测、不确定或超时偏慢的题。旧题连续两次答对、未标不确定且没有超过题型用时线后，才退出优先池；旧题优先池清空后才加入2020年及以后的技能真题。</p>
           <button class="button button--primary" type="button" :disabled="loadingQuiz" @click="startQuiz('mixed')">{{ loadingQuiz ? '正在组 20 题…' : '开始20题复测' }} <span v-if="!loadingQuiz" aria-hidden="true">→</span></button>
           <button class="button button--outline pending-scope-button" type="button" :disabled="loadingQuiz || (questionDataLoaded && pendingOriginalQuestions.length < questionCount)" @click="startQuiz('pending-originals')">{{ questionDataLoaded ? `复做待验证原题（${pendingOriginalQuestions.length} 道）` : '读取题库后复做待验证原题' }}</button>
           <small class="pending-scope-note">复做原题用于回忆和检查，不会自动清除“独立运用待验证”状态。</small>
           <a class="button button--quiet library-entry" :href="withBase('/retest/library/')">查看全站题库 →</a>
           <a class="button button--quiet library-entry" :href="withBase('/retest/essay.html')">申论复测 →</a>
-          <small class="privacy-note">新记录保存在当前浏览器，可按题查看历次作答；不改写原有成绩和复测台账。</small>
+          <small class="priority-note">每次仍为20题；旧题不足时先用已做过的本站题补足。新记录保存在当前浏览器，不改写原有成绩和复测台账。</small>
+          <small v-if="unscoredReviewCount" class="pending-scope-note">另有 {{ unscoredReviewCount }} 条历史记录因自编或题源、答案未达到自动判分要求，仍可从错题本查看，但不会误当成可判分真题。</small>
         </div>
         <div class="intro-metrics" aria-label="复测题库信息">
           <div><strong>{{ skillPool.indexedQuestions.toLocaleString('zh-CN') }}</strong><span>道技能真题（2020+）</span></div>
           <div><strong>20</strong><span>题 / 每次</span></div>
-          <div><strong>{{ bankedMistakeCount }}</strong><span>道曾经答错</span></div>
+          <div><strong>{{ questionDataLoaded ? reviewPriorityCount.toLocaleString('zh-CN') : '…' }}</strong><span>道旧题待熟悉</span></div>
         </div>
       </header>
       <p v-if="poolNotice" class="pool-notice" role="status">{{ poolNotice }}</p>
 
       <section class="how-it-works" aria-label="测验流程">
-        <div><span>01</span><b>抽题</b><small>从2020年起的技能真题源抽题；答错、不确定或按题型阈值偏慢的题优先复习。</small></div>
+        <div><span>01</span><b>抽题</b><small>先抽历史错题、猜题、不确定题和偏慢题；优先池清空后才加入新的技能真题。</small></div>
         <div><span>02</span><b>作答</b><small>可跳题、改答案，也可返回检查；可以标记“猜测 / 不确定”。</small></div>
-        <div><span>03</span><b>复习</b><small>逐题用时和标记会按题保存；历史记录保留，熟题答对不自动认定掌握。</small></div>
+        <div><span>03</span><b>复习</b><small>旧题连续两次答对、信心稳定且没有超时，才退出优先池；其他作答仍留在历次记录中。</small></div>
       </section>
 
       <RecordBackup />
@@ -851,6 +910,7 @@ onBeforeUnmount(() => {
 .pending-scope-button { margin-top: 10px; }
 .pending-scope-note { display: block; margin-top: 6px; color: var(--vp-c-text-2); font-size: 11px; line-height: 1.55; }
 .privacy-note { display: block; margin-top: 11px; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.55; }
+.priority-note { display: block; margin-top: 11px; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.6; }
 .pool-notice { margin: 12px 0 0; padding: 11px 14px; border: 1px solid var(--vp-c-divider); border-left: 3px solid var(--quiz-accent); border-radius: 10px; color: var(--vp-c-text-2); background: var(--vp-c-bg-soft); font-size: 12px; line-height: 1.6; }
 .intro-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }
 .intro-metrics > div { display: grid; gap: 5px; align-content: center; min-height: 92px; padding: 14px 9px; border: 1px solid var(--vp-c-divider); border-radius: 13px; background: color-mix(in srgb, var(--vp-c-bg) 88%, transparent); text-align: center; }

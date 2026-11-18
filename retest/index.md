@@ -1,6 +1,6 @@
 ---
 title: 行测20题复测
-description: 从网站已收录的真题中抽取20题，网页作答、交卷后自动判分
+description: 优先复测错题和不确定题，稳定掌握后加入2020年及以后真题
 pageClass: dashboard-page
 outline: false
 prev: false

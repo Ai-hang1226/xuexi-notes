@@ -361,7 +361,7 @@ const sidebar = [
       { text: '🧮 速算工具箱', link: '/tools/' },
       { text: '📌 使用指南', link: '/guide/help' },
       { text: '🕘 更新日志', link: '/guide/changelog' },
-      { text: '🖨️ 江苏 A4 打印讲义', link: '/jiangsu/printable.html' },
+      { text: '🖨️ 江苏 A4 打印讲义', link: '/jiangsu/printable.html', target: '_blank', rel: 'noopener' },
     ],
   },
 ]
@@ -434,6 +434,7 @@ const sectionSidebars = {
       collapsed: true,
       items: [
         { text: '全站地图', link: '/guide/' },
+        { text: '精选导读', link: '/share/' },
         { text: '使用指南', link: '/guide/help' },
         { text: '更新日志', link: '/guide/changelog' },
         { text: '历史归档', link: '/guide/archive' },
@@ -498,12 +499,9 @@ export default defineConfig({
         text: '📚 更多',
         items: [
           { text: '📝 每日测验 · 历史卷', link: '/daily-quizzes/' },
-          { text: '✨ 精选导读', link: '/share/' },
           { text: '🗺️ 全站地图', link: '/guide/' },
           { text: '🧰 速算工具箱', link: '/tools/' },
-          { text: '📌 使用指南', link: '/guide/help' },
-          { text: '🕘 更新日志', link: '/guide/changelog' },
-          { text: '🖨️ 江苏 A4 打印讲义', link: '/jiangsu/printable.html' },
+          { text: '🖨️ 江苏 A4 打印讲义', link: '/jiangsu/printable.html', target: '_blank', rel: 'noopener' },
         ],
       },
     ],

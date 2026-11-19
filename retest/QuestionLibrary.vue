@@ -4,6 +4,7 @@ import { withBase } from 'vitepress'
 import skillPool from './xingcezhenti-pool.json'
 import RecordBackup from './components/RecordBackup.vue'
 import { getAnswerEvidenceForCatalog } from './question-evidence.js'
+import { saveStudyAttempt, syncCurrentDeviceInBackground } from './sync/study-records.js'
 
 const quizStorageKey = 'xuexi-notes:retest-prototype:v1'
 const libraryStorageKey = 'xuexi-notes:question-library:v1'
@@ -21,9 +22,10 @@ const selected = ref(null)
 const picked = ref('')
 const draft = ref('')
 const submitted = ref(false)
-const libraryRecords = ref({ drafts: {}, marked: {}, answers: {} })
+const libraryRecords = ref({ drafts: {}, marked: {}, answers: {}, attempts: [] })
 const quizMistakes = ref({})
 const storageWarning = ref(false)
+const selectedAt = ref(0)
 let cataloguePromise = null
 
 async function loadCatalogue() {
@@ -143,11 +145,13 @@ function openQuestion(item) {
   picked.value = ''
   draft.value = libraryRecords.value.drafts?.[item.id] || ''
   submitted.value = false
+  selectedAt.value = Date.now()
   if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 function closeQuestion() {
   selected.value = null
   submitted.value = false
+  selectedAt.value = 0
   if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 function saveLibrary() {
@@ -162,11 +166,40 @@ function saveDraft() {
   libraryRecords.value.drafts[selected.value.id] = draft.value
   saveLibrary()
 }
-function addQuizMistake(id) {
+function questionText(value = '') {
+  const element = document.createElement('div')
+  element.innerHTML = String(value)
+  return (element.textContent || '').replace(/\s+/g, ' ').trim()
+}
+function addQuizAttempt(id, attempt, archiveQuestion) {
+  if (!id || !attempt.isScored) return
   try {
     const saved = JSON.parse(localStorage.getItem(quizStorageKey) || '{}')
     if (!saved.mistakeCounts || typeof saved.mistakeCounts !== 'object') saved.mistakeCounts = {}
-    saved.mistakeCounts[id] = (Number(saved.mistakeCounts[id]) || 0) + 1
+    if (!saved.questionHistory || typeof saved.questionHistory !== 'object') saved.questionHistory = {}
+    if (!saved.questionArchive || typeof saved.questionArchive !== 'object') saved.questionArchive = {}
+    const sessionId = `library:${attempt.id}`
+    const history = saved.questionHistory[id] || []
+    if (!history.some((item) => item.sessionId === sessionId)) {
+      saved.questionHistory[id] = [...history, {
+        sessionId,
+        startedAt: attempt.startedAt,
+        finishedAt: attempt.submittedAt,
+        kind: '全站题库',
+        answer: attempt.answer || '',
+        correct: attempt.correct || '',
+        isCorrect: Boolean(attempt.isCorrect),
+        durationSeconds: attempt.durationSeconds,
+        durationScope: 'question',
+        isUncertain: false,
+        isSlow: false,
+      }].sort((a, b) => (a.finishedAt || '').localeCompare(b.finishedAt || ''))
+    }
+    if (!attempt.isCorrect) {
+      const wrongCount = saved.questionHistory[id].filter((item) => item.isCorrect === false).length
+      saved.mistakeCounts[id] = Math.max(Number(saved.mistakeCounts[id]) || 0, wrongCount)
+    }
+    if (!saved.questionArchive[id] && archiveQuestion) saved.questionArchive[id] = archiveQuestion
     localStorage.setItem(quizStorageKey, JSON.stringify(saved))
     quizMistakes.value = { ...saved.mistakeCounts }
   } catch {
@@ -178,11 +211,63 @@ function submitQuestion() {
   if (isEssay.value && !draft.value.trim()) return
   if (isEssay.value) saveDraft()
   if (canChoose.value && !picked.value) return
-  if (canChoose.value) {
-    libraryRecords.value.answers[selected.value.id] = { answer: picked.value, at: new Date().toISOString() }
-    if (isScored.value && !resultCorrect.value) addQuizMistake(selected.value.quizId)
-    saveLibrary()
+  const submittedAt = Date.now()
+  const answerValue = isEssay.value ? draft.value.trim() : picked.value
+  const archiveQuestion = selected.value.quizId ? {
+    ...current.value,
+    id: selected.value.quizId,
+    title: selected.value.title || current.value.title || '',
+    source: selected.value.source || current.value.source || '',
+    reviewUrl: current.value.reviewUrl || selected.value.sourceUrl || selected.value.sources?.[0]?.url || '',
+  } : null
+  const question = {
+    id: selected.value.quizId || selected.value.id,
+    title: selected.value.title || '',
+    subject: selected.value.subject || '',
+    module: current.value.module || '',
+    source: selected.value.source || '',
+    sourceUrl: selected.value.sourceUrl || selected.value.sources?.[0]?.url || '',
+    excerpt: selected.value.excerpt || '',
+    stem: isEssay.value ? (selected.value.excerpt || '') : questionText(current.value.stemHtml || selected.value.excerpt || ''),
+    number: current.value.number || '',
+    year: current.value.year || '',
+    reviewUrl: current.value.reviewUrl || selected.value.sourceUrl || selected.value.sources?.[0]?.url || '',
+    options: (current.value.options || []).map((option) => ({
+      label: option.label || '',
+      text: questionText(option.html || option.text || ''),
+    })),
+    correct: isScored.value ? current.value.correct : '',
   }
+  const attempt = {
+    id: `${submittedAt}-${Math.random().toString(36).slice(2, 8)}`,
+    questionId: selected.value.id,
+    quizId: selected.value.quizId || '',
+    startedAt: selectedAt.value ? new Date(selectedAt.value).toISOString() : '',
+    submittedAt: new Date(submittedAt).toISOString(),
+    durationSeconds: selectedAt.value ? Math.max(0, Math.floor((submittedAt - selectedAt.value) / 1000)) : null,
+    answer: answerValue,
+    correct: isScored.value ? current.value.correct : '',
+    isScored: isScored.value,
+    isCorrect: isScored.value ? resultCorrect.value : null,
+    isEssay: isEssay.value,
+    question,
+  }
+  libraryRecords.value.attempts = [...(libraryRecords.value.attempts || []), attempt]
+  if (canChoose.value) {
+    libraryRecords.value.answers[selected.value.id] = { answer: picked.value, at: attempt.submittedAt }
+    if (attempt.quizId && attempt.isScored) addQuizAttempt(attempt.quizId, attempt, archiveQuestion)
+  }
+  saveLibrary()
+  saveStudyAttempt({
+    id: `library:${attempt.id}`,
+    kind: 'library_answer',
+    startedAt: attempt.startedAt,
+    finishedAt: attempt.submittedAt,
+    durationSeconds: attempt.durationSeconds,
+    score: attempt.isScored ? (attempt.isCorrect ? 5 : 0) : null,
+    total: attempt.isScored ? 1 : null,
+    payload: { attempt },
+  })
   submitted.value = true
 }
 function toggleMarked(item) {
@@ -243,6 +328,7 @@ onMounted(() => {
       drafts: saved.drafts && typeof saved.drafts === 'object' ? saved.drafts : {},
       marked: saved.marked && typeof saved.marked === 'object' ? saved.marked : {},
       answers: saved.answers && typeof saved.answers === 'object' ? saved.answers : {},
+      attempts: Array.isArray(saved.attempts) ? saved.attempts : [],
     }
     const quizSaved = JSON.parse(localStorage.getItem(quizStorageKey) || '{}')
     quizMistakes.value = quizSaved.mistakeCounts && typeof quizSaved.mistakeCounts === 'object' ? quizSaved.mistakeCounts : {}
@@ -251,6 +337,19 @@ onMounted(() => {
   }
   void loadCatalogue().catch(() => {
     catalogueError.value = '题库暂时未能载入；请检查网络后刷新页面重试。'
+  })
+  void syncCurrentDeviceInBackground().then(() => {
+    const saved = JSON.parse(localStorage.getItem(libraryStorageKey) || '{}')
+    libraryRecords.value = {
+      ...libraryRecords.value,
+      ...saved,
+      drafts: { ...(saved.drafts || {}), ...libraryRecords.value.drafts },
+      marked: { ...(saved.marked || {}), ...libraryRecords.value.marked },
+      answers: { ...(saved.answers || {}), ...libraryRecords.value.answers },
+      attempts: Array.isArray(saved.attempts) ? saved.attempts : libraryRecords.value.attempts,
+    }
+    const quizSaved = JSON.parse(localStorage.getItem(quizStorageKey) || '{}')
+    quizMistakes.value = quizSaved.mistakeCounts && typeof quizSaved.mistakeCounts === 'object' ? quizSaved.mistakeCounts : quizMistakes.value
   })
 })
 </script>
@@ -339,7 +438,7 @@ onMounted(() => {
             <p>{{ resultCorrect ? '只记录本次作答，不自动认定已经掌握。' : '本题已加入当前浏览器的优先复测列表。' }}</p>
             <p v-if="current.gradingNote">{{ current.gradingNote }}</p>
           </template>
-          <template v-else-if="isEssay"><strong>作答已保存在当前浏览器</strong><p>可以打开原页对照材料和已有参考内容；不会自动改写你以前的答案或成绩。</p></template>
+          <template v-else-if="isEssay"><strong>本次作答已保存</strong><p>登录后会跨设备同步；可以打开原页对照材料和已有参考内容，不会自动改写你以前的答案或成绩。</p></template>
           <template v-else><strong>已记录本次选择：{{ picked }}</strong><p>这道题暂不自动判分；原页可能包含尚待核对的推断或历史解析。</p><p v-if="current.referenceAnswer"><strong>参考答案：{{ current.referenceAnswer }}</strong></p><p v-if="current.referenceNote">{{ current.referenceNote }}</p></template>
         </div>
 

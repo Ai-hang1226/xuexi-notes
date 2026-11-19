@@ -240,6 +240,7 @@ const sidebar = [
     collapsed: true,
     items: [
       { text: '行测20题复测', link: '/retest/' },
+      { text: '按日期查看做题记录', link: '/retest/records' },
       { text: '📊 全部题目 · 筛选检索', link: '/cuotiben/' },
       {
         text: '🧭 怎么复盘',
@@ -447,6 +448,7 @@ const sectionSidebars = {
       collapsed: false,
       items: [
         { text: '行测20题复测', link: '/retest/' },
+        { text: '做题记录 · 跨设备同步', link: '/retest/records' },
         { text: '全站题库筛选', link: '/retest/library/' },
         { text: '申论复测', link: '/retest/essay' },
         { text: '错题复盘', link: '/cuotiben/' },

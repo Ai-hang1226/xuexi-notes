@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import { withBase } from 'vitepress'
 
 const keys = {
   quiz: 'xuexi-notes:retest-prototype:v1',
@@ -93,6 +94,7 @@ function mergeLibrary(current, incoming) {
     drafts: { ...(incoming.drafts || {}), ...(current.drafts || {}) },
     marked: { ...(incoming.marked || {}), ...(current.marked || {}) },
     answers,
+    attempts: mergeRows(current.attempts || [], incoming.attempts || []),
   }
 }
 
@@ -162,9 +164,10 @@ async function importRecords(event) {
   <section class="record-backup" aria-label="复测记录备份">
     <div class="record-backup__copy">
       <strong>备份本机学习记录</strong>
-      <p>导出到电脑保存；恢复时与当前记录合并，不会上传到网站。</p>
+      <p>导出到电脑保存；登录同一邮箱后可跨设备同步已提交的作答。</p>
     </div>
     <div class="record-backup__actions">
+      <a :href="withBase('/retest/records')">按日期查看与同步</a>
       <button type="button" @click="exportRecords">导出备份</button>
       <button type="button" :disabled="isBusy" @click="fileInput?.click()">{{ isBusy ? '正在恢复…' : '选择备份恢复' }}</button>
       <input ref="fileInput" type="file" accept="application/json,.json" @change="importRecords">
@@ -179,8 +182,10 @@ async function importRecords(event) {
 .record-backup__copy strong { font-size: 13px; }
 .record-backup__copy p { margin: 3px 0 0; color: var(--vp-c-text-2); font-size: 11px; line-height: 1.55; }
 .record-backup__actions { display: flex; flex: 0 0 auto; gap: 8px; }
+.record-backup__actions a { display: inline-flex; align-items: center; min-height: 38px; padding: 0 11px; border: 1px solid var(--vp-c-brand-1); border-radius: 9px; color: var(--vp-c-brand-1); background: var(--vp-c-bg); font-size: 11px; font-weight: 750; text-decoration: none; }
 .record-backup__actions button { min-height: 38px; padding: 0 11px; border: 1px solid var(--vp-c-divider); border-radius: 9px; color: var(--vp-c-text-1); background: var(--vp-c-bg); font: inherit; font-size: 11px; font-weight: 700; cursor: pointer; }
 .record-backup__actions button:hover:not(:disabled) { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
+.record-backup__actions a:focus-visible { outline: 3px solid var(--vp-c-brand-1); outline-offset: 2px; }
 .record-backup__actions button:focus-visible { outline: 3px solid var(--vp-c-brand-1); outline-offset: 2px; }
 .record-backup__actions button:disabled { opacity: .55; cursor: wait; }
 .record-backup__actions input { display: none; }

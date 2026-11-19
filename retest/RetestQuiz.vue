@@ -5,6 +5,7 @@ import skillPool from './xingcezhenti-pool.json'
 import RecordBackup from './components/RecordBackup.vue'
 import { getAnswerEvidence } from './question-evidence.js'
 import { createQuestionClock } from './question-clock.js'
+import { saveStudyAttempt, syncCurrentDeviceInBackground } from './sync/study-records.js'
 import { fetchSkillQuestions, normalizeQuestionText } from '../scripts/xingcezhenti-runtime.mjs'
 
 const questionCount = 20
@@ -36,6 +37,7 @@ const storageWarning = ref(false)
 const loadingQuiz = ref(false)
 const poolNotice = ref('')
 let timer = null
+let recordSyncTimer = null
 let skillIndexPromise = null
 let localQuestionPromise = null
 
@@ -72,6 +74,46 @@ function browserIsActive() {
 
 const questionClock = createQuestionClock(browserIsActive)
 
+function plainQuestionText(value = '') {
+  const element = document.createElement('div')
+  element.innerHTML = String(value)
+  return (element.textContent || '').replace(/\s+/g, ' ').trim()
+}
+
+function reviewableArchivedQuestion(question) {
+  const escapeHtml = (value = '') => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;')
+  return {
+    ...question,
+    stemHtml: question.stemHtml || `<p>${escapeHtml(question.stem || question.title || '')}</p>`,
+    materialHtml: question.materialHtml || (question.material ? `<p>${escapeHtml(question.material)}</p>` : ''),
+    options: (question.options || []).map((option) => ({
+      ...option,
+      html: option.html || `<p>${escapeHtml(option.text || '')}</p>`,
+    })),
+  }
+}
+
+function snapshotQuestion(item) {
+  return {
+    id: item.id,
+    number: item.number,
+    module: item.module,
+    type: item.type,
+    title: item.title || '',
+    source: item.source || '',
+    sourceSystem: item.sourceSystem || '',
+    reviewUrl: item.reviewUrl || '',
+    year: item.year || '',
+    stem: plainQuestionText(item.stemHtml || item.stem || item.title || ''),
+    materialTitle: item.materialTitle || '',
+    material: plainQuestionText(item.materialHtml || ''),
+    options: (item.options || []).map((option) => ({ label: option.label, text: plainQuestionText(option.html || option.text || '') })),
+    correct: item.correct,
+    gradingNote: item.gradingNote || '',
+  }
+}
+
 const currentQuestion = computed(() => selectedQuestions.value[currentIndex.value])
 const activeQuestionCount = computed(() => mode.value === 'mistake-answer' ? 1 : questionCount)
 const answeredCount = computed(() => Object.keys(answers.value).filter((id) => answers.value[id]).length)
@@ -95,6 +137,58 @@ const mistakeRecords = computed(() => availableQuestions.value
   .sort((a, b) => Number(b.lastAttempt?.isCorrect === false) - Number(a.lastAttempt?.isCorrect === false)
     || b.wrongCount - a.wrongCount
     || (b.lastAttempt?.finishedAt || '').localeCompare(a.lastAttempt?.finishedAt || '')))
+const mistakeDateGroups = computed(() => {
+  const query = mistakeFilter.value.trim().toLocaleLowerCase()
+  const questionById = new Map(availableQuestions.value.map((question) => [question.id, question]))
+  const grouped = new Map()
+  const getGroup = (date) => {
+    if (!grouped.has(date)) grouped.set(date, { date, byQuestion: new Map(), attemptCount: 0 })
+    return grouped.get(date)
+  }
+  const matchesSearch = (question) => {
+    if (!query) return true
+    return [question.module, question.type, question.title, question.source, question.number, question.id,
+      question.stem, question.stemHtml ? plainQuestionText(question.stemHtml) : '']
+      .filter(Boolean).join(' ').toLocaleLowerCase().includes(query)
+  }
+
+  const ids = new Set([...Object.keys(questionHistory.value), ...Object.keys(mistakeCounts.value)])
+  for (const id of ids) {
+    const history = questionHistory.value[id] || []
+    const archived = history.find((item) => item.question)?.question
+    const question = questionById.get(id) || (archived ? reviewableArchivedQuestion(archived) : { id })
+    if (!matchesSearch(question)) continue
+    const wrongAttempts = history.filter((item) => item.isCorrect === false)
+    for (const attempt of wrongAttempts) {
+      const date = attempt.finishedAt ? shanghaiDayKey(attempt.finishedAt) : 'unknown'
+      const group = getGroup(date)
+      const entry = group.byQuestion.get(id) || { question, attempts: [], legacyCount: 0 }
+      entry.attempts.push(attempt)
+      group.byQuestion.set(id, entry)
+      group.attemptCount++
+    }
+
+    const untrackedWrongCount = Math.max(0, (Number(mistakeCounts.value[id]) || 0) - wrongAttempts.length)
+    if (untrackedWrongCount) {
+      const group = getGroup('unknown')
+      const entry = group.byQuestion.get(id) || { question, attempts: [], legacyCount: 0 }
+      entry.legacyCount += untrackedWrongCount
+      group.byQuestion.set(id, entry)
+      group.attemptCount += untrackedWrongCount
+    }
+  }
+
+  return [...grouped.values()].map((group) => ({
+    date: group.date,
+    attemptCount: group.attemptCount,
+    questions: [...group.byQuestion.values()]
+      .map((entry) => ({
+        ...entry,
+        attempts: entry.attempts.sort((a, b) => (b.finishedAt || '').localeCompare(a.finishedAt || '')),
+      }))
+      .sort((a, b) => (b.attempts[0]?.finishedAt || '').localeCompare(a.attempts[0]?.finishedAt || '')),
+  })).sort((a, b) => a.date === 'unknown' ? 1 : b.date === 'unknown' ? -1 : b.date.localeCompare(a.date))
+})
 const flaggedReviewRecords = computed(() => availableQuestions.value
   .map((question) => {
     const history = questionHistory.value[question.id] || []
@@ -103,12 +197,6 @@ const flaggedReviewRecords = computed(() => availableQuestions.value
   })
   .filter(Boolean)
   .sort((a, b) => (b.lastAttempt?.finishedAt || '').localeCompare(a.lastAttempt?.finishedAt || '')))
-const visibleMistakeRecords = computed(() => {
-  const query = mistakeFilter.value.trim().toLocaleLowerCase()
-  if (!query) return mistakeRecords.value
-  return mistakeRecords.value.filter(({ question }) => [question.module, question.type, question.source, question.title, question.number]
-    .filter(Boolean).join(' ').toLocaleLowerCase().includes(query))
-})
 const visibleFlaggedRecords = computed(() => {
   const query = mistakeFilter.value.trim().toLocaleLowerCase()
   if (!query) return flaggedReviewRecords.value
@@ -401,12 +489,20 @@ function submitQuiz() {
   const nextMistakes = { ...mistakeCounts.value }
   const attempt = {
     id: `${submittedAt.value}-${Math.random().toString(36).slice(2, 8)}`,
+    startedAt: new Date(startedAt.value).toISOString(),
     finishedAt: new Date(submittedAt.value).toISOString(),
     durationSeconds: elapsedSeconds.value,
     correct: correctCount.value,
     total: questionCount,
-    answers: results.value.map(({ id, answer, correct, isCorrect, isUncertain, durationSeconds, isSlow }) => ({
-      id, answer, correct, isCorrect, isUncertain, durationSeconds, isSlow,
+    answers: results.value.map((item) => ({
+      id: item.id,
+      answer: item.answer,
+      correct: item.correct,
+      isCorrect: item.isCorrect,
+      isUncertain: item.isUncertain,
+      durationSeconds: item.durationSeconds,
+      isSlow: item.isSlow,
+      question: snapshotQuestion(item),
     })),
   }
 
@@ -422,6 +518,16 @@ function submitQuiz() {
   mistakeCounts.value = nextMistakes
   questionArchive.value = nextArchive
   persistLocalRecords()
+  saveStudyAttempt({
+    id: `xingce-round:${attempt.id}`,
+    kind: 'xingce_round',
+    startedAt: attempt.startedAt,
+    finishedAt: attempt.finishedAt,
+    durationSeconds: attempt.durationSeconds,
+    score: attempt.correct * 5,
+    total: attempt.total,
+    payload: { attempt },
+  })
   confirmSubmit.value = false
   mode.value = 'result'
   scrollToTop()
@@ -444,6 +550,7 @@ function submitMistakeReview() {
     durationSeconds,
     isSlow: isSlowQuestion(question, durationMs),
     answerEvidence: getAnswerEvidence(question, skillPool.repository),
+    startedAt: questionClock.startedAt(question.id) ? new Date(questionClock.startedAt(question.id)).toISOString() : '',
     finishedAt: new Date(submittedAt.value).toISOString(),
   }
   const id = `${submittedAt.value}-${Math.random().toString(36).slice(2, 8)}`
@@ -451,6 +558,19 @@ function submitMistakeReview() {
   if (!result.isCorrect) mistakeCounts.value = { ...mistakeCounts.value, [question.id]: (mistakeCounts.value[question.id] || 0) + 1 }
   mistakeResult.value = result
   persistLocalRecords()
+  saveStudyAttempt({
+    id: `xingce-single:${id}`,
+    kind: 'xingce_single',
+    startedAt: result.startedAt,
+    finishedAt: result.finishedAt,
+    durationSeconds: result.durationSeconds,
+    total: 1,
+    payload: {
+      questionId: result.id,
+      question: snapshotQuestion(result),
+      answer: questionHistory.value[result.id]?.at(-1),
+    },
+  })
   mode.value = 'mistake-result'
   scrollToTop()
 }
@@ -458,6 +578,7 @@ function submitMistakeReview() {
 function recordQuestionAttempt(item, sessionId, kind, durationSeconds) {
   const record = {
     sessionId,
+    startedAt: item.startedAt || (questionClock.startedAt(item.id) ? new Date(questionClock.startedAt(item.id)).toISOString() : ''),
     finishedAt: new Date(submittedAt.value).toISOString(),
     kind,
     answer: item.answer || '',
@@ -467,6 +588,7 @@ function recordQuestionAttempt(item, sessionId, kind, durationSeconds) {
     durationScope: 'question',
     isUncertain: Boolean(item.isUncertain),
     isSlow: Boolean(item.isSlow),
+    question: snapshotQuestion(item),
   }
   questionHistory.value = {
     ...questionHistory.value,
@@ -568,7 +690,33 @@ function formatDuration(seconds) {
 }
 
 function formatDate(value) {
-  return new Date(value).toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
+  if (!value) return '时间未记录'
+  return new Date(value).toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
+}
+
+function formatClock(value) {
+  if (!value) return '时间未记录'
+  return new Date(value).toLocaleTimeString('zh-CN', { timeZone: 'Asia/Shanghai', hour: '2-digit', minute: '2-digit', hour12: false })
+}
+
+function shanghaiDayKey(value) {
+  const parts = new Intl.DateTimeFormat('en', {
+    timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit',
+  }).formatToParts(new Date(value))
+  const fields = Object.fromEntries(parts.map(({ type, value: part }) => [type, part]))
+  return `${fields.year}-${fields.month}-${fields.day}`
+}
+
+function mistakeDateLabel(value) {
+  if (value === 'unknown') return '日期未记录'
+  return new Intl.DateTimeFormat('zh-CN', {
+    timeZone: 'Asia/Shanghai', year: 'numeric', month: 'long', day: 'numeric', weekday: 'long',
+  }).format(new Date(`${value}T12:00:00+08:00`))
+}
+
+function formatAttemptDuration(seconds) {
+  if (seconds === null || seconds === undefined || !Number.isFinite(Number(seconds))) return '用时未记录'
+  return formatDuration(Number(seconds))
 }
 
 function answerText(item) {
@@ -584,8 +732,17 @@ function syncQuestionClock() {
   else questionClock.pause()
 }
 
+function syncAccountOnFocus() {
+  if (document.visibilityState !== 'visible') return
+  window.clearTimeout(recordSyncTimer)
+  recordSyncTimer = window.setTimeout(() => {
+    void syncCurrentDeviceInBackground().then(readLocalRecords)
+  }, 180)
+}
+
 onMounted(() => {
   readLocalRecords()
+  void syncCurrentDeviceInBackground().then(readLocalRecords)
   void loadLocalQuestionData().catch(() => {
     poolNotice.value = '本地题库暂时未能载入；点击开始时会重试，题库恢复后才能显示完整题目。'
   })
@@ -594,8 +751,10 @@ onMounted(() => {
     syncQuestionClock()
   }, 1000)
   window.addEventListener('focus', syncQuestionClock)
+  window.addEventListener('focus', syncAccountOnFocus)
   window.addEventListener('blur', syncQuestionClock)
   document.addEventListener('visibilitychange', syncQuestionClock)
+  document.addEventListener('visibilitychange', syncAccountOnFocus)
   const params = new URLSearchParams(window.location.search)
   const scope = params.get('scope') === 'pending-originals' ? 'pending-originals' : 'mixed'
   if (params.get('start') === '1') {
@@ -606,10 +765,13 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   if (timer) window.clearInterval(timer)
+  window.clearTimeout(recordSyncTimer)
   questionClock.pause()
   window.removeEventListener('focus', syncQuestionClock)
+  window.removeEventListener('focus', syncAccountOnFocus)
   window.removeEventListener('blur', syncQuestionClock)
   document.removeEventListener('visibilitychange', syncQuestionClock)
+  document.removeEventListener('visibilitychange', syncAccountOnFocus)
 })
 </script>
 
@@ -626,7 +788,7 @@ onBeforeUnmount(() => {
           <small class="pending-scope-note">复做原题用于回忆和检查，不会自动清除“独立运用待验证”状态。</small>
           <a class="button button--quiet library-entry" :href="withBase('/retest/library/')">查看全站题库 →</a>
           <a class="button button--quiet library-entry" :href="withBase('/retest/essay.html')">申论复测 →</a>
-          <small class="priority-note">每次仍为20题；旧题不足时先用已做过的本站题补足。新记录保存在当前浏览器，不改写原有成绩和复测台账。</small>
+          <small class="priority-note">每次仍为20题；旧题不足时先用已做过的本站题补足。记录先保存在本机；登录同一邮箱后可跨设备同步，不改写原有成绩和复测台账。</small>
           <small v-if="unscoredReviewCount" class="pending-scope-note">另有 {{ unscoredReviewCount }} 条历史记录因自编或题源、答案未达到自动判分要求，仍可从错题本查看，但不会误当成可判分真题。</small>
         </div>
         <div class="intro-metrics" aria-label="复测题库信息">
@@ -646,7 +808,7 @@ onBeforeUnmount(() => {
       <RecordBackup />
 
       <section class="record-section" v-if="attempts.length">
-        <div class="section-title"><div><span class="eyebrow">当前浏览器</span><h2>最近复测记录</h2></div><span>{{ attempts.length }} 次</span></div>
+        <div class="section-title"><div><span class="eyebrow">逐次保留</span><h2>最近复测记录</h2></div><span>{{ attempts.length }} 次</span></div>
         <div class="history-list">
           <div v-for="attempt in attempts.slice(0, 5)" :key="attempt.id || attempt.finishedAt" class="history-row">
             <span>{{ formatDate(attempt.finishedAt) }}</span>
@@ -670,28 +832,52 @@ onBeforeUnmount(() => {
 
       <section class="record-section mistake-bank">
         <div class="section-title">
-          <div><span class="eyebrow">逐题历史 · 当前浏览器</span><h2>我的行测错题复测库</h2></div>
+          <div><span class="eyebrow">逐题历史</span><h2>我的行测错题复测库</h2></div>
           <span>{{ mistakeRecords.length }} 道曾错 · {{ pendingMistakeCount }} 道最近仍错</span>
         </div>
-        <p class="mistake-intro">错过一次就会留在这里。以后每次整卷复测和单题复测都会追加一条记录；最近做对也不会删除以前的错答。</p>
+        <p class="mistake-intro">按错题发生日期归档。点开日期即可查看当天答错的题、你的答案和参考答案；同一道题反复答错会逐次保留。登录同一邮箱后，其他浏览器和设备的错题也会合并进来。</p>
         <div v-if="mistakeRecords.length" class="mistake-tools">
           <label><span class="sr-only">筛选错题</span><input v-model="mistakeFilter" type="search" placeholder="按模块、题目或来源搜索"></label>
-          <span>按最近仍错和累计错答次数排序</span>
+          <span>按北京时间从新到旧 · 点日期展开</span>
         </div>
-        <div v-if="visibleMistakeRecords.length" class="mistake-list">
-          <article v-for="record in visibleMistakeRecords" :key="record.question.id" class="mistake-row">
-            <div class="mistake-row__copy">
-              <div class="mistake-row__tags"><span>{{ record.question.module }}</span><span>{{ questionLabel(record.question.number) }}</span></div>
-              <strong>{{ record.question.title || record.question.source }}</strong>
-              <small>
-                累计错答 {{ record.wrongCount }} 次
-                <template v-if="record.lastAttempt"> · 最近{{ record.lastAttempt.isCorrect ? '答对' : '答错/未答' }}于 {{ formatDate(record.lastAttempt.finishedAt) }}</template>
-                <template v-else> · 旧记录日期未保存</template>
-                <template v-if="record.history.length"> · 共记录 {{ record.history.length }} 次作答</template>
-              </small>
+        <div v-if="mistakeDateGroups.length" class="mistake-date-list">
+          <details v-for="group in mistakeDateGroups" :key="group.date" class="mistake-date-group">
+            <summary>
+              <span class="mistake-date-summary__copy">
+                <strong>{{ mistakeDateLabel(group.date) }}</strong>
+                <small>{{ group.questions.length }} 道错题 · {{ group.attemptCount }} 次错答 / 未答</small>
+              </span>
+              <span class="mistake-date-chevron" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="mistake-date-questions">
+              <article v-for="record in group.questions" :key="record.question.id" class="mistake-date-question">
+                <div class="mistake-date-question__head">
+                  <div class="mistake-row__tags">
+                    <span>{{ record.question.module || '行测' }}</span>
+                    <span v-if="record.question.number">{{ questionLabel(record.question.number) }}</span>
+                    <span v-if="record.attempts.length > 1">当天错答 {{ record.attempts.length }} 次</span>
+                    <span v-if="record.legacyCount">另有 {{ record.legacyCount }} 次旧记录</span>
+                  </div>
+                  <button class="button button--outline mistake-review-button" type="button" @click="startMistakeReview(record.question)">单独再做</button>
+                </div>
+                <strong class="mistake-date-question__title">{{ record.question.title || record.question.source || '行测错题' }}</strong>
+                <p v-if="record.question.stem || record.question.stemHtml" class="mistake-date-question__stem">{{ record.question.stem || plainQuestionText(record.question.stemHtml) }}</p>
+                <p v-if="record.question.options?.length" class="mistake-date-question__options">
+                  选项：<span v-for="option in record.question.options" :key="option.label">{{ option.label }} {{ option.text || plainQuestionText(option.html) }}； </span>
+                </p>
+                <div v-if="record.attempts.length" class="mistake-date-attempts">
+                  <p v-for="(attempt, index) in record.attempts" :key="attempt.sessionId || index">
+                    <time>{{ formatClock(attempt.finishedAt) }}</time>
+                    <span>你的答案：{{ answerText(attempt) }}</span>
+                    <span>参考答案：{{ attempt.correct || '未记录' }}</span>
+                    <span>{{ formatAttemptDuration(attempt.durationSeconds) }}</span>
+                  </p>
+                </div>
+                <p v-if="record.legacyCount" class="mistake-date-question__legacy">这部分旧记录没有保存具体日期、作答选择或用时。</p>
+                <a v-if="record.question.reviewUrl || record.question.sourceUrl" class="review-link" :href="pageHref(record.question.reviewUrl || record.question.sourceUrl)">查看原题与解析 ↗</a>
+              </article>
             </div>
-            <button class="button button--outline mistake-review-button" type="button" @click="startMistakeReview(record.question)">单独再做</button>
-          </article>
+          </details>
         </div>
         <div v-else-if="mistakeRecords.length" class="empty-state">没有找到匹配题目，换个模块名或关键词试试。</div>
         <div v-else class="empty-state">还没有行测错题记录。完成第一组复测后，错题会自动出现在这里。</div>
@@ -936,13 +1122,34 @@ onBeforeUnmount(() => {
 .mistake-tools { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; color: var(--vp-c-text-2); font-size: 11px; }
 .mistake-tools input { width: min(100%, 330px); min-height: 40px; padding: 0 12px; border: 1px solid var(--vp-c-divider); border-radius: 10px; color: var(--vp-c-text-1); background: var(--vp-c-bg); font: inherit; font-size: 13px; }
 .mistake-tools input:focus-visible { outline: 3px solid color-mix(in srgb, var(--quiz-accent) 32%, transparent); outline-offset: 1px; }
-.mistake-list { display: grid; gap: 8px; }
 .mistake-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 13px 14px; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg); }
 .mistake-row__copy { display: grid; gap: 5px; min-width: 0; }
 .mistake-row__copy > strong { overflow: hidden; color: var(--vp-c-text-1); font-size: 13px; font-weight: 700; text-overflow: ellipsis; }
 .mistake-row__copy > small { color: var(--vp-c-text-2); font-size: 11px; line-height: 1.5; }
 .mistake-row__tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .mistake-row__tags span { padding: 3px 7px; border-radius: 99px; color: var(--quiz-accent); background: var(--quiz-accent-soft); font-size: 10px; font-weight: 700; }
+.mistake-date-list { display: grid; gap: 9px; }
+.mistake-date-group { overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg); }
+.mistake-date-group > summary { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 64px; padding: 11px 16px; cursor: pointer; list-style: none; touch-action: manipulation; }
+.mistake-date-group > summary::-webkit-details-marker { display: none; }
+.mistake-date-group > summary:hover { background: var(--vp-c-bg-soft); }
+.mistake-date-group[open] > summary { border-bottom: 1px solid var(--vp-c-divider); background: var(--vp-c-bg-soft); }
+.mistake-date-summary__copy { display: grid; gap: 3px; }
+.mistake-date-summary__copy strong { color: var(--vp-c-text-1); font-size: 14px; }
+.mistake-date-summary__copy small { color: var(--vp-c-text-2); font-size: 11px; }
+.mistake-date-chevron { color: var(--quiz-accent); font-size: 19px; line-height: 1; transition: transform .15s ease; }
+.mistake-date-group[open] .mistake-date-chevron { transform: rotate(180deg); }
+.mistake-date-questions { display: grid; gap: 9px; padding: 10px; }
+.mistake-date-question { min-width: 0; padding: 13px 14px; border: 1px solid var(--vp-c-divider); border-radius: 10px; background: var(--vp-c-bg); }
+.mistake-date-question__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.mistake-date-question__head .mistake-row__tags { flex: 1; }
+.mistake-date-question__title { display: block; margin-top: 8px; color: var(--vp-c-text-1); font-size: 14px; line-height: 1.55; }
+.mistake-date-question__stem { overflow-wrap: anywhere; margin: 7px 0 0; color: var(--vp-c-text-1); font-size: 13px; line-height: 1.75; white-space: pre-wrap; }
+.mistake-date-question__options { overflow-wrap: anywhere; margin: 6px 0 0; color: var(--vp-c-text-2); font-size: 11px; line-height: 1.7; }
+.mistake-date-attempts { display: grid; gap: 4px; margin-top: 9px; padding: 8px 10px; border-radius: 8px; background: var(--vp-c-bg-soft); }
+.mistake-date-attempts p { display: flex; flex-wrap: wrap; gap: 3px 12px; margin: 0; color: var(--vp-c-text-2); font-size: 11px; line-height: 1.55; }
+.mistake-date-attempts time { color: var(--vp-c-text-1); font-weight: 700; font-variant-numeric: tabular-nums; }
+.mistake-date-question__legacy { margin: 8px 0 0; color: var(--vp-c-text-2); font-size: 11px; line-height: 1.6; }
 .mistake-review-button { flex: 0 0 auto; width: auto; }
 .empty-state { padding: 24px 15px; border: 1px dashed var(--vp-c-divider); border-radius: 12px; color: var(--vp-c-text-2); text-align: center; font-size: 13px; }
 .sr-only { position: absolute; overflow: hidden; width: 1px; height: 1px; padding: 0; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
@@ -1102,6 +1309,13 @@ onBeforeUnmount(() => {
   .mistake-review-button { min-height: 38px; padding: 0 10px; font-size: 11px; }
   .mistake-tools { align-items: stretch; flex-direction: column; }
   .mistake-tools input { width: 100%; }
+  .mistake-date-group > summary { min-height: 58px; padding: 10px 12px; }
+  .mistake-date-questions { gap: 7px; padding: 7px; }
+  .mistake-date-question { padding: 10px; }
+  .mistake-date-question__head { align-items: flex-start; }
+  .mistake-date-question__head .mistake-review-button { min-height: 34px; }
+  .mistake-date-question__stem { font-size: 12px; }
+  .mistake-date-question__options { font-size: 10px; }
   .history-row, .question-history-row { grid-template-columns: 1fr auto; gap: 5px 12px; padding: 10px 11px; }
   .history-row > :nth-child(3), .history-row > :nth-child(4) { justify-self: end; }
   .answer-option { grid-template-columns: 1px 27px minmax(0, 1fr); gap: 8px; padding: 10px 9px; }

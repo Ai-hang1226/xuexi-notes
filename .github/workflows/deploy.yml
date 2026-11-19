@@ -40,6 +40,10 @@ jobs:
 
       # 走 npm 脚本，自动执行 predocs:build（章节导航生成、看板数据同步、一致性校验）
       - name: 构建站点
+        env:
+          # These browser-facing values are public; row access is restricted by Supabase RLS.
+          VITE_SUPABASE_URL: https://irlchqvvatybsivaoaak.supabase.co
+          VITE_SUPABASE_PUBLISHABLE_KEY: sb_publishable_mwpepd0rB-KI-HK0wO9B-w_YLblzyq_
         run: npm run docs:build
 
       - name: 构建产物体积守卫

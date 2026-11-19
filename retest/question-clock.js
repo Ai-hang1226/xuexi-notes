@@ -1,5 +1,6 @@
 export function createQuestionClock(isActive = () => true) {
   let accumulatedMs = {}
+  let firstStartedAt = {}
   let activeQuestionId = ''
   let activeSince = 0
 
@@ -18,12 +19,14 @@ export function createQuestionClock(isActive = () => true) {
     reset() {
       flush()
       accumulatedMs = {}
+      firstStartedAt = {}
       activeQuestionId = ''
       activeSince = 0
     },
     select(questionId) {
       flush()
       activeQuestionId = questionId || ''
+      if (activeQuestionId && !firstStartedAt[activeQuestionId]) firstStartedAt[activeQuestionId] = Date.now()
       resume()
     },
     pause() {
@@ -39,6 +42,9 @@ export function createQuestionClock(isActive = () => true) {
     snapshot() {
       flush()
       return { ...accumulatedMs }
+    },
+    startedAt(questionId) {
+      return firstStartedAt[questionId] || 0
     },
   }
 }

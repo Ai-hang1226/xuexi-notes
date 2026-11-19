@@ -486,6 +486,20 @@ if (coverage.lessonExamples !== lessonParts.matches.length || coverage.reviewRef
   throw new Error('题目目录覆盖数量不匹配')
 }
 fs.writeFileSync(path.join(root, 'retest/full-catalog.json'), JSON.stringify({ summary, coverage, entries }, null, 2) + '\n', 'utf8')
+const studyRecordMetadata = {
+  entries: entries.map(({ id, aliases, quizId, subject, status, title, source, sourceUrl, excerpt, sources }) => ({
+    id, aliases, quizId, subject, status, title, source, sourceUrl, excerpt, sources,
+  })),
+}
+fs.writeFileSync(path.join(root, 'retest/full-catalog-metadata.json'), JSON.stringify(studyRecordMetadata) + '\n', 'utf8')
+const studyQuestionMetadata = {
+  questions: bank.questions.map(({ id, number, type, module, correct, source, stemHtml, options, materialTitle, materialHtml, reviewUrl, sourceUrl, gradingNote }) => ({
+    id, number, type, module, correct, source, stem: textOf(stemHtml),
+    options: options.map((option) => ({ label: option.label, text: textOf(option.html) })),
+    materialTitle, material: textOf(materialHtml), reviewUrl, sourceUrl, gradingNote,
+  })),
+}
+fs.writeFileSync(path.join(root, 'retest/questions-metadata.json'), JSON.stringify(studyQuestionMetadata) + '\n', 'utf8')
 
 const reviewPriorityTypes = new Set(['错题', '猜题', '不确定', '耗时较长'])
 const priorityReviews = reviews.filter((item) => item.types?.some((type) => reviewPriorityTypes.has(type)))

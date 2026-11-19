@@ -3,6 +3,7 @@ import { computed, onMounted, ref } from 'vue'
 import { withBase } from 'vitepress'
 import bank from './essay-review.json'
 import RecordBackup from './components/RecordBackup.vue'
+import { saveStudyAttempt, syncCurrentDeviceInBackground } from './sync/study-records.js'
 
 const storageKey = 'xuexi-notes:essay-retest:v1'
 const essays = bank.essays || []
@@ -72,10 +73,13 @@ function submitAnswer() {
   submittedAt.value = Date.now()
   const record = {
     id: `${submittedAt.value}-${Math.random().toString(36).slice(2, 8)}`,
+    startedAt: startedAt.value ? new Date(startedAt.value).toISOString() : '',
     submittedAt: new Date(submittedAt.value).toISOString(),
     durationSeconds: Math.max(0, Math.floor((submittedAt.value - startedAt.value) / 1000)),
     answer: answerText.value.trim(),
     characterCount: answerText.value.trim().length,
+    essayTitle: selectedEssay.value.title,
+    source: selectedEssay.value.source,
   }
   attemptsByEssay.value = {
     ...attemptsByEssay.value,
@@ -85,6 +89,14 @@ function submitAnswer() {
   latestRecord.value = record
   validationMessage.value = ''
   persist()
+  saveStudyAttempt({
+    id: `essay:${record.id}`,
+    kind: 'essay_retest',
+    startedAt: record.startedAt,
+    finishedAt: record.submittedAt,
+    durationSeconds: record.durationSeconds,
+    payload: { essayId: selectedEssay.value.id, essayTitle: selectedEssay.value.title, attempt: record },
+  })
   mode.value = 'result'
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
@@ -99,7 +111,11 @@ function formatDuration(seconds) {
   return `${String(minutes).padStart(2, '0')}:${String(remainder).padStart(2, '0')}`
 }
 
-onMounted(load)
+onMounted(async () => {
+  load()
+  await syncCurrentDeviceInBackground()
+  load()
+})
 </script>
 
 <template>
@@ -111,7 +127,7 @@ onMounted(load)
         <p>这里只收录已经有首答记录的申论题。你可以随时选题重写，提交后保存本次答案，并打开此前的首答、评分和解析；申论主观题不做自动判分。</p>
         <div class="essay-stats">
           <div><strong>{{ essays.length }}</strong><span>道已做题</span></div>
-          <div><strong>{{ Object.values(attemptsByEssay).reduce((sum, rows) => sum + rows.length, 0) }}</strong><span>次本机复测</span></div>
+          <div><strong>{{ Object.values(attemptsByEssay).reduce((sum, rows) => sum + rows.length, 0) }}</strong><span>次复测记录</span></div>
           <div><strong>自动保存</strong><span>草稿留在当前浏览器</span></div>
         </div>
       </header>
@@ -126,7 +142,7 @@ onMounted(load)
               <div class="essay-tags"><span>{{ essay.category }}</span><span :class="essay.sourceKind === '历史自编题' ? 'tag-self-made' : ''">{{ essay.sourceKind }}</span></div>
               <h3>{{ essay.title }}</h3>
               <p>{{ essay.excerpt }}</p>
-              <small>{{ essay.source }} · 本机已复测 {{ historyFor(essay).length }} 次<template v-if="historyFor(essay).length"> · 最近一次 {{ formatDate(historyFor(essay).at(-1).submittedAt) }}</template></small>
+              <small>{{ essay.source }} · 已复测 {{ historyFor(essay).length }} 次<template v-if="historyFor(essay).length"> · 最近一次 {{ formatDate(historyFor(essay).at(-1).submittedAt) }}</template></small>
             </div>
             <button class="action-button" type="button" @click="startRetest(essay)">{{ drafts[essay.id] ? '继续草稿' : '复测此题' }} <span aria-hidden="true">→</span></button>
           </article>
@@ -135,7 +151,7 @@ onMounted(load)
 
       <aside class="essay-note">
         <strong>记录说明</strong>
-        <p>列表按已有首答证据生成；未作答题不会出现。标注“历史自编题”的题目仍可用于回顾已做过的内容，但不作为公考真题。新增作答和草稿只保存在当前浏览器，不会改写原首答、原评分或原成绩。</p>
+        <p>列表按已有首答证据生成；未作答题不会出现。标注“历史自编题”的题目仍可用于回顾已做过的内容，但不作为公考真题。已提交作答会逐次保留，登录同一邮箱后可跨设备查看；未提交草稿仍保存在当前浏览器，不改写原首答、原评分或原成绩。</p>
       </aside>
     </template>
 
@@ -166,7 +182,7 @@ onMounted(load)
         <span class="eyebrow">申论复测已保存 · 第 {{ historyFor(selectedEssay).length }} 次</span>
         <h1>{{ selectedEssay.title }}</h1>
         <p>提交时间 {{ formatDate(latestRecord.submittedAt) }} · 用时 {{ formatDuration(latestRecord.durationSeconds) }} · {{ latestRecord.characterCount }} 字符</p>
-        <p class="no-auto-score">这次作答已保存到本机。系统不对申论主观题自动打分，请结合老师参考答案和原评分查看变化。</p>
+        <p class="no-auto-score">这次作答已保存。系统不对申论主观题自动打分，请结合老师参考答案和原评分查看变化；登录后可在做题记录中跨设备复盘。</p>
       </header>
       <section class="submitted-answer">
         <div class="writing-heading"><strong>你刚提交的答案</strong><span>{{ latestRecord.characterCount }} 字符</span></div>

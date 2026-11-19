@@ -70,6 +70,8 @@ const shenlunTopics = [
       </a>
     </nav>
 
+    <a class="home-record-link" :href="base('/retest/records')">按日期复盘所有设备的做题记录 <span aria-hidden="true">↗</span></a>
+
     <section class="home-library" aria-labelledby="library-title">
       <div class="library-heading">
         <div>
@@ -142,6 +144,8 @@ const shenlunTopics = [
 .practice-card > strong { font-size: 20px; line-height: 1.3; }
 .practice-card__detail { min-height: 34px; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.5; }
 .practice-card__action { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 8px; color: var(--home-accent); font-size: 12px; font-weight: 750; }
+.home-record-link { width: fit-content; margin: -17px 0 24px 2px; padding: 5px 0; color: var(--home-accent); font-size: 12px; font-weight: 750; text-decoration: none; }
+.home-record-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 .home-library { margin-top: 2px; }
 .library-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 12px; }
 .library-heading h2 { margin: 4px 0 0; font-size: 19px; line-height: 1.35; }
@@ -163,6 +167,7 @@ const shenlunTopics = [
 @media (max-width: 760px) {
   .knowledge-home { padding: 23px 16px 10px; }
   .home-practices { grid-template-columns: 1fr; gap: 9px; margin-bottom: 23px; }
+  .home-record-link { margin-top: -12px; margin-bottom: 20px; }
   .practice-card { min-height: 0; padding: 14px 15px 12px; }
   .practice-card__detail { min-height: 0; }
   .practice-card__action { padding-top: 2px; }

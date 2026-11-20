@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19",
+  "generatedAt": "2026-11-20",
   "streak": {
     "since": "2026-06-05",
     "days": 158
@@ -29,15 +29,15 @@
     "awaitingReview": 0
   },
   "quizzes": {
-    "total": 15,
+    "total": 16,
     "latest": {
-      "date": "2026-11-19",
+      "date": "2026-11-20",
       "status": "待作答 · 8道行测＋1道申论 · 原题链接",
-      "testUrl": "/daily-quizzes/2026-11-19",
-      "reviewUrl": "/daily-quizzes/2026-11-19-review"
+      "testUrl": "/daily-quizzes/2026-11-20",
+      "reviewUrl": "/daily-quizzes/2026-11-20-review"
     },
     "reviewed": 5,
-    "pending": 9,
+    "pending": 10,
     "rest": 1,
     "assessments": 2
   },

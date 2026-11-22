@@ -9,7 +9,7 @@ const practices = [
   {
     name: '行测测验',
     label: '20 题 · 交卷自动判分',
-    detail: `已做题、本站题库与${skillYears}`,
+    detail: '只抽题源明确、题面完整的真题（含' + skillYears + '）',
     action: '开始测验',
     path: '/retest/?start=1',
   },

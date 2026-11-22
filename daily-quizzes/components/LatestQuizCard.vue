@@ -9,10 +9,11 @@ const base = (path) => withBase(path)
 <template>
   <section class="latest-card" aria-label="最近正式测验">
     <div class="latest-card__copy">
-      <span class="latest-card__eyebrow">最近登记的正式卷</span>
+      <span class="latest-card__eyebrow">最近已归档的正式卷</span>
       <template v-if="latest">
         <strong class="latest-card__date">{{ latest.date }}</strong>
         <p>{{ latest.status }}</p>
+        <small class="latest-card__note">这里显示已归档记录；聊天中的发布计划与网页归档分别统计。</small>
       </template>
       <template v-else>
         <strong class="latest-card__date">暂无正式测验记录</strong>
@@ -41,6 +42,7 @@ const base = (path) => withBase(path)
 .latest-card__eyebrow { color: var(--vp-c-text-2); font-size: 13px; }
 .latest-card__date { display: block; margin: 4px 0 2px; font-size: 22px; line-height: 1.35; font-variant-numeric: tabular-nums; }
 .latest-card p { margin: 0; font-size: 14px; }
+.latest-card__note { display: block; margin-top: 5px; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.5; }
 .latest-card__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
 .latest-card__actions a { text-decoration: none; font-size: 14px; font-weight: 700; }
 .latest-card__primary { padding: 10px 14px; border-radius: 9px; color: #fff !important; background: #4f46e5; }

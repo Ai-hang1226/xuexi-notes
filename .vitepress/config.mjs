@@ -498,13 +498,9 @@ export default defineConfig({
       { text: '📘 申论', link: '/shenlun/' },
       { text: '🧠 错题本', link: '/cuotiben/' },
       { text: '📝 测验历史', link: '/daily-quizzes/' },
-      { text: '🗺️ 全站地图', link: '/guide/' },
-      { text: '🧮 速算工具', link: '/tools/' },
-      { text: '🖨️ A4打印讲义', link: '/jiangsu/printable.html', target: '_blank', rel: 'noopener' },
       {
         text: '📚 更多',
         items: [
-          { text: '📝 每日测验 · 历史卷', link: '/daily-quizzes/' },
           { text: '🗺️ 全站地图', link: '/guide/' },
           { text: '🧰 速算工具箱', link: '/tools/' },
           { text: '🖨️ 江苏 A4 打印讲义', link: '/jiangsu/printable.html', target: '_blank', rel: 'noopener' },

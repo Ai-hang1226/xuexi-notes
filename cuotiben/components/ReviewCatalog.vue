@@ -60,7 +60,7 @@ const reset = () => { module.value = '全部'; type.value = '全部'; keyword.va
       <div><b>{{ stats.slow }}</b><span>慢题</span></div>
       <div class="is-pending"><b>{{ stats.pendingVerification }}</b><span>独立运用待验证</span></div>
     </div>
-    <p class="pending-note"><strong>状态说明：</strong>{{ stats.pendingVerification }} 条已完成本题复盘，但还没有用陌生真题独立验证；{{ stats.awaitingReview }} 条尚未单独复盘。看过解析或重做原题都不自动记为已掌握。</p>
+    <p class="pending-note"><strong>先看当前待办：</strong>{{ stats.awaitingReview }} 条尚未单独复盘；{{ stats.pendingVerification }} 条已复盘、仍待陌生真题独立验证。可用下方两个筛选分别查看；其余记录保留为历史。看过解析或重做原题都不自动记为已掌握。</p>
     <div v-if="stats.pendingVerification" class="pending-practice">
       <span>想先检查原题回忆？可以从待验证记录对应的原题中抽 20 道复做。</span>
       <a :href="withBase('/retest/') + '?scope=pending-originals&start=1'">复做待验证原题 →</a>

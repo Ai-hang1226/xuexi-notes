@@ -15,7 +15,8 @@ const questions = ref([])
 const localQuestionCount = ref(0)
 const questionDataLoaded = ref(false)
 const unscoredReviewCount = ref(0)
-const pendingOriginalQuestions = computed(() => questions.value.filter((question) => transferPendingUrls.has(question.reviewUrl)))
+const pendingOriginalQuestions = computed(() => questions.value.filter((question) =>
+  isEligibleRealQuestion(question) && transferPendingUrls.has(question.reviewUrl)))
 const transferPendingUrls = new Set()
 const mode = ref('intro')
 const questionArchive = ref({})
@@ -103,6 +104,10 @@ function snapshotQuestion(item) {
     title: item.title || '',
     source: item.source || '',
     sourceSystem: item.sourceSystem || '',
+    sourceUrl: item.sourceUrl || '',
+    origin: item.origin || '',
+    sourcePaper: item.sourcePaper || '',
+    sourceQid: item.sourceQid || '',
     reviewUrl: item.reviewUrl || '',
     year: item.year || '',
     stem: plainQuestionText(item.stemHtml || item.stem || item.title || ''),
@@ -126,7 +131,8 @@ const availableQuestions = computed(() => [
   ...questions.value,
   ...Object.values(questionArchive.value).filter((question) => !questions.value.some((item) => item.id === question.id)),
 ])
-const reviewPriorityCount = computed(() => availableQuestions.value.filter(isReviewPriority).length)
+const availableRealQuestions = computed(() => availableQuestions.value.filter(isEligibleRealQuestion))
+const reviewPriorityCount = computed(() => availableRealQuestions.value.filter(isReviewPriority).length)
 const mistakeRecords = computed(() => availableQuestions.value
   .filter((question) => mistakeCounts.value[question.id] || questionHistory.value[question.id]?.some((item) => !item.isCorrect))
   .map((question) => {
@@ -239,6 +245,19 @@ function shuffle(items) {
   return copy
 }
 
+function isEligibleRealQuestion(question) {
+  const options = Array.isArray(question?.options) ? question.options : []
+  const labels = new Set(options.map((option) => String(option?.label || '').trim().toUpperCase()))
+  const source = [question?.source, question?.title, question?.sourcePaper].filter(Boolean).join(' ')
+  const hasDatedExamSource = /(?:19|20)\d{2}\s*年[\s\S]{0,120}(?:公务员|省考|国考|事业单位|联考|考试)/.test(source)
+  const hasCompleteQuestion = Boolean(String(question?.stemHtml || question?.stem || '').trim())
+    && ['A', 'B', 'C', 'D'].every((label) => labels.has(label))
+    && /^[A-D]$/i.test(String(question?.correct || '').trim())
+    && (!question?.materialTitle || Boolean(String(question?.materialHtml || question?.material || '').trim()))
+
+  return hasCompleteQuestion && (isSkillQuestion(question) || hasDatedExamSource)
+}
+
 function isSkillQuestion(question) {
   return question.sourceSystem === skillPool.repository
     || question.sourceUrl?.includes(`/${skillPool.repository}/`)
@@ -345,19 +364,20 @@ async function drawQuestions(signal, scope = 'mixed') {
     return shuffle(selected)
   }
 
-  const previousMistakes = availableQuestions.value
+  const previousMistakes = availableRealQuestions.value
     .filter(isReviewPriority)
     .sort(compareReviewPriority)
   const priority = previousMistakes.slice(0, questionCount)
   const chosen = new Set(priority.map((question) => question.id))
   const attemptedIds = new Set(Object.keys(questionHistory.value))
-  const previouslyDone = shuffle(availableQuestions.value.filter((question) =>
+  const previouslyDone = shuffle(availableRealQuestions.value.filter((question) =>
     attemptedIds.has(question.id) && !chosen.has(question.id)))
     .slice(0, Math.min(5, questionCount - priority.length))
   for (const question of previouslyDone) chosen.add(question.id)
 
   const remainingLocalSlots = questionCount - priority.length - previouslyDone.length
-  const localPool = shuffle(questions.value.filter((question) => !chosen.has(question.id)
+  const localPool = shuffle(questions.value.filter((question) => isEligibleRealQuestion(question)
+    && !chosen.has(question.id)
     && !isReviewPriority(question)
     && (previousMistakes.length === 0 || attemptedIds.has(question.id))))
   const localLimit = previousMistakes.length > 0
@@ -367,7 +387,7 @@ async function drawQuestions(signal, scope = 'mixed') {
   for (const question of localQuestions) chosen.add(question.id)
 
   const skillCount = previousMistakes.length === 0
-    ? questionCount - priority.length - previouslyDone.length - localQuestions.length
+    ? Math.max(0, questionCount - priority.length - previouslyDone.length - localQuestions.length)
     : 0
   let remote = { questions: [], failures: [] }
   if (skillCount > 0) {
@@ -395,21 +415,21 @@ async function drawQuestions(signal, scope = 'mixed') {
 
   const remoteIds = new Set(remote.questions.map((question) => question.id))
   for (const id of remoteIds) chosen.add(id)
-  const fallback = shuffle(availableQuestions.value.filter((question) => !chosen.has(question.id)))
+  const fallback = shuffle(availableRealQuestions.value.filter((question) => !chosen.has(question.id)))
   const selected = [...priority, ...previouslyDone, ...localQuestions, ...remote.questions]
-  const complete = [...selected, ...fallback.slice(0, questionCount - selected.length)]
-  if (complete.length !== questionCount) throw new Error('当前可用题目不足20道，暂时无法开始。')
+  const fallbackQuestions = fallback.slice(0, questionCount - selected.length)
+  const complete = [...selected, ...fallbackQuestions]
+  if (complete.length !== questionCount) {
+    throw new Error('来源记载清楚且题面完整的真题不足20道（当前可用' + complete.length + '道）；本轮不会用来源不明或题面不完整的条目补足。')
+  }
 
-  const localFill = questionCount - priority.length - previouslyDone.length - remote.questions.length
   const sourceFailures = remote.failures.length
-  const triedCount = previouslyDone.length
-  poolNotice.value = previousMistakes.length > 0
-    ? `本轮优先复测 ${priority.length} 道旧错题、不确定题、猜题或偏慢题；待熟悉旧题共 ${previousMistakes.length} 道。其余题目从本站题库补齐，旧题优先池清空前不加入新技能真题。`
-    : sourceFailures && remote.questions.length === 0
-      ? `历史优先池已清空；技能真题源暂不可用，本轮已从已做题和本站题库补足20题。`
-      : remote.questions.length === skillCount
-        ? `历史优先池已清空。本轮包含 ${triedCount} 道已做题、${localQuestions.length} 道本站题和 ${remote.questions.length} 道2020年及以后新真题。`
-        : `历史优先池已清空；技能题源本轮载入 ${remote.questions.length} 道，已从已做题和本站题库补足其余 ${localFill} 道。${sourceFailures ? '未能读取的来源已自动跳过。' : ''}`
+  const localFill = previouslyDone.length + localQuestions.length + fallbackQuestions.length
+  poolNotice.value = sourceFailures && remote.questions.length === 0
+    ? '技能真题源暂不可用；本轮仅从本站来源明确的完整真题中抽取' + (priority.length + localFill) + '道，不用非真题凑数。'
+    : '本轮只使用来源明确、题面完整的真题：历史薄弱题' + priority.length
+      + '道，其他本站真题' + localFill + '道，技能题源' + remote.questions.length + '道。'
+      + (sourceFailures ? '无法读取的题源已跳过。' : '')
   return shuffle(complete)
 }
 
@@ -783,7 +803,7 @@ onBeforeUnmount(() => {
           <span class="eyebrow">行测复测 · 全站错题持续积累</span>
           <h1>错题再练，交卷即看结果</h1>
           <p>每轮先复测你以前做错、猜测、不确定或超时偏慢的题。旧题连续两次答对、未标不确定且没有超过题型用时线后，才退出优先池；旧题优先池清空后才加入2020年及以后的技能真题。</p>
-          <button class="button button--primary" type="button" :disabled="loadingQuiz" @click="startQuiz('mixed')">{{ loadingQuiz ? '正在组 20 题…' : '开始20题复测' }} <span v-if="!loadingQuiz" aria-hidden="true">→</span></button>
+          <button class="button button--primary" type="button" :disabled="loadingQuiz" @click="startQuiz('mixed')">{{ loadingQuiz ? '正在组 20 题…' : '开始20题真题复测' }} <span v-if="!loadingQuiz" aria-hidden="true">→</span></button>
           <button class="button button--outline pending-scope-button" type="button" :disabled="loadingQuiz || (questionDataLoaded && pendingOriginalQuestions.length < questionCount)" @click="startQuiz('pending-originals')">{{ questionDataLoaded ? `复做待验证原题（${pendingOriginalQuestions.length} 道）` : '读取题库后复做待验证原题' }}</button>
           <small class="pending-scope-note">复做原题用于回忆和检查，不会自动清除“独立运用待验证”状态。</small>
           <a class="button button--quiet library-entry" :href="withBase('/retest/library/')">查看全站题库 →</a>
@@ -800,7 +820,7 @@ onBeforeUnmount(() => {
       <p v-if="poolNotice" class="pool-notice" role="status">{{ poolNotice }}</p>
 
       <section class="how-it-works" aria-label="测验流程">
-        <div><span>01</span><b>抽题</b><small>先抽历史错题、猜题、不确定题和偏慢题；优先池清空后才加入新的技能真题。</small></div>
+        <div><span>01</span><b>抽题</b><small>只抽来源记载清楚、题面完整的真题；优先复测历史错题、猜题、不确定题和偏慢题，缺题时不拿来源不明或题面不完整的条目凑数。</small></div>
         <div><span>02</span><b>作答</b><small>可跳题、改答案，也可返回检查；可以标记“猜测 / 不确定”。</small></div>
         <div><span>03</span><b>复习</b><small>旧题连续两次答对、信心稳定且没有超时，才退出优先池；其他作答仍留在历次记录中。</small></div>
       </section>
@@ -949,7 +969,16 @@ onBeforeUnmount(() => {
               <span v-else class="answer-option__content">按题干原图选择 {{ option.label }}</span>
             </label>
           </fieldset>
-          <div class="source-line"><span>{{ currentQuestion.source }}</span></div>
+          <div class="question-source-line" role="group" aria-label="题目来源">
+            <strong>真题来源</strong>
+            <span>{{ currentQuestion.source || '来源信息未记录' }}</span>
+            <a
+              v-if="currentQuestion.sourceUrl || currentQuestion.reviewUrl"
+              :href="pageHref(currentQuestion.sourceUrl || currentQuestion.reviewUrl)"
+              target="_blank"
+              rel="noopener"
+            >{{ currentQuestion.sourceUrl ? '查看原题来源 ↗' : '查看本库记录 ↗' }}</a>
+          </div>
           <div class="question-review-tools">
             <button class="uncertainty-button" :class="{ active: uncertainAnswers[currentQuestion.id] }" type="button" :aria-pressed="Boolean(uncertainAnswers[currentQuestion.id])" @click="toggleUncertain">
               {{ uncertainAnswers[currentQuestion.id] ? '已标记：不确定 / 猜题' : '标记不确定 / 猜题' }}
@@ -1196,6 +1225,10 @@ onBeforeUnmount(() => {
 .answer-option__content { min-width: 0; padding-top: 3px; font-size: 14px; line-height: 1.65; }
 .answer-option__content :deep(p) { margin: 0; }
 .source-line { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 5px 12px; margin: 16px 0 0; padding-top: 12px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 11px; line-height: 1.55; }
+.question-source-line { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 6px 12px; margin: 16px 0 0; padding: 12px 14px; border: 1px solid var(--vp-c-divider); border-radius: 10px; color: var(--vp-c-text-1); background: var(--vp-c-bg-soft); font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; }
+.question-source-line strong { color: var(--quiz-accent); font-size: 13px; }
+.question-source-line a { grid-column: 2; width: fit-content; color: var(--quiz-accent); font-weight: 700; text-decoration: none; }
+.question-source-line a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .question-review-tools { display: flex; align-items: center; flex-wrap: wrap; gap: 9px 12px; margin-top: 12px; }
 .question-review-tools > small { color: var(--vp-c-text-2); font-size: 11px; line-height: 1.5; }
 .uncertainty-button { min-height: 36px; padding: 0 11px; border: 1px solid var(--vp-c-divider); border-radius: 9px; color: var(--vp-c-text-2); background: var(--vp-c-bg); font: inherit; font-size: 11px; font-weight: 700; cursor: pointer; }

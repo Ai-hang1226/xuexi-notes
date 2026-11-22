@@ -57,6 +57,10 @@ jobs:
         with:
           path: .vitepress/dist
 
+      # 上传完成后等待产物元数据可见，避免 Pages 在上传后立即查询到空列表。
+      - name: 等待发布产物可见
+        run: sleep 15
+
       - name: 部署到 GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

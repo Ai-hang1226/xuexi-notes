@@ -13,8 +13,6 @@ next: false
 
 **先覆盖材料的四组信息：起步、迈向网络大国、建设网络强国、技术与自主创新。三段或四段都可组织这些内容；分段数量本身不是已证实的官方评分规则。**
 
-<a class="compact-flow-link" href="/xuexi-notes/compact-flow-20261109/aligned-ef822d43563e1d64892c.svg" target="_blank" rel="noopener"><picture class="compact-flow"><source srcset="/compact-flow-20261109/aligned-ef822d43563e1d64892c.svg"><img src="/daily-quizzes/assets/2026-11-06-申论阶段对比.svg" alt="阶段内容与三段四段关系" loading="lazy" /></picture></a>
-
 <a href="/xuexi-notes/compact-flow-20261109/aligned-ef822d43563e1d64892c.svg" target="_blank" rel="noopener">放大查看图解</a>
 
 [查看原尺寸对照图](/daily-quizzes/assets/2026-11-06-申论阶段对比.svg)

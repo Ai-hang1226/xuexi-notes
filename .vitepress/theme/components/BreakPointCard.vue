@@ -31,14 +31,16 @@ const toneOf = (k) => KIND[k] || 'plain'
 
 // 有 tone 时用整体色调，否则由各行的 k 决定
 const accent = computed(() => props.tone || '')
+// 只有一个点时进入「最终解题思路」单段模式：不显示小标签，正文整段铺开
+const single = computed(() => props.points.length === 1)
 </script>
 
 <template>
-  <section v-if="points && points.length" class="bp" :class="accent ? 'bp--' + accent : ''" aria-label="破题点">
-    <div class="bp__head"><span class="bp__badge">破题点</span><span class="bp__title">{{ title }}</span></div>
+  <section v-if="points && points.length" class="bp" :class="[accent ? 'bp--' + accent : '', single ? 'bp--single' : '']" :aria-label="single ? '最终解题思路' : '破题点'">
+    <div class="bp__head"><span class="bp__badge">{{ single ? '最终解题思路' : '破题点' }}</span><span class="bp__title">{{ title }}</span></div>
     <ul class="bp__list">
       <li v-for="(p, i) in points" :key="i" class="bp__row" :class="'bp--' + toneOf(p.k)">
-        <span class="bp__key">{{ p.k }}</span>
+        <span v-if="!single" class="bp__key">{{ p.k }}</span>
         <span class="bp__val">{{ p.v }}</span>
       </li>
     </ul>
@@ -60,6 +62,9 @@ const accent = computed(() => props.tone || '')
 .bp--good { --bp-tone: #0d9488; }
 .bp--warn { --bp-tone: #c2770a; }
 .bp--bad  { --bp-tone: #dc2626; }
+.bp--single { --bp-tone: #0d9488; }       /* 最终解题思路：结论绿 */
+.bp--single .bp__row { grid-template-columns: minmax(0, 1fr); }  /* 无标签列，整段铺开 */
+.bp--single .bp__val { font-size: 13.5px; line-height: 1.85; white-space: pre-line; }
 
 .bp__head { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 10px; margin-bottom: 10px; }
 .bp__badge {

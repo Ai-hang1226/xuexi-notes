@@ -806,6 +806,7 @@ onBeforeUnmount(() => {
           <button class="button button--primary" type="button" :disabled="loadingQuiz" @click="startQuiz('mixed')">{{ loadingQuiz ? '正在组 20 题…' : '开始20题真题复测' }} <span v-if="!loadingQuiz" aria-hidden="true">→</span></button>
           <button class="button button--outline pending-scope-button" type="button" :disabled="loadingQuiz || (questionDataLoaded && pendingOriginalQuestions.length < questionCount)" @click="startQuiz('pending-originals')">{{ questionDataLoaded ? `复做待验证原题（${pendingOriginalQuestions.length} 道）` : '读取题库后复做待验证原题' }}</button>
           <small class="pending-scope-note">复做原题用于回忆和检查，不会自动清除“独立运用待验证”状态。</small>
+          <small class="preflight-caveat">开始前请留意：参考答案取自固定版原卷，尚未逐题与粉笔核对，遇到题面或答案疑问请按同题版本到粉笔核对；本轮优先复测旧题，熟题得分不代表陌生题水平。</small>
           <a class="button button--quiet library-entry" :href="withBase('/retest/library/')">查看全站题库 →</a>
           <a class="button button--quiet library-entry" :href="withBase('/retest/essay.html')">申论复测 →</a>
           <small class="priority-note">每次仍为20题；旧题不足时先用已做过的本站题补足。记录先保存在本机；登录同一邮箱后可跨设备同步，不改写原有成绩和复测台账。</small>
@@ -1124,6 +1125,7 @@ onBeforeUnmount(() => {
 .button--outline { width: 100%; border-color: color-mix(in srgb, var(--quiz-accent) 32%, var(--vp-c-divider)); color: var(--quiz-accent); background: var(--vp-c-bg); }
 .pending-scope-button { margin-top: 10px; }
 .pending-scope-note { display: block; margin-top: 6px; color: var(--vp-c-text-2); font-size: 11px; line-height: 1.55; }
+.preflight-caveat { display: block; margin-top: 12px; padding: 10px 12px; border: 1px solid color-mix(in srgb, var(--quiz-accent) 24%, var(--vp-c-divider)); border-left: 3px solid var(--quiz-accent); border-radius: 9px; color: var(--vp-c-text-2); background: color-mix(in srgb, var(--quiz-accent) 6%, var(--vp-c-bg)); font-size: 12px; line-height: 1.65; }
 .privacy-note { display: block; margin-top: 11px; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.55; }
 .priority-note { display: block; margin-top: 11px; color: var(--vp-c-text-2); font-size: 12px; line-height: 1.6; }
 .pool-notice { margin: 12px 0 0; padding: 11px 14px; border: 1px solid var(--vp-c-divider); border-left: 3px solid var(--quiz-accent); border-radius: 10px; color: var(--vp-c-text-2); background: var(--vp-c-bg-soft); font-size: 12px; line-height: 1.6; }

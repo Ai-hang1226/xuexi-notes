@@ -34,7 +34,8 @@ async function loadCatalogue() {
       import('./full-catalog.json'),
       import('./questions.json'),
       import('../cuotiben/review-catalog.json'),
-    ]).then(([catalogueModule, bankModule, reviewModule]) => {
+      import('./review-priority.json'),
+    ]).then(([catalogueModule, bankModule, reviewModule, priorityModule]) => {
       const bank = bankModule.default
       for (const item of reviewModule.default) {
         if (/独立运用待验证/.test(item.note || '') && item.url) pendingReviewUrls.add(item.url)
@@ -42,6 +43,9 @@ async function loadCatalogue() {
       for (const question of bank.questions) {
         questionById.set(question.id, question)
         if (pendingReviewUrls.has(question.reviewUrl)) transferPendingIds.add(question.id)
+      }
+      for (const item of priorityModule.default.questions) {
+        if (item.reviewUrls?.some((url) => pendingReviewUrls.has(url))) transferPendingIds.add(item.id)
       }
       importedQuestionCount.value = bank.imported
       catalogue.value = catalogueModule.default
@@ -143,7 +147,9 @@ function updateFilter(label) {
 function openQuestion(item) {
   selected.value = item
   picked.value = ''
-  draft.value = libraryRecords.value.drafts?.[item.id] || ''
+  const drafts = libraryRecords.value.drafts || {}
+  const savedId = [item.id, ...(item.aliases || [])].find((id) => Object.prototype.hasOwnProperty.call(drafts, id))
+  draft.value = savedId === undefined ? '' : drafts[savedId]
   submitted.value = false
   selectedAt.value = Date.now()
   if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })

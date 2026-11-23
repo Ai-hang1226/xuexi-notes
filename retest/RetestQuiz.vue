@@ -16,7 +16,8 @@ const localQuestionCount = ref(0)
 const questionDataLoaded = ref(false)
 const unscoredReviewCount = ref(0)
 const pendingOriginalQuestions = computed(() => questions.value.filter((question) =>
-  isEligibleRealQuestion(question) && transferPendingUrls.has(question.reviewUrl)))
+  isEligibleRealQuestion(question) && (transferPendingUrls.has(question.reviewUrl)
+    || historicalReviewById.get(question.id)?.reviewUrls?.some((url) => transferPendingUrls.has(url)))))
 const transferPendingUrls = new Set()
 const mode = ref('intro')
 const questionArchive = ref({})
@@ -109,6 +110,7 @@ function snapshotQuestion(item) {
     sourcePaper: item.sourcePaper || '',
     sourceQid: item.sourceQid || '',
     reviewUrl: item.reviewUrl || '',
+    relatedReviewUrls: item.relatedReviewUrls || [],
     year: item.year || '',
     stem: plainQuestionText(item.stemHtml || item.stem || item.title || ''),
     materialTitle: item.materialTitle || '',
@@ -1040,6 +1042,7 @@ onBeforeUnmount(() => {
             <div class="answer-evidence" :class="`answer-evidence--${mistakeResult.answerEvidence.key}`"><strong>答案依据：{{ mistakeResult.answerEvidence.label }}</strong><span>{{ mistakeResult.answerEvidence.explanation }}</span></div>
             <p v-if="mistakeResult.gradingNote" class="grading-note">{{ mistakeResult.gradingNote }}</p>
             <a v-if="mistakeResult.reviewUrl" class="review-link" :href="pageHref(mistakeResult.reviewUrl)" target="_blank" rel="noopener">打开原题解析 ↗</a>
+            <a v-for="url in (mistakeResult.relatedReviewUrls || [])" :key="url" class="review-link" :href="pageHref(url)" target="_blank" rel="noopener">查看关联复盘 ↗</a>
             <a v-if="mistakeResult.fenbiQuestionUrl" class="review-link review-link--source" :href="mistakeResult.fenbiQuestionUrl" target="_blank" rel="noopener">粉笔题目与答案 ↗</a>
             <a v-if="mistakeResult.sourceUrl" class="review-link review-link--source" :href="mistakeResult.sourceUrl" target="_blank" rel="noopener">查看题库来源 ↗</a>
           </div>
@@ -1096,6 +1099,7 @@ onBeforeUnmount(() => {
             <div class="answer-evidence" :class="`answer-evidence--${item.answerEvidence.key}`"><strong>答案依据：{{ item.answerEvidence.label }}</strong><span>{{ item.answerEvidence.explanation }}</span></div>
             <p v-if="item.gradingNote" class="grading-note">{{ item.gradingNote }}</p>
             <a v-if="item.reviewUrl" class="review-link" :href="pageHref(item.reviewUrl)" target="_blank" rel="noopener">打开原复盘与解析 ↗</a>
+            <a v-for="url in (item.relatedReviewUrls || [])" :key="url" class="review-link" :href="pageHref(url)" target="_blank" rel="noopener">查看关联复盘 ↗</a>
             <a v-if="item.fenbiQuestionUrl" class="review-link review-link--source" :href="item.fenbiQuestionUrl" target="_blank" rel="noopener">粉笔题目与答案 ↗</a>
             <a v-if="item.sourceUrl" class="review-link review-link--source" :href="item.sourceUrl" target="_blank" rel="noopener">查看题库来源 ↗</a>
           </div>

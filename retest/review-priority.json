@@ -1,6 +1,6 @@
 {
-  "sourceRecords": 191,
-  "mappedRecords": 174,
+  "sourceRecords": 203,
+  "mappedRecords": 186,
   "unavailableReviews": [
     {
       "id": "2026-11-04-jiangsu-a-assessment-q7",
@@ -1508,7 +1508,8 @@
       ],
       "date": "2026-11-07",
       "reviewUrls": [
-        "/cuotiben/135题混合真题批改-2026-11-07#q116"
+        "/cuotiben/135题混合真题批改-2026-11-07#q116",
+        "/cuotiben/资料分析专项复盘-2026-11-23#a-q12"
       ]
     },
     {
@@ -1535,11 +1536,13 @@
     {
       "id": "q120",
       "types": [
-        "错题"
+        "错题",
+        "猜题"
       ],
       "date": "2026-11-07",
       "reviewUrls": [
-        "/cuotiben/135题混合真题批改-2026-11-07#q120"
+        "/cuotiben/135题混合真题批改-2026-11-07#q120",
+        "/cuotiben/资料分析专项复盘-2026-11-23#a-q16"
       ]
     },
     {
@@ -1947,6 +1950,107 @@
       "date": "2026-11-07",
       "reviewUrls": [
         "/cuotiben/每日测验复盘-2026-11-06#q5"
+      ]
+    },
+    {
+      "id": "fenbi-review-20261123-a-q1",
+      "types": [
+        "错题"
+      ],
+      "date": "2026-11-23",
+      "reviewUrls": [
+        "/cuotiben/资料分析专项复盘-2026-11-23#a-q1"
+      ]
+    },
+    {
+      "id": "fenbi-review-20261123-a-q10",
+      "types": [
+        "错题"
+      ],
+      "date": "2026-11-23",
+      "reviewUrls": [
+        "/cuotiben/资料分析专项复盘-2026-11-23#a-q10"
+      ]
+    },
+    {
+      "id": "fenbi-review-20261123-a-q3",
+      "types": [
+        "错题"
+      ],
+      "date": "2026-11-23",
+      "reviewUrls": [
+        "/cuotiben/资料分析专项复盘-2026-11-23#a-q3"
+      ]
+    },
+    {
+      "id": "fenbi-review-20261123-b-q13",
+      "types": [
+        "错题"
+      ],
+      "date": "2026-11-23",
+      "reviewUrls": [
+        "/cuotiben/资料分析专项复盘-2026-11-23#b-q13"
+      ]
+    },
+    {
+      "id": "fenbi-review-20261123-b-q14",
+      "types": [
+        "错题"
+      ],
+      "date": "2026-11-23",
+      "reviewUrls": [
+        "/cuotiben/资料分析专项复盘-2026-11-23#b-q14"
+      ]
+    },
+    {
+      "id": "fenbi-review-20261123-b-q15",
+      "types": [
+        "错题"
+      ],
+      "date": "2026-11-23",
+      "reviewUrls": [
+        "/cuotiben/资料分析专项复盘-2026-11-23#b-q15"
+      ]
+    },
+    {
+      "id": "fenbi-review-20261123-b-q20",
+      "types": [
+        "错题"
+      ],
+      "date": "2026-11-23",
+      "reviewUrls": [
+        "/cuotiben/资料分析专项复盘-2026-11-23#b-q20"
+      ]
+    },
+    {
+      "id": "fenbi-review-20261123-b-q7",
+      "types": [
+        "错题"
+      ],
+      "date": "2026-11-23",
+      "reviewUrls": [
+        "/cuotiben/资料分析专项复盘-2026-11-23#b-q7"
+      ]
+    },
+    {
+      "id": "q119",
+      "types": [
+        "错题"
+      ],
+      "date": "2026-11-23",
+      "reviewUrls": [
+        "/cuotiben/资料分析专项复盘-2026-11-23#a-q15"
+      ]
+    },
+    {
+      "id": "review-cd0ff8af0924d40d",
+      "types": [
+        "不确定",
+        "耗时较长"
+      ],
+      "date": "2026-11-23",
+      "reviewUrls": [
+        "/cuotiben/数量关系专项复盘-2026-11-23#q4"
       ]
     },
     {

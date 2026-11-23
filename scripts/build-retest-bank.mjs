@@ -20,6 +20,7 @@ const displaySource = (value) => value
   .replace(/(?:平台|题库)参考(?:答案)?[：:\s]*[A-D][^。]*。?/g, '')
   .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').trim()
 const catalog = JSON.parse(read('cuotiben/review-catalog.json'))
+const reviewedQuestions = JSON.parse(read('retest/reviewed-questions.json'))
 const skillIndex = JSON.parse(read('retest/xingcezhenti-index.json'))
 const skillPool = JSON.parse(read('retest/xingcezhenti-pool.json'))
 const skillImports = JSON.parse(read('retest/xingcezhenti-imports.json'))
@@ -389,6 +390,50 @@ for (const item of JSON.parse(read('retest/recovered-lesson-fragments.json')).qu
 for (const item of JSON.parse(read('retest/fenbi-verified.json')).questions) {
   if (item.automaticGrading === false) continue
   addVerifiedLesson(item, 'retest/fenbi-verified.json')
+}
+
+// Complete Fenbi review questions: retain the original source, choices and shared material.
+const reviewUrls = new Set(catalog.map((item) => item.url))
+for (const item of reviewedQuestions.questions) {
+  const material = reviewedQuestions.materials[item.materialKey]
+  if (!item.id || !item.reviewUrl || !reviewUrls.has(item.reviewUrl) || !material?.markdown
+      || !item.sourceUrl || !item.source || !Array.isArray(item.options)) {
+    throw new Error('复盘题缺少来源、材料或目录关联：' + (item.id || '未知题目'))
+  }
+  add({
+    id: item.id, number: item.number, title: item.title, type: item.module, module: item.module,
+    correct: item.correct, source: item.source, sourceUrl: item.sourceUrl,
+    stemHtml: html(item.stem), options: item.options.map((o) => ({ label: o.label, html: inline(o.text) })),
+    materialTitle: material.title, materialHtml: html(material.markdown),
+    reviewUrl: item.reviewUrl, gradingNote: item.gradingNote, origin: '历史错题与复盘',
+  }, 'retest/reviewed-questions.json')
+  if (!questions.some((question) => question.id === item.id && question.correct === item.correct)) {
+    throw new Error('复盘题未进入题库；如与旧题重复，请先核对并关联旧编号：' + item.id)
+  }
+}
+// Existing scored questions keep their IDs and history; every new review link
+// must match the same stem, all four choices and the reference answer.
+// Keep decimal points, percent signs, minus signs and range separators when
+// comparing numerical questions; only normalize equivalent formatting.
+const normalizeReviewText = (value = '') => String(value).replace(/&(?:nbsp|#160);/gi, '')
+  .replace(/<[^>]*>/g, '').normalize('NFKC').replace(/[\s,，。、；;：:！!？?（）()\[\]{}“”‘’"'、]/gu, '')
+const normalizedQuestion = (stem, options) => [stem, ...options.map((o) => o.html || o.text || '')]
+  .map(normalizeReviewText).join('|')
+const normalizedMaterial = (value = '') => normalizeReviewText(value) + '|'
+  + [...String(value).matchAll(/<img\b[^>]*src=["']([^"']+)/gi)].map((m) => decodeURI(m[1])).join('|')
+for (const link of reviewedQuestions.existingLinks) {
+  const old = questions.find((question) => question.id === link.questionId)
+  const expectedMaterial = link.materialKey ? reviewedQuestions.materials[link.materialKey] : null
+  if (!reviewUrls.has(link.reviewUrl) || !old || old.correct !== link.correct
+      || link.options?.map((o) => o.label).join('') !== 'ABCD'
+      || normalizedQuestion(old.stemHtml, old.options) !== normalizedQuestion(link.stem, link.options)
+      || (link.materialKey && (!expectedMaterial || normalizedMaterial(old.materialHtml) !== normalizedMaterial(html(expectedMaterial.markdown))))) {
+    throw new Error('既有题与本次复盘的题面、选项、材料或参考答案不一致：' + link.questionId)
+  }
+  old.relatedReviewUrls ||= []
+  if (!old.relatedReviewUrls.includes(link.reviewUrl)) old.relatedReviewUrls.push(link.reviewUrl)
+  if (link.sourceNote && !old.gradingNote?.includes(link.sourceNote)) old.gradingNote = [old.gradingNote, link.sourceNote].filter(Boolean).join(' ')
+  if (link.sourceUrl && !old.fenbiQuestionUrl) old.fenbiQuestionUrl = link.sourceUrl
 }
 
 const moduleNames = {

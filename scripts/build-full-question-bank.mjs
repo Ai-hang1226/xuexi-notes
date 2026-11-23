@@ -12,6 +12,11 @@ const bank = JSON.parse(read('retest/questions.json'))
 const reviews = JSON.parse(read('cuotiben/review-catalog.json'))
 const recoveredFragments = JSON.parse(read('retest/recovered-lesson-fragments.json')).questions
 const fenbiVerified = JSON.parse(read('retest/fenbi-verified.json')).questions
+const reviewedQuestions = JSON.parse(read('retest/reviewed-questions.json'))
+const existingReviewLinks = new Map(reviewedQuestions.existingLinks.map((link) => [link.reviewUrl, link]))
+const legacyUnscoredUrls = new Set([...reviewedQuestions.questions, ...reviewedQuestions.existingLinks]
+  .filter((item) => item.legacyUnscored === true).map((item) => item.reviewUrl))
+if (existingReviewLinks.size !== reviewedQuestions.existingLinks.length) throw new Error('复盘关联网址重复')
 const publicCandidates = JSON.parse(read('retest/public-source-candidates.json')).records
 const methodReferences = JSON.parse(read('retest/method-question-references.json')).questions
 const dispositions = JSON.parse(read('retest/question-dispositions.json')).records
@@ -272,6 +277,14 @@ for (const hit of bigText.matchAll(/^### 第(\d+)题\s*\{#q\d+\}\n([\s\S]*?)(?=^
 for (const row of reviews) {
   let known = byReviewUrl.get(row.url) || entries.find((entry) => entry.sources.some((s) => s.url === row.url))
   const verified = fenbiVerified.find((question) => question.reviewUrl === row.url)
+  const existingLink = existingReviewLinks.get(row.url)
+  if (existingLink) {
+    const existing = entries.find((entry) => entry.quizId === existingLink.questionId)
+    if (!existing || (known && known.quizId !== existingLink.questionId)) {
+      throw new Error('复盘关联的既有题不存在或有冲突：' + existingLink.questionId)
+    }
+    known = existing
+  }
   if (!known && verified) {
     const key = fingerprint(render(verified.stem), verified.options.map((option) => ({ html: inline(option.text) })))
     known = entries.find((entry) => entry.quizId === verified.id) || byFingerprint.get(key)
@@ -285,7 +298,12 @@ for (const row of reviews) {
     known = entries.find((entry) => entry.title === '2026-11-04 · 阶段测评 · 第' + n + '题')
   }
   if (known) {
-    addAlias(known, stableId(row.url))
+    const reviewAlias = stableId(row.url)
+    addAlias(known, reviewAlias)
+    if (legacyUnscoredUrls.has(row.url)) {
+      known.legacyUnscoredIds ||= []
+      if (!known.legacyUnscoredIds.includes(reviewAlias)) known.legacyUnscoredIds.push(reviewAlias)
+    }
     if (!known.sources.some((s) => s.url === row.url)) known.sources.push({ label: '错题复盘', url: row.url })
   } else {
     const [page, anchor] = row.url.split('#')
@@ -487,8 +505,8 @@ if (coverage.lessonExamples !== lessonParts.matches.length || coverage.reviewRef
 }
 fs.writeFileSync(path.join(root, 'retest/full-catalog.json'), JSON.stringify({ summary, coverage, entries }, null, 2) + '\n', 'utf8')
 const studyRecordMetadata = {
-  entries: entries.map(({ id, aliases, quizId, subject, status, title, source, sourceUrl, excerpt, sources }) => ({
-    id, aliases, quizId, subject, status, title, source, sourceUrl, excerpt, sources,
+  entries: entries.map(({ id, aliases, legacyUnscoredIds, quizId, subject, status, title, source, sourceUrl, excerpt, sources }) => ({
+    id, aliases, legacyUnscoredIds, quizId, subject, status, title, source, sourceUrl, excerpt, sources,
   })),
 }
 fs.writeFileSync(path.join(root, 'retest/full-catalog-metadata.json'), JSON.stringify(studyRecordMetadata) + '\n', 'utf8')

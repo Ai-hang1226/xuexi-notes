@@ -303,7 +303,10 @@ export function collectLocalStudyRecords(context = {}) {
     const item = catalogueById.get(questionId)
     const quizId = item?.quizId || ''
     const sourceQuestion = questionById.get(quizId) || {}
-    const isScored = item?.status === '可自动判分' && Boolean(sourceQuestion.correct)
+    // A formerly unscored catalogue entry must not acquire a retroactive score
+    // merely because it was later linked to a scoreable question.
+    const isScored = !item?.legacyUnscoredIds?.includes(questionId)
+      && item?.status === '可自动判分' && Boolean(sourceQuestion.correct)
     const correct = isScored ? sourceQuestion.correct : ''
     const attempt = {
       id: id.replace(/^library-legacy:/, 'legacy-'),

@@ -76,7 +76,7 @@ const single = computed(() => props.points.length === 1)
 
 /* 图推等题型：卡片内嵌题干原图缩略，点开放大 */
 .bp__body { min-width: 0; }
-.bp--with-img .bp__body { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 14px; align-items: start; }
+.bp--with-img .bp__body { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 16px; align-items: start; }
 .bp__thumb { display: block; margin: 0; padding: 0; border: 1px solid var(--vp-c-divider); border-radius: 8px; overflow: hidden; background: #fff; line-height: 0; }
 .bp__thumb img { display: block; width: 100%; height: auto; max-height: 260px; object-fit: contain; object-position: top; }
 .bp__thumb:hover { border-color: var(--bp-tone); }

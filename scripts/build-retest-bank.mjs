@@ -268,9 +268,23 @@ for (const item of reviewEntries) {
     }
     material = html(materialMatch[1])
     materialTitle = '原题材料 ' + materialNumber
-  } else if (/材料见|根据以下材料|根据上述材料|根据下列资料|根据以下资料/.test(question.stemHtml)) {
-    fail(file, anchor, '共用材料待核')
-    continue
+  } else {
+    // 部分复盘文档用「[查看本题材料](#material-N)」引用共用材料，
+    // 材料段落以「### 材料X {#material-N}」定义。按锚点定位，避免与材料序号混淆。
+    const materialAnchor = block.match(/查看本题材料\]\(#(material-\d+)\)/)?.[1]
+    if (materialAnchor) {
+      const re = new RegExp('^### 材料[^\\n]*\\{#' + materialAnchor + '\\}[^\\n]*\\n([\\s\\S]*?)(?=^### 材料|^## 第\\d+题)', 'm')
+      const materialMatch = text.match(re)
+      if (!materialMatch) {
+        fail(file, anchor, '共用材料待核')
+        continue
+      }
+      material = html(materialMatch[1])
+      materialTitle = '原题共用材料'
+    } else if (/材料见|根据以下材料|根据上述材料|根据下列资料|根据以下资料/.test(question.stemHtml)) {
+      fail(file, anchor, '共用材料待核')
+      continue
+    }
   }
   const module = ['图形推理', '逻辑判断', '定义判断', '类比推理'].includes(item.module) ? '判断推理' : item.module
   add({

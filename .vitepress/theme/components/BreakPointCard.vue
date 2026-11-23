@@ -12,11 +12,14 @@
 // k 会自动按三类着色：问法/问题/要求→绿；对象/范围/主体→蓝；时间/条件/标志/排除→橙。
 // 也支持 tone 覆盖整卡左边框颜色：info/good/warn/bad。
 import { computed } from 'vue'
+import { withBase } from 'vitepress'
 
 const props = defineProps({
   title: { type: String, default: '破题点' },
   points: { type: Array, default: () => [] },
   tone: { type: String, default: '' },
+  img: { type: String, default: '' },          // 可选：题干原图缩略，点开放大（图推等题型配图用）
+  imgAlt: { type: String, default: '题图' },
 })
 
 const KIND = {
@@ -36,14 +39,19 @@ const single = computed(() => props.points.length === 1)
 </script>
 
 <template>
-  <section v-if="points && points.length" class="bp" :class="[accent ? 'bp--' + accent : '', single ? 'bp--single' : '']" :aria-label="single ? '最终解题思路' : '破题点'">
+  <section v-if="points && points.length" class="bp" :class="[accent ? 'bp--' + accent : '', single ? 'bp--single' : '', img ? 'bp--with-img' : '']" :aria-label="single ? '最终解题思路' : '破题点'">
     <div class="bp__head"><span class="bp__badge">{{ single ? '最终解题思路' : '破题点' }}</span><span class="bp__title">{{ title }}</span></div>
-    <ul class="bp__list">
-      <li v-for="(p, i) in points" :key="i" class="bp__row" :class="'bp--' + toneOf(p.k)">
-        <span v-if="!single" class="bp__key">{{ p.k }}</span>
-        <span class="bp__val">{{ p.v }}</span>
-      </li>
-    </ul>
+    <div class="bp__body">
+      <a v-if="img" class="bp__thumb" :href="withBase(img)" target="_blank" rel="noopener" :title="imgAlt + '（点击放大）'">
+        <img :src="withBase(img)" :alt="imgAlt" loading="lazy" />
+      </a>
+      <ul class="bp__list">
+        <li v-for="(p, i) in points" :key="i" class="bp__row" :class="'bp--' + toneOf(p.k)">
+          <span v-if="!single" class="bp__key">{{ p.k }}</span>
+          <span class="bp__val">{{ p.v }}</span>
+        </li>
+      </ul>
+    </div>
   </section>
 </template>
 
@@ -65,6 +73,13 @@ const single = computed(() => props.points.length === 1)
 .bp--single { --bp-tone: #0d9488; }       /* 最终解题思路：结论绿 */
 .bp--single .bp__row { grid-template-columns: minmax(0, 1fr); }  /* 无标签列，整段铺开 */
 .bp--single .bp__val { font-size: 13.5px; line-height: 1.85; white-space: pre-line; }
+
+/* 图推等题型：卡片内嵌题干原图缩略，点开放大 */
+.bp__body { min-width: 0; }
+.bp--with-img .bp__body { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 14px; align-items: start; }
+.bp__thumb { display: block; margin: 0; padding: 0; border: 1px solid var(--vp-c-divider); border-radius: 8px; overflow: hidden; background: #fff; line-height: 0; }
+.bp__thumb img { display: block; width: 100%; height: auto; max-height: 260px; object-fit: contain; object-position: top; }
+.bp__thumb:hover { border-color: var(--bp-tone); }
 
 .bp__head { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 10px; margin-bottom: 10px; }
 .bp__badge {
@@ -119,5 +134,7 @@ const single = computed(() => props.points.length === 1)
   .bp { padding: 12px; }
   .bp__row { grid-template-columns: 38px minmax(0, 1fr); gap: 8px; font-size: 12.5px; }
   .bp__key { min-width: 38px; padding: 1px 5px; }
+  .bp--with-img .bp__body { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .bp__thumb img { max-height: 200px; }
 }
 </style>

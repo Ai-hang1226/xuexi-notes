@@ -29,15 +29,15 @@
     "awaitingReview": 0
   },
   "quizzes": {
-    "total": 17,
+    "total": 18,
     "latest": {
-      "date": "2026-11-22",
+      "date": "2026-11-23",
       "status": "待作答 · 8道行测＋1道申论 · 原题链接",
-      "testUrl": "/daily-quizzes/2026-11-22",
-      "reviewUrl": "/daily-quizzes/2026-11-22-review"
+      "testUrl": "/daily-quizzes/2026-11-23",
+      "reviewUrl": "/daily-quizzes/2026-11-23-review"
     },
     "reviewed": 5,
-    "pending": 11,
+    "pending": 12,
     "rest": 1,
     "assessments": 2
   },

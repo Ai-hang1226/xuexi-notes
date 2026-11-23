@@ -1,14 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img" aria-labelledby="title desc">
-  <title id="title">同一批产量下比较成本</title><desc id="desc">3.6万元对应改造后两种成本之差，9.6万元对应改造前后总成本之差。</desc>
-  <rect width="1440" height="1000" rx="30" fill="#f7f9fd"/>
-  <text x="65" y="90" fill="#17324e" font-family="Microsoft YaHei,sans-serif" font-size="46" font-weight="700">数量关系｜同一批产量，比两种“差”</text>
-  <text x="65" y="145" fill="#52687d" font-family="Microsoft YaHei,sans-serif" font-size="30">以改造后一天的产量作为同一批产品</text>
-  <rect x="65" y="190" width="1310" height="380" rx="22" fill="#ffffff" stroke="#d5deec" stroke-width="3"/>
-  <line x1="65" y1="280" x2="1375" y2="280" stroke="#d5deec" stroke-width="2"/><line x1="65" y1="375" x2="1375" y2="375" stroke="#d5deec" stroke-width="2"/><line x1="65" y1="470" x2="1375" y2="470" stroke="#d5deec" stroke-width="2"/>
-  <text x="130" y="250" fill="#52687d" font-family="Microsoft YaHei,sans-serif" font-size="34" font-weight="700">成本</text><text x="540" y="250" fill="#52687d" font-family="Microsoft YaHei,sans-serif" font-size="34" font-weight="700">改造前</text><text x="1010" y="250" fill="#52687d" font-family="Microsoft YaHei,sans-serif" font-size="34" font-weight="700">改造后</text>
-  <text x="130" y="341" fill="#17324e" font-family="Microsoft YaHei,sans-serif" font-size="34">人工</text><text x="550" y="341" fill="#17324e" font-family="Microsoft YaHei,sans-serif" font-size="34">3份</text><text x="1010" y="341" fill="#155ca3" font-family="Microsoft YaHei,sans-serif" font-size="34" font-weight="700">1.5份</text>
-  <text x="130" y="436" fill="#17324e" font-family="Microsoft YaHei,sans-serif" font-size="34">非人工</text><text x="550" y="436" fill="#17324e" font-family="Microsoft YaHei,sans-serif" font-size="34">1份</text><text x="1010" y="436" fill="#155ca3" font-family="Microsoft YaHei,sans-serif" font-size="34" font-weight="700">0.9份</text>
-  <text x="130" y="530" fill="#17324e" font-family="Microsoft YaHei,sans-serif" font-size="34">总成本</text><text x="550" y="530" fill="#17324e" font-family="Microsoft YaHei,sans-serif" font-size="34">4份</text><text x="1010" y="530" fill="#1a7953" font-family="Microsoft YaHei,sans-serif" font-size="34" font-weight="700">2.4份</text>
-  <rect x="65" y="620" width="1310" height="130" rx="20" fill="#e2efff"/><text x="105" y="676" fill="#155ca3" font-family="Microsoft YaHei,sans-serif" font-size="34" font-weight="700">改造后内部的差：1.5－0.9＝0.6份＝3.6万元</text><text x="105" y="727" fill="#17324e" font-family="Microsoft YaHei,sans-serif" font-size="30">因此1份＝6万元</text>
-  <rect x="65" y="775" width="1310" height="155" rx="20" fill="#e7f6ef"/><text x="105" y="832" fill="#1a7953" font-family="Microsoft YaHei,sans-serif" font-size="34" font-weight="700">同产量前后的差：4－2.4＝1.6份＝每天节省9.6万元</text><text x="105" y="888" fill="#17324e" font-family="Microsoft YaHei,sans-serif" font-size="32">改造费用3456万元 ÷ 9.6万元／天 ＝ 360天</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1120" viewBox="0 0 600 1120" role="img" aria-labelledby="title desc">
+  <title id="title">同一批产量下比较成本</title><desc id="desc">3.6万元对应改造后两项成本之差，9.6万元对应同产量下改造前后的总成本之差。</desc>
+  <rect width="600" height="1120" rx="24" fill="#f7f9fd"/>
+  <g font-family="Microsoft YaHei,sans-serif" fill="#17324e">
+    <text x="30" y="58" font-size="34" font-weight="700">数量关系｜同产量比较</text>
+    <text x="30" y="103" font-size="25" fill="#52687d">以改造后一天的产量为一批</text>
+    <rect x="24" y="145" width="552" height="300" rx="20" fill="#fff" stroke="#d5deec" stroke-width="2"/>
+    <line x1="24" y1="218" x2="576" y2="218" stroke="#d5deec" stroke-width="2"/>
+    <line x1="24" y1="290" x2="576" y2="290" stroke="#d5deec" stroke-width="2"/>
+    <line x1="24" y1="362" x2="576" y2="362" stroke="#d5deec" stroke-width="2"/>
+    <text x="45" y="192" font-size="29" font-weight="700" fill="#52687d">成本</text><text x="235" y="192" font-size="29" font-weight="700" fill="#52687d">改造前</text><text x="405" y="192" font-size="29" font-weight="700" fill="#52687d">改造后</text>
+    <text x="45" y="266" font-size="29">人工</text><text x="245" y="266" font-size="29">3份</text><text x="415" y="266" font-size="29" fill="#155ca3" font-weight="700">1.5份</text>
+    <text x="45" y="338" font-size="29">非人工</text><text x="245" y="338" font-size="29">1份</text><text x="415" y="338" font-size="29" fill="#155ca3" font-weight="700">0.9份</text>
+    <text x="45" y="411" font-size="29">总成本</text><text x="245" y="411" font-size="29">4份</text><text x="415" y="411" font-size="29" fill="#1a7953" font-weight="700">2.4份</text>
+    <rect x="24" y="485" width="552" height="220" rx="20" fill="#e2efff"/>
+    <text x="48" y="534" font-size="29" font-weight="700" fill="#155ca3">① 改造后两项成本之差</text>
+    <text x="48" y="581" font-size="27">1.5份 − 0.9份 = 0.6份</text>
+    <text x="48" y="624" font-size="27">0.6份 = 3.6万元</text>
+    <text x="48" y="667" font-size="27" font-weight="700">所以 1份 = 6万元</text>
+    <rect x="24" y="740" width="552" height="300" rx="20" fill="#e7f6ef"/>
+    <text x="48" y="789" font-size="29" font-weight="700" fill="#1a7953">② 同产量前后总成本之差</text>
+    <text x="48" y="836" font-size="27">4份 − 2.4份 = 1.6份</text>
+    <text x="48" y="879" font-size="27">每天节省 1.6 × 6 = 9.6万元</text>
+    <text x="48" y="929" font-size="27">3456万元 ÷ 9.6万元／天</text>
+    <text x="48" y="978" font-size="31" font-weight="700" fill="#1a7953">= 360天</text>
+  </g>
 </svg>

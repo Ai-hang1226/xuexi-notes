@@ -28,6 +28,12 @@ for (const item of recent) {
     problems.push(`${item.id}: 未进入对应的优先复测关联`)
   }
 }
+// Practice titles contain only the module, optional set number and question number.
+for (const item of records.questions) {
+  const q = bank.find((row) => row.id === item.id)
+  const neutralTitle = item.module + ' · ' + (item.practiceGroup || '') + '第' + item.number + '题'
+  if (q?.title !== neutralTitle) problems.push(item.id + ': 练习标题含多余提示')
+}
 for (const item of expected) {
   const q = bank.find((row) => row.id === item.questionId)
   const matches = catalogue.filter((entry) => entry.quizId === item.questionId

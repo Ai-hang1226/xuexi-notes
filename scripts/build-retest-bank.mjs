@@ -400,8 +400,12 @@ for (const item of reviewedQuestions.questions) {
       || !item.sourceUrl || !item.source || !Array.isArray(item.options)) {
     throw new Error('复盘题缺少来源、材料或目录关联：' + (item.id || '未知题目'))
   }
+  const practiceGroup = item.practiceGroup || ''
+  if (!Number.isInteger(item.number) || item.number <= 0 || (practiceGroup && !/^第[一二三四五六七八九十\d]+套$/.test(practiceGroup))) {
+    throw new Error('复盘题的练习编号不符合无提示格式：' + item.id)
+  }
   add({
-    id: item.id, number: item.number, title: item.title, type: item.module, module: item.module,
+    id: item.id, number: item.number, title: item.module + ' · ' + practiceGroup + '第' + item.number + '题', type: item.module, module: item.module,
     correct: item.correct, source: item.source, sourceUrl: item.sourceUrl,
     stemHtml: html(item.stem), options: item.options.map((o) => ({ label: o.label, html: inline(o.text) })),
     materialTitle: material.title, materialHtml: html(material.markdown),

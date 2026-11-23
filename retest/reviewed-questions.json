@@ -31,7 +31,6 @@
       "id": "fenbi-review-20261123-a-q1",
       "number": 1,
       "module": "资料分析",
-      "title": "第1题｜增量占增量：小数点与数量级",
       "source": "粉笔标注2020年国考副省级网友回忆版第131题",
       "sourceUrl": "https://spa.fenbi.com/ti/exam/solution/1_1_41jc4o9?routecs=xingce&examcatid=1000187",
       "correct": "D",
@@ -57,13 +56,13 @@
       "materialKey": "a1",
       "reviewUrl": "/cuotiben/资料分析专项复盘-2026-11-23#a-q1",
       "gradingNote": "粉笔回忆版参考，题干、材料和选项按原练习记录；参考答案不等同考试机关公布答案。",
-      "legacyUnscored": true
+      "legacyUnscored": true,
+      "practiceGroup": "第一套"
     },
     {
       "id": "fenbi-review-20261123-a-q3",
       "number": 3,
       "module": "资料分析",
-      "title": "第3题｜平均数增长率：分子与分母的增速",
       "source": "粉笔标注2020年国考副省级网友回忆版第133题",
       "sourceUrl": "https://spa.fenbi.com/ti/exam/solution/1_1_41jc4o9?routecs=xingce&examcatid=1000187",
       "correct": "C",
@@ -89,13 +88,13 @@
       "materialKey": "a1",
       "reviewUrl": "/cuotiben/资料分析专项复盘-2026-11-23#a-q3",
       "gradingNote": "粉笔回忆版参考，题干、材料和选项按原练习记录；参考答案不等同考试机关公布答案。",
-      "legacyUnscored": true
+      "legacyUnscored": true,
+      "practiceGroup": "第一套"
     },
     {
       "id": "fenbi-review-20261123-a-q10",
       "number": 10,
       "module": "资料分析",
-      "title": "第10题｜选非题：单月、累计与缺失月份",
       "source": "粉笔标注2020年青海省考A卷网友回忆版第120题",
       "sourceUrl": "https://spa.fenbi.com/ti/exam/solution/1_1_41jc4o9?routecs=xingce&examcatid=1000187",
       "correct": "C",
@@ -121,13 +120,13 @@
       "materialKey": "a2",
       "reviewUrl": "/cuotiben/资料分析专项复盘-2026-11-23#a-q10",
       "gradingNote": "粉笔回忆版参考，题干、材料和选项按原练习记录；参考答案不等同考试机关公布答案。",
-      "legacyUnscored": true
+      "legacyUnscored": true,
+      "practiceGroup": "第一套"
     },
     {
       "id": "fenbi-review-20261123-b-q7",
       "number": 7,
       "module": "资料分析",
-      "title": "第7题｜图表找数：3月与4月",
       "source": "粉笔标注2026年辽宁省考网友回忆版第107题",
       "sourceUrl": "https://spa.fenbi.com/ti/exam/solution/1_1_41jmedk?routecs=xingce&examcatid=1000187",
       "correct": "C",
@@ -153,13 +152,13 @@
       "materialKey": "b1",
       "reviewUrl": "/cuotiben/资料分析专项复盘-2026-11-23#b-q7",
       "gradingNote": "粉笔回忆版参考，题干、材料和选项按原练习记录；参考答案不等同考试机关公布答案。",
-      "legacyUnscored": true
+      "legacyUnscored": true,
+      "practiceGroup": "第二套"
     },
     {
       "id": "fenbi-review-20261123-b-q13",
       "number": 13,
       "module": "资料分析",
-      "title": "第13题｜利润率：用边界回查除法",
       "source": "粉笔标注2026年黑龙江省考网友回忆版第118题",
       "sourceUrl": "https://spa.fenbi.com/ti/exam/solution/1_1_41jmedk?routecs=xingce&examcatid=1000187",
       "correct": "B",
@@ -185,13 +184,13 @@
       "materialKey": "b2",
       "reviewUrl": "/cuotiben/资料分析专项复盘-2026-11-23#b-q13",
       "gradingNote": "粉笔回忆版参考，题干、材料和选项按原练习记录；参考答案不等同考试机关公布答案。",
-      "legacyUnscored": true
+      "legacyUnscored": true,
+      "practiceGroup": "第二套"
     },
     {
       "id": "fenbi-review-20261123-b-q14",
       "number": 14,
       "module": "资料分析",
-      "title": "第14题｜基期倍数：下降率的符号",
       "source": "粉笔标注2026年黑龙江省考网友回忆版第119题",
       "sourceUrl": "https://spa.fenbi.com/ti/exam/solution/1_1_41jmedk?routecs=xingce&examcatid=1000187",
       "correct": "B",
@@ -217,13 +216,13 @@
       "materialKey": "b2",
       "reviewUrl": "/cuotiben/资料分析专项复盘-2026-11-23#b-q14",
       "gradingNote": "粉笔回忆版参考，题干、材料和选项按原练习记录；参考答案不等同考试机关公布答案。",
-      "legacyUnscored": true
+      "legacyUnscored": true,
+      "practiceGroup": "第二套"
     },
     {
       "id": "fenbi-review-20261123-b-q15",
       "number": 15,
       "module": "资料分析",
-      "title": "第15题｜两期比重：增长率对应年份",
       "source": "粉笔标注2026年黑龙江省考网友回忆版第120题",
       "sourceUrl": "https://spa.fenbi.com/ti/exam/solution/1_1_41jmedk?routecs=xingce&examcatid=1000187",
       "correct": "C",
@@ -249,13 +248,13 @@
       "materialKey": "b2",
       "reviewUrl": "/cuotiben/资料分析专项复盘-2026-11-23#b-q15",
       "gradingNote": "粉笔回忆版参考，题干、材料和选项按原练习记录；参考答案不等同考试机关公布答案。",
-      "legacyUnscored": true
+      "legacyUnscored": true,
+      "practiceGroup": "第二套"
     },
     {
       "id": "fenbi-review-20261123-b-q20",
       "number": 20,
       "module": "资料分析",
-      "title": "第20题｜“是几倍”与“多几倍”",
       "source": "粉笔标注2025年新疆省考网友回忆版第102题",
       "sourceUrl": "https://spa.fenbi.com/ti/exam/solution/1_1_41jmedk?routecs=xingce&examcatid=1000187",
       "correct": "C",
@@ -281,7 +280,8 @@
       "materialKey": "b3",
       "reviewUrl": "/cuotiben/资料分析专项复盘-2026-11-23#b-q20",
       "gradingNote": "粉笔回忆版参考，题干、材料和选项按原练习记录；参考答案不等同考试机关公布答案。",
-      "legacyUnscored": true
+      "legacyUnscored": true,
+      "practiceGroup": "第二套"
     }
   ],
   "existingLinks": [

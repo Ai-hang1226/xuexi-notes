@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1050" viewBox="0 0 1440 1050" role="img" aria-labelledby="title desc">
+  <title id="title">资料分析复盘路线</title><desc id="desc">先确认时间与对象，再判断公式符号，最后检查计算与选项。</desc>
+  <rect width="1440" height="1050" rx="30" fill="#f5f8ff"/>
+  <text x="72" y="86" fill="#17324e" font-family="Microsoft YaHei,sans-serif" font-size="46" font-weight="700">资料分析｜先找对，再算快</text>
+  <text x="72" y="145" fill="#445b74" font-family="Microsoft YaHei,sans-serif" font-size="30">以今天讨论过的错题为例 · 下次练习时逐步验证</text>
+  <rect x="72" y="195" width="1296" height="155" rx="22" fill="#e2efff" stroke="#b5d3fa" stroke-width="3"/>
+  <text x="108" y="251" fill="#155ca3" font-family="Microsoft YaHei,sans-serif" font-size="38" font-weight="700">① 时间与对象</text>
+  <text x="108" y="305" fill="#17324e" font-family="Microsoft YaHei,sans-serif" font-size="32">3月对3月　·　新能源 ÷ 汽车总量　·　小数点与单位</text>
+  <text x="720" y="393" text-anchor="middle" fill="#7993b5" font-family="Microsoft YaHei,sans-serif" font-size="42">↓</text>
+  <rect x="72" y="414" width="1296" height="155" rx="22" fill="#e7f6ef" stroke="#abdcc2" stroke-width="3"/>
+  <text x="108" y="470" fill="#1a7953" font-family="Microsoft YaHei,sans-serif" font-size="38" font-weight="700">② 问法与符号</text>
+  <text x="108" y="524" fill="#17324e" font-family="Microsoft YaHei,sans-serif" font-size="32">下降率带负号　·　平均数分清分子与分母　·　多几倍先作差</text>
+  <text x="720" y="612" text-anchor="middle" fill="#7993b5" font-family="Microsoft YaHei,sans-serif" font-size="42">↓</text>
+  <rect x="72" y="633" width="1296" height="155" rx="22" fill="#fff2dd" stroke="#eed1a0" stroke-width="3"/>
+  <text x="108" y="689" fill="#a46714" font-family="Microsoft YaHei,sans-serif" font-size="38" font-weight="700">③ 计算与边界</text>
+  <text x="108" y="743" fill="#17324e" font-family="Microsoft YaHei,sans-serif" font-size="32">选项边界回乘　·　结果先看数量级　·　接近分界再提高精度</text>
+  <rect x="72" y="841" width="1296" height="122" rx="20" fill="#ffffff" stroke="#d6e1ef" stroke-width="2"/>
+  <text x="108" y="894" fill="#17324e" font-family="Microsoft YaHei,sans-serif" font-size="32" font-weight="700">复习状态：原答、讨论与独立掌握分开记录。</text>
+  <text x="108" y="942" fill="#52687d" font-family="Microsoft YaHei,sans-serif" font-size="28">两套资料分析各21题；真实答题记录以粉笔原卷为准。</text>
+</svg>

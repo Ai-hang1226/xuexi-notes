@@ -47,6 +47,14 @@ for (const item of expected) {
   }
   if (matches.length !== 1) problems.push(`${item.questionId}: 复盘关联不唯一`)
 }
+for (const link of records.existingLinks) {
+  const review = reviews.find((row) => row.url === link.reviewUrl)
+  const mapped = priority.questions.find((row) => row.id === link.questionId)
+  if (review?.types?.some((type) => priorityTypes.has(type)) && /^\d{4}-\d{2}-\d{2}$/.test(review.date || '')
+      && (!mapped?.reenteredReviewDate || mapped.reenteredReviewDate < review.date)) {
+    problems.push(link.questionId + ': 再次复盘没有更新优先练习起点')
+  }
+}
 for (const [url, reason] of deferred) {
   if (!reviews.some((row) => row.url === url) || !String(reason || '').trim()) problems.push(`${url}: 待核记录缺少有效来源或原因`)
 }

@@ -5,6 +5,7 @@ import skillPool from './xingcezhenti-pool.json'
 import RecordBackup from './components/RecordBackup.vue'
 import { getAnswerEvidence } from './question-evidence.js'
 import { createQuestionClock } from './question-clock.js'
+import { countCleanCorrectStreak } from './review-priority-logic.mjs'
 import { saveStudyAttempt, syncCurrentDeviceInBackground } from './sync/study-records.js'
 import { fetchSkillQuestions, normalizeQuestionText } from '../scripts/xingcezhenti-runtime.mjs'
 
@@ -274,13 +275,8 @@ function isSlowQuestion(question, durationMs) {
 
 function cleanCorrectStreak(question) {
   const history = questionHistory.value[question.id] || []
-  let streak = 0
-  for (let index = history.length - 1; index >= 0; index--) {
-    const attempt = history[index]
-    if (!attempt.isCorrect || attempt.isUncertain || attempt.isSlow) break
-    streak++
-  }
-  return streak
+  const reenteredDate = historicalReviewById.get(question.id)?.reenteredReviewDate || ''
+  return countCleanCorrectStreak(history, reenteredDate)
 }
 
 function isReviewPriority(question) {
@@ -808,6 +804,7 @@ onBeforeUnmount(() => {
           <button class="button button--primary" type="button" :disabled="loadingQuiz" @click="startQuiz('mixed')">{{ loadingQuiz ? '正在组 20 题…' : '开始20题真题复测' }} <span v-if="!loadingQuiz" aria-hidden="true">→</span></button>
           <button class="button button--outline pending-scope-button" type="button" :disabled="loadingQuiz || (questionDataLoaded && pendingOriginalQuestions.length < questionCount)" @click="startQuiz('pending-originals')">{{ questionDataLoaded ? `复做待验证原题（${pendingOriginalQuestions.length} 道）` : '读取题库后复做待验证原题' }}</button>
           <small class="pending-scope-note">复做原题用于回忆和检查，不会自动清除“独立运用待验证”状态。</small>
+          <small class="pending-scope-note">旧题再次复盘后，连续答对次数从新复盘之后重新计算；仅记录到日期的，同日作答保留但不推定先后。</small>
           <small class="preflight-caveat">开始前请留意：参考答案取自固定版原卷，尚未逐题与粉笔核对，遇到题面或答案疑问请按同题版本到粉笔核对；本轮优先复测旧题，熟题得分不代表陌生题水平。</small>
           <a class="button button--quiet library-entry" :href="withBase('/retest/library/')">查看全站题库 →</a>
           <a class="button button--quiet library-entry" :href="withBase('/retest/essay.html')">申论复测 →</a>

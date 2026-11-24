@@ -23,9 +23,12 @@ for (const item of recent) {
   if (usable.length !== 1 && !String(deferred.get(item.url) || '').trim()) {
     problems.push(`${item.id}: 需接入一个可判分题目，或明确记录待核原因`)
   }
-  if (usable.length === 1 && item.types?.some((type) => priorityTypes.has(type))
-      && !priority.questions.some((q) => q.id === usable[0].quizId && q.reviewUrls.includes(item.url))) {
-    problems.push(`${item.id}: 未进入对应的优先复测关联`)
+  if (usable.length === 1 && item.types?.some((type) => priorityTypes.has(type))) {
+    const mapped = priority.questions.find((q) => q.id === usable[0].quizId && q.reviewUrls.includes(item.url))
+    if (!mapped) problems.push(`${item.id}: 未进入对应的优先复测关联`)
+    else if (!mapped.reenteredReviewDate || mapped.reenteredReviewDate < item.date) {
+      problems.push(`${item.id}: 没有从本次复盘重新计算优先练习`)
+    }
   }
 }
 // Practice titles contain only the module, optional set number and question number.

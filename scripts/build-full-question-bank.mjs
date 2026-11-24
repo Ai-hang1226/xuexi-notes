@@ -536,8 +536,10 @@ for (const entry of entries) {
     const mapped = priorityQuestions.get(questionId) || { id: questionId, types: [], date: '', reviewUrls: [] }
     for (const type of review.types) if (reviewPriorityTypes.has(type) && !mapped.types.includes(type)) mapped.types.push(type)
     if (review.date && (!mapped.date || review.date < mapped.date)) mapped.date = review.date
-    // A new review linked to an existing question reopens its practice cycle.
-    if (existingReviewLinks.has(review.url) && /^\d{4}-\d{2}-\d{2}$/.test(review.date || '')
+    // Recent reviews reopen the practice cycle, whether the question is new,
+    // explicitly linked to an older ID, or matched through an existing source.
+    if (/^\d{4}-\d{2}-\d{2}$/.test(review.date || '')
+        && (review.date >= '2026-11-23' || existingReviewLinks.has(review.url))
         && (!mapped.reenteredReviewDate || review.date > mapped.reenteredReviewDate)) {
       mapped.reenteredReviewDate = review.date
     }

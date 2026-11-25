@@ -498,14 +498,9 @@ export default defineConfig({
       { text: '📘 申论', link: '/shenlun/' },
       { text: '🧠 错题本', link: '/cuotiben/' },
       { text: '📝 测验历史', link: '/daily-quizzes/' },
-      {
-        text: '📚 更多',
-        items: [
-          { text: '🗺️ 全站地图', link: '/guide/' },
-          { text: '🧰 速算工具箱', link: '/tools/' },
-          { text: '🖨️ 江苏 A4 打印讲义', link: '/jiangsu/printable.html', target: '_blank', rel: 'noopener' },
-        ],
-      },
+      { text: '🗺️ 全站地图', link: '/guide/' },
+      { text: '🧰 速算工具箱', link: '/tools/' },
+      { text: '🖨️ 江苏 A4 打印讲义', link: '/jiangsu/printable.html', target: '_blank', rel: 'noopener' },
     ],
 
     // 使用按路径收敛的侧栏，让页面只显示当前学习区常用入口，降低平板导航负担。

@@ -202,21 +202,16 @@ body {
 .VPNav .VPNavBar,
 .VPNav .VPNavBar .wrapper { background-color: var(--vp-c-bg); }
 
-/* 宽屏直接展示常用入口；窄屏保留在“更多”中，避免重复和导航拥挤。 */
-.VPNavBarMenu > .VPNavBarMenuLink:nth-of-type(n+5),
-.VPNavScreenMenu > .VPNavScreenMenuLink:nth-of-type(n+5) {
-  display: none;
+/* 顶栏入口全部展开；工具类入口用竖线与学习板块分隔。 */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .VPNavBarMenu > .VPNavBarMenuLink { padding: 0 8px; }
 }
-@media (min-width: 1600px) {
-  .VPNavBarMenu > .VPNavBarMenuLink:nth-of-type(n+5) {
-    display: flex;
-  }
-  .VPNavBarMenu > .VPNavBarMenuLink:nth-of-type(5) {
+@media (min-width: 1280px) {
+  .VPNavBarMenu > .VPNavBarMenuLink:nth-of-type(6) {
     margin-left: 8px;
     padding-left: 20px;
     border-left: 1px solid var(--vp-c-divider);
   }
-  .VPNavBarMenu > .VPNavBarMenuGroup { display: none; }
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {

@@ -57,6 +57,7 @@ for (const file of guides) {
   assert.ok(text.includes('## 技巧与特殊题型'), `${file} 缺少技巧专题`)
   checkLinks(file, text)
 }
+checkLinks('guide/index.md', fs.readFileSync(path.join(root, 'guide/index.md'), 'utf8'))
 for (const file of methods) {
   const text = fs.readFileSync(path.join(root, file), 'utf8')
   const tip = text.match(/::: tip [^\n]+\n[\s\S]*?\n:::/)
@@ -64,4 +65,4 @@ for (const file of methods) {
   checkLinks(file, tip[0])
 }
 if (issues.length) throw new Error(issues.join('\n'))
-console.log(`学习入口检查通过：${guides.length} 个总入口、${methods.length} 个内容页、${count} 个链接及目标锚点。`)
+console.log(`学习入口检查通过：全站地图、${guides.length} 个总入口、${methods.length} 个内容页、${count} 个链接及目标锚点。`)

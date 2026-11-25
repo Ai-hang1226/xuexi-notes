@@ -417,6 +417,20 @@ for (const [slug, title, source] of essays) {
   coverage.essaySources++
 }
 
+// Older method examples were identified from line numbers. Keep their existing
+// IDs when explanatory text is added or sections move; the unchanged source
+// anchor is the key. A missing or duplicate anchor must be reviewed explicitly.
+const stableMethodExampleIds = new Map([
+  ['/xingce/shuliang-guanxi#✅-深挖-比例交叉·整除问题-统一比例-2×2表-⭐高频', 'site-74dd8ed7212496f5'],
+  ['/xingce/shuliang-guanxi#✅-深挖-周期循环工程·干几天休几天-最后一步别多算休息日-⭐高频', 'site-a79ad790c38c4bbf'],
+  ['/xingce/ziliao-fenxi#例题-混合增长率', 'site-c67a92154acd6deb'],
+  ['/xingce/ziliao-fenxi#例题-2015-2019-新动能指数', 'site-341b372b64c6da85'],
+  ['/xingce/语句排序-先找衔接再验证整体#第15题-历史地理学', 'site-0ab6958f56bae599'],
+  ['/xingce/语句排序-先找衔接再验证整体#第18题-地球颜色变化', 'site-24b2bde8648d91be'],
+  ['/xingce/语句排序-先找衔接再验证整体#第28题-吃播-与解压', 'site-2b1a7d77420e4672'],
+])
+const matchedStableMethodUrls = new Set()
+
 // Standalone method pages sometimes contain a worked question or a fragment.
 for (const name of fs.readdirSync(path.join(root, 'xingce')).filter((x) => x.endsWith('.md') && x !== '大宝小宝言语体系-正文.md')) {
   const file = 'xingce/' + name, text = read(file), pageAnchors = anchors(file, text), lines = text.split('\n')
@@ -430,7 +444,11 @@ for (const name of fs.readdirSync(path.join(root, 'xingce')).filter((x) => x.end
     const stemHtml = render(body)
     const previous = [...pageAnchors.keys()].filter((line) => line <= i).at(-1)
     const url = route(file, pageAnchors.get(i) || pageAnchors.get(previous))
-    const id = stableId(file + ':' + i)
+    if (stableMethodExampleIds.has(url)) {
+      if (matchedStableMethodUrls.has(url)) throw new Error('方法例题固定锚点重复：' + url)
+      matchedStableMethodUrls.add(url)
+    }
+    const id = stableMethodExampleIds.get(url) || stableId(file + ':' + i)
     const verified = fenbiVerified.find((question) => question.id === id)
     const key = verified && fingerprint(render(verified.stem), verified.options.map((option) => ({ html: inline(option.text) })))
     const sourceNumber = name === '语句排序-先找衔接再验证整体.md' ? lines[i].match(/^###\s*第(15|18|28)题/)?.[1] : ''
@@ -444,6 +462,9 @@ for (const name of fs.readdirSync(path.join(root, 'xingce')).filter((x) => x.end
     }
     coverage.otherExamples++
   }
+}
+for (const url of stableMethodExampleIds.keys()) {
+  if (!matchedStableMethodUrls.has(url)) throw new Error('方法例题固定锚点缺失：' + url)
 }
 
 // Some method pages mention a question without displaying its complete stem.

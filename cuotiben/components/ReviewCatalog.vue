@@ -1,11 +1,15 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { withBase } from 'vitepress'
 import questions from '../review-catalog.json'
+import { reviewModules, moduleFromSearch } from './review-filters.mjs'
 
-const modules = ['政治理论', '常识判断', '言语理解', '数量关系', '图形推理', '定义判断', '类比推理', '逻辑判断', '资料分析']
+const modules = reviewModules
 const types = ['错题', '不确定', '猜题', '耗时较长', '未作答', '答对复习', '待复盘']
 const module = ref('全部')
+const syncModuleFromUrl = () => { module.value = moduleFromSearch(window.location.search) }
+onMounted(() => { syncModuleFromUrl(); window.addEventListener('popstate', syncModuleFromUrl) })
+onUnmounted(() => window.removeEventListener('popstate', syncModuleFromUrl))
 const type = ref('全部')
 const keyword = ref('')
 const pendingFilter = ref('')

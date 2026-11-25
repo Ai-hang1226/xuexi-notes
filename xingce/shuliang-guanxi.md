@@ -5,6 +5,12 @@ pageClass: chaptered
 
 # 数量关系
 
+::: tip 这块怎么找
+**系统知识**：[高照16章导航](/xingce/数量关系章节导航) · 本页体系与公式  
+**我的易错与错题**：[数量关系个人复盘](/cuotiben/?module=数量关系)  
+**技巧与特殊题型**：[考场选法](/xingce/数量考场选法速查-2026-10-27) · [椭圆最值](/xingce/椭圆考点与内接图形最值) · [完整学习入口](/guide/shuliang)
+:::
+
 ## 看图复习
 
 <figure class="study-visual">

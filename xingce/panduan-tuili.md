@@ -1,5 +1,11 @@
 # 判断推理
 
+::: tip 这块怎么找
+**系统知识**：[花生十三图推框架与六册图例](/xingce/图推特征与操作速查) · 下方四类题型  
+**我的易错与错题**：[图形](/cuotiben/?module=图形推理) · [定义](/cuotiben/?module=定义判断) · [类比](/cuotiben/?module=类比推理) · [逻辑](/cuotiben/?module=逻辑判断)  
+**技巧与特殊题型**：[判断推理学习入口](/guide/panduan#技巧与特殊题型)
+:::
+
 ## 看图复习
 
 <figure class="study-visual">

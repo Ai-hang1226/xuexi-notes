@@ -1,68 +1,38 @@
 ---
-title: 申论 · 学习路径
+title: 申论 · 学习入口
 ---
 
-# 📘 申论 · 学习路径
+# 申论 · 学习入口
 
-> 按讲义和本站学习需要整理为**五类常见题型**，并非官方大纲规定的固定题型。原有页面与链接全部保留，只调整层级：**Kiwi 讲义框架是覆盖全部题型的总纲，独立一级，不属于任何单一题型**。
+按讲义整理为五类常见题型，并非官方大纲规定的固定分类。Kiwi 框架是五类题型的共同总纲。
 
-## 一、总纲：先看全局
+## 系统知识与图解
 
-| 顺序 | 内容 | 为什么先看 |
-|---|---|---|
-| 1 | [🏠 申论总览 · 从原文到答案](/shenlun/) | 看懂「原文 → 答案」怎么拆 |
-| 2 | [📖 Kiwi 申论知识框架](/shenlun/kiwi-framework) | **总纲**：涵盖归纳概括、综合分析、问题对策、公文写作、文章写作五大题型的讲义主线 |
+- [Kiwi 申论知识框架](/shenlun/kiwi-framework) · [五大题型导航](/shenlun/五大题型导航)。
+- [归纳概括](/shenlun/guina-gaikuo) · [综合分析](/shenlun/zonghe-fenxi) · [问题对策](/shenlun/wenti-duice)。
+- [公文写作](/shenlun/gongwen-geshi) · [文章写作](/shenlun/wenzhang-xiezuo)。
+- [申论总览与已有图解](/shenlun/)。
 
-Kiwi 框架不是「归纳概括」的下属页面，而是申论全站的方法总纲。每类题型的讲义方法都可以从总纲对应章节进入。
+## 我的易错与练习
 
-## 二、按题型练（五大题型）
+已整理的本人专项练习集中在归纳概括；首答、评分、改写与陌生题验证分开记录。
 
-### 📒 归纳概括
+- [DAY5 城市绿化：做法](/shenlun/day5-city-greening) · [原题与讲义](/shenlun/sources/day5-city-greening)。
+- [DAY6 营商环境：措施与成效](/shenlun/day6-business-environment) · [原题与讲义](/shenlun/sources/day6-business-environment)。
+- [DAY7 背包银行：特点与作用](/shenlun/day7-backpack-bank) · [原题与讲义](/shenlun/sources/day7-backpack-bank)。
+- [DAY8 创新公共服务：问题](/shenlun/day8-public-services) · [原题与讲义](/shenlun/sources/day8-public-services)。
+- [DAY9 加数前行：原因](/shenlun/day9-digital-city) · [原题与讲义](/shenlun/sources/day9-digital-city)。
+- [学习性评分与进步](/shenlun/scores)：查看各题首答基线及后续状态。
 
-讲义按做法、成效、特点与作用、问题、原因、理念、变化、过程等分别练习，本质是「问什么、归纳什么」。
+综合分析、问题对策、公文写作、文章写作目前暂无已归档的本人专项练习；以后有记录再放到对应题型。
 
-| 类型 | 页面 | 练什么 |
-|---|---|---|
-| 📖 讲义方法 | [Kiwi 总纲 · 归纳概括](/shenlun/kiwi-framework#归纳概括-问什么-归纳什么) | 明确对象与要素 → 逐段找点 → 同类归并 → 总括＋细节 |
-| 🔍 找点方法 | [特点与作用 · 区分及找点](/shenlun/features-vs-effects) | 先找作用 → 回看做法 → 合并特点 |
-| ✍️ DAY5 城市绿化 | [概括主要做法](/shenlun/day5-city-greening) | 只问做法：先分组，再总括 |
-| ✍️ DAY6 营商环境 | [措施与成效一起概括](/shenlun/day6-business-environment) | 行动与结果配对 |
-| ✍️ DAY7 背包银行 | [特点与作用](/shenlun/day7-backpack-bank) | 特点提炼与作用归类 |
-| ✍️ DAY8 创新公共服务 | [问题与不足](/shenlun/day8-public-services) | 从设施现象归纳调研、数据与资源问题 |
-| ✍️ DAY9 加数前行 | [原因](/shenlun/day9-digital-city) | 原因要素＋1361 组织线索 |
+## 技巧与特殊题型
 
-### 🔍 综合分析
+- [特点与作用：区分及找点](/shenlun/features-vs-effects)。
+- [归纳概括：压缩与总括](/shenlun/guina-gaikuo#三、压缩的三条原则)。
+- [综合分析：五套骨架](/shenlun/zonghe-fenxi#三、五套骨架) · [问题对策：检查四问](/shenlun/wenti-duice#三、检查一条对策-四问)。
+- [公文写作：13种文种对照](/shenlun/gongwen-geshi#三、13-种文种-骨架对照) · [文章写作：三种骨架](/shenlun/wenzhang-xiezuo#三、结构-三种骨架按题型选)。
 
-讲义分为词句阐释、评论分析、比较分析、原因分析、启示分析。[📖 讲义方法 → Kiwi 总纲](/shenlun/kiwi-framework#三、综合分析-观点和依据要对齐)。当前暂无本人专项练习记录。
+---
 
-### 💡 问题对策
-
-讲义讲直接提取、从问题原因经验转化、补充对策与可行性检查。[📖 讲义方法 → Kiwi 总纲](/shenlun/kiwi-framework#四、问题对策-先有问题-再看办法)。当前暂无本人专项练习记录。
-
-### 📄 公文写作
-
-讲义按文种、身份、对象、目的组织正文与格式。[📖 讲义方法 → Kiwi 总纲](/shenlun/kiwi-framework#五、公文写作-文种和任务决定结构)。当前暂无本人专项练习记录。
-
-### ✍️ 文章写作
-
-讲义讲确定论点、写出论证与首尾段。[📖 讲义方法 → Kiwi 总纲](/shenlun/kiwi-framework#六、文章写作-从立意到论证)。当前暂无本人专项练习记录。
-
-## 三、评分与进步
-
-- [📊 我的评分与进步记录](/shenlun/scores)：DAY5—DAY9 首答基线、改写与陌生题验证分别记录，不混为一谈。
-
-## 四、原题与讲义
-
-| 题目 | 完整来源 |
-|---|---|
-| DAY5 城市绿化 | [原题与讲义解析](/shenlun/sources/day5-city-greening) |
-| DAY6 营商环境 | [原题与讲义解析](/shenlun/sources/day6-business-environment) |
-| DAY7 背包银行 | [原题与讲义解析](/shenlun/sources/day7-backpack-bank) |
-| DAY8 创新公共服务 | [原题与讲义解析](/shenlun/sources/day8-public-services) |
-| DAY9 加数前行 | [原题与讲义解析](/shenlun/sources/day9-digital-city) |
-
-## 五、相关入口
-
-- [📝 每日测验](/daily-quizzes/)：查看已归档卷中的申论题与解析；当日是否有新卷以归档为准
-- [🧠 错题本](/cuotiben/)：行测错题按模块与错因复盘
-- [🗺️ 返回全站地图](/guide/)
+[返回申论总览](/shenlun/) · [查看全站地图](/guide/)
